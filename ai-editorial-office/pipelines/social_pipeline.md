@@ -107,6 +107,13 @@ These artifacts define the Social Pipeline artifact set. Required/conditional/op
 
 Artifact creation must be intentional, conditional, risk-based, and downstream-driven. Do not create placeholder files for future use.
 
+For low-risk and simple source-light standard tasks, use
+`/kb/compact_execution.md` to apply compact execution without weakening
+review-gate. Chief Editor must record the compact rationale; `review.md`
+remains required before finalization; optional artifacts are not created
+automatically. Review Agent should not require optional artifacts when core
+traceability, restartability, and governance evidence are sufficient.
+
 ### required artifacts
 
 | Artifact | Why it exists | Downstream consumer | May be omitted when |

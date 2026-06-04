@@ -132,6 +132,12 @@ Review uses this artifact set. Required/conditional/optional depth is governed b
 
 Artifact creation must be intentional, conditional, risk-based, and downstream-driven. Do not create placeholder files for future use.
 
+For low-risk and simple source-light standard tasks, use
+`/kb/compact_execution.md` to review compact execution without expanding the
+artifact package by default. `review.md` remains required before finalization;
+Review Agent should not require optional artifacts when core traceability,
+restartability, and governance evidence are sufficient.
+
 ### required artifacts
 
 | Artifact | Why it exists | Downstream consumer | May be omitted when |

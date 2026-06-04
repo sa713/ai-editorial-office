@@ -9,6 +9,8 @@
 markdown smoke-test для Sber-mode:
 
 - `sber-mode-smoke-test.md`
+- `compact_execution_examples.md` - synthetic examples for compact execution
+  and artifact minimalism; these are not task materials.
 
 ## Task lifecycle validator smoke test
 
