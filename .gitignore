@@ -1,0 +1,45 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Env / secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+
+# Logs / temp
+*.log
+tmp/
+temp/
+.cache/
+__pycache__/
+
+# Local reports
+*_local.md
+*_LOCAL.md
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Large / source materials that should be reviewed before publishing
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.mov
+*.mp3
+*.wav

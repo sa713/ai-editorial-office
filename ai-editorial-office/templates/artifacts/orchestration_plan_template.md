@@ -1,0 +1,192 @@
+# Orchestration Plan Template
+
+Purpose: define the execution contract for a task. Keep this plan compact and
+stage-specific. Global governance rules live in `AGENTS.md`; sequence details
+live in the selected pipeline.
+
+Create for tasks that need role routing, process-depth decisions, high-risk
+traceability, or non-trivial coordination. For compact low-risk work, use only
+the fields needed to make routing and review safe.
+
+## task summary
+
+- Task ID:
+- User goal:
+- Deliverable:
+- Audience/channel:
+- Current active version:
+
+## task classification
+
+- Task type:
+- Risk mode: `low-risk` / `standard` / `high-governance` / `unknown`
+- Factual sensitivity:
+- Human approval likely required: yes/no/unknown
+- Rationale:
+
+## process depth
+
+- Depth: `compact` / `normal` / `full`
+- Execution profile: `compact` / `expanded`
+- Rationale:
+- Forbidden depth shortcuts:
+- Expanded profile trigger, if any:
+
+## selected pipeline
+
+- Pipeline:
+- Why this pipeline:
+- Pipeline exceptions or local constraints:
+
+## client profile
+
+- Client profile: `none` / `sber` / `unknown`
+- Client profile status: `not_applicable` / `active` / `pending_source`
+- Activation reason:
+- Non-activation reason, if considered and rejected:
+- Client-profile files:
+  - `/kb/clients/sber/usage-rules.md`
+  - `/kb/clients/sber/editorial-policy.md`
+  - `/kb/clients/sber/sber-review-checklist.md`
+- Stop condition:
+
+Use `client_profile: sber` only for Sber-owned, Sber-product,
+Sber-communication, or explicit Sber-redpolicy tasks. Do not activate it for
+independent materials where Sber is only mentioned as topic, example, source, or
+competitor.
+
+## preflight gate
+
+Use before production starts. Keep compact; do not create a separate artifact
+unless a task-specific governance or restartability need justifies it.
+
+| Field | Decision |
+| --- | --- |
+| Audience | `confirmed` / `inferred` / `unknown` |
+| Channel or context | `confirmed` / `inferred` / `unknown` |
+| Deliverable | `defined` / `unclear` |
+| Source boundary | `defined` / `unclear` |
+| Success criterion | `defined` / `unclear` |
+| Approval boundary | `defined` / `unclear` |
+| Missing data strategy | `ask` / `constrain` / `proceed` / `block` |
+
+- Rationale:
+- Production may start: yes/no
+- If `ask`: smallest question to user:
+- If `constrain`: explicit scope boundary:
+- If `block`: blocking reason:
+
+## custom workflow mini-contract
+
+Use only when the selected pipeline needs a documented local deviation. Do not
+weaken review, governance, role boundaries, or required fields.
+
+- Deviation:
+- Reason:
+- Owner:
+- Review gate preserved: yes
+- Governance model unchanged: yes
+
+## required agents
+
+| Stage | Role | Required? | Notes |
+| --- | --- | --- | --- |
+| Intake |  |  |  |
+| Research |  |  |  |
+| Writing/UX writing |  |  |  |
+| Review | Review Agent | yes | `review.md` required |
+| Finalization |  |  |  |
+| Final governance | Chief Editor | if applicable |  |
+
+## required knowledge and evidence
+
+- Required KB:
+- Required source/evidence files:
+- Evidence gaps:
+
+## artifact scope
+
+Classify artifacts before creating them. Conditional artifacts need a consumer
+or governance/traceability reason.
+
+| Artifact | Required / conditional / omitted | Consumer | Rationale |
+| --- | --- | --- | --- |
+| `task-manifest.md` | required | all roles |  |
+| `review.md` | required before finalization | Chief Editor / Final Editor |  |
+| `review-summary.md` | conditional |  |  |
+| `qa-checklist.md` | conditional |  |  |
+| `open-questions.md` | conditional |  |  |
+| `finalization-notes.md` | conditional |  |  |
+| `finalization-checklist.md` | conditional |  |  |
+
+## structure-before-writing plan
+
+Use when the material is instructional, operational, reference-like, role-based,
+or repeat-use.
+
+- Reader path:
+- Section roles:
+- Required structure:
+- Duplication risks:
+
+## execution order
+
+| Step | Role | Input | Output | Exit condition |
+| --- | --- | --- | --- | --- |
+
+## status transitions
+
+- Starting status:
+- Next expected status:
+- Status owner:
+- Status update trigger:
+
+## review requirements
+
+- Review artifact: `review.md`
+- Review depth:
+- Reviewer independence requirement:
+- Claims/evidence checks required:
+- Optional review artifacts justified: yes/no and why
+
+## human approval requirements
+
+- Required: yes/no/unknown
+- Approval owner:
+- Evidence needed:
+- Cannot proceed past:
+
+## known risks
+
+| Risk | Impact | Owner | Mitigation |
+| --- | --- | --- | --- |
+
+## unresolved questions
+
+- None / list question, owner, and blocking status.
+
+## escalation conditions
+
+- Stop or escalate if:
+
+## completion criteria
+
+- Required artifacts complete:
+- Review outcome acceptable:
+- Blockers resolved:
+- Governance fields complete:
+
+## finalization conditions
+
+- Finalization may start when:
+- Finalization must stop when:
+- Compact finalization shape allowed: yes/no and why
+- Conditional finalization artifacts needed: yes/no and why
+
+## restart notes
+
+- Minimum read set:
+- Current active version:
+- Deprecated/previous versions:
+- Latest relevant handoff:
+- Directly relevant pipeline/KB:
