@@ -20,6 +20,25 @@ governance. Скрипты должны проверять уже заданны
 
 ## Существующие скрипты
 
+### `validate_task_lifecycle.py`
+
+Назначение: локально проверяет базовые structural/governance ошибки task
+package: обязательные `task-manifest.md` и `status.md`, наличие review перед
+`final.md`, распознаваемый review outcome и запрет финализации без `approved`.
+
+Запуск:
+
+```bash
+python3 ai-editorial-office/scripts/validate_task_lifecycle.py PATH_TO_TASK_FOLDER
+```
+
+Скрипт выводит blockers, warnings и итоговый `PASS` или `FAIL`. Exit code `0`
+означает отсутствие blockers, `1` — blockers найдены, `2` — ошибка запуска или
+пути.
+
+Скрипт только читает task folder и не меняет файлы. Он проверяет уже заданные
+правила из canonical sources, но не создаёт новые правила lifecycle.
+
 ### `check_about_memory_package.sh`
 
 Назначение: проверяет служебный пакет памяти `/about` для ChatGPT.
