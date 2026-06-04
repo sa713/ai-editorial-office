@@ -15,13 +15,12 @@ from pathlib import Path
 REQUIRED_FILES = ("task-manifest.md", "status.md")
 MANIFEST_STATUS_RE = re.compile(r"\b(current status|current_status|status)\b", re.IGNORECASE)
 LABELED_OUTCOME_RE = re.compile(
-    r"(?im)^\s*(?:review[_ -]?outcome|outcome|verdict|status)\s*:\s*"
+    r"(?im)^\s*(?:review[_ -]outcome|outcome|verdict|status)\s*:\s*"
     r"(approved|changes_requested|blocked)\b"
 )
 SINGLE_OUTCOME_LINE_RE = re.compile(
     r"(?im)^\s*(approved|changes_requested|blocked)\s*$"
 )
-ANY_OUTCOME_RE = re.compile(r"\b(approved|changes_requested|blocked)\b", re.IGNORECASE)
 
 
 def usage() -> str:
@@ -38,7 +37,7 @@ def is_blank(text: str) -> bool:
 
 def extract_review_outcome(text: str) -> str | None:
     """Return the first recognizable review outcome in a soft markdown shape."""
-    for pattern in (LABELED_OUTCOME_RE, SINGLE_OUTCOME_LINE_RE, ANY_OUTCOME_RE):
+    for pattern in (LABELED_OUTCOME_RE, SINGLE_OUTCOME_LINE_RE):
         match = pattern.search(text)
         if match:
             return match.group(1).lower()

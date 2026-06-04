@@ -40,6 +40,7 @@ run_case "valid_minimal" 0 "PASS"
 run_case "invalid_missing_manifest" 1 "FAIL"
 run_case "invalid_final_without_review" 1 "FAIL"
 run_case "invalid_final_with_changes_requested" 1 "FAIL"
+run_case "invalid_final_with_ambiguous_review" 1 "FAIL"
 
 if [ "$failures" -ne 0 ]; then
   echo "Task lifecycle validator smoke test failed."
