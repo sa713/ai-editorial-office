@@ -10,6 +10,22 @@ markdown smoke-test для Sber-mode:
 
 - `sber-mode-smoke-test.md`
 
+## Task lifecycle validator smoke test
+
+Запуск:
+
+```bash
+bash ai-editorial-office/tests/test_task_lifecycle_validator.sh
+```
+
+Smoke-test запускает `scripts/validate_task_lifecycle.py` на synthetic fixtures
+из `tests/fixtures/task_lifecycle/`: один valid case должен пройти с exit code
+`0`, invalid cases должны завершиться с exit code `1`.
+
+Fixtures в `tests/fixtures/task_lifecycle/` полностью искусственные и не
+являются real task materials. Они нужны только для проверки локального
+валидатора. Тест и валидатор не меняют task-файлы.
+
 Читайте эту папку, когда нужно найти или добавить проверку целостности проекта.
 
 Не читайте её как источник редакционных правил, пайплайнов или требований к
