@@ -6,6 +6,9 @@ Canonical KB ownership:
 
 - `task_statuses.md` owns allowed operational task statuses and transitions.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
+- `compact_execution.md` gives practical guidance for compact execution and
+  artifact minimalism. It does not override `AGENTS.md`, selected pipelines, or
+  task-local governance artifacts.
 - `clients/CLIENT-ID/` owns task-scoped client profiles. Client profiles are
   loaded only when `task-manifest.md` or `orchestration_plan.md` explicitly
   activates them.
