@@ -383,7 +383,7 @@ Add feedback capture and system change proposal workflow.
 
 # 5. Preflight Gate: меньше лишних вопросов
 
-Статус: `planned`  
+Статус: `in_progress`
 Приоритет: `P2`  
 Тип апдейта: intake/orchestration quality
 
@@ -398,7 +398,8 @@ proceed
 block
 ```
 
-Нужно добавить примеры и smoke-tests для Preflight Gate.
+Первые examples и smoke-test для Preflight Gate добавлены. Дальше их нужно
+проверить на реальном intake-сценарии и при необходимости автоматизировать.
 
 ## Почему это важно
 
@@ -410,14 +411,29 @@ block
 
 - “нужен пост про релиз” → proceed или constrain;
 - “юридическое уведомление клиентам” → ask/block/high-governance;
-- “пуш для Сбера” → proceed + `client_profile: sber`;
-- “статья про Сбер как кейс рынка” → proceed + `client_profile: none`;
+- “пуш для Сбера” → proceed/constrain + `client_profile: sber`;
+- “статья про Сбер как кейс рынка” → proceed/constrain + `client_profile: none`;
 - “UX-текст для ошибки оплаты” → UX pipeline + product-context check.
+
+## Выполнено
+
+- добавлены synthetic Preflight Gate examples в `ai-editorial-office/tests/preflight_gate_examples.md`;
+- добавлен markdown smoke-test `ai-editorial-office/tests/preflight_gate_smoke_test.md`;
+- покрыты decisions `ask`, `constrain`, `proceed`, `block`;
+- покрыты Sber activation и Sber non-activation examples;
+- покрыты UX/high-governance examples.
+
+## Осталось
+
+- проверить examples на реальной intake-задаче;
+- при необходимости добавить automated checker;
+- уточнить связь с `task-manifest.md` и `orchestration_plan.md`;
+- добавить more edge cases after real usage.
 
 ## Возможная Codex-задача
 
 ```text
-Add Preflight Gate routing examples and smoke tests.
+Test Preflight Gate examples on a real intake task and decide whether to add an automated checker.
 ```
 
 ## Acceptance criteria
@@ -435,10 +451,6 @@ Add Preflight Gate routing examples and smoke tests.
 - Слишком много уточнений.
 - Слишком смелые допущения.
 - Подмена пользовательской цели “разумной реконструкцией”.
-
-Текущий recommended candidate: Preflight Gate examples/tests остаются хорошим
-следующим шагом, если цель — быстрее улучшить постановку задач и уменьшить
-лишние уточнения, а не продолжать lifecycle transition checks.
 
 ---
 
@@ -784,6 +796,17 @@ Add task pack generator for role-specific restart context.
 - ChatGPT review пока выполняется через локальные diff/review pack;
 - следующие шаги выбираются по одному разделу roadmap за раз.
 
+## 2026-06-05
+
+Добавлены Preflight Gate synthetic examples and smoke-test.
+
+Принято решение:
+
+- Preflight examples являются tests/reference material, не production governance;
+- examples не заменяют Intake Agent, Chief Editor или `AGENTS.md`;
+- Sber profile activation проверяется на activation/non-activation examples;
+- unsafe/deceptive communication должен блокироваться.
+
 ---
 
 # Следующий рекомендуемый шаг
@@ -794,12 +817,12 @@ Add task pack generator for role-specific restart context.
 Add transition checks to task lifecycle validator.
 ```
 
-Вариант B — перейти к разделу 5:
+Вариант B — продолжить раздел 5:
 
 ```text
-Add Preflight Gate routing examples and smoke tests.
+Test Preflight Gate examples on a real intake task or add an automated checker.
 ```
 
-Рекомендуемый следующий шаг: Preflight Gate examples, если цель — быстрее
-улучшить постановку задач и уменьшить лишние уточнения; transition checks, если
-цель — продолжить укреплять validator layer.
+Рекомендуемый следующий шаг: real intake check или automated Preflight checker,
+если цель — проверить routing на практике; transition checks, если цель —
+продолжить укреплять validator layer.
