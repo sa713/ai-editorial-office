@@ -8,6 +8,10 @@ The pipeline is production research only. It does not create publishable copy, f
 
 The pipeline must produce task-local markdown artifacts that let Writer Agent, UX Writer, Review Agent, Final Editor, or Chief Editor continue without relying on chat history or model memory.
 
+Use `/kb/research_evidence.md` to choose the evidence mode:
+`no-research`, `compact-evidence`, or `full-evidence`. Evidence depth is
+conditional and claim-driven, not automatic.
+
 ## when to use
 
 Use this pipeline when any of these are true:
@@ -32,6 +36,10 @@ Do not use this pipeline when:
 - using the pipeline would bypass a required writing, review, finalization, or governance stage.
 
 If evidence is already sufficient, Chief Editor may skip this pipeline and document the reason in `/tasks/TASK-ID/orchestration_plan.md`.
+
+For low-risk tasks with no factual, product, policy, numeric, legal, HR,
+security, regulatory, medical, financial, or reputational claims, Chief Editor
+may record a `no-research` rationale instead of creating research artifacts.
 
 ## required agents
 
@@ -100,6 +108,15 @@ The handoff is a navigation artifact only. It must not replace required research
 ## artifact creation policy
 
 Artifact creation must be intentional, conditional, risk-based, and downstream-driven. Do not create placeholder files for future use.
+
+Use `/kb/research_evidence.md` when choosing whether the task needs
+`no-research`, `compact-evidence`, or `full-evidence`. Research artifacts must
+have a consumer, traceability purpose, review purpose, governance need, or
+explicit task requirement.
+
+Low-risk no-claim tasks can use a recorded no-research rationale instead of
+`research.md`, `sources.md`, `facts.md`, or `claims_table.md`. High-governance
+material claims require the full evidence set.
 
 ### required artifacts
 

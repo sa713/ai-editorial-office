@@ -25,6 +25,11 @@ markdown smoke-tests и synthetic examples:
 - `source_provenance_smoke_test.md` - markdown manual smoke-test for
   source/provenance classification; these cases are synthetic and are not
   source materials.
+- `research_evidence_examples.md` - synthetic examples for no-research,
+  compact-evidence, and full-evidence mode selection; these are not task
+  materials.
+- `research_evidence_smoke_test.md` - markdown manual smoke-test for research
+  evidence mode selection; these cases are synthetic and are not task materials.
 - `test_task_pack_generator.sh` - shell smoke-test for
   `scripts/generate_task_pack.py`.
 - `preflight_gate_examples.md` - synthetic examples for Preflight Gate routing
@@ -102,6 +107,12 @@ updates.
 The reusable source import smoke-test template lives in
 `templates/artifacts/source_import_smoke_test_template.md`. Real source import
 smoke-tests should be added only for approved sanitized/source-safe cases.
+
+Research evidence examples and smoke-test are used for manual evidence-depth
+checks: they help verify when `no-research`, `compact-evidence`, or
+`full-evidence` is appropriate. They do not define active rules and do not
+replace `AGENTS.md`, selected pipelines, Research Agent, Writer Agent, Review
+Agent, or `kb/research_evidence.md`.
 
 Preflight Gate examples and smoke-test are used for manual routing checks only:
 they help verify when the safe next strategy is `ask`, `constrain`, `proceed`,

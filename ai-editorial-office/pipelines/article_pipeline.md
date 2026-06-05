@@ -114,6 +114,12 @@ remains required before finalization; optional artifacts are not created
 automatically. Review Agent should not require optional artifacts when core
 traceability, restartability, and governance evidence are sufficient.
 
+Use `/kb/research_evidence.md` when deciding whether an article task is
+`no-research`, `compact-evidence`, or `full-evidence`. Do not create
+`sources.md`, `facts.md`, or `claims_table.md` automatically for low-risk
+no-claim tasks. Material claims that enter the draft should be reflected in
+`claims-used.md` or equivalent compact evidence.
+
 ### required artifacts
 
 | Artifact | Why it exists | Downstream consumer | May be omitted when |
@@ -266,6 +272,11 @@ Research is required when:
 - source freshness matters;
 - the draft would otherwise require Writer Agent to invent facts;
 - review or Chief Editor requests additional evidence.
+
+Use `/kb/research_evidence.md` to choose the smallest reviewable evidence mode.
+Low-risk no-claim article tasks can record a no-research rationale instead of
+creating research artifacts. Source-light tasks may use compact evidence when
+Review Agent can trace material claims without a full research dump.
 
 When research is required, Article Pipeline must use `/pipelines/research_pipeline.md` as upstream context.
 

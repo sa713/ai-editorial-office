@@ -13,6 +13,9 @@ Canonical KB ownership:
   activating, reviewing, and updating external or client-specific source
   material. It does not override `AGENTS.md`, client-profile activation rules,
   or task-local governance artifacts.
+- `research_evidence.md` gives practical guidance for choosing no-research,
+  compact-evidence, or full-evidence depth. It does not override `AGENTS.md`,
+  selected pipelines, role specs, review-gate, or source provenance rules.
 - `compact_execution.md` gives practical guidance for compact execution and
   artifact minimalism. It does not override `AGENTS.md`, selected pipelines, or
   task-local governance artifacts.
