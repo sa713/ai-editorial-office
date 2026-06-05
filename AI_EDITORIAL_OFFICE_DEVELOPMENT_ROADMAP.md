@@ -365,18 +365,19 @@ separate reviewed system update
 - добавлен `ai-editorial-office/templates/artifacts/system_change_proposal_template.md`;
 - добавлены synthetic feedback examples;
 - добавлен markdown smoke-test;
-- зафиксировано, что single feedback не меняет систему.
+- зафиксировано, что single feedback не меняет систему;
+- проведён sanitized feedback loop manual trial на post-delivery revision/style signal;
 
 ## Осталось
 
-- проверить feedback loop на одном реальном sanitized post-delivery scenario;
-- решить, нужен ли lightweight validator для feedback/system proposal;
+- провести ещё 1–2 sanitized feedback loop manual trials;
+- после этого решить, нужен ли lightweight validator для feedback/system proposal;
 - при необходимости уточнить связь с Chief Editor final decision.
 
 ## Возможная Codex-задача
 
 ```text
-Run a sanitized feedback loop manual trial.
+Run another sanitized feedback loop manual trial.
 ```
 
 ## Acceptance criteria
@@ -886,6 +887,17 @@ Add task pack generator for role-specific restart context.
 - system change proposal не меняет production files сам по себе;
 - любые production changes проходят отдельный reviewed system update.
 
+## 2026-06-05
+
+Проведён первый sanitized feedback loop manual trial.
+
+Принято решение:
+
+- конкретная просьба переписать часть результата классифицируется как bounded revision;
+- повторяющийся маркер вроде "опять" может стать possible pattern watch;
+- один feedback не создаёт system change proposal;
+- lightweight validator пока не добавляется.
+
 ---
 
 # Следующий рекомендуемый шаг
@@ -893,7 +905,7 @@ Add task pack generator for role-specific restart context.
 Вариант A — продолжить раздел 4:
 
 ```text
-Run a sanitized feedback loop manual trial.
+Run another sanitized feedback loop manual trial.
 ```
 
 Вариант B — вернуться к разделу 3:
@@ -902,6 +914,6 @@ Run a sanitized feedback loop manual trial.
 Add transition checks to task lifecycle validator.
 ```
 
-Рекомендуемый следующий шаг: feedback loop manual trial, если хотим проверить
-обучение редакции на пользовательской реакции; transition checks, если
-продолжаем укреплять validator layer.
+Рекомендуемый следующий шаг: ещё один feedback loop manual trial, если хотим
+проверить классификацию разных типов пользовательской реакции; transition
+checks, если продолжаем укреплять validator layer.
