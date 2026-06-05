@@ -46,8 +46,10 @@ exit code `0`, invalid cases должны завершиться с exit code `1
 
 Сейчас smoke-test покрывает базовые lifecycle gates, consistency current status
 между `task-manifest.md` и `status.md`, selected pipeline existence и
-warning-only missing selected pipeline case. Валидатор также трактует unknown
-status как warning, а не blocker.
+warning-only missing selected pipeline case. Он также покрывает previous/current
+status transition checks из `kb/task_statuses.md`: invalid known transitions
+дают blocker, missing previous status и same previous/current status дают
+warning. Валидатор трактует unknown status как warning, а не blocker.
 
 Fixtures в `tests/fixtures/task_lifecycle/` полностью искусственные и не
 являются real task materials. Они нужны только для проверки локального

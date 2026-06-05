@@ -20,6 +20,10 @@ PIPELINES_DIR = EDITORIAL_ROOT / "pipelines"
 CURRENT_STATUS_RE = re.compile(
     r"(?im)^\s*(?:[-*]\s*)?(?:current[\s_-]*status|status)\s*:\s*(.+?)\s*$"
 )
+PREVIOUS_STATUS_RE = re.compile(
+    r"(?im)^\s*(?:[-*]\s*)?(?:previous[\s_-]*status|previous|"
+    r"from[\s_-]*status)\s*:\s*(.+?)\s*$"
+)
 SELECTED_PIPELINE_RE = re.compile(
     r"(?im)^\s*(?:[-*]\s*)?(?:selected[\s_-]*pipeline|pipeline)\s*:\s*(.+?)\s*$"
 )
@@ -78,6 +82,10 @@ def extract_current_status(text: str) -> str | None:
     return extract_labeled_value(text, CURRENT_STATUS_RE)
 
 
+def extract_previous_status(text: str) -> str | None:
+    return extract_labeled_value(text, PREVIOUS_STATUS_RE)
+
+
 def extract_selected_pipeline(text: str) -> str | None:
     return extract_labeled_value(text, SELECTED_PIPELINE_RE)
 
@@ -102,6 +110,50 @@ def load_known_statuses(path: Path = TASK_STATUSES_PATH) -> set[str] | None:
     return statuses or None
 
 
+def parse_markdown_table_row(line: str) -> list[str] | None:
+    stripped = line.strip()
+    if not stripped.startswith("|") or not stripped.endswith("|"):
+        return None
+    cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+    return cells if len(cells) >= 2 else None
+
+
+def load_allowed_transitions(path: Path = TASK_STATUSES_PATH) -> dict[str, set[str]] | None:
+    try:
+        text = read_text(path)
+    except OSError:
+        return None
+
+    section_match = re.search(
+        r"(?ims)^## status transitions\s*(.*?)(?:^##\s+|\Z)", text
+    )
+    if not section_match:
+        return None
+
+    transitions: dict[str, set[str]] = {}
+    for line in section_match.group(1).splitlines():
+        cells = parse_markdown_table_row(line)
+        if cells is None:
+            continue
+
+        from_cell, allowed_cell = cells[0], cells[1]
+        if from_cell.lower() == "from" or re.fullmatch(r":?-+:?", from_cell):
+            continue
+
+        from_match = CODE_SPAN_RE.search(from_cell)
+        if not from_match:
+            continue
+
+        from_status = normalize_value(from_match.group(1))
+        allowed_statuses = {
+            normalize_value(match.group(1))
+            for match in CODE_SPAN_RE.finditer(allowed_cell)
+        }
+        transitions[from_status] = allowed_statuses
+
+    return transitions or None
+
+
 def extract_review_outcome(text: str) -> str | None:
     """Return the first recognizable review outcome in a soft markdown shape."""
     for pattern in (LABELED_OUTCOME_RE, SINGLE_OUTCOME_LINE_RE):
@@ -115,6 +167,7 @@ def validate_task(task_dir: Path) -> tuple[list[str], list[str]]:
     blockers: list[str] = []
     warnings: list[str] = []
     known_statuses = load_known_statuses()
+    allowed_transitions = load_allowed_transitions()
 
     for file_name in REQUIRED_FILES:
         if not (task_dir / file_name).is_file():
@@ -135,6 +188,7 @@ def validate_task(task_dir: Path) -> tuple[list[str], list[str]]:
 
     status_path = task_dir / "status.md"
     status_status: str | None = None
+    previous_status: str | None = None
     if status_path.is_file():
         status_text = read_text(status_path)
         if is_blank(status_text):
@@ -143,6 +197,9 @@ def validate_task(task_dir: Path) -> tuple[list[str], list[str]]:
             status_status = extract_current_status(status_text)
             if status_status is None:
                 warnings.append("status.md does not contain a recognizable current status.")
+            previous_status = extract_previous_status(status_text)
+            if previous_status is None:
+                warnings.append("status.md does not contain a recognizable previous status.")
 
     if manifest_status is not None and status_status is not None:
         if normalize_value(manifest_status) != normalize_value(status_status):
@@ -155,15 +212,42 @@ def validate_task(task_dir: Path) -> tuple[list[str], list[str]]:
     if known_statuses is None:
         warnings.append("Could not verify current status against known task statuses.")
     else:
-        for file_name, status in (
-            ("task-manifest.md", manifest_status),
-            ("status.md", status_status),
+        for file_name, status_label, status in (
+            ("task-manifest.md", "current status", manifest_status),
+            ("status.md", "current status", status_status),
+            ("status.md", "previous status", previous_status),
         ):
             if status is not None and normalize_value(status) not in known_statuses:
                 warnings.append(
-                    f"{file_name} current status `{status}` is not listed in "
+                    f"{file_name} {status_label} `{status}` is not listed in "
                     "kb/task_statuses.md."
                 )
+
+    if allowed_transitions is None:
+        warnings.append("Could not verify status transitions against kb/task_statuses.md.")
+
+    if previous_status is not None and status_status is not None:
+        previous_normalized = normalize_value(previous_status)
+        current_normalized = normalize_value(status_status)
+        if previous_normalized == current_normalized:
+            warnings.append(
+                "status.md previous status and current status are the same; "
+                "transition was not validated."
+            )
+        elif previous_normalized == "blocked" and current_normalized == "finalized":
+            blockers.append("Blocked task must not move directly to finalized.")
+        elif (
+            allowed_transitions is not None
+            and known_statuses is not None
+            and previous_normalized in known_statuses
+            and current_normalized in known_statuses
+            and current_normalized
+            not in allowed_transitions.get(previous_normalized, set())
+        ):
+            blockers.append(
+                f"Invalid status transition: `{previous_status}` -> `{status_status}` "
+                "is not allowed by kb/task_statuses.md."
+            )
 
     selected_pipeline: str | None = None
     for path in (manifest_path, task_dir / "orchestration_plan.md"):

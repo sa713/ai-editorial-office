@@ -53,6 +53,11 @@ run_case "invalid_final_with_ambiguous_review" 1 "FAIL"
 run_case "invalid_status_mismatch" 1 "FAIL"
 run_case "invalid_unknown_pipeline" 1 "FAIL"
 run_case "warning_missing_pipeline" 0 "PASS" "Selected pipeline was not found"
+run_case "valid_transition_writing_to_review" 0 "PASS"
+run_case "invalid_transition_writing_to_finalized" 1 "FAIL" "Invalid status transition"
+run_case "warning_missing_previous_status" 0 "PASS" "previous status"
+run_case "warning_same_previous_current_status" 0 "PASS" "same"
+run_case "invalid_blocked_to_finalized" 1 "FAIL" "Blocked task must not move directly to finalized"
 
 if [ "$failures" -ne 0 ]; then
   echo "Task lifecycle validator smoke test failed."
