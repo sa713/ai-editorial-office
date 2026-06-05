@@ -9,6 +9,10 @@ Canonical KB ownership:
 - `feedback_loop.md` gives practical guidance for post-delivery feedback
   classification and escalation. It does not override `AGENTS.md`, review-gate,
   or task-local governance artifacts.
+- `source_provenance.md` gives practical guidance for importing, cleaning,
+  activating, reviewing, and updating external or client-specific source
+  material. It does not override `AGENTS.md`, client-profile activation rules,
+  or task-local governance artifacts.
 - `compact_execution.md` gives practical guidance for compact execution and
   artifact minimalism. It does not override `AGENTS.md`, selected pipelines, or
   task-local governance artifacts.

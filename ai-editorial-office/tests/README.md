@@ -20,6 +20,11 @@ markdown smoke-tests и synthetic examples:
 - `feedback_loop_acceptance_trial.md` - sanitized manual trial for
   acceptance/future preference feedback classification; it is not task
   materials.
+- `source_provenance_examples.md` - synthetic examples for source status
+  classification; these are not task materials or source files.
+- `source_provenance_smoke_test.md` - markdown manual smoke-test for
+  source/provenance classification; these cases are synthetic and are not
+  source materials.
 - `preflight_gate_examples.md` - synthetic examples for Preflight Gate routing
   decisions `ask`, `constrain`, `proceed`, and `block`; these are not task
   materials and do not replace Intake Agent, Chief Editor, or `AGENTS.md`.
@@ -72,6 +77,16 @@ not task materials and does not store real feedback.
 with a future preference. It checks that acceptance does not reopen the task and
 does not become bounded revision without an explicit current-artifact change
 request.
+
+Source provenance examples and smoke-test are used for manual source-status
+classification checks: they help verify `pending_source`, `active`, `stale`,
+and `deprecated` handling. They are not source materials and do not replace
+`AGENTS.md`, source notes, client-profile activation rules, or reviewed source
+updates.
+
+The reusable source import smoke-test template lives in
+`templates/artifacts/source_import_smoke_test_template.md`. Real source import
+smoke-tests should be added only for approved sanitized/source-safe cases.
 
 Preflight Gate examples and smoke-test are used for manual routing checks only:
 they help verify when the safe next strategy is `ask`, `constrain`, `proceed`,

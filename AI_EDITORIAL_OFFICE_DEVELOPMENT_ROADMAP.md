@@ -641,7 +641,7 @@ Harden Research Pipeline with smoke tests and compact evidence rules.
 
 # 9. Source/provenance workflow
 
-Статус: `planned`  
+Статус: `in_progress`
 Приоритет: `P2`  
 Тип апдейта: source governance / reusable import pattern
 
@@ -681,10 +681,25 @@ external source
 - когда источник считается active;
 - какой smoke-test нужен после обновления.
 
+## Выполнено
+
+- добавлен `ai-editorial-office/kb/source_provenance.md`;
+- добавлен `ai-editorial-office/templates/artifacts/source_notes_template.md`;
+- добавлен `ai-editorial-office/templates/artifacts/source_import_smoke_test_template.md`;
+- добавлены synthetic source provenance examples;
+- добавлен markdown smoke-test;
+- зафиксированы statuses `pending_source`, `active`, `stale`, `deprecated`.
+
+## Осталось
+
+- провести sanitized manual trial на source import scenario;
+- решить, нужен ли lightweight source provenance validator;
+- уточнить связь source provenance с `client_profile` activation.
+
 ## Возможная Codex-задача
 
 ```text
-Generalize external source import workflow from Sber profile.
+Run a sanitized source/provenance manual trial.
 ```
 
 ## Acceptance criteria
@@ -924,22 +939,33 @@ Add task pack generator for role-specific restart context.
 - bounded revision создаётся только при явной просьбе изменить текущий артефакт;
 - одного future preference feedback недостаточно для system change proposal.
 
+## 2026-06-05
+
+Добавлен Source/provenance workflow.
+
+Принято решение:
+
+- source status должен быть явным;
+- missing rules cannot be invented during cleaning;
+- compliance claims allowed only when source status and source-notes permit them;
+- source import smoke-test required before treating imported source as active.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — завершить текущий feedback loop мини-цикл:
+Вариант A — продолжить раздел 9:
 
 ```text
-Run one repeated-governance-failure feedback trial or decide on lightweight validator.
+Run a sanitized source/provenance manual trial.
 ```
 
-Вариант B — перейти к разделу 6:
+Вариант B — перейти к разделу 10:
 
 ```text
-Add source/provenance framework.
+Add task pack generator MVP.
 ```
 
-Рекомендуемый следующий шаг: repeated-governance-failure feedback trial, если
-хотим закрыть feedback loop decision; source/provenance framework, если хотим
-перейти к безопасной работе с источниками.
+Рекомендуемый следующий шаг: source/provenance manual trial, если хотим
+проверить source workflow на сценарии; task pack generator, если хотим улучшить
+restart/context management.
