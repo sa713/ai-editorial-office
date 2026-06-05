@@ -46,6 +46,9 @@ markdown smoke-tests и synthetic examples:
   with missing product context; it is not task materials.
 - `preflight_gate_checker_decision.md` - decision note recording why automated
   Preflight checker is not added yet; it is not production governance.
+- `end_to_end_cases/access_pass_security_task/` - sanitized end-to-end case for
+  an internal access-pass security task; it is not task materials and contains
+  no real credentials, real cards, real system details, or exploit instructions.
 
 ## Task lifecycle validator smoke test
 
@@ -134,6 +137,13 @@ missing product context. It checks when `ux_writing` can start through
 `preflight_gate_checker_decision.md` records the current decision to keep
 Preflight Gate checks manual after three sanitized trials. It explains why an
 automated checker is not added yet.
+
+`end_to_end_cases/access_pass_security_task/` records a synthetic sanitized
+end-to-end editorial case. It checks Preflight Gate `constrain`, compact
+execution, no-research mode, no external source import, task pack generator
+context, and review-gated finalization. It is not a real task folder and does
+not contain real credentials, real cards, real system details, or exploit
+instructions.
 
 Читайте эту папку, когда нужно найти или добавить проверку целостности проекта.
 

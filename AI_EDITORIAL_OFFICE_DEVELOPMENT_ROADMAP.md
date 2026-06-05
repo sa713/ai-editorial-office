@@ -1003,22 +1003,23 @@ Run a sanitized task pack generator manual trial.
 - full-evidence required for high-governance material claims;
 - Review Agent should verify material claims without reading a full research dump.
 
+## 2026-06-05
+
+Проведён первый end-to-end sanitized editorial case.
+
+Принято решение:
+
+- security-adjacent employee task should use `constrain`, not `proceed`;
+- exploit wording must be rewritten as sanctioned internal security testing;
+- no-research mode is enough when the task is editorial and contains no external factual claims;
+- task pack generator is useful for writer/review_agent context checks.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — начать прогон кейсов:
+Вариант A — прогнать второй end-to-end sanitized case.
 
-```text
-Run end-to-end sanitized editorial cases using the improved core.
-```
+Вариант B — внести точечные улучшения по итогам первого case_report.md.
 
-Вариант B — проверить research hardening:
-
-```text
-Run a sanitized research evidence manual trial.
-```
-
-Рекомендуемый следующий шаг: end-to-end sanitized cases, если текущий 5-step
-batch закрыт; research evidence manual trial, если хотим отдельно проверить
-evidence modes.
+Рекомендуемый следующий шаг: сначала посмотреть case_report.md и решить, нужен ли маленький fix.
