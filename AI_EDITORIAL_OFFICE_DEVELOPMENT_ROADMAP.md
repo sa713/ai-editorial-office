@@ -422,12 +422,14 @@ block
 - добавлен markdown smoke-test `ai-editorial-office/tests/preflight_gate_smoke_test.md`;
 - покрыты decisions `ask`, `constrain`, `proceed`, `block`;
 - покрыты Sber activation и Sber non-activation examples;
-- покрыты UX/high-governance examples.
+- покрыты UX/high-governance examples;
+- проведён sanitized manual trial на realistic internal coordination scenario;
+- сделан вывод по необходимости automated checker.
 
 ## Осталось
 
-- проверить examples на реальной intake-задаче;
-- при необходимости добавить automated checker;
+- провести ещё 2–3 manual trials на разных intake-сценариях;
+- после этого решить, нужен ли automated checker;
 - уточнить связь с `task-manifest.md` и `orchestration_plan.md`;
 - добавить more edge cases after real usage.
 
@@ -814,6 +816,16 @@ Add task pack generator for role-specific restart context.
 - examples не заменяют Intake Agent, Chief Editor или `AGENTS.md`;
 - Sber profile activation проверяется на activation/non-activation examples;
 - unsafe/deceptive communication должен блокироваться.
+
+## 2026-06-05
+
+Проведён первый sanitized manual trial Preflight Gate.
+
+Принято решение:
+
+- manual examples помогают выбрать bounded strategy без длинной анкеты;
+- automated checker пока не добавляется;
+- нужно накопить ещё несколько manual trials.
 
 ---
 
