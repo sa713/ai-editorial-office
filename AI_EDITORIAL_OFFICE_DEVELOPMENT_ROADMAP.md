@@ -425,12 +425,13 @@ block
 - покрыты UX/high-governance examples;
 - проведён sanitized manual trial на realistic internal coordination scenario;
 - проведён sanitized manual trial на Sber-owned vs Sber-as-topic scenarios;
+- проведён sanitized manual trial на UX/context scenario;
 - сделан вывод по необходимости automated checker.
 
 ## Осталось
 
-- провести ещё 1–2 manual trials на разных intake-сценариях;
-- после этого решить, нужен ли automated checker;
+- решить, нужен ли automated Preflight checker после трёх manual trials;
+- при необходимости добавить automated checker или оставить manual smoke-test;
 - уточнить связь с `task-manifest.md` и `orchestration_plan.md`;
 - добавить more edge cases after real usage.
 
@@ -837,6 +838,16 @@ Add task pack generator for role-specific restart context.
 - Sber profile должен активироваться только для Sber-owned/Sber-product/Sber-communication задач;
 - если Sber является темой, примером или объектом независимого материала, client_profile остаётся `none`;
 - automated checker пока не добавляется, нужен ещё один manual trial.
+
+## 2026-06-05
+
+Проведён sanitized manual trial Preflight Gate для UX/context scenario.
+
+Принято решение:
+
+- UX-задача с понятным типом, но неполным product context идёт через `constrain`;
+- система не должна выдумывать error cause, retry timing, recovery mechanics или support path;
+- automated checker пока не добавляется; следующий шаг — принять решение после трёх manual trials.
 
 ---
 
