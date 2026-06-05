@@ -6,11 +6,16 @@
 навигации, синхронизации служебных пакетов или других безопасных invariants.
 
 Статус папки: активная как место для будущей инфраструктуры. Сейчас содержит
-markdown smoke-test для Sber-mode:
+markdown smoke-tests и synthetic examples:
 
 - `sber-mode-smoke-test.md`
 - `compact_execution_examples.md` - synthetic examples for compact execution
   and artifact minimalism; these are not task materials.
+- `preflight_gate_examples.md` - synthetic examples for Preflight Gate routing
+  decisions `ask`, `constrain`, `proceed`, and `block`; these are not task
+  materials and do not replace Intake Agent, Chief Editor, or `AGENTS.md`.
+- `preflight_gate_smoke_test.md` - markdown manual smoke-test for Preflight
+  Gate routing; these cases are synthetic and are not task materials.
 
 ## Task lifecycle validator smoke test
 
@@ -32,6 +37,11 @@ status как warning, а не blocker.
 Fixtures в `tests/fixtures/task_lifecycle/` полностью искусственные и не
 являются real task materials. Они нужны только для проверки локального
 валидатора. Тест и валидатор не меняют task-файлы.
+
+Preflight Gate examples and smoke-test are used for manual routing checks only:
+they help verify when the safe next strategy is `ask`, `constrain`, `proceed`,
+or `block`. They do not define active rules and do not replace Intake Agent,
+Chief Editor, or `AGENTS.md`.
 
 Читайте эту папку, когда нужно найти или добавить проверку целостности проекта.
 

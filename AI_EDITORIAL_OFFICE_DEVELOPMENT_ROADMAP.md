@@ -33,11 +33,12 @@
 - article/social/UX/review pipelines умеют загружать client-profile files только когда профиль активен;
 - роли intake/chief/writer/ux_writer/review/final_editor знают про active client profile;
 - `/about` синхронизирован и проверен;
-- safe-core ИИ-редакции опубликован в private GitHub repo `sa713/ai-editorial-office`;
+- safe-core ИИ-редакции опубликован в repo `sa713/ai-editorial-office`;
+- repo сейчас public;
 - в GitHub repo попало только безопасное ядро без `tasks/`, `learn/`, `kb/clients/`, `/about`, `editorial_knowledge/`, `retrospectives/`, binary/source files и реальных рабочих материалов;
 - работа с safe core идёт маленькими ветками и PR;
-- прямой доступ ChatGPT к private repo пока не настроен;
-- ревью изменений пока выполняется через локальные diff/review pack;
+- ChatGPT теперь может читать публичный repo/PR через GitHub connector;
+- локальные diff/review pack остаются fallback;
 - добавлен `CONTRIBUTING.md` через PR #1;
 - добавлен MVP task lifecycle validator через PR #2;
 - добавлен compact execution guidance через PR #3;
@@ -383,7 +384,7 @@ Add feedback capture and system change proposal workflow.
 
 # 5. Preflight Gate: меньше лишних вопросов
 
-Статус: `planned`  
+Статус: `in_progress`
 Приоритет: `P2`  
 Тип апдейта: intake/orchestration quality
 
@@ -398,7 +399,8 @@ proceed
 block
 ```
 
-Нужно добавить примеры и smoke-tests для Preflight Gate.
+Первые examples и smoke-test для Preflight Gate добавлены. Дальше их нужно
+проверить на реальном intake-сценарии и при необходимости автоматизировать.
 
 ## Почему это важно
 
@@ -410,14 +412,29 @@ block
 
 - “нужен пост про релиз” → proceed или constrain;
 - “юридическое уведомление клиентам” → ask/block/high-governance;
-- “пуш для Сбера” → proceed + `client_profile: sber`;
-- “статья про Сбер как кейс рынка” → proceed + `client_profile: none`;
+- “пуш для Сбера” → proceed/constrain + `client_profile: sber`;
+- “статья про Сбер как кейс рынка” → proceed/constrain + `client_profile: none`;
 - “UX-текст для ошибки оплаты” → UX pipeline + product-context check.
+
+## Выполнено
+
+- добавлены synthetic Preflight Gate examples в `ai-editorial-office/tests/preflight_gate_examples.md`;
+- добавлен markdown smoke-test `ai-editorial-office/tests/preflight_gate_smoke_test.md`;
+- покрыты decisions `ask`, `constrain`, `proceed`, `block`;
+- покрыты Sber activation и Sber non-activation examples;
+- покрыты UX/high-governance examples.
+
+## Осталось
+
+- проверить examples на реальной intake-задаче;
+- при необходимости добавить automated checker;
+- уточнить связь с `task-manifest.md` и `orchestration_plan.md`;
+- добавить more edge cases after real usage.
 
 ## Возможная Codex-задача
 
 ```text
-Add Preflight Gate routing examples and smoke tests.
+Test Preflight Gate examples on a real intake task and decide whether to add an automated checker.
 ```
 
 ## Acceptance criteria
@@ -435,10 +452,6 @@ Add Preflight Gate routing examples and smoke tests.
 - Слишком много уточнений.
 - Слишком смелые допущения.
 - Подмена пользовательской цели “разумной реконструкцией”.
-
-Текущий recommended candidate: Preflight Gate examples/tests остаются хорошим
-следующим шагом, если цель — быстрее улучшить постановку задач и уменьшить
-лишние уточнения, а не продолжать lifecycle transition checks.
 
 ---
 
@@ -769,7 +782,7 @@ Add task pack generator for role-specific restart context.
 
 Выполнены первые safe-core GitHub апдейты:
 
-- создан private GitHub repo `sa713/ai-editorial-office`;
+- создан GitHub repo `sa713/ai-editorial-office`; после safe-core проверки repo открыт public для прямого review через GitHub connector;
 - добавлен `CONTRIBUTING.md` через PR #1;
 - добавлен MVP task lifecycle validator через PR #2;
 - добавлен compact execution guidance через PR #3;
@@ -783,6 +796,24 @@ Add task pack generator for role-specific restart context.
 - реальные task materials и source files не добавляются;
 - ChatGPT review пока выполняется через локальные diff/review pack;
 - следующие шаги выбираются по одному разделу roadmap за раз.
+- repo открыт public только после safe-core очистки: `tasks/`, `learn/`, `kb/clients/`, source/binary files и реальные task materials не публиковались.
+- ChatGPT может читать public repo/PR через GitHub connector; локальные diff/review pack остаются резервным способом проверки.
+
+Дополнительно:
+
+- repo был открыт public для прямого review через GitHub connector;
+- перед публикацией в repo не попали `tasks/`, `learn/`, `kb/clients/`, source/binary files и реальные рабочие материалы.
+
+## 2026-06-05
+
+Добавлены Preflight Gate synthetic examples and smoke-test.
+
+Принято решение:
+
+- Preflight examples являются tests/reference material, не production governance;
+- examples не заменяют Intake Agent, Chief Editor или `AGENTS.md`;
+- Sber profile activation проверяется на activation/non-activation examples;
+- unsafe/deceptive communication должен блокироваться.
 
 ---
 
@@ -794,12 +825,12 @@ Add task pack generator for role-specific restart context.
 Add transition checks to task lifecycle validator.
 ```
 
-Вариант B — перейти к разделу 5:
+Вариант B — продолжить раздел 5:
 
 ```text
-Add Preflight Gate routing examples and smoke tests.
+Test Preflight Gate examples on a real intake task or add an automated checker.
 ```
 
-Рекомендуемый следующий шаг: Preflight Gate examples, если цель — быстрее
-улучшить постановку задач и уменьшить лишние уточнения; transition checks, если
-цель — продолжить укреплять validator layer.
+Рекомендуемый следующий шаг: real intake check или automated Preflight checker,
+если цель — проверить routing на практике; transition checks, если цель —
+продолжить укреплять validator layer.
