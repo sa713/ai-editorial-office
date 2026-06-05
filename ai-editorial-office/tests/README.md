@@ -11,6 +11,10 @@ markdown smoke-tests и synthetic examples:
 - `sber-mode-smoke-test.md`
 - `compact_execution_examples.md` - synthetic examples for compact execution
   and artifact minimalism; these are not task materials.
+- `feedback_loop_examples.md` - synthetic examples for feedback classification;
+  these are not task materials.
+- `feedback_loop_smoke_test.md` - markdown manual smoke-test for feedback
+  classification; these cases are synthetic and are not task materials.
 - `preflight_gate_examples.md` - synthetic examples for Preflight Gate routing
   decisions `ask`, `constrain`, `proceed`, and `block`; these are not task
   materials and do not replace Intake Agent, Chief Editor, or `AGENTS.md`.
@@ -46,6 +50,12 @@ status как warning, а не blocker.
 Fixtures в `tests/fixtures/task_lifecycle/` полностью искусственные и не
 являются real task materials. Они нужны только для проверки локального
 валидатора. Тест и валидатор не меняют task-файлы.
+
+Feedback loop examples and smoke-test are used for manual classification checks:
+they help verify when a user reaction is a task-local note, bounded revision,
+possible system pattern, or system change proposal. They do not define active
+rules and do not replace Chief Editor, Review Agent, `AGENTS.md`, or separate
+reviewed system updates.
 
 Preflight Gate examples and smoke-test are used for manual routing checks only:
 they help verify when the safe next strategy is `ask`, `constrain`, `proceed`,
