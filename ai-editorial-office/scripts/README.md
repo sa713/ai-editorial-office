@@ -49,6 +49,35 @@ python3 ai-editorial-office/scripts/validate_task_lifecycle.py PATH_TO_TASK_FOLD
 Скрипт только читает task folder и не меняет файлы. Он проверяет уже заданные
 правила из canonical sources, но не создаёт новые правила lifecycle.
 
+### `generate_task_pack.py`
+
+Назначение: read-only helper для подготовки минимального context pack по task
+folder и роли. Он выводит список файлов, которые стоит прочитать для старта или
+restart, и краткую причину включения каждого файла.
+
+Поддерживаемые роли:
+
+- `writer`;
+- `ux_writer`;
+- `review_agent`;
+- `final_editor`;
+- `chief_editor`.
+
+Запуск:
+
+```bash
+python3 ai-editorial-office/scripts/generate_task_pack.py PATH_TO_TASK_FOLDER ROLE
+```
+
+Скрипт выводит markdown с blockers, warnings, required / role-specific /
+conditional read set и not-included notes. Exit code `0` означает, что pack
+сформирован без blockers; `1` — blockers найдены; `2` — ошибка запуска, пути
+или роли.
+
+Скрипт только читает task folder и известные canonical paths. Он не создаёт и
+не меняет файлы, не заменяет Chief Editor routing, не является orchestrator и не
+использует latest modified как source of truth.
+
 ### `check_about_memory_package.sh`
 
 Назначение: проверяет служебный пакет памяти `/about` для ChatGPT.

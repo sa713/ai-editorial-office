@@ -25,6 +25,8 @@ markdown smoke-tests и synthetic examples:
 - `source_provenance_smoke_test.md` - markdown manual smoke-test for
   source/provenance classification; these cases are synthetic and are not
   source materials.
+- `test_task_pack_generator.sh` - shell smoke-test for
+  `scripts/generate_task_pack.py`.
 - `preflight_gate_examples.md` - synthetic examples for Preflight Gate routing
   decisions `ask`, `constrain`, `proceed`, and `block`; these are not task
   materials and do not replace Intake Agent, Chief Editor, or `AGENTS.md`.
@@ -62,6 +64,19 @@ warning. Валидатор трактует unknown status как warning, а �
 Fixtures в `tests/fixtures/task_lifecycle/` полностью искусственные и не
 являются real task materials. Они нужны только для проверки локального
 валидатора. Тест и валидатор не меняют task-файлы.
+
+## Task pack generator smoke test
+
+Запуск:
+
+```bash
+bash ai-editorial-office/tests/test_task_pack_generator.sh
+```
+
+Smoke-test запускает `scripts/generate_task_pack.py` на synthetic fixtures из
+`tests/fixtures/task_pack/`. Fixtures полностью искусственные и не являются
+real task materials. Они проверяют writer, review_agent, final_editor blocker и
+chief_editor feedback read sets.
 
 Feedback loop examples and smoke-test are used for manual classification checks:
 they help verify when a user reaction is a task-local note, bounded revision,

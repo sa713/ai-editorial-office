@@ -722,7 +722,7 @@ Run a sanitized source/provenance manual trial.
 
 # 10. Task pack generator
 
-Статус: `planned`  
+Статус: `in_progress`
 Приоритет: `P2`  
 Тип апдейта: context management / restartability
 
@@ -757,10 +757,25 @@ research/claims, если роль review_agent и есть factual claims
 - забыть selected pipeline;
 - потерять контекст при restart.
 
+## Выполнено
+
+- добавлен read-only `ai-editorial-office/scripts/generate_task_pack.py`;
+- добавлен shell smoke-test `ai-editorial-office/tests/test_task_pack_generator.sh`;
+- добавлены synthetic task_pack fixtures;
+- поддержаны роли `writer`, `ux_writer`, `review_agent`, `final_editor`, `chief_editor`;
+- generator outputs read set with reasons;
+- generator does not replace Chief Editor routing.
+
+## Осталось
+
+- проверить generator на sanitized real-like task folder;
+- добавить more role-specific edge cases after usage;
+- решить, нужен ли machine-readable JSON output later.
+
 ## Возможная Codex-задача
 
 ```text
-Add task pack generator for role-specific restart context.
+Run a sanitized task pack generator manual trial.
 ```
 
 ## Acceptance criteria
@@ -950,22 +965,33 @@ Add task pack generator for role-specific restart context.
 - compliance claims allowed only when source status and source-notes permit them;
 - source import smoke-test required before treating imported source as active.
 
+## 2026-06-05
+
+Добавлен Task pack generator MVP.
+
+Принято решение:
+
+- generator является read-only context helper;
+- generator не является orchestrator и не заменяет Chief Editor routing;
+- generator не использует latest modified как source of truth;
+- generator включает client-profile files только если они явно указаны и существуют.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — продолжить раздел 9:
+Вариант A — завершить текущую пятёрку:
 
 ```text
-Run a sanitized source/provenance manual trial.
+Harden Research Pipeline with compact evidence rules.
 ```
 
-Вариант B — перейти к разделу 10:
+Вариант B — проверить generator:
 
 ```text
-Add task pack generator MVP.
+Run a sanitized task pack generator manual trial.
 ```
 
-Рекомендуемый следующий шаг: source/provenance manual trial, если хотим
-проверить source workflow на сценарии; task pack generator, если хотим улучшить
-restart/context management.
+Рекомендуемый следующий шаг: Research Pipeline hardening, если хотим закрыть
+5-step batch; generator manual trial, если хотим проверить task pack на
+realistic task folder.
