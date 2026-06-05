@@ -426,19 +426,21 @@ block
 - проведён sanitized manual trial на realistic internal coordination scenario;
 - проведён sanitized manual trial на Sber-owned vs Sber-as-topic scenarios;
 - проведён sanitized manual trial на UX/context scenario;
+- принято решение не добавлять automated Preflight checker после трёх manual trials;
 - сделан вывод по необходимости automated checker.
 
 ## Осталось
 
-- решить, нужен ли automated Preflight checker после трёх manual trials;
-- при необходимости добавить automated checker или оставить manual smoke-test;
+- продолжить использовать manual smoke-test в реальных intake-сценариях;
+- добавлять edge cases только после повторяющихся ошибок;
+- вернуться к automated checker, если появятся повторяющиеся routing failures;
 - уточнить связь с `task-manifest.md` и `orchestration_plan.md`;
 - добавить more edge cases after real usage.
 
 ## Возможная Codex-задача
 
 ```text
-Test Preflight Gate examples on a real intake task and decide whether to add an automated checker.
+Use manual Preflight smoke-test on future real intake scenarios and add edge cases only after repeated routing failures.
 ```
 
 ## Acceptance criteria
@@ -849,22 +851,32 @@ Add task pack generator for role-specific restart context.
 - система не должна выдумывать error cause, retry timing, recovery mechanics или support path;
 - automated checker пока не добавляется; следующий шаг — принять решение после трёх manual trials.
 
+## 2026-06-05
+
+После трёх Preflight Gate manual trials принято решение не добавлять automated checker сейчас.
+
+Принято решение:
+
+- manual examples достаточно полезны для текущего этапа;
+- автоматизация сейчас может преждевременно зацементировать routing;
+- checker вернётся в roadmap только при повторяющихся routing failures.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — продолжить раздел 3:
+Вариант A — вернуться к разделу 3:
 
 ```text
 Add transition checks to task lifecycle validator.
 ```
 
-Вариант B — продолжить раздел 5:
+Вариант B — перейти к разделу 4:
 
 ```text
-Test Preflight Gate examples on a real intake task or add an automated checker.
+Add feedback capture and system change proposal workflow.
 ```
 
-Рекомендуемый следующий шаг: real intake check или automated Preflight checker,
-если цель — проверить routing на практике; transition checks, если цель —
-продолжить укреплять validator layer.
+Рекомендуемый следующий шаг: transition checks, если продолжаем укреплять
+validator layer; feedback loop, если хотим улучшить обучение редакции на
+пользовательской реакции.

@@ -23,6 +23,8 @@ markdown smoke-tests и synthetic examples:
   profile activation vs non-activation; it is not task materials.
 - `preflight_gate_ux_trial.md` - sanitized manual trial for checking UX routing
   with missing product context; it is not task materials.
+- `preflight_gate_checker_decision.md` - decision note recording why automated
+  Preflight checker is not added yet; it is not production governance.
 
 ## Task lifecycle validator smoke test
 
@@ -61,6 +63,10 @@ should be `sber` and when it should remain `none`.
 `preflight_gate_ux_trial.md` records a sanitized trial for UX writing with
 missing product context. It checks when `ux_writing` can start through
 `constrain` without inventing product behavior.
+
+`preflight_gate_checker_decision.md` records the current decision to keep
+Preflight Gate checks manual after three sanitized trials. It explains why an
+automated checker is not added yet.
 
 Читайте эту папку, когда нужно найти или добавить проверку целостности проекта.
 
