@@ -24,7 +24,13 @@ governance. Скрипты должны проверять уже заданны
 
 Назначение: локально проверяет базовые structural/governance ошибки task
 package: обязательные `task-manifest.md` и `status.md`, наличие review перед
-`final.md`, распознаваемый review outcome и запрет финализации без `approved`.
+`final.md`, распознаваемый review outcome, запрет финализации без `approved`,
+consistency current status между manifest/status и наличие выбранного pipeline
+файла.
+
+Дополнительно валидатор мягко сверяет найденный current status с
+`kb/task_statuses.md`: unknown status даёт warning, не blocker. Missing selected
+pipeline тоже warning; selected pipeline без файла в `pipelines/` — blocker.
 
 Запуск:
 

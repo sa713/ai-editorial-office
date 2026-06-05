@@ -13,7 +13,17 @@ from pathlib import Path
 
 
 REQUIRED_FILES = ("task-manifest.md", "status.md")
-MANIFEST_STATUS_RE = re.compile(r"\b(current status|current_status|status)\b", re.IGNORECASE)
+EDITORIAL_ROOT = Path(__file__).resolve().parents[1]
+TASK_STATUSES_PATH = EDITORIAL_ROOT / "kb" / "task_statuses.md"
+PIPELINES_DIR = EDITORIAL_ROOT / "pipelines"
+
+CURRENT_STATUS_RE = re.compile(
+    r"(?im)^\s*(?:[-*]\s*)?(?:current[\s_-]*status|status)\s*:\s*(.+?)\s*$"
+)
+SELECTED_PIPELINE_RE = re.compile(
+    r"(?im)^\s*(?:[-*]\s*)?(?:selected[\s_-]*pipeline|pipeline)\s*:\s*(.+?)\s*$"
+)
+CODE_SPAN_RE = re.compile(r"`([a-z][a-z0-9_-]*)`", re.IGNORECASE)
 LABELED_OUTCOME_RE = re.compile(
     r"(?im)^\s*(?:review[_ -]outcome|outcome|verdict|status)\s*:\s*"
     r"(approved|changes_requested|blocked)\b"
@@ -35,6 +45,63 @@ def is_blank(text: str) -> bool:
     return not text.strip()
 
 
+def clean_field_value(value: str) -> str:
+    return value.strip().strip("`").strip()
+
+
+def normalize_value(value: str) -> str:
+    normalized = clean_field_value(value).lower()
+    normalized = re.sub(r"[\s_-]+", "_", normalized)
+    return normalized.strip("_")
+
+
+def normalize_pipeline(value: str) -> str:
+    cleaned = clean_field_value(value)
+    if "/" in cleaned or "\\" in cleaned:
+        cleaned = Path(cleaned).name
+    cleaned = re.sub(r"\.md$", "", cleaned, flags=re.IGNORECASE)
+    normalized = normalize_value(cleaned)
+    if normalized.endswith("_pipeline"):
+        normalized = normalized[: -len("_pipeline")]
+    return normalized
+
+
+def extract_labeled_value(text: str, pattern: re.Pattern[str]) -> str | None:
+    for match in pattern.finditer(text):
+        value = clean_field_value(match.group(1))
+        if value:
+            return value
+    return None
+
+
+def extract_current_status(text: str) -> str | None:
+    return extract_labeled_value(text, CURRENT_STATUS_RE)
+
+
+def extract_selected_pipeline(text: str) -> str | None:
+    return extract_labeled_value(text, SELECTED_PIPELINE_RE)
+
+
+def load_known_statuses(path: Path = TASK_STATUSES_PATH) -> set[str] | None:
+    try:
+        text = read_text(path)
+    except OSError:
+        return None
+
+    allowed_section = text
+    section_match = re.search(
+        r"(?ims)^## allowed statuses\s*(.*?)(?:^##\s+|\Z)", text
+    )
+    if section_match:
+        allowed_section = section_match.group(1)
+
+    statuses = {
+        normalize_value(match.group(1))
+        for match in CODE_SPAN_RE.finditer(allowed_section)
+    }
+    return statuses or None
+
+
 def extract_review_outcome(text: str) -> str | None:
     """Return the first recognizable review outcome in a soft markdown shape."""
     for pattern in (LABELED_OUTCOME_RE, SINGLE_OUTCOME_LINE_RE):
@@ -47,22 +114,78 @@ def extract_review_outcome(text: str) -> str | None:
 def validate_task(task_dir: Path) -> tuple[list[str], list[str]]:
     blockers: list[str] = []
     warnings: list[str] = []
+    known_statuses = load_known_statuses()
 
     for file_name in REQUIRED_FILES:
         if not (task_dir / file_name).is_file():
             blockers.append(f"{file_name} is missing.")
 
     manifest_path = task_dir / "task-manifest.md"
+    manifest_status: str | None = None
     if manifest_path.is_file():
         manifest_text = read_text(manifest_path)
         if is_blank(manifest_text):
             blockers.append("task-manifest.md is empty.")
-        elif not MANIFEST_STATUS_RE.search(manifest_text):
-            blockers.append("task-manifest.md does not mention current status.")
+        else:
+            manifest_status = extract_current_status(manifest_text)
+            if manifest_status is None:
+                blockers.append(
+                    "task-manifest.md does not contain a recognizable current status."
+                )
 
     status_path = task_dir / "status.md"
-    if status_path.is_file() and is_blank(read_text(status_path)):
-        blockers.append("status.md is empty.")
+    status_status: str | None = None
+    if status_path.is_file():
+        status_text = read_text(status_path)
+        if is_blank(status_text):
+            blockers.append("status.md is empty.")
+        else:
+            status_status = extract_current_status(status_text)
+            if status_status is None:
+                warnings.append("status.md does not contain a recognizable current status.")
+
+    if manifest_status is not None and status_status is not None:
+        if normalize_value(manifest_status) != normalize_value(status_status):
+            blockers.append(
+                "task-manifest.md current status "
+                f"`{manifest_status}` differs from status.md current status "
+                f"`{status_status}`."
+            )
+
+    if known_statuses is None:
+        warnings.append("Could not verify current status against known task statuses.")
+    else:
+        for file_name, status in (
+            ("task-manifest.md", manifest_status),
+            ("status.md", status_status),
+        ):
+            if status is not None and normalize_value(status) not in known_statuses:
+                warnings.append(
+                    f"{file_name} current status `{status}` is not listed in "
+                    "kb/task_statuses.md."
+                )
+
+    selected_pipeline: str | None = None
+    for path in (manifest_path, task_dir / "orchestration_plan.md"):
+        if path.is_file():
+            pipeline = extract_selected_pipeline(read_text(path))
+            if pipeline:
+                selected_pipeline = pipeline
+                break
+
+    if selected_pipeline is None:
+        warnings.append(
+            "Selected pipeline was not found in task-manifest.md or "
+            "orchestration_plan.md."
+        )
+    else:
+        pipeline_name = normalize_pipeline(selected_pipeline)
+        pipeline_path = PIPELINES_DIR / f"{pipeline_name}_pipeline.md"
+        if not pipeline_path.is_file():
+            blockers.append(
+                f"Selected pipeline `{selected_pipeline}` does not map to an "
+                "existing pipeline file."
+            )
 
     final_path = task_dir / "final.md"
     review_path = task_dir / "review.md"
