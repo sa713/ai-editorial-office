@@ -53,6 +53,10 @@ markdown smoke-tests и synthetic examples:
   case for an internal cybersecurity toolkit feedback request; it is not task
   materials and contains no real methodology, meeting records, PSI materials,
   client data, or confidential content.
+- `end_to_end_cases/system_thinking_course_task/` - sanitized end-to-end case
+  for an internal course-development task; it is not task materials and
+  contains no real course source files, confidential methodology, internal
+  training materials, participant data, client data, or restricted content.
 
 ## Task lifecycle validator smoke test
 
@@ -155,6 +159,14 @@ compact execution, no-research mode, no external source import, task pack
 generator context, and review-gated finalization. It is not a real task folder
 and does not contain real methodology, meeting records, PSI materials, client
 data, or confidential content.
+
+`end_to_end_cases/system_thinking_course_task/` records a synthetic sanitized
+end-to-end editorial case. It checks Preflight Gate `constrain`, compact
+execution with source summary, compact-evidence mode, task-local supplied source
+provenance, task pack generator context, and review-gated finalization. It is
+not a real task folder and does not contain real course source files,
+confidential methodology, internal training materials, participant data, client
+data, or restricted content.
 
 Читайте эту папку, когда нужно найти или добавить проверку целостности проекта.
 
