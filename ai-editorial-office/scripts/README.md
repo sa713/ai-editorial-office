@@ -26,11 +26,15 @@ governance. Скрипты должны проверять уже заданны
 package: обязательные `task-manifest.md` и `status.md`, наличие review перед
 `final.md`, распознаваемый review outcome, запрет финализации без `approved`,
 consistency current status между manifest/status и наличие выбранного pipeline
-файла.
+файла. Если в `status.md` есть previous/current status, валидатор проверяет
+transition по `kb/task_statuses.md`.
 
 Дополнительно валидатор мягко сверяет найденный current status с
 `kb/task_statuses.md`: unknown status даёт warning, не blocker. Missing selected
 pipeline тоже warning; selected pipeline без файла в `pipelines/` — blocker.
+Missing previous status и одинаковые previous/current status дают warning.
+Invalid known transition даёт blocker, а `blocked` -> `finalized` запрещён
+отдельным guard.
 
 Запуск:
 

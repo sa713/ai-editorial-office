@@ -71,7 +71,7 @@
 
 Следующий кандидат:
 
-- дальнейшее расширение lifecycle validator до transition checks;
+- дальнейшее расширение lifecycle validator до finalization-gate deep checks;
 - или Preflight Gate examples and tests.
 
 Порядок можно менять, но лучше не начинать future roles и visual subsystem до того, как появятся валидаторы и compact execution.
@@ -286,16 +286,19 @@ Tune compact execution rules and examples for low-risk editorial tasks.
 - selected pipeline existence проверяется через `ai-editorial-office/pipelines/`;
 - missing selected pipeline — warning;
 - unknown selected pipeline — blocker;
+- lifecycle validator расширен transition checks для previous/current status;
+- invalid known transitions становятся blocker;
+- missing previous status остаётся warning для compact/legacy cases;
+- `blocked` -> `finalized` запрещён отдельным guard;
 - smoke-test расширен.
 
 ## Осталось
 
-- transition validator;
 - finalization-gate deep checks;
 - более предсказуемый parser для `task_statuses.md` или явный источник статусов;
 - проверки `client_profile` consistency;
 - проверка `final_decision.md` stage/ownership;
-- smoke-tests на valid/invalid transitions.
+- расширять transition edge cases после real/legacy usage.
 
 ## Возможная Codex-задача
 
@@ -898,6 +901,17 @@ Add task pack generator for role-specific restart context.
 - один feedback не создаёт system change proposal;
 - lightweight validator пока не добавляется.
 
+## 2026-06-05
+
+Добавлены transition checks в task lifecycle validator.
+
+Принято решение:
+
+- transition source of truth остаётся `kb/task_statuses.md`;
+- missing previous status является warning, не blocker;
+- invalid known transition является blocker;
+- `blocked` -> `finalized` запрещён отдельным guard.
+
 ---
 
 # Следующий рекомендуемый шаг
@@ -911,9 +925,9 @@ Run another sanitized feedback loop manual trial.
 Вариант B — вернуться к разделу 3:
 
 ```text
-Add transition checks to task lifecycle validator.
+Add finalization-gate deep checks to task lifecycle validator.
 ```
 
 Рекомендуемый следующий шаг: ещё один feedback loop manual trial, если хотим
-проверить классификацию разных типов пользовательской реакции; transition
-checks, если продолжаем укреплять validator layer.
+проверить классификацию разных типов пользовательской реакции; finalization-gate
+deep checks, если продолжаем укреплять validator layer.
