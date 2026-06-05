@@ -22,6 +22,7 @@ pipelines, task artifacts, or review-gate.
 | Sber as market case | `constrain` | `article` | `standard` | `none` | must not activate Sber profile when Sber is only a topic or example |
 | Sber-as-topic article trial | `constrain` | `article` | `standard` | `none` | must not activate Sber profile when Sber is only a topic/example; must not invent market claims |
 | UX error message | `constrain` | `ux_writing` | `standard` | `none` | must not invent product behavior or payment recovery mechanics |
+| UX context missing trial | `constrain` | `ux_writing` | `standard` | `none` | must not invent error cause, retry timing, recovery mechanics, or support path; must not ask a long questionnaire |
 | Missing source numeric claim | `ask` | `social` | `high-governance` | `none` | must not proceed on a user-impacting numeric claim without source and approval evidence |
 
 ## Manual check

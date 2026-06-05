@@ -21,6 +21,8 @@ markdown smoke-tests и synthetic examples:
   task materials.
 - `preflight_gate_sber_trial.md` - sanitized manual trial for checking Sber
   profile activation vs non-activation; it is not task materials.
+- `preflight_gate_ux_trial.md` - sanitized manual trial for checking UX routing
+  with missing product context; it is not task materials.
 
 ## Task lifecycle validator smoke test
 
@@ -55,6 +57,10 @@ future checker needs, not to store real task materials.
 `preflight_gate_sber_trial.md` records a sanitized trial for Sber-owned
 communication versus Sber-as-topic routing. It checks when `client_profile`
 should be `sber` and when it should remain `none`.
+
+`preflight_gate_ux_trial.md` records a sanitized trial for UX writing with
+missing product context. It checks when `ux_writing` can start through
+`constrain` without inventing product behavior.
 
 Читайте эту папку, когда нужно найти или добавить проверку целостности проекта.
 
