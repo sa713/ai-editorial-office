@@ -2,7 +2,7 @@ This is a synthetic/sanitized end-to-end case. It is not a real task folder and 
 
 # Task Pack
 
-Task folder: /Users/sa/Projects/ai-editorial-office-github/ai-editorial-office/tests/end_to_end_cases/access_pass_security_task
+Task folder: ai-editorial-office/tests/end_to_end_cases/access_pass_security_task
 Role: writer
 Result: PASS
 
