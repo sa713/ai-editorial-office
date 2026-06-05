@@ -23,6 +23,10 @@ The useful mechanism was separating “we have a source” from “we can publis
 
 Nothing blocked the case after clarifying that the course description will be an attachment for employees and does not need to be read or committed by Codex. The task pack generator may still warn about missing handoff files in compact cases; this remains a candidate convention to review across the first three case reports.
 
+- Task pack generator did not include `source_summary.md` in writer or review_agent read sets, even though this is a source-based compact-evidence case. This should be treated as a follow-up improvement candidate for task pack generator.
+
 ## Roadmap Follow-Up
 
 Compare the first three `case_report.md` files and decide whether compact E2E case conventions should explicitly document how to handle task-local attachments, source summaries, and expected task pack generator warnings.
+
+- Consider updating task pack generator so source-based tasks include task-local `source_summary.md`, `source_notes.md`, or equivalent evidence summary when present.

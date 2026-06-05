@@ -1035,6 +1035,7 @@ Run a sanitized task pack generator manual trial.
 - compact-evidence is appropriate when a user-provided course description is used as task-local source;
 - original source files must not be committed into safe-core repo;
 - source summary is enough for sanitized editorial case review.
+- task pack generator needs a follow-up check for task-local source summaries in source-based compact-evidence cases.
 
 ---
 
