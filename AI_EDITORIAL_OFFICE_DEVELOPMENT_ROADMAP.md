@@ -424,11 +424,12 @@ block
 - покрыты Sber activation и Sber non-activation examples;
 - покрыты UX/high-governance examples;
 - проведён sanitized manual trial на realistic internal coordination scenario;
+- проведён sanitized manual trial на Sber-owned vs Sber-as-topic scenarios;
 - сделан вывод по необходимости automated checker.
 
 ## Осталось
 
-- провести ещё 2–3 manual trials на разных intake-сценариях;
+- провести ещё 1–2 manual trials на разных intake-сценариях;
 - после этого решить, нужен ли automated checker;
 - уточнить связь с `task-manifest.md` и `orchestration_plan.md`;
 - добавить more edge cases after real usage.
@@ -826,6 +827,16 @@ Add task pack generator for role-specific restart context.
 - manual examples помогают выбрать bounded strategy без длинной анкеты;
 - automated checker пока не добавляется;
 - нужно накопить ещё несколько manual trials.
+
+## 2026-06-05
+
+Проведён sanitized manual trial Preflight Gate для Sber-owned vs Sber-as-topic.
+
+Принято решение:
+
+- Sber profile должен активироваться только для Sber-owned/Sber-product/Sber-communication задач;
+- если Sber является темой, примером или объектом независимого материала, client_profile остаётся `none`;
+- automated checker пока не добавляется, нужен ещё один manual trial.
 
 ---
 
