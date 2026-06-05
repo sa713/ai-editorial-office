@@ -8,5 +8,6 @@ These cases are not task materials and do not define production governance.
 | --- | --- | --- |
 | Single minor reaction | `task-local note` | must not change `AGENTS.md` |
 | Concrete rewrite request | `bounded revision` | must not become system rule |
+| Concrete revision with possible repeated style signal | `bounded revision + possible pattern watch` | must not create system change proposal from one signal; must not update KB with raw feedback |
 | Repeated style complaint | `possible system pattern` | must not update KB with raw feedback |
 | Repeated governance failure | `system change proposal` | must not change production files without reviewed update |

@@ -15,6 +15,8 @@ markdown smoke-tests и synthetic examples:
   these are not task materials.
 - `feedback_loop_smoke_test.md` - markdown manual smoke-test for feedback
   classification; these cases are synthetic and are not task materials.
+- `feedback_loop_manual_trial.md` - sanitized manual trial for post-delivery
+  feedback classification; it is not task materials.
 - `preflight_gate_examples.md` - synthetic examples for Preflight Gate routing
   decisions `ask`, `constrain`, `proceed`, and `block`; these are not task
   materials and do not replace Intake Agent, Chief Editor, or `AGENTS.md`.
@@ -56,6 +58,10 @@ they help verify when a user reaction is a task-local note, bounded revision,
 possible system pattern, or system change proposal. They do not define active
 rules and do not replace Chief Editor, Review Agent, `AGENTS.md`, or separate
 reviewed system updates.
+
+`feedback_loop_manual_trial.md` records a sanitized post-delivery scenario and
+checks classification as bounded revision plus possible pattern watch. It is
+not task materials and does not store real feedback.
 
 Preflight Gate examples and smoke-test are used for manual routing checks only:
 they help verify when the safe next strategy is `ask`, `constrain`, `proceed`,
