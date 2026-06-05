@@ -16,6 +16,9 @@ markdown smoke-tests и synthetic examples:
   materials and do not replace Intake Agent, Chief Editor, or `AGENTS.md`.
 - `preflight_gate_smoke_test.md` - markdown manual smoke-test for Preflight
   Gate routing; these cases are synthetic and are not task materials.
+- `preflight_gate_manual_trial.md` - sanitized manual trial for checking
+  whether Preflight Gate examples are useful on a realistic scenario; it is not
+  task materials.
 
 ## Task lifecycle validator smoke test
 
@@ -42,6 +45,10 @@ Preflight Gate examples and smoke-test are used for manual routing checks only:
 they help verify when the safe next strategy is `ask`, `constrain`, `proceed`,
 or `block`. They do not define active rules and do not replace Intake Agent,
 Chief Editor, or `AGENTS.md`.
+
+`preflight_gate_manual_trial.md` records a sanitized trial of those examples on
+a realistic internal coordination scenario. It is used to assess usefulness and
+future checker needs, not to store real task materials.
 
 Читайте эту папку, когда нужно найти или добавить проверку целостности проекта.
 
