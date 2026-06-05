@@ -1025,12 +1025,23 @@ Run a sanitized task pack generator manual trial.
 - editor must not invent toolkit functions or methodology content;
 - task pack generator remains useful for writer/review_agent context checks.
 
+## 2026-06-05
+
+Проведён третий end-to-end sanitized editorial case.
+
+Принято решение:
+
+- source-based internal course task should use `constrain` to avoid inventing course content beyond the supplied file;
+- compact-evidence is appropriate when a user-provided course description is used as task-local source;
+- original source files must not be committed into safe-core repo;
+- source summary is enough for sanitized editorial case review.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — прогнать третий end-to-end sanitized case другого типа.
+Вариант A — сравнить первые три end-to-end case_report.md и внести точечные улучшения.
 
-Вариант B — сравнить первые два case_report.md и внести точечные улучшения.
+Вариант B — прогнать четвёртый end-to-end sanitized case другого типа.
 
-Рекомендуемый следующий шаг: сравнить первые два case_report.md и решить, нужен ли маленький fix в compact execution, task pack generator или case conventions.
+Рекомендуемый следующий шаг: сравнить первые три case_report.md и решить, нужен ли маленький fix в compact execution, source/provenance, task pack generator или case conventions.
