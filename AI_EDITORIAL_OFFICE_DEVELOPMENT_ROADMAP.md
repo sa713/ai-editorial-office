@@ -1014,12 +1014,23 @@ Run a sanitized task pack generator manual trial.
 - no-research mode is enough when the task is editorial and contains no external factual claims;
 - task pack generator is useful for writer/review_agent context checks.
 
+## 2026-06-05
+
+Проведён второй end-to-end sanitized editorial case.
+
+Принято решение:
+
+- clear internal feedback request can use `proceed` when raw brief is sufficient;
+- no-research mode is enough when the task is editorial and has no external factual claims;
+- editor must not invent toolkit functions or methodology content;
+- task pack generator remains useful for writer/review_agent context checks.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — прогнать второй end-to-end sanitized case.
+Вариант A — прогнать третий end-to-end sanitized case другого типа.
 
-Вариант B — внести точечные улучшения по итогам первого case_report.md.
+Вариант B — сравнить первые два case_report.md и внести точечные улучшения.
 
-Рекомендуемый следующий шаг: сначала посмотреть case_report.md и решить, нужен ли маленький fix.
+Рекомендуемый следующий шаг: сравнить первые два case_report.md и решить, нужен ли маленький fix в compact execution, task pack generator или case conventions.
