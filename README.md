@@ -12,3 +12,9 @@ or restricted source files without a separate manual check.
 
 GitHub publication is allowed only to a private repository and only after a
 manual review of `git status`, `git diff`, tracked files, and publishing risks.
+
+## Project planning
+
+`AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` is a planning document for future
+development. It does not override `AGENTS.md` or
+`ai-editorial-office/AGENTS.md`.
