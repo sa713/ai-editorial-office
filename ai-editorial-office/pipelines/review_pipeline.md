@@ -138,6 +138,14 @@ artifact package by default. `review.md` remains required before finalization;
 Review Agent should not require optional artifacts when core traceability,
 restartability, and governance evidence are sufficient.
 
+Use `/kb/research_evidence.md` to review evidence mode without turning
+research artifacts into defaults. Review Agent should not require research
+artifacts for no-claim low-risk tasks when a no-research rationale is visible.
+When material claims exist, Review Agent should verify them through
+`claims-used.md`, `facts.md`, `sources.md`, `claims_table.md`, or equivalent
+compact evidence. Missing evidence for material claims should produce
+`changes_requested` or `blocked`.
+
 ### required artifacts
 
 | Artifact | Why it exists | Downstream consumer | May be omitted when |
@@ -244,6 +252,11 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 `standard` review may use separate `qa-checklist.md` only when downstream routing, task-specific requirements, blockers/open questions, or traceability needs make the separate file useful.
 
 `high-governance` review must use full review depth and must not approve if source traceability, required research artifacts, claim coverage, reviewer independence, human approval assessment, or governance-sensitive caveats are incomplete.
+
+Evidence depth follows `/kb/research_evidence.md`: `no-research` is acceptable
+only when no material claims need evidence; `compact-evidence` is acceptable
+when material claims are source-light and traceable; `full-evidence` is
+required for high-governance material claims.
 
 Compact review minimum:
 

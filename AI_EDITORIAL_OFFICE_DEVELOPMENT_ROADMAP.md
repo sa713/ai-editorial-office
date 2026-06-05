@@ -590,7 +590,7 @@ Clarify frozen visual subsystem boundaries or extract it as optional module.
 
 # 8. Research Pipeline hardening
 
-Статус: `planned`  
+Статус: `in_progress`
 Приоритет: `P2`  
 Тип апдейта: research quality / production test
 
@@ -618,8 +618,23 @@ research
 ## Возможная Codex-задача
 
 ```text
-Harden Research Pipeline with smoke tests and compact evidence rules.
+Run a sanitized research evidence manual trial.
 ```
+
+## Выполнено
+
+- добавлен `kb/research_evidence.md`;
+- добавлены evidence modes `no-research`, `compact-evidence`, `full-evidence`;
+- pipelines получили compact evidence guidance;
+- добавлены synthetic research evidence examples;
+- добавлен markdown smoke-test;
+- зафиксировано, что low-risk no-claim tasks do not require research artifacts.
+
+## Осталось
+
+- провести sanitized manual trial на article/social research scenario;
+- решить, нужен ли lightweight evidence validator;
+- добавить role-specific edge cases после реальных задач.
 
 ## Acceptance criteria
 
@@ -976,22 +991,34 @@ Run a sanitized task pack generator manual trial.
 - generator не использует latest modified как source of truth;
 - generator включает client-profile files только если они явно указаны и существуют.
 
+## 2026-06-05
+
+Добавлен Research Pipeline hardening.
+
+Принято решение:
+
+- research artifacts являются conditional, not automatic;
+- low-risk no-claim tasks can use no-research rationale;
+- compact-evidence is allowed for source-light tasks;
+- full-evidence required for high-governance material claims;
+- Review Agent should verify material claims without reading a full research dump.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — завершить текущую пятёрку:
+Вариант A — начать прогон кейсов:
 
 ```text
-Harden Research Pipeline with compact evidence rules.
+Run end-to-end sanitized editorial cases using the improved core.
 ```
 
-Вариант B — проверить generator:
+Вариант B — проверить research hardening:
 
 ```text
-Run a sanitized task pack generator manual trial.
+Run a sanitized research evidence manual trial.
 ```
 
-Рекомендуемый следующий шаг: Research Pipeline hardening, если хотим закрыть
-5-step batch; generator manual trial, если хотим проверить task pack на
-realistic task folder.
+Рекомендуемый следующий шаг: end-to-end sanitized cases, если текущий 5-step
+batch закрыт; research evidence manual trial, если хотим отдельно проверить
+evidence modes.
