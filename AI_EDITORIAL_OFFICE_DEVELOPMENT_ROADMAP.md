@@ -322,7 +322,7 @@ Add task lifecycle validator for statuses, review gate, and finalization gate.
 
 # 4. Feedback loop
 
-Статус: `planned`  
+Статус: `in_progress`
 Приоритет: `P2`  
 Тип апдейта: learning loop / governance
 
@@ -359,10 +359,24 @@ separate reviewed system update
   - new task;
   - possible system pattern.
 
+## Выполнено
+
+- добавлен `ai-editorial-office/kb/feedback_loop.md`;
+- добавлен `ai-editorial-office/templates/artifacts/system_change_proposal_template.md`;
+- добавлены synthetic feedback examples;
+- добавлен markdown smoke-test;
+- зафиксировано, что single feedback не меняет систему.
+
+## Осталось
+
+- проверить feedback loop на одном реальном sanitized post-delivery scenario;
+- решить, нужен ли lightweight validator для feedback/system proposal;
+- при необходимости уточнить связь с Chief Editor final decision.
+
 ## Возможная Codex-задача
 
 ```text
-Add feedback capture and system change proposal workflow.
+Run a sanitized feedback loop manual trial.
 ```
 
 ## Acceptance criteria
@@ -861,22 +875,33 @@ Add task pack generator for role-specific restart context.
 - автоматизация сейчас может преждевременно зацементировать routing;
 - checker вернётся в roadmap только при повторяющихся routing failures.
 
+## 2026-06-05
+
+Добавлен Feedback loop workflow.
+
+Принято решение:
+
+- single feedback остаётся task-local signal;
+- repeated signal может стать feedback pattern;
+- system change proposal не меняет production files сам по себе;
+- любые production changes проходят отдельный reviewed system update.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — вернуться к разделу 3:
+Вариант A — продолжить раздел 4:
+
+```text
+Run a sanitized feedback loop manual trial.
+```
+
+Вариант B — вернуться к разделу 3:
 
 ```text
 Add transition checks to task lifecycle validator.
 ```
 
-Вариант B — перейти к разделу 4:
-
-```text
-Add feedback capture and system change proposal workflow.
-```
-
-Рекомендуемый следующий шаг: transition checks, если продолжаем укреплять
-validator layer; feedback loop, если хотим улучшить обучение редакции на
-пользовательской реакции.
+Рекомендуемый следующий шаг: feedback loop manual trial, если хотим проверить
+обучение редакции на пользовательской реакции; transition checks, если
+продолжаем укреплять validator layer.

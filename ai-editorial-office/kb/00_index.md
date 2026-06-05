@@ -6,6 +6,9 @@ Canonical KB ownership:
 
 - `task_statuses.md` owns allowed operational task statuses and transitions.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
+- `feedback_loop.md` gives practical guidance for post-delivery feedback
+  classification and escalation. It does not override `AGENTS.md`, review-gate,
+  or task-local governance artifacts.
 - `compact_execution.md` gives practical guidance for compact execution and
   artifact minimalism. It does not override `AGENTS.md`, selected pipelines, or
   task-local governance artifacts.
