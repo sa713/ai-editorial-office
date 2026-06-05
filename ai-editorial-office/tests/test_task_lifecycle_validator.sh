@@ -13,6 +13,7 @@ run_case() {
   local fixture_name="$1"
   local expected_exit="$2"
   local expected_result="$3"
+  local expected_text="${4:-}"
   local output
   local exit_code
 
@@ -33,14 +34,25 @@ run_case() {
     return
   fi
 
+  if [ -n "$expected_text" ] && ! printf '%s\n' "$output" | grep -q "$expected_text"; then
+    echo "FAIL: $fixture_name expected output to contain: $expected_text"
+    echo "$output"
+    failures=1
+    return
+  fi
+
   echo "PASS: $fixture_name"
 }
 
 run_case "valid_minimal" 0 "PASS"
+run_case "valid_with_pipeline" 0 "PASS"
 run_case "invalid_missing_manifest" 1 "FAIL"
 run_case "invalid_final_without_review" 1 "FAIL"
 run_case "invalid_final_with_changes_requested" 1 "FAIL"
 run_case "invalid_final_with_ambiguous_review" 1 "FAIL"
+run_case "invalid_status_mismatch" 1 "FAIL"
+run_case "invalid_unknown_pipeline" 1 "FAIL"
+run_case "warning_missing_pipeline" 0 "PASS" "Selected pipeline was not found"
 
 if [ "$failures" -ne 0 ]; then
   echo "Task lifecycle validator smoke test failed."
