@@ -33,11 +33,12 @@
 - article/social/UX/review pipelines умеют загружать client-profile files только когда профиль активен;
 - роли intake/chief/writer/ux_writer/review/final_editor знают про active client profile;
 - `/about` синхронизирован и проверен;
-- safe-core ИИ-редакции опубликован в private GitHub repo `sa713/ai-editorial-office`;
+- safe-core ИИ-редакции опубликован в repo `sa713/ai-editorial-office`;
+- repo сейчас public;
 - в GitHub repo попало только безопасное ядро без `tasks/`, `learn/`, `kb/clients/`, `/about`, `editorial_knowledge/`, `retrospectives/`, binary/source files и реальных рабочих материалов;
 - работа с safe core идёт маленькими ветками и PR;
-- прямой доступ ChatGPT к private repo пока не настроен;
-- ревью изменений пока выполняется через локальные diff/review pack;
+- ChatGPT теперь может читать публичный repo/PR через GitHub connector;
+- локальные diff/review pack остаются fallback;
 - добавлен `CONTRIBUTING.md` через PR #1;
 - добавлен MVP task lifecycle validator через PR #2;
 - добавлен compact execution guidance через PR #3;
@@ -795,6 +796,11 @@ Add task pack generator for role-specific restart context.
 - реальные task materials и source files не добавляются;
 - ChatGPT review пока выполняется через локальные diff/review pack;
 - следующие шаги выбираются по одному разделу roadmap за раз.
+
+Дополнительно:
+
+- repo был открыт public для прямого review через GitHub connector;
+- перед публикацией в repo не попали `tasks/`, `learn/`, `kb/clients/`, source/binary files и реальные рабочие материалы.
 
 ## 2026-06-05
 
