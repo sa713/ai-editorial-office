@@ -370,17 +370,18 @@ separate reviewed system update
 - добавлен markdown smoke-test;
 - зафиксировано, что single feedback не меняет систему;
 - проведён sanitized feedback loop manual trial на post-delivery revision/style signal;
+- проведён sanitized feedback loop manual trial на accepted result + future preference signal;
 
 ## Осталось
 
-- провести ещё 1–2 sanitized feedback loop manual trials;
+- провести ещё один sanitized feedback loop manual trial на repeated governance failure или перейти к lightweight validator decision;
 - после этого решить, нужен ли lightweight validator для feedback/system proposal;
 - при необходимости уточнить связь с Chief Editor final decision.
 
 ## Возможная Codex-задача
 
 ```text
-Run another sanitized feedback loop manual trial.
+Run one repeated-governance-failure feedback trial or decide on lightweight validator.
 ```
 
 ## Acceptance criteria
@@ -912,22 +913,33 @@ Add task pack generator for role-specific restart context.
 - invalid known transition является blocker;
 - `blocked` -> `finalized` запрещён отдельным guard.
 
+## 2026-06-05
+
+Проведён второй sanitized feedback loop manual trial.
+
+Принято решение:
+
+- acceptance + future preference классифицируется как task-local note + future preference watch;
+- такая реакция не переоткрывает задачу автоматически;
+- bounded revision создаётся только при явной просьбе изменить текущий артефакт;
+- одного future preference feedback недостаточно для system change proposal.
+
 ---
 
 # Следующий рекомендуемый шаг
 
-Вариант A — продолжить раздел 4:
+Вариант A — завершить текущий feedback loop мини-цикл:
 
 ```text
-Run another sanitized feedback loop manual trial.
+Run one repeated-governance-failure feedback trial or decide on lightweight validator.
 ```
 
-Вариант B — вернуться к разделу 3:
+Вариант B — перейти к разделу 6:
 
 ```text
-Add finalization-gate deep checks to task lifecycle validator.
+Add source/provenance framework.
 ```
 
-Рекомендуемый следующий шаг: ещё один feedback loop manual trial, если хотим
-проверить классификацию разных типов пользовательской реакции; finalization-gate
-deep checks, если продолжаем укреплять validator layer.
+Рекомендуемый следующий шаг: repeated-governance-failure feedback trial, если
+хотим закрыть feedback loop decision; source/provenance framework, если хотим
+перейти к безопасной работе с источниками.
