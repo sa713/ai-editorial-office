@@ -782,7 +782,7 @@ Add task pack generator for role-specific restart context.
 
 Выполнены первые safe-core GitHub апдейты:
 
-- создан private GitHub repo `sa713/ai-editorial-office`;
+- создан GitHub repo `sa713/ai-editorial-office`; после safe-core проверки repo открыт public для прямого review через GitHub connector;
 - добавлен `CONTRIBUTING.md` через PR #1;
 - добавлен MVP task lifecycle validator через PR #2;
 - добавлен compact execution guidance через PR #3;
@@ -796,6 +796,8 @@ Add task pack generator for role-specific restart context.
 - реальные task materials и source files не добавляются;
 - ChatGPT review пока выполняется через локальные diff/review pack;
 - следующие шаги выбираются по одному разделу roadmap за раз.
+- repo открыт public только после safe-core очистки: `tasks/`, `learn/`, `kb/clients/`, source/binary files и реальные task materials не публиковались.
+- ChatGPT может читать public repo/PR через GitHub connector; локальные diff/review pack остаются резервным способом проверки.
 
 Дополнительно:
 
