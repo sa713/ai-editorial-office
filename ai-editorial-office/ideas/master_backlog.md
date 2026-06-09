@@ -324,7 +324,7 @@ DOCX, PDF, PPTX, XLSX и другие внешние артефакты не с�
 
 ### P1.5 — raw brief normalization
 
-Статус: `planned`
+Статус: `implemented`
 
 Задача: научить редакцию принимать сырой пользовательский запрос и превращать его в рабочий `brief.md` / task definition без ручного перевода через ChatGPT.
 
@@ -341,6 +341,15 @@ DOCX, PDF, PPTX, XLSX и другие внешние артефакты не с�
 - шаблон нормализации сырого брифа;
 - examples: плохой сырой запрос → нормальный task brief;
 - ограничение: normalization не должна выдумывать цели, источники и требования, которых нет в запросе.
+
+Результат:
+
+- `intake_agent.md` расширен правилом raw brief normalization;
+- закреплено различение task signal, background context, noise, facts,
+  assumptions, questions и unknown;
+- добавлен guidance-шаблон нормализации без нового обязательного артефакта;
+- добавлены sanitized examples для noisy, incomplete и source-bound requests;
+- source status должен фиксироваться явно до source-dependent production.
 
 ### P2 — внедрить стандарт Codex-задачи и check-pack
 
@@ -778,6 +787,26 @@ Known problems по visual subsystem:
 - старый `AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` folded into master backlog и больше не ведётся отдельно;
 - статус документа обновлён на `active planning artifact / placed in repo`;
 - граница подтверждена: backlog не является production source of truth и не переопределяет `AGENTS.md` или production-файлы.
+
+### 2026-06-09 — P1.5 raw brief normalization
+
+Сделано:
+
+- усилен `intake_agent.md`: сырой пользовательский запрос теперь
+  нормализуется в рабочий `brief.md` / task definition через явное разделение
+  task signal, background context и noise;
+- добавлены статусы `confirmed`, `inferred`, `unknown`, `assumption` и
+  `question` для полей brief;
+- source status закреплён как обязательная явная часть нормализации;
+- добавлен compact guidance-шаблон и три sanitized examples;
+- новые роли, пайплайны, capabilities, validators и обязательные артефакты не
+  добавлялись.
+
+Решение:
+
+- P1.5 считается implemented как точечный production patch;
+- normalization должна помогать Intake продолжать с безопасными assumptions,
+  но не должна превращать отсутствие данных в фантазийный brief.
 
 ---
 
