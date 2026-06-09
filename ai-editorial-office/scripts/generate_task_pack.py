@@ -39,6 +39,10 @@ CLIENT_PROFILE_FILE_RE = re.compile(
 SOURCE_KEYWORD_RE = re.compile(
     r"(?i)\b(source|source-notes|provenance|pending_source|active|stale|deprecated)\b"
 )
+SOURCE_EVIDENCE_MODE_RE = re.compile(
+    r"(?i)\b(compact-evidence|source-based|source-bound|task-local supplied source|"
+    r"task-local evidence|source summary reference)\b"
+)
 
 ROLE_FILES: dict[str, tuple[str, ...]] = {
     "writer": (
@@ -93,6 +97,14 @@ ROLE_FILES: dict[str, tuple[str, ...]] = {
 }
 
 EVIDENCE_FILES = {"claims-used.md", "claims_table.md", "facts.md", "sources.md"}
+TASK_LOCAL_SOURCE_EVIDENCE_FILES = (
+    "source_summary.md",
+    "source_notes.md",
+    "source-notes.md",
+    "source-summary.md",
+    "source_evidence.md",
+    "evidence_summary.md",
+)
 
 
 @dataclass
@@ -212,6 +224,28 @@ def task_mentions_source(task_dir: Path, known_texts: list[str], known_files: li
     if any(SOURCE_KEYWORD_RE.search(text) for text in known_texts):
         return True
     return any(SOURCE_KEYWORD_RE.search(path.name) for path in known_files)
+
+
+def collect_task_local_source_evidence(
+    task_dir: Path, known_texts: list[str], known_files: list[Path]
+) -> list[Path]:
+    combined_context = "\n".join(known_texts)
+    if not SOURCE_EVIDENCE_MODE_RE.search(combined_context):
+        return []
+
+    declared_names = {path.name.lower() for path in known_files}
+    declared_context = combined_context.lower()
+    artifacts: list[Path] = []
+
+    for file_name in TASK_LOCAL_SOURCE_EVIDENCE_FILES:
+        path = task_dir / file_name
+        if not path.is_file():
+            continue
+        normalized_name = file_name.lower()
+        if normalized_name in declared_names or normalized_name in declared_context:
+            artifacts.append(path)
+
+    return artifacts
 
 
 def generate_pack(task_dir: Path, role: str) -> tuple[dict[str, list[ReadItem]], list[str], list[str], list[str]]:
@@ -362,6 +396,19 @@ def generate_pack(task_dir: Path, role: str) -> tuple[dict[str, list[ReadItem]],
                 not_included.append(
                     "Client-profile files — client_profile_status is not active."
                 )
+
+    if role in {"writer", "review_agent"}:
+        for path in collect_task_local_source_evidence(task_dir, known_texts, known_files):
+            add_item(
+                sections,
+                seen,
+                "Conditional",
+                path,
+                task_dir,
+                "task-local evidence summary for source-based compact-evidence; not original source",
+            )
+            known_texts.append(read_text(path))
+            known_files.append(path)
 
     add_item(
         sections,

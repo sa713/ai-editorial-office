@@ -302,24 +302,44 @@ DOCX, PDF, PPTX, XLSX и другие внешние артефакты не с�
 
 ### P1 — сравнить первые три end-to-end case report
 
-Статус: `next recommended step`
+Статус: `implemented / fix identified`
 
 Задача: сравнить первые три `case_report.md` и решить, где нужен маленький fix.
 
-Возможные зоны фикса:
+Результат анализа:
 
-- compact execution;
-- source/provenance;
-- task pack generator;
-- case conventions;
-- research evidence modes.
+- реальные первые три case reports найдены в `ai-editorial-office/tests/end_to_end_cases/`:
+  - `access_pass_security_task`;
+  - `cybersecurity_toolkit_feedback`;
+  - `system_thinking_course_task`;
+- compact execution, source/provenance, evidence modes, routing и review-gate отработали корректно;
+- `constrain` корректно применён для security-adjacent и source-bound задач;
+- `proceed` корректно применён для clear internal feedback request;
+- no-research подходит для editorial tasks без внешних factual claims;
+- compact-evidence подходит для source-bound task-local source cases;
+- missing handoff warning повторяется в compact task packs, но не блокирует выполнение и не требует отдельного фикса сейчас.
 
-Ожидаемый результат:
+Решение:
 
-- краткое сравнение кейсов;
-- список повторяющихся поломок;
-- один точечный fix, если он реально нужен;
-- без большого рефакторинга.
+```text
+fix needed
+```
+
+Один маленький follow-up нужен в зоне P5 / task pack generator:
+
+```text
+если source-based compact-evidence task объявляет task-local evidence summary
+(`source_summary.md`, `source_notes.md` или эквивалент), task pack generator
+должен включать его в read set для writer и review_agent.
+```
+
+Не требуется:
+
+- большой рефакторинг;
+- новые роли;
+- новые обязательные артефакты;
+- изменения review-gate;
+- validator.
 
 
 ### P1.5 — raw brief normalization
@@ -440,7 +460,7 @@ Validation:
 
 ### P5 — донастроить task pack generator
 
-Статус: `planned`
+Статус: `implemented`
 
 Задача: проверить и улучшить generator для source-based compact-evidence cases.
 
@@ -451,6 +471,26 @@ Validation:
 - client-profile files only when active;
 - отсутствие зависимости от latest modified;
 - компактный набор контекста для writer/review.
+
+P1 подтвердил один маленький fix-кандидат:
+
+- включать task-local evidence summary в writer/review task packs, если
+  source-based compact-evidence task явно объявляет такой артефакт.
+
+Результат:
+
+- `generate_task_pack.py` включает declared task-local source/evidence
+  artifacts (`source_summary.md`, `source_notes.md` или эквивалент) в writer и
+  review_agent read sets для source-based / compact-evidence задач;
+- read set явно показывает source status: task-local evidence summary, not
+  original source;
+- обычные no-research задачи без source artifact не получают лишние source
+  files;
+- client-profile guard не ослаблен: files не включаются без explicit active
+  profile status;
+- latest modified по-прежнему не используется как source of truth;
+- добавлены smoke checks: positive source summary, negative no-source, guard
+  pending client profile.
 
 ### P6 — capability governance skeleton
 
@@ -864,6 +904,46 @@ Known problems по visual subsystem:
 - P2 считается implemented как точечный system update;
 - дальнейшая автоматизация или validators пока не добавляются.
 
+### 2026-06-09 — P1 end-to-end case comparison
+
+Сделано:
+
+- найдены и сравнены первые три sanitized E2E case reports:
+  `access_pass_security_task`, `cybersecurity_toolkit_feedback`,
+  `system_thinking_course_task`;
+- подтверждено, что compact execution, routing, source/provenance, evidence
+  modes и review-gate отработали без блокеров;
+- repeated missing handoff warning признан non-blocking compact convention
+  noise;
+- найден один узкий fix-кандидат: task pack generator должен учитывать
+  task-local evidence summaries в source-based compact-evidence cases.
+
+Решение:
+
+- P1 считается implemented;
+- fix needed только в P5 scope: добавить source summary / source notes /
+  equivalent evidence summary в writer/review task packs, когда такой артефакт
+  явно присутствует;
+- новых ролей, pipeline, validators и review-gate изменений не требуется.
+
+### 2026-06-09 — P5 task pack generator
+
+Сделано:
+
+- task pack generator донастроен для source-based / compact-evidence cases;
+- writer и review_agent read sets теперь включают явно объявленные task-local
+  source/evidence summaries, если такие artifacts есть в task folder;
+- no-research cases без source artifacts не получают лишние source files;
+- client-profile files по-прежнему включаются только при explicit active
+  profile status;
+- добавлены positive / negative / client-profile guard smoke checks.
+
+Решение:
+
+- P5 считается implemented как точечный generator patch;
+- broad task folder dump, latest-modified logic, новые роли, pipeline,
+  validators и review-gate changes не добавлялись.
+
 ---
 
 ## 8. Следующий лучший шаг
@@ -871,7 +951,8 @@ Known problems по visual subsystem:
 Рекомендуемый следующий шаг:
 
 ```text
-Сравнить первые три end-to-end case_report.md и решить, нужен ли один маленький fix в compact execution, source/provenance, task pack generator или case conventions.
+Продолжить P3: дорастить lifecycle validator только вокруг реально
+ломающих редакцию структурных ошибок.
 ```
 
 Формат следующей Codex-задачи:
@@ -880,39 +961,37 @@ Known problems по visual subsystem:
 # Задача для Codex
 
 ## Цель
-Сравнить первые три end-to-end sanitized editorial case_report.md и предложить один точечный fix, если он действительно нужен.
+Продолжить P3 — lifecycle validator.
 
 ## Контекст
-Мы стабилизируем ИИ-редакцию после внедрения validation layer, compact execution, source/provenance, research hardening и task pack generator MVP. Нужно понять, какие проблемы повторяются на реальных sanitized cases, а не добавлять новую архитектуру заранее.
+P1.5, P2 и P5 закрыли вход, Codex task standard и task pack generator. Следующий
+риск — структурные ошибки lifecycle, которые могут реально сломать
+restartability, review-gate или client-profile/source consistency.
 
 ## Рабочая зона
-Работай только с папками/файлами end-to-end sanitized cases и связанными notes/check-pack, если они есть.
-Production-файлы не меняй на первом шаге.
+Работай только с lifecycle validator и ближайшими fixtures/tests.
 
 ## Source of truth
 - AGENTS.md
-- project-state.md
+- ai-editorial-office/AGENTS.md
 - ai-editorial-office/ideas/master_backlog.md
-- case_report.md по первым трём end-to-end cases
+- `ai-editorial-office/scripts/validate_task_lifecycle.py`
+- existing lifecycle validator fixtures/tests
 
 ## Что сделать
-1. Найди первые три end-to-end case_report.md.
-2. Кратко сравни их по routing, research mode, source handling, compact execution, task pack usefulness и review readiness.
-3. Выдели повторяющиеся проблемы.
-4. Предложи не больше одного маленького fix.
-5. Ничего не меняй в production files без отдельного подтверждения.
+1. Найти текущие проверки validator.
+2. Выбрать максимум один маленький structural check из P3 candidates.
+3. Добавить fixture/smoke coverage.
+4. Не превращать low-risk tasks в бюрократию.
 
 ## Acceptance criteria
-- Есть короткое сравнение трёх кейсов.
-- Есть список повторяющихся проблем или вывод, что их недостаточно для системного изменения.
-- Есть рекомендация: fix / no fix / collect more cases.
-- Нет большого рефакторинга.
-- Нет новых ролей, pipeline или обязательных артефактов.
+- Validator ловит одну подтверждённую structural failure.
+- Existing valid/warning-only fixtures keep working.
+- No new roles, pipelines, or mandatory artifacts.
 
 ## Формат результата
-- case-comparison.md
-- краткий implementation-notes.md, если были изменения
-- check-pack.md для проверки в ChatGPT
+- implementation-notes.md
+- check-pack.md
 ```
 
 ---
