@@ -324,7 +324,7 @@ DOCX, PDF, PPTX, XLSX и другие внешние артефакты не с�
 
 ### P1.5 — raw brief normalization
 
-Статус: `implemented`
+Статус: `implemented / validated`
 
 Задача: научить редакцию принимать сырой пользовательский запрос и превращать его в рабочий `brief.md` / task definition без ручного перевода через ChatGPT.
 
@@ -350,6 +350,18 @@ DOCX, PDF, PPTX, XLSX и другие внешние артефакты не с�
 - добавлен guidance-шаблон нормализации без нового обязательного артефакта;
 - добавлены sanitized examples для noisy, incomplete и source-bound requests;
 - source status должен фиксироваться явно до source-dependent production.
+
+Validation:
+
+- validation completed: 5 manual trials;
+- сценарии: noisy request, incomplete request, external source, source-bound
+  file task, management request;
+- результат: all PASS;
+- фантазии не выявлены;
+- source status отработал корректно;
+- ask/proceed/constrain/block логика отработала корректно;
+- Sber-related management request не активировал клиентский профиль и не
+  превратился в преждевременное проектирование.
 
 ### P2 — внедрить стандарт Codex-задачи и check-pack
 
@@ -807,6 +819,22 @@ Known problems по visual subsystem:
 - P1.5 считается implemented как точечный production patch;
 - normalization должна помогать Intake продолжать с безопасными assumptions,
   но не должна превращать отсутствие данных в фантазийный brief.
+
+### 2026-06-09 — P1.5 validation trials
+
+Сделано:
+
+- проведены 5 validation trials: noisy request, incomplete request, external
+  source, source-bound file task, management request;
+- все 5 тестов завершились PASS;
+- проверены task signal/background/noise, confirmed/inferred/unknown,
+  assumptions/questions, source status, ask/proceed логика, source-bound
+  сценарии и Sber-related routing.
+
+Решение:
+
+- P1.5 считается validated;
+- дальнейших доработок по P1.5 пока не требуется.
 
 ---
 
