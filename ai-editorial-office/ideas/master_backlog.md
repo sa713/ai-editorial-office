@@ -1,19 +1,19 @@
 # Master backlog ИИ-редакции
 
-Статус документа: `active draft / placed in repo`  
-Версия: `v0.2`  
+Статус документа: `active planning artifact / placed in repo`  
+Версия: `v0.3`  
 Дата сборки: 2026-06-09  
-Назначение: единый рабочий файл для планирования доработок ИИ-редакции, контроля прогресса и ретроспективы уже сделанных системных апдейтов.
+Назначение: единственный рабочий backlog-файл для планирования доработок ИИ-редакции, контроля прогресса и ретроспективы уже сделанных системных апдейтов.
 
 Этот файл собирает важное из трёх дорожных карт и наших обсуждений:
 
-- `DEVELOPMENT_ROADMAP.md` — основной roadmap развития safe-core, lifecycle, validators, compact execution, source/provenance и task pack generator.
+- `AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` / `DEVELOPMENT_ROADMAP.md` — folded into master backlog; больше не ведётся как отдельный planning document.
 - `SKILLS_ROADMAP.md` — идеи про capability packs, governance, artifact QA, reader testing, evals и scripted validators.
 - `token_economy_improvements.md` — практический стандарт постановки задач для Codex, чтобы не расходовать контекст на шум и не раздувать изменения.
 
-Файл не заменяет `AGENTS.md`, production-роли, пайплайны и шаблоны. Если этот backlog конфликтует с `AGENTS.md` или production-файлами, приоритет у production-файлов.
+Файл не заменяет `AGENTS.md`, `ai-editorial-office/AGENTS.md`, production-роли, пайплайны, шаблоны и правила task lifecycle. Если этот backlog конфликтует с `AGENTS.md` или production-файлами, приоритет у production-файлов.
 
-Текущий статус: файл собран как master backlog v0.2, но ещё должен быть размещён в repo и признан рабочим planning artifact. До этого он является сильной проектной сводкой, но не production source of truth.
+Текущий статус: файл размещён в repo как master backlog v0.3 и является единственным активным backlog/planning artifact для развития ИИ-редакции. Он остаётся planning artifact, а не production source of truth, и не переопределяет `AGENTS.md` или production-файлы.
 
 ---
 
@@ -289,16 +289,14 @@ DOCX, PDF, PPTX, XLSX и другие внешние артефакты не с�
 
 ### P0 — единый master backlog
 
-Статус: `draft created / needs repo placement`
+Статус: `active planning artifact / placed in repo`
 
 Задача: свести `DEVELOPMENT_ROADMAP.md`, `SKILLS_ROADMAP.md` и `token_economy_improvements.md` в один управляющий артефакт.
 
-Результат: этот файл должен стать основным планом контроля. Исходные roadmap-файлы остаются источниками деталей, но не должны жить как три равноправных плана.
+Результат: этот файл стал единственным активным backlog-файлом для планирования развития редакции и ретроспективы системных изменений. Старый `AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` folded into master backlog и больше не ведётся отдельно.
 
 Что ещё нужно сделать:
 
-- перенести этот файл в repo;
-- определить постоянное место, например `ai-editorial-office/roadmaps/master_backlog.md` или `ai-editorial-office/project-management/master_backlog.md`;
 - явно указать в `project-state.md`, что этот файл используется для планирования системных доработок;
 - после переноса обновлять его при каждом системном апдейте.
 
@@ -765,12 +763,21 @@ Known problems по visual subsystem:
 
 Сделано:
 
-- статус P0 изменён с `done` на `draft created / needs repo placement`;
+- статус P0 уточнён как предварительный master backlog перед repo-размещением;
 - добавлен пункт raw brief normalization;
 - добавлено правило: задачи для Codex выдавать одним цельным md-сообщением;
 - добавлены progressive disclosure и activation contract для capabilities;
 - добавлен anti-roadmap “что сейчас не делаем”;
 - visual subsystem дополнен known problems и оставлен в `defer`.
+
+### 2026-06-09 — master backlog v0.3
+
+Сделано:
+
+- `ai-editorial-office/ideas/master_backlog.md` закреплён как единственный активный backlog-файл;
+- старый `AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` folded into master backlog и больше не ведётся отдельно;
+- статус документа обновлён на `active planning artifact / placed in repo`;
+- граница подтверждена: backlog не является production source of truth и не переопределяет `AGENTS.md` или production-файлы.
 
 ---
 
@@ -779,7 +786,7 @@ Known problems по visual subsystem:
 Рекомендуемый следующий шаг:
 
 ```text
-Сначала перенести master_backlog.md в repo и закрепить его как planning artifact. Затем сравнить первые три end-to-end case_report.md и решить, нужен ли один маленький fix в compact execution, source/provenance, task pack generator или case conventions.
+Сравнить первые три end-to-end case_report.md и решить, нужен ли один маленький fix в compact execution, source/provenance, task pack generator или case conventions.
 ```
 
 Формат следующей Codex-задачи:
@@ -800,7 +807,7 @@ Production-файлы не меняй на первом шаге.
 ## Source of truth
 - AGENTS.md
 - project-state.md
-- DEVELOPMENT_ROADMAP.md или master_backlog.md, если он уже перенесён в repo
+- ai-editorial-office/ideas/master_backlog.md
 - case_report.md по первым трём end-to-end cases
 
 ## Что сделать

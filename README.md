@@ -15,6 +15,13 @@ manual review of `git status`, `git diff`, tracked files, and publishing risks.
 
 ## Project planning
 
-`AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` is a planning document for future
-development. It does not override `AGENTS.md` or
-`ai-editorial-office/AGENTS.md`.
+`ai-editorial-office/ideas/master_backlog.md` is the only active backlog file
+for planning AI editorial office development and retrospectives of system
+updates.
+
+`AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` was folded into the master backlog
+and is no longer maintained as a separate planning document.
+
+Files in `ai-editorial-office/ideas/` are planning and proposal materials. They
+do not override `AGENTS.md`, `ai-editorial-office/AGENTS.md`, production roles,
+pipelines, templates, or task lifecycle rules.
