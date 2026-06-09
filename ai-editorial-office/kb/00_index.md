@@ -19,6 +19,9 @@ Canonical KB ownership:
 - `compact_execution.md` gives practical guidance for compact execution and
   artifact minimalism. It does not override `AGENTS.md`, selected pipelines, or
   task-local governance artifacts.
+- `codex_task_standard.md` gives practical guidance for turning a normalized
+  brief into a compact Codex task and check-pack. It does not create a new role,
+  pipeline, capability pack, validator, or mandatory artifact.
 - `clients/CLIENT-ID/` owns task-scoped client profiles. Client profiles are
   loaded only when `task-manifest.md` or `orchestration_plan.md` explicitly
   activates them.

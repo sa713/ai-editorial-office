@@ -365,7 +365,7 @@ Validation:
 
 ### P2 — внедрить стандарт Codex-задачи и check-pack
 
-Статус: `planned`
+Статус: `implemented`
 
 Задача: превратить правила экономии токенов в рабочий шаблон для всех новых Codex-задач.
 
@@ -378,6 +378,19 @@ Validation:
 - acceptance criteria;
 - `implementation-notes.md`;
 - `check-pack.md`.
+
+Результат:
+
+- добавлен `kb/codex_task_standard.md` как компактный reusable standard;
+- `chief_editor` закреплён как владелец перехода normalized brief -> Codex
+  task / check-pack contract;
+- `generate_task_pack.py` оставлен read-only context helper, не orchestrator и
+  не генератор Codex-задач;
+- цепочка зафиксирована как
+  `raw request -> normalized brief -> Codex task -> implementation -> check-pack -> review`;
+- добавлены короткие examples: brief -> Codex task и brief -> check-pack;
+- новые роли, пайплайны, capability packs, validators и governance-слои не
+  добавлялись.
 
 Польза:
 
@@ -835,6 +848,21 @@ Known problems по visual subsystem:
 
 - P1.5 считается validated;
 - дальнейших доработок по P1.5 пока не требуется.
+
+### 2026-06-09 — P2 Codex Task Standard + Check Pack
+
+Сделано:
+
+- добавлен production KB standard для компактной Codex-задачи и check-pack;
+- Chief Editor зафиксирован как владелец преобразования normalized brief в
+  Codex-ready execution request;
+- P1.5 и P2 связаны в непрерывную цепочку от raw request до review packet;
+- check-pack ограничен review-support форматом, без замены `review.md`.
+
+Решение:
+
+- P2 считается implemented как точечный system update;
+- дальнейшая автоматизация или validators пока не добавляются.
 
 ---
 

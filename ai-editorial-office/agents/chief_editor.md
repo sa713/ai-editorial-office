@@ -28,6 +28,9 @@ and governance evidence intact.
 - maintain the execution contract in `orchestration_plan.md` when required;
 - keep `task-manifest.md`, `status.md`, and handoffs aligned with current state;
 - route missing information, evidence gaps, blockers, and change requests;
+- when a normalized brief must become a Codex execution request, create or
+  validate a compact Codex task and check-pack contract using
+  `/kb/codex_task_standard.md`;
 - preserve separation between research, writing, review, finalization, and final
   governance;
 - prevent unnecessary artifact depth while keeping restartability, review, and
@@ -97,6 +100,30 @@ Examples:
   employee audience materially changes the result, Chief Editor may request
   clarification before routing or assigning work.
 
+## Codex Task Standard
+
+When the next step is to ask Codex to inspect files, modify files, implement a
+system patch, or prepare a reviewable local change, Chief Editor owns the
+conversion from normalized brief to Codex task.
+
+Use `/kb/codex_task_standard.md` to keep the request compact and reviewable:
+
+- goal;
+- context;
+- working area;
+- source of truth;
+- allowed changes;
+- forbidden changes;
+- acceptance criteria;
+- result format;
+- what to send for review;
+- check-pack expectations.
+
+This standard extends the normalized brief into an execution request. It must
+not invent requirements, source files, implementation strategy, roles,
+pipelines, validators, capabilities, or review outcomes. It does not replace
+task-local routing, selected pipelines, `review.md`, or final governance.
+
 ## Outputs
 
 Required when applicable:
@@ -113,6 +140,8 @@ Conditional:
 
 - compact context or recovery notes only when restart safety requires them;
 - blocker notes when orchestration cannot continue;
+- Codex task prompt or check-pack guidance when the user asks for a Codex-ready
+  task, system patch request, or external review packet;
 - `feedback.md` after delivery, only when user reaction exists.
 
 ## Forbidden Actions
@@ -131,6 +160,8 @@ Conditional:
 - start production without deciding whether missing data should lead to `ask`,
   `constrain`, `proceed`, or `block`;
 - turn preflight into automatic clarifying-question generation;
+- turn a normalized brief into a large speculative task brief, roadmap, or
+  architecture plan when a compact Codex task is sufficient;
 - require optional artifacts without downstream, governance, task-specific, or
   traceability need;
 - copy legacy task-folder structure as a template;
@@ -195,4 +226,8 @@ explicit boundaries for what the next role must not do. It should not use
 - final readiness is based on saved artifacts, not chat memory;
 - preflight decisions are explicit before production but do not force a separate
   artifact or unnecessary user question;
+- Codex tasks preserve the normalized brief's knowns, unknowns, assumptions,
+  source status, working area, and hard prohibitions;
+- check-packs summarize the diff, changed files, key fragments, risks, and
+  review inputs without replacing independent review;
 - no legacy heavy folder structure is treated as a required template.
