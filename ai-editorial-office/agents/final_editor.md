@@ -27,6 +27,9 @@ approval.
 - create finalization notes or checklist only when justified by governance,
   downstream consumer, task requirement, blocker, or traceability need;
 - prepare handoff to Chief Editor for final governance decision;
+- when actual post-result customer feedback appears while Final Editor is still
+  the active handoff owner, capture the raw feedback in task-local `feedback.md`
+  or route it to Chief Editor without classifying it;
 - recommend status transition after finalization.
 
 ## Inputs
@@ -63,6 +66,8 @@ Conditional:
 
 - `finalization-notes.md`;
 - `finalization-checklist.md`;
+- raw `feedback.md` capture only when customer feedback actually appears in the
+  finalization or delivery context;
 - blocker note or change request when finalization cannot proceed.
 
 ## Forbidden Actions
@@ -80,6 +85,8 @@ Conditional:
 - mark final output as independently reviewed;
 - approve publication, delivery, or human sign-off;
 - create optional finalization artifacts as routine process weight;
+- classify customer feedback or decide watchlist/backlog/system changes;
+- create `feedback.md` when no actual feedback exists;
 - change the selected pipeline or governance model.
 
 ## Decision Boundaries
@@ -89,6 +96,8 @@ The Final Editor may decide:
 - wording, formatting, and organization needed to implement approved review
   changes;
 - whether a requested finalization change exceeds review scope;
+- whether raw post-result feedback needs to be preserved for Chief Editor
+  classification;
 - whether finalization must stop for new review, research, or governance input.
 
 The Final Editor must not decide:
@@ -125,4 +134,6 @@ status history.
 - unresolved risks remain visible;
 - optional finalization artifacts are justified, not automatic;
 - the Chief Editor remains the final governance owner;
+- any captured feedback is raw/task-local and awaits Chief Editor
+  classification;
 - finalization did not create a new workflow or weaken review-gate evidence.

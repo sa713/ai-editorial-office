@@ -39,10 +39,13 @@ and governance evidence intact.
   governance;
 - record final governance readiness in `final_decision.md` when the task reaches
   final decision;
-- after delivery, optionally capture user reaction in `feedback.md` when
-  feedback actually exists, without reopening the task automatically;
-- route repeated or significant feedback signals to `/kb/feedback_patterns.md`
-  only when they may represent a system pattern rather than a one-off reaction.
+- after delivery, classify actual customer feedback using
+  `/kb/customer_feedback_loop.md` and create/update task-local `feedback.md`
+  only when feedback exists;
+- decide whether feedback is `task_local`, `preference`, `observation`,
+  `confirmed_pattern`, or `system_change_candidate`;
+- route feedback only after classification: task-local action, preference note,
+  proposed engineering watchlist signal, or backlog/system-change candidate.
 
 ## Inputs
 
@@ -155,6 +158,9 @@ Conditional:
 - treat finalized material as published, delivered, or human-approved without
   explicit evidence;
 - change system rules from a single feedback item;
+- write automatically to `engineering_watchlist.md` or backlog from raw
+  feedback without a Chief Editor decision;
+- treat a customer preference as a global rule;
 - treat post-delivery feedback as automatic task reopening, review failure, or
   retroactive downgrade of the final decision;
 - start production without deciding whether missing data should lead to `ask`,
@@ -178,8 +184,11 @@ The Chief Editor may decide:
 - whether the Preflight Gate strategy is `ask`, `constrain`, `proceed`, or
   `block`;
 - whether final governance readiness can be recorded after review;
-- whether post-delivery user reaction is task-local feedback, a possible
-  system signal, a new task, or an allowed bounded revision.
+- whether post-delivery user reaction is `task_local`, `preference`,
+  `observation`, `confirmed_pattern`, or `system_change_candidate`;
+- whether a classified feedback item should become a task-local action,
+  preference note, watchlist proposal, backlog candidate, new task, or allowed
+  bounded revision.
 
 The Chief Editor must not decide:
 
@@ -230,4 +239,6 @@ explicit boundaries for what the next role must not do. It should not use
   source status, working area, and hard prohibitions;
 - check-packs summarize the diff, changed files, key fragments, risks, and
   review inputs without replacing independent review;
+- customer feedback classification preserves optional `feedback.md`, avoids new
+  roles, and never converts one reaction into a system change;
 - no legacy heavy folder structure is treated as a required template.

@@ -482,9 +482,19 @@ the completed result worse retroactively.
 When feedback exists, `chief_editor` may create `/tasks/TASK-ID/feedback.md`.
 No user reaction means no feedback artifact is required.
 
+Post-delivery feedback classification follows
+`/kb/customer_feedback_loop.md`:
+
+- `task_local`;
+- `preference`;
+- `observation`;
+- `confirmed_pattern`;
+- `system_change_candidate`.
+
 If the user asks for changes after delivery, distinguish:
 
 - feedback as a quality signal;
+- a task/customer preference that is not a global rule;
 - a new task when the request broadens or changes scope;
 - a bounded revision of the current task only when the current system rules
   allow it.
@@ -493,8 +503,12 @@ A single feedback item does not change the system automatically. System changes
 must follow:
 
 ```text
-single feedback ↓ repeated signal ↓ validated pattern ↓ system change proposal ↓ separate reviewed system update
+observation ↓ confirmed_pattern ↓ system_change_candidate ↓ separate reviewed system update
 ```
+
+Feedback does not write automatically to `engineering_watchlist.md`, backlog,
+or production rules. A watchlist or backlog entry requires an explicit Chief
+Editor decision.
 
 ## Risk Modes
 

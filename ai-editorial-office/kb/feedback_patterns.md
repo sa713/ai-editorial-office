@@ -8,12 +8,12 @@ across tasks.
 
 ```text
 Один feedback не меняет систему автоматически.
-single feedback ↓ repeated signal ↓ validated pattern ↓ system change proposal ↓ separate reviewed system update
+task_local / preference -> observation -> confirmed_pattern -> system_change_candidate -> separate reviewed system update
 ```
 
 ## pattern statuses
 
-- `observed` - one or more signals noticed, not yet validated.
+- `observed` - one or more `observation` signals noticed, not yet validated.
 - `recurring` - similar signal appears across multiple tasks or contexts.
 - `validated` - review confirms the signal is system-relevant, not only taste or a one-off task issue.
 - `system-change-proposed` - a future system update has been proposed but not implemented.

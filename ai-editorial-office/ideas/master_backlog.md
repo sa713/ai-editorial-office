@@ -494,49 +494,45 @@ P1 подтвердил один маленький fix-кандидат:
 
 ### P5.5 — Customer Feedback Loop
 
-Статус: `proposal`
+Статус: `implemented`
 
-Задача: подключить обратную связь заказчика к развитию редакции после
-завершения P5.
+Результат:
 
-Сейчас редакция уверенно держит цепочку:
-
-```text
-raw request -> brief -> Codex task -> task pack -> review
-```
-
-Нужно добавить кандидатный контур:
-
-```text
-feedback -> classification -> feedback.md -> engineering_watchlist.md
--> confirmed_pattern -> backlog -> system update -> watchlist update
-```
-
-Минимальный результат:
-
-- feedback capture после задачи;
-- task-local `feedback.md`;
-- классификация: `task_local`, `preference`, `observation`,
+- добавлен компактный KB workflow `kb/customer_feedback_loop.md`;
+- task-local `feedback.md` остался optional и создаётся только при реальном
+  feedback;
+- закреплена классификация: `task_local`, `preference`, `observation`,
   `confirmed_pattern`, `system_change_candidate`;
-- интеграция с `engineering_watchlist.md`;
-- escalation rules: observation -> watch; repeated signal ->
-  `confirmed_pattern`; `confirmed_pattern` -> backlog candidate;
-- обновление watchlist после системных апдейтов.
+- `chief_editor` классифицирует feedback и решает дальнейший путь;
+- `final_editor` может зафиксировать raw feedback после результата, но не
+  классифицирует его и не меняет систему;
+- `engineering_watchlist.md` подключён как decision-gated observation log, а не
+  автоматический список задач;
+- существующий `feedback_loop.md` оставлен как compatibility pointer, чтобы не
+  создавать параллельный механизм.
 
 Ограничения:
 
 - один отзыв не меняет систему автоматически;
-- observation не становится backlog item автоматически;
-- preference пользователя не становится системным правилом автоматически;
-- feedback loop не обходит review-gate;
-- feedback loop не обходит governance.
+- `preference` не становится глобальным правилом;
+- `observation` только предлагает watchlist entry после решения;
+- `confirmed_pattern` может стать backlog candidate, но не обязан;
+- `system_change_candidate` требует отдельного reviewed system update;
+- feedback loop не обходит review-gate и governance.
+
+Решение:
+
+```text
+task result -> customer feedback -> optional feedback.md -> classification
+-> task-local action / preference / watchlist proposal / backlog candidate
+```
 
 Польза:
 
-- редакция учится на реальной эксплуатации;
-- backlog формируется из повторяющихся сигналов;
-- ниже риск оптимизации под внутренние правила вместо пользы для заказчика;
-- наблюдения получают понятный жизненный цикл.
+- feedback не теряется в чате;
+- backlog может питаться подтверждёнными сигналами;
+- watchlist не превращается в список задач;
+- предпочтения заказчика остаются полезными, но task/customer-scoped.
 
 ### P6 — capability governance skeleton
 
@@ -830,6 +826,25 @@ Known problems по visual subsystem:
 - single feedback остаётся task-local;
 - repeated signal может стать feedback pattern;
 - production changes только через reviewed system update.
+
+### 2026-06-11 — P5.5 Customer Feedback Loop
+
+Сделано:
+
+- добавлен active workflow `kb/customer_feedback_loop.md`;
+- обновлены task-local `feedback.md` guidance, `chief_editor`, `final_editor`
+  и KB index;
+- feedback classification связана с `engineering_watchlist.md` через
+  decision-gated proposal, без автоматической записи;
+- добавлен smoke check для `task_local`, `preference`, `observation`,
+  `confirmed_pattern`, `system_change_candidate` и отсутствия mandatory
+  `feedback.md`.
+
+Решение:
+
+- новый агент не добавляется;
+- feedback не заменяет review и не обходит review-gate;
+- system changes проходят отдельный reviewed system update.
 
 ### 2026-06-05 — Source/provenance
 

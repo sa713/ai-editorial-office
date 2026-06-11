@@ -7,50 +7,64 @@ file only when the user actually responds to a delivered result.
 Один feedback не меняет систему автоматически.
 ```
 
-## metadata
+## raw feedback
 
 - Task ID:
 - Captured date:
-- Captured by: `chief_editor`
+- Captured by:
 - Related final decision:
 - Related delivered artifact:
+- User wording or paraphrase:
+- Context:
 
-## user reaction
+## feedback summary
 
 - Short summary:
 - Reaction type: `accepted` / `praised` / `needs revision` / `rejected` / `unclear` / `mixed`
-- User wording or paraphrase:
+- Current task impact:
 
-## feedback scope
+## classification
 
-Relates to:
-
-- understanding the task: yes/no
-- structure: yes/no
-- meaning: yes/no
-- tone: yes/no
-- format: yes/no
-- facts: yes/no
-- process: yes/no
-- usefulness: yes/no
-- other:
-
-## signal classification
-
-- Classification: `single feedback` / `possible system signal`
+- Primary classification: `task_local` / `preference` / `observation` / `confirmed_pattern` / `system_change_candidate`
+- Secondary classification, if any:
 - Why:
 - Similar known signals:
-- Should this be considered for `/kb/feedback_patterns.md`: yes/no
 
-## follow-up boundary
+## task-local action
 
-- Follow-up needed: yes/no/unclear
-- Follow-up type: none / new task / bounded revision / clarification / system-pattern watch
-- Does this reopen the task automatically: no
-- Does this change the final decision retroactively: no
+- Needed: yes/no/unclear
+- Action type: none / bounded revision / clarification / new task
+- Owner:
+- Scope boundary:
+- Review-gate impact:
 
-## what not to infer
+## preference signal
+
+- Is this a customer preference: yes/no
+- Preference summary:
+- Scope: this task / this customer / unknown
+- Why this is not a global rule:
+
+## watchlist signal
+
+- Proposed for `engineering_watchlist.md`: yes/no
+- Watchlist signal summary:
+- Status if accepted: `observation` / `watch` / `confirmed pattern`
+- Why this should or should not enter watchlist:
+
+## backlog candidate
+
+- Candidate: yes/no
+- Candidate reason:
+- Required evidence before backlog:
+- System change proposal needed: yes/no/unknown
+
+## decision
 
 - Do not infer:
+- Decision owner: `chief_editor`
+- Decision:
+- Does this reopen the task automatically: no
+- Does this change the final decision retroactively: no
 - System rules changed by this feedback: no
-
+- Watchlist/backlog changed automatically: no

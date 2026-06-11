@@ -6,9 +6,12 @@ Canonical KB ownership:
 
 - `task_statuses.md` owns allowed operational task statuses and transitions.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
-- `feedback_loop.md` gives practical guidance for post-delivery feedback
-  classification and escalation. It does not override `AGENTS.md`, review-gate,
-  or task-local governance artifacts.
+- `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
+  task-local capture, classification, watchlist signal, backlog candidate, and
+  guardrails. It does not override `AGENTS.md`, review-gate, or task-local
+  governance artifacts.
+- `feedback_loop.md` is a compatibility entry point for older references; it
+  should point to `customer_feedback_loop.md`, not define a separate taxonomy.
 - `source_provenance.md` gives practical guidance for importing, cleaning,
   activating, reviewing, and updating external or client-specific source
   material. It does not override `AGENTS.md`, client-profile activation rules,
