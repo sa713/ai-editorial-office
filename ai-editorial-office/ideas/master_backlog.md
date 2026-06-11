@@ -492,6 +492,52 @@ P1 подтвердил один маленький fix-кандидат:
 - добавлены smoke checks: positive source summary, negative no-source, guard
   pending client profile.
 
+### P5.5 — Customer Feedback Loop
+
+Статус: `proposal`
+
+Задача: подключить обратную связь заказчика к развитию редакции после
+завершения P5.
+
+Сейчас редакция уверенно держит цепочку:
+
+```text
+raw request -> brief -> Codex task -> task pack -> review
+```
+
+Нужно добавить кандидатный контур:
+
+```text
+feedback -> classification -> feedback.md -> engineering_watchlist.md
+-> confirmed_pattern -> backlog -> system update -> watchlist update
+```
+
+Минимальный результат:
+
+- feedback capture после задачи;
+- task-local `feedback.md`;
+- классификация: `task_local`, `preference`, `observation`,
+  `confirmed_pattern`, `system_change_candidate`;
+- интеграция с `engineering_watchlist.md`;
+- escalation rules: observation -> watch; repeated signal ->
+  `confirmed_pattern`; `confirmed_pattern` -> backlog candidate;
+- обновление watchlist после системных апдейтов.
+
+Ограничения:
+
+- один отзыв не меняет систему автоматически;
+- observation не становится backlog item автоматически;
+- preference пользователя не становится системным правилом автоматически;
+- feedback loop не обходит review-gate;
+- feedback loop не обходит governance.
+
+Польза:
+
+- редакция учится на реальной эксплуатации;
+- backlog формируется из повторяющихся сигналов;
+- ниже риск оптимизации под внутренние правила вместо пользы для заказчика;
+- наблюдения получают понятный жизненный цикл.
+
 ### P6 — capability governance skeleton
 
 Статус: `proposal / planned after P1-P5`
