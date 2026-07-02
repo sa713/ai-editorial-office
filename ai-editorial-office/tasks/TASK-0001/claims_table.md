@@ -1,0 +1,20 @@
+# Claims Table
+
+Task ID: `TASK-0001`
+
+Owner: `research_agent`
+
+| Claim ID | Claim | Status | Source evidence | Confidence | Factual sensitivity | Can be used in draft | Notes for Writer | Notes for Reviewer |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| C1 | AI can help editors and UX writers produce first drafts or draft fragments faster than starting from a blank page. | `likely` | S1, S2, S3; F1 | `medium` | `medium` | `with caveat` | Phrase as practical support, not guaranteed speed. Avoid numbers unless sourced separately. | Check that no unsupported productivity metric is introduced. |
+| C2 | AI can help adapt an existing text for a different audience, channel, length, or tone. | `confirmed` | S1, S2, S3; F1, F2 | `high` | `low` | `yes` | Safe as a use case. Add human review for accuracy and tone. | Verify adaptation does not imply automatic brand compliance. |
+| C3 | AI can help editors test alternative structures, headings, summaries, and argument order. | `likely` | S3, S4; F3 | `medium` | `medium` | `with caveat` | Use as "can help generate options" or "can support structure checks." Do not claim AI validates the best structure. | Check for overclaiming around quality judgment. |
+| C4 | AI can help surface weak spots such as missing context, unclear logic, inconsistent tone, or unanswered reader questions. | `likely` | S3, S4; F3 | `medium` | `medium` | `with caveat` | Use "can help surface possible weak spots." Keep final evaluation with editor/reviewer. | Review should ensure draft does not say AI reliably catches all issues. |
+| C5 | AI does not replace editorial responsibility for meaning, factual accuracy, tone, risk, and final decisions. | `confirmed` | AGENTS.md, editorial_policy.md, S6, S7; F6, F7 | `high` | `medium` | `yes` | This is a central thesis and should be explicit. Tie it to verification and review, not fear. | Confirm draft preserves human responsibility and review gate. |
+| C6 | AI outputs can contain errors or unsupported information, so important claims should be checked before use. | `confirmed` | S7, editorial_policy.md; F7 | `high` | `medium` | `yes` | Safe and important. Keep wording calm, not alarmist. | Check that claims used in draft trace to sources. |
+| C7 | Teams benefit from shared rules for AI use, including what can be delegated to AI and what must remain with humans. | `likely` | S5, S6, AGENTS.md; F5, F6 | `medium` | `medium` | `with caveat` | Frame as governance recommendation, not universally proven fact. | Check that internal policy claims are not invented. |
+| C8 | AI improves editorial quality by itself. | `unsupported` | No checked source supports this as a standalone claim. | `low` | `medium` | `no` | Do not use. If quality is discussed, tie it to human review and specific tasks. | Reject if presented as fact. |
+| C9 | AI can replace editors or UX writers in product teams. | `unsupported` | Contradicts task brief and governance model; no checked evidence supports using it as the article's claim. | `low` | `high` | `no` | Do not use except as a rejected misconception. | Reject if draft implies replacement. |
+| C10 | AI always saves time for editorial teams. | `unsupported` | S5 gives broad workplace context, not task-specific guarantee. | `low` | `medium` | `no` | Do not use. Safer: "can save time in some tasks when brief, inputs, and review are clear." | Check for absolute language. |
+| C11 | Organization-specific examples or policies exist for this article. | `unsupported` | No user-provided internal material in task artifacts. | `high` | `medium` | `no` | Use generic examples only, or mark examples as illustrative. | Block or request clarification if draft claims internal practices. |
+| C12 | AI can be useful for UX microcopy and content design tasks such as rewriting, shortening, expanding, and tone adjustment. | `confirmed` | S3, S4; F2 | `high` | `low` | `yes` | Safe as a UX-specific example. Avoid inventing product behavior. | Check against UX writing guidelines if interface examples appear. |

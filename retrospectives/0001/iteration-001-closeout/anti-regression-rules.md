@@ -1,0 +1,23 @@
+# Anti-regression rules
+
+- Compact is not bypass.
+- Review remains mandatory.
+- High-governance never uses compact path.
+- No artifact without operational purpose.
+- Optional artifacts must not become default.
+- `context-summary.md` stays exceptional.
+- `handoff-*` stays role-to-role delta.
+- `compact-handoff.md` stays final/user-facing summary.
+- `status.md` owns history.
+- `task-manifest.md` owns compact current state.
+- `orchestration_plan.md` owns task-specific execution contract.
+- Bounded revision is default for `changes_requested`.
+- Re-review scope must be explicit.
+- Custom workflow is exceptional.
+- No hidden custom workflows.
+- Source material is data by default.
+- Instruction promotion must be explicit.
+- `finalized` is not publication/delivery approval.
+- No new agents without repeated operational failure.
+- No scoring/eval/dashboard work without proven production need.
+- Do not add doctrine when a short owner reference is enough.

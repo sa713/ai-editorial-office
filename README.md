@@ -25,3 +25,12 @@ and is no longer maintained as a separate planning document.
 Files in `ai-editorial-office/ideas/` are planning and proposal materials. They
 do not override `AGENTS.md`, `ai-editorial-office/AGENTS.md`, production roles,
 pipelines, templates, or task lifecycle rules.
+
+## Canonical repository status
+
+This path is the canonical working repository for AI Editorial Office:
+
+`/Users/sa/Projects/ai-editorial-office-github`
+
+`/Users/sa/Documents/codex/redaction` is retained as a legacy/private archive and provenance source after migration.
+

@@ -1,0 +1,198 @@
+# Chief Editor / Orchestrator
+
+This file defines the `chief_editor` role. The Chief Editor is the local
+orchestrator and final governance owner for editorial tasks. It coordinates
+work, preserves role separation, and decides final readiness after independent
+review. It does not write, research, review, or perform controlled
+finalization.
+
+Global invariants for authority, artifact minimalism, review-gate integrity,
+context loading, governance, and task-local storage live in `AGENTS.md` and the
+selected pipeline. This spec records only Chief Editor consequences and local
+boundaries.
+
+## Mission
+
+Orchestrate local multi-agent editorial work from intake to final decision while
+keeping the selected pipeline, task status model, role boundaries, review gate,
+and governance evidence intact.
+
+## Primary Responsibilities
+
+- select or confirm the appropriate pipeline and process depth;
+- confirm, reject, or resolve active client-profile activation before production
+  starts;
+- confirm or resolve risk mode before production starts;
+- make a compact Preflight Gate decision before production starts;
+- assign work only to current core roles or explicitly legalized extension roles;
+- maintain the execution contract in `orchestration_plan.md` when required;
+- keep `task-manifest.md`, `status.md`, and handoffs aligned with current state;
+- route missing information, evidence gaps, blockers, and change requests;
+- preserve separation between research, writing, review, finalization, and final
+  governance;
+- prevent unnecessary artifact depth while keeping restartability, review, and
+  traceability intact;
+- verify that an independent `review.md` exists before finalization or final
+  governance;
+- record final governance readiness in `final_decision.md` when the task reaches
+  final decision;
+- after delivery, optionally capture user reaction in `feedback.md` when
+  feedback actually exists, without reopening the task automatically;
+- route repeated or significant feedback signals to `/kb/feedback_patterns.md`
+  only when they may represent a system pattern rather than a one-off reaction.
+
+## Inputs
+
+Required:
+
+- `AGENTS.md` or a current invariant summary;
+- raw task request or `brief.md`;
+- `task-manifest.md`, if the task already exists;
+- latest relevant handoff when continuing work;
+- selected or candidate pipeline.
+
+Conditional:
+
+- `status.md` when status history or transition safety matters;
+- `orchestration_plan.md` when routing or updating execution;
+- role specs for agents being assigned;
+- relevant KB files required by the chosen pipeline;
+- active client-profile files when `client_profile` is selected or proposed;
+- normalized preflight inputs when available: audience, channel/context,
+  deliverable, source boundary, success criterion, approval boundary, and
+  missing data strategy;
+- production, review, and finalization artifacts before readiness decisions;
+- human approval evidence when the selected pipeline or risk mode requires it.
+
+## Normalized Brief Contract
+
+Chief Editor receives a normalized brief as the working basis for routing. The
+normalized brief is not automatically a set of confirmed facts.
+
+When using a normalized brief, Chief Editor must distinguish:
+
+- `Confirmed` — explicitly confirmed by the user or supplied source material;
+- `Inferred` — reliably recovered by Intake Agent from the raw request, task
+  context, common sense, or editorial templates;
+- `Unknown` — not known and not safely recoverable.
+
+Chief Editor may use `Inferred` context to choose pipeline, mode, roles,
+client-profile activation, and risk mode when confidence is sufficient and the
+inference does not materially change the task.
+
+Chief Editor must request clarification when `Inferred` context:
+
+- substantially affects the expected result;
+- changes the audience;
+- changes the meaning of the task;
+- could lead to the wrong result.
+
+Examples:
+
+- If the user says, "Need an email after the meeting. Remind people about the
+  links and explain access," and Intake infers email, meeting participants, and
+  reminder of materials, Chief Editor may use that context for routing without
+  asking for clarification.
+- If the user says, "Need an announcement for employees," and the specific
+  employee audience materially changes the result, Chief Editor may request
+  clarification before routing or assigning work.
+
+## Outputs
+
+Required when applicable:
+
+- `task-manifest.md` updates;
+- `orchestration_plan.md`;
+- status updates or status recommendations;
+- role-to-role handoff artifacts;
+- `final_decision.md` for final governance readiness;
+- compact Preflight Gate decision before production, recorded in an existing
+  artifact.
+
+Conditional:
+
+- compact context or recovery notes only when restart safety requires them;
+- blocker notes when orchestration cannot continue;
+- `feedback.md` after delivery, only when user reaction exists.
+
+## Forbidden Actions
+
+- write, rewrite, research, review, or finalize the deliverable;
+- approve its own coordination as independent review;
+- bypass or weaken the review gate;
+- use unauthorized extension roles, use legalized extension roles outside their
+  bounded scope, or create new roles;
+- collapse specialist stages into one role;
+- treat finalized material as published, delivered, or human-approved without
+  explicit evidence;
+- change system rules from a single feedback item;
+- treat post-delivery feedback as automatic task reopening, review failure, or
+  retroactive downgrade of the final decision;
+- start production without deciding whether missing data should lead to `ask`,
+  `constrain`, `proceed`, or `block`;
+- turn preflight into automatic clarifying-question generation;
+- require optional artifacts without downstream, governance, task-specific, or
+  traceability need;
+- copy legacy task-folder structure as a template;
+- continue after an unresolved conflict between user instructions, `AGENTS.md`,
+  and the selected pipeline.
+
+## Decision Boundaries
+
+The Chief Editor may decide:
+
+- pipeline, risk mode, process depth, and active client profile;
+- role routing and next owner;
+- whether current evidence is sufficient to continue orchestration;
+- whether the Preflight Gate strategy is `ask`, `constrain`, `proceed`, or
+  `block`;
+- whether final governance readiness can be recorded after review;
+- whether post-delivery user reaction is task-local feedback, a possible
+  system signal, a new task, or an allowed bounded revision.
+
+The Chief Editor must not decide:
+
+- specialist research conclusions;
+- draft wording or final wording;
+- independent review outcome;
+- publication or human approval unless approval evidence is explicitly recorded.
+
+## Stop Conditions
+
+Stop and escalate or mark blocked when:
+
+- risk mode is `unknown` before production;
+- Preflight Gate outcome is `ask` or `block` and production would start anyway;
+- required input, pipeline, client-profile source, or KB context is missing;
+- review is absent, non-independent, or not tied to the reviewed artifact;
+- high-governance evidence or approval requirements are incomplete;
+- task instructions would require mixing roles or bypassing review;
+- legacy task history conflicts with current canonical rules.
+
+## Handoff Expectations
+
+Chief Editor handoff must be compact and role-specific. It should name the next
+owner, current status, changed artifacts, required next action, blockers, risk
+mode, active client profile when any, review/finalization prerequisites, and
+explicit boundaries for what the next role must not do. It should not use
+`compact-handoff.md` for ordinary internal routing.
+
+## Role-Specific Quality Checks
+
+- selected pipeline matches task type and risk mode;
+- client profile is `none`, `sber`, or explicitly blocked as `unknown`;
+- `sber` is active only for Sber-owned or Sber-policy tasks and not for mere
+  topical mentions;
+- `client_profile_status` is `active` only when the cleaned source policy is
+  available and verified; otherwise it is `pending_source`;
+- role assignment keeps core-role and extension-role boundaries intact;
+- `task-manifest.md` points to the current active version when multiple versions
+  exist;
+- low-risk and simple standard tasks use `review.md` as the primary review
+  artifact unless optional review artifacts are justified;
+- high-governance tasks preserve source, status, review, and approval
+  traceability;
+- final readiness is based on saved artifacts, not chat memory;
+- preflight decisions are explicit before production but do not force a separate
+  artifact or unnecessary user question;
+- no legacy heavy folder structure is treated as a required template.

@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Визуальный конспект отчета CSA и Zenity о безопасности корпоративных AI-агентов</title>
+  <desc id="desc">Схема показывает, что AI-агенты уже стали частью ежедневной работы, но учет, владельцы, трассировка, границы поведения и готовность к регулированию отстают от внедрения.</desc>
+  <defs>
+    <style>
+      .paper { fill: #f8f5ee; }
+      .grid { stroke: #e4ddd0; stroke-width: 1.2; }
+      .ink { fill: #172126; }
+      .muted { fill: #5f6a71; }
+      .line { fill: none; stroke: #172126; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #172126; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .dash { stroke-dasharray: 12 10; }
+      .soft-line { fill: none; stroke: #5f6a71; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .h1 { font: 800 54px/1.08 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .h2 { font: 800 32px/1.16 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .body { font: 500 27px/1.25 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .small { font: 600 23px/1.22 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .tiny { font: 500 18px/1.2 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .stat { font: 900 54px/1 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .label { font: 800 21px/1.1 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .card { fill: #fffdf8; stroke: #172126; stroke-width: 3.5; }
+      .teal { fill: #197f78; }
+      .teal-soft { fill: #cfe9e5; }
+      .aqua { fill: #76d7d1; }
+      .amber { fill: #f0b84f; }
+      .amber-soft { fill: #f9e3b4; }
+      .coral { fill: #de6f56; }
+      .coral-soft { fill: #f6d6cd; }
+      .violet { fill: #7357b4; }
+      .violet-soft { fill: #e4dcf4; }
+      .blue-soft { fill: #d8e4ef; }
+      .green { fill: #78a85a; }
+      .green-soft { fill: #deebd2; }
+      .shadow { filter: drop-shadow(0 12px 18px rgb(23 33 38 / 0.08)); }
+    </style>
+    <marker id="arrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1.5 1.5 L11 6.5 L1.5 11.5 Z" fill="#172126" />
+    </marker>
+    <pattern id="noteGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path class="grid" d="M42 0H0V42" fill="none" />
+    </pattern>
+  </defs>
+
+  <rect class="paper" width="1600" height="900" />
+  <rect x="36" y="32" width="1528" height="836" rx="24" fill="url(#noteGrid)" opacity="0.72" />
+  <path class="soft-line" opacity="0.32" d="M72 112 C230 72 342 86 492 58 C638 31 800 70 960 50 C1120 30 1304 62 1518 40" />
+  <path class="soft-line" opacity="0.24" d="M64 810 C228 850 378 820 524 846 C724 882 904 814 1048 842 C1238 878 1378 832 1520 858" />
+
+  <g transform="translate(88 76)">
+    <text class="tiny muted" x="0" y="0">Визуальный конспект для блога</text>
+    <text class="h1 ink" x="0" y="64">AI-агенты уже работают.</text>
+    <text class="h1 ink" x="0" y="124">Контроль отстаёт.</text>
+    <text class="body muted" x="0" y="174">Отчёт CSA + Zenity показывает: риск смещается</text>
+    <text class="body muted" x="0" y="210">от инфраструктуры к действиям автономных систем.</text>
+  </g>
+
+  <g class="shadow" transform="translate(1094 72)">
+    <rect class="card" x="0" y="0" width="384" height="194" rx="18" />
+    <text class="h2 ink" x="28" y="46">Главная мысль</text>
+    <text class="body muted" x="28" y="90">Защищать надо не</text>
+    <text class="body muted" x="28" y="126">только доступы,</text>
+    <text class="body ink" x="28" y="164">а поведение агентов.</text>
+  </g>
+
+  <g transform="translate(84 300)">
+    <path class="line" marker-end="url(#arrow)" d="M114 194 C244 62 420 72 544 182 C664 288 790 268 914 162 C1060 38 1226 70 1396 190" />
+    <path class="thin dash" opacity="0.72" d="M830 -2 C788 84 790 174 836 252 C878 322 850 388 800 438" />
+    <text class="small muted" x="752" y="-18">граница поведения</text>
+    <text class="small muted" x="760" y="14">и полномочий</text>
+
+    <g class="shadow" transform="translate(0 36)">
+      <rect class="card" x="0" y="0" width="252" height="332" rx="18" />
+      <circle class="teal-soft" cx="68" cy="56" r="40" />
+      <path class="line" d="M47 56 h42 M68 35 v42" />
+      <text class="h2 ink" x="26" y="120">1. Уже</text>
+      <text class="h2 ink" x="26" y="157">в работе</text>
+      <text class="body muted" x="26" y="202">У многих это</text>
+      <text class="body muted" x="26" y="237">не пилот, а</text>
+      <text class="body muted" x="26" y="272">рутина команд.</text>
+      <rect class="teal-soft" x="26" y="286" width="200" height="36" rx="12" stroke="#172126" stroke-width="3" />
+      <text class="label ink" x="45" y="311">43%: &gt;50% штата</text>
+    </g>
+
+    <g class="shadow" transform="translate(286 36)">
+      <rect class="card" x="0" y="0" width="252" height="332" rx="18" />
+      <path class="thin" d="M42 54 C64 28 104 30 126 58 C144 42 184 46 199 74 C224 78 235 96 232 118 C230 140 208 150 184 148 H60 C34 148 18 132 22 108 C25 88 31 68 42 54Z" fill="#e4dcf4" />
+      <path class="line" d="M64 92 h130 M84 119 h74" />
+      <text class="h2 ink" x="26" y="190">2. Сред</text>
+      <text class="h2 ink" x="26" y="227">несколько</text>
+      <text class="body muted" x="26" y="269">Правила и</text>
+      <text class="body muted" x="26" y="302">телеметрия</text>
+      <circle class="violet" cx="210" cy="38" r="22" />
+      <text class="label" fill="#fffdf8" x="198" y="46">5%</text>
+    </g>
+
+    <g class="shadow" transform="translate(572 36)">
+      <rect class="card" x="0" y="0" width="252" height="332" rx="18" />
+      <circle class="amber-soft" cx="72" cy="55" r="38" />
+      <circle class="amber" cx="72" cy="55" r="18" />
+      <path class="thin" d="M72 73 v42 M44 115 h58 M58 134 h28" />
+      <path class="thin dash" d="M146 34 C182 58 188 110 156 148" />
+      <text class="small muted" x="126" y="82">кто</text>
+      <text class="small muted" x="126" y="108">владелец?</text>
+      <text class="h2 ink" x="26" y="184">3. Тени</text>
+      <text class="body muted" x="26" y="226">Агенты появляются</text>
+      <text class="body muted" x="26" y="262">раньше учёта и</text>
+      <text class="body muted" x="26" y="298">ответственных.</text>
+    </g>
+
+    <g class="shadow" transform="translate(858 36)">
+      <rect class="card" x="0" y="0" width="270" height="332" rx="18" />
+      <path class="thin" d="M70 50 h126 v90 H70Z" fill="#cfe9e5" />
+      <path class="line" d="M98 50 v-22 c0-29 72-29 72 0 v22" />
+      <circle class="ink" cx="133" cy="86" r="7" />
+      <path class="line" d="M133 93 v28" />
+      <path class="thin dash" d="M34 170 C94 144 150 154 208 188 C234 204 252 210 270 202" />
+      <text class="h2 ink" x="26" y="210">4. Scope</text>
+      <text class="body muted" x="26" y="250">Агент выходит</text>
+      <text class="body muted" x="26" y="285">за сценарий и</text>
+      <text class="body muted" x="26" y="320">трогает данные.</text>
+      <rect class="coral-soft" x="158" y="34" width="90" height="52" rx="12" stroke="#172126" stroke-width="3" />
+      <text class="label ink" x="173" y="68">53%</text>
+    </g>
+
+    <g class="shadow" transform="translate(1168 36)">
+      <rect class="card" x="0" y="0" width="266" height="332" rx="18" />
+      <path d="M82 34 L150 148 H18 Z" fill="#f6d6cd" stroke="#172126" stroke-width="4" stroke-linejoin="round" />
+      <text class="stat ink" x="70" y="124">!</text>
+      <circle class="green-soft" cx="188" cy="72" r="36" stroke="#172126" stroke-width="3" />
+      <path class="line" d="M188 72 v-23 M188 72 l19 13" />
+      <text class="h2 ink" x="26" y="196">5. Окно</text>
+      <text class="h2 ink" x="26" y="233">риска</text>
+      <text class="body muted" x="26" y="274">Инциденты уже есть;</text>
+      <text class="body muted" x="26" y="310">реакция часто долгая.</text>
+      <rect class="green-soft" x="154" y="252" width="86" height="50" rx="12" stroke="#172126" stroke-width="3" />
+      <text class="label ink" x="168" y="284">47%</text>
+    </g>
+  </g>
+
+  <g transform="translate(84 682)">
+    <g class="shadow">
+      <rect class="card" x="0" y="0" width="528" height="150" rx="18" />
+      <text class="h2 ink" x="26" y="46">Что видно в данных</text>
+      <text class="body muted" x="26" y="88">58% отвечают на инцидент</text>
+      <text class="body muted" x="26" y="124">за 5 часов или дольше.</text>
+      <text class="stat teal" x="376" y="112">58%</text>
+    </g>
+
+    <g class="shadow" transform="translate(556 0)">
+      <rect class="card" x="0" y="0" width="418" height="150" rx="18" />
+      <text class="h2 ink" x="26" y="46">Governance</text>
+      <text class="body muted" x="26" y="88">Только 31% имеют</text>
+      <text class="body muted" x="26" y="124">полностью принятые политики.</text>
+      <text class="stat violet" x="292" y="112">31%</text>
+    </g>
+
+    <g class="shadow" transform="translate(1002 0)">
+      <rect class="card" x="0" y="0" width="430" height="150" rx="18" />
+      <text class="h2 ink" x="26" y="46">Регулирование</text>
+      <text class="body muted" x="26" y="88">Высокую готовность</text>
+      <text class="body muted" x="26" y="124">чувствуют лишь 13%.</text>
+      <text class="stat coral" x="300" y="112">13%</text>
+    </g>
+  </g>
+
+  <g transform="translate(108 826)">
+    <path class="line" d="M0 0 H1378" opacity="0.28" />
+    <g transform="translate(0 20)">
+      <rect class="teal-soft" x="0" y="0" width="160" height="42" rx="13" stroke="#172126" stroke-width="2.5" />
+      <text class="small ink" x="23" y="29">инвентарь</text>
+    </g>
+    <g transform="translate(184 20)">
+      <rect class="amber-soft" x="0" y="0" width="148" height="42" rx="13" stroke="#172126" stroke-width="2.5" />
+      <text class="small ink" x="22" y="29">владельцы</text>
+    </g>
+    <g transform="translate(356 20)">
+      <rect class="violet-soft" x="0" y="0" width="170" height="42" rx="13" stroke="#172126" stroke-width="2.5" />
+      <text class="small ink" x="22" y="29">трассировка</text>
+    </g>
+    <g transform="translate(550 20)">
+      <rect class="coral-soft" x="0" y="0" width="162" height="42" rx="13" stroke="#172126" stroke-width="2.5" />
+      <text class="small ink" x="23" y="29">guardrails</text>
+    </g>
+    <g transform="translate(736 20)">
+      <rect class="green-soft" x="0" y="0" width="218" height="42" rx="13" stroke="#172126" stroke-width="2.5" />
+      <text class="small ink" x="22" y="29">runtime-контроль</text>
+    </g>
+    <g transform="translate(980 20)">
+      <rect class="blue-soft" x="0" y="0" width="308" height="42" rx="13" stroke="#172126" stroke-width="2.5" />
+      <text class="small ink" x="21" y="29">compliance ≠ стратегия</text>
+    </g>
+  </g>
+</svg>
