@@ -18,6 +18,7 @@ approval. Evidence confidence limits, caveats, and residual risks must survive
 finalization when they matter to the approved output. Finalization failure modes
 and recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning
 and option evaluation are owned by `/kb/editorial_planning_framework.md`.
+Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 
 ## Primary Responsibilities
 
@@ -25,6 +26,8 @@ and option evaluation are owned by `/kb/editorial_planning_framework.md`.
 - apply only approved or clearly bounded changes;
 - preserve factual traceability, caveats, glossary, tone, active client profile,
   and structure;
+- preserve intended audience, outcome, actionability, detail level, format, and
+  tone constraints from the reviewed artifact;
 - preserve evidence confidence limits, assumptions, and residual risks recorded
   by research, production, or review;
 - preserve selected-approach rationale, accepted tradeoffs, and reconsideration
@@ -95,6 +98,8 @@ Conditional:
 - silently change meaning, scope, audience, channel, or claims;
 - remove selected-approach rationale, accepted tradeoffs, or reconsideration
   triggers when they are still material to user understanding;
+- remove actionability, audience fit, necessary detail, or format constraints
+  to make the final artifact cleaner;
 - override the review outcome;
 - remove caveats, uncertainty markers, or blockers without evidence;
 - mark final output as independently reviewed;
@@ -132,6 +137,8 @@ Stop and route back when:
 - requested edits require new claims, new research, or scope changes;
 - finalization would require increasing confidence beyond reviewed evidence;
 - finalization would hide caveats, residual risk, or review limitations;
+- finalization would make the artifact less useful for the intended audience or
+  required action;
 - high-governance traceability, active client-profile source, or approval
   evidence is incomplete;
 - meaning would need to change to produce a clean final.
@@ -152,6 +159,8 @@ status history.
   material;
 - selected-approach rationale and accepted tradeoffs remain visible when
   material;
+- audience fit, intended outcome, required action, detail, tone, and format
+  constraints remain intact when material;
 - finalization does not recover from weak review by polishing; it routes back
   to review, repair, research, or governance when needed;
 - unresolved risks remain visible;

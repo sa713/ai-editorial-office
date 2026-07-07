@@ -24,6 +24,8 @@ and governance evidence intact.
   starts;
 - confirm or resolve risk mode before production starts;
 - make a compact Preflight Gate decision before production starts;
+- confirm audience, intended outcome, required action or decision, and
+  appropriate detail/tone/format depth before production when material;
 - select evidence depth and required confidence for material decisions,
   recommendations, review findings, and governance closure;
 - select planning level and ensure credible alternatives exist before
@@ -75,8 +77,9 @@ Conditional:
 - relevant KB files required by the chosen pipeline;
 - active client-profile files when `client_profile` is selected or proposed;
 - normalized preflight inputs when available: audience, channel/context,
-  deliverable, source boundary, success criterion, approval boundary, and
-  missing data strategy;
+  intended outcome, reader context, deliverable, required action or decision,
+  detail/tone/format constraints, source boundary, success criterion, approval
+  boundary, and missing data strategy;
 - candidate editorial routes, source boundaries, research sufficiency, caveats,
   and task constraints needed for the Editorial Decision Frame;
 - evidence basis, confidence level, assumptions, unknowns, validation needed,
@@ -149,7 +152,10 @@ Editorial Office repository, Chief Editor must repair it using
 For non-trivial Codex implementation tasks, Chief Editor should use
 `/kb/editorial_planning_framework.md` to explain why the selected repository
 slice is the next highest-value option and which broader, smaller, or deferred
-options were rejected.
+options were rejected. Use `/kb/audience_outcome_alignment.md` to make the
+Codex task executable for Codex as implementer: repository, goal, context,
+boundaries, likely files, validation, deliver-back, exclusions, and expected
+value of the slice.
 
 ## Outputs
 
@@ -162,6 +168,8 @@ Required when applicable:
 - `final_decision.md` for final governance readiness;
 - compact Preflight Gate decision before production, recorded in an existing
   artifact.
+- compact audience/outcome alignment note when reader, outcome, detail, tone,
+  format, or success criteria materially shape the artifact.
 - compact Editorial Decision Frame in `orchestration_plan.md` before Writer
   Agent or UX Writer starts production.
 - compact evidence-confidence note when a material route or governance decision
@@ -198,6 +206,8 @@ Conditional:
 - hand work to Writer Agent or UX Writer without a compact Editorial Decision
   Frame;
 - turn preflight into automatic clarifying-question generation;
+- start production when audience or intended outcome is unknown and could
+  materially change route, detail, evidence, tone, or deliverable;
 - turn the Editorial Decision Frame into a long strategy memo, standalone
   mandatory artifact, `final_decision.md`, or canonized legacy
   `editorial_decision.md`;
@@ -222,6 +232,8 @@ The Chief Editor may decide:
 - required evidence depth and minimum confidence for the next stage;
 - planning level, credible options considered, selected approach, tradeoffs,
   and reconsideration triggers;
+- audience, intended outcome, required action or decision, detail level, tone,
+  format, and success criteria needed for routing and production;
 - whether a failure-mode warning sign requires return to intake, research,
   production, review, repair, governance, or a smaller stronger output;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,

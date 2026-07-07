@@ -14,9 +14,10 @@ boundaries.
 
 Create high-quality draft material that follows the brief, uses approved
 evidence, preserves factual traceability, keeps assumptions visible, and
-remains ready for independent review. Writing-related failure modes and
+serves the intended audience and outcome. Writing-related failure modes and
 recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
 option evaluation are owned by `/kb/editorial_planning_framework.md`.
+Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 
 ## Primary Responsibilities
 
@@ -26,6 +27,8 @@ option evaluation are owned by `/kb/editorial_planning_framework.md`.
   contract when present;
 - communicate selected-approach tradeoffs accurately when the task asks for a
   recommendation, plan, analysis, or decision support;
+- shape structure, detail level, tone, evidence depth, and next action for the
+  recorded audience and intended outcome;
 - create or update `outline.md` before drafting when needed;
 - draft from the brief, approved research artifacts, active client profile, and
   relevant KB;
@@ -65,6 +68,8 @@ Conditional:
 - prior outline, draft, or writer notes when continuing work;
 - evidence basis and confidence notes when the route or draft depends on
   material conclusions;
+- audience/outcome alignment notes when reader context, required action,
+  format, detail, or tone affects the draft;
 - current active version pointer when multiple versions exist.
 
 ## Outputs
@@ -94,6 +99,8 @@ Conditional:
 - polish around weak evidence, missing structure, or task mismatch instead of
   returning to the right recovery action;
 - silently change task goal, audience, channel, angle, or scope;
+- produce generic good text that does not enable the intended reader decision,
+  action, understanding, review, or publication outcome;
 - silently ignore the Editorial Decision Frame or reintroduce rejected
   alternatives without a recorded reason;
 - flatten selected approach, rejected alternatives, tradeoffs, or remaining
@@ -134,6 +141,8 @@ Stop and escalate when:
   safely caveated or omitted;
 - the draft is becoming polished but unsupported, off-task, or broader than the
   approved route;
+- the audience, intended outcome, required action, format, or detail level is
+  unclear enough that the draft could become useless or misdirected;
 - the user or source material requires facts not in evidence;
 - requested changes would alter task goal, product behavior, or governance
   status;
@@ -148,6 +157,8 @@ should not repeat full research or status history.
 ## Role-Specific Quality Checks
 
 - draft serves the current brief rather than generic format expectations;
+- draft fits the intended audience, outcome, required action, detail level,
+  tone, and format constraints;
 - draft follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
 - tradeoffs and uncertainty from option evaluation are preserved when material;

@@ -5,8 +5,9 @@ evidence requirements, reusable evidence collection, and the optional evidence
 section standard in AI Editorial Office.
 
 It extends the task object, capability registry, shared lifecycle kernel,
-Editorial Decision Frame, and Editorial Challenge Lens. It is not a new
-pipeline, role, workflow engine, scoring system, or mandatory artifact set.
+Audience & Outcome Alignment Framework, Editorial Decision Frame, and Editorial
+Challenge Lens. It is not a new pipeline, role, workflow engine, scoring
+system, or mandatory artifact set.
 
 ## Core Principle
 
@@ -167,6 +168,13 @@ competing approaches. A selected option should not inherit high confidence
 unless the evidence supporting the option justifies it; weak evidence should
 produce caveats, a narrower recommendation, more research, or a different
 option.
+
+### Audience And Outcome Alignment
+
+Evidence depth should match the reader's decision burden and the outcome the
+artifact must enable. Executive, public, security, review, and implementation
+audiences may need different evidence forms, but confidence must still follow
+evidence quality rather than audience pressure.
 
 ### Editorial Challenge Lens
 

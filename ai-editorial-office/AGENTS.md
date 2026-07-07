@@ -46,6 +46,7 @@
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
+| Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -103,6 +104,9 @@ existing markdown system should be understood and extended.
 - `/kb/editorial_planning_framework.md` defines lightweight planning levels,
   credible option generation, option evaluation dimensions, selected approach
   justification, and reconsideration triggers.
+- `/kb/audience_outcome_alignment.md` defines audience classes, outcome types,
+  alignment pattern, detail/tone/format fit, mismatch warning signs, correction
+  patterns, and Codex-specific audience guidance.
 
 Do not create a new role merely because a capability is named. Source
 conversion, integrity checking, context assembly, and memory export remain
@@ -149,6 +153,8 @@ Before production starts, Chief Editor must route the task editorially:
   decisions, recommendations, review findings, and governance closure;
 - choose the planning level and consider credible options before committing to
   a non-trivial route, recommendation, or implementation plan;
+- identify the audience, intended outcome, required action or decision, and
+  detail/tone/format fit before handing work to production when material;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` before
   handing work to Writer Agent or UX Writer;
 - record the routing decision in `orchestration_plan.md`, `task-manifest.md`,
@@ -172,6 +178,11 @@ pipeline, role, status, `final_decision.md`, or mandatory standalone
 `/kb/editorial_planning_framework.md` defines how to generate and evaluate
 credible alternatives before the Editorial Decision Frame records the selected
 route.
+
+`/kb/audience_outcome_alignment.md` defines how to shape route, depth,
+structure, tone, evidence, and final artifact fit around the reader and the
+decision, action, understanding, or publication outcome the artifact must
+enable.
 
 The frame must remain a short management block, not an analytical document.
 Alternatives exist to prove that the chosen route was deliberate: normally use

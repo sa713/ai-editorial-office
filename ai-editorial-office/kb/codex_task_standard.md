@@ -9,7 +9,8 @@ mandatory artifact for every editorial task. Chief Editor owns the decision to
 use it and must keep the selected task pipeline, review-gate, and role
 boundaries intact. Implementation-task dilution and recovery are covered by
 `/kb/editorial_failure_modes.md`; planning depth and option evaluation are
-covered by `/kb/editorial_planning_framework.md`.
+covered by `/kb/editorial_planning_framework.md`; Codex as implementer audience
+is covered by `/kb/audience_outcome_alignment.md`.
 
 ## owner and chain
 
@@ -76,6 +77,9 @@ Minimum expectations:
 - `Что прислать на проверку`: diff summary, changed files, key fragments,
   implementation notes, check-pack, and checks.
 
+Audience fit: Codex is the reader and executor. The task should make the next
+repository action obvious, bounded, and reviewable.
+
 ## task writing rules
 
 - Start from the normalized brief, not from chat noise.
@@ -83,6 +87,10 @@ Minimum expectations:
   files.
 - For non-trivial implementation tasks, name why the selected repository slice
   is the next highest-value option compared with credible alternatives.
+- State the expected value of the slice and the action Codex must complete,
+  not only the abstract strategy.
+- Include enough repository context, likely files, boundaries, validation, and
+  deliver-back format for Codex to execute without guessing.
 - Preserve `confirmed`, `inferred`, `unknown`, `assumption`, and `question`
   distinctions when they affect scope.
 - Do not invent source materials, requirements, acceptance criteria, files,
@@ -108,6 +116,8 @@ Recovery:
 - inspect actual files before proposing architecture;
 - compare credible implementation options when the first idea is not obviously
   sufficient;
+- re-align the task for Codex as implementer: goal, context, files,
+  boundaries, validation, deliver-back, expected value, and exclusions;
 - name the smallest useful implementation outcome;
 - include validation and deliver-back requirements;
 - remove process narration that does not help implementation or review;

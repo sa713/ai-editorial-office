@@ -17,15 +17,17 @@ classification for Chief Editor orchestration and no premature production work.
 Evidence taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`. Failure-mode warning signs and recovery
 patterns are owned by `/kb/editorial_failure_modes.md`. Planning levels and
-option evaluation are owned by `/kb/editorial_planning_framework.md`.
+option evaluation are owned by `/kb/editorial_planning_framework.md`. Audience
+and outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 
 ## Primary Responsibilities
 
 - normalize the raw request into task title, goal, audience, output, channel,
   and constraints;
 - surface preflight inputs for Chief Editor: audience, channel/context,
-  deliverable, source boundary, success criterion, approval boundary, missing
-  information, and safe assumptions;
+  intended outcome, reader context, deliverable, required action or decision,
+  format/detail/tone constraints, source boundary, success criterion, approval
+  boundary, missing information, and safe assumptions;
 - identify task type and likely pipeline;
 - identify whether a client profile may apply and propose `client_profile` when
   the task is clearly client-scoped;
@@ -36,7 +38,8 @@ option evaluation are owned by `/kb/editorial_planning_framework.md`.
 - separate user-provided facts from assumptions, hypotheses, intuition, and
   unknowns when they affect routing or evidence confidence;
 - detect early task misunderstanding, missing constraints, user-context loss,
-  source-instruction capture, and likely implementation-task dilution;
+  audience/outcome ambiguity, source-instruction capture, and likely
+  implementation-task dilution;
 - identify when the request likely needs `standard` or `strategic` planning
   because meaningful routes, implementation slices, evidence depth choices, or
   product/workflow alternatives exist;
@@ -136,6 +139,11 @@ handoff. It is not a new mandatory standalone artifact.
 - inferred:
 - unknown:
 
+## intended outcome
+- decide / approve / implement / review / understand / align / challenge / brief / publish / teach / persuade / document canon:
+- required action or decision:
+- reader context:
+
 ## expected artifact
 - confirmed:
 - inferred:
@@ -147,6 +155,7 @@ handoff. It is not a new mandatory standalone artifact.
 - source boundary:
 
 ## constraints
+- format / detail / tone constraints:
 
 ## explicit requirements
 
@@ -210,6 +219,8 @@ raw user context.
   the wrong repository, or likely to answer the wrong task.
 - Do not declare planning unnecessary when material alternatives could change
   the result.
+- Do not default to a generic audience, tone, detail level, or outcome when the
+  real reader or action could materially change the artifact.
 
 ### Sanitized examples
 

@@ -77,6 +77,7 @@ Select only the dimensions that matter for the current task.
 | Canon compatibility | Does it integrate with existing canonical owners instead of creating parallel architecture? |
 | Reviewability | Can Review Agent validate the option and resulting artifacts without excessive context? |
 | Time/value fit | Is this the right-sized next step for the current mission? |
+| Audience/outcome fit | Does this option help the intended reader decide, act, review, implement, understand, or publish? |
 
 The framework does not require numeric scores. A compact comparison table,
 short bullets, or a paragraph is enough when it makes the tradeoff visible.
@@ -153,6 +154,13 @@ option still hold, and whether rejected alternatives became stronger.
 Option evaluation should use evidence quality and confidence labels from
 `/kb/editorial_evidence_framework.md`. Weak evidence should reduce confidence,
 not be hidden by a sharper recommendation.
+
+### Audience And Outcome Alignment
+
+Option evaluation should use `/kb/audience_outcome_alignment.md` when reader or
+outcome fit affects the route. A stronger option on paper may be rejected when
+it is too broad, too shallow, too technical, or insufficiently actionable for
+the intended audience.
 
 ### Failure Modes
 

@@ -26,6 +26,11 @@ Canonical KB ownership:
   option evaluation, decision selection, recommendation formation, and planning
   completion criteria. It does not create a new role, scoring matrix, workflow,
   review gate, or mandatory planning artifact.
+- `audience_outcome_alignment.md` owns audience identification, intended
+  outcome, reader context, required action or decision, detail level, tone and
+  format fit, artifact success criteria, mismatch warning signs, and correction
+  patterns. It does not create a persona system, new role, workflow, review
+  gate, or mandatory audience artifact.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

@@ -16,6 +16,9 @@ when a lifecycle stage starts producing weak, wrong, or unsafe work.
 `/kb/editorial_planning_framework.md` owns planning depth, option generation,
 option evaluation, selected approach justification, and reconsideration
 triggers.
+`/kb/audience_outcome_alignment.md` owns audience identification, intended
+outcome, reader context, detail/tone/format fit, usefulness criteria, and
+correction patterns.
 
 If this file appears to conflict with `AGENTS.md`, a selected pipeline, a role
 spec, or task-local governance artifacts, stop and route the conflict through
@@ -37,8 +40,8 @@ separate workflow engine.
 
 | Stage | Purpose | Accountability wrapper | Primary artifact view | Gate or result |
 | --- | --- | --- | --- | --- |
-| Intake | Normalize the user request into task-local operating state. | Intake Agent or Chief Editor | `brief.md`, `task-manifest.md` | Entry/preflight gate |
-| Routing | Select risk, depth, planning level, pipeline or mini-contract, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
+| Intake | Normalize the user request into task-local operating state, including audience and intended outcome when material. | Intake Agent or Chief Editor | `brief.md`, `task-manifest.md` | Entry/preflight gate |
+| Routing | Select risk, depth, audience/outcome fit, planning level, pipeline or mini-contract, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
 | Research | Separate evidence, assumptions, contradictions, gaps, and usable claims. | Research Agent | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, `open-questions.md` when needed | Source boundary and research sufficiency gates |
 | Drafting | Produce article, social, or editorial copy within approved scope and evidence. | Writer Agent | `outline.md`, `draft.md`, `claims-used.md`, writer notes, handoff when needed | Drafting readiness gate |
 | UX writing | Produce product-facing copy within product, terminology, accessibility, and evidence constraints. | UX Writer | `ux-copy.md` or equivalent UX artifacts, UX notes, handoff when needed | Drafting readiness gate for UX copy |
@@ -62,7 +65,7 @@ unknowns, validation needed, and residual risk at the depth required by
 | Entry/preflight | Is the request understood enough to ask, constrain, proceed, or block? | `brief.md`, `task-manifest.md`, `orchestration_plan.md`, or `status.md` |
 | Source boundary | What is source data, user instruction, assumption, contradiction, or unknown? | `brief.md`, `research.md`, `sources.md`, source notes, or plan |
 | Research sufficiency | Are material claims supported, caveated, excluded, or blocked? | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, or compact evidence |
-| Drafting readiness | Can production proceed within approved scope, evidence, confidence, and constraints? | plan, production artifact, notes, handoff |
+| Drafting readiness | Can production proceed within approved scope, audience/outcome fit, evidence, confidence, and constraints? | plan, production artifact, notes, handoff |
 | Review | Has independent review approved, requested changes, or blocked the work, including evidence confidence when material? | `review.md` |
 | Controlled finalization | Is final output limited to reviewed and approved scope? | `final.md`, review pointer, optional finalization evidence |
 | Governance | Can the task close, require human approval, or remain blocked with residual risk visible? | `final_decision.md`, `status.md`, `task-manifest.md` |
@@ -93,9 +96,9 @@ it is not a new parallel lifecycle.
 | Intake | Create or update only the smallest brief and manifest state needed to route. |
 | Routing | Record selected pipeline or mini-contract, risk, depth, active capabilities, active roles, gates, and next owner. |
 | Research | Create evidence artifacts only when claims, risk, review, or governance need them. |
-| Drafting | Keep production artifacts aligned with source boundary and selected evidence depth. |
-| UX writing | Keep copy tied to product context, UI state, terminology, and reviewed constraints. |
-| Review | Record verdict, checked scope, independence basis, blockers, required changes, and next action. |
+| Drafting | Keep production artifacts aligned with source boundary, selected evidence depth, audience, outcome, and detail/tone/format constraints. |
+| UX writing | Keep copy tied to product context, UI state, terminology, reader action, accessibility, and reviewed constraints. |
+| Review | Record verdict, checked scope, independence basis, audience/outcome fit, blockers, required changes, and next action. |
 | Repair | Update only the artifacts affected by the bounded issue and preserve re-review scope. |
 | Finalization | Produce final output without adding unreviewed claims, product behavior, or scope. |
 | Governance | Record closure, human approval need, unresolved blockers, and memory disposition. |
@@ -113,6 +116,8 @@ Expand context or artifacts only when at least one trigger applies:
 - client profile is active or pending source verification;
 - review cannot validate from the compact packet;
 - task has multiple audiences, channels, deliverables, owners, or versions;
+- audience, intended outcome, required action, format, or detail level is
+  unclear enough to change the artifact;
 - current-version pointer, owner, status, or next action is unclear;
 - human approval may be required;
 - previous review requested changes or blocked the work;
@@ -150,6 +155,12 @@ plan may consume the option evaluation pattern from
 existing artifact that remains reviewable, usually `orchestration_plan.md` or
 the Editorial Decision Frame.
 
+Any stage that shapes or approves a material artifact may consume the alignment
+pattern from `/kb/audience_outcome_alignment.md`. Audience/outcome alignment is
+recorded in the smallest existing artifact that remains useful to the next
+owner, usually `brief.md`, `orchestration_plan.md`, production notes,
+`review.md`, or `final_decision.md`.
+
 ### Intake
 
 - Purpose: turn the raw request into a bounded task object.
@@ -159,8 +170,9 @@ the Editorial Decision Frame.
   relevant prior task only when the user explicitly refers to it.
 - Forbidden context: all old task folders, all pipelines, all role specs, or the
   legacy/private archive by default.
-- Expected outputs: `brief.md`, initial or updated `task-manifest.md`, missing
-  information or preflight blocker.
+- Expected outputs: `brief.md`, initial or updated `task-manifest.md`, audience
+  and intended outcome when known or material, missing information or preflight
+  blocker.
 - Stop conditions: unclear objective, unsafe instruction conflict, missing task
   identity, or repository/path ambiguity.
 - Next stage: routing, clarification, or blocked.
@@ -168,7 +180,8 @@ the Editorial Decision Frame.
 ### Routing
 
 - Purpose: choose risk, process depth, planning level, pipeline or
-  mini-contract, roles, capabilities, gates, and next owner.
+  mini-contract, audience/outcome fit, roles, capabilities, gates, and next
+  owner.
 - Minimum required context: `brief.md`, `task-manifest.md`, `AGENTS.md`,
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
@@ -177,8 +190,9 @@ the Editorial Decision Frame.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
 - Expected outputs: `orchestration_plan.md`, updated manifest/status, selected
-  workflow overlay or mini-contract, planning level and options considered when
-  material, evidence basis/confidence for material route decisions, next action.
+  workflow overlay or mini-contract, audience/outcome fit when material,
+  planning level and options considered when material, evidence
+  basis/confidence for material route decisions, next action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,
   or conflict between user instruction and system invariants.
 - Next stage: research, drafting, UX writing, review, source conversion, or
@@ -205,16 +219,17 @@ the Editorial Decision Frame.
 ### Drafting
 
 - Purpose: produce article, social, or editorial copy within the routed scope.
-- Minimum required context: manifest, plan, selected production pipeline, current
-  evidence packet or no-research rationale, current draft artifact, and latest
-  handoff.
+- Minimum required context: manifest, plan, selected production pipeline,
+  audience/outcome requirements, current evidence packet or no-research
+  rationale, current draft artifact, and latest handoff.
 - Optional context: outline, claims-used, tone or policy KB, relevant examples,
   active client profile files.
 - Forbidden context: all research source files when compact evidence is enough,
   unassigned role specs, unreviewed facts outside the source boundary.
 - Expected outputs: `outline.md` when justified, `draft.md`, `claims-used.md`
-  when claims matter, assumptions/caveats when evidence is limited, writer
-  notes, handoff to review or Chief Editor.
+  when claims matter, assumptions/caveats when evidence is limited,
+  audience/outcome choices when not obvious, writer notes, handoff to review or
+  Chief Editor.
 - Stop conditions: missing route, insufficient evidence, request to invent
   facts, or instruction to approve/finalize own work.
 - Next stage: review, research repair, routing, or blocked.
@@ -224,13 +239,15 @@ the Editorial Decision Frame.
 - Purpose: produce product-facing copy tied to UI state, product behavior,
   terminology, accessibility, and evidence constraints.
 - Minimum required context: manifest, plan, UX writing pipeline, product/UI
-  context, relevant terminology and UX guidelines, current UX artifact.
+  context, user action/outcome, relevant terminology and UX guidelines, current
+  UX artifact.
 - Optional context: screenshots, flows, glossary, tone, active client profile,
   compact evidence for product or factual claims.
 - Forbidden context: invented product behavior, unavailable feature assumptions,
   unrelated article/social pipelines, or stale terminology treated as current.
-- Expected outputs: UX copy artifact, notes on assumptions/states, claims-used
-  or product evidence pointers with confidence when needed, handoff to review.
+- Expected outputs: UX copy artifact, notes on assumptions/states and user
+  action fit, claims-used or product evidence pointers with confidence when
+  needed, handoff to review.
 - Stop conditions: missing product behavior, missing UI state, terminology
   conflict, or unsupported product claim.
 - Next stage: review, research, routing, clarification, or blocked.
@@ -248,8 +265,9 @@ the Editorial Decision Frame.
   creator, unrelated old drafts, or optional artifacts demanded without a review
   need.
 - Expected outputs: `review.md` with checked scope, independence basis,
-  evidence/confidence challenge when material, option-evaluation challenge when
-  material, findings, outcome, required changes/blockers, and next action.
+  audience/outcome fit when material, evidence/confidence challenge when
+  material, option-evaluation challenge when material, findings, outcome,
+  required changes/blockers, and next action.
 - Stop conditions: missing material, missing independence, unresolved critical
   issue, insufficient evidence, or ambiguous review scope.
 - Next stage: finalization when approved, repair when changes are requested,
@@ -277,13 +295,15 @@ the Editorial Decision Frame.
 
 - Purpose: produce final deliverable inside the approved review scope.
 - Minimum required context: approved `review.md`, finalization target, current
-  manifest/status, material approved for finalization.
+  manifest/status, material approved for finalization, and audience/outcome
+  constraints that must survive finalization.
 - Optional context: finalization checklist or notes, governance constraints,
   client profile caveat, delivery format requirement.
 - Forbidden context: unreviewed claims, new product behavior, style rewrites that
   change meaning, publication or delivery without required approval.
-- Expected outputs: `final.md`, optional finalization notes/checklist, handoff to
-  Chief Editor when governance closure is separate.
+- Expected outputs: `final.md`, optional finalization notes/checklist, audience
+  fit preserved within approved scope, handoff to Chief Editor when governance
+  closure is separate.
 - Stop conditions: review missing, review not approved, finalization changes
   meaning, human approval requirement unresolved.
 - Next stage: governance, repair, or blocked.

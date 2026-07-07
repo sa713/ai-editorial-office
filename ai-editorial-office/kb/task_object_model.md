@@ -11,7 +11,9 @@ approval boundary, and stage context contracts live in
 `/kb/shared_lifecycle_kernel.md`; evidence taxonomy, confidence labels, and
 evidence section standards live in `/kb/editorial_evidence_framework.md`;
 planning levels, option evaluation, and recommendation formation live in
-`/kb/editorial_planning_framework.md`;
+`/kb/editorial_planning_framework.md`; audience and outcome alignment fields,
+reader fit, and usefulness criteria live in
+`/kb/audience_outcome_alignment.md`;
 runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
 selected pipeline, role specs, and task-local artifacts.
 
@@ -46,6 +48,12 @@ file.
 | `objective` | What the task must achieve. | `brief.md`, `task-manifest.md` |
 | `user_request_summary` | Compact summary of the user's request and any later accepted scope changes. | `brief.md`, `task-manifest.md`, `status.md` |
 | `audience` | Intended reader or user. Mark confirmed, inferred, or unknown when material. | `brief.md`, preflight section, `orchestration_plan.md` |
+| `intended_outcome` | What the artifact must enable: decision, approval, implementation, review, understanding, alignment, publication, teaching, persuasion, or canon documentation. | `brief.md`, `orchestration_plan.md`, production notes |
+| `reader_context` | What the audience already knows, needs, fears, lacks, or must not be burdened with. | `brief.md`, `orchestration_plan.md`, writer/UX notes |
+| `required_action_or_decision` | Specific action, decision, approval, challenge, implementation, or next step the reader must be able to take. Optional when the outcome is pure understanding. | `brief.md`, `orchestration_plan.md`, final artifact |
+| `format_constraints` | Length, language, medium, structure, copyability, accessibility, or channel constraints that shape usefulness. | `brief.md`, `orchestration_plan.md`, production notes |
+| `detail_level` | Compact, standard, deep, or task-specific depth needed by the audience and outcome. | `orchestration_plan.md`, production notes, review artifacts |
+| `tone_requirements` | Tone, formality, sensitivity, and vocabulary constraints required by reader context and evidence quality. | `brief.md`, relevant KB, production notes |
 | `channel_context` | Publication channel, product context, internal/external use, or task environment. | `brief.md`, `orchestration_plan.md` |
 | `deliverable` | Expected output or artifact set. | `brief.md`, `task-manifest.md` |
 | `source_boundary` | What is source data, instruction, assumption, contradiction, or unknown. | `brief.md`, `orchestration_plan.md`, `research.md`, `sources.md` |
@@ -55,7 +63,7 @@ file.
 | `unknowns` | Missing, stale, contradicted, or uninspected information that may affect safety, quality, or confidence. | `brief.md`, `status.md`, `open-questions.md`, review artifacts |
 | `validation_needed` | Evidence that would most reduce uncertainty or unblock a stronger conclusion. | `orchestration_plan.md`, `research.md`, `review.md`, handoff |
 | `residual_risk` | Remaining risk after available evidence, assumptions, and validation are considered. | `review.md`, finalization notes, `final_decision.md` |
-| `success_criterion` | How readiness will be judged for this task. | `brief.md`, `orchestration_plan.md`, `review.md` |
+| `success_criterion` | How readiness and audience usefulness will be judged for this task. | `brief.md`, `orchestration_plan.md`, `review.md` |
 | `risk_mode` | `low-risk`, `standard`, `high-governance`, or unresolved/blocked until determined. | `task-manifest.md`, `orchestration_plan.md`, `status.md` |
 | `process_depth` | `compact`, `normal`, or `full`. | `task-manifest.md`, `orchestration_plan.md` |
 | `selected_workflow` | Selected pipeline overlay, editorial mode, or task-local mini-contract. | `orchestration_plan.md`, `task-manifest.md` |
@@ -87,19 +95,19 @@ requires it.
 
 | Artifact | Task-object responsibility |
 | --- | --- |
-| `brief.md` | Defines objective, user request summary, audience, channel/context, deliverable, source boundary, constraints, and success criterion. |
+| `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, and success criterion. |
 | `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, audience/outcome fit when material, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
 | `research.md` | Research scope, verified facts, interpretations, assumptions, contradictions, source confidence, evidence class, and evidence limits. |
 | `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |
 | `claims_table.md` | Claim-level traceability for material claims, high-governance tasks, evidence disputes, or review needs. |
 | `outline.md` | Planned structure when structure is non-trivial or needed for review. |
-| `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review. |
+| `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review, shaped to the recorded audience, outcome, detail, tone, and format constraints. |
 | `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
-| `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, choices, and review focus that are not already obvious from the draft. |
-| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, and next action. |
+| `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, audience/outcome choices, and review focus that are not already obvious from the draft. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, audience/outcome fit, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, and next action. |
 | `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
 | `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
 | `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
@@ -136,8 +144,9 @@ Task gates are confidence decisions recorded in existing artifacts. Shared gate
 semantics and stage order are owned by `/kb/shared_lifecycle_kernel.md`;
 evidence taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`; planning levels and option evaluation
-are owned by `/kb/editorial_planning_framework.md`; this file maps those gates
-to task-object fields and artifact views.
+are owned by `/kb/editorial_planning_framework.md`; audience/outcome alignment
+is owned by `/kb/audience_outcome_alignment.md`; this file maps those gates to
+task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |

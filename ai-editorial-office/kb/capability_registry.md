@@ -13,6 +13,8 @@ failure modes and recovery patterns live in
 `/kb/editorial_failure_modes.md`;
 planning depth, option generation, and option evaluation live in
 `/kb/editorial_planning_framework.md`;
+audience and outcome alignment lives in
+`/kb/audience_outcome_alignment.md`;
 governance invariants and review-gate authority still live in `AGENTS.md`;
 task statuses still live in `/kb/task_statuses.md`.
 
@@ -53,6 +55,7 @@ checking remains a check/script capability. Memory export remains a
 capability/process. Evidence-confidence assessment is a shared capability, not
 a standing Fact Checker role. Failure recognition and recovery is a shared
 capability, not a standing role. Planning and option evaluation is a shared
+capability, not a standing role. Audience and outcome alignment is a shared
 capability, not a standing role.
 
 ## Capability Records
@@ -222,6 +225,36 @@ capability, not a standing role.
 - Expansion triggers: architecture or product decision, implementation plan,
   business recommendation, strategic editorial route, high-governance risk,
   review challenge, or first-plausible convergence warning.
+
+### Audience And Outcome Alignment
+
+- Purpose: shape an artifact around the intended reader, decision/action,
+  required depth, tone, format, evidence burden, and success criteria so it is
+  useful rather than merely well-written.
+- Typical inputs: user request, brief, audience class or task-specific reader,
+  intended outcome, reader context, channel, deliverable, evidence confidence,
+  planning result, selected lifecycle stage, active client profile, and current
+  artifact.
+- Typical outputs: audience/outcome note in an existing artifact, detail level,
+  format/tone constraints, required action or decision, usefulness criteria,
+  mismatch warning, or correction action.
+- Accountability wrapper: shared across roles by stage; Intake Agent captures
+  or infers, Chief Editor routes, Writer Agent and UX Writer apply, Review
+  Agent challenges mismatch, and Final Editor preserves fit.
+- Required artifacts: none by default beyond the artifact that already records
+  brief, plan, production notes, review, or final decision.
+- Optional artifacts: compact audience/outcome note, layered outline, reader
+  path note, or review finding when risk, mixed audience, restartability, or
+  governance requires it.
+- Stop conditions: audience or intended outcome is unknown and could materially
+  change the deliverable, the artifact cannot enable the required action, or
+  detail/tone/evidence depth is unsafe for the reader.
+- Quality criteria: audience is explicit enough, outcome is actionable,
+  evidence and detail match reader need, tone does not hide uncertainty, and
+  irrelevant process or theory is omitted.
+- Expansion triggers: executive or public artifact, implementation task, mixed
+  audience, high-governance risk, reader-outcome failure, vague success
+  criteria, or review challenge.
 
 ### Source Conversion
 
@@ -458,13 +491,13 @@ capability, not a standing role.
 
 | Role | Wrapped capabilities |
 | --- | --- |
-| Chief Editor | Routing and preflight; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
-| Intake Agent | Intake normalization; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; planning-depth signal; risk/client-profile suggestion. |
+| Chief Editor | Routing and preflight; audience/outcome alignment for route/depth decisions; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
+| Intake Agent | Intake normalization; initial audience/outcome capture or inference; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; planning-depth signal; risk/client-profile suggestion. |
 | Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; evidence for competing options; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
-| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; tradeoff communication; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
-| UX Writer | UX writing from product evidence; over-polishing/product-assumption detection; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
-| Review Agent | Independent review; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; review-side source/client/profile checks; re-review after repair. |
-| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of selected-approach rationale when material; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
+| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; audience/outcome shaping; tradeoff communication; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
+| UX Writer | UX writing from product evidence; audience/outcome shaping for user action and UI state; over-polishing/product-assumption detection; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
+| Review Agent | Independent review; audience/outcome mismatch challenge; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; review-side source/client/profile checks; re-review after repair. |
+| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of audience fit and actionability; preservation of selected-approach rationale when material; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
 | Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites; preservation of evidence-backed visual meaning. |
 
 ## Non-Role Capabilities
@@ -479,6 +512,7 @@ reviewed system update:
 - evidence-confidence assessment;
 - failure recognition and recovery;
 - planning and option evaluation;
+- audience and outcome alignment;
 - fact checking;
 - style editing;
 - structural editing;
