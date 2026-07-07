@@ -125,6 +125,8 @@ Before production starts, Chief Editor must route the task editorially:
 - select the active capabilities required by the task;
 - determine the required roles and bounded extension roles;
 - make a compact preflight decision about input sufficiency before production;
+- record a compact Editorial Decision Frame in `orchestration_plan.md` before
+  handing work to Writer Agent or UX Writer;
 - record the routing decision in `orchestration_plan.md`, `task-manifest.md`,
   or `status.md`.
 
@@ -132,6 +134,20 @@ The preflight decision answers whether the system understands the task well
 enough to start production, what is missing, and whether the next action is
 `ask`, `constrain`, `proceed`, or `block`. It is a decision gate, not a new
 pipeline, role, status, or mandatory standalone artifact.
+
+The Editorial Decision Frame records the chosen editorial route, considered
+alternatives, rejection reasons, Writer/UX Writer contract, review focus, and
+reroute triggers. It lives inside `orchestration_plan.md`; it is not a new
+pipeline, role, status, `final_decision.md`, or mandatory standalone
+`editorial_decision.md`.
+
+The frame must remain a short management block, not an analytical document.
+Alternatives exist to prove that the chosen route was deliberate: normally use
+2-3 alternatives, with one line for the alternative and one line for the
+rejection reason. Long rationale belongs in research, outline, review, or a
+task-local analytical addendum when one is truly needed; it must not expand the
+frame or create a standalone `editorial_decision.md` only because the reasoning
+is long.
 
 Technical actions are not substitutes for editorial routing. SVG, PNG, HTML,
 image generation, PDF extraction, OCR, parsing, conversion, scraping, rendering,
@@ -699,6 +715,15 @@ final governance still happens and must be artifact-backed.
    is enough, `proceed` when the available input is sufficient, and `block` when
    the task cannot be performed safely.
 
+   Before handing work to Writer Agent or UX Writer, `chief_editor` records or
+   confirms the compact Editorial Decision Frame in `orchestration_plan.md`.
+   When research is required, this happens after research sufficiency is known.
+   The frame must stay short: chosen route, writing or UX writing contract,
+   review focus, reroute triggers, and usually 2-3 rejected alternatives. Each
+   alternative gets one line for the route and one line for the rejection
+   reason. Do not duplicate research, outline, review, or addendum content
+   inside the frame.
+
 3. Research if needed
 
    Если research требуется, `research_agent` собирает и структурирует информацию. Результаты сохраняются в `/tasks/TASK-ID/`.
@@ -709,7 +734,12 @@ final governance still happens and must be artifact-backed.
 
 5. Review
 
-   `review_agent` выполняет независимую проверку. Без положительного review материал не считается готовым.
+   `review_agent` выполняет независимую проверку. Для задач, где writing или
+   UX writing governed by Problem Hypothesis and/or Editorial Decision Frame,
+   review includes a compact Editorial Challenge Lens inside `review.md`:
+   Reviewer tests whether the assumptions that made the chosen route valid
+   still hold. This is evidence-backed review, not rewriting, rerouting, or a
+   new review gate. Без положительного review материал не считается готовым.
 
 6. Finalization
 
@@ -733,6 +763,9 @@ final governance still happens and must be artifact-backed.
 - что изменилось с предыдущего состояния;
 - какие артефакты созданы или обновлены;
 - какие constraints, blockers или open questions важны прямо сейчас;
+- for planning handoff to Writer Agent or UX Writer, the compact editorial
+  decision transfer: chosen route, rejected alternatives, writing contract, and
+  review focus;
 - что следующая роль должна сделать первым;
 - какие outputs ожидаются и какие запрещены;
 - когда нужно остановиться и эскалировать.
@@ -801,6 +834,11 @@ Artifact rules:
 - low-risk and simple standard tasks use `review.md` as the sole review artifact unless a separate support artifact is justified;
 - Preflight Gate is a compact decision in an existing task artifact, not a new
   mandatory file;
+- Editorial Decision Frame is a compact section in `orchestration_plan.md`, not
+  a mandatory standalone artifact, not a use of `final_decision.md`, and not a
+  place to duplicate research, outline, review, or analytical addenda;
+- Editorial Challenge Lens is a compact section inside `review.md`, not a
+  mandatory standalone artifact, new role, new review cycle, or new review gate;
 - `feedback.md` is optional and created only when post-delivery user reaction exists;
 - `review-summary.md`, `qa-checklist.md`, `finalization-checklist.md`, `open-questions.md`, and `finalization-notes.md` are conditional: create them only for an explicit downstream consumer, high-governance mode, a task-specific requirement, real open questions/blockers, or traceability need;
 - agents must not create speculative placeholder files for future use;
@@ -818,7 +856,7 @@ Primary responsibility boundaries:
 | --- | --- | --- |
 | `task-manifest.md` | compact current state, artifact inventory, next action packet | full status history, long rationale, full handoff |
 | `status.md` | detailed status/history, transitions, blockers, escalation notes | full manifest inventory or stage artifacts |
-| `orchestration_plan.md` | selected pipeline, roles, artifact scope, gates | narrative status log or handoff delta |
+| `orchestration_plan.md` | selected pipeline, roles, artifact scope, gates, Editorial Decision Frame | narrative status log or handoff delta |
 | handoff files | short delta-transfer between roles | manifest, status, orchestration plan, full artifact lists |
 | `compact-handoff.md` | final/user-facing transfer summary | role-to-role transfer, status history, full review |
 | `context-summary.md` | recovery after context fragmentation or long-running work | normal status update, final handoff, routine role transfer |

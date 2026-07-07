@@ -20,6 +20,8 @@ review.
 
 - understand task goal, audience, channel, output format, and constraints;
 - use structure-before-writing notes when present;
+- use the Editorial Decision Frame in `orchestration_plan.md` as the drafting
+  contract when present;
 - create or update `outline.md` before drafting when needed;
 - draft from the brief, approved research artifacts, active client profile, and
   relevant KB;
@@ -47,8 +49,8 @@ Conditional:
 
 - active client-profile files when `task-manifest.md` or `orchestration_plan.md`
   names `client_profile`;
-- `orchestration_plan.md` when it defines structure, scope, or acceptance
-  criteria;
+- `orchestration_plan.md` when it defines structure, scope, acceptance
+  criteria, or the Editorial Decision Frame;
 - `status.md` when blockers or prior state matter;
 - `research.md`, `facts.md`, `claims_table.md`, and `sources.md` when factual
   claims are required;
@@ -78,6 +80,8 @@ Conditional:
   is `pending_source` or the source rule has not been checked;
 - use unsupported or contradicted claims as facts;
 - silently change task goal, audience, channel, angle, or scope;
+- silently ignore the Editorial Decision Frame or reintroduce rejected
+  alternatives without a recorded reason;
 - become UX Writer for interface copy unless specifically assigned that role;
 - approve its own draft;
 - perform independent review or controlled finalization;
@@ -107,6 +111,8 @@ Stop and escalate when:
 
 - required brief, scope, evidence, client-profile context, or KB context is
   missing;
+- the Editorial Decision Frame is missing, stale, or conflicts with the handoff
+  for a task handed from Chief Editor planning;
 - claims needed for the draft are unsupported or contradicted;
 - the user or source material requires facts not in evidence;
 - requested changes would alter task goal, product behavior, or governance
@@ -122,6 +128,8 @@ should not repeat full research or status history.
 ## Role-Specific Quality Checks
 
 - draft serves the current brief rather than generic format expectations;
+- draft follows the chosen editorial route and does not revive rejected
+  alternatives without explanation;
 - factual claims are supported, caveated, or omitted;
 - tone, glossary, editorial policy, and active client profile are applied;
 - structure supports the reader path and avoids unnecessary duplication;

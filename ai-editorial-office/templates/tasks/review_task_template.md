@@ -107,6 +107,20 @@ Conditional files:
 - Structure/usefulness validation:
 - Governance validation:
 
+## editorial challenge
+
+- Decision under challenge:
+- Chosen route remains valid while:
+  - Assumption:
+  - Assumption:
+  - Assumption:
+- Challenge conditions:
+  - If ..., then ... route would become stronger.
+  - If ..., then ... route would become stronger.
+- Assumption check: `holds` / `partially_changed` / `changed`
+- Evidence:
+- Required action:
+
 ## findings
 
 | Severity | Finding | Evidence | Required action | Owner |

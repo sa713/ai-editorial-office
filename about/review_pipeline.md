@@ -17,6 +17,12 @@ For instructional and operational materials, the pipeline also protects informat
 
 Review is a gate, not a writing, editing, finalization, or governance role. It produces evidence-backed findings and one of three allowed outcomes: `approved`, `changes_requested`, or `blocked`.
 
+When a task was governed by a Problem Hypothesis and/or Editorial Decision
+Frame, review also includes an assumptions-based Editorial Challenge Lens inside
+`review.md`. This lens tests whether the assumptions that made the chosen route
+valid still hold. It is part of review, not a new pipeline, role, review gate,
+artifact, or mandatory extra review cycle.
+
 ## when to use
 
 Use this pipeline when a draft, UX copy, edited material, finalization candidate, or task package needs independent validation before moving forward.
@@ -81,6 +87,9 @@ Review execution follows `/kb/shared_lifecycle_kernel.md` review context contrac
   `orchestration_plan.md`, only when `client_profile` is set;
 - research and claim artifacts, if applicable.
 
+When present, Problem Hypothesis and Editorial Decision Frame in
+`orchestration_plan.md` are required inputs for the Editorial Challenge Lens.
+
 For article-style review, the material under review is usually:
 
 - `/tasks/TASK-ID/draft.md`;
@@ -141,7 +150,7 @@ Artifact creation must be intentional, conditional, risk-based, and downstream-d
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, findings, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, findings, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -195,7 +204,7 @@ Operational sequence:
 | --- | --- | --- | --- | --- | --- |
 | 1 | `writing`, `editing`, or `changes_requested` | `writer_agent` or `ux_writer` | Hand off material ready for independent review | writing or UX artifacts, handoff | `review` |
 | 2 | `review` | `review_agent` | Load required artifacts, verify independence, validate scope | review notes or blocker evidence | `review` or `blocked` |
-| 3 | `review` | `review_agent` | Validate factual traceability, KB compliance, artifact completeness, and governance compliance | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
+| 3 | `review` | `review_agent` | Validate factual traceability, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
 | 4 | `changes_requested` | `writer_agent`, `ux_writer`, or `research_agent` | Resolve required changes or evidence gaps | updated artifacts, handoff | `review`, `writing`, `research`, or `blocked` |
 | 5 | `review` | `review_agent` | Re-review changed artifacts | updated review artifacts and handoff | `approved`, `changes_requested`, or `blocked` |
 | 6 | `approved` | `final_editor` | Finalize only after approved review | `final.md`, conditional finalization notes/checklist, finalization handoff unless compact finalization is fully traceable through `review.md`, `final.md`, and current `task-manifest.md` | `approved` |
@@ -244,6 +253,8 @@ Compact review minimum:
 - verdict;
 - reviewed artifact or artifact set;
 - lightweight independence check;
+- compact Editorial Challenge Lens when the task was governed by Problem
+  Hypothesis and/or Editorial Decision Frame;
 - usefulness/pass rationale or blocking issues;
 - governance note when relevant;
 - one next action.
@@ -261,6 +272,7 @@ It does not restate detailed review logic. Review Agent owns:
 - reviewer independence checks;
 - factual, source, and claim validation;
 - editorial relevance and replaceability pressure;
+- assumptions-based Editorial Challenge Lens;
 - instructional architecture pressure;
 - allowed review outcomes and approval blockers;
 - escalation content;
@@ -295,6 +307,9 @@ Review Pipeline is complete only when:
 - required review inputs were checked or missing inputs were documented;
 - reviewer independence was checked;
 - `review.md` exists and includes reviewed artifacts, findings, blockers, required changes, and outcome;
+- when the reviewed work was governed by Problem Hypothesis and/or Editorial
+  Decision Frame, `review.md` includes Editorial Challenge Lens or a compact
+  statement that route-validity assumptions still hold;
 - `qa-checklist.md` exists with pass, fail, or not_applicable statuses when separate checklist depth is required;
 - `review-summary.md` exists with operational outcome and next action when concise transfer is not already covered by `review.md` and handoff;
 - `reviewer-notes.md` exists when extra caveats or borderline reasoning do not fit in `review.md`;

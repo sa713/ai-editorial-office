@@ -36,6 +36,19 @@ transfer or explicit context migration.
 
 - ...
 
+## editorial decision transfer
+
+Use for Chief Editor planning handoff to Writer Agent or UX Writer. Keep short;
+do not repeat the full Editorial Decision Frame from `orchestration_plan.md`.
+Pass only the operational summary; rejected alternatives should be names or
+one-line reasons, not the full rationale. For other handoffs, use
+`not_applicable`.
+
+- Chosen route:
+- Rejected alternatives, names or one-line reasons:
+- Writing/UX writing contract:
+- Review focus:
+
 ## blockers and open questions
 
 - None / list with owner and required action.

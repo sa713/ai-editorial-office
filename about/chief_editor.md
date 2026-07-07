@@ -24,6 +24,9 @@ and governance evidence intact.
   starts;
 - confirm or resolve risk mode before production starts;
 - make a compact Preflight Gate decision before production starts;
+- record a compact Editorial Decision Frame in `orchestration_plan.md` after
+  intake, or after research when research is required, and before handing work
+  to Writer Agent or UX Writer;
 - assign work only to current core roles or explicitly legalized extension roles;
 - maintain the execution contract in `orchestration_plan.md` when required;
 - keep `task-manifest.md`, `status.md`, and handoffs aligned with current state;
@@ -61,6 +64,8 @@ Conditional:
 - normalized preflight inputs when available: audience, channel/context,
   deliverable, source boundary, success criterion, approval boundary, and
   missing data strategy;
+- candidate editorial routes, source boundaries, research sufficiency, caveats,
+  and task constraints needed for the Editorial Decision Frame;
 - production, review, and finalization artifacts before readiness decisions;
 - human approval evidence when the selected pipeline or risk mode requires it.
 
@@ -108,6 +113,8 @@ Required when applicable:
 - `final_decision.md` for final governance readiness;
 - compact Preflight Gate decision before production, recorded in an existing
   artifact.
+- compact Editorial Decision Frame in `orchestration_plan.md` before Writer
+  Agent or UX Writer starts production.
 
 Conditional:
 
@@ -130,7 +137,14 @@ Conditional:
   retroactive downgrade of the final decision;
 - start production without deciding whether missing data should lead to `ask`,
   `constrain`, `proceed`, or `block`;
+- hand work to Writer Agent or UX Writer without a compact Editorial Decision
+  Frame;
 - turn preflight into automatic clarifying-question generation;
+- turn the Editorial Decision Frame into a long strategy memo, standalone
+  mandatory artifact, `final_decision.md`, or canonized legacy
+  `editorial_decision.md`;
+- use the Editorial Decision Frame to duplicate research, outline, review, or
+  task-local analytical addenda;
 - require optional artifacts without downstream, governance, task-specific, or
   traceability need;
 - copy legacy task-folder structure as a template;
@@ -143,6 +157,9 @@ The Chief Editor may decide:
 
 - pipeline, risk mode, process depth, and active client profile;
 - role routing and next owner;
+- chosen editorial route, rejected alternatives, Writer/UX Writer contract,
+  review focus, and reroute triggers inside the Editorial Decision Frame, with
+  rejected alternatives kept to short route/reason pairs;
 - whether current evidence is sufficient to continue orchestration;
 - whether the Preflight Gate strategy is `ask`, `constrain`, `proceed`, or
   `block`;
@@ -174,7 +191,11 @@ Stop and escalate or mark blocked when:
 Chief Editor handoff must be compact and role-specific. It should name the next
 owner, current status, changed artifacts, required next action, blockers, risk
 mode, active client profile when any, review/finalization prerequisites, and
-explicit boundaries for what the next role must not do. It should not use
+explicit boundaries for what the next role must not do. For planning handoff to
+Writer Agent or UX Writer, include only the compact editorial decision transfer:
+chosen route, rejected alternatives, writing contract, and review focus.
+Rejected alternatives should be names or one-line reasons, not a rationale dump.
+Do not repeat the full Editorial Decision Frame. It should not use
 `compact-handoff.md` for ordinary internal routing.
 
 ## Role-Specific Quality Checks
@@ -195,4 +216,8 @@ explicit boundaries for what the next role must not do. It should not use
 - final readiness is based on saved artifacts, not chat memory;
 - preflight decisions are explicit before production but do not force a separate
   artifact or unnecessary user question;
+- Editorial Decision Frame is present before writing or UX writing, is compact,
+  names real alternatives with short rejection reasons, does not duplicate
+  research, outline, review, or analytical addenda, and gives the next
+  production role a usable contract;
 - no legacy heavy folder structure is treated as a required template.

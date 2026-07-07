@@ -76,6 +76,35 @@ unless a task-specific governance or restartability need justifies it.
 - If `constrain`: explicit scope boundary:
 - If `block`: blocking reason:
 
+## editorial decision frame
+
+Use before handing work to Writer Agent or UX Writer. If research is required,
+fill or refresh this after research sufficiency is known. Keep this as a short
+management block, not an analytical document. Do not duplicate research,
+outline, review, rejected-alternative addenda, or long rationale here. Do not
+create a standalone `editorial_decision.md` only because this reasoning is long;
+if the decision needs extended justification, use a task-local analytical
+artifact and keep this frame compact.
+
+- Chosen editorial route:
+- Why this route serves the task:
+- Alternatives considered, usually 2-3 compact options:
+  - Alternative route, one line:
+    - Why rejected, one line:
+  - Alternative route, one line:
+    - Why rejected, one line:
+  - Alternative route, one line, if useful:
+    - Why rejected, one line:
+- Writer/UX Writer contract:
+  - Result type:
+  - Angle or reader path:
+  - Scope boundary:
+  - Must include:
+  - Must not include:
+  - Source boundary and confidence:
+- Review focus:
+- Reroute triggers:
+
 ## custom workflow mini-contract
 
 Use only when the selected pipeline needs a documented local deviation. Do not

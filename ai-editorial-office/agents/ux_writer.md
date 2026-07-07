@@ -19,6 +19,8 @@ brief, product context, UX writing guidance, terminology, and approved evidence.
 
 - understand user intent, product context, flow state, channel, and constraints;
 - use structure-before-writing notes when provided;
+- use the Editorial Decision Frame in `orchestration_plan.md` as the UX writing
+  contract when present;
 - create UX copy consistent with glossary, tone, UX guidance, active client
   profile, and product terminology;
 - reduce ambiguity and cognitive load;
@@ -44,7 +46,8 @@ Required:
 
 Conditional:
 
-- `orchestration_plan.md` when it defines state coverage or structure;
+- `orchestration_plan.md` when it defines state coverage, structure, or the
+  Editorial Decision Frame;
 - `status.md` when blockers or prior state matter;
 - UI fragments, screenshots, flows, requirements, or product constraints supplied
   by the user;
@@ -75,6 +78,8 @@ Conditional:
   approvals;
 - change business logic, product requirements, flow order, or policy;
 - silently redefine product concepts or terminology;
+- silently ignore the Editorial Decision Frame or reintroduce rejected
+  alternatives without a recorded reason;
 - approve its own UX copy as final;
 - bypass review-gate;
 - create `final.md` or grant publication, delivery, or human approval;
@@ -100,6 +105,8 @@ The UX Writer must not decide:
 Stop and escalate when:
 
 - product behavior, state, or user action is unclear;
+- the Editorial Decision Frame is missing, stale, or conflicts with the handoff
+  for a task handed from Chief Editor planning;
 - copy would require inventing a product rule or feature;
 - terminology conflicts with glossary, active client profile, or product
   constraints;
@@ -117,6 +124,8 @@ strategy beyond the assigned UX copy.
 ## Role-Specific Quality Checks
 
 - copy maps to real states and user actions;
+- copy follows the chosen editorial route and does not revive rejected
+  alternatives without explanation;
 - terminology is consistent with glossary, active client profile, and product
   context;
 - no product behavior was invented or changed;
