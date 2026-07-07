@@ -42,6 +42,11 @@ When reviewed work depends on selected quality priorities or visible tradeoffs,
 review applies `/kb/editorial_quality_attributes.md` to challenge whether the
 artifact optimized for the right qualities and preserved them through handoff.
 
+When reviewed work proposes reusable learning, canon updates, pattern reuse, or
+stale-canon findings, review applies `/kb/editorial_learning_framework.md` to
+check evidence, owner, scope, duplication, privacy, and whether the item should
+remain task-local.
+
 When a task was governed by a Problem Hypothesis and/or Editorial Decision
 Frame, review also includes an assumptions-based Editorial Challenge Lens inside
 `review.md`. This lens tests whether the assumptions that made the chosen route
@@ -115,6 +120,8 @@ Review execution follows `/kb/shared_lifecycle_kernel.md` review context contrac
   reviewed artifact, decision, implementation task, or finalization candidate;
 - `/kb/editorial_quality_attributes.md` when quality priorities, tradeoffs, or
   quality preservation affect the reviewed artifact;
+- `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
+  learning, canon updates, pattern reuse, or stale-canon findings;
 - active client-profile files and checklist named in `task-manifest.md` or
   `orchestration_plan.md`, only when `client_profile` is set;
 - research and claim artifacts, if applicable.
@@ -198,7 +205,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -252,7 +259,7 @@ Operational sequence:
 | --- | --- | --- | --- | --- | --- |
 | 1 | `writing`, `editing`, or `changes_requested` | `writer_agent` or `ux_writer` | Hand off material ready for independent review | writing or UX artifacts, handoff | `review` |
 | 2 | `review` | `review_agent` | Load required artifacts, verify independence, validate scope | review notes or blocker evidence | `review` or `blocked` |
-| 3 | `review` | `review_agent` | Validate quality priorities, audience/outcome fit, factual traceability, option evaluation, evidence confidence, failure modes, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
+| 3 | `review` | `review_agent` | Validate quality priorities, audience/outcome fit, factual traceability, option evaluation, evidence confidence, failure modes, learning/canon candidate fit when material, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
 | 4 | `changes_requested` | `writer_agent`, `ux_writer`, or `research_agent` | Resolve required changes or evidence gaps | updated artifacts, handoff | `review`, `writing`, `research`, or `blocked` |
 | 5 | `review` | `review_agent` | Re-review changed artifacts | updated review artifacts and handoff | `approved`, `changes_requested`, or `blocked` |
 | 6 | `approved` | `final_editor` | Finalize only after approved review | `final.md`, conditional finalization notes/checklist, finalization handoff unless compact finalization is fully traceable through `review.md`, `final.md`, and current `task-manifest.md` | `approved` |
@@ -318,6 +325,8 @@ Compact review minimum:
   alignment;
 - compact quality-attribute check when reviewed work depends on selected
   quality priorities or accepted tradeoffs;
+- compact learning/canon check when reviewed work proposes reusable learning,
+  canon updates, pattern reuse, or stale-canon findings;
 - usefulness/pass rationale or blocking issues;
 - governance note when relevant;
 - one next action.

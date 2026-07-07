@@ -48,6 +48,7 @@
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
 | Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
 | Editorial quality attributes and tradeoffs | `/kb/editorial_quality_attributes.md` | task-specific quality priorities, accepted tradeoffs, and preservation risks |
+| Editorial learning and canon evolution | `/kb/editorial_learning_framework.md` | task-specific learning candidates, canon update candidates, reusable patterns, and stale-canon notes |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -111,11 +112,15 @@ existing markdown system should be understood and extended.
 - `/kb/editorial_quality_attributes.md` defines shared quality attributes,
   quality tradeoffs, task-specific quality priorities, lifecycle preservation,
   and Codex implementation-task quality.
+- `/kb/editorial_learning_framework.md` defines reusable learning types,
+  canonization criteria, learning extraction, canon evolution rules, stale-canon
+  challenge, and canon retirement.
 
 Do not create a new role merely because a capability is named. Source
-conversion, integrity checking, context assembly, and memory export remain
-capabilities, checks, scripts, or task-local mini-contracts unless a separate
-reviewed system update explicitly changes the role set.
+conversion, integrity checking, context assembly, learning extraction, canon
+evolution, stale canon detection, and memory export remain capabilities,
+checks, scripts, or task-local mini-contracts unless a separate reviewed system
+update explicitly changes the role set.
 
 ## Главные инварианты
 
@@ -617,6 +622,10 @@ observation ↓ confirmed_pattern ↓ system_change_candidate ↓ separate revie
 Feedback does not write automatically to `engineering_watchlist.md`, backlog,
 or production rules. A watchlist or backlog entry requires an explicit Chief
 Editor decision.
+
+Reusable learning, canon updates, pattern promotion, and stale-canon challenges
+follow `/kb/editorial_learning_framework.md`. Feedback or task-local notes may
+produce candidates, but they do not become canon automatically.
 
 ## Risk Modes
 

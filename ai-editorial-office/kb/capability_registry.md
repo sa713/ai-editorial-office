@@ -17,6 +17,8 @@ audience and outcome alignment lives in
 `/kb/audience_outcome_alignment.md`;
 quality attributes, quality tradeoffs, and lifecycle quality preservation live
 in `/kb/editorial_quality_attributes.md`;
+learning extraction, canon evolution, pattern reuse, and stale-canon challenge
+live in `/kb/editorial_learning_framework.md`;
 governance invariants and review-gate authority still live in `AGENTS.md`;
 task statuses still live in `/kb/task_statuses.md`.
 
@@ -59,7 +61,9 @@ a standing Fact Checker role. Failure recognition and recovery is a shared
 capability, not a standing role. Planning and option evaluation is a shared
 capability, not a standing role. Audience and outcome alignment is a shared
 capability, not a standing role. Quality attribute selection and preservation
-is a shared capability, not a standing role.
+is a shared capability, not a standing role. Learning extraction, canon
+evolution, pattern reuse, and stale canon detection are shared capabilities,
+not standing roles.
 
 ## Capability Records
 
@@ -483,21 +487,87 @@ is a shared capability, not a standing role.
 ### Memory Curation
 
 - Purpose: decide whether task learning stays local or becomes reusable memory,
-  feedback pattern, backlog candidate, or separate system update.
+  feedback pattern, backlog candidate, or separate system update, following
+  `/kb/editorial_learning_framework.md` when canon promotion is considered.
 - Typical inputs: final decision, feedback, review findings, repeated patterns,
   retrospectives.
 - Typical outputs: `feedback.md`, `kb/feedback_patterns.md` update, backlog
-  candidate, or separate reviewed system update.
+  candidate, learning candidate, or separate reviewed system update.
 - Accountability wrapper: Chief Editor for task-local classification; future
   system updates require separate reviewed work.
 - Required artifacts: none unless feedback or reusable pattern exists.
 - Optional artifacts: feedback/pattern entry.
 - Stop conditions: single unverified reaction being treated as policy, stale
   memory, duplicate rule.
-- Quality criteria: only future-useful learning is promoted; `/about` remains
-  memory export, not canon.
+- Quality criteria: only future-useful validated learning is promoted; task
+  local notes remain local unless canonization criteria are met; `/about`
+  remains memory export, not canon.
 - Expansion triggers: repeated signal, systemic failure, governance change,
   memory-package update.
+
+### Learning Extraction
+
+- Purpose: identify task-local discoveries that may become reusable learning
+  without turning every task into a retrospective.
+- Typical inputs: final decision, review findings, feedback, implementation
+  report, evidence gaps, failure-mode notes, quality tradeoffs, and task state.
+- Typical outputs: learning candidate, task-local learning note, pattern
+  candidate, canon-update candidate, or decision to keep learning local.
+- Accountability wrapper: Chief Editor owns governance/memory classification;
+  Review Agent may flag candidates; Research Agent may flag durable evidence;
+  Final Editor may preserve cues without classifying them.
+- Required artifacts: none by default.
+- Optional artifacts: compact note in `final_decision.md`, `feedback.md`,
+  `review.md`, or implementation report when future use is plausible.
+- Stop conditions: candidate is unverified, private, one-off, duplicate,
+  obsolete, or not traceable to saved artifacts.
+- Quality criteria: learning type, evidence basis, scope, owner, and keep-local
+  vs promote decision are visible when material.
+- Expansion triggers: repeated issue, high future value, canon correction,
+  systemic failure, successful workflow worth reusing, or stale canon concern.
+
+### Canon Evolution
+
+- Purpose: add, update, deprecate, or retire canonical knowledge deliberately
+  after a validated learning candidate or stale-canon finding.
+- Typical inputs: learning candidate, canonical owner map, existing canon,
+  evidence, review findings, feedback pattern, project state, and validation
+  results.
+- Typical outputs: owner-file patch, deprecation note, canon correction, or
+  separate reviewed system-update recommendation.
+- Accountability wrapper: Chief Editor owns system-update routing; the role
+  performing the reviewed update edits only the selected canonical owner.
+- Required artifacts: changed canonical owner or explicit no-change decision
+  when a canon update was requested.
+- Optional artifacts: implementation notes, validation report, or task-local
+  rationale when traceability needs it.
+- Stop conditions: no clear canonical owner, weak evidence, duplicate rule,
+  privacy risk, review-gate impact without review, or scope too broad.
+- Quality criteria: one owner, concise rule, traceable reason, no duplicated
+  framework content, and validation before commit.
+- Expansion triggers: stale owner conflict, repeated failures, high-governance
+  rule change, repository path/source change, or system architecture update.
+
+### Pattern Reuse And Stale Canon Detection
+
+- Purpose: reuse validated patterns and challenge stale, duplicated, or unsafe
+  canon before future tasks repeat old work or follow outdated guidance.
+- Typical inputs: current task object, relevant KB, feedback patterns, review
+  findings, source freshness, repository state, and prior validated pattern.
+- Typical outputs: reused pattern note, stale-canon warning, deprecated
+  assumption, blocker, or canon-update candidate.
+- Accountability wrapper: shared across roles by stage; Chief Editor owns
+  reroute/update decisions and Review Agent challenges unsafe reuse.
+- Required artifacts: none by default beyond the artifact that records the
+  current route, review finding, or blocker.
+- Optional artifacts: status note, review finding, final decision note, or
+  system-update task when a validated change is required.
+- Stop conditions: pattern does not fit the current task, source or canon is
+  stale, reuse would bypass review, or the candidate duplicates existing canon.
+- Quality criteria: reuse is scoped, stale concerns are evidence-backed, and
+  current canon remains the source of truth until updated.
+- Expansion triggers: repeated task shape, source/profile staleness, owner
+  conflict, old task-folder template pressure, or review uncertainty.
 
 ### Integrity Checking
 
@@ -521,13 +591,13 @@ is a shared capability, not a standing role.
 
 | Role | Wrapped capabilities |
 | --- | --- |
-| Chief Editor | Routing and preflight; quality attribute selection for route/depth decisions; audience/outcome alignment for route/depth decisions; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
+| Chief Editor | Routing and preflight; quality attribute selection for route/depth decisions; audience/outcome alignment for route/depth decisions; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; learning extraction and canon-evolution routing; mini-contract authorization. |
 | Intake Agent | Intake normalization; initial audience/outcome capture or inference; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; planning-depth signal; risk/client-profile suggestion. |
-| Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; evidence for competing options; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
+| Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; evidence for competing options; durable evidence/context signal when material; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
 | Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; quality-preservation during drafting; audience/outcome shaping; tradeoff communication; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
 | UX Writer | UX writing from product evidence; quality-preservation for product copy; audience/outcome shaping for user action and UI state; over-polishing/product-assumption detection; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
-| Review Agent | Independent review; quality-attribute challenge; audience/outcome mismatch challenge; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; review-side source/client/profile checks; re-review after repair. |
-| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of approved quality attributes; preservation of audience fit and actionability; preservation of selected-approach rationale when material; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
+| Review Agent | Independent review; quality-attribute challenge; audience/outcome mismatch challenge; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; learning/canon candidate and stale-canon challenge when material; review-side source/client/profile checks; re-review after repair. |
+| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of approved quality attributes; preservation of audience fit and actionability; preservation of selected-approach rationale when material; preservation of reusable learning cues without classification; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
 | Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites; preservation of evidence-backed visual meaning. |
 
 ## Non-Role Capabilities
@@ -544,6 +614,10 @@ reviewed system update:
 - planning and option evaluation;
 - audience and outcome alignment;
 - quality attribute selection and preservation;
+- learning extraction;
+- canon evolution;
+- pattern reuse;
+- stale canon detection;
 - fact checking;
 - style editing;
 - structural editing;

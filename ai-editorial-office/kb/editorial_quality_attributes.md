@@ -168,6 +168,14 @@ When work is polished but unsupported, too complete to be usable, too elegant to
 implement, or optimized for the wrong reader, use
 `/kb/editorial_failure_modes.md` to recover at the smallest stage.
 
+### Learning And Canon Evolution
+
+Maintainability, reviewability, traceability, evidence support, and
+implementation readiness help decide whether a task finding is worth preserving
+as reusable learning. `/kb/editorial_learning_framework.md` owns the decision
+to keep learning task-local, promote a pattern, update canon, or challenge stale
+canon.
+
 ### Review Pipeline
 
 The Review Pipeline remains the review gate. This framework gives Review Agent

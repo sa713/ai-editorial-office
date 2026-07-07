@@ -15,6 +15,8 @@ planning levels, option evaluation, and recommendation formation live in
 reader fit, and usefulness criteria live in
 `/kb/audience_outcome_alignment.md`; quality attributes, quality tradeoffs, and
 quality preservation guidance live in `/kb/editorial_quality_attributes.md`;
+learning extraction and canon evolution live in
+`/kb/editorial_learning_framework.md`;
 runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
 selected pipeline, role specs, and task-local artifacts.
 
@@ -88,6 +90,11 @@ file.
 | `finalization_mode` | No finalization yet, controlled finalization required, compact finalization, or final artifact already reviewed. | `orchestration_plan.md`, `review.md`, `final_decision.md` |
 | `human_approval_requirement` | Whether a human decision is required before continuation, publication, delivery, or closure. | `orchestration_plan.md`, `status.md`, `final_decision.md` |
 | `next_action` | Smallest safe next action and owner. | `task-manifest.md`, handoff, `status.md` |
+| `learning_candidates` | Potential reusable learning discovered during task execution, review, feedback, or governance. Optional and task-local until validated. | `review.md`, `feedback.md`, `final_decision.md`, implementation report |
+| `canon_updates_needed` | Candidate canonical changes that require a separate reviewed update or direct owner-file patch. Optional. | `final_decision.md`, `feedback.md`, system task notes |
+| `reusable_patterns` | Validated or candidate patterns that may help future similar tasks. Optional. | `feedback.md`, `kb/feedback_patterns.md`, system update artifacts |
+| `deprecated_assumptions` | Assumptions, paths, source statuses, or patterns found stale or unsafe. Optional. | `status.md`, `review.md`, `final_decision.md` |
+| `post_task_learning` | Compact closure note deciding whether learning stays task-local, becomes feedback/pattern, or needs canon update. Optional. | `final_decision.md`, `feedback.md` |
 | `memory_disposition` | Whether task learning stays local, becomes feedback, becomes a pattern, or needs a separate system update. | `feedback.md`, `final_decision.md`, `kb/feedback_patterns.md` |
 
 ## Artifact Views Over The Task Object
@@ -110,14 +117,14 @@ requires it.
 | `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review, shaped to the recorded audience, outcome, detail, tone, and format constraints. |
 | `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
 | `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, audience/outcome choices, quality-preservation notes, and review focus that are not already obvious from the draft. |
-| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, and next action. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, learning/canon candidates when material, and next action. |
 | `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
 | `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
 | `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
 | `finalization-notes.md` | Controlled finalization decisions only when finalization changes, risks, high governance, or traceability justify it. |
 | `finalization-checklist.md` | Finalization proof only when a downstream/governance consumer needs separate evidence. |
-| `final_decision.md` | Chief Editor governance closure, final readiness, evidence basis for closure, residual risk, human approval caveat, or reason for non-closure. |
-| `feedback.md` | Optional post-delivery user reaction or task-local feedback signal. |
+| `final_decision.md` | Chief Editor governance closure, final readiness, evidence basis for closure, residual risk, human approval caveat, memory disposition, learning decision when material, or reason for non-closure. |
+| `feedback.md` | Optional post-delivery user reaction, task-local feedback signal, or learning candidate. It does not automatically change canon. |
 | `handoff-*.md` | Delta transfer between roles: what changed, what the next owner needs, and when to stop. |
 | `compact-handoff.md` | Optional final/user-facing transfer summary, not an internal role-to-role handoff. |
 | `context-summary.md` | Optional recovery artifact after fragmentation or long-running work, not routine status. |
@@ -149,7 +156,8 @@ evidence taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`; planning levels and option evaluation
 are owned by `/kb/editorial_planning_framework.md`; audience/outcome alignment
 is owned by `/kb/audience_outcome_alignment.md`; quality attributes and
-tradeoffs are owned by `/kb/editorial_quality_attributes.md`; this file maps
+tradeoffs are owned by `/kb/editorial_quality_attributes.md`; learning and canon
+evolution are owned by `/kb/editorial_learning_framework.md`; this file maps
 those gates to task-object fields and artifact views.
 
 | Gate | Question | Default evidence |

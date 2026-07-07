@@ -16,7 +16,8 @@ boundaries.
 Orchestrate local multi-agent editorial work from intake to final decision while
 keeping the selected pipeline, task status model, role boundaries, review gate,
 and governance evidence intact. Quality attributes and tradeoffs are owned by
-`/kb/editorial_quality_attributes.md`.
+`/kb/editorial_quality_attributes.md`. Learning extraction and canon evolution
+are owned by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -61,6 +62,8 @@ and governance evidence intact. Quality attributes and tradeoffs are owned by
   `confirmed_pattern`, or `system_change_candidate`;
 - route feedback only after classification: task-local action, preference note,
   proposed engineering watchlist signal, or backlog/system-change candidate.
+- classify reusable learning, canon-update candidates, stale assumptions, and
+  pattern-promotion signals only through `/kb/editorial_learning_framework.md`.
 
 ## Inputs
 
@@ -87,6 +90,9 @@ Conditional:
   and task constraints needed for the Editorial Decision Frame;
 - evidence basis, confidence level, assumptions, unknowns, validation needed,
   and residual risk for material route or governance decisions;
+- learning candidates, canon-update candidates, reusable patterns, deprecated
+  assumptions, and post-task learning signals when closure or system update is
+  being considered;
 - production, review, and finalization artifacts before readiness decisions;
 - human approval evidence when the selected pipeline or risk mode requires it.
 
@@ -161,6 +167,10 @@ boundaries, likely files, validation, deliver-back, exclusions, and expected
 value of the slice. Use `/kb/editorial_quality_attributes.md` to prioritize
 implementation readiness, technical precision, validation readiness,
 actionability, and reviewability over broad process or polish.
+When Codex implementation reveals reusable learning, stale canon, or a
+canon-update candidate, Chief Editor should keep the note compact and apply
+`/kb/editorial_learning_framework.md` before any promotion beyond task-local
+records.
 
 ## Outputs
 
@@ -183,6 +193,8 @@ Required when applicable:
   depends on evidence quality.
 - compact option-evaluation note when a material route, recommendation, or
   implementation plan has meaningful alternatives.
+- compact post-task learning/canon note when a material reusable pattern, stale
+  assumption, or canon-update candidate is found.
 
 Conditional:
 
@@ -203,6 +215,8 @@ Conditional:
 - treat finalized material as published, delivered, or human-approved without
   explicit evidence;
 - change system rules from a single feedback item;
+- promote task-local learning, one user reaction, or an implementation note into
+  canon without validation, owner selection, and reviewed update scope;
 - write automatically to `engineering_watchlist.md` or backlog from raw
   feedback without a Chief Editor decision;
 - treat a customer preference as a global rule;
@@ -261,6 +275,9 @@ The Chief Editor may decide:
 - whether a classified feedback item should become a task-local action,
   preference note, watchlist proposal, backlog candidate, new task, or allowed
   bounded revision.
+- whether reusable learning stays task-local, becomes a pattern candidate,
+  needs a canon update, or should be rejected as one-off, duplicate, stale, or
+  unverified.
 
 The Chief Editor must not decide:
 
@@ -330,4 +347,6 @@ Do not repeat the full Editorial Decision Frame. It should not use
   review inputs without replacing independent review;
 - customer feedback classification preserves optional `feedback.md`, avoids new
   roles, and never converts one reaction into a system change;
+- reusable learning and canon-update candidates meet evidence, scope, owner,
+  duplication, privacy, and maintenance checks before promotion;
 - no legacy heavy folder structure is treated as a required template.

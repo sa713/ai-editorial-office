@@ -22,6 +22,9 @@ correction patterns.
 `/kb/editorial_quality_attributes.md` owns quality attributes, quality
 tradeoffs, task-specific quality priorities, and lifecycle quality
 preservation.
+`/kb/editorial_learning_framework.md` owns reusable learning types,
+canonization criteria, learning extraction, canon evolution, stale-canon
+challenge, and canon retirement.
 
 If this file appears to conflict with `AGENTS.md`, a selected pipeline, a role
 spec, or task-local governance artifacts, stop and route the conflict through
@@ -35,9 +38,9 @@ Default lifecycle:
 intake -> routing -> research when required -> drafting or UX writing -> review -> repair when required -> finalization -> governance -> memory disposition
 ```
 
-Source conversion and memory curation are capabilities that can attach to the
-lifecycle when needed. They are not standing default roles and do not create a
-separate workflow engine.
+Source conversion, memory curation, learning extraction, and canon evolution
+are capabilities that can attach to the lifecycle when needed. They are not
+standing default roles and do not create a separate workflow engine.
 
 ## Shared Stages
 
@@ -53,7 +56,7 @@ separate workflow engine.
 | Finalization | Produce final output only inside the approved review scope. | Final Editor | `final.md`, optional finalization notes or checklist when justified | Controlled finalization gate |
 | Governance | Decide whether the task can close, needs human approval, or remains blocked. | Chief Editor | `final_decision.md`, `status.md`, `task-manifest.md` | Governance gate |
 | Source conversion | Convert source material into usable task-local form while preserving provenance and instruction boundaries. | Capability or mini-contract selected by Chief Editor | converted source artifact, provenance note, source boundary update | Return to calling stage |
-| Memory curation | Decide whether learning stays task-local, becomes feedback, or enters a separate system-update path. | Chief Editor or selected process owner | `feedback.md`, feedback pattern entry, memory export note when justified | Memory disposition gate |
+| Memory curation | Decide whether learning stays task-local, becomes feedback/pattern, or enters a separate reviewed canon/system-update path. | Chief Editor or selected process owner | `feedback.md`, feedback pattern entry, learning/canon candidate, memory export note when justified | Memory disposition gate |
 
 ## Shared Gates
 
@@ -72,7 +75,7 @@ unknowns, validation needed, and residual risk at the depth required by
 | Review | Has independent review approved, requested changes, or blocked the work, including evidence confidence when material? | `review.md` |
 | Controlled finalization | Is final output limited to reviewed and approved scope? | `final.md`, review pointer, optional finalization evidence |
 | Governance | Can the task close, require human approval, or remain blocked with residual risk visible? | `final_decision.md`, `status.md`, `task-manifest.md` |
-| Memory disposition | Should learning stay task-local, become feedback, or enter a separate system update? | `feedback.md`, final decision, feedback pattern note |
+| Memory disposition | Should learning stay task-local, become feedback/pattern, or enter a separate reviewed canon/system update? | `feedback.md`, final decision, feedback pattern note, learning/canon candidate |
 
 ## Compact And Expanded Execution
 
@@ -106,7 +109,7 @@ it is not a new parallel lifecycle.
 | Finalization | Produce final output without adding unreviewed claims, product behavior, or scope. |
 | Governance | Record closure, human approval need, unresolved blockers, and memory disposition. |
 | Source conversion | Preserve provenance and do not convert source content into instructions by default. |
-| Memory curation | Promote nothing automatically; separate task-local feedback from system change. |
+| Memory curation | Promote nothing automatically; separate task-local feedback, reusable learning, patterns, and canon/system changes. |
 
 ## Expansion Triggers
 
@@ -130,7 +133,8 @@ Expand context or artifacts only when at least one trigger applies:
   product behavior, evidence depth, or workflow;
 - quality priorities conflict, are unclear, or are being degraded across a
   handoff;
-- memory export, recurring feedback, or system update is being considered.
+- memory export, recurring feedback, reusable learning, canon update, stale
+  canon, or system update is being considered.
 
 ## Human Approval Boundary
 
@@ -171,6 +175,12 @@ may consume the quality profile pattern from
 `/kb/editorial_quality_attributes.md`. Quality priorities and tradeoffs are
 recorded only when they help the next owner, reviewer, or Chief Editor avoid
 quality loss.
+
+Any stage that discovers reusable learning, repeated findings, canon-update
+candidates, or stale assumptions may consume the learning extraction pattern
+from `/kb/editorial_learning_framework.md`. The default action is to keep
+learning task-local unless canonization criteria are met and a reviewed owner
+update is justified.
 
 ### Intake
 
@@ -280,8 +290,8 @@ quality loss.
 - Expected outputs: `review.md` with checked scope, independence basis,
   audience/outcome fit when material, quality-attribute challenge when
   material, evidence/confidence challenge when material, option-evaluation
-  challenge when material, findings, outcome, required changes/blockers, and
-  next action.
+  challenge when material, learning/canon candidate challenge when material,
+  findings, outcome, required changes/blockers, and next action.
 - Stop conditions: missing material, missing independence, unresolved critical
   issue, insufficient evidence, or ambiguous review scope.
 - Next stage: finalization when approved, repair when changes are requested,
@@ -329,12 +339,13 @@ quality loss.
 - Minimum required context: manifest, status, approved review, final artifact,
   finalization notes when present, open blockers, human approval requirement.
 - Optional context: feedback, client profile caveat, selected pipeline closure
-  requirements, memory export target.
+  requirements, memory export target, `/kb/editorial_learning_framework.md`
+  when learning or canon evolution is being considered.
 - Forbidden context: treating finalization as governance approval, closing over
   unresolved blockers, or publishing private/restricted material by default.
 - Expected outputs: `final_decision.md`, updated manifest/status, closure or
-  approval requirement, residual risk when material, memory disposition
-  decision.
+  approval requirement, residual risk when material, memory disposition and
+  learning/canon decision when material.
 - Stop conditions: missing review/final artifact, unresolved blocker, unclear
   approval boundary, or repository/privacy risk.
 - Next stage: memory curation, human approval, repair, or blocked.
@@ -360,16 +371,21 @@ quality loss.
 ### Memory Curation
 
 - Purpose: decide what, if anything, should leave the task-local record after
-  completion or feedback.
-- Minimum required context: final decision or feedback trigger, manifest/status,
-  relevant `feedback.md` when present, `/kb/customer_feedback_loop.md` when
-  classifying feedback.
-- Optional context: `/kb/feedback_patterns.md`, `/about` export rules, selected
-  system-update mission notes.
+  completion, feedback, repeated findings, or canon-update signals.
+- Minimum required context: final decision or feedback/learning trigger,
+  manifest/status, relevant `feedback.md` when present,
+  `/kb/customer_feedback_loop.md` when classifying feedback, and
+  `/kb/editorial_learning_framework.md` when reusable learning or canon
+  promotion is considered.
+- Optional context: `/kb/feedback_patterns.md`, the current canonical owner for
+  a proposed rule, `/about` export rules, selected system-update mission notes.
 - Forbidden context: automatic global rule promotion, storing private source
-  material in public memory, treating one feedback item as canon.
-- Expected outputs: task-local feedback, pattern candidate, memory export note,
-  or separate system-update recommendation.
-- Stop conditions: no governance closure, privacy/provenance risk, unclear user
-  consent, or system change needed without a reviewed update mission.
+  material in public memory, treating one feedback item as canon, treating
+  `/about` as canon, or changing a rule without a clear owner.
+- Expected outputs: task-local feedback, learning candidate, pattern candidate,
+  stale-canon warning, memory export note, or separate reviewed system-update
+  recommendation.
+- Stop conditions: no governance closure, weak evidence, no clear owner,
+  privacy/provenance risk, unclear user consent, or system change needed without
+  a reviewed update mission.
 - Next stage: task closed, separate reviewed system update, or blocked.

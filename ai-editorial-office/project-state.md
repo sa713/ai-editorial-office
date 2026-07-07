@@ -26,6 +26,7 @@ Memory package stabilization.
 - editorial planning and option evaluation framework.
 - audience and outcome alignment framework.
 - editorial quality attributes framework.
+- editorial learning and canon evolution framework.
 
 ## Current core roles
 - chief_editor
@@ -68,7 +69,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, and `/kb/editorial_quality_attributes.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, and `/kb/editorial_learning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -130,6 +131,10 @@ Maintain `/about` as a compact project-memory export:
   attributes, accepted tradeoffs, and quality-preservation risks according to
   `/kb/editorial_quality_attributes.md` without creating scoring, checklists,
   or a separate review process.
+- Learning and canon evolution are deliberate: reusable learning, canon update
+  candidates, stale assumptions, and pattern promotion follow
+  `/kb/editorial_learning_framework.md`; task-local notes do not become canon
+  automatically.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.
@@ -166,6 +171,9 @@ Maintain `/about` as a compact project-memory export:
 - For quality-sensitive tasks, read `/kb/editorial_quality_attributes.md`
   before choosing quality priorities, accepting tradeoffs, or reviewing whether
   the artifact optimized for the right qualities.
+- For post-task learning, repeated findings, canon updates, or stale-canon
+  concerns, read `/kb/editorial_learning_framework.md` before promoting any
+  task-local note into reusable canon.
 
 ## Artifact minimalism
 Owned by `AGENTS.md` and the artifact templates. Project state may record implementation progress, but it should not duplicate the permanent responsibility map.

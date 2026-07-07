@@ -11,7 +11,9 @@ boundaries intact. Implementation-task dilution and recovery are covered by
 `/kb/editorial_failure_modes.md`; planning depth and option evaluation are
 covered by `/kb/editorial_planning_framework.md`; Codex as implementer audience
 is covered by `/kb/audience_outcome_alignment.md`; implementation-task quality
-attributes are covered by `/kb/editorial_quality_attributes.md`.
+attributes are covered by `/kb/editorial_quality_attributes.md`; reusable
+learning and canon-update signals are covered by
+`/kb/editorial_learning_framework.md`.
 
 ## owner and chain
 
@@ -76,7 +78,8 @@ Minimum expectations:
 - `Формат результата`: expected files, notes, and whether chat should stay
   short.
 - `Что прислать на проверку`: diff summary, changed files, key fragments,
-  implementation notes, check-pack, and checks.
+  implementation notes, check-pack, checks, and reusable learning/canon-update
+  signals only when material.
 
 Audience fit: Codex is the reader and executor. The task should make the next
 repository action obvious, bounded, and reviewable.
@@ -98,6 +101,9 @@ ambiguity, high in implementation value, and reviewable.
   deliver-back format for Codex to execute without guessing.
 - Prefer implementation readiness, technical precision, validation readiness,
   and reviewability over broad theory or polished process language.
+- Surface reusable learning, stale assumptions, or canon-update candidates only
+  when they are material and evidence-backed; do not turn every Codex task into
+  a retrospective.
 - Preserve `confirmed`, `inferred`, `unknown`, `assumption`, and `question`
   distinctions when they affect scope.
 - Do not invent source materials, requirements, acceptance criteria, files,
@@ -127,6 +133,8 @@ Recovery:
   boundaries, validation, deliver-back, expected value, and exclusions;
 - re-select quality priorities when the task is optimizing for strategy,
   elegance, or completeness instead of implementation value;
+- extract learning deliberately when the implementation reveals a reusable
+  pattern, stale canon, or canon-update candidate;
 - name the smallest useful implementation outcome;
 - include validation and deliver-back requirements;
 - remove process narration that does not help implementation or review;
@@ -158,6 +166,7 @@ Optional additions are allowed only when useful:
 
 - `Manual check / smoke-test results`;
 - `Known limitations`;
+- `Reusable learning or canon-update signal`;
 - `Open questions`.
 
 Do not turn check-pack into a duplicate of the full diff, a long report, a

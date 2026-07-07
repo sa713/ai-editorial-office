@@ -20,7 +20,8 @@ and recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning
 and option evaluation are owned by `/kb/editorial_planning_framework.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
-`/kb/editorial_quality_attributes.md`.
+`/kb/editorial_quality_attributes.md`. Learning extraction and canon evolution
+are owned by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -36,6 +37,8 @@ Quality attributes and tradeoffs are owned by
   by research, production, or review;
 - preserve selected-approach rationale, accepted tradeoffs, and reconsideration
   triggers when they are material to the final deliverable;
+- preserve reviewed reusable-learning cues, canon-update candidates, or stale
+  assumptions for Chief Editor handoff when they are material;
 - detect premature finalization, caveat loss, confidence inflation, and
   unreviewed meaning changes before creating or updating final output;
 - keep unresolved risks visible when they remain relevant;
@@ -84,6 +87,8 @@ Conditional:
 - `finalization-checklist.md`;
 - raw `feedback.md` capture only when customer feedback actually appears in the
   finalization or delivery context;
+- compact learning/canon cue in handoff only when already present in reviewed
+  material and needed by Chief Editor;
 - blocker note or change request when finalization cannot proceed.
 
 ## Forbidden Actions
@@ -112,6 +117,7 @@ Conditional:
 - approve publication, delivery, or human sign-off;
 - create optional finalization artifacts as routine process weight;
 - classify customer feedback or decide watchlist/backlog/system changes;
+- classify reusable learning, promote patterns, change canon, or retire canon;
 - create `feedback.md` when no actual feedback exists;
 - change the selected pipeline or governance model.
 
@@ -124,6 +130,8 @@ The Final Editor may decide:
 - whether a requested finalization change exceeds review scope;
 - whether raw post-result feedback needs to be preserved for Chief Editor
   classification;
+- whether an existing reviewed learning/canon cue must survive finalization for
+  Chief Editor governance;
 - whether finalization must stop for new review, research, or governance input.
 
 The Final Editor must not decide:
@@ -177,5 +185,7 @@ status history.
 - optional finalization artifacts are justified, not automatic;
 - the Chief Editor remains the final governance owner;
 - any captured feedback is raw/task-local and awaits Chief Editor
+  classification;
+- learning/canon cues remain raw or reviewed signals and await Chief Editor
   classification;
 - finalization did not create a new workflow or weaken review-gate evidence.
