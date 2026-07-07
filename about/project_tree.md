@@ -20,6 +20,7 @@ Core architectural traits:
 - repository-first memory;
 - task object as the primary operational primitive;
 - capability registry before role expansion;
+- shared lifecycle kernel for common stages, gates, and context contracts;
 - explicit role specs;
 - roles as accountability wrappers;
 - task-local artifacts under `ai-editorial-office/tasks/TASK-ID/`;
@@ -93,6 +94,7 @@ ai-editorial-office/
 │   ├── task_statuses.md
 │   ├── task_object_model.md
 │   ├── capability_registry.md
+│   ├── shared_lifecycle_kernel.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
 │   ├── canonical_sketchnote_prompt.md
@@ -166,6 +168,7 @@ For ordinary task continuation, do not read the whole tree. Start from:
 - current task `task-manifest.md`;
 - latest relevant handoff;
 - current working artifact;
+- active stage context contract from `ai-editorial-office/kb/shared_lifecycle_kernel.md`;
 - directly relevant pipeline, role spec, KB file, or editorial knowledge file.
 
 For a new ChatGPT project memory session, use the `/about` package first.
@@ -190,7 +193,7 @@ or the task-local canonical owner named there.
 - Treating `/about` copies as canonical production owners.
 - Treating retrospectives as active rules.
 - Loading all task folders and old artifact versions by default.
-- Repeating `AGENTS.md` invariants inside pipelines or templates.
+- Repeating `AGENTS.md` invariants or shared lifecycle rules inside pipelines or templates.
 - Letting `project-state.md` become permanent policy.
 - Letting `task-manifest.md` become a narrative log instead of compact current
   state.
@@ -209,6 +212,9 @@ or the task-local canonical owner named there.
   task state.
 - Capabilities are reusable operations; roles are accountability wrappers where
   independence, ownership, or decision authority matters.
+- Shared lifecycle kernel owns common stages, gates, artifact responsibilities,
+  expansion triggers, human approval boundary, and stage context contracts;
+  pipelines are overlays.
 - Client profiles are inactive by default; `sber` activates only for explicit
   Sber tasks and never becomes global editorial policy.
 - Research and writing stay separate when factual support is needed.

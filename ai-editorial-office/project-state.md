@@ -19,6 +19,7 @@ Memory package stabilization.
 - client-profile scaffold with `sber` mode routing, manifest fields, source
   policy, and review checklist.
 - architecture foundation framing: task object model and capability registry.
+- shared lifecycle kernel and stage context contracts.
 
 ## Current core roles
 - chief_editor
@@ -61,10 +62,10 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by `AGENTS.md`. Project state may record active constraints, but permanent invariants should be changed in `AGENTS.md` first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, and `/kb/shared_lifecycle_kernel.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
-Owned by `AGENTS.md`. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
+Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
 
 ## Risk modes
 Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless a temporary implementation note needs to point to the active owner.
@@ -97,6 +98,12 @@ Maintain `/about` as a compact project-memory export:
 - Capability registry names reusable operations; roles remain accountability
   wrappers for capabilities when independence, ownership, or decision authority
   matters.
+- Shared lifecycle kernel owns shared stages, gates, artifact responsibilities,
+  expansion triggers, human approval boundary, and stage context contracts.
+- Pipelines are lightweight overlays over the shared lifecycle kernel and keep
+  task-type sequencing, artifact depth, and local quality gates.
+- Context loading is stage-driven through shared lifecycle context packets before
+  expanding to optional project documents.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.
@@ -143,8 +150,9 @@ Do not implement yet unless explicitly requested:
 Before continuing work:
 1. Read AGENTS.md.
 2. Read /project-state.md.
-3. For architecture-foundation work, read /kb/task_object_model.md and
-   /kb/capability_registry.md.
+3. For architecture-foundation or lifecycle work, read
+   /kb/task_object_model.md, /kb/capability_registry.md, and
+   /kb/shared_lifecycle_kernel.md.
 4. For memory-package work, read /about/project_tree.md and relevant
    CHATGPT_MEMORY_*.md files.
 5. Read relevant /agents/*.md.

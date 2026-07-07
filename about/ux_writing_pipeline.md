@@ -63,7 +63,7 @@ This pipeline must not assign work to unauthorized extension roles. Explicitly l
 
 ## required inputs
 
-Pipeline execution follows `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current stage or required by the selected depth:
+Pipeline execution follows `/kb/shared_lifecycle_kernel.md` stage context contracts and `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current stage or required by the selected depth:
 
 - `AGENTS.md`;
 - `/project-state.md`, when continuing pipeline materialization or after context loss;
@@ -592,7 +592,7 @@ Completion means the UX writing workflow is artifact-complete and governance-clo
 
 After context loss, continue from artifacts, not chat history.
 
-Receiving or restarting agents use the short context path from `AGENTS.md`:
+Receiving or restarting agents use the short context path from `/kb/shared_lifecycle_kernel.md` and `AGENTS.md`:
 
 1. `AGENTS.md` or a short reference to its active invariants.
 2. `/tasks/TASK-ID/task-manifest.md`.

@@ -5,8 +5,10 @@ roles wrap them when independence, ownership, or decision authority matters.
 
 It is an architecture reference, not a new role system, workflow engine,
 pipeline, prompt rewrite, or mandatory artifact set. Active role behavior still
-lives in `/agents/*.md`; lifecycle and governance invariants still live in
-`AGENTS.md`; task statuses still live in `/kb/task_statuses.md`.
+lives in `/agents/*.md`; shared lifecycle stages, gates, expansion triggers,
+and stage context contracts live in `/kb/shared_lifecycle_kernel.md`;
+governance invariants and review-gate authority still live in `AGENTS.md`;
+task statuses still live in `/kb/task_statuses.md`.
 
 ## Core Principle
 

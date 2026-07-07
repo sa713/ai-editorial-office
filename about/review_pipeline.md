@@ -62,7 +62,7 @@ This pipeline must not assign review, editing, writing, finalization, or governa
 
 ## required inputs
 
-Review execution follows `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current review scope or required by the selected depth:
+Review execution follows `/kb/shared_lifecycle_kernel.md` review context contract and `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current review scope or required by the selected depth:
 
 - `AGENTS.md`;
 - `/project-state.md`, when continuing after context loss;
@@ -254,7 +254,7 @@ For `changes_requested`, bounded revision is the default. `review.md` must defin
 
 ## review rule ownership
 
-This pipeline owns sequencing, lifecycle, status transitions, artifact depth, and quality gates.
+This pipeline owns review-stage sequencing, review status transitions, review artifact depth, and review quality gates. Shared lifecycle concepts and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`.
 
 It does not restate detailed review logic. Review Agent owns:
 
@@ -311,7 +311,7 @@ Completion means independent review is artifact-complete. It does not mean final
 
 After context loss, continue from artifacts, not chat history.
 
-Receiving or restarting agents use the short context path from `AGENTS.md`:
+Receiving or restarting agents use the short context path from `/kb/shared_lifecycle_kernel.md` and `AGENTS.md`:
 
 1. `AGENTS.md` or a short reference to its active invariants.
 2. `/tasks/TASK-ID/task-manifest.md`.

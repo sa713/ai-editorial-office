@@ -51,7 +51,7 @@ This pipeline does not introduce any additional roles. It must not refer work to
 
 ## required inputs
 
-Research execution follows `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current stage or required by the selected depth:
+Research execution follows `/kb/shared_lifecycle_kernel.md` stage context contracts and `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current stage or required by the selected depth:
 
 - `AGENTS.md`;
 - `/kb/task_statuses.md`;
@@ -400,7 +400,7 @@ Completion does not mean factual truth is approved for publication. It means the
 
 After context loss, the next agent must restart from files, not chat memory.
 
-Receiving or restarting agents use the short context path from `AGENTS.md`:
+Receiving or restarting agents use the short context path from `/kb/shared_lifecycle_kernel.md` and `AGENTS.md`:
 
 1. `AGENTS.md` or a short reference to its active invariants.
 2. `/tasks/TASK-ID/task-manifest.md`.

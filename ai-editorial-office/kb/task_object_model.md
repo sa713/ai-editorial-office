@@ -5,9 +5,12 @@ This file defines the architectural model for an AI Editorial Office task.
 It is a canonical architecture reference for task-object fields and for how
 task-local artifacts act as views over task state. It does not change runtime
 behavior, task statuses, review-gate rules, compact execution, pipeline
-requirements, or role responsibilities. Those remain owned by `AGENTS.md`,
-`/kb/task_statuses.md`, the selected pipeline, role specs, and task-local
-artifacts.
+requirements, shared lifecycle rules, or role responsibilities. Shared
+lifecycle stages, gates, artifact responsibilities, expansion triggers, human
+approval boundary, and stage context contracts live in
+`/kb/shared_lifecycle_kernel.md`; runtime authority still remains with
+`AGENTS.md`, `/kb/task_statuses.md`, the selected pipeline, role specs, and
+task-local artifacts.
 
 ## Core Principle
 
@@ -115,7 +118,7 @@ Editor to move safely?"
 
 ## Gates
 
-Task gates are confidence decisions recorded in existing artifacts.
+Task gates are confidence decisions recorded in existing artifacts. Shared gate semantics and stage order are owned by `/kb/shared_lifecycle_kernel.md`; this file maps those gates to task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |

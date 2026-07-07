@@ -42,6 +42,7 @@
 | Task status model and transitions | `/kb/task_statuses.md` | status references, not alternate state models |
 | Task object model and artifact view mapping | `/kb/task_object_model.md` | task-specific values, restart pointers, and local consequences |
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
+| Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -338,6 +339,8 @@ client_profile_files:
 
 Агент не должен загружать весь проект в контекст без необходимости. Контекст собирается минимально достаточным набором файлов.
 
+Stage-specific context packets are owned by `/kb/shared_lifecycle_kernel.md`. At stage transition or restart, load the active stage packet first, then expand only when risk, blocker, evidence, governance, or human approval conditions require it.
+
 For ordinary restart or stage transition, use the short context path:
 
 - `AGENTS.md`, or a short reference to its active invariants when they are already known in the current working context;
@@ -501,6 +504,8 @@ recency is the task-local rule for that artifact set.
 - `review-summary.md`, only when a downstream consumer needs a separate concise transfer.
 
 ## Стандартный жизненный цикл задачи
+
+Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. Pipelines remain overlays that add task-type sequencing, artifact depth, and task-specific quality gates.
 
 Default operating workflow:
 

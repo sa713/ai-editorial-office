@@ -5,6 +5,10 @@
 Canonical KB ownership:
 
 - `task_statuses.md` owns allowed operational task statuses and transitions.
+- `shared_lifecycle_kernel.md` owns shared lifecycle stages, gates, artifact
+  responsibilities, expansion triggers, human approval boundary, and stage
+  context contracts. It does not replace `AGENTS.md`, role specs, selected
+  pipelines, task statuses, review rules, or task-local artifacts.
 - `task_object_model.md` owns the architecture model for task-object fields and
   for how task-local artifacts act as views over task state. It does not make
   every field or artifact mandatory for every task.
