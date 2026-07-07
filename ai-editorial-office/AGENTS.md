@@ -47,12 +47,13 @@
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
 | Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
+| Editorial quality attributes and tradeoffs | `/kb/editorial_quality_attributes.md` | task-specific quality priorities, accepted tradeoffs, and preservation risks |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
 | Task-type scaffolds | `/templates/tasks/*.md` | setup scaffolds, not policy restatement |
 | Client profiles and client-specific editorial policy | `/kb/clients/CLIENT-ID/*.md` | activation flag in `task-manifest.md`, short references in orchestration and review artifacts |
-| Editorial quality, usefulness, modes, and failure patterns | `editorial_knowledge/*.md` | editorial judgment, not operational task state |
+| Editorial knowledge, examples, modes, and local judgment | `editorial_knowledge/*.md` | reusable judgment, not the canonical quality attribute model or operational task state |
 | Task manifest | `/tasks/TASK-ID/task-manifest.md` | compact current state, artifact inventory, active constraints, next action |
 | Status | `/tasks/TASK-ID/status.md` | transition history, blockers, lifecycle rationale |
 | Orchestration plan | `/tasks/TASK-ID/orchestration_plan.md` | task-specific execution contract |
@@ -107,6 +108,9 @@ existing markdown system should be understood and extended.
 - `/kb/audience_outcome_alignment.md` defines audience classes, outcome types,
   alignment pattern, detail/tone/format fit, mismatch warning signs, correction
   patterns, and Codex-specific audience guidance.
+- `/kb/editorial_quality_attributes.md` defines shared quality attributes,
+  quality tradeoffs, task-specific quality priorities, lifecycle preservation,
+  and Codex implementation-task quality.
 
 Do not create a new role merely because a capability is named. Source
 conversion, integrity checking, context assembly, and memory export remain
@@ -155,6 +159,8 @@ Before production starts, Chief Editor must route the task editorially:
   a non-trivial route, recommendation, or implementation plan;
 - identify the audience, intended outcome, required action or decision, and
   detail/tone/format fit before handing work to production when material;
+- identify the quality attributes and accepted tradeoffs that matter for the
+  task before production when material;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` before
   handing work to Writer Agent or UX Writer;
 - record the routing decision in `orchestration_plan.md`, `task-manifest.md`,
@@ -183,6 +189,10 @@ route.
 structure, tone, evidence, and final artifact fit around the reader and the
 decision, action, understanding, or publication outcome the artifact must
 enable.
+
+`/kb/editorial_quality_attributes.md` defines the shared vocabulary for what
+quality means in a task, how quality attributes trade off, and how intended
+quality must be preserved across handoffs, review, and finalization.
 
 The frame must remain a short management block, not an analytical document.
 Alternatives exist to prove that the chosen route was deliberate: normally use

@@ -13,7 +13,8 @@ evidence section standards live in `/kb/editorial_evidence_framework.md`;
 planning levels, option evaluation, and recommendation formation live in
 `/kb/editorial_planning_framework.md`; audience and outcome alignment fields,
 reader fit, and usefulness criteria live in
-`/kb/audience_outcome_alignment.md`;
+`/kb/audience_outcome_alignment.md`; quality attributes, quality tradeoffs, and
+quality preservation guidance live in `/kb/editorial_quality_attributes.md`;
 runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
 selected pipeline, role specs, and task-local artifacts.
 
@@ -56,6 +57,8 @@ file.
 | `tone_requirements` | Tone, formality, sensitivity, and vocabulary constraints required by reader context and evidence quality. | `brief.md`, relevant KB, production notes |
 | `channel_context` | Publication channel, product context, internal/external use, or task environment. | `brief.md`, `orchestration_plan.md` |
 | `deliverable` | Expected output or artifact set. | `brief.md`, `task-manifest.md` |
+| `quality_priorities` | Selected quality attributes that matter most for this task, such as correctness, actionability, traceability, audience fit, implementation readiness, or reviewability. | `brief.md`, `orchestration_plan.md`, production/review notes |
+| `quality_tradeoffs` | Accepted quality tradeoffs, such as completeness vs brevity or elegance vs implementation value. | `orchestration_plan.md`, Editorial Decision Frame, `review.md` |
 | `source_boundary` | What is source data, instruction, assumption, contradiction, or unknown. | `brief.md`, `orchestration_plan.md`, `research.md`, `sources.md` |
 | `evidence_basis` | Evidence classes and artifact/source pointers that support material claims, routes, recommendations, review findings, or final decisions. | `orchestration_plan.md`, `research.md`, `sources.md`, `claims_table.md`, `review.md`, `final_decision.md` |
 | `confidence_level` | Evidence-quality label for material conclusions: `verified`, `supported`, `plausible`, `speculative`, or `unsupported`. | research/review artifacts, decision frame, final decision |
@@ -95,10 +98,10 @@ requires it.
 
 | Artifact | Task-object responsibility |
 | --- | --- |
-| `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, and success criterion. |
+| `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, quality cues when material, and success criterion. |
 | `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, audience/outcome fit when material, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, audience/outcome fit when material, quality priorities/tradeoffs when material, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
 | `research.md` | Research scope, verified facts, interpretations, assumptions, contradictions, source confidence, evidence class, and evidence limits. |
 | `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |
@@ -106,8 +109,8 @@ requires it.
 | `outline.md` | Planned structure when structure is non-trivial or needed for review. |
 | `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review, shaped to the recorded audience, outcome, detail, tone, and format constraints. |
 | `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
-| `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, audience/outcome choices, and review focus that are not already obvious from the draft. |
-| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, audience/outcome fit, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, and next action. |
+| `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, audience/outcome choices, quality-preservation notes, and review focus that are not already obvious from the draft. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, and next action. |
 | `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
 | `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
 | `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
@@ -145,8 +148,9 @@ semantics and stage order are owned by `/kb/shared_lifecycle_kernel.md`;
 evidence taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`; planning levels and option evaluation
 are owned by `/kb/editorial_planning_framework.md`; audience/outcome alignment
-is owned by `/kb/audience_outcome_alignment.md`; this file maps those gates to
-task-object fields and artifact views.
+is owned by `/kb/audience_outcome_alignment.md`; quality attributes and
+tradeoffs are owned by `/kb/editorial_quality_attributes.md`; this file maps
+those gates to task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |

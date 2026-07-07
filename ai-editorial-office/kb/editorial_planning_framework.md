@@ -78,6 +78,7 @@ Select only the dimensions that matter for the current task.
 | Reviewability | Can Review Agent validate the option and resulting artifacts without excessive context? |
 | Time/value fit | Is this the right-sized next step for the current mission? |
 | Audience/outcome fit | Does this option help the intended reader decide, act, review, implement, understand, or publish? |
+| Quality-attribute fit | Which quality attributes does this option strengthen or weaken? |
 
 The framework does not require numeric scores. A compact comparison table,
 short bullets, or a paragraph is enough when it makes the tradeoff visible.
@@ -161,6 +162,12 @@ Option evaluation should use `/kb/audience_outcome_alignment.md` when reader or
 outcome fit affects the route. A stronger option on paper may be rejected when
 it is too broad, too shallow, too technical, or insufficiently actionable for
 the intended audience.
+
+### Quality Attributes
+
+Option evaluation should use `/kb/editorial_quality_attributes.md` when options
+optimize for different qualities, such as completeness vs brevity, elegance vs
+implementation value, or traceability vs readability.
 
 ### Failure Modes
 

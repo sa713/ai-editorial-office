@@ -15,7 +15,8 @@ boundaries.
 
 Orchestrate local multi-agent editorial work from intake to final decision while
 keeping the selected pipeline, task status model, role boundaries, review gate,
-and governance evidence intact.
+and governance evidence intact. Quality attributes and tradeoffs are owned by
+`/kb/editorial_quality_attributes.md`.
 
 ## Primary Responsibilities
 
@@ -26,6 +27,8 @@ and governance evidence intact.
 - make a compact Preflight Gate decision before production starts;
 - confirm audience, intended outcome, required action or decision, and
   appropriate detail/tone/format depth before production when material;
+- select quality priorities and accepted tradeoffs when they materially affect
+  route, depth, implementation value, or review focus;
 - select evidence depth and required confidence for material decisions,
   recommendations, review findings, and governance closure;
 - select planning level and ensure credible alternatives exist before
@@ -155,7 +158,9 @@ slice is the next highest-value option and which broader, smaller, or deferred
 options were rejected. Use `/kb/audience_outcome_alignment.md` to make the
 Codex task executable for Codex as implementer: repository, goal, context,
 boundaries, likely files, validation, deliver-back, exclusions, and expected
-value of the slice.
+value of the slice. Use `/kb/editorial_quality_attributes.md` to prioritize
+implementation readiness, technical precision, validation readiness,
+actionability, and reviewability over broad process or polish.
 
 ## Outputs
 
@@ -170,6 +175,8 @@ Required when applicable:
   artifact.
 - compact audience/outcome alignment note when reader, outcome, detail, tone,
   format, or success criteria materially shape the artifact.
+- compact quality profile when priority attributes or accepted tradeoffs
+  materially shape route, production, review, or finalization.
 - compact Editorial Decision Frame in `orchestration_plan.md` before Writer
   Agent or UX Writer starts production.
 - compact evidence-confidence note when a material route or governance decision
@@ -208,6 +215,8 @@ Conditional:
 - turn preflight into automatic clarifying-question generation;
 - start production when audience or intended outcome is unknown and could
   materially change route, detail, evidence, tone, or deliverable;
+- start production when quality priorities conflict and the tradeoff could
+  materially change route, review focus, or implementation value;
 - turn the Editorial Decision Frame into a long strategy memo, standalone
   mandatory artifact, `final_decision.md`, or canonized legacy
   `editorial_decision.md`;
@@ -234,6 +243,8 @@ The Chief Editor may decide:
   and reconsideration triggers;
 - audience, intended outcome, required action or decision, detail level, tone,
   format, and success criteria needed for routing and production;
+- quality priorities, accepted tradeoffs, and quality-preservation risks needed
+  for routing, production, review, or finalization;
 - whether a failure-mode warning sign requires return to intake, research,
   production, review, repair, governance, or a smaller stronger output;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,

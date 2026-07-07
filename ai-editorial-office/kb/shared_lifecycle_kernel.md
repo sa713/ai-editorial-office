@@ -19,6 +19,9 @@ triggers.
 `/kb/audience_outcome_alignment.md` owns audience identification, intended
 outcome, reader context, detail/tone/format fit, usefulness criteria, and
 correction patterns.
+`/kb/editorial_quality_attributes.md` owns quality attributes, quality
+tradeoffs, task-specific quality priorities, and lifecycle quality
+preservation.
 
 If this file appears to conflict with `AGENTS.md`, a selected pipeline, a role
 spec, or task-local governance artifacts, stop and route the conflict through
@@ -41,7 +44,7 @@ separate workflow engine.
 | Stage | Purpose | Accountability wrapper | Primary artifact view | Gate or result |
 | --- | --- | --- | --- | --- |
 | Intake | Normalize the user request into task-local operating state, including audience and intended outcome when material. | Intake Agent or Chief Editor | `brief.md`, `task-manifest.md` | Entry/preflight gate |
-| Routing | Select risk, depth, audience/outcome fit, planning level, pipeline or mini-contract, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
+| Routing | Select risk, depth, audience/outcome fit, quality priorities, planning level, pipeline or mini-contract, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
 | Research | Separate evidence, assumptions, contradictions, gaps, and usable claims. | Research Agent | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, `open-questions.md` when needed | Source boundary and research sufficiency gates |
 | Drafting | Produce article, social, or editorial copy within approved scope and evidence. | Writer Agent | `outline.md`, `draft.md`, `claims-used.md`, writer notes, handoff when needed | Drafting readiness gate |
 | UX writing | Produce product-facing copy within product, terminology, accessibility, and evidence constraints. | UX Writer | `ux-copy.md` or equivalent UX artifacts, UX notes, handoff when needed | Drafting readiness gate for UX copy |
@@ -65,7 +68,7 @@ unknowns, validation needed, and residual risk at the depth required by
 | Entry/preflight | Is the request understood enough to ask, constrain, proceed, or block? | `brief.md`, `task-manifest.md`, `orchestration_plan.md`, or `status.md` |
 | Source boundary | What is source data, user instruction, assumption, contradiction, or unknown? | `brief.md`, `research.md`, `sources.md`, source notes, or plan |
 | Research sufficiency | Are material claims supported, caveated, excluded, or blocked? | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, or compact evidence |
-| Drafting readiness | Can production proceed within approved scope, audience/outcome fit, evidence, confidence, and constraints? | plan, production artifact, notes, handoff |
+| Drafting readiness | Can production proceed within approved scope, audience/outcome fit, quality priorities, evidence, confidence, and constraints? | plan, production artifact, notes, handoff |
 | Review | Has independent review approved, requested changes, or blocked the work, including evidence confidence when material? | `review.md` |
 | Controlled finalization | Is final output limited to reviewed and approved scope? | `final.md`, review pointer, optional finalization evidence |
 | Governance | Can the task close, require human approval, or remain blocked with residual risk visible? | `final_decision.md`, `status.md`, `task-manifest.md` |
@@ -96,9 +99,9 @@ it is not a new parallel lifecycle.
 | Intake | Create or update only the smallest brief and manifest state needed to route. |
 | Routing | Record selected pipeline or mini-contract, risk, depth, active capabilities, active roles, gates, and next owner. |
 | Research | Create evidence artifacts only when claims, risk, review, or governance need them. |
-| Drafting | Keep production artifacts aligned with source boundary, selected evidence depth, audience, outcome, and detail/tone/format constraints. |
-| UX writing | Keep copy tied to product context, UI state, terminology, reader action, accessibility, and reviewed constraints. |
-| Review | Record verdict, checked scope, independence basis, audience/outcome fit, blockers, required changes, and next action. |
+| Drafting | Keep production artifacts aligned with source boundary, selected evidence depth, audience, outcome, quality priorities, and detail/tone/format constraints. |
+| UX writing | Keep copy tied to product context, UI state, terminology, reader action, accessibility, quality priorities, and reviewed constraints. |
+| Review | Record verdict, checked scope, independence basis, audience/outcome fit, quality-attribute fit when material, blockers, required changes, and next action. |
 | Repair | Update only the artifacts affected by the bounded issue and preserve re-review scope. |
 | Finalization | Produce final output without adding unreviewed claims, product behavior, or scope. |
 | Governance | Record closure, human approval need, unresolved blockers, and memory disposition. |
@@ -125,6 +128,8 @@ Expand context or artifacts only when at least one trigger applies:
   confusion, handoff loss, or premature finalization;
 - meaningful alternatives exist for route, architecture, implementation slice,
   product behavior, evidence depth, or workflow;
+- quality priorities conflict, are unclear, or are being degraded across a
+  handoff;
 - memory export, recurring feedback, or system update is being considered.
 
 ## Human Approval Boundary
@@ -161,6 +166,12 @@ recorded in the smallest existing artifact that remains useful to the next
 owner, usually `brief.md`, `orchestration_plan.md`, production notes,
 `review.md`, or `final_decision.md`.
 
+Any stage that selects, changes, reviews, or preserves material artifact quality
+may consume the quality profile pattern from
+`/kb/editorial_quality_attributes.md`. Quality priorities and tradeoffs are
+recorded only when they help the next owner, reviewer, or Chief Editor avoid
+quality loss.
+
 ### Intake
 
 - Purpose: turn the raw request into a bounded task object.
@@ -180,8 +191,8 @@ owner, usually `brief.md`, `orchestration_plan.md`, production notes,
 ### Routing
 
 - Purpose: choose risk, process depth, planning level, pipeline or
-  mini-contract, audience/outcome fit, roles, capabilities, gates, and next
-  owner.
+  mini-contract, audience/outcome fit, quality priorities, roles, capabilities,
+  gates, and next owner.
 - Minimum required context: `brief.md`, `task-manifest.md`, `AGENTS.md`,
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
@@ -191,8 +202,9 @@ owner, usually `brief.md`, `orchestration_plan.md`, production notes,
   for unassigned roles, and historical retrospectives as active policy.
 - Expected outputs: `orchestration_plan.md`, updated manifest/status, selected
   workflow overlay or mini-contract, audience/outcome fit when material,
-  planning level and options considered when material, evidence
-  basis/confidence for material route decisions, next action.
+  quality priorities/tradeoffs when material, planning level and options
+  considered when material, evidence basis/confidence for material route
+  decisions, next action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,
   or conflict between user instruction and system invariants.
 - Next stage: research, drafting, UX writing, review, source conversion, or
@@ -220,16 +232,17 @@ owner, usually `brief.md`, `orchestration_plan.md`, production notes,
 
 - Purpose: produce article, social, or editorial copy within the routed scope.
 - Minimum required context: manifest, plan, selected production pipeline,
-  audience/outcome requirements, current evidence packet or no-research
-  rationale, current draft artifact, and latest handoff.
+  audience/outcome requirements, quality priorities when material, current
+  evidence packet or no-research rationale, current draft artifact, and latest
+  handoff.
 - Optional context: outline, claims-used, tone or policy KB, relevant examples,
   active client profile files.
 - Forbidden context: all research source files when compact evidence is enough,
   unassigned role specs, unreviewed facts outside the source boundary.
 - Expected outputs: `outline.md` when justified, `draft.md`, `claims-used.md`
   when claims matter, assumptions/caveats when evidence is limited,
-  audience/outcome choices when not obvious, writer notes, handoff to review or
-  Chief Editor.
+  audience/outcome choices when not obvious, quality-preservation notes when
+  material, writer notes, handoff to review or Chief Editor.
 - Stop conditions: missing route, insufficient evidence, request to invent
   facts, or instruction to approve/finalize own work.
 - Next stage: review, research repair, routing, or blocked.
@@ -239,15 +252,15 @@ owner, usually `brief.md`, `orchestration_plan.md`, production notes,
 - Purpose: produce product-facing copy tied to UI state, product behavior,
   terminology, accessibility, and evidence constraints.
 - Minimum required context: manifest, plan, UX writing pipeline, product/UI
-  context, user action/outcome, relevant terminology and UX guidelines, current
-  UX artifact.
+  context, user action/outcome, quality priorities when material, relevant
+  terminology and UX guidelines, current UX artifact.
 - Optional context: screenshots, flows, glossary, tone, active client profile,
   compact evidence for product or factual claims.
 - Forbidden context: invented product behavior, unavailable feature assumptions,
   unrelated article/social pipelines, or stale terminology treated as current.
 - Expected outputs: UX copy artifact, notes on assumptions/states and user
-  action fit, claims-used or product evidence pointers with confidence when
-  needed, handoff to review.
+  action fit, quality-preservation notes when material, claims-used or product
+  evidence pointers with confidence when needed, handoff to review.
 - Stop conditions: missing product behavior, missing UI state, terminology
   conflict, or unsupported product claim.
 - Next stage: review, research, routing, clarification, or blocked.
@@ -265,9 +278,10 @@ owner, usually `brief.md`, `orchestration_plan.md`, production notes,
   creator, unrelated old drafts, or optional artifacts demanded without a review
   need.
 - Expected outputs: `review.md` with checked scope, independence basis,
-  audience/outcome fit when material, evidence/confidence challenge when
-  material, option-evaluation challenge when material, findings, outcome,
-  required changes/blockers, and next action.
+  audience/outcome fit when material, quality-attribute challenge when
+  material, evidence/confidence challenge when material, option-evaluation
+  challenge when material, findings, outcome, required changes/blockers, and
+  next action.
 - Stop conditions: missing material, missing independence, unresolved critical
   issue, insufficient evidence, or ambiguous review scope.
 - Next stage: finalization when approved, repair when changes are requested,
@@ -296,14 +310,14 @@ owner, usually `brief.md`, `orchestration_plan.md`, production notes,
 - Purpose: produce final deliverable inside the approved review scope.
 - Minimum required context: approved `review.md`, finalization target, current
   manifest/status, material approved for finalization, and audience/outcome
-  constraints that must survive finalization.
+  constraints and quality priorities that must survive finalization.
 - Optional context: finalization checklist or notes, governance constraints,
   client profile caveat, delivery format requirement.
 - Forbidden context: unreviewed claims, new product behavior, style rewrites that
   change meaning, publication or delivery without required approval.
 - Expected outputs: `final.md`, optional finalization notes/checklist, audience
-  fit preserved within approved scope, handoff to Chief Editor when governance
-  closure is separate.
+  fit and approved quality attributes preserved within approved scope, handoff
+  to Chief Editor when governance closure is separate.
 - Stop conditions: review missing, review not approved, finalization changes
   meaning, human approval requirement unresolved.
 - Next stage: governance, repair, or blocked.

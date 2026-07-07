@@ -176,6 +176,12 @@ artifact must enable. Executive, public, security, review, and implementation
 audiences may need different evidence forms, but confidence must still follow
 evidence quality rather than audience pressure.
 
+### Quality Attributes
+
+Evidence support and traceability are quality attributes. Use
+`/kb/editorial_quality_attributes.md` when evidence quality must be weighed
+against brevity, accessibility, implementation value, or maintainability.
+
 ### Editorial Challenge Lens
 
 The Editorial Challenge Lens tests whether the assumptions and evidence that

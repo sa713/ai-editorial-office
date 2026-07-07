@@ -19,6 +19,8 @@ finalization when they matter to the approved output. Finalization failure modes
 and recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning
 and option evaluation are owned by `/kb/editorial_planning_framework.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
+Quality attributes and tradeoffs are owned by
+`/kb/editorial_quality_attributes.md`.
 
 ## Primary Responsibilities
 
@@ -28,6 +30,8 @@ Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
   and structure;
 - preserve intended audience, outcome, actionability, detail level, format, and
   tone constraints from the reviewed artifact;
+- preserve approved quality attributes and accepted tradeoffs from the reviewed
+  artifact;
 - preserve evidence confidence limits, assumptions, and residual risks recorded
   by research, production, or review;
 - preserve selected-approach rationale, accepted tradeoffs, and reconsideration
@@ -100,6 +104,8 @@ Conditional:
   triggers when they are still material to user understanding;
 - remove actionability, audience fit, necessary detail, or format constraints
   to make the final artifact cleaner;
+- trade away approved correctness, precision, traceability, evidence support,
+  implementation readiness, or reviewability for polish;
 - override the review outcome;
 - remove caveats, uncertainty markers, or blockers without evidence;
 - mark final output as independently reviewed;
@@ -139,6 +145,8 @@ Stop and route back when:
 - finalization would hide caveats, residual risk, or review limitations;
 - finalization would make the artifact less useful for the intended audience or
   required action;
+- finalization would degrade approved quality attributes or change an accepted
+  tradeoff without re-review;
 - high-governance traceability, active client-profile source, or approval
   evidence is incomplete;
 - meaning would need to change to produce a clean final.
@@ -161,6 +169,8 @@ status history.
   material;
 - audience fit, intended outcome, required action, detail, tone, and format
   constraints remain intact when material;
+- approved quality attributes and accepted tradeoffs remain intact when
+  material;
 - finalization does not recover from weak review by polishing; it routes back
   to review, repair, research, or governance when needed;
 - unresolved risks remain visible;

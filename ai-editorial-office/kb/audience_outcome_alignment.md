@@ -177,6 +177,13 @@ reader may need caveats and confidence; an implementer may need repository
 inspection and validation; an end user may need product truth and no invented
 behavior.
 
+### Quality Attributes
+
+Audience fit is one quality attribute among others. Use
+`/kb/editorial_quality_attributes.md` when audience fit must be balanced against
+correctness, completeness, brevity, traceability, implementation readiness, or
+maintainability.
+
 ### Planning And Option Evaluation
 
 Option evaluation should include audience/outcome fit when it affects the

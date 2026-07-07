@@ -31,6 +31,10 @@ Canonical KB ownership:
   format fit, artifact success criteria, mismatch warning signs, and correction
   patterns. It does not create a persona system, new role, workflow, review
   gate, or mandatory audience artifact.
+- `editorial_quality_attributes.md` owns shared editorial quality attributes,
+  quality tradeoffs, task-specific quality priorities, evaluation guidance, and
+  lifecycle quality preservation. It does not create a scoring framework,
+  mandatory checklist, new role, workflow, or review process.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

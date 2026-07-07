@@ -38,6 +38,10 @@ clarity, publication fit, or stakeholder alignment, review applies
 `/kb/audience_outcome_alignment.md` to challenge audience, intended outcome,
 detail level, tone, format, evidence depth, omissions, and success criteria.
 
+When reviewed work depends on selected quality priorities or visible tradeoffs,
+review applies `/kb/editorial_quality_attributes.md` to challenge whether the
+artifact optimized for the right qualities and preserved them through handoff.
+
 When a task was governed by a Problem Hypothesis and/or Editorial Decision
 Frame, review also includes an assumptions-based Editorial Challenge Lens inside
 `review.md`. This lens tests whether the assumptions that made the chosen route
@@ -109,6 +113,8 @@ Review execution follows `/kb/shared_lifecycle_kernel.md` review context contrac
   reviewed decision, recommendation, or implementation plan;
 - `/kb/audience_outcome_alignment.md` when audience/outcome fit affects the
   reviewed artifact, decision, implementation task, or finalization candidate;
+- `/kb/editorial_quality_attributes.md` when quality priorities, tradeoffs, or
+  quality preservation affect the reviewed artifact;
 - active client-profile files and checklist named in `task-manifest.md` or
   `orchestration_plan.md`, only when `client_profile` is set;
 - research and claim artifacts, if applicable.
@@ -192,7 +198,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -246,7 +252,7 @@ Operational sequence:
 | --- | --- | --- | --- | --- | --- |
 | 1 | `writing`, `editing`, or `changes_requested` | `writer_agent` or `ux_writer` | Hand off material ready for independent review | writing or UX artifacts, handoff | `review` |
 | 2 | `review` | `review_agent` | Load required artifacts, verify independence, validate scope | review notes or blocker evidence | `review` or `blocked` |
-| 3 | `review` | `review_agent` | Validate audience/outcome fit, factual traceability, option evaluation, evidence confidence, failure modes, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
+| 3 | `review` | `review_agent` | Validate quality priorities, audience/outcome fit, factual traceability, option evaluation, evidence confidence, failure modes, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
 | 4 | `changes_requested` | `writer_agent`, `ux_writer`, or `research_agent` | Resolve required changes or evidence gaps | updated artifacts, handoff | `review`, `writing`, `research`, or `blocked` |
 | 5 | `review` | `review_agent` | Re-review changed artifacts | updated review artifacts and handoff | `approved`, `changes_requested`, or `blocked` |
 | 6 | `approved` | `final_editor` | Finalize only after approved review | `final.md`, conditional finalization notes/checklist, finalization handoff unless compact finalization is fully traceable through `review.md`, `final.md`, and current `task-manifest.md` | `approved` |
@@ -310,6 +316,8 @@ Compact review minimum:
 - compact audience/outcome check when reviewed work depends on reader fit,
   actionability, implementation clarity, publication fit, or stakeholder
   alignment;
+- compact quality-attribute check when reviewed work depends on selected
+  quality priorities or accepted tradeoffs;
 - usefulness/pass rationale or blocking issues;
 - governance note when relevant;
 - one next action.
@@ -350,6 +358,7 @@ Quality gates are mandatory and artifact-backed.
 | KB compliance gate | Relevant KB files were checked and findings cite artifacts | missing KB, tone, glossary, or policy check |
 | Instructional architecture gate | Instructional or operational material can be followed through a clear reading path, with distinct section roles and bounded rereading cost | unclear route to action, mixed section roles, useless duplication, missing navigation, forced linear reading where reference use is needed |
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
+| Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
 | Outcome gate | Outcome is exactly `approved`, `changes_requested`, or `blocked` | ambiguous verdict |
 | Finalization gate | Finalization allowed only after review outcome `approved` | missing review, blocked review, changes requested |
 

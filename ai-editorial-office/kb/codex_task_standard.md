@@ -10,7 +10,8 @@ use it and must keep the selected task pipeline, review-gate, and role
 boundaries intact. Implementation-task dilution and recovery are covered by
 `/kb/editorial_failure_modes.md`; planning depth and option evaluation are
 covered by `/kb/editorial_planning_framework.md`; Codex as implementer audience
-is covered by `/kb/audience_outcome_alignment.md`.
+is covered by `/kb/audience_outcome_alignment.md`; implementation-task quality
+attributes are covered by `/kb/editorial_quality_attributes.md`.
 
 ## owner and chain
 
@@ -80,6 +81,10 @@ Minimum expectations:
 Audience fit: Codex is the reader and executor. The task should make the next
 repository action obvious, bounded, and reviewable.
 
+Quality fit: a Codex task should be repository-aware, implementation-focused,
+appropriately scoped, technically precise, validation-ready, actionable, low in
+ambiguity, high in implementation value, and reviewable.
+
 ## task writing rules
 
 - Start from the normalized brief, not from chat noise.
@@ -91,6 +96,8 @@ repository action obvious, bounded, and reviewable.
   not only the abstract strategy.
 - Include enough repository context, likely files, boundaries, validation, and
   deliver-back format for Codex to execute without guessing.
+- Prefer implementation readiness, technical precision, validation readiness,
+  and reviewability over broad theory or polished process language.
 - Preserve `confirmed`, `inferred`, `unknown`, `assumption`, and `question`
   distinctions when they affect scope.
 - Do not invent source materials, requirements, acceptance criteria, files,
@@ -118,6 +125,8 @@ Recovery:
   sufficient;
 - re-align the task for Codex as implementer: goal, context, files,
   boundaries, validation, deliver-back, expected value, and exclusions;
+- re-select quality priorities when the task is optimizing for strategy,
+  elegance, or completeness instead of implementation value;
 - name the smallest useful implementation outcome;
 - include validation and deliver-back requirements;
 - remove process narration that does not help implementation or review;

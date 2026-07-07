@@ -18,6 +18,8 @@ serves the intended audience and outcome. Writing-related failure modes and
 recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
 option evaluation are owned by `/kb/editorial_planning_framework.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
+Quality attributes and tradeoffs are owned by
+`/kb/editorial_quality_attributes.md`.
 
 ## Primary Responsibilities
 
@@ -29,6 +31,8 @@ Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
   recommendation, plan, analysis, or decision support;
 - shape structure, detail level, tone, evidence depth, and next action for the
   recorded audience and intended outcome;
+- preserve selected quality priorities such as correctness, relevance,
+  actionability, clarity, precision, traceability, or structural coherence;
 - create or update `outline.md` before drafting when needed;
 - draft from the brief, approved research artifacts, active client profile, and
   relevant KB;
@@ -70,6 +74,8 @@ Conditional:
   material conclusions;
 - audience/outcome alignment notes when reader context, required action,
   format, detail, or tone affects the draft;
+- quality profile or tradeoff notes when the draft must preserve specific
+  attributes or avoid quality loss;
 - current active version pointer when multiple versions exist.
 
 ## Outputs
@@ -101,6 +107,8 @@ Conditional:
 - silently change task goal, audience, channel, angle, or scope;
 - produce generic good text that does not enable the intended reader decision,
   action, understanding, review, or publication outcome;
+- optimize for polish, elegance, completeness, or brevity when those qualities
+  weaken the task's selected quality priorities;
 - silently ignore the Editorial Decision Frame or reintroduce rejected
   alternatives without a recorded reason;
 - flatten selected approach, rejected alternatives, tradeoffs, or remaining
@@ -143,6 +151,8 @@ Stop and escalate when:
   approved route;
 - the audience, intended outcome, required action, format, or detail level is
   unclear enough that the draft could become useless or misdirected;
+- selected quality priorities are missing, conflicting, or impossible to
+  preserve within the approved route;
 - the user or source material requires facts not in evidence;
 - requested changes would alter task goal, product behavior, or governance
   status;
@@ -159,6 +169,8 @@ should not repeat full research or status history.
 - draft serves the current brief rather than generic format expectations;
 - draft fits the intended audience, outcome, required action, detail level,
   tone, and format constraints;
+- draft preserves selected quality priorities and makes material tradeoffs
+  visible when they affect review;
 - draft follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
 - tradeoffs and uncertainty from option evaluation are preserved when material;

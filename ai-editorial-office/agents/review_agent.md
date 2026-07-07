@@ -17,7 +17,8 @@ confidence labels are owned by `/kb/editorial_evidence_framework.md`.
 Failure-mode challenge and recovery patterns are owned by
 `/kb/editorial_failure_modes.md`. Planning and option evaluation are owned by
 `/kb/editorial_planning_framework.md`. Audience/outcome alignment is owned by
-`/kb/audience_outcome_alignment.md`.
+`/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are owned
+by `/kb/editorial_quality_attributes.md`.
 
 ## Primary Responsibilities
 
@@ -37,6 +38,8 @@ Failure-mode challenge and recovery patterns are owned by
   recommendation, or implementation plan;
 - challenge whether the artifact fits the intended audience, outcome, required
   action, detail level, tone, format, and evidence depth;
+- challenge whether the artifact optimized for the right quality attributes and
+  whether accepted tradeoffs are visible and safe;
 - detect weak challenge, review-gate bypass, over-polishing, under-execution,
   implementation-task dilution, and failure to recover after weak stage output;
 - detect unsupported claims, hallucination risk, contradictions, tone or glossary
@@ -70,6 +73,8 @@ Conditional:
 - relevant KB files for policy, tone, glossary, UX, or domain constraints;
 - `/kb/audience_outcome_alignment.md` when audience, outcome, actionability,
   detail, tone, or format fit affects review;
+- `/kb/editorial_quality_attributes.md` when quality priorities, tradeoffs, or
+  preservation risks affect review;
 - active client-profile files and review checklist when `client_profile` is set;
 - current active version pointer when multiple versions exist.
 
@@ -112,6 +117,9 @@ artifacts must never become silently mandatory.
 - approve correct but misaligned work when the audience cannot use it for the
   intended decision, action, understanding, review, implementation, or
   publication outcome;
+- approve work that is optimized for the wrong quality attributes, such as
+  polish over correctness, completeness over usability, or elegance over
+  implementation value;
 - accept a Codex/system change that lacks repository inspection, validation,
   deliver-back clarity, or canon integration;
 - approve a non-trivial recommendation or implementation plan when credible
@@ -137,6 +145,8 @@ The Review Agent may decide:
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
 - whether audience/outcome fit is sufficient for the claimed artifact purpose;
+- whether quality priorities, tradeoffs, and preservation are sufficient for
+  task risk and outcome;
 - repair owner and bounded re-review scope;
 - whether evidence is sufficient for approval.
 
@@ -167,7 +177,9 @@ Stop and mark blocked or escalate when:
 - a Codex implementation task produced process without implementation value,
   validation, or repository-grounded evidence;
 - audience or intended outcome mismatch makes the artifact unusable and cannot
-  be repaired inside review.
+  be repaired inside review;
+- selected quality priorities are absent, contradicted, or degraded enough to
+  make approval unsafe or unreviewable.
 
 ## Handoff Expectations
 
@@ -192,6 +204,11 @@ short examples needed to clarify a finding.
 - audience/outcome fit is challenged when material: intended reader, outcome,
   required action, detail, tone, format, evidence depth, and omission choices
   are clear enough for the verdict;
+- quality attributes are challenged when material: verify that correctness,
+  completeness, relevance, actionability, clarity, precision, consistency,
+  traceability, evidence support, audience fit, structural coherence,
+  maintainability, implementation readiness, and reviewability are sufficient
+  for the task;
 - Editorial Decision Frame quality is checked when applicable: chosen route
   fits the brief, evidence, risks, and source boundary; rejected alternatives
   have real reasons; Writer Agent or UX Writer followed the route; rejected
