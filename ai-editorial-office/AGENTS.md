@@ -44,6 +44,7 @@
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
+| Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -94,6 +95,10 @@ existing markdown system should be understood and extended.
   labels, evidence requirements, and the compact evidence section standard used
   when decisions, recommendations, reviews, or final closure depend on material
   evidence.
+- `/kb/editorial_failure_modes.md` defines common failure modes and recovery
+  actions for wrong-task work, weak evidence, hidden assumptions, scope drift,
+  role confusion, weak challenge, premature finalization, and Codex task
+  dilution.
 
 Do not create a new role merely because a capability is named. Source
 conversion, integrity checking, context assembly, and memory export remain
@@ -113,6 +118,9 @@ reviewed system update explicitly changes the role set.
 7. Агент не должен скрывать неопределённость, пробелы в источниках или спорные допущения.
 8. Если данных недостаточно для уверенного вывода, это должно быть явно указано.
 9. Если задача поставлена как редакционная задача, редакция должна быть активирована до производства результата.
+10. Если этап показывает признаки failure mode, агент должен восстановиться на
+    минимальном безопасном этапе жизненного цикла по
+    `/kb/editorial_failure_modes.md`, а не полировать слабый результат.
 
 ## Editorial entry discipline
 
@@ -144,6 +152,10 @@ The preflight decision answers whether the system understands the task well
 enough to start production, what is missing, and whether the next action is
 `ask`, `constrain`, `proceed`, or `block`. It is a decision gate, not a new
 pipeline, role, status, or mandatory standalone artifact.
+
+If preflight or later stage work shows a failure-mode warning sign, use
+`/kb/editorial_failure_modes.md` to name the failure and choose the smallest
+recovery action before continuing.
 
 The Editorial Decision Frame records the chosen editorial route, considered
 alternatives, rejection reasons, Writer/UX Writer contract, review focus, and

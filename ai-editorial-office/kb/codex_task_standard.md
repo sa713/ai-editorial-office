@@ -7,7 +7,8 @@ ask Codex to modify files, inspect a local system, or prepare a patch.
 This file is guidance, not a new role, pipeline, capability pack, validator, or
 mandatory artifact for every editorial task. Chief Editor owns the decision to
 use it and must keep the selected task pipeline, review-gate, and role
-boundaries intact.
+boundaries intact. Implementation-task dilution and recovery are covered by
+`/kb/editorial_failure_modes.md`.
 
 ## owner and chain
 
@@ -77,6 +78,8 @@ Minimum expectations:
 ## task writing rules
 
 - Start from the normalized brief, not from chat noise.
+- Confirm the active repository and forbidden paths before asking Codex to edit
+  files.
 - Preserve `confirmed`, `inferred`, `unknown`, `assumption`, and `question`
   distinctions when they affect scope.
 - Do not invent source materials, requirements, acceptance criteria, files,
@@ -88,6 +91,21 @@ Minimum expectations:
   change implementation.
 - Keep the task copyable as one markdown block when the user needs to paste it
   elsewhere.
+
+## Codex task quality guard
+
+Stop and repair the task before execution when it is too process-heavy, too
+vague, mostly documentation without repository value, disconnected from current
+git/files, missing validation, missing deliver-back requirements, or aimed at
+Studio/legacy paths instead of the active Editorial Office repository.
+
+Recovery:
+
+- restate the active repository and forbidden paths;
+- inspect actual files before proposing architecture;
+- name the smallest useful implementation outcome;
+- include validation and deliver-back requirements;
+- remove process narration that does not help implementation or review.
 
 ## Check Pack shape
 

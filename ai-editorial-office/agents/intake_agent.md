@@ -15,7 +15,8 @@ boundaries.
 Transform raw input into a clear, bounded, restartable task package with enough
 classification for Chief Editor orchestration and no premature production work.
 Evidence taxonomy and confidence labels are owned by
-`/kb/editorial_evidence_framework.md`.
+`/kb/editorial_evidence_framework.md`. Failure-mode warning signs and recovery
+patterns are owned by `/kb/editorial_failure_modes.md`.
 
 ## Primary Responsibilities
 
@@ -33,6 +34,8 @@ Evidence taxonomy and confidence labels are owned by
 - identify missing information, ambiguity, supplied materials, and assumptions;
 - separate user-provided facts from assumptions, hypotheses, intuition, and
   unknowns when they affect routing or evidence confidence;
+- detect early task misunderstanding, missing constraints, user-context loss,
+  source-instruction capture, and likely implementation-task dilution;
 - create or recommend a `TASK-ID` when needed;
 - create only bootstrap artifacts needed to route the task;
 - prepare a concise handoff to Chief Editor;
@@ -199,6 +202,8 @@ raw user context.
 - Do not turn assumptions into facts.
 - Do not assign high confidence to user-provided external claims unless the
   selected task also verifies them.
+- Do not normalize away warning signs that the task is underspecified, aimed at
+  the wrong repository, or likely to answer the wrong task.
 
 ### Sanitized examples
 

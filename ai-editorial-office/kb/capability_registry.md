@@ -9,6 +9,8 @@ lives in `/agents/*.md`; shared lifecycle stages, gates, expansion triggers,
 and stage context contracts live in `/kb/shared_lifecycle_kernel.md`;
 evidence taxonomy, confidence labels, and evidence section standards live in
 `/kb/editorial_evidence_framework.md`;
+failure modes and recovery patterns live in
+`/kb/editorial_failure_modes.md`;
 governance invariants and review-gate authority still live in `AGENTS.md`;
 task statuses still live in `/kb/task_statuses.md`.
 
@@ -47,7 +49,8 @@ The following are not current default roles:
 Source conversion remains a capability or task-local mini-contract. Integrity
 checking remains a check/script capability. Memory export remains a
 capability/process. Evidence-confidence assessment is a shared capability, not
-a standing Fact Checker role.
+a standing Fact Checker role. Failure recognition and recovery is a shared
+capability, not a standing role.
 
 ## Capability Records
 
@@ -161,6 +164,32 @@ a standing Fact Checker role.
 - Expansion triggers: business or architecture recommendation, code review
   blocker, final decision, high-governance risk, material factual claim,
   contradicted evidence, or reviewer uncertainty.
+
+### Failure Recognition And Recovery
+
+- Purpose: detect common editorial failure modes early and choose the smallest
+  recovery action that restores correctness without adding bureaucracy.
+- Typical inputs: task object state, current artifact, handoff, selected
+  lifecycle stage, evidence confidence, review findings, user constraints,
+  current repository/path decision, relevant canon owner.
+- Typical outputs: compact failure-mode note, recovery action, returned stage,
+  blocker/escalation note, or constrained stronger output.
+- Accountability wrapper: shared across roles by stage; Chief Editor owns
+  reroute/escalation decisions, Review Agent owns independent challenge, and
+  each production role must stop when its own output shows a warning sign.
+- Required artifacts: none by default beyond the artifact that records the
+  recovery decision or blocker.
+- Optional artifacts: handoff repair, `status.md` note, `open-questions.md`,
+  `context-summary.md`, or `failure.md` only when restart, review, or
+  governance requires it.
+- Stop conditions: wrong task, role confusion, review-gate bypass, unsupported
+  material claim, legacy/private path risk, or finalization without approved
+  review.
+- Quality criteria: failure is named, recovery is bounded, constraints are
+  restored, and work returns to the correct lifecycle stage or a smaller
+  stronger output.
+- Expansion triggers: repeated weak output, handoff loss, scope drift,
+  implementation-task dilution, canon duplication, or reviewer uncertainty.
 
 ### Source Conversion
 
@@ -397,13 +426,13 @@ a standing Fact Checker role.
 
 | Role | Wrapped capabilities |
 | --- | --- |
-| Chief Editor | Routing and preflight; source boundary decision when routing; evidence-confidence decision for material routes and governance; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
-| Intake Agent | Intake normalization; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; risk/client-profile suggestion. |
-| Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; source boundary detection; evidence repair. |
-| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
-| UX Writer | UX writing from product evidence; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
-| Review Agent | Independent review; evidence-confidence challenge; review-side source/client/profile checks; re-review after repair. |
-| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of evidence-backed caveats and residual risks. |
+| Chief Editor | Routing and preflight; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
+| Intake Agent | Intake normalization; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; risk/client-profile suggestion. |
+| Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
+| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
+| UX Writer | UX writing from product evidence; over-polishing/product-assumption detection; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
+| Review Agent | Independent review; evidence-confidence challenge; failure-mode challenge; review-side source/client/profile checks; re-review after repair. |
+| Final Editor | Controlled finalization when transformation after approved review is needed; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
 | Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites; preservation of evidence-backed visual meaning. |
 
 ## Non-Role Capabilities
@@ -416,6 +445,7 @@ reviewed system update:
 - memory export;
 - context assembly;
 - evidence-confidence assessment;
+- failure recognition and recovery;
 - fact checking;
 - style editing;
 - structural editing;

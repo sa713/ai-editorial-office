@@ -167,6 +167,14 @@ made the chosen route valid still hold. Review should challenge weak evidence,
 unsupported claims, hidden assumptions, and route-validity risks without
 becoming a new route owner.
 
+### Failure Modes
+
+When evidence weakness, hidden assumptions, confidence inflation, polished but
+unsupported text, or weak challenge appears, use
+`/kb/editorial_failure_modes.md` to choose the recovery action. The usual
+evidence recovery is to downgrade confidence, split fact from assumption,
+return to research or review, constrain the output, or block.
+
 ## Role Cooperation
 
 Evidence quality is shared work, not a new role.

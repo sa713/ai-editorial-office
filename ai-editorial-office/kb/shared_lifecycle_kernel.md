@@ -11,6 +11,8 @@ still owns operational statuses. Pipelines remain overlays that add task-type
 sequencing, artifact depth, and local quality gates.
 `/kb/editorial_evidence_framework.md` owns the evidence taxonomy, confidence
 labels, and reusable evidence section standard used by lifecycle gates.
+`/kb/editorial_failure_modes.md` owns common warning signs and recovery actions
+when a lifecycle stage starts producing weak, wrong, or unsafe work.
 
 If this file appears to conflict with `AGENTS.md`, a selected pipeline, a role
 spec, or task-local governance artifacts, stop and route the conflict through
@@ -76,6 +78,11 @@ or review needs make compact evidence insufficient.
 The kernel decides what kind of decision must be visible. It does not decide
 that every possible artifact must exist.
 
+When a stage shows a failure-mode warning sign, recover at the smallest
+lifecycle stage that can restore correctness. Recovery is usually a return to
+intake, routing, research, drafting/UX writing, review, repair, or governance;
+it is not a new parallel lifecycle.
+
 ## Artifact Responsibility
 
 | Stage | Responsible artifact behavior |
@@ -106,6 +113,8 @@ Expand context or artifacts only when at least one trigger applies:
 - current-version pointer, owner, status, or next action is unclear;
 - human approval may be required;
 - previous review requested changes or blocked the work;
+- failure-mode warning signs appear, such as wrong task, weak evidence, role
+  confusion, handoff loss, or premature finalization;
 - memory export, recurring feedback, or system update is being considered.
 
 ## Human Approval Boundary
@@ -238,7 +247,9 @@ evidence artifact.
 ### Repair
 
 - Purpose: resolve bounded review findings, blockers, or evidence gaps while
-  preserving scope and re-review clarity.
+  preserving scope and re-review clarity. Repair may also recover a named
+  failure mode when the recovery action is bounded and does not require a
+  broader reroute.
 - Minimum required context: `review.md`, affected artifact, repair owner, repair
   scope, do-not-change area, latest manifest/status.
 - Optional context: original plan, relevant evidence, previous review section,

@@ -14,7 +14,8 @@ boundaries.
 Collect, verify, classify, and structure evidence so downstream roles can use
 facts without inventing missing information or hiding uncertainty. Evidence
 taxonomy and confidence labels are owned by
-`/kb/editorial_evidence_framework.md`.
+`/kb/editorial_evidence_framework.md`. Evidence-related failure modes and
+recovery patterns are owned by `/kb/editorial_failure_modes.md`.
 
 ## Primary Responsibilities
 
@@ -26,6 +27,8 @@ taxonomy and confidence labels are owned by
 - separate confirmed facts, interpretations, assumptions, contradictions, and
   open questions;
 - classify material evidence by evidence class and confidence level;
+- detect evidence weakness, hidden assumptions, source-instruction capture, and
+  confidence inflation before evidence reaches production;
 - assess source reliability, freshness, and confidence level;
 - mark factual sensitivity and unsupported claims;
 - prepare claim-level traceability when factual claims require it;
@@ -125,6 +128,8 @@ write the copy for them.
 - source freshness and reliability are visible;
 - confidence labels follow evidence quality, not model certainty;
 - assumptions, hypotheses, and intuition are never presented as verified facts;
+- evidence weakness or confidence inflation triggers downgrade, caveat,
+  research repair, or blocker instead of stronger prose;
 - downstream roles can see what may be used, what needs caveats, and what must
   not be said;
 - research did not become writing, review, finalization, or governance.

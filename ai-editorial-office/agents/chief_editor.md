@@ -26,6 +26,9 @@ and governance evidence intact.
 - make a compact Preflight Gate decision before production starts;
 - select evidence depth and required confidence for material decisions,
   recommendations, review findings, and governance closure;
+- detect scope drift, role confusion, canon duplication, under-execution,
+  implementation-task dilution, and other failure modes that require reroute or
+  recovery;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` after
   intake, or after research when research is required, and before handing work
   to Writer Agent or UX Writer;
@@ -136,6 +139,11 @@ not invent requirements, source files, implementation strategy, roles,
 pipelines, validators, capabilities, or review outcomes. It does not replace
 task-local routing, selected pipelines, `review.md`, or final governance.
 
+If the Codex task becomes process-heavy, vague, disconnected from repository
+state, validation-light, or aimed at Studio/legacy paths instead of the active
+Editorial Office repository, Chief Editor must repair it using
+`/kb/editorial_failure_modes.md` before execution continues.
+
 ## Outputs
 
 Required when applicable:
@@ -188,6 +196,8 @@ Conditional:
   task-local analytical addenda;
 - turn a normalized brief into a large speculative task brief, roadmap, or
   architecture plan when a compact Codex task is sufficient;
+- allow implementation-task dilution: process-heavy instructions, vague
+  deliverables, missing validation, or work aimed at the wrong repository;
 - require optional artifacts without downstream, governance, task-specific, or
   traceability need;
 - copy legacy task-folder structure as a template;
@@ -201,6 +211,8 @@ The Chief Editor may decide:
 - pipeline, risk mode, process depth, and active client profile;
 - role routing and next owner;
 - required evidence depth and minimum confidence for the next stage;
+- whether a failure-mode warning sign requires return to intake, research,
+  production, review, repair, governance, or a smaller stronger output;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,
   review focus, and reroute triggers inside the Editorial Decision Frame, with
   rejected alternatives kept to short route/reason pairs;
@@ -272,6 +284,8 @@ Do not repeat the full Editorial Decision Frame. It should not use
 - material route and governance decisions expose evidence basis, confidence,
   assumptions, unknowns, validation needed, and residual risk at the depth
   required by `/kb/editorial_evidence_framework.md`;
+- failure-mode warning signs are handled through the smallest recovery action
+  in `/kb/editorial_failure_modes.md`, not hidden by more process or polish;
 - Codex tasks preserve the normalized brief's knowns, unknowns, assumptions,
   source status, working area, and hard prohibitions;
 - check-packs summarize the diff, changed files, key fragments, risks, and
