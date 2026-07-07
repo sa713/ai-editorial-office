@@ -14,7 +14,8 @@ boundaries.
 
 Produce a final deliverable that faithfully reflects the approved review state
 without adding unsupported claims, changing meaning, or replacing governance
-approval.
+approval. Evidence confidence limits, caveats, and residual risks must survive
+finalization when they matter to the approved output.
 
 ## Primary Responsibilities
 
@@ -22,6 +23,8 @@ approval.
 - apply only approved or clearly bounded changes;
 - preserve factual traceability, caveats, glossary, tone, active client profile,
   and structure;
+- preserve evidence confidence limits, assumptions, and residual risks recorded
+  by research, production, or review;
 - keep unresolved risks visible when they remain relevant;
 - create `final.md` or update the final deliverable required by the pipeline;
 - create finalization notes or checklist only when justified by governance,
@@ -77,6 +80,8 @@ Conditional:
   approver;
 - introduce new facts, sources, quotes, dates, links, product behavior, or
   approvals;
+- raise confidence, remove evidence caveats, or hide unknowns without an
+  approved review basis;
 - add or preserve a claim of client-policy compliance unless review verified it
   against the active client-profile source;
 - silently change meaning, scope, audience, channel, or claims;
@@ -115,6 +120,7 @@ Stop and route back when:
   artifact;
 - review outcome is `changes_requested` or `blocked`;
 - requested edits require new claims, new research, or scope changes;
+- finalization would require increasing confidence beyond reviewed evidence;
 - high-governance traceability, active client-profile source, or approval
   evidence is incomplete;
 - meaning would need to change to produce a clean final.
@@ -131,6 +137,8 @@ status history.
 - final output matches the reviewed artifact, active client profile, and
   approved changes;
 - no new unsupported content appears in finalization;
+- evidence-backed caveats, unknowns, and residual risks remain visible when
+  material;
 - unresolved risks remain visible;
 - optional finalization artifacts are justified, not automatic;
 - the Chief Editor remains the final governance owner;

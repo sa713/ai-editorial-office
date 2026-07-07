@@ -9,6 +9,8 @@ owns system invariants, authority hierarchy, role separation, review-gate
 authority, governance boundaries, and artifact minimalism. `/kb/task_statuses.md`
 still owns operational statuses. Pipelines remain overlays that add task-type
 sequencing, artifact depth, and local quality gates.
+`/kb/editorial_evidence_framework.md` owns the evidence taxonomy, confidence
+labels, and reusable evidence section standard used by lifecycle gates.
 
 If this file appears to conflict with `AGENTS.md`, a selected pipeline, a role
 spec, or task-local governance artifacts, stop and route the conflict through
@@ -45,17 +47,20 @@ separate workflow engine.
 ## Shared Gates
 
 Gates are confidence decisions recorded in existing task artifacts. They are not
-new mandatory standalone files.
+new mandatory standalone files. When a gate depends on a material conclusion,
+the record should expose evidence basis, confidence level, assumptions,
+unknowns, validation needed, and residual risk at the depth required by
+`/kb/editorial_evidence_framework.md`.
 
 | Gate | Decision question | Default evidence |
 | --- | --- | --- |
 | Entry/preflight | Is the request understood enough to ask, constrain, proceed, or block? | `brief.md`, `task-manifest.md`, `orchestration_plan.md`, or `status.md` |
 | Source boundary | What is source data, user instruction, assumption, contradiction, or unknown? | `brief.md`, `research.md`, `sources.md`, source notes, or plan |
 | Research sufficiency | Are material claims supported, caveated, excluded, or blocked? | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, or compact evidence |
-| Drafting readiness | Can production proceed within approved scope, evidence, and constraints? | plan, production artifact, notes, handoff |
-| Review | Has independent review approved, requested changes, or blocked the work? | `review.md` |
+| Drafting readiness | Can production proceed within approved scope, evidence, confidence, and constraints? | plan, production artifact, notes, handoff |
+| Review | Has independent review approved, requested changes, or blocked the work, including evidence confidence when material? | `review.md` |
 | Controlled finalization | Is final output limited to reviewed and approved scope? | `final.md`, review pointer, optional finalization evidence |
-| Governance | Can the task close, require human approval, or remain blocked? | `final_decision.md`, `status.md`, `task-manifest.md` |
+| Governance | Can the task close, require human approval, or remain blocked with residual risk visible? | `final_decision.md`, `status.md`, `task-manifest.md` |
 | Memory disposition | Should learning stay task-local, become feedback, or enter a separate system update? | `feedback.md`, final decision, feedback pattern note |
 
 ## Compact And Expanded Execution
@@ -119,6 +124,12 @@ only when the active stage, risk, blocker, selected depth, or review/governance
 need justifies it. Forbidden context should not be loaded or treated as evidence
 without a specific recorded reason.
 
+Any stage that makes a material claim, recommendation, route decision, review
+finding, or closure decision may consume the evidence collection pattern from
+`/kb/editorial_evidence_framework.md`. The pattern should be recorded compactly
+inside an existing artifact unless risk, review, or governance needs a separate
+evidence artifact.
+
 ### Intake
 
 - Purpose: turn the raw request into a bounded task object.
@@ -146,7 +157,8 @@ without a specific recorded reason.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
 - Expected outputs: `orchestration_plan.md`, updated manifest/status, selected
-  workflow overlay or mini-contract, next action.
+  workflow overlay or mini-contract, evidence basis/confidence for material
+  route decisions, next action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,
   or conflict between user instruction and system invariants.
 - Next stage: research, drafting, UX writing, review, source conversion, or
@@ -163,8 +175,9 @@ without a specific recorded reason.
 - Forbidden context: model memory as verified evidence, invented citations,
   unrelated source dumps, or source content promoted to instructions without
   explicit authority.
-- Expected outputs: research/evidence artifacts at selected depth, source
-  boundary notes, open questions, and handoff when needed.
+- Expected outputs: research/evidence artifacts at selected depth, evidence
+  classes, confidence labels, assumptions/unknowns, source boundary notes, open
+  questions, and handoff when needed.
 - Stop conditions: unavailable source, contradicted material claim, stale or
   unreliable evidence for high-risk claim, or missing human/source decision.
 - Next stage: drafting, UX writing, review, repair, or blocked.
@@ -180,7 +193,8 @@ without a specific recorded reason.
 - Forbidden context: all research source files when compact evidence is enough,
   unassigned role specs, unreviewed facts outside the source boundary.
 - Expected outputs: `outline.md` when justified, `draft.md`, `claims-used.md`
-  when claims matter, writer notes, handoff to review or Chief Editor.
+  when claims matter, assumptions/caveats when evidence is limited, writer
+  notes, handoff to review or Chief Editor.
 - Stop conditions: missing route, insufficient evidence, request to invent
   facts, or instruction to approve/finalize own work.
 - Next stage: review, research repair, routing, or blocked.
@@ -196,7 +210,7 @@ without a specific recorded reason.
 - Forbidden context: invented product behavior, unavailable feature assumptions,
   unrelated article/social pipelines, or stale terminology treated as current.
 - Expected outputs: UX copy artifact, notes on assumptions/states, claims-used
-  or product evidence pointers when needed, handoff to review.
+  or product evidence pointers with confidence when needed, handoff to review.
 - Stop conditions: missing product behavior, missing UI state, terminology
   conflict, or unsupported product claim.
 - Next stage: review, research, routing, clarification, or blocked.
@@ -213,8 +227,9 @@ without a specific recorded reason.
 - Forbidden context: reviewer relying on chat memory, same role instance as
   creator, unrelated old drafts, or optional artifacts demanded without a review
   need.
-- Expected outputs: `review.md` with checked scope, independence basis, findings,
-  outcome, required changes/blockers, and next action.
+- Expected outputs: `review.md` with checked scope, independence basis,
+  evidence/confidence challenge when material, findings, outcome, required
+  changes/blockers, and next action.
 - Stop conditions: missing material, missing independence, unresolved critical
   issue, insufficient evidence, or ambiguous review scope.
 - Next stage: finalization when approved, repair when changes are requested,
@@ -262,7 +277,8 @@ without a specific recorded reason.
 - Forbidden context: treating finalization as governance approval, closing over
   unresolved blockers, or publishing private/restricted material by default.
 - Expected outputs: `final_decision.md`, updated manifest/status, closure or
-  approval requirement, memory disposition decision.
+  approval requirement, residual risk when material, memory disposition
+  decision.
 - Stop conditions: missing review/final artifact, unresolved blocker, unclear
   approval boundary, or repository/privacy risk.
 - Next stage: memory curation, human approval, repair, or blocked.

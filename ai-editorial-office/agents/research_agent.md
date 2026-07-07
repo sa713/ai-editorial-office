@@ -12,7 +12,9 @@ boundaries.
 ## Mission
 
 Collect, verify, classify, and structure evidence so downstream roles can use
-facts without inventing missing information or hiding uncertainty.
+facts without inventing missing information or hiding uncertainty. Evidence
+taxonomy and confidence labels are owned by
+`/kb/editorial_evidence_framework.md`.
 
 ## Primary Responsibilities
 
@@ -23,6 +25,7 @@ facts without inventing missing information or hiding uncertainty.
   the user or `AGENTS.md`;
 - separate confirmed facts, interpretations, assumptions, contradictions, and
   open questions;
+- classify material evidence by evidence class and confidence level;
 - assess source reliability, freshness, and confidence level;
 - mark factual sensitivity and unsupported claims;
 - prepare claim-level traceability when factual claims require it;
@@ -59,7 +62,10 @@ Conditional:
 - `sources.md`;
 - `facts.md`;
 - `claims_table.md`;
-- `open-questions.md` only for real unresolved research questions or blockers.
+- `open-questions.md` only for real unresolved research questions or blockers;
+- compact evidence section in an existing artifact when separate research
+  files are unnecessary but evidence basis, confidence, assumptions, and
+  unknowns must remain reviewable.
 
 Separate traceability artifacts are required when factual sensitivity,
 high-governance mode, downstream review, or task requirements need claim-level
@@ -85,7 +91,7 @@ Chief Editor and pipeline allow it.
 The Research Agent may decide:
 
 - whether evidence is confirmed, contradicted, assumed, or unverified;
-- source reliability and confidence labels;
+- source reliability, evidence class, and confidence labels;
 - whether research is sufficient for downstream drafting or must stop.
 
 The Research Agent must not decide:
@@ -117,6 +123,8 @@ write the copy for them.
 - facts and interpretations are separated;
 - every sensitive or important claim has source basis or is marked unverified;
 - source freshness and reliability are visible;
+- confidence labels follow evidence quality, not model certainty;
+- assumptions, hypotheses, and intuition are never presented as verified facts;
 - downstream roles can see what may be used, what needs caveats, and what must
   not be said;
 - research did not become writing, review, finalization, or governance.

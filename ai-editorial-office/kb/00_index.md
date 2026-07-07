@@ -15,6 +15,10 @@ Canonical KB ownership:
 - `capability_registry.md` owns the reusable capability map and the mapping from
   current roles to the capabilities they wrap. It does not create new roles,
   agents, pipelines, validators, or mandatory artifacts.
+- `editorial_evidence_framework.md` owns evidence taxonomy, confidence labels,
+  evidence requirements by output type, reusable evidence collection, and the
+  optional evidence section standard. It does not create a new role, workflow
+  engine, scoring system, or mandatory artifact set.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and
@@ -29,6 +33,8 @@ Canonical KB ownership:
 - `research_evidence.md` gives practical guidance for choosing no-research,
   compact-evidence, or full-evidence depth. It does not override `AGENTS.md`,
   selected pipelines, role specs, review-gate, or source provenance rules.
+  Evidence classes and confidence labels are owned by
+  `editorial_evidence_framework.md`.
 - `compact_execution.md` gives practical guidance for compact execution and
   artifact minimalism. It does not override `AGENTS.md`, selected pipelines, or
   task-local governance artifacts.

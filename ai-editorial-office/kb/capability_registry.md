@@ -7,6 +7,8 @@ It is an architecture reference, not a new role system, workflow engine,
 pipeline, prompt rewrite, or mandatory artifact set. Active role behavior still
 lives in `/agents/*.md`; shared lifecycle stages, gates, expansion triggers,
 and stage context contracts live in `/kb/shared_lifecycle_kernel.md`;
+evidence taxonomy, confidence labels, and evidence section standards live in
+`/kb/editorial_evidence_framework.md`;
 governance invariants and review-gate authority still live in `AGENTS.md`;
 task statuses still live in `/kb/task_statuses.md`.
 
@@ -44,7 +46,8 @@ The following are not current default roles:
 
 Source conversion remains a capability or task-local mini-contract. Integrity
 checking remains a check/script capability. Memory export remains a
-capability/process.
+capability/process. Evidence-confidence assessment is a shared capability, not
+a standing Fact Checker role.
 
 ## Capability Records
 
@@ -112,11 +115,12 @@ capability/process.
 ### Research/Evidence Classification
 
 - Purpose: collect, verify, classify, and structure evidence for downstream
-  writing, UX writing, review, and governance.
+  writing, UX writing, review, and governance using
+  `/kb/editorial_evidence_framework.md` when material conclusions are involved.
 - Typical inputs: `brief.md`, source boundary, source materials, relevant KB,
   selected pipeline.
 - Typical outputs: `research.md`, `sources.md`, `facts.md`, `claims_table.md`,
-  research handoff.
+  evidence classes, confidence labels, assumptions/unknowns, research handoff.
 - Accountability wrapper: Research Agent.
 - Required artifacts: `research.md` when research is assigned.
 - Optional artifacts: `sources.md`, `facts.md`, `claims_table.md`,
@@ -124,9 +128,39 @@ capability/process.
 - Stop conditions: missing/inaccessible required sources, unresolved
   contradictions, unsupported required claims, stale or unverified source.
 - Quality criteria: facts, interpretations, assumptions, contradictions, and
-  uncertainty are separated; important claims have evidence or caveats.
+  uncertainty are separated; important claims have evidence class, confidence
+  level, source pointer, or caveat.
 - Expansion triggers: material factual claims, high-governance risk, conflicting
   sources, reviewer evidence need.
+
+### Evidence Confidence Assessment
+
+- Purpose: evaluate the evidence basis, confidence level, assumptions,
+  unknowns, validation needs, and residual risk behind a material claim,
+  recommendation, route decision, review finding, or final decision.
+- Typical inputs: task object state, `brief.md`, source boundary, research or
+  compact evidence, selected pipeline, current artifact, Editorial Decision
+  Frame, review findings, governance constraints.
+- Typical outputs: evidence section or compact note in an existing artifact,
+  confidence label, assumptions/unknowns, validation-needed note, stop/continue
+  recommendation.
+- Accountability wrapper: shared across current roles by stage; Research Agent
+  owns dedicated evidence construction when research is assigned; Review Agent
+  owns independent challenge; Chief Editor owns routing/governance decisions.
+- Required artifacts: none by default beyond the artifact that contains the
+  material decision or finding.
+- Optional artifacts: `sources.md`, `facts.md`, `claims_table.md`,
+  `open-questions.md`, evidence section, validation note, depending on risk and
+  review need.
+- Stop conditions: material claim is unsupported, confidence is overstated,
+  assumptions are hidden as facts, provenance is missing, or review cannot
+  reconstruct the evidence path.
+- Quality criteria: confidence follows evidence quality, assumptions are
+  separated from facts, unknowns are visible, and weak evidence leads to ask,
+  constrain, proceed-with-caveat, or block.
+- Expansion triggers: business or architecture recommendation, code review
+  blocker, final decision, high-governance risk, material factual claim,
+  contradicted evidence, or reviewer uncertainty.
 
 ### Source Conversion
 
@@ -363,14 +397,14 @@ capability/process.
 
 | Role | Wrapped capabilities |
 | --- | --- |
-| Chief Editor | Routing and preflight; source boundary decision when routing; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
-| Intake Agent | Intake normalization; initial source boundary detection; risk/client-profile suggestion. |
-| Research Agent | Research/evidence classification; source boundary detection; evidence repair. |
-| Writer Agent | Editorial structure planning within approved route; drafting; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
-| UX Writer | UX writing; UX repair; client-profile application for product copy. |
-| Review Agent | Independent review; review-side source/client/profile checks; re-review after repair. |
-| Final Editor | Controlled finalization when transformation after approved review is needed. |
-| Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites. |
+| Chief Editor | Routing and preflight; source boundary decision when routing; evidence-confidence decision for material routes and governance; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
+| Intake Agent | Intake normalization; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; risk/client-profile suggestion. |
+| Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; source boundary detection; evidence repair. |
+| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
+| UX Writer | UX writing from product evidence; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
+| Review Agent | Independent review; evidence-confidence challenge; review-side source/client/profile checks; re-review after repair. |
+| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of evidence-backed caveats and residual risks. |
+| Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites; preservation of evidence-backed visual meaning. |
 
 ## Non-Role Capabilities
 
@@ -381,6 +415,7 @@ reviewed system update:
 - integrity checking;
 - memory export;
 - context assembly;
+- evidence-confidence assessment;
 - fact checking;
 - style editing;
 - structural editing;

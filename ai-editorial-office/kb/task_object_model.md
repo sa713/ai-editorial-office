@@ -8,9 +8,10 @@ behavior, task statuses, review-gate rules, compact execution, pipeline
 requirements, shared lifecycle rules, or role responsibilities. Shared
 lifecycle stages, gates, artifact responsibilities, expansion triggers, human
 approval boundary, and stage context contracts live in
-`/kb/shared_lifecycle_kernel.md`; runtime authority still remains with
-`AGENTS.md`, `/kb/task_statuses.md`, the selected pipeline, role specs, and
-task-local artifacts.
+`/kb/shared_lifecycle_kernel.md`; evidence taxonomy, confidence labels, and
+evidence section standards live in `/kb/editorial_evidence_framework.md`;
+runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
+selected pipeline, role specs, and task-local artifacts.
 
 ## Core Principle
 
@@ -46,6 +47,12 @@ file.
 | `channel_context` | Publication channel, product context, internal/external use, or task environment. | `brief.md`, `orchestration_plan.md` |
 | `deliverable` | Expected output or artifact set. | `brief.md`, `task-manifest.md` |
 | `source_boundary` | What is source data, instruction, assumption, contradiction, or unknown. | `brief.md`, `orchestration_plan.md`, `research.md`, `sources.md` |
+| `evidence_basis` | Evidence classes and artifact/source pointers that support material claims, routes, recommendations, review findings, or final decisions. | `orchestration_plan.md`, `research.md`, `sources.md`, `claims_table.md`, `review.md`, `final_decision.md` |
+| `confidence_level` | Evidence-quality label for material conclusions: `verified`, `supported`, `plausible`, `speculative`, or `unsupported`. | research/review artifacts, decision frame, final decision |
+| `assumptions` | Working assumptions that are not facts and must remain visible when they affect decisions or output. | `brief.md`, `orchestration_plan.md`, writer/UX notes, `review.md` |
+| `unknowns` | Missing, stale, contradicted, or uninspected information that may affect safety, quality, or confidence. | `brief.md`, `status.md`, `open-questions.md`, review artifacts |
+| `validation_needed` | Evidence that would most reduce uncertainty or unblock a stronger conclusion. | `orchestration_plan.md`, `research.md`, `review.md`, handoff |
+| `residual_risk` | Remaining risk after available evidence, assumptions, and validation are considered. | `review.md`, finalization notes, `final_decision.md` |
 | `success_criterion` | How readiness will be judged for this task. | `brief.md`, `orchestration_plan.md`, `review.md` |
 | `risk_mode` | `low-risk`, `standard`, `high-governance`, or unresolved/blocked until determined. | `task-manifest.md`, `orchestration_plan.md`, `status.md` |
 | `process_depth` | `compact`, `normal`, or `full`. | `task-manifest.md`, `orchestration_plan.md` |
@@ -76,22 +83,22 @@ requires it.
 | `brief.md` | Defines objective, user request summary, audience, channel/context, deliverable, source boundary, constraints, and success criterion. |
 | `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, and expansion triggers. |
-| `research.md` | Research scope, verified facts, interpretations, assumptions, contradictions, source confidence, and evidence limits. |
-| `sources.md` | Source inventory, provenance, freshness, reliability, and relevance. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `research.md` | Research scope, verified facts, interpretations, assumptions, contradictions, source confidence, evidence class, and evidence limits. |
+| `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |
 | `claims_table.md` | Claim-level traceability for material claims, high-governance tasks, evidence disputes, or review needs. |
 | `outline.md` | Planned structure when structure is non-trivial or needed for review. |
 | `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review. |
 | `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
 | `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, choices, and review focus that are not already obvious from the draft. |
-| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, findings, verdict, required changes, blockers, and next action. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, and next action. |
 | `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
 | `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
 | `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
 | `finalization-notes.md` | Controlled finalization decisions only when finalization changes, risks, high governance, or traceability justify it. |
 | `finalization-checklist.md` | Finalization proof only when a downstream/governance consumer needs separate evidence. |
-| `final_decision.md` | Chief Editor governance closure, final readiness, human approval caveat, or reason for non-closure. |
+| `final_decision.md` | Chief Editor governance closure, final readiness, evidence basis for closure, residual risk, human approval caveat, or reason for non-closure. |
 | `feedback.md` | Optional post-delivery user reaction or task-local feedback signal. |
 | `handoff-*.md` | Delta transfer between roles: what changed, what the next owner needs, and when to stop. |
 | `compact-handoff.md` | Optional final/user-facing transfer summary, not an internal role-to-role handoff. |
@@ -118,7 +125,11 @@ Editor to move safely?"
 
 ## Gates
 
-Task gates are confidence decisions recorded in existing artifacts. Shared gate semantics and stage order are owned by `/kb/shared_lifecycle_kernel.md`; this file maps those gates to task-object fields and artifact views.
+Task gates are confidence decisions recorded in existing artifacts. Shared gate
+semantics and stage order are owned by `/kb/shared_lifecycle_kernel.md`;
+evidence taxonomy and confidence labels are owned by
+`/kb/editorial_evidence_framework.md`; this file maps those gates to
+task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |

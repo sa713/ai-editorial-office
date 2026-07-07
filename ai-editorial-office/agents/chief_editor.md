@@ -24,6 +24,8 @@ and governance evidence intact.
   starts;
 - confirm or resolve risk mode before production starts;
 - make a compact Preflight Gate decision before production starts;
+- select evidence depth and required confidence for material decisions,
+  recommendations, review findings, and governance closure;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` after
   intake, or after research when research is required, and before handing work
   to Writer Agent or UX Writer;
@@ -72,6 +74,8 @@ Conditional:
   missing data strategy;
 - candidate editorial routes, source boundaries, research sufficiency, caveats,
   and task constraints needed for the Editorial Decision Frame;
+- evidence basis, confidence level, assumptions, unknowns, validation needed,
+  and residual risk for material route or governance decisions;
 - production, review, and finalization artifacts before readiness decisions;
 - human approval evidence when the selected pipeline or risk mode requires it.
 
@@ -145,6 +149,8 @@ Required when applicable:
   artifact.
 - compact Editorial Decision Frame in `orchestration_plan.md` before Writer
   Agent or UX Writer starts production.
+- compact evidence-confidence note when a material route or governance decision
+  depends on evidence quality.
 
 Conditional:
 
@@ -194,10 +200,13 @@ The Chief Editor may decide:
 
 - pipeline, risk mode, process depth, and active client profile;
 - role routing and next owner;
+- required evidence depth and minimum confidence for the next stage;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,
   review focus, and reroute triggers inside the Editorial Decision Frame, with
   rejected alternatives kept to short route/reason pairs;
 - whether current evidence is sufficient to continue orchestration;
+- whether weak evidence should lead to `ask`, `constrain`, `proceed`, or
+  `block`;
 - whether the Preflight Gate strategy is `ask`, `constrain`, `proceed`, or
   `block`;
 - whether final governance readiness can be recorded after review;
@@ -260,6 +269,9 @@ Do not repeat the full Editorial Decision Frame. It should not use
   names real alternatives with short rejection reasons, does not duplicate
   research, outline, review, or analytical addenda, and gives the next
   production role a usable contract;
+- material route and governance decisions expose evidence basis, confidence,
+  assumptions, unknowns, validation needed, and residual risk at the depth
+  required by `/kb/editorial_evidence_framework.md`;
 - Codex tasks preserve the normalized brief's knowns, unknowns, assumptions,
   source status, working area, and hard prohibitions;
 - check-packs summarize the diff, changed files, key fragments, risks, and

@@ -8,6 +8,11 @@ unnecessary artifacts.
 This guidance does not override `AGENTS.md`, selected pipelines, role specs,
 task artifacts, review-gate, or source provenance rules.
 
+Evidence classes, confidence labels, evidence requirements by output type, and
+the reusable evidence section standard are owned by
+`/kb/editorial_evidence_framework.md`. This file owns only evidence depth modes
+for research artifacts.
+
 ## Evidence Modes
 
 ### no-research

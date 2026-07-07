@@ -14,6 +14,8 @@ boundaries.
 
 Transform raw input into a clear, bounded, restartable task package with enough
 classification for Chief Editor orchestration and no premature production work.
+Evidence taxonomy and confidence labels are owned by
+`/kb/editorial_evidence_framework.md`.
 
 ## Primary Responsibilities
 
@@ -29,6 +31,8 @@ classification for Chief Editor orchestration and no premature production work.
 - identify factual sensitivity, publication or approval risk, and likely
   research need;
 - identify missing information, ambiguity, supplied materials, and assumptions;
+- separate user-provided facts from assumptions, hypotheses, intuition, and
+  unknowns when they affect routing or evidence confidence;
 - create or recommend a `TASK-ID` when needed;
 - create only bootstrap artifacts needed to route the task;
 - prepare a concise handoff to Chief Editor;
@@ -44,6 +48,8 @@ Required:
 Conditional:
 
 - attached files, links, source materials, or user-provided constraints;
+- evidence-confidence expectations when the user asks for analysis,
+  recommendation, review, or decision support;
 - existing task artifacts when continuing an existing task;
 - relevant KB or project navigation files only when needed to classify or route
   safely.
@@ -191,6 +197,8 @@ raw user context.
   artifacts for normalization.
 - Do not weaken review-gate or Chief Editor routing.
 - Do not turn assumptions into facts.
+- Do not assign high confidence to user-provided external claims unless the
+  selected task also verifies them.
 
 ### Sanitized examples
 

@@ -12,7 +12,8 @@ templates. This spec owns local review behavior and role-specific blockers.
 ## Mission
 
 Determine whether material passes review-gate with traceable findings,
-explicit blockers, and a deterministic outcome.
+explicit blockers, and a deterministic outcome. Evidence taxonomy and
+confidence labels are owned by `/kb/editorial_evidence_framework.md`.
 
 ## Primary Responsibilities
 
@@ -26,6 +27,8 @@ explicit blockers, and a deterministic outcome.
   and record the result in `review.md`;
 - verify reviewer independence from the producer;
 - validate factual claims against available evidence and claim traceability;
+- challenge evidence class, confidence level, assumptions, unknowns, validation
+  needs, and residual risk when material conclusions are present;
 - detect unsupported claims, hallucination risk, contradictions, tone or glossary
   violations, structural problems, and reader-outcome failures;
 - when reviewing feedback-loop or system-process updates, verify that feedback
@@ -63,8 +66,8 @@ Conditional:
 Required:
 
 - `review.md` with reviewed artifacts, independence basis, findings, Editorial
-  Challenge Lens when applicable, outcome, risks, required changes, blockers,
-  and next action.
+  Challenge Lens and evidence-confidence challenge when applicable, outcome,
+  risks, required changes, blockers, and next action.
 
 Conditional:
 
@@ -89,6 +92,8 @@ artifacts must never become silently mandatory.
   its source status is `pending_source`;
 - use plausibility as an evidence standard;
 - silently approve unsupported claims;
+- accept confidence labels that exceed the evidence actually inspected;
+- allow assumptions or hypotheses to pass as facts;
 - make preference-only challenges or turn a merely valid alternative into a
   required change;
 - choose a new active editorial route, replace Chief Editor's route, or treat
@@ -107,6 +112,7 @@ The Review Agent may decide:
 - Editorial Challenge assumption check: `holds`, `partially_changed`, or
   `changed`;
 - whether a finding is blocking, required, suggested, or informational;
+- whether evidence confidence is sufficient for the claimed output type;
 - repair owner and bounded re-review scope;
 - whether evidence is sufficient for approval.
 
@@ -128,6 +134,8 @@ Stop and mark blocked or escalate when:
   production contract;
 - reviewer independence cannot be established;
 - required evidence, claim traceability, or source files are missing;
+- evidence confidence is below the minimum needed for the material conclusion
+  and the conclusion cannot be safely constrained or caveated;
 - instructions conflict, client-profile source status is unresolved, or
   governance approval requirements are unclear;
 - the artifact needs new research, new production work, or broader scope change;
@@ -144,6 +152,9 @@ short examples needed to clarify a finding.
 
 - review outcome is deterministic and grounded in saved artifacts;
 - independence is visible;
+- evidence quality is checked when material: evidence class, confidence label,
+  assumptions, unknowns, validation needed, and residual risk are explicit
+  enough for the verdict;
 - Editorial Decision Frame quality is checked when applicable: chosen route
   fits the brief, evidence, risks, and source boundary; rejected alternatives
   have real reasons; Writer Agent or UX Writer followed the route; rejected

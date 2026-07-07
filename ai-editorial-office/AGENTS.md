@@ -43,6 +43,7 @@
 | Task object model and artifact view mapping | `/kb/task_object_model.md` | task-specific values, restart pointers, and local consequences |
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
+| Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -86,6 +87,13 @@ existing markdown system should be understood and extended.
 - `/kb/capability_registry.md` defines reusable capabilities and maps them to
   the current roles that wrap them when accountability, independence, or
   decision authority is needed.
+- `/kb/shared_lifecycle_kernel.md` defines shared stages, gates, artifact
+  responsibilities, expansion triggers, human approval boundary, and stage
+  context contracts.
+- `/kb/editorial_evidence_framework.md` defines evidence classes, confidence
+  labels, evidence requirements, and the compact evidence section standard used
+  when decisions, recommendations, reviews, or final closure depend on material
+  evidence.
 
 Do not create a new role merely because a capability is named. Source
 conversion, integrity checking, context assembly, and memory export remain
@@ -125,6 +133,8 @@ Before production starts, Chief Editor must route the task editorially:
 - select the active capabilities required by the task;
 - determine the required roles and bounded extension roles;
 - make a compact preflight decision about input sufficiency before production;
+- identify the evidence basis and confidence needed for material route
+  decisions, recommendations, review findings, and governance closure;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` before
   handing work to Writer Agent or UX Writer;
 - record the routing decision in `orchestration_plan.md`, `task-manifest.md`,
@@ -1050,6 +1060,11 @@ Research-артефакты должны отделять:
 
 Агент должен отличать retrieval от reasoning. Найденный факт должен быть помечен как найденный в источнике, а вывод на основе фактов — как вывод.
 
+When a material claim or decision is made, apply the evidence-confidence model
+from `/kb/editorial_evidence_framework.md`: name the evidence basis, confidence
+level, assumptions, unknowns, validation needed, and residual risk at the depth
+the task requires.
+
 Если в `/kb` есть несколько противоречивых материалов, агент не выбирает удобный вариант молча. Он фиксирует конфликт, указывает файлы и переводит вопрос в clarification или blocked-состояние, если конфликт влияет на материал.
 
 ## Anti-hallucination rules
@@ -1063,6 +1078,7 @@ Research-артефакты должны отделять:
 - утверждать, что review пройден, если нет review-артефакта;
 - утверждать, что материал готов, если не проверены обязательные условия готовности;
 - заполнять пробелы в research правдоподобными деталями без явной пометки;
+- использовать уверенный тон как замену проверяемому evidence basis;
 - скрывать, что вывод основан на неполном контексте.
 
 Если агент вынужден сделать рабочее допущение, оно должно быть явно оформлено:

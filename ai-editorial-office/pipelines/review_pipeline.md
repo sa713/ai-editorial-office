@@ -17,6 +17,11 @@ For instructional and operational materials, the pipeline also protects informat
 
 Review is a gate, not a writing, editing, finalization, or governance role. It produces evidence-backed findings and one of three allowed outcomes: `approved`, `changes_requested`, or `blocked`.
 
+When reviewed work contains material claims, recommendations, route decisions,
+or final-decision support, review applies `/kb/editorial_evidence_framework.md`
+to check evidence basis, confidence, assumptions, unknowns, validation needed,
+and residual risk.
+
 When a task was governed by a Problem Hypothesis and/or Editorial Decision
 Frame, review also includes an assumptions-based Editorial Challenge Lens inside
 `review.md`. This lens tests whether the assumptions that made the chosen route
@@ -86,6 +91,8 @@ Review execution follows `/kb/shared_lifecycle_kernel.md` review context contrac
 - active client-profile files and checklist named in `task-manifest.md` or
   `orchestration_plan.md`, only when `client_profile` is set;
 - research and claim artifacts, if applicable.
+- evidence-confidence notes when material conclusions depend on evidence
+  quality.
 
 When present, Problem Hypothesis and Editorial Decision Frame in
 `orchestration_plan.md` are required inputs for the Editorial Challenge Lens.
@@ -164,7 +171,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, findings, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, evidence-confidence challenge, findings, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -218,7 +225,7 @@ Operational sequence:
 | --- | --- | --- | --- | --- | --- |
 | 1 | `writing`, `editing`, or `changes_requested` | `writer_agent` or `ux_writer` | Hand off material ready for independent review | writing or UX artifacts, handoff | `review` |
 | 2 | `review` | `review_agent` | Load required artifacts, verify independence, validate scope | review notes or blocker evidence | `review` or `blocked` |
-| 3 | `review` | `review_agent` | Validate factual traceability, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
+| 3 | `review` | `review_agent` | Validate factual traceability, evidence confidence, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
 | 4 | `changes_requested` | `writer_agent`, `ux_writer`, or `research_agent` | Resolve required changes or evidence gaps | updated artifacts, handoff | `review`, `writing`, `research`, or `blocked` |
 | 5 | `review` | `review_agent` | Re-review changed artifacts | updated review artifacts and handoff | `approved`, `changes_requested`, or `blocked` |
 | 6 | `approved` | `final_editor` | Finalize only after approved review | `final.md`, conditional finalization notes/checklist, finalization handoff unless compact finalization is fully traceable through `review.md`, `final.md`, and current `task-manifest.md` | `approved` |
@@ -274,6 +281,8 @@ Compact review minimum:
 - lightweight independence check;
 - compact Editorial Challenge Lens when the task was governed by Problem
   Hypothesis and/or Editorial Decision Frame;
+- compact evidence-confidence check when the reviewed conclusion depends on
+  material evidence;
 - usefulness/pass rationale or blocking issues;
 - governance note when relevant;
 - one next action.
