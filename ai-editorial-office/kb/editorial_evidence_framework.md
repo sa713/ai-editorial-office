@@ -160,6 +160,14 @@ recommendation, architecture recommendation, or analysis. Rejected alternatives
 can stay compact, but their rejection reasons should not be pure preference when
 evidence is available.
 
+### Planning And Option Evaluation
+
+Option evaluation uses this framework to compare evidence quality behind
+competing approaches. A selected option should not inherit high confidence
+unless the evidence supporting the option justifies it; weak evidence should
+produce caveats, a narrower recommendation, more research, or a different
+option.
+
 ### Editorial Challenge Lens
 
 The Editorial Challenge Lens tests whether the assumptions and evidence that

@@ -26,6 +26,8 @@ and governance evidence intact.
 - make a compact Preflight Gate decision before production starts;
 - select evidence depth and required confidence for material decisions,
   recommendations, review findings, and governance closure;
+- select planning level and ensure credible alternatives exist before
+  committing to a non-trivial route, recommendation, or implementation plan;
 - detect scope drift, role confusion, canon duplication, under-execution,
   implementation-task dilution, and other failure modes that require reroute or
   recovery;
@@ -144,6 +146,11 @@ state, validation-light, or aimed at Studio/legacy paths instead of the active
 Editorial Office repository, Chief Editor must repair it using
 `/kb/editorial_failure_modes.md` before execution continues.
 
+For non-trivial Codex implementation tasks, Chief Editor should use
+`/kb/editorial_planning_framework.md` to explain why the selected repository
+slice is the next highest-value option and which broader, smaller, or deferred
+options were rejected.
+
 ## Outputs
 
 Required when applicable:
@@ -159,6 +166,8 @@ Required when applicable:
   Agent or UX Writer starts production.
 - compact evidence-confidence note when a material route or governance decision
   depends on evidence quality.
+- compact option-evaluation note when a material route, recommendation, or
+  implementation plan has meaningful alternatives.
 
 Conditional:
 
@@ -211,6 +220,8 @@ The Chief Editor may decide:
 - pipeline, risk mode, process depth, and active client profile;
 - role routing and next owner;
 - required evidence depth and minimum confidence for the next stage;
+- planning level, credible options considered, selected approach, tradeoffs,
+  and reconsideration triggers;
 - whether a failure-mode warning sign requires return to intake, research,
   production, review, repair, governance, or a smaller stronger output;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,
@@ -284,6 +295,10 @@ Do not repeat the full Editorial Decision Frame. It should not use
 - material route and governance decisions expose evidence basis, confidence,
   assumptions, unknowns, validation needed, and residual risk at the depth
   required by `/kb/editorial_evidence_framework.md`;
+- non-trivial commitments are not first-plausible: credible alternatives,
+  relevant evaluation dimensions, accepted tradeoffs, and reconsideration
+  triggers are visible at the depth required by
+  `/kb/editorial_planning_framework.md`;
 - failure-mode warning signs are handled through the smallest recovery action
   in `/kb/editorial_failure_modes.md`, not hidden by more process or polish;
 - Codex tasks preserve the normalized brief's knowns, unknowns, assumptions,

@@ -15,7 +15,8 @@ Collect, verify, classify, and structure evidence so downstream roles can use
 facts without inventing missing information or hiding uncertainty. Evidence
 taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`. Evidence-related failure modes and
-recovery patterns are owned by `/kb/editorial_failure_modes.md`.
+recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
+option evaluation are owned by `/kb/editorial_planning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -29,6 +30,8 @@ recovery patterns are owned by `/kb/editorial_failure_modes.md`.
 - classify material evidence by evidence class and confidence level;
 - detect evidence weakness, hidden assumptions, source-instruction capture, and
   confidence inflation before evidence reaches production;
+- provide evidence that clarifies competing options when research affects route,
+  recommendation, implementation plan, or evidence depth;
 - assess source reliability, freshness, and confidence level;
 - mark factual sensitivity and unsupported claims;
 - prepare claim-level traceability when factual claims require it;
@@ -132,4 +135,6 @@ write the copy for them.
   research repair, or blocker instead of stronger prose;
 - downstream roles can see what may be used, what needs caveats, and what must
   not be said;
+- when options are under evaluation, evidence makes option strengths, risks,
+  and uncertainty visible without choosing the final route;
 - research did not become writing, review, finalization, or governance.

@@ -22,6 +22,10 @@ Canonical KB ownership:
 - `editorial_failure_modes.md` owns common editorial failure modes and recovery
   patterns. It is a practical safety layer, not a new role system, incident
   process, workflow engine, review gate, or mandatory checklist.
+- `editorial_planning_framework.md` owns planning depth, option generation,
+  option evaluation, decision selection, recommendation formation, and planning
+  completion criteria. It does not create a new role, scoring matrix, workflow,
+  review gate, or mandatory planning artifact.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

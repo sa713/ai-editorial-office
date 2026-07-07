@@ -16,7 +16,8 @@ Transform raw input into a clear, bounded, restartable task package with enough
 classification for Chief Editor orchestration and no premature production work.
 Evidence taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`. Failure-mode warning signs and recovery
-patterns are owned by `/kb/editorial_failure_modes.md`.
+patterns are owned by `/kb/editorial_failure_modes.md`. Planning levels and
+option evaluation are owned by `/kb/editorial_planning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -36,6 +37,9 @@ patterns are owned by `/kb/editorial_failure_modes.md`.
   unknowns when they affect routing or evidence confidence;
 - detect early task misunderstanding, missing constraints, user-context loss,
   source-instruction capture, and likely implementation-task dilution;
+- identify when the request likely needs `standard` or `strategic` planning
+  because meaningful routes, implementation slices, evidence depth choices, or
+  product/workflow alternatives exist;
 - create or recommend a `TASK-ID` when needed;
 - create only bootstrap artifacts needed to route the task;
 - prepare a concise handoff to Chief Editor;
@@ -204,6 +208,8 @@ raw user context.
   selected task also verifies them.
 - Do not normalize away warning signs that the task is underspecified, aimed at
   the wrong repository, or likely to answer the wrong task.
+- Do not declare planning unnecessary when material alternatives could change
+  the result.
 
 ### Sanitized examples
 

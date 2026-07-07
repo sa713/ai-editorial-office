@@ -23,6 +23,7 @@ Memory package stabilization.
 - editorial evidence framework with evidence taxonomy, confidence labels, and
   evidence section standard.
 - editorial failure modes and recovery playbook.
+- editorial planning and option evaluation framework.
 
 ## Current core roles
 - chief_editor
@@ -65,7 +66,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, and `/kb/editorial_failure_modes.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/editorial_failure_modes.md`, and `/kb/editorial_planning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -115,6 +116,10 @@ Maintain `/about` as a compact project-memory export:
   through `/kb/editorial_failure_modes.md` by naming the failure, choosing the
   smallest recovery action, and returning to the correct lifecycle stage or a
   smaller stronger output.
+- Planning is lightweight and option-aware: non-trivial routes,
+  recommendations, and implementation plans should consider credible
+  alternatives and record selected approach, tradeoffs, uncertainty, and
+  reconsideration triggers according to `/kb/editorial_planning_framework.md`.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.
@@ -168,12 +173,14 @@ Before continuing work:
    read /kb/editorial_evidence_framework.md.
 5. For weak-stage, wrong-task, scope drift, review-bypass, implementation-task
    dilution, or recovery work, read /kb/editorial_failure_modes.md.
-6. For memory-package work, read /about/project_tree.md and relevant
+6. For non-trivial route, recommendation, architecture, product, or
+   implementation planning, read /kb/editorial_planning_framework.md.
+7. For memory-package work, read /about/project_tree.md and relevant
    CHATGPT_MEMORY_*.md files.
-7. Read relevant /agents/*.md.
-8. Read relevant /templates/artifacts/*.md.
-9. Read /kb/task_statuses.md.
-10. For task-local work, read /tasks/TASK-ID/task-manifest.md before detailed task files.
-11. If task-manifest.md names an active client profile, read only the listed
+8. Read relevant /agents/*.md.
+9. Read relevant /templates/artifacts/*.md.
+10. Read /kb/task_statuses.md.
+11. For task-local work, read /tasks/TASK-ID/task-manifest.md before detailed task files.
+12. If task-manifest.md names an active client profile, read only the listed
    `/kb/clients/CLIENT-ID/` files.
-12. Continue from the current focus without redesigning the whole system.
+13. Continue from the current focus without redesigning the whole system.

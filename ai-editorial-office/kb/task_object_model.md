@@ -10,6 +10,8 @@ lifecycle stages, gates, artifact responsibilities, expansion triggers, human
 approval boundary, and stage context contracts live in
 `/kb/shared_lifecycle_kernel.md`; evidence taxonomy, confidence labels, and
 evidence section standards live in `/kb/editorial_evidence_framework.md`;
+planning levels, option evaluation, and recommendation formation live in
+`/kb/editorial_planning_framework.md`;
 runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
 selected pipeline, role specs, and task-local artifacts.
 
@@ -57,6 +59,11 @@ file.
 | `risk_mode` | `low-risk`, `standard`, `high-governance`, or unresolved/blocked until determined. | `task-manifest.md`, `orchestration_plan.md`, `status.md` |
 | `process_depth` | `compact`, `normal`, or `full`. | `task-manifest.md`, `orchestration_plan.md` |
 | `selected_workflow` | Selected pipeline overlay, editorial mode, or task-local mini-contract. | `orchestration_plan.md`, `task-manifest.md` |
+| `planning_level` | `trivial`, `standard`, or `strategic` planning depth selected for meaningful decisions. | `orchestration_plan.md`, `task-manifest.md` |
+| `options_considered` | Credible alternatives considered before selecting route, recommendation, or implementation plan. | `orchestration_plan.md`, Editorial Decision Frame, review artifacts |
+| `selected_option` | Chosen approach and why it best serves the task now. | `orchestration_plan.md`, Editorial Decision Frame, final decision |
+| `tradeoffs_accepted` | Costs, risks, or constraints accepted by choosing the selected option. | `orchestration_plan.md`, review/final decision |
+| `reconsideration_triggers` | Conditions that would make a rejected option stronger or require reroute. | Editorial Decision Frame, `review.md`, `final_decision.md` |
 | `active_capabilities` | Capabilities selected for the task, from `/kb/capability_registry.md`. | `orchestration_plan.md`, `task-manifest.md` |
 | `active_roles` | Current core roles or explicitly legalized extension roles assigned to wrap capabilities. | `orchestration_plan.md`, handoffs, `status.md` |
 | `client_profile_status` | Client profile id, status, files, activation reason, and stop condition when applicable. | `task-manifest.md`, `orchestration_plan.md`, review artifacts |
@@ -83,7 +90,7 @@ requires it.
 | `brief.md` | Defines objective, user request summary, audience, channel/context, deliverable, source boundary, constraints, and success criterion. |
 | `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
 | `research.md` | Research scope, verified facts, interpretations, assumptions, contradictions, source confidence, evidence class, and evidence limits. |
 | `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |
@@ -128,8 +135,9 @@ Editor to move safely?"
 Task gates are confidence decisions recorded in existing artifacts. Shared gate
 semantics and stage order are owned by `/kb/shared_lifecycle_kernel.md`;
 evidence taxonomy and confidence labels are owned by
-`/kb/editorial_evidence_framework.md`; this file maps those gates to
-task-object fields and artifact views.
+`/kb/editorial_evidence_framework.md`; planning levels and option evaluation
+are owned by `/kb/editorial_planning_framework.md`; this file maps those gates
+to task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |

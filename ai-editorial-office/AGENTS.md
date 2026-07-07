@@ -45,6 +45,7 @@
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
+| Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -99,6 +100,9 @@ existing markdown system should be understood and extended.
   actions for wrong-task work, weak evidence, hidden assumptions, scope drift,
   role confusion, weak challenge, premature finalization, and Codex task
   dilution.
+- `/kb/editorial_planning_framework.md` defines lightweight planning levels,
+  credible option generation, option evaluation dimensions, selected approach
+  justification, and reconsideration triggers.
 
 Do not create a new role merely because a capability is named. Source
 conversion, integrity checking, context assembly, and memory export remain
@@ -143,6 +147,8 @@ Before production starts, Chief Editor must route the task editorially:
 - make a compact preflight decision about input sufficiency before production;
 - identify the evidence basis and confidence needed for material route
   decisions, recommendations, review findings, and governance closure;
+- choose the planning level and consider credible options before committing to
+  a non-trivial route, recommendation, or implementation plan;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` before
   handing work to Writer Agent or UX Writer;
 - record the routing decision in `orchestration_plan.md`, `task-manifest.md`,
@@ -162,6 +168,10 @@ alternatives, rejection reasons, Writer/UX Writer contract, review focus, and
 reroute triggers. It lives inside `orchestration_plan.md`; it is not a new
 pipeline, role, status, `final_decision.md`, or mandatory standalone
 `editorial_decision.md`.
+
+`/kb/editorial_planning_framework.md` defines how to generate and evaluate
+credible alternatives before the Editorial Decision Frame records the selected
+route.
 
 The frame must remain a short management block, not an analytical document.
 Alternatives exist to prove that the chosen route was deliberate: normally use

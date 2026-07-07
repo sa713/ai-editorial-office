@@ -31,6 +31,7 @@ reviewer, or Chief Editor needs it.
 | Restate the task object | Rewrite the current objective, audience, channel, deliverable, source boundary, success criterion, owner, status, and next action in the smallest existing artifact. |
 | Re-check constraints | Compare the active artifact against user instructions, `AGENTS.md`, selected pipeline, task manifest, active client profile, and hard exclusions. |
 | Inspect canonical sources | Read the canonical owner before changing architecture, roles, lifecycle, evidence, templates, or review behavior. |
+| Generate credible alternatives | Name 2-3 viable options when the first plausible route is not obviously sufficient. |
 | Downgrade confidence | Lower the confidence label to match evidence quality and update caveats or next action. |
 | Split fact from assumption | Move unsupported content under `Assumption`, `Unknown`, `Validation needed`, or `Open questions`. |
 | Invoke challenge lens | Use the Editorial Challenge Lens to test whether the route-validity assumptions still hold. |
@@ -46,6 +47,7 @@ reviewer, or Chief Editor needs it.
 | Failure mode | Description | Early warning signs | Likely causes | Affected stages | Recovery action | Escalation trigger | Related canon |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Task misunderstanding | Work solves a different task than the user asked for. | Output does not match deliverable, audience, channel, or success criterion; task summary feels generic. | Raw brief not normalized; assumptions treated as requirements; user context skipped. | Intake, routing, drafting, UX writing, review. | Restate the task object; re-check user request and `brief.md`; return to intake/routing if material fields are wrong. | Objective, audience, deliverable, or source boundary remains unclear. | `task_object_model.md`, `shared_lifecycle_kernel.md`, `intake_agent.md`. |
+| First-plausible convergence | Work commits to the first reasonable option without checking credible alternatives. | No rejected alternatives; "obvious" route despite meaningful tradeoffs; recommendation lacks why-this-not-that. | Time pressure; weak planning; overconfidence in initial idea. | Routing, research, implementation tasks, review, governance. | Generate credible alternatives; compare relevant dimensions; record selected approach, tradeoffs, and reconsideration triggers. | Architecture, product, business, governance, or implementation direction could materially differ. | `editorial_planning_framework.md`, `editorial_evidence_framework.md`, `review_agent.md`. |
 | Evidence weakness | Conclusion depends on evidence that is missing, stale, indirect, contradicted, or uninspected. | Strong claim with weak source pointer; reviewer cannot reconstruct basis. | Research skipped; compact evidence overused; source provenance unclear. | Research, drafting, review, governance. | Downgrade confidence; split fact from assumption; return to research or constrain output. | Required claim cannot be supported or safely omitted. | `editorial_evidence_framework.md`, `research_evidence.md`, `source_provenance.md`. |
 | Hidden assumptions | Assumptions appear as facts or requirements. | No `Assumption`/`Unknown` label; confident wording fills source gaps. | Pressure to produce clean output; normalized brief over-interpreted. | Intake, routing, writing, review. | Split fact from assumption; record validation needed; caveat or ask only if material. | Assumption changes route, audience, claim, product behavior, or governance. | `editorial_evidence_framework.md`, `AGENTS.md`. |
 | Confidence inflation | Confidence label or tone exceeds evidence quality. | "Verified" conclusion from intuition, analogy, or one partial source; caveats disappear. | Model certainty mistaken for evidence; over-polishing; weak review. | Research, writing, review, finalization. | Downgrade confidence; restore caveats; remove unsupported certainty. | High-governance, business, legal, product, financial, security, or publication claim is affected. | `editorial_evidence_framework.md`, `review_agent.md`. |
@@ -81,6 +83,8 @@ A Codex task is failing when it is:
 - focused on Studio, legacy, or unrelated paths instead of the canonical
   Editorial Office repository;
 - expanding architecture without reading the canonical owner.
+- taking the first plausible implementation idea without comparing credible
+  alternatives.
 
 Recovery:
 

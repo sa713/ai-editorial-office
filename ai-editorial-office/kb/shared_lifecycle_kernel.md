@@ -13,6 +13,9 @@ sequencing, artifact depth, and local quality gates.
 labels, and reusable evidence section standard used by lifecycle gates.
 `/kb/editorial_failure_modes.md` owns common warning signs and recovery actions
 when a lifecycle stage starts producing weak, wrong, or unsafe work.
+`/kb/editorial_planning_framework.md` owns planning depth, option generation,
+option evaluation, selected approach justification, and reconsideration
+triggers.
 
 If this file appears to conflict with `AGENTS.md`, a selected pipeline, a role
 spec, or task-local governance artifacts, stop and route the conflict through
@@ -35,7 +38,7 @@ separate workflow engine.
 | Stage | Purpose | Accountability wrapper | Primary artifact view | Gate or result |
 | --- | --- | --- | --- | --- |
 | Intake | Normalize the user request into task-local operating state. | Intake Agent or Chief Editor | `brief.md`, `task-manifest.md` | Entry/preflight gate |
-| Routing | Select risk, depth, pipeline or mini-contract, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
+| Routing | Select risk, depth, planning level, pipeline or mini-contract, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
 | Research | Separate evidence, assumptions, contradictions, gaps, and usable claims. | Research Agent | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, `open-questions.md` when needed | Source boundary and research sufficiency gates |
 | Drafting | Produce article, social, or editorial copy within approved scope and evidence. | Writer Agent | `outline.md`, `draft.md`, `claims-used.md`, writer notes, handoff when needed | Drafting readiness gate |
 | UX writing | Produce product-facing copy within product, terminology, accessibility, and evidence constraints. | UX Writer | `ux-copy.md` or equivalent UX artifacts, UX notes, handoff when needed | Drafting readiness gate for UX copy |
@@ -115,6 +118,8 @@ Expand context or artifacts only when at least one trigger applies:
 - previous review requested changes or blocked the work;
 - failure-mode warning signs appear, such as wrong task, weak evidence, role
   confusion, handoff loss, or premature finalization;
+- meaningful alternatives exist for route, architecture, implementation slice,
+  product behavior, evidence depth, or workflow;
 - memory export, recurring feedback, or system update is being considered.
 
 ## Human Approval Boundary
@@ -139,6 +144,12 @@ finding, or closure decision may consume the evidence collection pattern from
 inside an existing artifact unless risk, review, or governance needs a separate
 evidence artifact.
 
+Any stage that commits to a non-trivial route, recommendation, or implementation
+plan may consume the option evaluation pattern from
+`/kb/editorial_planning_framework.md`. Planning is recorded in the smallest
+existing artifact that remains reviewable, usually `orchestration_plan.md` or
+the Editorial Decision Frame.
+
 ### Intake
 
 - Purpose: turn the raw request into a bounded task object.
@@ -156,8 +167,8 @@ evidence artifact.
 
 ### Routing
 
-- Purpose: choose risk, process depth, pipeline or mini-contract, roles,
-  capabilities, gates, and next owner.
+- Purpose: choose risk, process depth, planning level, pipeline or
+  mini-contract, roles, capabilities, gates, and next owner.
 - Minimum required context: `brief.md`, `task-manifest.md`, `AGENTS.md`,
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
@@ -166,8 +177,8 @@ evidence artifact.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
 - Expected outputs: `orchestration_plan.md`, updated manifest/status, selected
-  workflow overlay or mini-contract, evidence basis/confidence for material
-  route decisions, next action.
+  workflow overlay or mini-contract, planning level and options considered when
+  material, evidence basis/confidence for material route decisions, next action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,
   or conflict between user instruction and system invariants.
 - Next stage: research, drafting, UX writing, review, source conversion, or
@@ -237,8 +248,8 @@ evidence artifact.
   creator, unrelated old drafts, or optional artifacts demanded without a review
   need.
 - Expected outputs: `review.md` with checked scope, independence basis,
-  evidence/confidence challenge when material, findings, outcome, required
-  changes/blockers, and next action.
+  evidence/confidence challenge when material, option-evaluation challenge when
+  material, findings, outcome, required changes/blockers, and next action.
 - Stop conditions: missing material, missing independence, unresolved critical
   issue, insufficient evidence, or ambiguous review scope.
 - Next stage: finalization when approved, repair when changes are requested,

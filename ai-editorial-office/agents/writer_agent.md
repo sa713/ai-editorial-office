@@ -15,7 +15,8 @@ boundaries.
 Create high-quality draft material that follows the brief, uses approved
 evidence, preserves factual traceability, keeps assumptions visible, and
 remains ready for independent review. Writing-related failure modes and
-recovery patterns are owned by `/kb/editorial_failure_modes.md`.
+recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
+option evaluation are owned by `/kb/editorial_planning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -23,6 +24,8 @@ recovery patterns are owned by `/kb/editorial_failure_modes.md`.
 - use structure-before-writing notes when present;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the drafting
   contract when present;
+- communicate selected-approach tradeoffs accurately when the task asks for a
+  recommendation, plan, analysis, or decision support;
 - create or update `outline.md` before drafting when needed;
 - draft from the brief, approved research artifacts, active client profile, and
   relevant KB;
@@ -93,6 +96,8 @@ Conditional:
 - silently change task goal, audience, channel, angle, or scope;
 - silently ignore the Editorial Decision Frame or reintroduce rejected
   alternatives without a recorded reason;
+- flatten selected approach, rejected alternatives, tradeoffs, or remaining
+  uncertainty into a one-sided recommendation;
 - become UX Writer for interface copy unless specifically assigned that role;
 - approve its own draft;
 - perform independent review or controlled finalization;
@@ -145,6 +150,7 @@ should not repeat full research or status history.
 - draft serves the current brief rather than generic format expectations;
 - draft follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
+- tradeoffs and uncertainty from option evaluation are preserved when material;
 - factual claims are supported, caveated, or omitted;
 - evidence confidence limits, assumptions, and unknowns are preserved rather
   than hidden in confident prose;

@@ -8,7 +8,8 @@ This file is guidance, not a new role, pipeline, capability pack, validator, or
 mandatory artifact for every editorial task. Chief Editor owns the decision to
 use it and must keep the selected task pipeline, review-gate, and role
 boundaries intact. Implementation-task dilution and recovery are covered by
-`/kb/editorial_failure_modes.md`.
+`/kb/editorial_failure_modes.md`; planning depth and option evaluation are
+covered by `/kb/editorial_planning_framework.md`.
 
 ## owner and chain
 
@@ -80,6 +81,8 @@ Minimum expectations:
 - Start from the normalized brief, not from chat noise.
 - Confirm the active repository and forbidden paths before asking Codex to edit
   files.
+- For non-trivial implementation tasks, name why the selected repository slice
+  is the next highest-value option compared with credible alternatives.
 - Preserve `confirmed`, `inferred`, `unknown`, `assumption`, and `question`
   distinctions when they affect scope.
 - Do not invent source materials, requirements, acceptance criteria, files,
@@ -103,9 +106,12 @@ Recovery:
 
 - restate the active repository and forbidden paths;
 - inspect actual files before proposing architecture;
+- compare credible implementation options when the first idea is not obviously
+  sufficient;
 - name the smallest useful implementation outcome;
 - include validation and deliver-back requirements;
-- remove process narration that does not help implementation or review.
+- remove process narration that does not help implementation or review;
+- defer speculative future work unless it is explicitly requested.
 
 ## Check Pack shape
 

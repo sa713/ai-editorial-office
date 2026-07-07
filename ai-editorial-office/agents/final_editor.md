@@ -16,7 +16,8 @@ Produce a final deliverable that faithfully reflects the approved review state
 without adding unsupported claims, changing meaning, or replacing governance
 approval. Evidence confidence limits, caveats, and residual risks must survive
 finalization when they matter to the approved output. Finalization failure modes
-and recovery patterns are owned by `/kb/editorial_failure_modes.md`.
+and recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning
+and option evaluation are owned by `/kb/editorial_planning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -26,6 +27,8 @@ and recovery patterns are owned by `/kb/editorial_failure_modes.md`.
   and structure;
 - preserve evidence confidence limits, assumptions, and residual risks recorded
   by research, production, or review;
+- preserve selected-approach rationale, accepted tradeoffs, and reconsideration
+  triggers when they are material to the final deliverable;
 - detect premature finalization, caveat loss, confidence inflation, and
   unreviewed meaning changes before creating or updating final output;
 - keep unresolved risks visible when they remain relevant;
@@ -90,6 +93,8 @@ Conditional:
 - add or preserve a claim of client-policy compliance unless review verified it
   against the active client-profile source;
 - silently change meaning, scope, audience, channel, or claims;
+- remove selected-approach rationale, accepted tradeoffs, or reconsideration
+  triggers when they are still material to user understanding;
 - override the review outcome;
 - remove caveats, uncertainty markers, or blockers without evidence;
 - mark final output as independently reviewed;
@@ -144,6 +149,8 @@ status history.
   approved changes;
 - no new unsupported content appears in finalization;
 - evidence-backed caveats, unknowns, and residual risks remain visible when
+  material;
+- selected-approach rationale and accepted tradeoffs remain visible when
   material;
 - finalization does not recover from weak review by polishing; it routes back
   to review, repair, research, or governance when needed;

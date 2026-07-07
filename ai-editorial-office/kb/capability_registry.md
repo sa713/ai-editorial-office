@@ -11,6 +11,8 @@ evidence taxonomy, confidence labels, and evidence section standards live in
 `/kb/editorial_evidence_framework.md`;
 failure modes and recovery patterns live in
 `/kb/editorial_failure_modes.md`;
+planning depth, option generation, and option evaluation live in
+`/kb/editorial_planning_framework.md`;
 governance invariants and review-gate authority still live in `AGENTS.md`;
 task statuses still live in `/kb/task_statuses.md`.
 
@@ -50,6 +52,7 @@ Source conversion remains a capability or task-local mini-contract. Integrity
 checking remains a check/script capability. Memory export remains a
 capability/process. Evidence-confidence assessment is a shared capability, not
 a standing Fact Checker role. Failure recognition and recovery is a shared
+capability, not a standing role. Planning and option evaluation is a shared
 capability, not a standing role.
 
 ## Capability Records
@@ -190,6 +193,35 @@ capability, not a standing role.
   stronger output.
 - Expansion triggers: repeated weak output, handoff loss, scope drift,
   implementation-task dilution, canon duplication, or reviewer uncertainty.
+
+### Planning And Option Evaluation
+
+- Purpose: generate credible alternatives, compare them on relevant dimensions,
+  and justify the selected approach before committing to a non-trivial route,
+  recommendation, or implementation plan.
+- Typical inputs: task object state, brief, source boundary, evidence
+  confidence, user goal, constraints, selected lifecycle stage, relevant canon,
+  repository state for implementation tasks.
+- Typical outputs: planning level, credible options, selected option, rejected
+  alternatives with reasons, tradeoffs accepted, uncertainty, reconsideration
+  triggers, and next action.
+- Accountability wrapper: Chief Editor owns route and commitment decisions;
+  Research Agent supports option evidence; Review Agent challenges weak option
+  exploration; production roles preserve the selected tradeoffs.
+- Required artifacts: none by default beyond the artifact containing the
+  material route or recommendation, usually `orchestration_plan.md` or the
+  Editorial Decision Frame.
+- Optional artifacts: compact comparison table, option note, research note, or
+  review finding when risk, restartability, or governance requires it.
+- Stop conditions: only one plausible option was considered despite meaningful
+  alternatives, rejected options are strawmen, selected option conflicts with
+  canon, or evidence is too weak to justify commitment.
+- Quality criteria: options are credible, dimensions are relevant, selected
+  approach serves the user goal, tradeoffs are visible, and future
+  reconsideration triggers are named when material.
+- Expansion triggers: architecture or product decision, implementation plan,
+  business recommendation, strategic editorial route, high-governance risk,
+  review challenge, or first-plausible convergence warning.
 
 ### Source Conversion
 
@@ -426,13 +458,13 @@ capability, not a standing role.
 
 | Role | Wrapped capabilities |
 | --- | --- |
-| Chief Editor | Routing and preflight; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
-| Intake Agent | Intake normalization; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; risk/client-profile suggestion. |
-| Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
-| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
+| Chief Editor | Routing and preflight; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; mini-contract authorization. |
+| Intake Agent | Intake normalization; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; planning-depth signal; risk/client-profile suggestion. |
+| Research Agent | Research/evidence classification; evidence confidence assessment when research is assigned; evidence for competing options; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
+| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; tradeoff communication; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
 | UX Writer | UX writing from product evidence; over-polishing/product-assumption detection; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
-| Review Agent | Independent review; evidence-confidence challenge; failure-mode challenge; review-side source/client/profile checks; re-review after repair. |
-| Final Editor | Controlled finalization when transformation after approved review is needed; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
+| Review Agent | Independent review; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; review-side source/client/profile checks; re-review after repair. |
+| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of selected-approach rationale when material; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
 | Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites; preservation of evidence-backed visual meaning. |
 
 ## Non-Role Capabilities
@@ -446,6 +478,7 @@ reviewed system update:
 - context assembly;
 - evidence-confidence assessment;
 - failure recognition and recovery;
+- planning and option evaluation;
 - fact checking;
 - style editing;
 - structural editing;
