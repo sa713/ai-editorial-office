@@ -1,0 +1,144 @@
+# Task Object Model
+
+This file defines the architectural model for an AI Editorial Office task.
+
+It is a canonical architecture reference for task-object fields and for how
+task-local artifacts act as views over task state. It does not change runtime
+behavior, task statuses, review-gate rules, compact execution, pipeline
+requirements, or role responsibilities. Those remain owned by `AGENTS.md`,
+`/kb/task_statuses.md`, the selected pipeline, role specs, and task-local
+artifacts.
+
+## Core Principle
+
+The task object is the primary operational primitive of AI Editorial Office.
+
+The system should be understood in this order:
+
+```text
+task object first;
+capability map second;
+roles as accountability wrappers;
+workflows and pipelines as execution guidance;
+artifacts as views over task state.
+```
+
+This is an architecture framing, not a workflow engine. The task object is
+represented by markdown artifacts inside `/tasks/TASK-ID/`; it is not a hidden
+database, runtime service, automation layer, or replacement for Chief Editor
+governance.
+
+## Required Task Object Fields
+
+Every active task should be describable by these fields. A compact task may
+record several fields in one artifact, and not every field requires a standalone
+file.
+
+| Field | Meaning | Typical owner/view |
+| --- | --- | --- |
+| `task_id` | Stable task identifier. | `brief.md`, `task-manifest.md`, `status.md` |
+| `objective` | What the task must achieve. | `brief.md`, `task-manifest.md` |
+| `user_request_summary` | Compact summary of the user's request and any later accepted scope changes. | `brief.md`, `task-manifest.md`, `status.md` |
+| `audience` | Intended reader or user. Mark confirmed, inferred, or unknown when material. | `brief.md`, preflight section, `orchestration_plan.md` |
+| `channel_context` | Publication channel, product context, internal/external use, or task environment. | `brief.md`, `orchestration_plan.md` |
+| `deliverable` | Expected output or artifact set. | `brief.md`, `task-manifest.md` |
+| `source_boundary` | What is source data, instruction, assumption, contradiction, or unknown. | `brief.md`, `orchestration_plan.md`, `research.md`, `sources.md` |
+| `success_criterion` | How readiness will be judged for this task. | `brief.md`, `orchestration_plan.md`, `review.md` |
+| `risk_mode` | `low-risk`, `standard`, `high-governance`, or unresolved/blocked until determined. | `task-manifest.md`, `orchestration_plan.md`, `status.md` |
+| `process_depth` | `compact`, `normal`, or `full`. | `task-manifest.md`, `orchestration_plan.md` |
+| `selected_workflow` | Selected pipeline overlay, editorial mode, or task-local mini-contract. | `orchestration_plan.md`, `task-manifest.md` |
+| `active_capabilities` | Capabilities selected for the task, from `/kb/capability_registry.md`. | `orchestration_plan.md`, `task-manifest.md` |
+| `active_roles` | Current core roles or explicitly legalized extension roles assigned to wrap capabilities. | `orchestration_plan.md`, handoffs, `status.md` |
+| `client_profile_status` | Client profile id, status, files, activation reason, and stop condition when applicable. | `task-manifest.md`, `orchestration_plan.md`, review artifacts |
+| `current_owner` | Role currently responsible for the next action. | `task-manifest.md`, `status.md`, handoff |
+| `current_status` | Operational task status from `/kb/task_statuses.md`. | `status.md`, summarized in `task-manifest.md` |
+| `current_artifact_pointer` | Current active artifact or artifact set, especially when versions exist. | `task-manifest.md` or named task-local owner |
+| `required_gates` | Gates required by risk, workflow, evidence, review, finalization, governance, or human approval. | `orchestration_plan.md`, `task-manifest.md` |
+| `completed_gates` | Gates already passed and where the evidence is stored. | `task-manifest.md`, `status.md`, `review.md`, `final_decision.md` |
+| `open_blockers` | Missing data, conflicts, source gaps, approval gaps, or governance blockers. | `status.md`, `task-manifest.md`, `open-questions.md` when justified |
+| `review_outcome` | `approved`, `changes_requested`, `blocked`, or not yet reviewed. | `review.md`, `status.md`, `task-manifest.md` |
+| `finalization_mode` | No finalization yet, controlled finalization required, compact finalization, or final artifact already reviewed. | `orchestration_plan.md`, `review.md`, `final_decision.md` |
+| `human_approval_requirement` | Whether a human decision is required before continuation, publication, delivery, or closure. | `orchestration_plan.md`, `status.md`, `final_decision.md` |
+| `next_action` | Smallest safe next action and owner. | `task-manifest.md`, handoff, `status.md` |
+| `memory_disposition` | Whether task learning stays local, becomes feedback, becomes a pattern, or needs a separate system update. | `feedback.md`, `final_decision.md`, `kb/feedback_patterns.md` |
+
+## Artifact Views Over The Task Object
+
+Artifacts are views over task state. They should not duplicate each other unless
+the selected workflow, risk mode, review, restartability, or governance need
+requires it.
+
+| Artifact | Task-object responsibility |
+| --- | --- |
+| `brief.md` | Defines objective, user request summary, audience, channel/context, deliverable, source boundary, constraints, and success criterion. |
+| `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
+| `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, and expansion triggers. |
+| `research.md` | Research scope, verified facts, interpretations, assumptions, contradictions, source confidence, and evidence limits. |
+| `sources.md` | Source inventory, provenance, freshness, reliability, and relevance. |
+| `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |
+| `claims_table.md` | Claim-level traceability for material claims, high-governance tasks, evidence disputes, or review needs. |
+| `outline.md` | Planned structure when structure is non-trivial or needed for review. |
+| `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review. |
+| `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
+| `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, choices, and review focus that are not already obvious from the draft. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, findings, verdict, required changes, blockers, and next action. |
+| `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
+| `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
+| `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
+| `finalization-notes.md` | Controlled finalization decisions only when finalization changes, risks, high governance, or traceability justify it. |
+| `finalization-checklist.md` | Finalization proof only when a downstream/governance consumer needs separate evidence. |
+| `final_decision.md` | Chief Editor governance closure, final readiness, human approval caveat, or reason for non-closure. |
+| `feedback.md` | Optional post-delivery user reaction or task-local feedback signal. |
+| `handoff-*.md` | Delta transfer between roles: what changed, what the next owner needs, and when to stop. |
+| `compact-handoff.md` | Optional final/user-facing transfer summary, not an internal role-to-role handoff. |
+| `context-summary.md` | Optional recovery artifact after fragmentation or long-running work, not routine status. |
+
+## Compact And Expanded Use
+
+The task object does not require every artifact to exist.
+
+Compact execution remains valid when current `AGENTS.md` compact conditions hold:
+
+- risk is low or simple standard;
+- source and evidence needs are limited;
+- review can validate from the compact packet;
+- no high-governance or unresolved human approval complexity is present.
+
+Expanded execution remains required when risk, evidence, review, governance,
+client-profile source status, contradiction, version conflict, human approval,
+or restartability requires more explicit evidence.
+
+The correct question is not "which files can be created?" but "which task
+object fields and gates must be visible for the next owner, reviewer, or Chief
+Editor to move safely?"
+
+## Gates
+
+Task gates are confidence decisions recorded in existing artifacts.
+
+| Gate | Question | Default evidence |
+| --- | --- | --- |
+| Entry/preflight | Is the task understood enough to ask, constrain, proceed, or block? | `orchestration_plan.md`, `task-manifest.md`, or `status.md` |
+| Source boundary | What is source data, instruction, assumption, contradiction, or unknown? | `brief.md`, `research.md`, `sources.md`, plan |
+| Research sufficiency | Are material claims supported, caveated, or blocked? | `research.md`, `sources.md`, `facts.md`, `claims_table.md` |
+| Draft readiness | Is production within approved scope and evidence? | production artifact, writer/UX notes, handoff |
+| Review | Is the artifact approved, changes requested, or blocked? | `review.md` |
+| Finalization | Is final output within reviewed scope? | `final.md`, optional finalization notes/checklist |
+| Governance closure | Can the task be finalized, archived, or moved to human approval? | `final_decision.md`, `status.md`, `task-manifest.md` |
+| Memory disposition | Should learning stay task-local or be promoted through feedback/pattern/system update? | `feedback.md`, final decision, feedback patterns |
+
+## Non-Goals
+
+This model does not:
+
+- add a workflow engine;
+- add new default agents;
+- make every field a mandatory standalone section;
+- make every artifact mandatory;
+- change allowed task statuses;
+- weaken review;
+- remove compact execution;
+- promote `/about` to canon;
+- treat old task folders as templates;
+- replace role specs or selected pipelines.

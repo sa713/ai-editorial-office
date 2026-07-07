@@ -40,6 +40,8 @@
 | System invariants, role separation, review-gate, authority hierarchy, artifact minimalism, governance boundaries | `AGENTS.md` | short references and local consequences |
 | Current system state, active phase, current normalization decisions | `project-state.md` | no permanent policy unless mirrored from owner |
 | Task status model and transitions | `/kb/task_statuses.md` | status references, not alternate state models |
+| Task object model and artifact view mapping | `/kb/task_object_model.md` | task-specific values, restart pointers, and local consequences |
+| Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -61,6 +63,33 @@ Rule placement check:
 2. Prefer a reference over repeating a full rule.
 3. If no clear owner exists, stop and route the decision to `chief_editor`.
 4. Do not add new files, fields, or checks unless they improve writing, review, governance, traceability, or restartability.
+
+## Architecture foundation
+
+The active architecture is task-object first and capability-aware:
+
+```text
+task object first;
+capability map second;
+roles as accountability wrappers;
+workflows and pipelines as execution guidance;
+artifacts as views over task state.
+```
+
+This framing does not change runtime behavior, task statuses, review-gate,
+compact execution, pipeline contracts, or role specs. It clarifies how the
+existing markdown system should be understood and extended.
+
+- `/kb/task_object_model.md` defines task-object fields and how task artifacts
+  act as views over task state.
+- `/kb/capability_registry.md` defines reusable capabilities and maps them to
+  the current roles that wrap them when accountability, independence, or
+  decision authority is needed.
+
+Do not create a new role merely because a capability is named. Source
+conversion, integrity checking, context assembly, and memory export remain
+capabilities, checks, scripts, or task-local mini-contracts unless a separate
+reviewed system update explicitly changes the role set.
 
 ## Главные инварианты
 
@@ -92,6 +121,7 @@ Before production starts, Chief Editor must route the task editorially:
 - choose the relevant pipeline or editorial mode;
 - determine whether a client profile must be activated;
 - activate the visual branch when the selected task requires it;
+- select the active capabilities required by the task;
 - determine the required roles and bounded extension roles;
 - make a compact preflight decision about input sufficiency before production;
 - record the routing decision in `orchestration_plan.md`, `task-manifest.md`,
@@ -132,6 +162,10 @@ current operating model:
 Current operating model means the active lifecycle, status, handoff, artifact,
 review-gate, governance, and role-assignment rules in this charter and the
 selected pipeline.
+
+Roles are accountability wrappers around capabilities. They preserve decision
+ownership, independence, escalation boundaries, and governance. They are not
+created by default for every reusable capability.
 
 Extension roles are additional roles outside the core role set. They may be
 assigned only when this charter explicitly legalizes them and their bounded
@@ -708,6 +742,11 @@ Handoff не заменяет основные артефакты этапа. О
 
 `task-manifest.md` является compact operational source of truth: task-local control panel, quick restart anchor и первый task-local файл, который читает любой агент после `AGENTS.md` и `/project-state.md`.
 
+In the architecture model, `task-manifest.md` is the compact current-state view
+of the task object. It does not need to restate every field from
+`/kb/task_object_model.md`; it must expose the fields needed for current
+restart, review, governance, and next action.
+
 `status.md` остаётся detailed status/history artifact. Он может содержать длинную историю переходов, причины, blockers и escalation notes. Manifest должен оставаться коротким и практичным; он не должен становиться ещё одним narrative log.
 
 `orchestration_plan.md` является execution plan: выбранный pipeline, роли, порядок работ, gates и task-specific contract. Handoff не должен дублировать `task-manifest.md`, `status.md` или `orchestration_plan.md`.
@@ -728,6 +767,11 @@ Handoff не заменяет основные артефакты этапа. О
 Artifacts are operational tools, not documentation trophies.
 
 An artifact may exist only when it serves a distinct operational purpose, is consumed downstream, improves governance, restartability, or traceability, and its value exceeds its maintenance cost.
+
+The task object model does not make every possible artifact mandatory. Existing
+compact and expanded execution rules decide which task-object fields and
+artifact views must be visible for the current risk, workflow, review, and
+governance need.
 
 Artifact rules:
 

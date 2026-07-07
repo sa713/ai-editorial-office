@@ -5,6 +5,12 @@
 Canonical KB ownership:
 
 - `task_statuses.md` owns allowed operational task statuses and transitions.
+- `task_object_model.md` owns the architecture model for task-object fields and
+  for how task-local artifacts act as views over task state. It does not make
+  every field or artifact mandatory for every task.
+- `capability_registry.md` owns the reusable capability map and the mapping from
+  current roles to the capabilities they wrap. It does not create new roles,
+  agents, pipelines, validators, or mandatory artifacts.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

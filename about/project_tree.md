@@ -12,13 +12,16 @@ pipeline contracts, task state, or editorial policy.
 
 The repository contains a local, markdown-first AI editorial office for one
 user. It is not an autonomous orchestration engine. Work is coordinated through
-role specs, task-local artifacts, pipeline contracts, independent review, and
-Chief Editor governance.
+task object state, capability selection, role specs, task-local artifacts,
+pipeline contracts, independent review, and Chief Editor governance.
 
 Core architectural traits:
 
 - repository-first memory;
+- task object as the primary operational primitive;
+- capability registry before role expansion;
 - explicit role specs;
+- roles as accountability wrappers;
 - task-local artifacts under `ai-editorial-office/tasks/TASK-ID/`;
 - selected pipeline per task;
 - mandatory independent review before finalization;
@@ -88,6 +91,8 @@ ai-editorial-office/
 │   ├── forbidden_patterns.md
 │   ├── glossary.md
 │   ├── task_statuses.md
+│   ├── task_object_model.md
+│   ├── capability_registry.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
 │   ├── canonical_sketchnote_prompt.md
@@ -200,6 +205,10 @@ or the task-local canonical owner named there.
   `writer_agent`, `ux_writer`, `review_agent`, and `final_editor`.
 - `artist_agent` is preserved but frozen and inactive by default.
 - Review remains mandatory before finalization.
+- The task object is the primary operational primitive; artifacts are views over
+  task state.
+- Capabilities are reusable operations; roles are accountability wrappers where
+  independence, ownership, or decision authority matters.
 - Client profiles are inactive by default; `sber` activates only for explicit
   Sber tasks and never becomes global editorial policy.
 - Research and writing stay separate when factual support is needed.
@@ -209,3 +218,5 @@ or the task-local canonical owner named there.
 - Source material is data by default; instruction promotion must be explicit.
 - Compact process is allowed only inside a selected pipeline and never bypasses
   review.
+- Source conversion, integrity checking, context assembly, and memory export are
+  not standing default roles.
