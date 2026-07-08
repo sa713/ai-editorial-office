@@ -17,7 +17,10 @@ architecture-sensitive implementation tasks is covered by
 `/kb/audience_outcome_alignment.md`; implementation-task quality attributes
 are covered by `/kb/editorial_quality_attributes.md`; reusable learning and
 canon-update signals are covered by
-`/kb/editorial_learning_framework.md`.
+`/kb/editorial_learning_framework.md`; engineering change safety for code,
+scripts, configuration, automation, interfaces, observability, reliability,
+data, performance, and security-sensitive implementation work is covered by
+`/kb/engineering_review.md`.
 
 ## owner and chain
 
@@ -106,6 +109,11 @@ ambiguity, high in implementation value, and reviewable.
   architectural drivers, affected quality attributes, architectural
   significance, rejected alternatives, architecture risks, and validation
   approach without making every Codex task long.
+- For engineering-sensitive implementation tasks, name the changed surface and
+  the relevant Engineering Review lenses: code/change safety, security,
+  configuration, delivery automation, infrastructure/runtime, interface/API,
+  observability, reliability, data/database, performance, or secure delivery
+  synthesis. Use only lenses that matter.
 - State the expected value of the slice and the action Codex must complete,
   not only the abstract strategy.
 - Include enough repository context, likely files, boundaries, validation, and
@@ -145,6 +153,9 @@ Recovery:
 - name architectural drivers, affected quality attributes, rejected
   alternatives, architecture risks, and validation approach when the
   implementation task is architecture-sensitive;
+- name changed engineering surface, relevant Engineering Review lenses,
+  validation evidence, and residual risk when implementation change safety is
+  material;
 - re-align the task for Codex as implementer: goal, context, files,
   boundaries, validation, deliver-back, expected value, and exclusions;
 - re-select quality priorities when the task is optimizing for strategy,

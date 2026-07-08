@@ -46,6 +46,8 @@ markdown smoke-tests и synthetic examples:
   with missing product context; it is not task materials.
 - `preflight_gate_checker_decision.md` - decision note recording why automated
   Preflight checker is not added yet; it is not production governance.
+- `engineering_review_smoke_test.md` - manual synthetic cases for Engineering
+  Review activation and non-activation; it is not production governance.
 - `end_to_end_cases/access_pass_security_task/` - sanitized end-to-end case for
   an internal access-pass security task; it is not task materials and contains
   no real credentials, real cards, real system details, or exploit instructions.
@@ -145,6 +147,14 @@ missing product context. It checks when `ux_writing` can start through
 `preflight_gate_checker_decision.md` records the current decision to keep
 Preflight Gate checks manual after three sanitized trials. It explains why an
 automated checker is not added yet.
+
+`engineering_review_smoke_test.md` records synthetic positive and negative
+activation cases for `/kb/engineering_review.md`. It checks that engineering
+lenses activate for code, security, configuration, delivery automation,
+interface, observability, reliability, data, and performance surfaces, and do
+not activate for ordinary editorial or planning-only tasks. It does not define
+active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
+Engineering Review KB.
 
 `end_to_end_cases/access_pass_security_task/` records a synthetic sanitized
 end-to-end editorial case. It checks Preflight Gate `constrain`, compact

@@ -144,6 +144,12 @@ Final Editor may finalize only after approved review.
 
 Chief Editor owns final governance decisions.
 
+Engineering Review may be used inside the same review gate for
+implementation-sensitive work. It is a shared capability with lenses, not a new
+role or stage. Activate it only when code, scripts, configuration, automation,
+interfaces, observability, reliability, data, performance, or
+security-sensitive behavior is material.
+
 ## Research Rules
 
 Use research when the task needs factual claims, dates, names, numbers, quotes,

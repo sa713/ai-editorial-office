@@ -27,6 +27,10 @@ Memory package stabilization.
 - audience and outcome alignment framework.
 - editorial quality attributes framework.
 - editorial learning and canon evolution framework.
+- Engineering Review capability with implementation/change safety lenses for
+  code, security, configuration, delivery automation, infrastructure/runtime,
+  interface/API, observability, reliability, data, performance, and secure
+  delivery synthesis.
 
 ## Current core roles
 - chief_editor
@@ -60,6 +64,23 @@ repository decision.
 ## Current focus
 Keep the active editorial system and the external ChatGPT memory package aligned
 without turning memory files into new canonical policy owners.
+
+## Strategic roadmap
+`ROADMAP.md` is the current long-term strategy, evolution plan,
+prioritization guide, and architectural direction document for AI Editorial
+Office.
+
+It is not an architecture specification, governance source, lifecycle owner,
+capability owner, workflow owner, implementation checklist, or operational
+source of truth. Canonical ownership remains with the files named in
+`AGENTS.md`. If roadmap direction conflicts with canonical architecture or
+operational rules, the canonical files win and the roadmap should later be
+updated.
+
+Future implementation proposals should be screened against roadmap phase,
+capability strengthened, strategic priority fit, and roadmap non-goals before
+work is proposed. This is a strategic fit check, not a new canonical rule
+owner.
 
 The `/about` folder is the recommended 20-file ChatGPT project memory package.
 It contains copies of selected active files and compact summaries for templates,
@@ -135,6 +156,11 @@ Maintain `/about` as a compact project-memory export:
   candidates, stale assumptions, and pattern promotion follow
   `/kb/editorial_learning_framework.md`; task-local notes do not become canon
   automatically.
+- Engineering Review is a shared capability for implementation/change safety,
+  not a new role, pipeline, lifecycle stage, review gate, or mandatory artifact
+  set. It is activated only when engineering surfaces such as code, scripts,
+  configuration, automation, interfaces, observability, reliability, data,
+  performance, or security-sensitive behavior are material.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.

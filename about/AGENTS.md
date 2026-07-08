@@ -46,6 +46,7 @@
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
 | Architecture Review capability, architecture drivers, quality-attribute scenarios, architectural tradeoffs, architecture risks, and decision-rationale challenge | `/kb/architecture_review.md` | task-specific architecture-review notes, drivers, scenarios, tradeoffs, assumptions, risks, and rationale |
+| Engineering Review capability, implementation/change safety lenses, engineering validation expectations, and engineering residual-risk handling | `/kb/engineering_review.md` | task-specific engineering-review notes, changed surface, selected lenses, validation evidence, findings, and residual risk |
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
 | Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
@@ -107,6 +108,9 @@ existing markdown system should be understood and extended.
 - `/kb/architecture_review.md` defines practical architecture-review moves for
   architectural significance, drivers, quality-attribute scenarios, tradeoffs,
   architecture risks, assumptions, evidence, and decision rationale.
+- `/kb/engineering_review.md` defines practical engineering-review moves for
+  implementation/change safety, selected engineering lenses, validation
+  evidence, findings, and residual risk.
 - `/kb/editorial_failure_modes.md` defines common failure modes and recovery
   actions for wrong-task work, weak evidence, hidden assumptions, scope drift,
   role confusion, weak challenge, premature finalization, and Codex task
@@ -126,10 +130,10 @@ existing markdown system should be understood and extended.
 
 Do not create a new role merely because a capability is named. Analytical
 reasoning, Architecture Review, source conversion, integrity checking, context
-assembly, learning extraction, canon evolution, stale canon detection, and
-memory export remain capabilities, checks, scripts, or task-local
-mini-contracts unless a separate reviewed system update explicitly changes the
-role set.
+assembly, Engineering Review, learning extraction, canon evolution, stale canon
+detection, and memory export remain capabilities, checks, scripts, or
+task-local mini-contracts unless a separate reviewed system update explicitly
+changes the role set.
 
 ## Главные инварианты
 

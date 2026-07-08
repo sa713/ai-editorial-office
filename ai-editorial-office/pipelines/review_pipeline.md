@@ -35,6 +35,13 @@ gate. Architecture Review is distinct from instructional architecture review:
 it checks system design fitness rather than only reading path or section
 structure.
 
+When reviewed work is engineering-sensitive, review applies
+`/kb/engineering_review.md` to challenge the changed surface, selected
+engineering lenses, validation evidence, findings, and residual risk without
+creating a new review gate. Engineering Review is distinct from Architecture
+Review: it checks implementation/change safety rather than overall design
+fitness.
+
 When reviewed work shows wrong-task drift, weak evidence, hidden assumptions,
 scope drift, role confusion, over-polishing, under-execution, implementation
 task dilution, premature finalization, or review-gate bypass, review applies
@@ -130,6 +137,9 @@ packet from those owners, then add only review-specific context:
 - architecture-review notes when architectural significance, drivers,
   quality-attribute scenarios, tradeoffs, assumptions, risks, or decision
   rationale are material;
+- engineering-review notes when implementation/change safety, validation
+  evidence, security/configuration/interface/data/reliability/performance
+  risk, or engineering residual risk is material;
 - the relevant editorial KB guidance only when its materiality trigger applies
   to the reviewed work.
 

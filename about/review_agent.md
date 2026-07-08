@@ -18,9 +18,10 @@ Failure-mode challenge and recovery patterns are owned by
 `/kb/editorial_failure_modes.md`. Planning and option evaluation are owned by
 `/kb/editorial_planning_framework.md`. Analytical reasoning moves are owned by
 `/kb/analytical_reasoning.md`. Architecture Review moves are owned by
-`/kb/architecture_review.md`. Audience/outcome alignment is owned by
-`/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are owned
-by `/kb/editorial_quality_attributes.md`. Learning extraction and canon
+`/kb/architecture_review.md`. Engineering Review moves are owned by
+`/kb/engineering_review.md`. Audience/outcome alignment is owned by
+`/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are
+owned by `/kb/editorial_quality_attributes.md`. Learning extraction and canon
 evolution are owned by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
@@ -44,6 +45,10 @@ evolution are owned by `/kb/editorial_learning_framework.md`.
   attributes, missing scenarios, hidden architectural assumptions,
   architecture-vs-implementation confusion, missing rejected alternatives,
   undocumented accepted risks, and architecture decisions without rationale;
+- challenge Engineering Review when material: unclear changed surface, missing
+  relevant lenses, irrelevant lens bloat, missing validation, unresolved
+  security/config/interface/data/reliability/performance risk, hidden residual
+  risk, or engineering-significant changes reviewed only as prose;
 - challenge option exploration when a task commits to a non-trivial route,
   recommendation, or implementation plan;
 - challenge whether the artifact fits the intended audience, outcome, required
@@ -94,6 +99,10 @@ Conditional:
 - `/kb/architecture_review.md` when architectural significance,
   quality-attribute impact, cross-owner effects, hard-to-reverse design
   consequences, architecture risks, or decision rationale affect review;
+- `/kb/engineering_review.md` when implementation change safety, security,
+  configuration, delivery automation, infrastructure/runtime, interface/API,
+  observability, reliability, data, performance, or secure delivery risk
+  affects review;
 - `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
   learning, canon evolution, pattern reuse, or stale-canon findings;
 - active client-profile files and review checklist when `client_profile` is set;
@@ -106,6 +115,7 @@ Required:
 - `review.md` with reviewed artifacts, independence basis, findings, Editorial
   Challenge Lens when applicable, analytical-reasoning challenge when
   applicable, Architecture Review challenge when applicable,
+  Engineering Review challenge when applicable,
   evidence-confidence challenge when applicable, learning/canon candidate
   challenge when applicable, outcome, risks, required changes, blockers, and
   next action.
@@ -153,6 +163,9 @@ artifacts must never become silently mandatory.
   implementation value;
 - accept a Codex/system change that lacks repository inspection, validation,
   deliver-back clarity, or canon integration;
+- approve an engineering-sensitive implementation when the changed surface,
+  relevant lenses, validation evidence, or residual engineering risk are
+  missing or materially unsupported;
 - approve canon evolution based on a single unverified task note, raw feedback,
   duplicate owner, or `/about` mirror;
 - approve a non-trivial recommendation or implementation plan when credible
@@ -178,6 +191,9 @@ The Review Agent may decide:
   recommendation, route, or decision support;
 - whether Architecture Review evidence is sufficient for the claimed
   architecture decision, recommendation, route, or governance consequence;
+- whether Engineering Review evidence is sufficient for the claimed
+  implementation, automation, configuration, interface, security, reliability,
+  data, performance, or operational change safety;
 - whether a failure mode requires bounded repair, return to an earlier stage,
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
@@ -215,6 +231,10 @@ Stop and mark blocked or escalate when:
 - architecture review is opaque enough that drivers, quality scenarios,
   architectural assumptions, rejected alternatives, accepted risks, or decision
   rationale cannot be reviewed for an architecture-sensitive conclusion;
+- Engineering Review is opaque enough that the changed surface, relevant
+  lenses, validation evidence, security/config/interface/data/reliability/
+  performance risk, or residual risk cannot be reviewed for an
+  engineering-sensitive change;
 - instructions conflict, client-profile source status is unresolved, or
   governance approval requirements are unclear;
 - the artifact needs new research, new production work, or broader scope change;
@@ -251,6 +271,10 @@ short examples needed to clarify a finding.
   when needed, implementation details do not hide design commitments, rejected
   alternatives are not missing, accepted risks are documented, and decision
   rationale is reviewable;
+- Engineering Review is checked when material: changed surface is visible,
+  selected lenses fit the task, irrelevant lenses are not forced, validation is
+  inspectable or explicitly not applicable, security/config/interface/data/
+  reliability/performance risks are handled, and residual risk is visible;
 - failure modes are challenged when visible, especially wrong task, weak
   evidence, hidden assumptions, scope drift, role confusion, weak challenge,
   premature finalization, under-execution, and review-gate bypass;

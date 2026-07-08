@@ -18,7 +18,8 @@ keeping the selected pipeline, task status model, role boundaries, review gate,
 and governance evidence intact. Quality attributes and tradeoffs are owned by
 `/kb/editorial_quality_attributes.md`. Analytical reasoning guidance is owned
 by `/kb/analytical_reasoning.md`. Architecture Review guidance is owned by
-`/kb/architecture_review.md`. Learning extraction and canon evolution are owned
+`/kb/architecture_review.md`. Engineering Review guidance is owned by
+`/kb/engineering_review.md`. Learning extraction and canon evolution are owned
 by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
@@ -40,6 +41,10 @@ by `/kb/editorial_learning_framework.md`.
 - select Architecture Review capability when architectural significance,
   quality-attribute impact, cross-owner effects, hard-to-reverse design
   consequences, or architecture-risk exposure makes design fitness reviewable;
+- select Engineering Review capability when implementation change safety,
+  security, configuration, delivery automation, infrastructure/runtime,
+  interface/API, observability, reliability, data, performance, or secure
+  delivery risk is material;
 - select planning level and ensure credible alternatives exist before
   committing to a non-trivial route, recommendation, or implementation plan;
 - detect scope drift, role confusion, canon duplication, under-execution,
@@ -104,6 +109,9 @@ Conditional:
 - architecture review scope, architectural drivers, quality-attribute
   scenarios, architectural assumptions, tradeoffs, risks, and accepted-risk
   rationale when material to route or governance decisions;
+- engineering review scope, changed surface, relevant lenses, validation
+  evidence, findings, and residual risk when implementation change safety is
+  material to route or governance decisions;
 - learning candidates, canon-update candidates, reusable patterns, deprecated
   assumptions, and post-task learning signals when closure or system update is
   being considered;
@@ -186,6 +194,11 @@ boundaries, likely files, validation, deliver-back, exclusions, and expected
 value of the slice. Use `/kb/editorial_quality_attributes.md` to prioritize
 implementation readiness, technical precision, validation readiness,
 actionability, and reviewability over broad process or polish.
+Use `/kb/engineering_review.md` when the implementation task changes code,
+scripts, tests, validators, dependencies, configuration, automation,
+interfaces, runtime assumptions, observability, reliability, data,
+performance, or security-sensitive behavior. Name only the Engineering Review
+lenses that matter for the slice.
 When Codex implementation reveals reusable learning, stale canon, or a
 canon-update candidate, Chief Editor should keep the note compact and apply
 `/kb/editorial_learning_framework.md` before any promotion beyond task-local
@@ -216,6 +229,9 @@ Required when applicable:
 - compact Architecture Review note when architectural significance, drivers,
   quality-attribute scenarios, tradeoffs, assumptions, risks, or decision
   rationale materially affect route or governance.
+- compact Engineering Review note when implementation change safety, relevant
+  engineering lenses, validation evidence, or engineering residual risk
+  materially affect route or governance.
 - compact option-evaluation note when a material route, recommendation, or
   implementation plan has meaningful alternatives.
 - compact post-task learning/canon note when a material reusable pattern, stale
@@ -285,6 +301,9 @@ The Chief Editor may decide:
   for routing, production, review, or finalization;
 - whether architectural significance requires Architecture Review capability
   before routing, implementation, review, or governance proceeds;
+- whether implementation change safety requires Engineering Review capability
+  and which engineering lenses are relevant before routing, implementation,
+  review, or governance proceeds;
 - whether a failure-mode warning sign requires return to intake, research,
   production, review, repair, governance, or a smaller stronger output;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,
@@ -351,6 +370,9 @@ Do not repeat the full Editorial Decision Frame. It should not use
   artifact unless optional review artifacts are justified;
 - high-governance tasks preserve source, status, review, and approval
   traceability;
+- implementation-sensitive tasks name the changed engineering surface,
+  relevant Engineering Review lenses, validation expectations, and residual
+  risk when material;
 - final readiness is based on saved artifacts, not chat memory;
 - preflight decisions are explicit before production but do not force a separate
   artifact or unnecessary user question;

@@ -95,6 +95,7 @@ ai-editorial-office/
 │   ├── task_object_model.md
 │   ├── capability_registry.md
 │   ├── shared_lifecycle_kernel.md
+│   ├── engineering_review.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
 │   ├── canonical_sketchnote_prompt.md
@@ -212,6 +213,9 @@ or the task-local canonical owner named there.
   task state.
 - Capabilities are reusable operations; roles are accountability wrappers where
   independence, ownership, or decision authority matters.
+- Engineering Review is a shared capability for implementation/change safety,
+  not a role, pipeline, lifecycle stage, review gate, or mandatory artifact
+  set.
 - Shared lifecycle kernel owns common stages, gates, artifact responsibilities,
   expansion triggers, human approval boundary, and stage context contracts;
   pipelines are overlays.

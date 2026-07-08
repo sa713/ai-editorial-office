@@ -9,6 +9,7 @@ Canonical source files:
 - `ai-editorial-office/kb/tone_of_voice.md`
 - `ai-editorial-office/kb/glossary.md`
 - `ai-editorial-office/kb/ux_writing_guidelines.md`
+- `ai-editorial-office/kb/engineering_review.md`
 
 This file is a memory aid, not a canonical policy. If it conflicts with
 `AGENTS.md`, task instructions, selected pipelines, role specs, or source KB
@@ -120,6 +121,22 @@ Review must not approve with `looks good`, review from memory, rewrite instead
 of reviewing, ignore missing evidence, or let pleasant generic copy hide missing
 relevance.
 
+## Engineering Review
+
+Engineering Review is a shared capability for implementation/change safety. It
+does not create Code Reviewer, Security Reviewer, DevOps, SRE, DBA, or
+Performance Reviewer roles, and it does not create a new pipeline, lifecycle
+stage, review gate, checklist system, or mandatory artifact.
+
+Use it only when engineering surfaces are material, such as code, scripts,
+tests, validators, configuration, dependencies, CI/CD, local infrastructure,
+interfaces, observability, reliability, data, performance, or
+security-sensitive behavior.
+
+Chief Editor selects relevant lenses. Review Agent challenges changed surface,
+selected lenses, validation evidence, findings, and residual risk inside the
+existing review gate.
+
 ## UX Writing Standards
 
 UX copy must be product-true, action-oriented, and state-aware.
@@ -171,4 +188,3 @@ recovery behavior is unknown.
   review.
 - Governance decision: Chief Editor decision about closure, human approval,
   return to a prior stage, or blocker.
-
