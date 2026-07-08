@@ -18,6 +18,8 @@ Good planning answers:
 - what viable options exist;
 - which dimensions matter for this task;
 - what evidence supports or weakens each option;
+- what analytical question, hypotheses, assumptions, or contradictions shape
+  the decision when reasoning complexity is material;
 - why the selected option is best enough for now;
 - what tradeoffs and uncertainty remain;
 - when the decision should be reconsidered.
@@ -72,6 +74,7 @@ Select only the dimensions that matter for the current task.
 | Technical risk | Could it break behavior, create maintenance debt, or hide edge cases? |
 | Business or editorial risk | Could it mislead, overpromise, damage trust, or create governance exposure? |
 | Evidence quality | Is the option supported by inspected sources, repository state, tests, or verified data? |
+| Diagnostic value | Which evidence would actually distinguish this option from credible alternatives? |
 | Reversibility | Can the decision be undone or adjusted cheaply if wrong? |
 | Long-term maintainability | Does it simplify future work or create duplicated concepts? |
 | Canon compatibility | Does it integrate with existing canonical owners instead of creating parallel architecture? |
@@ -155,6 +158,14 @@ option still hold, and whether rejected alternatives became stronger.
 Option evaluation should use evidence quality and confidence labels from
 `/kb/editorial_evidence_framework.md`. Weak evidence should reduce confidence,
 not be hidden by a sharper recommendation.
+
+### Analytical Reasoning
+
+When planning depends on complex diagnosis, competing explanations, key
+assumptions, contradictions, or sufficiency judgment, use
+`/kb/analytical_reasoning.md` to keep those moves visible. Analytical reasoning
+does not replace planning; it makes the question-to-option path easier to
+review.
 
 ### Audience And Outcome Alignment
 

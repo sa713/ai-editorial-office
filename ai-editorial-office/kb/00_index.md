@@ -19,6 +19,12 @@ Canonical KB ownership:
   evidence requirements by output type, reusable evidence collection, and the
   optional evidence section standard. It does not create a new role, workflow
   engine, scoring system, or mandatory artifact set.
+- `analytical_reasoning.md` owns practical analytical reasoning moves:
+  problem framing, decomposition, hypothesis generation, competing
+  explanations, key assumptions checking, disconfirmation, contradiction
+  handling, sufficiency judgment, and uncertainty communication. It does not
+  create a new role, pipeline, framework, review gate, scoring model, or
+  mandatory artifact set.
 - `editorial_failure_modes.md` owns common editorial failure modes and recovery
   patterns. It is a practical safety layer, not a new role system, incident
   process, workflow engine, review gate, or mandatory checklist.

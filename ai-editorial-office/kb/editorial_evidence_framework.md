@@ -5,9 +5,9 @@ evidence requirements, reusable evidence collection, and the optional evidence
 section standard in AI Editorial Office.
 
 It extends the task object, capability registry, shared lifecycle kernel,
-Audience & Outcome Alignment Framework, Editorial Decision Frame, and Editorial
-Challenge Lens. It is not a new pipeline, role, workflow engine, scoring
-system, or mandatory artifact set.
+Analytical Reasoning guidance, Audience & Outcome Alignment Framework,
+Editorial Decision Frame, and Editorial Challenge Lens. It is not a new
+pipeline, role, workflow engine, scoring system, or mandatory artifact set.
 
 ## Core Principle
 
@@ -21,6 +21,11 @@ Every material editorial conclusion should be able to answer four questions:
 Confidence is derived from evidence quality, not from how certain the model or
 agent feels. Assumptions, hypotheses, and intuition may guide exploration, but
 they must not be presented as facts.
+
+When a conclusion depends on competing explanations, disconfirmation,
+contradictions, or sufficiency judgment, use `/kb/analytical_reasoning.md` to
+make that reasoning inspectable while this file continues to own evidence
+classes and confidence labels.
 
 ## Evidence Taxonomy
 
@@ -146,6 +151,13 @@ a new mandatory file. Material decisions should be able to point to:
 Evidence-confidence assessment is a reusable capability. It can be performed by
 different roles at different stages, while Research Agent remains the primary
 owner when a dedicated research stage is assigned.
+
+### Analytical Reasoning
+
+Analytical reasoning may generate hypotheses, key assumptions, contradictions,
+diagnostic evidence needs, and sufficiency judgments. Those moves use evidence
+quality from this framework; they do not create separate evidence classes or
+confidence labels.
 
 ### Shared Lifecycle
 

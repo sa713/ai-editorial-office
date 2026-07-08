@@ -11,6 +11,9 @@ still owns operational statuses. Pipelines remain overlays that add task-type
 sequencing, artifact depth, and local quality gates.
 `/kb/editorial_evidence_framework.md` owns the evidence taxonomy, confidence
 labels, and reusable evidence section standard used by lifecycle gates.
+`/kb/analytical_reasoning.md` owns analytical moves such as problem framing,
+decomposition, hypothesis comparison, disconfirmation, contradiction handling,
+sufficiency judgment, and uncertainty communication.
 `/kb/editorial_failure_modes.md` owns common warning signs and recovery actions
 when a lifecycle stage starts producing weak, wrong, or unsafe work.
 `/kb/editorial_planning_framework.md` owns planning depth, option generation,
@@ -38,9 +41,10 @@ Default lifecycle:
 intake -> routing -> research when required -> drafting or UX writing -> review -> repair when required -> finalization -> governance -> memory disposition
 ```
 
-Source conversion, memory curation, learning extraction, and canon evolution
-are capabilities that can attach to the lifecycle when needed. They are not
-standing default roles and do not create a separate workflow engine.
+Source conversion, analytical reasoning, memory curation, learning extraction,
+and canon evolution are capabilities that can attach to the lifecycle when
+needed. They are not standing default roles and do not create a separate
+workflow engine.
 
 ## Shared Stages
 
@@ -64,7 +68,10 @@ Gates are confidence decisions recorded in existing task artifacts. They are not
 new mandatory standalone files. When a gate depends on a material conclusion,
 the record should expose evidence basis, confidence level, assumptions,
 unknowns, validation needed, and residual risk at the depth required by
-`/kb/editorial_evidence_framework.md`.
+`/kb/editorial_evidence_framework.md`. When a gate depends on complex
+reasoning, competing explanations, or contradiction, use
+`/kb/analytical_reasoning.md` to keep the analytical question, assumptions,
+disconfirmation, sufficiency, and uncertainty visible in an existing artifact.
 
 | Gate | Decision question | Default evidence |
 | --- | --- | --- |
@@ -119,6 +126,8 @@ Expand context or artifacts only when at least one trigger applies:
 - factual, numeric, policy, product, legal, HR, medical, financial, security,
   regulatory, or reputational claims;
 - source conflict, stale source, unknown freshness, or missing provenance;
+- analytical complexity, competing explanations, non-obvious causal claims,
+  contradiction, or decision impact;
 - client profile is active or pending source verification;
 - review cannot validate from the compact packet;
 - task has multiple audiences, channels, deliverables, owners, or versions;
@@ -157,6 +166,12 @@ finding, or closure decision may consume the evidence collection pattern from
 `/kb/editorial_evidence_framework.md`. The pattern should be recorded compactly
 inside an existing artifact unless risk, review, or governance needs a separate
 evidence artifact.
+
+Any stage that depends on complex analysis, competing explanations, key
+assumptions, contradiction, diagnostic evidence, or sufficiency judgment may
+consume the compact analytical pattern from `/kb/analytical_reasoning.md`.
+Analytical reasoning is recorded in the smallest existing artifact that remains
+reviewable and does not create a separate lifecycle stage.
 
 Any stage that commits to a non-trivial route, recommendation, or implementation
 plan may consume the option evaluation pattern from
@@ -207,14 +222,16 @@ update is justified.
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
 - Optional context: `/kb/task_object_model.md`, `/kb/capability_registry.md`,
+  `/kb/analytical_reasoning.md` when complexity or decision impact is material,
   current `project-state.md`, previous handoff when resuming.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
 - Expected outputs: `orchestration_plan.md`, updated manifest/status, selected
   workflow overlay or mini-contract, audience/outcome fit when material,
   quality priorities/tradeoffs when material, planning level and options
-  considered when material, evidence basis/confidence for material route
-  decisions, next action.
+  considered when material, analytical question or key assumptions when
+  material, evidence basis/confidence for material route decisions, next
+  action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,
   or conflict between user instruction and system invariants.
 - Next stage: research, drafting, UX writing, review, source conversion, or
@@ -232,8 +249,9 @@ update is justified.
   unrelated source dumps, or source content promoted to instructions without
   explicit authority.
 - Expected outputs: research/evidence artifacts at selected depth, evidence
-  classes, confidence labels, assumptions/unknowns, source boundary notes, open
-  questions, and handoff when needed.
+  classes, confidence labels, hypotheses or competing explanations when
+  material, assumptions/unknowns, contradictions, source boundary notes,
+  sufficiency judgment, open questions, and handoff when needed.
 - Stop conditions: unavailable source, contradicted material claim, stale or
   unreliable evidence for high-risk claim, or missing human/source decision.
 - Next stage: drafting, UX writing, review, repair, or blocked.
@@ -290,8 +308,9 @@ update is justified.
 - Expected outputs: `review.md` with checked scope, independence basis,
   audience/outcome fit when material, quality-attribute challenge when
   material, evidence/confidence challenge when material, option-evaluation
-  challenge when material, learning/canon candidate challenge when material,
-  findings, outcome, required changes/blockers, and next action.
+  challenge when material, analytical-reasoning challenge when material,
+  learning/canon candidate challenge when material, findings, outcome, required
+  changes/blockers, and next action.
 - Stop conditions: missing material, missing independence, unresolved critical
   issue, insufficient evidence, or ambiguous review scope.
 - Next stage: finalization when approved, repair when changes are requested,
@@ -326,8 +345,9 @@ update is justified.
 - Forbidden context: unreviewed claims, new product behavior, style rewrites that
   change meaning, publication or delivery without required approval.
 - Expected outputs: `final.md`, optional finalization notes/checklist, audience
-  fit and approved quality attributes preserved within approved scope, handoff
-  to Chief Editor when governance closure is separate.
+  fit, approved quality attributes, uncertainty, and analytical traceability
+  preserved within approved scope, handoff to Chief Editor when governance
+  closure is separate.
 - Stop conditions: review missing, review not approved, finalization changes
   meaning, human approval requirement unresolved.
 - Next stage: governance, repair, or blocked.

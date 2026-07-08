@@ -42,6 +42,7 @@ is required for every task.
 | Consistency | The artifact does not conflict with itself, canon, active task state, or related artifacts. | Manifest/status/plan alignment, terminology consistency, no route contradictions. |
 | Traceability | Important claims, decisions, and changes can be followed back to evidence or artifacts. | Source pointers, diff references, claims-used, review findings, decision frame. |
 | Evidence support | Material conclusions have evidence and confidence appropriate to the output type. | Evidence class, confidence label, assumptions, unknowns, validation needed. |
+| Analytical rigor | Reasoning from question to conclusion is inspectable when complexity, ambiguity, or decision impact is material. | Analytical question, hypotheses, key assumptions, contradiction handling, disconfirmation checks, sufficiency judgment. |
 | Audience fit | Detail, tone, format, and evidence depth match the intended reader and outcome. | Alignment note, reader context, useful omissions, action path. |
 | Structural coherence | Sections have distinct jobs and create a usable reading path. | Logical order, no duplicate sections, navigable layers for mixed audiences. |
 | Maintainability | The artifact or system change remains easy to update, review, and extend. | One canonical owner, low duplication, stable terms, bounded scope. |
@@ -156,6 +157,14 @@ against correctness, completeness, traceability, and other attributes.
 
 Evidence support and traceability are quality attributes. Evidence quality and
 confidence labels remain owned by `/kb/editorial_evidence_framework.md`.
+
+### Analytical Reasoning
+
+Analytical rigor is a quality attribute when the artifact depends on problem
+framing, decomposition, competing explanations, disconfirmation, contradiction
+handling, or sufficiency judgment. `/kb/analytical_reasoning.md` owns the
+practical reasoning moves; this file only names analytical rigor as a quality
+that may matter for review and handoff.
 
 ### Planning And Option Evaluation
 

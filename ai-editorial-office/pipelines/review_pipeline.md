@@ -22,6 +22,11 @@ or final-decision support, review applies `/kb/editorial_evidence_framework.md`
 to check evidence basis, confidence, assumptions, unknowns, validation needed,
 and residual risk.
 
+When reviewed work depends on complex analysis, competing explanations,
+disconfirmation, contradiction handling, sufficiency judgment, or uncertainty
+communication, review applies `/kb/analytical_reasoning.md` to challenge the
+reasoning path without creating a new review gate.
+
 When reviewed work shows wrong-task drift, weak evidence, hidden assumptions,
 scope drift, role confusion, over-polishing, under-execution, implementation
 task dilution, premature finalization, or review-gate bypass, review applies
@@ -112,8 +117,10 @@ packet from those owners, then add only review-specific context:
   artifacts;
 - research, claim, source, and evidence-confidence artifacts when material
   claims or evidence-dependent conclusions are present;
-- the six editorial frameworks only when their materiality triggers apply to
-  the reviewed work.
+- analytical-reasoning notes when reasoning complexity, evidence ambiguity,
+  contradictions, or sufficiency judgments are material;
+- the relevant editorial KB guidance only when its materiality trigger applies
+  to the reviewed work.
 
 When present, Problem Hypothesis and Editorial Decision Frame in
 `orchestration_plan.md` are required inputs for the Editorial Challenge Lens.
@@ -183,7 +190,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -276,6 +283,9 @@ Compact review minimum:
   Hypothesis and/or Editorial Decision Frame;
 - compact evidence-confidence check when the reviewed conclusion depends on
   material evidence;
+- compact analytical-reasoning check when the reviewed conclusion depends on
+  problem framing, competing explanations, hidden assumptions, contradiction
+  handling, diagnostic evidence, or sufficiency judgment;
 - compact failure-mode check when warning signs are visible;
 - compact option-evaluation check when the reviewed work depends on a
   non-trivial selected approach;
@@ -301,6 +311,10 @@ This pipeline owns review-stage sequencing, review status transitions, review ar
 It does not restate detailed review logic. Review Agent owns:
 
 - reviewer independence checks;
+- analytical-reasoning challenge, including wrong question, premature closure,
+  confirmation bias, unsupported recommendation, hidden assumption,
+  contradiction smoothing, false precision, unbounded research, and weak
+  sufficiency judgment;
 - factual, source, and claim validation;
 - editorial relevance and replaceability pressure;
 - assumptions-based Editorial Challenge Lens;

@@ -16,8 +16,9 @@ boundaries.
 Orchestrate local multi-agent editorial work from intake to final decision while
 keeping the selected pipeline, task status model, role boundaries, review gate,
 and governance evidence intact. Quality attributes and tradeoffs are owned by
-`/kb/editorial_quality_attributes.md`. Learning extraction and canon evolution
-are owned by `/kb/editorial_learning_framework.md`.
+`/kb/editorial_quality_attributes.md`. Analytical reasoning guidance is owned
+by `/kb/analytical_reasoning.md`. Learning extraction and canon evolution are
+owned by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -32,6 +33,9 @@ are owned by `/kb/editorial_learning_framework.md`.
   route, depth, implementation value, or review focus;
 - select evidence depth and required confidence for material decisions,
   recommendations, review findings, and governance closure;
+- select analytical reasoning depth when problem complexity, decision impact,
+  evidence ambiguity, contradiction, or review risk makes reasoning
+  inspectability material;
 - select planning level and ensure credible alternatives exist before
   committing to a non-trivial route, recommendation, or implementation plan;
 - detect scope drift, role confusion, canon duplication, under-execution,
@@ -90,6 +94,9 @@ Conditional:
   and task constraints needed for the Editorial Decision Frame;
 - evidence basis, confidence level, assumptions, unknowns, validation needed,
   and residual risk for material route or governance decisions;
+- analytical question, competing explanations, key assumptions,
+  contradictions, disconfirmation checks, and sufficiency judgment when
+  material to route or governance decisions;
 - learning candidates, canon-update candidates, reusable patterns, deprecated
   assumptions, and post-task learning signals when closure or system update is
   being considered;
@@ -161,7 +168,9 @@ Editorial Office repository, Chief Editor must repair it using
 For non-trivial Codex implementation tasks, Chief Editor should use
 `/kb/editorial_planning_framework.md` to explain why the selected repository
 slice is the next highest-value option and which broader, smaller, or deferred
-options were rejected. Use `/kb/audience_outcome_alignment.md` to make the
+options were rejected. Use `/kb/analytical_reasoning.md` when the implementation
+decision needs a visible problem statement, assumptions, disconfirmation check,
+or sufficiency judgment. Use `/kb/audience_outcome_alignment.md` to make the
 Codex task executable for Codex as implementer: repository, goal, context,
 boundaries, likely files, validation, deliver-back, exclusions, and expected
 value of the slice. Use `/kb/editorial_quality_attributes.md` to prioritize
@@ -191,6 +200,9 @@ Required when applicable:
   Agent or UX Writer starts production.
 - compact evidence-confidence note when a material route or governance decision
   depends on evidence quality.
+- compact analytical reasoning note when problem framing, hypotheses,
+  contradiction handling, disconfirmation, or sufficiency judgment materially
+  affects route or governance.
 - compact option-evaluation note when a material route, recommendation, or
   implementation plan has meaningful alternatives.
 - compact post-task learning/canon note when a material reusable pattern, stale
@@ -334,6 +346,10 @@ Do not repeat the full Editorial Decision Frame. It should not use
 - material route and governance decisions expose evidence basis, confidence,
   assumptions, unknowns, validation needed, and residual risk at the depth
   required by `/kb/editorial_evidence_framework.md`;
+- analytical route and governance decisions expose the question, key
+  assumptions, competing explanations or options, contradictions,
+  disconfirmation checks, and sufficiency judgment at the depth required by
+  `/kb/analytical_reasoning.md`;
 - non-trivial commitments are not first-plausible: credible alternatives,
   relevant evaluation dimensions, accepted tradeoffs, and reconsideration
   triggers are visible at the depth required by

@@ -44,6 +44,7 @@
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
+| Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
 | Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
@@ -99,6 +100,9 @@ existing markdown system should be understood and extended.
   labels, evidence requirements, and the compact evidence section standard used
   when decisions, recommendations, reviews, or final closure depend on material
   evidence.
+- `/kb/analytical_reasoning.md` defines practical analytical moves for problem
+  framing, decomposition, competing explanations, disconfirmation,
+  contradiction handling, sufficiency judgment, and uncertainty communication.
 - `/kb/editorial_failure_modes.md` defines common failure modes and recovery
   actions for wrong-task work, weak evidence, hidden assumptions, scope drift,
   role confusion, weak challenge, premature finalization, and Codex task
@@ -116,11 +120,11 @@ existing markdown system should be understood and extended.
   canonization criteria, learning extraction, canon evolution rules, stale-canon
   challenge, and canon retirement.
 
-Do not create a new role merely because a capability is named. Source
-conversion, integrity checking, context assembly, learning extraction, canon
-evolution, stale canon detection, and memory export remain capabilities,
-checks, scripts, or task-local mini-contracts unless a separate reviewed system
-update explicitly changes the role set.
+Do not create a new role merely because a capability is named. Analytical
+reasoning, source conversion, integrity checking, context assembly, learning
+extraction, canon evolution, stale canon detection, and memory export remain
+capabilities, checks, scripts, or task-local mini-contracts unless a separate
+reviewed system update explicitly changes the role set.
 
 ## Главные инварианты
 
@@ -160,6 +164,8 @@ Before production starts, Chief Editor must route the task editorially:
 - make a compact preflight decision about input sufficiency before production;
 - identify the evidence basis and confidence needed for material route
   decisions, recommendations, review findings, and governance closure;
+- select analytical reasoning depth when complexity, decision impact, evidence
+  ambiguity, or review risk makes reasoning inspectability material;
 - choose the planning level and consider credible options before committing to
   a non-trivial route, recommendation, or implementation plan;
 - identify the audience, intended outcome, required action or decision, and

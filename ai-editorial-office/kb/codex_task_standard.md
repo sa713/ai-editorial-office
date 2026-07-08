@@ -9,8 +9,10 @@ mandatory artifact for every editorial task. Chief Editor owns the decision to
 use it and must keep the selected task pipeline, review-gate, and role
 boundaries intact. Implementation-task dilution and recovery are covered by
 `/kb/editorial_failure_modes.md`; planning depth and option evaluation are
-covered by `/kb/editorial_planning_framework.md`; Codex as implementer audience
-is covered by `/kb/audience_outcome_alignment.md`; implementation-task quality
+covered by `/kb/editorial_planning_framework.md`; analytical reasoning for
+problem framing, assumptions, disconfirmation, sufficiency, and uncertainty is
+covered by `/kb/analytical_reasoning.md`; Codex as implementer audience is
+covered by `/kb/audience_outcome_alignment.md`; implementation-task quality
 attributes are covered by `/kb/editorial_quality_attributes.md`; reusable
 learning and canon-update signals are covered by
 `/kb/editorial_learning_framework.md`.
@@ -95,6 +97,9 @@ ambiguity, high in implementation value, and reviewable.
   files.
 - For non-trivial implementation tasks, name why the selected repository slice
   is the next highest-value option compared with credible alternatives.
+- For analytically complex implementation tasks, make clear what problem is
+  being solved, what assumptions remain, what would disconfirm the chosen
+  slice, and what validation would prove the work.
 - State the expected value of the slice and the action Codex must complete,
   not only the abstract strategy.
 - Include enough repository context, likely files, boundaries, validation, and
@@ -129,6 +134,8 @@ Recovery:
 - inspect actual files before proposing architecture;
 - compare credible implementation options when the first idea is not obviously
   sufficient;
+- name the analytical question, remaining assumptions, and validation needed
+  when the implementation decision is non-trivial;
 - re-align the task for Codex as implementer: goal, context, files,
   boundaries, validation, deliver-back, expected value, and exclusions;
 - re-select quality priorities when the task is optimizing for strategy,
