@@ -1,5 +1,8 @@
 # Release Pack
 
+Release readiness rule: no release is considered ready for Project Lead review
+until a completed `release-pack.md` exists.
+
 ## Release
 
 - Release ID: `S3.R4`
@@ -9,83 +12,108 @@
 
 ## Executive Summary
 
-Professional Analysis is implemented as one shared capability with optional
-analysis lenses. It gives AI Editorial Office a bounded way to produce
-decision-ready analytical products while preserving the existing architecture:
-no new roles, pipelines, lifecycle stages, review gates, consulting frameworks,
-scoring models, or mandatory artifacts.
+Professional Analysis adds a bounded shared capability for decision-ready
+analytical products: structured interpretation, synthesis, recommendations,
+implications, risks, uncertainty, and executive analytical communication. The
+release preserves the existing AI Editorial Office architecture while making
+professional analysis available as selectable lenses inside current routing,
+review, and task artifacts.
+
+## Architectural Impact
+
+Architecture impact:
+
+- Small
+
+Reason:
+
+The release introduced one new canonical capability owner,
+`kb/professional_analysis.md`, and integrated it into existing capability,
+role, lifecycle-reference, and review guidance. It did not change the task
+object model shape, role model, pipelines, lifecycle stages, review gate,
+governance authority, or framework boundaries.
 
 ## Goal Of The Release
 
-Add professional analytical capability for structured interpretation,
-synthesis, recommendation building, analytical judgment, implications, and
-evidence-backed conclusions without duplicating Analytical Reasoning,
-Architecture Review, or Engineering Review.
+Make AI Editorial Office capable of structured professional analytical work:
+interpretation, synthesis, recommendation building, analytical judgment,
+decomposition of complex information, implications, and evidence-backed
+conclusions. The capability must complement, not duplicate, Analytical
+Reasoning, Architecture Review, or Engineering Review.
 
 ## Architecture Decisions
 
-- Decision: implement one shared Professional Analysis capability with optional
+- Implement Professional Analysis as one shared capability with optional
   lenses.
-- Rationale: professional analytical domains share a decision-support product
-  shape, and separate capabilities would create unnecessary complexity.
-- Architecture preserved: task object first, capability map second, roles as
-  accountability wrappers, existing lifecycle, existing review gate, and
-  existing role model.
-- Boundary: Analytical Reasoning owns reasoning moves; Professional Analysis
-  owns analytical product shape and decision-ready output.
-- Boundary: Architecture Review owns design fitness; Engineering Review owns
-  implementation/change safety.
+- Keep Analytical Reasoning as the owner of cognitive reasoning moves:
+  framing, decomposition, assumptions, disconfirmation, contradiction handling,
+  sufficiency, and uncertainty.
+- Make Professional Analysis the owner of analytical product shape:
+  assessment, synthesis, options, implications, recommendation, and
+  decision-ready communication.
+- Keep Architecture Review responsible for design fitness.
+- Keep Engineering Review responsible for implementation/change safety.
+- Use existing roles and review gate: Chief Editor selects the capability,
+  Research Agent supports evidence when needed, Writer Agent preserves product
+  shape, Review Agent challenges the analysis, and Final Editor preserves
+  approved judgment and caveats.
+- Do not introduce a new Analyst role, consulting framework, lifecycle stage,
+  pipeline, review gate, scoring model, or mandatory artifact.
 
 ## Capability Decisions
 
 - Capability shape: one optional shared capability documented in
-  `kb/professional_analysis.md`.
-- Activation: Chief Editor selects it only when structured interpretation,
-  synthesis, recommendation, implications, analytical judgment, or
-  decision-ready analytical communication is material.
-- Review: Review Agent challenges the analytical product inside existing
-  `review.md`.
-- Evidence: material recommendations must stay within evidence confidence and
-  expose uncertainty.
-- Non-goals: no Analyst, Consultant, Business Analyst, Policy Analyst, Product
-  Strategist, Intelligence Analyst, or Technology Analyst role; no consulting
-  methodology; no mandatory Professional Analysis artifact.
+  `ai-editorial-office/kb/professional_analysis.md`.
+- Lenses: situation assessment, synthesis brief, options and recommendation,
+  business or needs analysis, policy or impact analysis, product discovery
+  analysis, technology assessment, and executive decision brief.
+- Activation: use only when a task materially requires structured
+  interpretation, synthesis, recommendation, implications, analytical judgment,
+  or decision-ready analytical communication.
+- Review: challenge Professional Analysis inside existing `review.md`; no
+  second review gate.
+- Evidence: recommendations must stay within evidence confidence and expose
+  uncertainty, assumptions, and what would change the conclusion.
+- Artifact policy: no standalone Professional Analysis artifact is mandatory;
+  notes live in the smallest existing task artifact that remains reviewable.
 
 ## Scope
 
 ### Implemented
 
-- Professional Analysis capability document.
+- New Professional Analysis capability documentation.
 - Capability registry entry and role-capability mapping.
-- Chief Editor selection guidance.
-- Review Agent challenge guidance.
-- Review pipeline hooks for Professional Analysis.
-- Lifecycle and task-object references so Professional Analysis can appear in
-  existing artifacts.
+- Chief Editor guidance for selecting Professional Analysis.
+- Review Agent guidance for challenging analytical products.
+- Review Pipeline references for Professional Analysis checks.
+- Shared lifecycle and task-object references for using Professional Analysis
+  inside existing artifacts.
 - Manual smoke-test examples for activation and non-activation.
-- `/about` memory synchronization for changed copied files and compact memory
-  summaries.
-- Backlog status update to `Review` for `S3.R4`.
+- `/about` memory package synchronization where copied files and compact
+  summaries changed.
+- Backlog status update from `In Progress` to `Review` for `S3.R4`.
+- Release report, research landscape, architecture synthesis, task-local
+  release artifacts, and this release pack.
 
 ### Merged
 
-- Management consulting and strategic analysis as situation assessment,
+- Management consulting and strategic analysis into situation assessment,
   synthesis, options/recommendation, and executive decision brief lenses.
-- Business analysis as business or needs analysis.
-- Policy analysis as policy or impact analysis.
-- Product discovery as product discovery analysis.
-- Technology assessment as a trigger-based lens.
-- Decision analysis as options/recommendation and executive decision brief
+- Business analysis into business or needs analysis.
+- Policy analysis into policy or impact analysis.
+- Product discovery into product discovery analysis.
+- Decision analysis into options/recommendation and executive decision brief
   support while leaving option evaluation owned by planning canon.
 - Intelligence-product style assessment and uncertainty communication while
-  leaving cognitive reasoning moves owned by Analytical Reasoning.
+  leaving reasoning techniques owned by Analytical Reasoning.
+- Technology assessment as a trigger-based lens, not a domain-expertise pack.
 
 ### Postponed
 
 - Deep software architecture, DevSecOps, cybersecurity, and AI engineering
-  domain expertise.
+  domain expertise for Stage 4 domain packs.
 - Quantitative financial modeling, market sizing, statistical modeling, and
-  economic modeling.
+  economic modeling until a task supplies evidence and scope.
 - Legal, regulatory, and compliance-specific analysis without authoritative
   source-backed scope.
 - Competitive intelligence as a standalone capability.
@@ -114,6 +142,23 @@ Architecture Review, or Engineering Review.
 - `ai-editorial-office/pipelines/review_pipeline.md`
 - `ai-editorial-office/project-state.md`
 
+## Canonical Owners Updated
+
+Updated canonical owners:
+
+- `AGENTS.md`: canonical ownership map and entry discipline reference.
+- `kb/capability_registry.md`: reusable capability and role-capability mapping.
+- `kb/shared_lifecycle_kernel.md`: lifecycle usage reference.
+- `kb/task_object_model.md`: artifact-view reference.
+- `agents/chief_editor.md`: selection responsibility.
+- `agents/review_agent.md`: review challenge responsibility.
+- `pipelines/review_pipeline.md`: review-stage usage reference.
+- `project-state.md`: current project state and normalization decision.
+
+New canonical owners introduced:
+
+- `kb/professional_analysis.md`
+
 ## Non-Canonical Files
 
 - `ai-editorial-office/BACKLOG.md`
@@ -123,7 +168,24 @@ Architecture Review, or Engineering Review.
 - `ai-editorial-office/tests/professional_analysis_smoke_test.md`
 - `ai-editorial-office/tests/README.md`
 - `ai-editorial-office/tasks/TASK-PROFESSIONAL-ANALYSIS-RELEASE/`
-- `/about` copied files and compact memory summaries
+- `about/` copied files and compact memory summaries
+
+## Release Metrics
+
+Canonical files changed: 10
+
+Research artifacts: 3
+
+Templates: 0 during S3.R4 release implementation; Release Pack template added
+afterward.
+
+Tests: 1 new manual smoke test plus `tests/README.md` update.
+
+Memory package updated: yes
+
+Validation scripts executed: 6
+
+Commits: `f24afbb9da7826b4726fb9642e94c49b06a81d63`
 
 ## Validation Results
 
@@ -145,11 +207,11 @@ Architecture Review, or Engineering Review.
   uncertainty, and what-would-change-this visibility.
 - Technology assessment could drift into Stage 4 domain expertise; the release
   keeps it trigger-based and source-dependent.
+- Project Lead may request boundary wording changes before acceptance.
 
 ## Open Questions
 
-- None blocking for release-candidate review.
-- Project Lead may still request wording or boundary changes before acceptance.
+- None blocking.
 
 ## Recommended Project Lead Decision
 
@@ -161,10 +223,21 @@ Changes Requested
 
 Recommended decision: Accepted.
 
-Rationale: the release satisfies the backlog goal, preserves architecture, adds
-clear capability boundaries, includes validation, and is ready for Project Lead
-architectural acceptance.
+Rationale: the release satisfies the S3.R4 backlog goal, preserves the frozen
+architecture, clearly separates Professional Analysis from adjacent
+capabilities, includes validation, and has a completed release pack for review.
 
 ## Suggested Next Release
 
 - `S3.R5 - Professional Communication`
+
+## Acceptance Checklist
+
+- Architecture preserved
+- Review gate unchanged
+- No new roles
+- No new pipelines
+- No lifecycle changes
+- Validation passed
+- Memory synchronized (if required)
+- Ready for Project Lead review

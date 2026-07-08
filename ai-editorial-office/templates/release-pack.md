@@ -1,5 +1,8 @@
 # Release Pack
 
+Release readiness rule: no release is considered ready for Project Lead review
+until a completed `release-pack.md` exists.
+
 ## Release
 
 - Release ID:
@@ -11,6 +14,19 @@
 
 One compact paragraph describing what changed, why it matters, and whether the
 release is ready for Project Lead review.
+
+## Architectural Impact
+
+Architecture impact:
+
+- None
+- Small
+- Medium
+- Major
+
+Reason:
+
+TBD
 
 ## Goal Of The Release
 
@@ -51,9 +67,35 @@ State the release goal in decision-ready language.
 
 - TBD
 
+## Canonical Owners Updated
+
+Updated canonical owners:
+
+- TBD
+
+New canonical owners introduced:
+
+- None
+
 ## Non-Canonical Files
 
 - TBD
+
+## Release Metrics
+
+Canonical files changed:
+
+Research artifacts:
+
+Templates:
+
+Tests:
+
+Memory package updated:
+
+Validation scripts executed:
+
+Commits:
 
 ## Validation Results
 
@@ -82,3 +124,14 @@ Recommended decision:
 ## Suggested Next Release
 
 - TBD
+
+## Acceptance Checklist
+
+- Architecture preserved
+- Review gate unchanged
+- No new roles
+- No new pipelines
+- No lifecycle changes
+- Validation passed
+- Memory synchronized (if required)
+- Ready for Project Lead review
