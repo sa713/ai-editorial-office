@@ -8,6 +8,10 @@ The pipeline is production research only. It does not create publishable copy, f
 
 The pipeline must produce task-local markdown artifacts that let Writer Agent, UX Writer, Review Agent, Final Editor, or Chief Editor continue without relying on chat history or model memory.
 
+Use `/kb/research_evidence.md` to choose the evidence mode:
+`no-research`, `compact-evidence`, or `full-evidence`. Evidence depth is
+conditional and claim-driven, not automatic.
+
 ## when to use
 
 Use this pipeline when any of these are true:
@@ -33,9 +37,14 @@ Do not use this pipeline when:
 
 If evidence is already sufficient, Chief Editor may skip this pipeline and document the reason in `/tasks/TASK-ID/orchestration_plan.md`.
 
+For low-risk tasks with no factual, product, policy, numeric, legal, HR,
+security, regulatory, medical, financial, or reputational claims, Chief Editor
+may record a `no-research` rationale instead of creating research artifacts.
+
 ## required agents
 
-By default, only core roles may be used. Explicitly legalized extension roles may be assigned only under `AGENTS.md` conditions and only for their bounded extension scope.
+Role legality and extension-role bounds are governed by `AGENTS.md`. This table
+only maps Research Pipeline responsibilities to current roles.
 
 | Stage responsibility | Required role | Agent spec |
 | --- | --- | --- |
@@ -47,7 +56,8 @@ By default, only core roles may be used. Explicitly legalized extension roles ma
 | Downstream independent verification of drafted material | `review_agent` | `/agents/review_agent.md` |
 | Downstream controlled finalization after approved review | `final_editor` | `/agents/final_editor.md` |
 
-This pipeline does not introduce any additional roles. It must not refer work to unauthorized extension roles; explicitly legalized extension roles may be referenced only under `AGENTS.md` conditions.
+This pipeline does not change role authority. It only routes research evidence
+to the current owner of the next valid stage.
 
 ## required inputs
 
@@ -100,6 +110,15 @@ The handoff is a navigation artifact only. It must not replace required research
 ## artifact creation policy
 
 Artifact creation must be intentional, conditional, risk-based, and downstream-driven. Do not create placeholder files for future use.
+
+Use `/kb/research_evidence.md` when choosing whether the task needs
+`no-research`, `compact-evidence`, or `full-evidence`. Research artifacts must
+have a consumer, traceability purpose, review purpose, governance need, or
+explicit task requirement.
+
+Low-risk no-claim tasks can use a recorded no-research rationale instead of
+`research.md`, `sources.md`, `facts.md`, or `claims_table.md`. High-governance
+material claims require the full evidence set.
 
 ### required artifacts
 
@@ -209,13 +228,18 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 
 ## source requirements
 
-All factual claims must trace back to `sources.md`, `facts.md`, or `claims_table.md`.
+All factual claims must trace back to `sources.md`, `facts.md`, or
+`claims_table.md`.
+
+Source type and proximity labels describe the origin and distance of a source
+from the claim. They are not evidence classes. Canonical evidence classes and
+confidence labels are owned by `/kb/editorial_evidence_framework.md`.
 
 `sources.md` must use the structure defined in `/agents/research_agent.md` and include:
 
 - source title;
 - source type;
-- source class;
+- source proximity/type label;
 - link or local path;
 - publication or update date;
 - evidence freshness;
@@ -223,7 +247,7 @@ All factual claims must trace back to `sources.md`, `facts.md`, or `claims_table
 - what the source was used for;
 - limitations.
 
-Allowed source classes:
+Allowed source proximity/type labels:
 
 - `primary`;
 - `secondary`;
@@ -245,7 +269,8 @@ Outdated or unknown-freshness sources must be marked. They cannot support high-r
 
 ## claims requirements
 
-`claims_table.md` is the claim-level source of truth for downstream factual use.
+`claims_table.md` is a claim-level evidence and traceability view over task
+state for downstream factual use.
 
 Each claim must include:
 
@@ -289,7 +314,8 @@ Research is sufficient only when all required conditions are met:
 
 - all required artifacts exist and are current for the assigned scope;
 - `research.md` separates confirmed facts, interpretations, assumptions, contradictions, gaps, and implications;
-- `sources.md` lists checked sources with class, freshness, reliability, use, and limitations;
+- `sources.md` lists checked sources with proximity/type label, freshness,
+  reliability, use, and limitations;
 - `facts.md` lists usable facts with source and confidence;
 - `claims_table.md` marks every key claim with status, evidence, confidence, factual sensitivity, and draft-use guidance;
 - `open-questions.md` marks which questions block downstream work, when real questions exist;

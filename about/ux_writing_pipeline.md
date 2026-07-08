@@ -48,7 +48,8 @@ If the task mixes article copy and UX copy, Chief Editor must record the selecte
 
 ## required agents
 
-By default, only core roles may be used for this pipeline. Explicitly legalized extension roles may be assigned only under `AGENTS.md` conditions and only for their bounded extension scope.
+Role legality and extension-role bounds are governed by `AGENTS.md`. This table
+only maps UX Writing Pipeline responsibilities to current roles.
 
 | Stage | Required role | Agent spec | Responsibility |
 | --- | --- | --- | --- |
@@ -59,61 +60,49 @@ By default, only core roles may be used for this pipeline. Explicitly legalized 
 | Review | `review_agent` | `/agents/review_agent.md` | Independently validate UX copy and artifacts |
 | Finalization | `final_editor` | `/agents/final_editor.md` | Create final deliverable after approved review |
 
-This pipeline must not assign work to unauthorized extension roles. Explicitly legalized extension roles may be assigned only under `AGENTS.md` conditions; revision in the current operating model is handled by `ux_writer` for UX copy or `research_agent` for evidence gaps, not by a separate Editor role.
+Revision in the current operating model is handled by `ux_writer` for UX copy or
+`research_agent` for evidence gaps, not by a separate Editor role.
 
 ## required inputs
 
-Pipeline execution follows `/kb/shared_lifecycle_kernel.md` stage context contracts and `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current stage or required by the selected depth:
+Pipeline execution follows `/kb/shared_lifecycle_kernel.md` stage context
+contracts and `AGENTS.md` short context loading policy. Load the shared task
+packet from those owners, then add only UX-specific context:
 
-- `AGENTS.md`;
-- `/project-state.md`, when continuing pipeline materialization or after context loss;
-- `/kb/task_statuses.md`;
-- `/tasks/TASK-ID/brief.md`;
-- `/tasks/TASK-ID/task-manifest.md`;
-- `/tasks/TASK-ID/status.md`;
-- `/tasks/TASK-ID/orchestration_plan.md`;
-- the selected pipeline: `/pipelines/ux_writing_pipeline.md`;
-- `/pipelines/research_pipeline.md`, when research, factual claims, or product claims are used;
-- `/agents/ux_writer.md`;
-- `/kb/ux_writing_guidelines.md`;
-- `/kb/glossary.md`;
-- `/kb/tone_of_voice.md`;
-- active client-profile files named in `task-manifest.md` or
-  `orchestration_plan.md`, only when `client_profile` is set;
-- product context, UI fragments, screenshots, flows, existing copy, requirements, or product notes when applicable;
-- the latest relevant handoff file for the current stage.
+- this pipeline file;
+- `/pipelines/research_pipeline.md`, when research, factual claims, or product
+  claims are used;
+- `/agents/ux_writer.md` and other assigned role specs when needed by the
+  active stage;
+- UX guidance, glossary, tone, product context, client-profile, handoff, and
+  source files named by task artifacts.
 
 If `TASK-ID`, `brief.md`, `task-manifest.md`, `status.md`, `orchestration_plan.md`, required product context, or required terminology source is missing, production must not continue until Chief Editor creates or repairs the missing artifact, or the task is set to `blocked`.
 
 ## required artifacts
 
-These artifacts define the UX Writing Pipeline artifact set. Required/conditional/optional depth is governed by the artifact creation policy below.
+Shared task artifacts and ownership are defined in `AGENTS.md`,
+`/kb/task_object_model.md`, and `/kb/shared_lifecycle_kernel.md`. UX Writing
+Pipeline adds these task-type views when the selected depth requires them:
 
-| Artifact | Required when | Owner |
-| --- | --- | --- |
-| `/tasks/TASK-ID/brief.md` | always | `intake_agent` or `chief_editor` |
-| `/tasks/TASK-ID/task-manifest.md` | always | current owner or `chief_editor` |
-| `/tasks/TASK-ID/status.md` | always | current owner or `chief_editor` |
-| `/tasks/TASK-ID/orchestration_plan.md` | always | `chief_editor` |
-| `/tasks/TASK-ID/research.md` | research is required | `research_agent` |
-| `/tasks/TASK-ID/sources.md` | factual or product claims are used | `research_agent` |
-| `/tasks/TASK-ID/facts.md` | factual or product claims are used | `research_agent` |
-| `/tasks/TASK-ID/claims_table.md` | factual or product claims are used | `research_agent` |
-| `/tasks/TASK-ID/ux-copy.md` | always | `ux_writer` |
-| `/tasks/TASK-ID/content-map.md` | always | `ux_writer` |
-| `/tasks/TASK-ID/states-table.md` | always | `ux_writer` |
-| `/tasks/TASK-ID/terminology-notes.md` | always | `ux_writer` |
-| `/tasks/TASK-ID/ux-writer-notes.md` | always | `ux_writer` |
-| `/tasks/TASK-ID/review.md` | always before finalization | `review_agent` |
-| `/tasks/TASK-ID/qa-checklist.md` | separate checklist required by downstream consumer, high-governance, task requirement, blocker/open-question state, or traceability need | `review_agent` |
-| `/tasks/TASK-ID/review-summary.md` | separate concise transfer is consumed downstream | `review_agent` |
-| `/tasks/TASK-ID/final.md` | after approved review | `final_editor` |
-| `/tasks/TASK-ID/finalization-notes.md` | controlled changes, unresolved risks/blockers, downstream governance, high-governance, task requirement, or traceability need | `final_editor` |
-| `/tasks/TASK-ID/final_decision.md` | after finalization | `chief_editor` |
+- `ux-copy.md`;
+- `content-map.md`, when flow or screen relationships affect review or restart;
+- `states-table.md`, when UI states, triggers, errors, or fallbacks affect copy;
+- `terminology-notes.md`, when terminology source or conflicts matter;
+- `ux-writer-notes.md`, when assumptions, caveats, or product questions affect
+  review;
+- UX research artifacts when factual or product claims require them.
 
 ## artifact creation policy
 
 Artifact creation must be intentional, conditional, risk-based, and downstream-driven. Do not create placeholder files for future use.
+
+For low-risk and simple source-light standard tasks, use
+`/kb/compact_execution.md` to apply compact execution without weakening
+review-gate. Chief Editor must record the compact rationale; `review.md`
+remains required before finalization; optional artifacts are not created
+automatically. Review Agent should not require optional artifacts when core
+traceability, restartability, and governance evidence are sufficient.
 
 ### required artifacts
 
@@ -156,24 +145,12 @@ A stage cannot be considered complete if `task-manifest.md` is stale. If `task-m
 
 ## allowed stages
 
-Allowed production stages:
+Use only statuses from `/kb/task_statuses.md`. For UX work, the production
+status may be `writing` or the optional explicit `ux-writing` status defined by
+the status owner; `editing` remains only the optional revision/status bridge.
 
-- `intake`;
-- `planning`;
-- `research`, when product context or factual/product claims require verification;
-- `writing`, used for UX writing by `ux_writer`;
-- `editing`, only as an optional UX Writer revision checkpoint or status bridge; it is not required and does not introduce a separate Editor role;
-- `review`;
-- `changes_requested`;
-- `approved`;
-- `human_approval_required`;
-- `finalization`;
-- `finalized`;
-- `blocked`;
-- `failed`;
-- `archived`.
-
-No stage may merge UX writing and review. No stage may merge finalization and Chief Editor governance decision. No stage may use UX Writer to make product ownership decisions.
+No stage may merge UX writing with review or finalization with Chief Editor
+governance. No stage may use UX Writer to make product ownership decisions.
 
 ## stage sequence
 
@@ -183,50 +160,34 @@ Default production sequence:
 intake -> chief_editor orchestration -> research if needed -> ux-writing -> review -> finalization -> chief_editor final governance decision
 ```
 
-Operational sequence:
+UX-specific route:
 
-| Step | Status before | Role | Action | Required outputs | Status after |
-| --- | --- | --- | --- | --- | --- |
-| 1 | none or `intake` | `intake_agent` | Normalize request, target surface, available product context, and missing states | `brief.md`, `status.md`, intake handoff | `intake` or `blocked` |
-| 2 | `intake` | `chief_editor` | Select UX Writing Pipeline, classify product/factual risk, assign next role | `orchestration_plan.md`, `status.md`, orchestration handoff | `research`, `planning`, or `blocked` |
-| 3 | `research` | `research_agent` | Verify product context or factual/product claims when required | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, research handoff | `planning`, `blocked`, or `failed` |
-| 4 | `planning` | `chief_editor` | Confirm product context and terminology sufficiency; route to UX writing | updated `orchestration_plan.md`, `status.md`, handoff | `writing`, `research`, or `blocked` |
-| 5 | `writing` | `ux_writer` | Create UX copy artifacts from approved inputs and KB | `ux-copy.md`, `content-map.md`, `states-table.md`, `terminology-notes.md`, `ux-writer-notes.md`, UX handoff | `review`, or optional `editing` only for revision checkpoint |
-| 6 | `review` | `review_agent` | Independently validate UX copy, product traceability, terminology, clarity, and artifacts | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, review handoff | `approved`, `changes_requested`, `blocked`, or `human_approval_required` |
-| 7 | `changes_requested` | `ux_writer` or `research_agent` | Resolve review findings or evidence gaps | updated UX or research artifacts, handoff | `review`, `writing`, `research`, or `blocked` |
-| 8 | `approved` | `final_editor` | Produce controlled final deliverable | `final.md`, conditional finalization notes/checklist, finalization handoff | `approved` |
-| 9 | `approved` | `chief_editor` | Validate finalization and make governance decision | `final_decision.md`, updated `status.md` | `finalized` or `human_approval_required` |
+1. Chief Editor selects UX Writing Pipeline and confirms product/factual risk.
+2. Research runs only when product context or factual/product claims require
+   verification.
+3. Chief Editor confirms product context and terminology sufficiency.
+4. UX Writer creates UX copy and required UX support artifacts.
+5. Review Agent independently reviews the current UX package.
+6. Final Editor finalizes only after approved review.
+7. Chief Editor records the final governance decision.
 
 Direct `writing` -> `review` handoff is valid in the current operating model after required UX writing artifacts exist and the latest handoff from `ux_writer` to `review_agent` is recorded. If a local handoff or orchestration note uses `ux-writing` as the stage label, `ux-writing` -> `review` is valid under the same conditions. `editing` may be used only as an optional UX Writer revision or ready-for-review bridge. It must not assign work to a separate Editor role.
 
 ## status transitions
 
-Operational statuses must come from `/kb/task_statuses.md`.
+Operational statuses and transitions are owned by `/kb/task_statuses.md`.
+UX-specific transition notes:
 
-Allowed critical transitions:
-
-| From | To | Trigger | Responsible role | Required artifact evidence |
-| --- | --- | --- | --- | --- |
-| `intake` | `research` | Product context or factual/product claims need verification | `chief_editor` | `orchestration_plan.md`, `status.md` |
-| `intake` | `planning` | Product context is supplied and research is not required | `chief_editor` | `orchestration_plan.md`, `status.md` |
-| `research` | `planning` | Product or factual research scope complete | `research_agent` recommends, `chief_editor` records | research artifacts, research handoff |
-| `planning` | `writing` | Chief Editor confirms product context and terminology are sufficient | `chief_editor` | `orchestration_plan.md`, status update, handoff |
-| `writing` | `review` | Required UX writing artifacts are complete and review is required | `ux_writer` | `ux-copy.md`, `content-map.md`, `states-table.md`, `terminology-notes.md`, `ux-writer-notes.md`, handoff to `review_agent` |
-| `ux-writing` | `review` | Local stage label used for UX writing completion and review is required | `ux_writer` | `ux-copy.md`, `content-map.md`, `states-table.md`, `terminology-notes.md`, `ux-writer-notes.md`, handoff to `review_agent` |
-| `writing` | `editing` | Status model bridge or UX Writer revision checkpoint | `ux_writer` | UX artifacts, UX handoff |
-| `editing` | `review` | UX copy is ready for independent review | `ux_writer` or `chief_editor` | `ux-copy.md`, `content-map.md`, `states-table.md`, `terminology-notes.md`, handoff |
-| `writing` | `research` | UX Writer finds missing product context or evidence | `ux_writer` recommends | `ux-writer-notes.md`, `states-table.md`, handoff or status note |
-| `writing` | `blocked` | UX Writer cannot continue safely | `ux_writer` | `status.md`, failure note or handoff |
-| `review` | `approved` | Review outcome is `approved` | `review_agent` | `review.md`, conditional checklist/summary, handoff |
-| `review` | `changes_requested` | Review outcome is `changes_requested` | `review_agent` | `review.md`, conditional checklist/summary, handoff |
-| `review` | `blocked` | Review outcome is `blocked` | `review_agent` | `review.md`, blocker evidence |
-| `review` | `human_approval_required` | Review requires human or product decision | `review_agent` or `chief_editor` | `review.md`, `status.md` escalation |
-| `changes_requested` | `writing` | UX copy changes are required | `review_agent` recommends, `chief_editor` or owner records | `review.md`, handoff to `ux_writer` |
-| `changes_requested` | `research` | Product context or evidence gaps are required | `review_agent` recommends, `chief_editor` or owner records | `review.md`, handoff to `research_agent` |
-| `changes_requested` | `review` | Required changes are complete and ready for re-review | responsible production role | updated artifacts, handoff |
-| `approved` | `human_approval_required` | Human approval is required before release, publication, delivery, or closure | `chief_editor` | `status.md`, `review.md` or brief requirement |
-| `approved` | `finalized` | Chief Editor validates finalization and no human approval blocks closure | `chief_editor` | `final.md`, conditional finalization notes, `task-manifest.md`, `final_decision.md` |
-| `blocked` | any valid recovery status | Blocker resolved | current owner or `chief_editor` | updated `status.md`, resolution evidence |
+- route to `research` when product context or factual/product claims need
+  verification, otherwise to `planning`;
+- route from `planning` to UX production only after product context and
+  terminology are sufficient;
+- route from UX production to `review` after required UX artifacts and handoff
+  exist;
+- route `changes_requested` findings back to UX production, `research`, or
+  `review` according to the repair owner and re-review scope;
+- route from `approved` toward finalization/governance only under the shared
+  review-gate and human-approval rules.
 
 If a desired transition is not allowed by `/kb/task_statuses.md`, use the nearest valid transition and document the reason in `status.md`.
 
@@ -433,35 +394,13 @@ Release, publication, or delivery requires human approval when required by `brie
 
 ## handoff requirements
 
-Every role transition normally creates a handoff file following `/templates/artifacts/handoff_template.md`. Compact execution may omit the finalization-to-Chief-Editor handoff only when `task-manifest.md` is current and no blocker, traceability need, governance escalation, contradiction, version conflict, evidence dispute, reviewer uncertainty, or human approval complexity exists.
-
-Expected handoffs:
-
-- `handoff-intake-intake-agent-to-chief-editor.md`;
-- `handoff-planning-chief-editor-to-research-agent.md`, when research is required;
-- `handoff-planning-chief-editor-to-ux-writer.md`, when UX writing can begin;
-- `handoff-research-research-agent-to-chief-editor.md` or `handoff-research-research-agent-to-ux-writer.md`;
-- `handoff-ux-writing-ux-writer-to-review-agent.md`;
-- `handoff-review-review-agent-to-chief-editor.md`;
-- `handoff-review-review-agent-to-ux-writer.md`, when changes are requested from UX Writer;
-- `handoff-review-review-agent-to-research-agent.md`, when more research or product evidence is required;
-- `handoff-finalization-final-editor-to-chief-editor.md`, when compact omission is not justified.
-
-Each handoff must include:
-
-- sending role and receiving role;
-- reference to `/tasks/TASK-ID/task-manifest.md`;
-- what changed since the previous stage;
-- artifacts created or updated;
-- constraints changed, if any;
-- blockers;
-- next role;
-- next action;
-- expected outputs;
-- forbidden outputs;
-- escalation conditions.
-
-Handoffs must not replace the primary artifacts for the completed stage.
+Handoff behavior is owned by `AGENTS.md`,
+`/kb/shared_lifecycle_kernel.md`, and
+`/templates/artifacts/handoff_template.md`. UX writing handoffs normally
+connect Chief Editor, Research Agent when used, UX Writer, Review Agent, Final
+Editor, and Chief Editor governance. Handoffs must point to current UX copy,
+state coverage, terminology decisions, product-context gaps, and blockers when
+material.
 
 ## quality gates
 
@@ -568,56 +507,30 @@ Retry rules:
 
 ## completion conditions
 
-UX Writing Pipeline is complete only when:
+UX Writing Pipeline is complete only when the shared lifecycle and status
+owners allow closure, and the UX-specific packet is current:
 
-- required task artifacts exist in `/tasks/TASK-ID/`;
-- `brief.md`, `task-manifest.md`, `status.md`, and `orchestration_plan.md` are current;
-- research artifacts exist if research was required;
-- source, fact, and claim artifacts exist if factual or product claims were used;
-- `ux-copy.md` exists and conditional UX support artifacts exist when needed by flow complexity, terminology, state coverage, review, or risk mode;
-- independent `review.md` exists and outcome is `approved`;
-- `qa-checklist.md` exists when separate checklist depth is required, otherwise checks are embedded in `review.md`;
-- `review-summary.md` exists when needed for concise governance transfer;
-- `final.md` exists and was created by `final_editor` after approved review;
-- `finalization-notes.md` exists when controlled changes or unresolved risks need to be recorded;
-- `finalization-checklist.md` exists when high-governance depth, downstream governance, traceability proof, task-specific requirement, or Chief Editor requires it;
-- `final_decision.md` exists and was created by `chief_editor`;
-- `status.md` records a valid final state under `/kb/task_statuses.md`;
-- human or product approval is documented if required by brief, status, review, finalization notes, or final decision;
-- no unresolved blocker prevents closure.
+- required UX copy and support artifacts exist for the selected flow/state
+  complexity;
+- required research, source, fact, and claim artifacts exist when factual or
+  product claims were used;
+- independent `review.md` approves the current UX package;
+- finalization and Chief Editor governance artifacts exist when required;
+- human or product approval and blockers are resolved or explicitly carried by
+  the governing status.
 
 Completion means the UX writing workflow is artifact-complete and governance-closed. It does not imply release, publication, or delivery unless required human approval is explicitly documented.
 
 ## restart protocol
 
-After context loss, continue from artifacts, not chat history.
+Restart behavior is owned by `AGENTS.md` and
+`/kb/shared_lifecycle_kernel.md`. For UX Writing Pipeline restarts, add only
+these checks to the shared restart packet:
 
-Receiving or restarting agents use the short context path from `/kb/shared_lifecycle_kernel.md` and `AGENTS.md`:
-
-1. `AGENTS.md` or a short reference to its active invariants.
-2. `/tasks/TASK-ID/task-manifest.md`.
-3. The latest relevant handoff file.
-4. The current working artifact.
-5. Only `/pipelines/ux_writing_pipeline.md`, `/pipelines/research_pipeline.md`, UX KB, terminology source, or editorial knowledge directly needed for the next action.
-
-Do not read all pipelines, all agent specs, all old task folders, all retrospectives, all versions, or the full project tree by default.
-
-Expanded reading is allowed for high-governance, conflict, product-context uncertainty, or restart uncertainty. In that case read the exact source/evidence files, `status.md`, review trail, governance artifacts, product context, terminology source, or old versions needed to resolve the risk.
-
-Then perform this restart check:
-
-- confirm `TASK-ID`;
-- confirm the current-version pointer names the active artifact when multiple versions exist;
-- do not use latest modified time as the current-version source;
-- stop and ask Chief Editor if current version state is unclear;
-- confirm current status is valid under `/kb/task_statuses.md`;
-- confirm the selected pipeline is UX Writing Pipeline;
-- confirm current owner role and next role are valid core roles or explicitly legalized extension roles whose `AGENTS.md` conditions apply;
-- compare `task-manifest.md`, `status.md`, `orchestration_plan.md`, and latest handoff for conflicts;
-- identify the last completed quality gate;
-- verify required artifacts for that gate;
-- identify missing, stale, contradictory, or unsupported product context;
-- identify unresolved terminology conflicts or missing UI states;
-- continue from the next incomplete stage or set/recommend `blocked`.
-
-Model memory, prior chat, or unsaved notes must not be used as product context, terminology authority, evidence, approval, review outcome, or workflow state.
+- selected pipeline is UX Writing Pipeline;
+- current UX copy/version and relevant state tables are identified;
+- product context, feature availability, and terminology sources are current;
+- unresolved terminology conflicts, missing UI states, or unsupported product
+  behavior are visible;
+- required UX research artifacts are present when research was required;
+- the last completed UX quality gate is clear.

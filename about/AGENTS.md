@@ -43,12 +43,18 @@
 | Task object model and artifact view mapping | `/kb/task_object_model.md` | task-specific values, restart pointers, and local consequences |
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
+| Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
+| Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
+| Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
+| Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
+| Editorial quality attributes and tradeoffs | `/kb/editorial_quality_attributes.md` | task-specific quality priorities, accepted tradeoffs, and preservation risks |
+| Editorial learning and canon evolution | `/kb/editorial_learning_framework.md` | task-specific learning candidates, canon update candidates, reusable patterns, and stale-canon notes |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
 | Task-type scaffolds | `/templates/tasks/*.md` | setup scaffolds, not policy restatement |
 | Client profiles and client-specific editorial policy | `/kb/clients/CLIENT-ID/*.md` | activation flag in `task-manifest.md`, short references in orchestration and review artifacts |
-| Editorial quality, usefulness, modes, and failure patterns | `editorial_knowledge/*.md` | editorial judgment, not operational task state |
+| Editorial knowledge, examples, modes, and local judgment | `editorial_knowledge/*.md` | reusable judgment, not the canonical quality attribute model or operational task state |
 | Task manifest | `/tasks/TASK-ID/task-manifest.md` | compact current state, artifact inventory, active constraints, next action |
 | Status | `/tasks/TASK-ID/status.md` | transition history, blockers, lifecycle rationale |
 | Orchestration plan | `/tasks/TASK-ID/orchestration_plan.md` | task-specific execution contract |
@@ -86,11 +92,35 @@ existing markdown system should be understood and extended.
 - `/kb/capability_registry.md` defines reusable capabilities and maps them to
   the current roles that wrap them when accountability, independence, or
   decision authority is needed.
+- `/kb/shared_lifecycle_kernel.md` defines shared stages, gates, artifact
+  responsibilities, expansion triggers, human approval boundary, and stage
+  context contracts.
+- `/kb/editorial_evidence_framework.md` defines evidence classes, confidence
+  labels, evidence requirements, and the compact evidence section standard used
+  when decisions, recommendations, reviews, or final closure depend on material
+  evidence.
+- `/kb/editorial_failure_modes.md` defines common failure modes and recovery
+  actions for wrong-task work, weak evidence, hidden assumptions, scope drift,
+  role confusion, weak challenge, premature finalization, and Codex task
+  dilution.
+- `/kb/editorial_planning_framework.md` defines lightweight planning levels,
+  credible option generation, option evaluation dimensions, selected approach
+  justification, and reconsideration triggers.
+- `/kb/audience_outcome_alignment.md` defines audience classes, outcome types,
+  alignment pattern, detail/tone/format fit, mismatch warning signs, correction
+  patterns, and Codex-specific audience guidance.
+- `/kb/editorial_quality_attributes.md` defines shared quality attributes,
+  quality tradeoffs, task-specific quality priorities, lifecycle preservation,
+  and Codex implementation-task quality.
+- `/kb/editorial_learning_framework.md` defines reusable learning types,
+  canonization criteria, learning extraction, canon evolution rules, stale-canon
+  challenge, and canon retirement.
 
 Do not create a new role merely because a capability is named. Source
-conversion, integrity checking, context assembly, and memory export remain
-capabilities, checks, scripts, or task-local mini-contracts unless a separate
-reviewed system update explicitly changes the role set.
+conversion, integrity checking, context assembly, learning extraction, canon
+evolution, stale canon detection, and memory export remain capabilities,
+checks, scripts, or task-local mini-contracts unless a separate reviewed system
+update explicitly changes the role set.
 
 ## Главные инварианты
 
@@ -105,6 +135,9 @@ reviewed system update explicitly changes the role set.
 7. Агент не должен скрывать неопределённость, пробелы в источниках или спорные допущения.
 8. Если данных недостаточно для уверенного вывода, это должно быть явно указано.
 9. Если задача поставлена как редакционная задача, редакция должна быть активирована до производства результата.
+10. Если этап показывает признаки failure mode, агент должен восстановиться на
+    минимальном безопасном этапе жизненного цикла по
+    `/kb/editorial_failure_modes.md`, а не полировать слабый результат.
 
 ## Editorial entry discipline
 
@@ -125,6 +158,14 @@ Before production starts, Chief Editor must route the task editorially:
 - select the active capabilities required by the task;
 - determine the required roles and bounded extension roles;
 - make a compact preflight decision about input sufficiency before production;
+- identify the evidence basis and confidence needed for material route
+  decisions, recommendations, review findings, and governance closure;
+- choose the planning level and consider credible options before committing to
+  a non-trivial route, recommendation, or implementation plan;
+- identify the audience, intended outcome, required action or decision, and
+  detail/tone/format fit before handing work to production when material;
+- identify the quality attributes and accepted tradeoffs that matter for the
+  task before production when material;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` before
   handing work to Writer Agent or UX Writer;
 - record the routing decision in `orchestration_plan.md`, `task-manifest.md`,
@@ -135,11 +176,28 @@ enough to start production, what is missing, and whether the next action is
 `ask`, `constrain`, `proceed`, or `block`. It is a decision gate, not a new
 pipeline, role, status, or mandatory standalone artifact.
 
+If preflight or later stage work shows a failure-mode warning sign, use
+`/kb/editorial_failure_modes.md` to name the failure and choose the smallest
+recovery action before continuing.
+
 The Editorial Decision Frame records the chosen editorial route, considered
 alternatives, rejection reasons, Writer/UX Writer contract, review focus, and
 reroute triggers. It lives inside `orchestration_plan.md`; it is not a new
 pipeline, role, status, `final_decision.md`, or mandatory standalone
 `editorial_decision.md`.
+
+`/kb/editorial_planning_framework.md` defines how to generate and evaluate
+credible alternatives before the Editorial Decision Frame records the selected
+route.
+
+`/kb/audience_outcome_alignment.md` defines how to shape route, depth,
+structure, tone, evidence, and final artifact fit around the reader and the
+decision, action, understanding, or publication outcome the artifact must
+enable.
+
+`/kb/editorial_quality_attributes.md` defines the shared vocabulary for what
+quality means in a task, how quality attributes trade off, and how intended
+quality must be preserved across handoffs, review, and finalization.
 
 The frame must remain a short management block, not an analytical document.
 Alternatives exist to prove that the chosen route was deliberate: normally use
@@ -537,9 +595,19 @@ the completed result worse retroactively.
 When feedback exists, `chief_editor` may create `/tasks/TASK-ID/feedback.md`.
 No user reaction means no feedback artifact is required.
 
+Post-delivery feedback classification follows
+`/kb/customer_feedback_loop.md`:
+
+- `task_local`;
+- `preference`;
+- `observation`;
+- `confirmed_pattern`;
+- `system_change_candidate`.
+
 If the user asks for changes after delivery, distinguish:
 
 - feedback as a quality signal;
+- a task/customer preference that is not a global rule;
 - a new task when the request broadens or changes scope;
 - a bounded revision of the current task only when the current system rules
   allow it.
@@ -548,8 +616,16 @@ A single feedback item does not change the system automatically. System changes
 must follow:
 
 ```text
-single feedback ↓ repeated signal ↓ validated pattern ↓ system change proposal ↓ separate reviewed system update
+observation ↓ confirmed_pattern ↓ system_change_candidate ↓ separate reviewed system update
 ```
+
+Feedback does not write automatically to `engineering_watchlist.md`, backlog,
+or production rules. A watchlist or backlog entry requires an explicit Chief
+Editor decision.
+
+Reusable learning, canon updates, pattern promotion, and stale-canon challenges
+follow `/kb/editorial_learning_framework.md`. Feedback or task-local notes may
+produce candidates, but they do not become canon automatically.
 
 ## Risk Modes
 
@@ -1036,6 +1112,11 @@ Research-артефакты должны отделять:
 
 Агент должен отличать retrieval от reasoning. Найденный факт должен быть помечен как найденный в источнике, а вывод на основе фактов — как вывод.
 
+When a material claim or decision is made, apply the evidence-confidence model
+from `/kb/editorial_evidence_framework.md`: name the evidence basis, confidence
+level, assumptions, unknowns, validation needed, and residual risk at the depth
+the task requires.
+
 Если в `/kb` есть несколько противоречивых материалов, агент не выбирает удобный вариант молча. Он фиксирует конфликт, указывает файлы и переводит вопрос в clarification или blocked-состояние, если конфликт влияет на материал.
 
 ## Anti-hallucination rules
@@ -1049,6 +1130,7 @@ Research-артефакты должны отделять:
 - утверждать, что review пройден, если нет review-артефакта;
 - утверждать, что материал готов, если не проверены обязательные условия готовности;
 - заполнять пробелы в research правдоподобными деталями без явной пометки;
+- использовать уверенный тон как замену проверяемому evidence basis;
 - скрывать, что вывод основан на неполном контексте.
 
 Если агент вынужден сделать рабочее допущение, оно должно быть явно оформлено:

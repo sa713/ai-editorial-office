@@ -20,6 +20,13 @@ Memory package stabilization.
   policy, and review checklist.
 - architecture foundation framing: task object model and capability registry.
 - shared lifecycle kernel and stage context contracts.
+- editorial evidence framework with evidence taxonomy, confidence labels, and
+  evidence section standard.
+- editorial failure modes and recovery playbook.
+- editorial planning and option evaluation framework.
+- audience and outcome alignment framework.
+- editorial quality attributes framework.
+- editorial learning and canon evolution framework.
 
 ## Current core roles
 - chief_editor
@@ -62,7 +69,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, and `/kb/shared_lifecycle_kernel.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, and `/kb/editorial_learning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -104,6 +111,30 @@ Maintain `/about` as a compact project-memory export:
   task-type sequencing, artifact depth, and local quality gates.
 - Context loading is stage-driven through shared lifecycle context packets before
   expanding to optional project documents.
+- Evidence quality is first-class: material decisions, recommendations, review
+  findings, and final decisions should expose evidence basis, confidence,
+  assumptions, unknowns, validation needed, and residual risk according to
+  `/kb/editorial_evidence_framework.md`.
+- Failure recovery is lightweight and stage-local: warning signs are handled
+  through `/kb/editorial_failure_modes.md` by naming the failure, choosing the
+  smallest recovery action, and returning to the correct lifecycle stage or a
+  smaller stronger output.
+- Planning is lightweight and option-aware: non-trivial routes,
+  recommendations, and implementation plans should consider credible
+  alternatives and record selected approach, tradeoffs, uncertainty, and
+  reconsideration triggers according to `/kb/editorial_planning_framework.md`.
+- Audience and outcome alignment is first-class: artifacts should identify who
+  they are for, what decision/action/understanding/publication outcome they
+  enable, and what detail, evidence, tone, format, and omissions make them
+  useful according to `/kb/audience_outcome_alignment.md`.
+- Quality attributes are explicit and adaptable: tasks may name priority
+  attributes, accepted tradeoffs, and quality-preservation risks according to
+  `/kb/editorial_quality_attributes.md` without creating scoring, checklists,
+  or a separate review process.
+- Learning and canon evolution are deliberate: reusable learning, canon update
+  candidates, stale assumptions, and pattern promotion follow
+  `/kb/editorial_learning_framework.md`; task-local notes do not become canon
+  automatically.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.
@@ -134,6 +165,15 @@ Maintain `/about` as a compact project-memory export:
   `ai-editorial-office/project_tree.md` location is retired.
 - Use `ai-editorial-office/scripts/check_about_memory_package.sh` to check the
   `/about` package file count and copied-file sync status.
+- For audience-sensitive or implementation tasks, read
+  `/kb/audience_outcome_alignment.md` before choosing route, detail, tone,
+  format, or Codex prompt shape.
+- For quality-sensitive tasks, read `/kb/editorial_quality_attributes.md`
+  before choosing quality priorities, accepting tradeoffs, or reviewing whether
+  the artifact optimized for the right qualities.
+- For post-task learning, repeated findings, canon updates, or stale-canon
+  concerns, read `/kb/editorial_learning_framework.md` before promoting any
+  task-local note into reusable canon.
 
 ## Artifact minimalism
 Owned by `AGENTS.md` and the artifact templates. Project state may record implementation progress, but it should not duplicate the permanent responsibility map.
@@ -153,12 +193,18 @@ Before continuing work:
 3. For architecture-foundation or lifecycle work, read
    /kb/task_object_model.md, /kb/capability_registry.md, and
    /kb/shared_lifecycle_kernel.md.
-4. For memory-package work, read /about/project_tree.md and relevant
+4. For evidence-sensitive analysis, recommendations, review, or governance,
+   read /kb/editorial_evidence_framework.md.
+5. For weak-stage, wrong-task, scope drift, review-bypass, implementation-task
+   dilution, or recovery work, read /kb/editorial_failure_modes.md.
+6. For non-trivial route, recommendation, architecture, product, or
+   implementation planning, read /kb/editorial_planning_framework.md.
+7. For memory-package work, read /about/project_tree.md and relevant
    CHATGPT_MEMORY_*.md files.
-5. Read relevant /agents/*.md.
-6. Read relevant /templates/artifacts/*.md.
-7. Read /kb/task_statuses.md.
-8. For task-local work, read /tasks/TASK-ID/task-manifest.md before detailed task files.
-9. If task-manifest.md names an active client profile, read only the listed
+8. Read relevant /agents/*.md.
+9. Read relevant /templates/artifacts/*.md.
+10. Read /kb/task_statuses.md.
+11. For task-local work, read /tasks/TASK-ID/task-manifest.md before detailed task files.
+12. If task-manifest.md names an active client profile, read only the listed
    `/kb/clients/CLIENT-ID/` files.
-10. Continue from the current focus without redesigning the whole system.
+13. Continue from the current focus without redesigning the whole system.

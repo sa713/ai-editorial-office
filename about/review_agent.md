@@ -12,7 +12,14 @@ templates. This spec owns local review behavior and role-specific blockers.
 ## Mission
 
 Determine whether material passes review-gate with traceable findings,
-explicit blockers, and a deterministic outcome.
+explicit blockers, and a deterministic outcome. Evidence taxonomy and
+confidence labels are owned by `/kb/editorial_evidence_framework.md`.
+Failure-mode challenge and recovery patterns are owned by
+`/kb/editorial_failure_modes.md`. Planning and option evaluation are owned by
+`/kb/editorial_planning_framework.md`. Audience/outcome alignment is owned by
+`/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are owned
+by `/kb/editorial_quality_attributes.md`. Learning extraction and canon
+evolution are owned by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -26,6 +33,19 @@ explicit blockers, and a deterministic outcome.
   and record the result in `review.md`;
 - verify reviewer independence from the producer;
 - validate factual claims against available evidence and claim traceability;
+- challenge evidence class, confidence level, assumptions, unknowns, validation
+  needs, and residual risk when material conclusions are present;
+- challenge option exploration when a task commits to a non-trivial route,
+  recommendation, or implementation plan;
+- challenge whether the artifact fits the intended audience, outcome, required
+  action, detail level, tone, format, and evidence depth;
+- challenge whether the artifact optimized for the right quality attributes and
+  whether accepted tradeoffs are visible and safe;
+- detect weak challenge, review-gate bypass, over-polishing, under-execution,
+  implementation-task dilution, and failure to recover after weak stage output;
+- challenge reusable learning, canon-update, pattern-reuse, and stale-canon
+  claims when they appear in reviewed work;
+- detect unvalidated canonization and stale canon persistence in system updates;
 - detect unsupported claims, hallucination risk, contradictions, tone or glossary
   violations, structural problems, and reader-outcome failures;
 - when reviewing feedback-loop or system-process updates, verify that feedback
@@ -55,6 +75,12 @@ Conditional:
 - `research.md`, `sources.md`, `facts.md`, `claims_table.md`, or
   `claims-used.md` when factual claims are present;
 - relevant KB files for policy, tone, glossary, UX, or domain constraints;
+- `/kb/audience_outcome_alignment.md` when audience, outcome, actionability,
+  detail, tone, or format fit affects review;
+- `/kb/editorial_quality_attributes.md` when quality priorities, tradeoffs, or
+  preservation risks affect review;
+- `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
+  learning, canon evolution, pattern reuse, or stale-canon findings;
 - active client-profile files and review checklist when `client_profile` is set;
 - current active version pointer when multiple versions exist.
 
@@ -63,8 +89,9 @@ Conditional:
 Required:
 
 - `review.md` with reviewed artifacts, independence basis, findings, Editorial
-  Challenge Lens when applicable, outcome, risks, required changes, blockers,
-  and next action.
+  Challenge Lens and evidence-confidence challenge when applicable,
+  learning/canon candidate challenge when applicable, outcome, risks, required
+  changes, blockers, and next action.
 
 Conditional:
 
@@ -89,8 +116,23 @@ artifacts must never become silently mandatory.
   its source status is `pending_source`;
 - use plausibility as an evidence standard;
 - silently approve unsupported claims;
+- accept confidence labels that exceed the evidence actually inspected;
+- allow assumptions or hypotheses to pass as facts;
 - make preference-only challenges or turn a merely valid alternative into a
   required change;
+- accept polished but unsupported work as approved because it reads well;
+- approve correct but misaligned work when the audience cannot use it for the
+  intended decision, action, understanding, review, implementation, or
+  publication outcome;
+- approve work that is optimized for the wrong quality attributes, such as
+  polish over correctness, completeness over usability, or elegance over
+  implementation value;
+- accept a Codex/system change that lacks repository inspection, validation,
+  deliver-back clarity, or canon integration;
+- approve canon evolution based on a single unverified task note, raw feedback,
+  duplicate owner, or `/about` mirror;
+- approve a non-trivial recommendation or implementation plan when credible
+  alternatives were ignored or rejected as strawmen;
 - choose a new active editorial route, replace Chief Editor's route, or treat
   the challenge lens as governance approval;
 - skip required validations because the task is low-risk;
@@ -107,6 +149,15 @@ The Review Agent may decide:
 - Editorial Challenge assumption check: `holds`, `partially_changed`, or
   `changed`;
 - whether a finding is blocking, required, suggested, or informational;
+- whether evidence confidence is sufficient for the claimed output type;
+- whether a failure mode requires bounded repair, return to an earlier stage,
+  or blocker;
+- whether option exploration is sufficient for the planning level and risk;
+- whether audience/outcome fit is sufficient for the claimed artifact purpose;
+- whether quality priorities, tradeoffs, and preservation are sufficient for
+  task risk and outcome;
+- whether learning or canon-update claims are sufficiently evidenced, scoped,
+  owned, non-duplicative, and private-safe for the reviewed update;
 - repair owner and bounded re-review scope;
 - whether evidence is sufficient for approval.
 
@@ -128,10 +179,20 @@ Stop and mark blocked or escalate when:
   production contract;
 - reviewer independence cannot be established;
 - required evidence, claim traceability, or source files are missing;
+- evidence confidence is below the minimum needed for the material conclusion
+  and the conclusion cannot be safely constrained or caveated;
 - instructions conflict, client-profile source status is unresolved, or
   governance approval requirements are unclear;
 - the artifact needs new research, new production work, or broader scope change;
-- high-governance review trail is incomplete.
+- high-governance review trail is incomplete;
+- a Codex implementation task produced process without implementation value,
+  validation, or repository-grounded evidence;
+- audience or intended outcome mismatch makes the artifact unusable and cannot
+  be repaired inside review;
+- selected quality priorities are absent, contradicted, or degraded enough to
+  make approval unsafe or unreviewable.
+- a proposed learning/canon change lacks evidence, owner, scope, duplication
+  check, privacy check, or reviewed update path.
 
 ## Handoff Expectations
 
@@ -144,6 +205,26 @@ short examples needed to clarify a finding.
 
 - review outcome is deterministic and grounded in saved artifacts;
 - independence is visible;
+- evidence quality is checked when material: evidence class, confidence label,
+  assumptions, unknowns, validation needed, and residual risk are explicit
+  enough for the verdict;
+- failure modes are challenged when visible, especially wrong task, weak
+  evidence, hidden assumptions, scope drift, role confusion, weak challenge,
+  premature finalization, under-execution, and review-gate bypass;
+- option evaluation is challenged when material: credible alternatives,
+  relevant dimensions, selected approach, accepted tradeoffs, and
+  reconsideration triggers are clear enough for the verdict;
+- audience/outcome fit is challenged when material: intended reader, outcome,
+  required action, detail, tone, format, evidence depth, and omission choices
+  are clear enough for the verdict;
+- quality attributes are challenged when material: verify that correctness,
+  completeness, relevance, actionability, clarity, precision, consistency,
+  traceability, evidence support, audience fit, structural coherence,
+  maintainability, implementation readiness, and reviewability are sufficient
+  for the task;
+- learning/canon claims are challenged when material: verify learning type,
+  evidence, owner, scope, duplication, privacy, task-local alternative, and stale
+  canon handling before approval;
 - Editorial Decision Frame quality is checked when applicable: chosen route
   fits the brief, evidence, risks, and source boundary; rejected alternatives
   have real reasons; Writer Agent or UX Writer followed the route; rejected
@@ -174,7 +255,7 @@ short examples needed to clarify a finding.
 - when `client_profile: sber` is active, `/kb/clients/sber/sber-review-checklist.md`
   is applied or its absence is blocking;
 - post-delivery feedback handling, when present, does not make one reaction a
-  system rule, reopen finalized tasks automatically, create a new role, or add a
-  mandatory pipeline;
+  system rule or bypass `AGENTS.md` and `/kb/customer_feedback_loop.md`
+  boundaries;
 - high-governance review preserves traceability and approval evidence;
 - review did not become rewriting or finalization.
