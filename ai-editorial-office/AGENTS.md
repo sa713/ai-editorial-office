@@ -45,6 +45,7 @@
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
+| Architecture Review capability, architecture drivers, quality-attribute scenarios, architectural tradeoffs, architecture risks, and decision-rationale challenge | `/kb/architecture_review.md` | task-specific architecture-review notes, drivers, scenarios, tradeoffs, assumptions, risks, and rationale |
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
 | Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
@@ -103,6 +104,9 @@ existing markdown system should be understood and extended.
 - `/kb/analytical_reasoning.md` defines practical analytical moves for problem
   framing, decomposition, competing explanations, disconfirmation,
   contradiction handling, sufficiency judgment, and uncertainty communication.
+- `/kb/architecture_review.md` defines practical architecture-review moves for
+  architectural significance, drivers, quality-attribute scenarios, tradeoffs,
+  architecture risks, assumptions, evidence, and decision rationale.
 - `/kb/editorial_failure_modes.md` defines common failure modes and recovery
   actions for wrong-task work, weak evidence, hidden assumptions, scope drift,
   role confusion, weak challenge, premature finalization, and Codex task
@@ -121,10 +125,11 @@ existing markdown system should be understood and extended.
   challenge, and canon retirement.
 
 Do not create a new role merely because a capability is named. Analytical
-reasoning, source conversion, integrity checking, context assembly, learning
-extraction, canon evolution, stale canon detection, and memory export remain
-capabilities, checks, scripts, or task-local mini-contracts unless a separate
-reviewed system update explicitly changes the role set.
+reasoning, Architecture Review, source conversion, integrity checking, context
+assembly, learning extraction, canon evolution, stale canon detection, and
+memory export remain capabilities, checks, scripts, or task-local
+mini-contracts unless a separate reviewed system update explicitly changes the
+role set.
 
 ## Главные инварианты
 
@@ -166,6 +171,9 @@ Before production starts, Chief Editor must route the task editorially:
   decisions, recommendations, review findings, and governance closure;
 - select analytical reasoning depth when complexity, decision impact, evidence
   ambiguity, or review risk makes reasoning inspectability material;
+- determine whether Architecture Review capability is required when a task has
+  architectural significance, quality-attribute impact, cross-owner effects,
+  hard-to-reverse design consequences, or architecture-risk exposure;
 - choose the planning level and consider credible options before committing to
   a non-trivial route, recommendation, or implementation plan;
 - identify the audience, intended outcome, required action or decision, and

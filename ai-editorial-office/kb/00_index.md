@@ -25,6 +25,12 @@ Canonical KB ownership:
   handling, sufficiency judgment, and uncertainty communication. It does not
   create a new role, pipeline, framework, review gate, scoring model, or
   mandatory artifact set.
+- `architecture_review.md` owns practical Architecture Review moves:
+  architectural significance, architecture drivers, quality-attribute
+  scenarios, tradeoff analysis, architecture-specific risks, architectural
+  assumptions, architecture evidence, and decision-rationale challenge. It does
+  not create a new role, framework, pipeline, lifecycle stage, review gate,
+  scoring model, or mandatory artifact set.
 - `editorial_failure_modes.md` owns common editorial failure modes and recovery
   patterns. It is a practical safety layer, not a new role system, incident
   process, workflow engine, review gate, or mandatory checklist.

@@ -13,6 +13,9 @@ evidence section standards live in `/kb/editorial_evidence_framework.md`;
 analytical reasoning moves, hypothesis comparison, disconfirmation,
 contradiction handling, and sufficiency judgment live in
 `/kb/analytical_reasoning.md`;
+Architecture Review moves, architecture drivers, quality-attribute scenarios,
+architectural tradeoffs, architecture risks, and decision-rationale challenge
+live in `/kb/architecture_review.md`;
 planning levels, option evaluation, and recommendation formation live in
 `/kb/editorial_planning_framework.md`; audience and outcome alignment fields,
 reader fit, and usefulness criteria live in
@@ -77,6 +80,12 @@ file.
 | `contradictions` | Optional material source, scope, timing, definition, method, or incentive conflicts that affect analysis. | `research.md`, `status.md`, `review.md` |
 | `disconfirmation_checks` | Optional evidence or tests that could weaken or invalidate a conclusion. | `orchestration_plan.md`, `research.md`, `review.md` |
 | `sufficiency_judgment` | Optional statement that evidence is enough, not enough, or enough-with-caveat for the current decision risk. | `research.md`, `review.md`, `final_decision.md` |
+| `architecture_review_scope` | Optional scope of an architecture-sensitive review: decision, affected boundary, and materiality trigger. | `orchestration_plan.md`, `review.md` |
+| `architecture_drivers` | Optional business, user, quality, constraint, lifecycle, integration, risk, or governance drivers shaping an architecture decision. | `orchestration_plan.md`, `research.md`, `review.md` |
+| `quality_attribute_scenarios` | Optional scenarios that make material architecture qualities reviewable. | `orchestration_plan.md`, `research.md`, `review.md` |
+| `architectural_tradeoffs` | Optional accepted tradeoffs between architecture options, qualities, owners, risks, or future change paths. | `orchestration_plan.md`, production notes, `review.md`, `final_decision.md` |
+| `architecture_risks` | Optional architecture-specific risks such as driver mismatch, hidden assumption, weak operability, governance drift, or accepted residual risk. | `research.md`, `review.md`, `final_decision.md` |
+| `architectural_assumptions` | Optional assumptions about system shape, owners, interfaces, canon, workload, lifecycle, or future evolution that affect architecture fitness. | `orchestration_plan.md`, `research.md`, `review.md` |
 | `success_criterion` | How readiness and audience usefulness will be judged for this task. | `brief.md`, `orchestration_plan.md`, `review.md` |
 | `risk_mode` | `low-risk`, `standard`, `high-governance`, or unresolved/blocked until determined. | `task-manifest.md`, `orchestration_plan.md`, `status.md` |
 | `process_depth` | `compact`, `normal`, or `full`. | `task-manifest.md`, `orchestration_plan.md` |
@@ -117,7 +126,7 @@ requires it.
 | `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, quality cues when material, and success criterion. |
 | `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, analytical question and assumptions when material, audience/outcome fit when material, quality priorities/tradeoffs when material, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, analytical question and assumptions when material, architecture review scope and drivers when material, audience/outcome fit when material, quality priorities/tradeoffs when material, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
 | `research.md` | Research scope, verified facts, interpretations, assumptions, hypotheses, contradictions, diagnostic evidence, source confidence, evidence class, sufficiency judgment, and evidence limits. |
 | `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |
@@ -126,7 +135,7 @@ requires it.
 | `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review, shaped to the recorded audience, outcome, detail, tone, and format constraints. |
 | `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
 | `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, audience/outcome choices, quality-preservation notes, and review focus that are not already obvious from the draft. |
-| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, analytical reasoning challenge when material, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, learning/canon candidates when material, and next action. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, analytical reasoning challenge when material, Architecture Review challenge when material, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, learning/canon candidates when material, and next action. |
 | `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
 | `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
 | `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
@@ -164,11 +173,12 @@ semantics and stage order are owned by `/kb/shared_lifecycle_kernel.md`;
 evidence taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`; planning levels and option evaluation
 are owned by `/kb/editorial_planning_framework.md`; analytical reasoning moves
-are owned by `/kb/analytical_reasoning.md`; audience/outcome alignment is owned
-by `/kb/audience_outcome_alignment.md`; quality attributes and tradeoffs are
-owned by `/kb/editorial_quality_attributes.md`; learning and canon evolution
-are owned by `/kb/editorial_learning_framework.md`; this file maps those gates
-to task-object fields and artifact views.
+are owned by `/kb/analytical_reasoning.md`; Architecture Review moves are owned
+by `/kb/architecture_review.md`; audience/outcome alignment is owned by
+`/kb/audience_outcome_alignment.md`; quality attributes and tradeoffs are owned
+by `/kb/editorial_quality_attributes.md`; learning and canon evolution are
+owned by `/kb/editorial_learning_framework.md`; this file maps those gates to
+task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |

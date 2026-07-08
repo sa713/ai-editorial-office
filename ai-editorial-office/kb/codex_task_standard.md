@@ -11,10 +11,12 @@ boundaries intact. Implementation-task dilution and recovery are covered by
 `/kb/editorial_failure_modes.md`; planning depth and option evaluation are
 covered by `/kb/editorial_planning_framework.md`; analytical reasoning for
 problem framing, assumptions, disconfirmation, sufficiency, and uncertainty is
-covered by `/kb/analytical_reasoning.md`; Codex as implementer audience is
-covered by `/kb/audience_outcome_alignment.md`; implementation-task quality
-attributes are covered by `/kb/editorial_quality_attributes.md`; reusable
-learning and canon-update signals are covered by
+covered by `/kb/analytical_reasoning.md`; Architecture Review for
+architecture-sensitive implementation tasks is covered by
+`/kb/architecture_review.md`; Codex as implementer audience is covered by
+`/kb/audience_outcome_alignment.md`; implementation-task quality attributes
+are covered by `/kb/editorial_quality_attributes.md`; reusable learning and
+canon-update signals are covered by
 `/kb/editorial_learning_framework.md`.
 
 ## owner and chain
@@ -100,6 +102,10 @@ ambiguity, high in implementation value, and reviewable.
 - For analytically complex implementation tasks, make clear what problem is
   being solved, what assumptions remain, what would disconfirm the chosen
   slice, and what validation would prove the work.
+- For architecture-sensitive implementation tasks, make clear the
+  architectural drivers, affected quality attributes, architectural
+  significance, rejected alternatives, architecture risks, and validation
+  approach without making every Codex task long.
 - State the expected value of the slice and the action Codex must complete,
   not only the abstract strategy.
 - Include enough repository context, likely files, boundaries, validation, and
@@ -136,6 +142,9 @@ Recovery:
   sufficient;
 - name the analytical question, remaining assumptions, and validation needed
   when the implementation decision is non-trivial;
+- name architectural drivers, affected quality attributes, rejected
+  alternatives, architecture risks, and validation approach when the
+  implementation task is architecture-sensitive;
 - re-align the task for Codex as implementer: goal, context, files,
   boundaries, validation, deliver-back, expected value, and exclusions;
 - re-select quality priorities when the task is optimizing for strategy,

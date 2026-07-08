@@ -14,6 +14,10 @@ labels, and reusable evidence section standard used by lifecycle gates.
 `/kb/analytical_reasoning.md` owns analytical moves such as problem framing,
 decomposition, hypothesis comparison, disconfirmation, contradiction handling,
 sufficiency judgment, and uncertainty communication.
+`/kb/architecture_review.md` owns Architecture Review moves such as
+architectural significance, drivers, quality-attribute scenarios, tradeoffs,
+architecture risks, architectural assumptions, evidence, and decision-rationale
+challenge.
 `/kb/editorial_failure_modes.md` owns common warning signs and recovery actions
 when a lifecycle stage starts producing weak, wrong, or unsafe work.
 `/kb/editorial_planning_framework.md` owns planning depth, option generation,
@@ -41,10 +45,10 @@ Default lifecycle:
 intake -> routing -> research when required -> drafting or UX writing -> review -> repair when required -> finalization -> governance -> memory disposition
 ```
 
-Source conversion, analytical reasoning, memory curation, learning extraction,
-and canon evolution are capabilities that can attach to the lifecycle when
-needed. They are not standing default roles and do not create a separate
-workflow engine.
+Source conversion, analytical reasoning, Architecture Review, memory curation,
+learning extraction, and canon evolution are capabilities that can attach to
+the lifecycle when needed. They are not standing default roles and do not
+create a separate workflow engine.
 
 ## Shared Stages
 
@@ -72,6 +76,10 @@ unknowns, validation needed, and residual risk at the depth required by
 reasoning, competing explanations, or contradiction, use
 `/kb/analytical_reasoning.md` to keep the analytical question, assumptions,
 disconfirmation, sufficiency, and uncertainty visible in an existing artifact.
+When a gate depends on architectural significance, drivers, quality-attribute
+scenarios, architectural tradeoffs, accepted risks, or decision rationale, use
+`/kb/architecture_review.md` to keep the architecture-review note visible in an
+existing artifact.
 
 | Gate | Decision question | Default evidence |
 | --- | --- | --- |
@@ -128,6 +136,9 @@ Expand context or artifacts only when at least one trigger applies:
 - source conflict, stale source, unknown freshness, or missing provenance;
 - analytical complexity, competing explanations, non-obvious causal claims,
   contradiction, or decision impact;
+- architectural significance, cross-owner or cross-file design consequence,
+  quality-attribute conflict, architecture risk, or hard-to-reverse design
+  decision;
 - client profile is active or pending source verification;
 - review cannot validate from the compact packet;
 - task has multiple audiences, channels, deliverables, owners, or versions;
@@ -172,6 +183,13 @@ assumptions, contradiction, diagnostic evidence, or sufficiency judgment may
 consume the compact analytical pattern from `/kb/analytical_reasoning.md`.
 Analytical reasoning is recorded in the smallest existing artifact that remains
 reviewable and does not create a separate lifecycle stage.
+
+Any stage that reviews or commits to an architecture-sensitive route,
+recommendation, implementation task, canon structure, or system design decision
+may consume the compact Architecture Review pattern from
+`/kb/architecture_review.md`. Architecture Review is recorded in the smallest
+existing artifact that remains reviewable and does not create a separate
+lifecycle stage or review gate.
 
 Any stage that commits to a non-trivial route, recommendation, or implementation
 plan may consume the option evaluation pattern from
@@ -223,6 +241,7 @@ update is justified.
   files only when selected.
 - Optional context: `/kb/task_object_model.md`, `/kb/capability_registry.md`,
   `/kb/analytical_reasoning.md` when complexity or decision impact is material,
+  `/kb/architecture_review.md` when architectural significance is material,
   current `project-state.md`, previous handoff when resuming.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
@@ -230,8 +249,8 @@ update is justified.
   workflow overlay or mini-contract, audience/outcome fit when material,
   quality priorities/tradeoffs when material, planning level and options
   considered when material, analytical question or key assumptions when
-  material, evidence basis/confidence for material route decisions, next
-  action.
+  material, architecture drivers or review scope when material,
+  evidence basis/confidence for material route decisions, next action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,
   or conflict between user instruction and system invariants.
 - Next stage: research, drafting, UX writing, review, source conversion, or
@@ -251,7 +270,8 @@ update is justified.
 - Expected outputs: research/evidence artifacts at selected depth, evidence
   classes, confidence labels, hypotheses or competing explanations when
   material, assumptions/unknowns, contradictions, source boundary notes,
-  sufficiency judgment, open questions, and handoff when needed.
+  architecture drivers/constraints/risks when material, sufficiency judgment,
+  open questions, and handoff when needed.
 - Stop conditions: unavailable source, contradicted material claim, stale or
   unreliable evidence for high-risk claim, or missing human/source decision.
 - Next stage: drafting, UX writing, review, repair, or blocked.
@@ -309,8 +329,9 @@ update is justified.
   audience/outcome fit when material, quality-attribute challenge when
   material, evidence/confidence challenge when material, option-evaluation
   challenge when material, analytical-reasoning challenge when material,
-  learning/canon candidate challenge when material, findings, outcome, required
-  changes/blockers, and next action.
+  Architecture Review challenge when material, learning/canon candidate
+  challenge when material, findings, outcome, required changes/blockers, and
+  next action.
 - Stop conditions: missing material, missing independence, unresolved critical
   issue, insufficient evidence, or ambiguous review scope.
 - Next stage: finalization when approved, repair when changes are requested,
