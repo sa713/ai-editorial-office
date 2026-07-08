@@ -16,7 +16,7 @@ Development follows a stable philosophy:
 - Architecture first: grow only inside the existing system shape unless
   evidence shows the architecture itself must change.
 - Capability growth over architecture growth: add professional strength as
-  reusable capabilities, review lenses, frameworks, and task-local contracts
+  reusable capabilities, review lenses, and task-local patterns
   before considering new roles, pipelines, or lifecycle states.
 - Minimal complexity: prefer one strong shared capability over many narrow
   overlapping ones.
@@ -74,6 +74,28 @@ Memory sync keeps external project memory aligned when the changed canonical
 state should be visible outside the repository. The memory package does not
 become canonical.
 
+# Project Operating Model
+
+Project execution follows this model:
+
+```text
+Project Lead
+    |
+Release Mission
+    |
+Codex
+    |
+Release Candidate
+    |
+Project Lead Review
+    |
+Accepted Release
+```
+
+The Project Lead owns strategy and architecture. Codex executes release
+missions and produces release candidates. A release is accepted only after
+Project Lead architectural review.
+
 # Roadmap
 
 ## Stage 1 - Architecture Foundation
@@ -108,23 +130,23 @@ The architecture had to become trusted through use, not just design. Validation
 showed which parts of the system were stable enough to preserve and which kinds
 of growth would create unnecessary complexity.
 
-## Stage 3 - Professional Competency Model
+## Stage 3 - Professional Capability Model
 
 Status: Active
 
 Purpose:
 
-Transfer world-class professional competencies into AI Editorial Office while
+Transfer world-class professional capabilities into AI Editorial Office while
 preserving the existing architecture.
 
-This stage makes the office more capable without turning each competency into a
+This stage makes the office more capable without turning each capability into a
 new role, pipeline, lifecycle stage, governance layer, or mandatory artifact
-set. Competencies should become shared capabilities, review lenses, frameworks,
-or task-local patterns when those shapes are sufficient.
+set. Capability work should become shared capabilities, review lenses, or
+task-local patterns when those shapes are sufficient.
 
 Sub-programs:
 
-- Universal Cognitive Competencies
+- Universal Cognitive Capabilities
 - Engineering Review
 - Professional Analysis
 - Professional Communication
@@ -158,7 +180,7 @@ Status: Planned
 
 Purpose:
 
-Add deep domain knowledge packs after the professional competency model is
+Add deep domain knowledge packs after the professional capability model is
 strong enough to host them safely.
 
 Examples:
@@ -172,7 +194,7 @@ Why this stage matters:
 
 Domain expertise should not arrive as loose facts or isolated checklists. It
 should be absorbed through the same disciplined model used for professional
-competencies: researched, synthesized, bounded, validated, and kept inside the
+capabilities: researched, synthesized, bounded, validated, and kept inside the
 stable architecture.
 
 ## Stage 5 - Editorial Intelligence
@@ -195,8 +217,10 @@ and when a proposed change would make the system heavier rather than stronger.
 - The roadmap never overrides canonical files.
 - Architecture changes require evidence that the current architecture cannot
   safely handle the need.
+- The preferred unit of delivery is a complete reviewed release, not an
+  individual capability or isolated implementation task.
 - Prefer capability depth over capability count.
-- Merge related competencies when one capability with selectable lenses is
+- Merge related capability areas when one capability with selectable lenses is
   cleaner than multiple owners.
 - Do not create new roles, pipelines, lifecycle states, or mandatory artifacts
   merely to make a roadmap stage look complete.
@@ -209,8 +233,10 @@ The roadmap is succeeding when:
 - the current stage is obvious to a new reader in under ten minutes;
 - future work can be judged by strategic fit before implementation begins;
 - professional capability increases without architectural drift;
-- new competencies are reusable, bounded, inspectable, and reviewable;
+- new capabilities are reusable, bounded, inspectable, and reviewable;
 - domain expertise can be added without weakening editorial governance;
+- project management becomes simpler as releases become larger and architecture
+  remains stable;
 - memory stays aligned with the system without becoming a second source of
   truth;
 - AI Editorial Office becomes more capable while remaining compact enough for
