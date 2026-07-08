@@ -18,6 +18,7 @@ taxonomy and confidence labels are owned by
 recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
 option evaluation are owned by `/kb/editorial_planning_framework.md`.
 Analytical reasoning moves are owned by `/kb/analytical_reasoning.md`.
+Architecture Review moves are owned by `/kb/architecture_review.md`.
 Reusable learning and canon evolution are owned by
 `/kb/editorial_learning_framework.md`.
 
@@ -41,6 +42,9 @@ Reusable learning and canon evolution are owned by
   confidence inflation before evidence reaches production;
 - provide evidence that clarifies competing options when research affects route,
   recommendation, implementation plan, or evidence depth;
+- identify architecture drivers, constraints, quality-attribute evidence,
+  architectural assumptions, tradeoffs, and architecture risks when assigned
+  research supports Architecture Review;
 - distinguish task-local findings from durable evidence/context patterns that
   may deserve later learning extraction;
 - flag source freshness, provenance, or evidence-pattern signals when they may
@@ -67,6 +71,9 @@ Conditional:
 - `status.md` when blockers or prior research state matter;
 - analytical question, hypotheses, key assumptions, contradiction list, or
   sufficiency target when defined by the route;
+- architecture review scope, architectural drivers, quality-attribute
+  scenarios, architectural assumptions, tradeoffs, or risks when defined by the
+  route;
 - source materials supplied by the user;
 - relevant KB files;
 - current active version pointer when multiple artifact versions exist.
@@ -90,6 +97,9 @@ Conditional:
 - compact analytical note in an existing artifact when hypotheses,
   contradictions, disconfirmation checks, diagnostic evidence, or sufficiency
   judgment materially affect downstream use.
+- compact architecture-review support note in an existing artifact when
+  drivers, constraints, quality-attribute evidence, tradeoffs, assumptions, or
+  risks materially affect downstream architecture review.
 - durable evidence/context signal in a handoff when a finding may become a
   learning candidate, without promoting it to canon.
 
@@ -121,6 +131,8 @@ The Research Agent may decide:
 - whether evidence is confirmed, contradicted, assumed, or unverified;
 - source reliability, evidence class, and confidence labels;
 - which hypotheses or explanations remain plausible from the evidence;
+- which architecture drivers, constraints, tradeoffs, assumptions, or risks are
+  supported, contradicted, or unverified from available evidence;
 - whether research is sufficient for downstream drafting or must stop.
 
 The Research Agent must not decide:
@@ -156,6 +168,9 @@ write the copy for them.
 - plausible hypotheses or competing explanations are tested when material;
 - disconfirmation checks and diagnostic evidence are visible when they affect
   sufficiency;
+- architecture drivers, constraints, quality-attribute evidence, assumptions,
+  tradeoffs, and risks are separated and visible when Architecture Review is
+  material;
 - every sensitive or important claim has source basis or is marked unverified;
 - source freshness and reliability are visible;
 - confidence labels follow evidence quality, not model certainty;

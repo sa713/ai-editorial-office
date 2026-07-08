@@ -17,7 +17,8 @@ confidence labels are owned by `/kb/editorial_evidence_framework.md`.
 Failure-mode challenge and recovery patterns are owned by
 `/kb/editorial_failure_modes.md`. Planning and option evaluation are owned by
 `/kb/editorial_planning_framework.md`. Analytical reasoning moves are owned by
-`/kb/analytical_reasoning.md`. Audience/outcome alignment is owned by
+`/kb/analytical_reasoning.md`. Architecture Review moves are owned by
+`/kb/architecture_review.md`. Audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are owned
 by `/kb/editorial_quality_attributes.md`. Learning extraction and canon
 evolution are owned by `/kb/editorial_learning_framework.md`.
@@ -39,6 +40,10 @@ evolution are owned by `/kb/editorial_learning_framework.md`.
 - challenge analytical reasoning when material: question framing, decomposition,
   hypotheses considered, disconfirmation, contradiction handling, diagnostic
   evidence, sufficiency judgment, and uncertainty communication;
+- challenge Architecture Review when material: missing drivers, vague quality
+  attributes, missing scenarios, hidden architectural assumptions,
+  architecture-vs-implementation confusion, missing rejected alternatives,
+  undocumented accepted risks, and architecture decisions without rationale;
 - challenge option exploration when a task commits to a non-trivial route,
   recommendation, or implementation plan;
 - challenge whether the artifact fits the intended audience, outcome, required
@@ -86,6 +91,9 @@ Conditional:
 - `/kb/analytical_reasoning.md` when analytical complexity, decision impact,
   evidence ambiguity, competing explanations, contradiction, or sufficiency
   judgment affects review;
+- `/kb/architecture_review.md` when architectural significance,
+  quality-attribute impact, cross-owner effects, hard-to-reverse design
+  consequences, architecture risks, or decision rationale affect review;
 - `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
   learning, canon evolution, pattern reuse, or stale-canon findings;
 - active client-profile files and review checklist when `client_profile` is set;
@@ -97,9 +105,10 @@ Required:
 
 - `review.md` with reviewed artifacts, independence basis, findings, Editorial
   Challenge Lens when applicable, analytical-reasoning challenge when
-  applicable, evidence-confidence challenge when applicable, learning/canon
-  candidate challenge when applicable, outcome, risks, required changes,
-  blockers, and next action.
+  applicable, Architecture Review challenge when applicable,
+  evidence-confidence challenge when applicable, learning/canon candidate
+  challenge when applicable, outcome, risks, required changes, blockers, and
+  next action.
 
 Conditional:
 
@@ -129,6 +138,10 @@ artifacts must never become silently mandatory.
 - approve reasoning that answers the wrong question, closes prematurely,
   smooths over contradictions, hides key assumptions, or presents weak
   sufficiency as settled;
+- approve architecture-sensitive work when drivers are missing, quality
+  attributes are vague, scenarios are absent for material qualities,
+  architecture and implementation detail are confused, rejected alternatives are
+  missing, accepted risks are undocumented, or decision rationale is invisible;
 - make preference-only challenges or turn a merely valid alternative into a
   required change;
 - accept polished but unsupported work as approved because it reads well;
@@ -163,6 +176,8 @@ The Review Agent may decide:
 - whether evidence confidence is sufficient for the claimed output type;
 - whether analytical reasoning is sufficient for the claimed conclusion,
   recommendation, route, or decision support;
+- whether Architecture Review evidence is sufficient for the claimed
+  architecture decision, recommendation, route, or governance consequence;
 - whether a failure mode requires bounded repair, return to an earlier stage,
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
@@ -197,6 +212,9 @@ Stop and mark blocked or escalate when:
 - analytical reasoning is opaque enough that the question, assumptions,
   contradictions, disconfirmation checks, or sufficiency judgment cannot be
   reviewed for a material conclusion;
+- architecture review is opaque enough that drivers, quality scenarios,
+  architectural assumptions, rejected alternatives, accepted risks, or decision
+  rationale cannot be reviewed for an architecture-sensitive conclusion;
 - instructions conflict, client-profile source status is unresolved, or
   governance approval requirements are unclear;
 - the artifact needs new research, new production work, or broader scope change;
@@ -228,6 +246,11 @@ short examples needed to clarify a finding.
   wrong question, close prematurely, confirm only the preferred answer, hide
   assumptions, smooth contradictions, inflate precision, overrun research, or
   recommend beyond sufficiency;
+- Architecture Review is checked when material: architectural significance is
+  named or ruled out, drivers are visible, quality attributes have scenarios
+  when needed, implementation details do not hide design commitments, rejected
+  alternatives are not missing, accepted risks are documented, and decision
+  rationale is reviewable;
 - failure modes are challenged when visible, especially wrong task, weak
   evidence, hidden assumptions, scope drift, role confusion, weak challenge,
   premature finalization, under-execution, and review-gate bypass;

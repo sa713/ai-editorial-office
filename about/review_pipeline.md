@@ -27,6 +27,14 @@ disconfirmation, contradiction handling, sufficiency judgment, or uncertainty
 communication, review applies `/kb/analytical_reasoning.md` to challenge the
 reasoning path without creating a new review gate.
 
+When reviewed work is architecture-sensitive, review applies
+`/kb/architecture_review.md` to challenge architectural drivers,
+quality-attribute scenarios, architectural tradeoffs, assumptions, architecture
+risks, accepted risks, and decision rationale without creating a new review
+gate. Architecture Review is distinct from instructional architecture review:
+it checks system design fitness rather than only reading path or section
+structure.
+
 When reviewed work shows wrong-task drift, weak evidence, hidden assumptions,
 scope drift, role confusion, over-polishing, under-execution, implementation
 task dilution, premature finalization, or review-gate bypass, review applies
@@ -119,6 +127,9 @@ packet from those owners, then add only review-specific context:
   claims or evidence-dependent conclusions are present;
 - analytical-reasoning notes when reasoning complexity, evidence ambiguity,
   contradictions, or sufficiency judgments are material;
+- architecture-review notes when architectural significance, drivers,
+  quality-attribute scenarios, tradeoffs, assumptions, risks, or decision
+  rationale are material;
 - the relevant editorial KB guidance only when its materiality trigger applies
   to the reviewed work.
 
@@ -190,7 +201,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Architecture Review challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -286,6 +297,9 @@ Compact review minimum:
 - compact analytical-reasoning check when the reviewed conclusion depends on
   problem framing, competing explanations, hidden assumptions, contradiction
   handling, diagnostic evidence, or sufficiency judgment;
+- compact Architecture Review check when the reviewed work is
+  architecture-sensitive or depends on drivers, quality-attribute scenarios,
+  architectural tradeoffs, assumptions, accepted risks, or decision rationale;
 - compact failure-mode check when warning signs are visible;
 - compact option-evaluation check when the reviewed work depends on a
   non-trivial selected approach;
@@ -315,6 +329,10 @@ It does not restate detailed review logic. Review Agent owns:
   confirmation bias, unsupported recommendation, hidden assumption,
   contradiction smoothing, false precision, unbounded research, and weak
   sufficiency judgment;
+- Architecture Review challenge, including missing drivers, vague quality
+  attributes, missing scenarios, hidden architectural assumptions,
+  architecture/implementation confusion, missing rejected alternatives,
+  undocumented accepted risks, and decisions without rationale;
 - factual, source, and claim validation;
 - editorial relevance and replaceability pressure;
 - assumptions-based Editorial Challenge Lens;
