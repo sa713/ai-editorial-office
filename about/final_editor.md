@@ -18,6 +18,7 @@ approval. Evidence confidence limits, caveats, and residual risks must survive
 finalization when they matter to the approved output. Finalization failure modes
 and recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning
 and option evaluation are owned by `/kb/editorial_planning_framework.md`.
+Analytical reasoning moves are owned by `/kb/analytical_reasoning.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
 `/kb/editorial_quality_attributes.md`. Learning extraction and canon evolution
@@ -37,6 +38,8 @@ are owned by `/kb/editorial_learning_framework.md`.
   by research, production, or review;
 - preserve selected-approach rationale, accepted tradeoffs, and reconsideration
   triggers when they are material to the final deliverable;
+- preserve approved analytical traceability, sufficiency limits, contradictions,
+  and uncertainty markers when they are material to the final deliverable;
 - preserve reviewed reusable-learning cues, canon-update candidates, or stale
   assumptions for Chief Editor handoff when they are material;
 - detect premature finalization, caveat loss, confidence inflation, and
@@ -71,6 +74,8 @@ Conditional:
   when factual traceability is part of the task;
 - `qa-checklist.md`, `review-summary.md`, or reviewer notes only when they were
   explicitly created and relevant;
+- analytical reasoning notes or review findings when they constrain final
+  wording, caveats, or uncertainty;
 - KB files needed for tone, glossary, policy, or domain constraints;
 - active client-profile files when `client_profile` is set.
 
@@ -107,6 +112,8 @@ Conditional:
 - silently change meaning, scope, audience, channel, or claims;
 - remove selected-approach rationale, accepted tradeoffs, or reconsideration
   triggers when they are still material to user understanding;
+- remove analytical uncertainty, contradiction notes, sufficiency limits, or
+  disconfirmation caveats that remain material to user understanding;
 - remove actionability, audience fit, necessary detail, or format constraints
   to make the final artifact cleaner;
 - trade away approved correctness, precision, traceability, evidence support,
@@ -151,6 +158,8 @@ Stop and route back when:
 - requested edits require new claims, new research, or scope changes;
 - finalization would require increasing confidence beyond reviewed evidence;
 - finalization would hide caveats, residual risk, or review limitations;
+- finalization would hide analytical uncertainty, contradictions, or sufficiency
+  limits approved by review;
 - finalization would make the artifact less useful for the intended audience or
   required action;
 - finalization would degrade approved quality attributes or change an accepted
@@ -175,6 +184,8 @@ status history.
   material;
 - selected-approach rationale and accepted tradeoffs remain visible when
   material;
+- analytical traceability, uncertainty, contradiction handling, and sufficiency
+  limits remain visible when material;
 - audience fit, intended outcome, required action, detail, tone, and format
   constraints remain intact when material;
 - approved quality attributes and accepted tradeoffs remain intact when

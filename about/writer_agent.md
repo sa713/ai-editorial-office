@@ -17,6 +17,7 @@ evidence, preserves factual traceability, keeps assumptions visible, and
 serves the intended audience and outcome. Writing-related failure modes and
 recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
 option evaluation are owned by `/kb/editorial_planning_framework.md`.
+Analytical reasoning moves are owned by `/kb/analytical_reasoning.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
 `/kb/editorial_quality_attributes.md`.
@@ -29,6 +30,9 @@ Quality attributes and tradeoffs are owned by
   contract when present;
 - communicate selected-approach tradeoffs accurately when the task asks for a
   recommendation, plan, analysis, or decision support;
+- preserve analytical structure when material, including the question answered,
+  assumptions, competing explanations, contradictions, uncertainty, and
+  sufficiency limits;
 - shape structure, detail level, tone, evidence depth, and next action for the
   recorded audience and intended outcome;
 - preserve selected quality priorities such as correctness, relevance,
@@ -76,6 +80,9 @@ Conditional:
   format, detail, or tone affects the draft;
 - quality profile or tradeoff notes when the draft must preserve specific
   attributes or avoid quality loss;
+- analytical question, hypotheses, key assumptions, contradictions,
+  disconfirmation checks, or sufficiency judgment when the route or draft
+  depends on analytical reasoning;
 - current active version pointer when multiple versions exist.
 
 ## Outputs
@@ -113,6 +120,8 @@ Conditional:
   alternatives without a recorded reason;
 - flatten selected approach, rejected alternatives, tradeoffs, or remaining
   uncertainty into a one-sided recommendation;
+- flatten competing explanations, contradictions, or sufficiency limits into a
+  falsely settled analysis;
 - become UX Writer for interface copy unless specifically assigned that role;
 - approve its own draft;
 - perform independent review or controlled finalization;
@@ -174,6 +183,8 @@ should not repeat full research or status history.
 - draft follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
 - tradeoffs and uncertainty from option evaluation are preserved when material;
+- analytical question, key assumptions, contradictions, and sufficiency limits
+  are preserved when material;
 - factual claims are supported, caveated, or omitted;
 - evidence confidence limits, assumptions, and unknowns are preserved rather
   than hidden in confident prose;

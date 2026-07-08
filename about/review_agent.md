@@ -16,7 +16,8 @@ explicit blockers, and a deterministic outcome. Evidence taxonomy and
 confidence labels are owned by `/kb/editorial_evidence_framework.md`.
 Failure-mode challenge and recovery patterns are owned by
 `/kb/editorial_failure_modes.md`. Planning and option evaluation are owned by
-`/kb/editorial_planning_framework.md`. Audience/outcome alignment is owned by
+`/kb/editorial_planning_framework.md`. Analytical reasoning moves are owned by
+`/kb/analytical_reasoning.md`. Audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are owned
 by `/kb/editorial_quality_attributes.md`. Learning extraction and canon
 evolution are owned by `/kb/editorial_learning_framework.md`.
@@ -35,6 +36,9 @@ evolution are owned by `/kb/editorial_learning_framework.md`.
 - validate factual claims against available evidence and claim traceability;
 - challenge evidence class, confidence level, assumptions, unknowns, validation
   needs, and residual risk when material conclusions are present;
+- challenge analytical reasoning when material: question framing, decomposition,
+  hypotheses considered, disconfirmation, contradiction handling, diagnostic
+  evidence, sufficiency judgment, and uncertainty communication;
 - challenge option exploration when a task commits to a non-trivial route,
   recommendation, or implementation plan;
 - challenge whether the artifact fits the intended audience, outcome, required
@@ -79,6 +83,9 @@ Conditional:
   detail, tone, or format fit affects review;
 - `/kb/editorial_quality_attributes.md` when quality priorities, tradeoffs, or
   preservation risks affect review;
+- `/kb/analytical_reasoning.md` when analytical complexity, decision impact,
+  evidence ambiguity, competing explanations, contradiction, or sufficiency
+  judgment affects review;
 - `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
   learning, canon evolution, pattern reuse, or stale-canon findings;
 - active client-profile files and review checklist when `client_profile` is set;
@@ -89,9 +96,10 @@ Conditional:
 Required:
 
 - `review.md` with reviewed artifacts, independence basis, findings, Editorial
-  Challenge Lens and evidence-confidence challenge when applicable,
-  learning/canon candidate challenge when applicable, outcome, risks, required
-  changes, blockers, and next action.
+  Challenge Lens when applicable, analytical-reasoning challenge when
+  applicable, evidence-confidence challenge when applicable, learning/canon
+  candidate challenge when applicable, outcome, risks, required changes,
+  blockers, and next action.
 
 Conditional:
 
@@ -118,6 +126,9 @@ artifacts must never become silently mandatory.
 - silently approve unsupported claims;
 - accept confidence labels that exceed the evidence actually inspected;
 - allow assumptions or hypotheses to pass as facts;
+- approve reasoning that answers the wrong question, closes prematurely,
+  smooths over contradictions, hides key assumptions, or presents weak
+  sufficiency as settled;
 - make preference-only challenges or turn a merely valid alternative into a
   required change;
 - accept polished but unsupported work as approved because it reads well;
@@ -150,6 +161,8 @@ The Review Agent may decide:
   `changed`;
 - whether a finding is blocking, required, suggested, or informational;
 - whether evidence confidence is sufficient for the claimed output type;
+- whether analytical reasoning is sufficient for the claimed conclusion,
+  recommendation, route, or decision support;
 - whether a failure mode requires bounded repair, return to an earlier stage,
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
@@ -181,6 +194,9 @@ Stop and mark blocked or escalate when:
 - required evidence, claim traceability, or source files are missing;
 - evidence confidence is below the minimum needed for the material conclusion
   and the conclusion cannot be safely constrained or caveated;
+- analytical reasoning is opaque enough that the question, assumptions,
+  contradictions, disconfirmation checks, or sufficiency judgment cannot be
+  reviewed for a material conclusion;
 - instructions conflict, client-profile source status is unresolved, or
   governance approval requirements are unclear;
 - the artifact needs new research, new production work, or broader scope change;
@@ -208,6 +224,10 @@ short examples needed to clarify a finding.
 - evidence quality is checked when material: evidence class, confidence label,
   assumptions, unknowns, validation needed, and residual risk are explicit
   enough for the verdict;
+- analytical reasoning is checked when material: the work does not answer the
+  wrong question, close prematurely, confirm only the preferred answer, hide
+  assumptions, smooth contradictions, inflate precision, overrun research, or
+  recommend beyond sufficiency;
 - failure modes are challenged when visible, especially wrong task, weak
   evidence, hidden assumptions, scope drift, role confusion, weak challenge,
   premature finalization, under-execution, and review-gate bypass;
