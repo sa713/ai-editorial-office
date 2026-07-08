@@ -1,7 +1,7 @@
 # Project State
 
 ## Current phase
-Memory package stabilization.
+Professional Competency Model.
 
 ## Completed
 - governance layer;
@@ -62,13 +62,17 @@ canonical working repository unless the user explicitly gives a different
 repository decision.
 
 ## Current focus
-Keep the active editorial system and the external ChatGPT memory package aligned
-without turning memory files into new canonical policy owners.
+Use the stable architecture to add professional competencies without creating
+new roles, pipelines, lifecycle stages, governance layers, or mandatory
+artifact sets.
+
+Engineering Review is complete. The next planned roadmap release is
+Professional Analysis.
 
 ## Strategic roadmap
-`ROADMAP.md` is the current long-term strategy, evolution plan,
-prioritization guide, and architectural direction document for AI Editorial
-Office.
+`ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
+It answers where the project is going, why, what major stages exist, and what
+the current stage is.
 
 It is not an architecture specification, governance source, lifecycle owner,
 capability owner, workflow owner, implementation checklist, or operational
@@ -77,10 +81,10 @@ source of truth. Canonical ownership remains with the files named in
 operational rules, the canonical files win and the roadmap should later be
 updated.
 
-Future implementation proposals should be screened against roadmap phase,
-capability strengthened, strategic priority fit, and roadmap non-goals before
-work is proposed. This is a strategic fit check, not a new canonical rule
-owner.
+Future implementation proposals should be screened against roadmap stage,
+current release fit, capability strengthened, strategic priority fit, and
+roadmap non-goals before work is proposed. This is a strategic fit check, not a
+new canonical rule owner.
 
 The `/about` folder is the recommended 20-file ChatGPT project memory package.
 It contains copies of selected active files and compact summaries for templates,
@@ -99,12 +103,14 @@ Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, h
 Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless a temporary implementation note needs to point to the active owner.
 
 ## Current next task
-Maintain `/about` as a compact project-memory export:
+Follow the active roadmap stage:
 
-- keep exactly 20 memory files unless the user changes the ChatGPT project limit;
-- sync copied files from their canonical owners after active system changes;
-- keep summary files aligned with their named source files;
-- keep `about/project_tree.md` as the external memory navigation map.
+- Stage: Professional Competency Model.
+- Last completed release: Engineering Review.
+- Next planned release: Professional Analysis.
+
+Keep `/about` aligned only when a release requires memory sync. Do not sync it
+solely because `ROADMAP.md` changed.
 
 ## Known normalization decisions
 - The current operating model does not include separate editor_agent.

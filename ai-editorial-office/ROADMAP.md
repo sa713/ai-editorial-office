@@ -1,470 +1,217 @@
-# AI Editorial Office Roadmap
+# Vision
 
-Status: strategic roadmap
-Last updated: 2026-07-08
-Scope: long-term evolution of `ai-editorial-office/`
-Source basis: the consolidated roadmap/backlog content in
-`ideas/master_backlog.md` v0.3, plus the project lead direction that the
-roadmap is now the primary strategic document for project evolution.
+AI Editorial Office is becoming a local editorial operating system that can
+turn ambiguous intent, sources, constraints, and professional standards into
+reliable artifacts through disciplined task handling, independent review, and
+reusable expert capabilities.
 
-## Role of This Document
+The final goal is not a larger bureaucracy. The final goal is a compact,
+inspectable system that can reason, research, write, review, learn, and apply
+domain expertise with the judgment expected from a strong professional team.
 
-This roadmap is the strategic document for AI Editorial Office evolution. It
-guides long-term direction, prioritization, sequencing, and architectural
-direction.
+# Design Philosophy
 
-It is not a canonical owner of operational rules. It does not replace
-`AGENTS.md`, role specs, pipelines, lifecycle rules, the capability registry,
-review-gate rules, framework boundaries, templates, or task-local artifacts.
+Development follows a stable philosophy:
 
-If this roadmap conflicts with canonical architecture or operational rules, the
-canonical files win. The roadmap should then be updated later to match the
-canonical system.
+- Architecture first: grow only inside the existing system shape unless
+  evidence shows the architecture itself must change.
+- Capability growth over architecture growth: add professional strength as
+  reusable capabilities, review lenses, frameworks, and task-local contracts
+  before considering new roles, pipelines, or lifecycle states.
+- Minimal complexity: prefer one strong shared capability over many narrow
+  overlapping ones.
+- Evidence-driven evolution: major changes should come from observed system
+  needs, professional research, release validation, or repeated task failures.
+- Reviewable progress: every meaningful release should leave the system easier
+  to understand, validate, and operate.
 
-## Strategic Context
+# Stable Foundation
 
-The project has reached architectural stability. Future evolution should no
-longer be driven by ad hoc ideas. The strategic shift is:
+The stable foundation is the architecture that ordinary roadmap work should
+preserve:
 
-```text
-from "add more roles and documents"
-to "minimal task pack -> compact execution -> reviewable diff -> mandatory review"
-```
+- clear role accountability and independent review;
+- task-object discipline with restartable task state;
+- canonical ownership of operational rules;
+- shared lifecycle and review-gate behavior;
+- reusable capabilities wrapped by existing roles;
+- markdown-first governance and documentation;
+- external memory as a non-canonical export.
 
-The active system should become more compact, verifiable, reproducible, and
-resistant to scope drift while preserving quality, traceability, review, and
-restartability.
+This foundation is considered stable. Future work should strengthen it, not
+redesign it.
 
-## Stable Foundation
+# Evolution Model
 
-The safe core already includes:
-
-- the core role set: `chief_editor`, `intake_agent`, `research_agent`,
-  `writer_agent`, `ux_writer`, `review_agent`, and `final_editor`;
-- task lifecycle, task manifest, orchestration, handoff, review, finalization,
-  and final governance patterns;
-- the review gate as a mandatory quality boundary;
-- compact execution guidance;
-- the `/about` ChatGPT project memory package;
-- safe-core publication discipline for GitHub;
-- task-scoped client profile support, including `sber` mode;
-- lifecycle validation;
-- preflight examples and manual trials;
-- source/provenance workflow;
-- research pipeline hardening;
-- task pack generator MVP;
-- first sanitized end-to-end cases.
-
-## Progress Snapshot
-
-### Completed
-
-Completed roadmap releases:
-
-- Analytical Reasoning;
-- Architecture Review;
-- Engineering Review.
-
-Engineering Review is implemented as one shared capability with optional review
-lenses. The release preserved the existing architecture and added no new roles
-or pipelines.
-
-Completed roadmap phases:
-
-- P0 - Consolidated Planning Baseline;
-- P1 - Compare the First Three End-to-End Case Reports;
-- P1.5 - Raw Brief Normalization;
-- P2 - Codex Task Standard and Check Pack;
-- P5 - Task Pack Generator Tuning;
-- P5.5 - Customer Feedback Loop.
-
-### Current
-
-Current roadmap block:
-
-- P3 - Lifecycle Validator Growth.
-
-This is the next existing incomplete roadmap block after the Engineering Review
-release. It should remain focused on structural safety checks around actual
-lifecycle failures.
-
-### Future
-
-Future roadmap blocks remain:
-
-- P4 - Real Low-Risk Compact Execution Trial;
-- P6 - Capability Governance Skeleton;
-- P7 - Artifact Quality Gates Capability;
-- P8 - Reader-Testing Capability;
-- P9 - Review-Gate Linter and Source Traceability Checks;
-- P10 - Future Roles and Visual Subsystem.
-
-## Evolution Principles
-
-### Do Not Add Layers for Their Own Sake
-
-The next useful path is shorter and more reliable:
+Major roadmap releases follow one development cycle:
 
 ```text
-normal task definition
--> minimal task pack
--> compact execution
--> reviewable diff
--> review without reading the whole project
+Research
+->
+Architecture Synthesis
+->
+Capability Release
+->
+Validation
+->
+Memory Sync
 ```
 
-### Capabilities, Not New Default Roles
+Research defines the professional target and gathers the evidence needed to
+avoid shallow or invented capability work.
 
-Capability ideas should be adopted as narrow, explicitly activated helpers with
-clear boundaries, risks, evals, and review. They should not become default
-roles, new governance layers, or shortcuts around the selected pipeline.
+Architecture synthesis decides whether the work belongs as a reusable
+capability, a review lens, an existing behavior, a task-local pattern, or a
+postponed idea.
 
-Useful capability adoption properties:
+Capability release adds only the documentation or system support needed to make
+the approved capability usable inside the stable architecture.
 
-- narrow purpose;
-- explicit activation;
-- when-to-use and when-not-to-use boundaries;
-- forbidden actions;
-- progressive disclosure;
-- activation contract;
-- eval scenarios;
-- review before controlled adoption.
+Validation checks that the release preserves boundaries, remains reviewable,
+and does not create hidden operational rules.
 
-### Markdown Remains Canonical
+Memory sync keeps external project memory aligned when the changed canonical
+state should be visible outside the repository. The memory package does not
+become canonical.
 
-Scripts, validators, and capabilities may help the system work, but canonical
-rules remain in the markdown files named by `AGENTS.md` and the canonical
-ownership map.
+# Roadmap
 
-### External Artifacts Require QA
+## Stage 1 - Architecture Foundation
 
-DOCX, PDF, PPTX, XLSX, and other external artifacts are not ready until they
-have passed visual or structural checks appropriate to the artifact type. This
-is a future candidate for a practical capability, not a default behavior for
-ordinary markdown tasks.
+Status: Complete
 
-### Token Economy Is Task Discipline
+Purpose:
 
-The main context loss risk is vague task definition. Future Codex work should
-remain shaped around:
+Establish AI Editorial Office as a stable, local editorial system with clear
+accountability, restartable task handling, canonical ownership, and mandatory
+independent review.
 
-```text
-goal -> boundaries -> source of truth -> files -> prohibitions
--> acceptance criteria -> check pack
-```
+Why this stage mattered:
 
-## Strategic Non-Goals
+The system needed a reliable operating shape before it could safely absorb
+advanced capabilities. Without a stable foundation, every improvement would
+risk becoming another role, checklist, artifact, or competing source of truth.
 
-For the current roadmap horizon, do not pursue:
+## Stage 2 - Architecture Validation
 
-- new default roles;
-- large pipeline refactors;
-- mandatory capability packs;
-- automated preflight checking unless repeated routing failures justify it;
-- the visual subsystem as a production default;
-- external artifact generation as default editorial behavior;
-- wholesale transfer of ideas from skills repositories;
-- new mandatory artifacts for architectural tidiness alone;
-- rewriting the whole safe core for one local problem.
+Status: Complete
 
-This roadmap also must not be used as:
+Purpose:
 
-- an architecture specification;
-- governance;
-- lifecycle owner;
-- capability owner;
-- workflow owner;
-- implementation checklist;
-- source of operational truth.
+Prove that the foundation can survive real work, implementation tasks,
+review-gate pressure, memory export, and compact execution without losing
+quality or traceability.
 
-## Roadmap Phases
+Why this stage mattered:
 
-The `P*` labels below are the roadmap phases to use for strategic fit checks.
-They preserve the priority sequence from the consolidated project roadmap.
+The architecture had to become trusted through use, not just design. Validation
+showed which parts of the system were stable enough to preserve and which kinds
+of growth would create unnecessary complexity.
 
-### P0 - Consolidated Planning Baseline
+## Stage 3 - Professional Competency Model
 
-Status: completed / strategic role updated by this document.
+Status: Active
 
-Strategic capability strengthened: planning continuity and backlog discipline.
+Purpose:
 
-The earlier development roadmap, skills roadmap, and token economy improvement
-notes were consolidated into `ideas/master_backlog.md`. That file remains the
-active backlog and retrospective planning artifact. This `ROADMAP.md` now
-serves as the long-term strategic document, while the backlog remains useful
-for implementation history and candidate work.
+Transfer world-class professional competencies into AI Editorial Office while
+preserving the existing architecture.
 
-Boundary: the backlog and this roadmap do not override production files.
+This stage makes the office more capable without turning each competency into a
+new role, pipeline, lifecycle stage, governance layer, or mandatory artifact
+set. Competencies should become shared capabilities, review lenses, frameworks,
+or task-local patterns when those shapes are sufficient.
 
-### P1 - Compare the First Three End-to-End Case Reports
+Sub-programs:
 
-Status: implemented / fix identified.
+- Universal Cognitive Competencies
+- Engineering Review
+- Professional Analysis
+- Professional Communication
+- Knowledge Evolution
 
-Strategic capability strengthened: real-case validation of compact execution,
-source/provenance handling, evidence modes, routing, and review-gate behavior.
+Completed releases:
 
-The first sanitized cases showed that:
+- Analytical Reasoning - Complete
+- Architecture Review - Complete
+- Engineering Review - Complete
 
-- security-adjacent work should use `constrain`, not automatic `proceed`;
-- clear internal feedback can use `proceed` when the raw brief is sufficient;
-- source-bound tasks can use compact evidence when task-local source summaries
-  are explicit;
-- missing handoff warnings in compact task packs are not currently blockers;
-- no large refactor, new role, new mandatory artifact, review-gate change, or
-  validator change is required from this phase.
+Current state:
 
-The identified follow-up was to improve task pack generation for declared
-task-local evidence summaries. That follow-up is covered in P5.
+Engineering Review is complete. It exists as one shared capability with
+optional review lenses. The release preserved the architecture and added no new
+roles or pipelines.
 
-### P1.5 - Raw Brief Normalization
+Next planned release:
 
-Status: implemented / validated.
+Professional Analysis
 
-Strategic capability strengthened: converting natural-language user requests
-into usable task definitions without manual prompt translation.
+Why this stage matters:
 
-The system now distinguishes task signal, background context, noise, facts,
-assumptions, questions, and unknowns. Source status must be made explicit
-before source-dependent production. Manual validation covered noisy,
-incomplete, external-source, source-bound, and management-request scenarios.
+The system is no longer mainly proving its own architecture. It is now becoming
+professionally stronger inside that architecture. The key challenge is to add
+expert judgment without creating capability sprawl or new operational owners.
 
-Boundary: normalization must not invent goals, sources, requirements, or client
-profile activation.
+## Stage 4 - Domain Expertise
 
-### P2 - Codex Task Standard and Check Pack
+Status: Planned
 
-Status: implemented.
+Purpose:
 
-Strategic capability strengthened: repository-aware implementation readiness
-and reviewability for future Codex work.
+Add deep domain knowledge packs after the professional competency model is
+strong enough to host them safely.
 
-The system has a compact standard for turning normalized briefs into Codex
-tasks and check packs. The intended chain is:
+Examples:
 
-```text
-raw request -> normalized brief -> Codex task
--> implementation -> check pack -> review
-```
+- Software Architecture
+- DevSecOps
+- Cybersecurity
+- AI Engineering
 
-The standard is meant to reduce unnecessary repo reading, prevent scope drift,
-make validation explicit, and make review easier.
+Why this stage matters:
 
-Boundary: the task standard must not invent requirements, files,
-implementation strategy, roles, pipelines, validators, capabilities, or review
-outcomes.
+Domain expertise should not arrive as loose facts or isolated checklists. It
+should be absorbed through the same disciplined model used for professional
+competencies: researched, synthesized, bounded, validated, and kept inside the
+stable architecture.
 
-### P3 - Lifecycle Validator Growth
+## Stage 5 - Editorial Intelligence
 
-Status: current / in progress.
+Status: Planned
 
-Strategic capability strengthened: structural safety checks around actual
-lifecycle failures.
+Purpose:
 
-Candidate directions:
+Continuously improve the system itself through learning, feedback, evaluation,
+memory hygiene, and better recognition of task needs.
 
-- handoff validator;
-- deeper finalization-gate checks;
-- `client_profile` consistency;
-- `final_decision.md` ownership and stage checks;
-- source metadata checker;
-- forbidden pattern scanner;
-- claim coverage checker;
-- retrospective metrics collector.
+Why this stage matters:
 
-Boundary: validators should catch structural errors without turning low-risk
-tasks into bureaucracy.
+AI Editorial Office should become better at knowing what kind of work it is
+doing, what quality requires, when evidence is sufficient, when canon is stale,
+and when a proposed change would make the system heavier rather than stronger.
 
-### P4 - Real Low-Risk Compact Execution Trial
+# Architectural Rules
 
-Status: planned.
+- The roadmap never overrides canonical files.
+- Architecture changes require evidence that the current architecture cannot
+  safely handle the need.
+- Prefer capability depth over capability count.
+- Merge related competencies when one capability with selectable lenses is
+  cleaner than multiple owners.
+- Do not create new roles, pipelines, lifecycle states, or mandatory artifacts
+  merely to make a roadmap stage look complete.
+- Validation and review are part of every meaningful release.
 
-Strategic capability strengthened: proof that compact execution works on real
-low-risk work, not only synthetic examples.
+# Success Criteria
 
-The trial should check whether compact execution:
+The roadmap is succeeding when:
 
-- avoids unnecessary files;
-- preserves restartability;
-- keeps the review gate intact;
-- remains easy for ChatGPT or another reviewer to inspect;
-- can rely on `task-manifest.md`, `status.md`, the working artifact, and
-  `review.md` without a separate handoff when compact conditions justify it.
-
-### P5 - Task Pack Generator Tuning
-
-Status: implemented.
-
-Strategic capability strengthened: compact, explicit context assembly for
-writer and review roles.
-
-The generator now includes declared task-local source/evidence artifacts such
-as `source_summary.md`, `source_notes.md`, or equivalents in writer and review
-read sets for source-based compact-evidence tasks. It also shows source status
-explicitly, avoids adding source files for no-research tasks, preserves the
-client-profile guard, and does not use latest modified time as source of truth.
-
-### P5.5 - Customer Feedback Loop
-
-Status: implemented.
-
-Strategic capability strengthened: controlled handling of post-result feedback
-without turning every reaction into a system rule.
-
-Feedback is classified as:
-
-- `task_local`;
-- `preference`;
-- `observation`;
-- `confirmed_pattern`;
-- `system_change_candidate`.
-
-Boundary:
-
-- one feedback item does not automatically change the system;
-- preferences remain task/customer-scoped unless later promoted through the
-  proper reviewed path;
-- watchlist and backlog entries are decision-gated;
-- feedback does not bypass review or governance.
-
-### P6 - Capability Governance Skeleton
-
-Status: proposal / planned after P1-P5.
-
-Strategic capability strengthened: controlled adoption of optional capability
-helpers without new roles.
-
-Minimum proposed shape:
-
-```text
-kb/capability_governance.md
-templates/capability-card.md
-```
-
-Candidate governance properties:
-
-- no capability may override `AGENTS.md`, the selected pipeline, role
-  separation, or review-gate rules;
-- activation must be explicit;
-- each capability has an owner from existing roles;
-- each capability has when-to-use and when-not-to-use boundaries;
-- each capability has an activation contract;
-- progressive disclosure prevents unused details from loading by default;
-- risks, forbidden actions, and eval scenarios are visible;
-- capabilities remain optional helpers.
-
-### P7 - Artifact Quality Gates Capability
-
-Status: proposal.
-
-Strategic capability strengthened: practical QA for external artifacts.
-
-This is the proposed first real capability because DOCX, PDF, PPTX, XLSX, and
-similar outputs carry high layout and structure risk that reasoning alone does
-not reliably catch.
-
-Initial candidate shape:
-
-```text
-capabilities/artifact-quality-gates/SKILL.md
-capabilities/artifact-quality-gates/evals/activation_positive.jsonl
-capabilities/artifact-quality-gates/evals/activation_negative.jsonl
-```
-
-Boundary: do not make this mandatory for ordinary markdown tasks.
-
-### P8 - Reader-Testing Capability
-
-Status: proposal.
-
-Strategic capability strengthened: independent usability check by a fresh
-reader without the conversation context.
-
-Use for:
-
-- important articles;
-- strategic documents;
-- UX-writing specs;
-- client reports;
-- decision memos;
-- texts where reader misunderstanding is expensive.
-
-The capability should check whether a fresh reader can understand the document
-on its own, what it assumes but does not say, where ambiguity remains, where
-context is missing, and what feels generic or unsupported.
-
-Boundary: do not make this mandatory for every small task.
-
-### P9 - Review-Gate Linter and Source Traceability Checks
-
-Status: proposal.
-
-Strategic capability strengthened: assistance for Review Agent without
-replacing editorial judgment.
-
-Candidate helpers:
-
-- `review-gate-linter`;
-- `source-traceability-check`;
-- claim coverage checker;
-- forbidden pattern scanner.
-
-The preferred direction is to script stable checks while leaving editorial
-judgment with Review Agent.
-
-### P10 - Future Roles and Visual Subsystem
-
-Status: defer.
-
-Strategic capability strengthened: preserving experimental knowledge without
-turning it into default production behavior.
-
-Decision:
-
-- future roles are not developed yet;
-- the visual subsystem is not enabled by default;
-- visual tasks remain experimental or isolated;
-- return to this area after validators, compact execution, and task pack
-  generation are more stable.
-
-Known visual-subsystem problems:
-
-- short requests like "visual notes" did not always trigger the right
-  sketchnote pipeline;
-- Codex sometimes produced SVG or infographic output instead of a living
-  hand-drawn sketchnote;
-- the expected final result should be PNG without extra HTML or service files
-  unless the user asks otherwise;
-- Russian text inside images must be checked for invented content, readability,
-  and article fit;
-- the visual pipeline must distinguish sketchnote, infographic, meme, comic,
-  and presentation visual;
-- visual tasks require a visual brief and image prompt, but must not break the
-  ordinary editorial task lifecycle.
-
-## Future Work Strategic Fit Check
-
-Before proposing future implementation work, use this roadmap as a strategic
-screen:
-
-1. Which roadmap phase does the work belong to?
-2. Which roadmap capability does it strengthen?
-3. Does it fit the current strategic priorities?
-4. Does it violate any roadmap non-goals?
-
-If a proposed task clearly falls outside the roadmap, surface the mismatch
-instead of silently implementing it.
-
-This check is a planning aid. It does not make the roadmap an operational rule
-owner.
-
-## Maintenance
-
-Update this roadmap when the project lead changes strategy, when roadmap phase
-status changes materially, or when completed system work changes the long-term
-evolution path.
-
-Keep implementation history, candidates, and retrospective details in
-`ideas/master_backlog.md` unless they need to change the strategic roadmap.
-
-Do not sync `/about` only because this roadmap changed unless a separate memory
-package update is requested.
+- the current stage is obvious to a new reader in under ten minutes;
+- future work can be judged by strategic fit before implementation begins;
+- professional capability increases without architectural drift;
+- new competencies are reusable, bounded, inspectable, and reviewable;
+- domain expertise can be added without weakening editorial governance;
+- memory stays aligned with the system without becoming a second source of
+  truth;
+- AI Editorial Office becomes more capable while remaining compact enough for
+  one user to understand and operate.
