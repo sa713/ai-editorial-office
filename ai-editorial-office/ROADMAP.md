@@ -55,6 +55,50 @@ The safe core already includes:
 - task pack generator MVP;
 - first sanitized end-to-end cases.
 
+## Progress Snapshot
+
+### Completed
+
+Completed roadmap releases:
+
+- Analytical Reasoning;
+- Architecture Review;
+- Engineering Review.
+
+Engineering Review is implemented as one shared capability with optional review
+lenses. The release preserved the existing architecture and added no new roles
+or pipelines.
+
+Completed roadmap phases:
+
+- P0 - Consolidated Planning Baseline;
+- P1 - Compare the First Three End-to-End Case Reports;
+- P1.5 - Raw Brief Normalization;
+- P2 - Codex Task Standard and Check Pack;
+- P5 - Task Pack Generator Tuning;
+- P5.5 - Customer Feedback Loop.
+
+### Current
+
+Current roadmap block:
+
+- P3 - Lifecycle Validator Growth.
+
+This is the next existing incomplete roadmap block after the Engineering Review
+release. It should remain focused on structural safety checks around actual
+lifecycle failures.
+
+### Future
+
+Future roadmap blocks remain:
+
+- P4 - Real Low-Risk Compact Execution Trial;
+- P6 - Capability Governance Skeleton;
+- P7 - Artifact Quality Gates Capability;
+- P8 - Reader-Testing Capability;
+- P9 - Review-Gate Linter and Source Traceability Checks;
+- P10 - Future Roles and Visual Subsystem.
+
 ## Evolution Principles
 
 ### Do Not Add Layers for Their Own Sake
@@ -211,7 +255,7 @@ outcomes.
 
 ### P3 - Lifecycle Validator Growth
 
-Status: in progress.
+Status: current / in progress.
 
 Strategic capability strengthened: structural safety checks around actual
 lifecycle failures.
