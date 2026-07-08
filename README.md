@@ -15,16 +15,20 @@ manual review of `git status`, `git diff`, tracked files, and publishing risks.
 
 ## Project planning
 
-`ai-editorial-office/ideas/master_backlog.md` is the only active backlog file
-for planning AI editorial office development and retrospectives of system
-updates.
+`ai-editorial-office/ROADMAP.md` is the strategic roadmap for long-term AI
+Editorial Office evolution. It guides priorities, roadmap phase fit, capability
+direction, and future-work screening.
+
+`ai-editorial-office/ideas/master_backlog.md` remains the active backlog and
+retrospective planning file for system updates.
 
 `AI_EDITORIAL_OFFICE_DEVELOPMENT_ROADMAP.md` was folded into the master backlog
 and is no longer maintained as a separate planning document.
 
-Files in `ai-editorial-office/ideas/` are planning and proposal materials. They
-do not override `AGENTS.md`, `ai-editorial-office/AGENTS.md`, production roles,
-pipelines, templates, or task lifecycle rules.
+The roadmap, backlog, and files in `ai-editorial-office/ideas/` are planning
+and strategy materials. They do not override `AGENTS.md`,
+`ai-editorial-office/AGENTS.md`, production roles, pipelines, templates,
+capability ownership, or task lifecycle rules.
 
 ## Canonical repository status
 
@@ -33,4 +37,3 @@ This path is the canonical working repository for AI Editorial Office:
 `/Users/sa/Projects/ai-editorial-office-github`
 
 `/Users/sa/Documents/codex/redaction` is retained as a legacy/private archive and provenance source after migration.
-

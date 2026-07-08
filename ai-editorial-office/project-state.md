@@ -61,6 +61,23 @@ repository decision.
 Keep the active editorial system and the external ChatGPT memory package aligned
 without turning memory files into new canonical policy owners.
 
+## Strategic roadmap
+`ROADMAP.md` is the current long-term strategy, evolution plan,
+prioritization guide, and architectural direction document for AI Editorial
+Office.
+
+It is not an architecture specification, governance source, lifecycle owner,
+capability owner, workflow owner, implementation checklist, or operational
+source of truth. Canonical ownership remains with the files named in
+`AGENTS.md`. If roadmap direction conflicts with canonical architecture or
+operational rules, the canonical files win and the roadmap should later be
+updated.
+
+Future implementation proposals should be screened against roadmap phase,
+capability strengthened, strategic priority fit, and roadmap non-goals before
+work is proposed. This is a strategic fit check, not a new canonical rule
+owner.
+
 The `/about` folder is the recommended 20-file ChatGPT project memory package.
 It contains copies of selected active files and compact summaries for templates,
 standards, editorial knowledge, and memory usage rules.
