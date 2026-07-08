@@ -9,6 +9,7 @@ Canonical source files:
 - `ai-editorial-office/kb/tone_of_voice.md`
 - `ai-editorial-office/kb/glossary.md`
 - `ai-editorial-office/kb/ux_writing_guidelines.md`
+- `ai-editorial-office/kb/professional_analysis.md`
 - `ai-editorial-office/kb/engineering_review.md`
 
 This file is a memory aid, not a canonical policy. If it conflicts with
@@ -136,6 +137,27 @@ security-sensitive behavior.
 Chief Editor selects relevant lenses. Review Agent challenges changed surface,
 selected lenses, validation evidence, findings, and residual risk inside the
 existing review gate.
+
+## Professional Analysis
+
+Professional Analysis is a shared capability for structured interpretation,
+synthesis, recommendation building, implications, analytical judgment, and
+decision-ready analytical communication.
+
+It does not create an Analyst, Consultant, Business Analyst, Policy Analyst,
+Product Strategist, Intelligence Analyst, or Technology Analyst role, and it
+does not create a new pipeline, lifecycle stage, review gate, consulting
+framework, or mandatory artifact.
+
+Use it only when analytical product quality is material, such as situation
+assessment, synthesis brief, options/recommendation memo, business or needs
+analysis, policy or impact analysis, product discovery analysis, technology
+assessment, or executive decision brief.
+
+Analytical Reasoning owns the reasoning moves. Professional Analysis owns the
+decision-ready analytical product shape. Architecture Review and Engineering
+Review remain separate capabilities for design fitness and implementation
+change safety.
 
 ## UX Writing Standards
 

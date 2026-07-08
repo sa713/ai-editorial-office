@@ -150,6 +150,12 @@ role or stage. Activate it only when code, scripts, configuration, automation,
 interfaces, observability, reliability, data, performance, or
 security-sensitive behavior is material.
 
+Professional Analysis may be used inside the same review gate for
+decision-support work. It is a shared capability with lenses, not a new role,
+pipeline, stage, consulting framework, or mandatory artifact. Activate it only
+when structured interpretation, synthesis, recommendation, implications,
+analytical judgment, or decision-ready analytical communication is material.
+
 ## Research Rules
 
 Use research when the task needs factual claims, dates, names, numbers, quotes,

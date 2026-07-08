@@ -22,7 +22,7 @@ Done
 
 Allowed release statuses: Not Started, In Progress, Review, Done.
 
-Current active release: S3.R4 - Professional Analysis.
+Current active release: S3.R4 - Professional Analysis (Review).
 
 # Stage 1 - Architecture Foundation
 
@@ -45,7 +45,7 @@ Current active release: S3.R4 - Professional Analysis.
 | S3.R1 | Analytical Reasoning | Add inspectable reasoning capability for complex editorial and implementation decisions. | Analytical reasoning is available as a bounded shared capability. | The capability improves task reasoning without adding a new role, pipeline, lifecycle stage, or governance owner. | Done |
 | S3.R2 | Architecture Review | Add architectural review capability for design-significant work. | Architecture Review is available as a bounded shared capability. | The capability supports drivers, tradeoffs, risks, and rationale review without replacing canonical architecture owners. | Done |
 | S3.R3 | Engineering Review | Add professional engineering review capability for implementation and change safety. | Engineering Review is available as one shared capability with optional review lenses. | Engineering Review covers engineering review needs without new roles, pipelines, lifecycle stages, or duplicate owners. | Done |
-| S3.R4 | Professional Analysis | Add professional analysis capability for structured interpretation, judgment, and recommendation work. | Professional Analysis release candidate is ready for Project Lead review. | The release improves analysis quality, defines bounded use, and preserves existing architecture. | In Progress |
+| S3.R4 | Professional Analysis | Add professional analysis capability for structured interpretation, judgment, and recommendation work. | Professional Analysis release candidate is ready for Project Lead review. | The release improves analysis quality, defines bounded use, and preserves existing architecture. | Review |
 | S3.R5 | Professional Communication | Add professional communication capability for audience-fit, clarity, and decision-oriented messaging. | Professional Communication release candidate is ready for Project Lead review. | The release improves communication quality without creating a new writing role, pipeline, or mandatory artifact set. | Not Started |
 | S3.R6 | Knowledge Evolution | Add capability for deliberate learning, canon evolution, stale knowledge handling, and retirement. | Knowledge Evolution release candidate is ready for Project Lead review. | The release improves learning from work without automatic canon promotion or new governance layers. | Not Started |
 

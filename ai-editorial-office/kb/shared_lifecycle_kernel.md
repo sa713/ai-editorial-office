@@ -14,6 +14,10 @@ labels, and reusable evidence section standard used by lifecycle gates.
 `/kb/analytical_reasoning.md` owns analytical moves such as problem framing,
 decomposition, hypothesis comparison, disconfirmation, contradiction handling,
 sufficiency judgment, and uncertainty communication.
+`/kb/professional_analysis.md` owns Professional Analysis moves such as
+analytical product shape, structured interpretation, synthesis,
+recommendation building, implications, risks, uncertainty, and decision-ready
+analytical communication.
 `/kb/architecture_review.md` owns Architecture Review moves such as
 architectural significance, drivers, quality-attribute scenarios, tradeoffs,
 architecture risks, architectural assumptions, evidence, and decision-rationale
@@ -45,10 +49,10 @@ Default lifecycle:
 intake -> routing -> research when required -> drafting or UX writing -> review -> repair when required -> finalization -> governance -> memory disposition
 ```
 
-Source conversion, analytical reasoning, Architecture Review, memory curation,
-learning extraction, and canon evolution are capabilities that can attach to
-the lifecycle when needed. They are not standing default roles and do not
-create a separate workflow engine.
+Source conversion, analytical reasoning, Professional Analysis, Architecture
+Review, memory curation, learning extraction, and canon evolution are
+capabilities that can attach to the lifecycle when needed. They are not
+standing default roles and do not create a separate workflow engine.
 
 ## Shared Stages
 
@@ -183,6 +187,12 @@ assumptions, contradiction, diagnostic evidence, or sufficiency judgment may
 consume the compact analytical pattern from `/kb/analytical_reasoning.md`.
 Analytical reasoning is recorded in the smallest existing artifact that remains
 reviewable and does not create a separate lifecycle stage.
+
+Any stage that produces structured interpretation, synthesis, recommendation,
+implications, or decision-ready analytical communication may consume the
+compact Professional Analysis pattern from `/kb/professional_analysis.md`.
+Professional Analysis is recorded in the smallest existing artifact that
+remains reviewable and does not create a separate lifecycle stage.
 
 Any stage that reviews or commits to an architecture-sensitive route,
 recommendation, implementation task, canon structure, or system design decision

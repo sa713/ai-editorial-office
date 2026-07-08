@@ -25,6 +25,12 @@ Canonical KB ownership:
   handling, sufficiency judgment, and uncertainty communication. It does not
   create a new role, pipeline, framework, review gate, scoring model, or
   mandatory artifact set.
+- `professional_analysis.md` owns practical Professional Analysis moves:
+  analytical product shape, structured interpretation, synthesis,
+  recommendation building, implications, risks, uncertainty, and
+  decision-ready analytical communication. It does not create a new role,
+  framework, pipeline, lifecycle stage, review gate, scoring model, consulting
+  methodology, or mandatory artifact set.
 - `architecture_review.md` owns practical Architecture Review moves:
   architectural significance, architecture drivers, quality-attribute
   scenarios, tradeoff analysis, architecture-specific risks, architectural

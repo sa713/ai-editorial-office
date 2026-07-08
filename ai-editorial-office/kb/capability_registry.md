@@ -12,6 +12,9 @@ evidence taxonomy, confidence labels, and evidence section standards live in
 analytical reasoning moves, hypothesis comparison, disconfirmation,
 contradiction handling, and sufficiency judgment live in
 `/kb/analytical_reasoning.md`;
+Professional Analysis moves, analytical product shape, structured
+interpretation, synthesis, recommendation building, implications, and
+decision-ready analytical communication live in `/kb/professional_analysis.md`;
 Architecture Review moves, architecture drivers, quality-attribute scenarios,
 architectural tradeoffs, architecture risks, architectural assumptions, and
 decision-rationale challenge live in `/kb/architecture_review.md`;
@@ -76,6 +79,10 @@ checking remains a check/script capability. Memory export remains a
 capability/process. Evidence-confidence assessment is a shared capability, not
 a standing Fact Checker role. Analytical reasoning is a shared capability, not
 a standing Analyst role, pipeline, review gate, or mandatory artifact set.
+Professional Analysis is a shared capability, not a standing Analyst,
+Consultant, Business Analyst, Policy Analyst, Product Strategist, Intelligence
+Analyst, Technology Analyst, framework, pipeline, lifecycle stage, review gate,
+or mandatory artifact set.
 Architecture Review is a shared capability, not a standing Architecture
 Reviewer role, framework, pipeline, lifecycle stage, review gate, or mandatory
 artifact set.
@@ -236,6 +243,47 @@ canon detection are shared capabilities, not standing roles.
   ambiguity, competing explanations, contradictions, high-governance risk,
   unsupported recommendation, false precision, unbounded research, or reviewer
   uncertainty.
+
+### Professional Analysis
+
+- Purpose: turn complex information into decision-ready analytical products
+  through structured interpretation, synthesis, implications, tradeoffs,
+  recommendation building, and executive analytical communication using
+  `/kb/professional_analysis.md` when material.
+- Typical inputs: task object state, brief, audience/outcome context, source
+  boundary, evidence confidence, research findings, analytical reasoning notes,
+  planning options, current artifact, review findings, and decision context.
+- Typical outputs: selected Professional Analysis lens, analytical product,
+  decision or use context, synthesis, options or interpretations,
+  implications, risks, recommendation or judgment, uncertainty, revision
+  triggers, and next decision/action recorded compactly in an existing artifact
+  when material.
+- Accountability wrapper: shared across roles by stage; Chief Editor decides
+  whether Professional Analysis is needed; Research Agent supports evidence and
+  synthesis when assigned; Writer Agent preserves the analytical product shape
+  during production; Review Agent challenges the professional analysis product;
+  Final Editor preserves approved judgment, caveats, recommendation, and next
+  action when material.
+- Required artifacts: none by default beyond the artifact that already contains
+  the material analysis, synthesis, recommendation, review, or decision.
+- Optional artifacts: compact Professional Analysis note inside `brief.md`,
+  `orchestration_plan.md`, `research.md`, production notes, `review.md`, or
+  `final_decision.md` when restartability, review, or governance needs visible
+  analytical product structure.
+- Stop conditions: decision or use context is unclear, synthesis is only
+  summary, options or criteria are hidden for a recommendation, implications or
+  risks are missing, recommendation exceeds the evidence, assumptions are
+  treated as facts, domain evidence is insufficient, Architecture Review or
+  Engineering Review is required but not activated, or Review Agent cannot
+  reconstruct the evidence, judgment, recommendation, and residual risk.
+- Quality criteria: analytical product, reader decision, evidence confidence,
+  synthesis, options or interpretations, implications, risks, recommendation,
+  uncertainty, and next action are visible enough for review without making
+  ordinary summaries heavy.
+- Expansion triggers: strategy, business, product, policy, technology,
+  organizational, operating-context, or decision-support work; requested
+  recommendation or options memo; multiple evidence streams; stakeholder needs
+  or impacts; material tradeoffs; executive brief; reviewer uncertainty.
 
 ### Architecture Review
 
@@ -730,13 +778,13 @@ canon detection are shared capabilities, not standing roles.
 
 | Role | Wrapped capabilities |
 | --- | --- |
-| Chief Editor | Routing and preflight; analytical reasoning depth for complex or decision-heavy work; Architecture Review selection for architecture-sensitive work; Engineering Review selection for implementation-sensitive work; quality attribute selection for route/depth decisions; audience/outcome alignment for route/depth decisions; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; learning extraction and canon-evolution routing; mini-contract authorization. |
+| Chief Editor | Routing and preflight; analytical reasoning depth for complex or decision-heavy work; Professional Analysis selection for structured interpretation, synthesis, recommendation, and decision-support work; Architecture Review selection for architecture-sensitive work; Engineering Review selection for implementation-sensitive work; quality attribute selection for route/depth decisions; audience/outcome alignment for route/depth decisions; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; learning extraction and canon-evolution routing; mini-contract authorization. |
 | Intake Agent | Intake normalization; initial audience/outcome capture or inference; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; planning-depth signal; risk/client-profile suggestion. |
-| Research Agent | Research/evidence classification; analytical decomposition, hypothesis testing, contradiction preservation, and diagnostic evidence support when material; architecture driver, constraint, quality-attribute evidence, tradeoff, assumption, and risk support when material; engineering-review evidence support when implementation change safety needs professional, repository, validation, dependency, security, or operational evidence; evidence confidence assessment when research is assigned; evidence for competing options; durable evidence/context signal when material; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
-| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; preservation of analytical structure, architecture rationale, assumptions, alternatives, uncertainty, and sufficiency cues when material; quality-preservation during drafting; audience/outcome shaping; tradeoff communication; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
+| Research Agent | Research/evidence classification; analytical decomposition, hypothesis testing, contradiction preservation, and diagnostic evidence support when material; Professional Analysis evidence support, source synthesis, implications, and decision-context support when assigned; architecture driver, constraint, quality-attribute evidence, tradeoff, assumption, and risk support when material; engineering-review evidence support when implementation change safety needs professional, repository, validation, dependency, security, or operational evidence; evidence confidence assessment when research is assigned; evidence for competing options; durable evidence/context signal when material; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
+| Writer Agent | Editorial structure planning within approved route; drafting from approved evidence; preservation of analytical structure, Professional Analysis product shape, synthesis, recommendation, architecture rationale, assumptions, alternatives, uncertainty, and sufficiency cues when material; quality-preservation during drafting; audience/outcome shaping; tradeoff communication; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
 | UX Writer | UX writing from product evidence; quality-preservation for product copy; audience/outcome shaping for user action and UI state; over-polishing/product-assumption detection; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
-| Review Agent | Independent review; architecture-review challenge for missing drivers, vague quality attributes, missing scenarios, hidden assumptions, architecture/implementation confusion, missing rejected alternatives, undocumented accepted risks, and decisions without rationale; Engineering Review challenge for changed surface, selected lenses, validation, security/config/interface/data/reliability/performance risks, and engineering residual risk when material; analytical-reasoning challenge for wrong question, premature closure, confirmation bias, hidden assumptions, contradiction smoothing, false precision, unsupported recommendation, weak sufficiency, and unbounded research; quality-attribute challenge; audience/outcome mismatch challenge; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; learning/canon candidate and stale-canon challenge when material; review-side source/client/profile checks; re-review after repair. |
-| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of approved quality attributes; preservation of audience fit and actionability; preservation of selected-approach rationale, architecture rationale, accepted risks, and analytical traceability when material; preservation of reusable learning cues without classification; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
+| Review Agent | Independent review; Professional Analysis challenge for unclear analytical product, missing decision context, weak synthesis, hidden options or criteria, unsupported recommendation, missing implications or risks, and unreviewable uncertainty when material; architecture-review challenge for missing drivers, vague quality attributes, missing scenarios, hidden assumptions, architecture/implementation confusion, missing rejected alternatives, undocumented accepted risks, and decisions without rationale; Engineering Review challenge for changed surface, selected lenses, validation, security/config/interface/data/reliability/performance risks, and engineering residual risk when material; analytical-reasoning challenge for wrong question, premature closure, confirmation bias, hidden assumptions, contradiction smoothing, false precision, unsupported recommendation, weak sufficiency, and unbounded research; quality-attribute challenge; audience/outcome mismatch challenge; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; learning/canon candidate and stale-canon challenge when material; review-side source/client/profile checks; re-review after repair. |
+| Final Editor | Controlled finalization when transformation after approved review is needed; preservation of approved quality attributes; preservation of audience fit and actionability; preservation of selected-approach rationale, Professional Analysis judgment and recommendation, architecture rationale, accepted risks, and analytical traceability when material; preservation of reusable learning cues without classification; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
 | Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites; preservation of evidence-backed visual meaning. |
 
 ## Non-Role Capabilities
@@ -750,6 +798,7 @@ reviewed system update:
 - context assembly;
 - evidence-confidence assessment;
 - analytical reasoning;
+- Professional Analysis;
 - Architecture Review;
 - Engineering Review;
 - failure recognition and recovery;

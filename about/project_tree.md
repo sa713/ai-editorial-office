@@ -95,6 +95,7 @@ ai-editorial-office/
 │   ├── task_object_model.md
 │   ├── capability_registry.md
 │   ├── shared_lifecycle_kernel.md
+│   ├── professional_analysis.md
 │   ├── engineering_review.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
@@ -213,6 +214,10 @@ or the task-local canonical owner named there.
   task state.
 - Capabilities are reusable operations; roles are accountability wrappers where
   independence, ownership, or decision authority matters.
+- Professional Analysis is a shared capability for structured interpretation,
+  synthesis, recommendation building, implications, analytical judgment, and
+  decision-ready analytical communication. It is not a role, pipeline,
+  lifecycle stage, review gate, consulting framework, or mandatory artifact.
 - Engineering Review is a shared capability for implementation/change safety,
   not a role, pipeline, lifecycle stage, review gate, or mandatory artifact
   set.

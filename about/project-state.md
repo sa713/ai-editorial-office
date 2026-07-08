@@ -1,7 +1,7 @@
 # Project State
 
 ## Current phase
-Memory package stabilization.
+Professional Capability Model.
 
 ## Completed
 - governance layer;
@@ -31,6 +31,9 @@ Memory package stabilization.
   code, security, configuration, delivery automation, infrastructure/runtime,
   interface/API, observability, reliability, data, performance, and secure
   delivery synthesis.
+- Professional Analysis release candidate with structured interpretation,
+  synthesis, recommendation, implication, risk, uncertainty, and
+  decision-ready analytical communication lenses.
 
 ## Current core roles
 - chief_editor
@@ -62,13 +65,20 @@ canonical working repository unless the user explicitly gives a different
 repository decision.
 
 ## Current focus
-Keep the active editorial system and the external ChatGPT memory package aligned
-without turning memory files into new canonical policy owners.
+Use the stable architecture to add professional competencies without creating
+new roles, pipelines, lifecycle stages, governance layers, or mandatory
+artifact sets.
+
+Engineering Review is complete. Professional Analysis is implemented as a
+release candidate and is ready for Project Lead architectural review.
+
+The next planned release after Professional Analysis acceptance is
+Professional Communication.
 
 ## Strategic roadmap
-`ROADMAP.md` is the current long-term strategy, evolution plan,
-prioritization guide, and architectural direction document for AI Editorial
-Office.
+`ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
+It answers where the project is going, why, what major stages exist, and what
+the current stage is.
 
 It is not an architecture specification, governance source, lifecycle owner,
 capability owner, workflow owner, implementation checklist, or operational
@@ -77,10 +87,10 @@ source of truth. Canonical ownership remains with the files named in
 operational rules, the canonical files win and the roadmap should later be
 updated.
 
-Future implementation proposals should be screened against roadmap phase,
-capability strengthened, strategic priority fit, and roadmap non-goals before
-work is proposed. This is a strategic fit check, not a new canonical rule
-owner.
+Future implementation proposals should be screened against roadmap stage,
+current release fit, capability strengthened, strategic priority fit, and
+roadmap non-goals before work is proposed. This is a strategic fit check, not a
+new canonical rule owner.
 
 The `/about` folder is the recommended 20-file ChatGPT project memory package.
 It contains copies of selected active files and compact summaries for templates,
@@ -90,7 +100,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, and `/kb/editorial_learning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, and `/kb/editorial_learning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -99,12 +109,15 @@ Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, h
 Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless a temporary implementation note needs to point to the active owner.
 
 ## Current next task
-Maintain `/about` as a compact project-memory export:
+Follow the active roadmap stage:
 
-- keep exactly 20 memory files unless the user changes the ChatGPT project limit;
-- sync copied files from their canonical owners after active system changes;
-- keep summary files aligned with their named source files;
-- keep `about/project_tree.md` as the external memory navigation map.
+- Stage: Professional Capability Model.
+- Last completed release: Engineering Review.
+- Current release candidate: Professional Analysis.
+- Next planned release after acceptance: Professional Communication.
+
+Keep `/about` aligned only when a release requires memory sync. Do not sync it
+solely because `ROADMAP.md` changed.
 
 ## Known normalization decisions
 - The current operating model does not include separate editor_agent.
@@ -161,6 +174,11 @@ Maintain `/about` as a compact project-memory export:
   set. It is activated only when engineering surfaces such as code, scripts,
   configuration, automation, interfaces, observability, reliability, data,
   performance, or security-sensitive behavior are material.
+- Professional Analysis is a shared capability for structured interpretation,
+  synthesis, recommendation building, implications, analytical judgment, and
+  decision-ready analytical communication, not a new role, pipeline, lifecycle
+  stage, review gate, consulting framework, or mandatory artifact set. It is
+  activated only when analytical product quality is material.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.

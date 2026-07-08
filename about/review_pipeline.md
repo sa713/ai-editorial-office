@@ -27,6 +27,11 @@ disconfirmation, contradiction handling, sufficiency judgment, or uncertainty
 communication, review applies `/kb/analytical_reasoning.md` to challenge the
 reasoning path without creating a new review gate.
 
+When reviewed work depends on structured interpretation, synthesis,
+recommendation building, implications, analytical judgment, or decision-ready
+analytical communication, review applies `/kb/professional_analysis.md` to
+challenge the analytical product without creating a new review gate.
+
 When reviewed work is architecture-sensitive, review applies
 `/kb/architecture_review.md` to challenge architectural drivers,
 quality-attribute scenarios, architectural tradeoffs, assumptions, architecture
@@ -134,6 +139,9 @@ packet from those owners, then add only review-specific context:
   claims or evidence-dependent conclusions are present;
 - analytical-reasoning notes when reasoning complexity, evidence ambiguity,
   contradictions, or sufficiency judgments are material;
+- professional-analysis notes when structured interpretation, synthesis,
+  recommendation building, implications, analytical judgment, or
+  decision-ready analytical communication is material;
 - architecture-review notes when architectural significance, drivers,
   quality-attribute scenarios, tradeoffs, assumptions, risks, or decision
   rationale are material;
@@ -211,7 +219,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Architecture Review challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Architecture Review challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -307,6 +315,9 @@ Compact review minimum:
 - compact analytical-reasoning check when the reviewed conclusion depends on
   problem framing, competing explanations, hidden assumptions, contradiction
   handling, diagnostic evidence, or sufficiency judgment;
+- compact Professional Analysis check when the reviewed work depends on
+  structured interpretation, synthesis, recommendation, implications,
+  analytical judgment, or decision-ready communication;
 - compact Architecture Review check when the reviewed work is
   architecture-sensitive or depends on drivers, quality-attribute scenarios,
   architectural tradeoffs, assumptions, accepted risks, or decision rationale;
@@ -339,6 +350,10 @@ It does not restate detailed review logic. Review Agent owns:
   confirmation bias, unsupported recommendation, hidden assumption,
   contradiction smoothing, false precision, unbounded research, and weak
   sufficiency judgment;
+- Professional Analysis challenge, including unclear analytical product,
+  missing decision context, weak synthesis, hidden options or implications,
+  unsupported recommendation, missing risk/uncertainty, and unclear next
+  decision/action;
 - Architecture Review challenge, including missing drivers, vague quality
   attributes, missing scenarios, hidden architectural assumptions,
   architecture/implementation confusion, missing rejected alternatives,

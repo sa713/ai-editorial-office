@@ -156,6 +156,15 @@ not activate for ordinary editorial or planning-only tasks. It does not define
 active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
 Engineering Review KB.
 
+`professional_analysis_smoke_test.md` records synthetic positive and negative
+activation cases for `/kb/professional_analysis.md`. It checks that
+Professional Analysis activates for structured interpretation, synthesis,
+recommendation, implications, technology assessment, policy/product/business
+analysis, and executive decision briefs, and does not activate for ordinary
+summaries, copyediting, Architecture Review, or Engineering Review. It does not
+define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
+Professional Analysis KB.
+
 `end_to_end_cases/access_pass_security_task/` records a synthetic sanitized
 end-to-end editorial case. It checks Preflight Gate `constrain`, compact
 execution, no-research mode, no external source import, task pack generator

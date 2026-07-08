@@ -17,7 +17,8 @@ confidence labels are owned by `/kb/editorial_evidence_framework.md`.
 Failure-mode challenge and recovery patterns are owned by
 `/kb/editorial_failure_modes.md`. Planning and option evaluation are owned by
 `/kb/editorial_planning_framework.md`. Analytical reasoning moves are owned by
-`/kb/analytical_reasoning.md`. Architecture Review moves are owned by
+`/kb/analytical_reasoning.md`. Professional Analysis moves are owned by
+`/kb/professional_analysis.md`. Architecture Review moves are owned by
 `/kb/architecture_review.md`. Engineering Review moves are owned by
 `/kb/engineering_review.md`. Audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are
@@ -41,6 +42,9 @@ evolution are owned by `/kb/editorial_learning_framework.md`.
 - challenge analytical reasoning when material: question framing, decomposition,
   hypotheses considered, disconfirmation, contradiction handling, diagnostic
   evidence, sufficiency judgment, and uncertainty communication;
+- challenge Professional Analysis when material: analytical product, decision
+  context, evidence confidence, synthesis, options or interpretations,
+  implications, risks, recommendation, uncertainty, and next action;
 - challenge Architecture Review when material: missing drivers, vague quality
   attributes, missing scenarios, hidden architectural assumptions,
   architecture-vs-implementation confusion, missing rejected alternatives,
@@ -96,6 +100,9 @@ Conditional:
 - `/kb/analytical_reasoning.md` when analytical complexity, decision impact,
   evidence ambiguity, competing explanations, contradiction, or sufficiency
   judgment affects review;
+- `/kb/professional_analysis.md` when structured interpretation, synthesis,
+  recommendation building, implications, analytical judgment, or
+  decision-ready analytical communication affects review;
 - `/kb/architecture_review.md` when architectural significance,
   quality-attribute impact, cross-owner effects, hard-to-reverse design
   consequences, architecture risks, or decision rationale affect review;
@@ -114,7 +121,8 @@ Required:
 
 - `review.md` with reviewed artifacts, independence basis, findings, Editorial
   Challenge Lens when applicable, analytical-reasoning challenge when
-  applicable, Architecture Review challenge when applicable,
+  applicable, Professional Analysis challenge when applicable,
+  Architecture Review challenge when applicable,
   Engineering Review challenge when applicable,
   evidence-confidence challenge when applicable, learning/canon candidate
   challenge when applicable, outcome, risks, required changes, blockers, and
@@ -148,6 +156,9 @@ artifacts must never become silently mandatory.
 - approve reasoning that answers the wrong question, closes prematurely,
   smooths over contradictions, hides key assumptions, or presents weak
   sufficiency as settled;
+- approve Professional Analysis that lacks a clear analytical product,
+  decision context, synthesis, material options or implications, evidence
+  confidence, recommendation boundary, or uncertainty needed by the reader;
 - approve architecture-sensitive work when drivers are missing, quality
   attributes are vague, scenarios are absent for material qualities,
   architecture and implementation detail are confused, rejected alternatives are
@@ -189,6 +200,9 @@ The Review Agent may decide:
 - whether evidence confidence is sufficient for the claimed output type;
 - whether analytical reasoning is sufficient for the claimed conclusion,
   recommendation, route, or decision support;
+- whether Professional Analysis is sufficient for the claimed analytical
+  product, synthesis, recommendation, implications, uncertainty, and next
+  decision/action;
 - whether Architecture Review evidence is sufficient for the claimed
   architecture decision, recommendation, route, or governance consequence;
 - whether Engineering Review evidence is sufficient for the claimed
@@ -228,6 +242,9 @@ Stop and mark blocked or escalate when:
 - analytical reasoning is opaque enough that the question, assumptions,
   contradictions, disconfirmation checks, or sufficiency judgment cannot be
   reviewed for a material conclusion;
+- Professional Analysis is opaque enough that the analytical product, decision
+  context, synthesis, options or interpretations, implications, recommendation,
+  uncertainty, or next action cannot be reviewed for a material conclusion;
 - architecture review is opaque enough that drivers, quality scenarios,
   architectural assumptions, rejected alternatives, accepted risks, or decision
   rationale cannot be reviewed for an architecture-sensitive conclusion;
@@ -266,6 +283,10 @@ short examples needed to clarify a finding.
   wrong question, close prematurely, confirm only the preferred answer, hide
   assumptions, smooth contradictions, inflate precision, overrun research, or
   recommend beyond sufficiency;
+- Professional Analysis is checked when material: analytical product and
+  decision context are clear, synthesis goes beyond summary, material options,
+  implications, risks, and tradeoffs are visible, recommendations stay within
+  evidence, uncertainty is useful, and the next decision or action is clear;
 - Architecture Review is checked when material: architectural significance is
   named or ruled out, drivers are visible, quality attributes have scenarios
   when needed, implementation details do not hide design commitments, rejected

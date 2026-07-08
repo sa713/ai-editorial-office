@@ -1,7 +1,7 @@
 # Project State
 
 ## Current phase
-Professional Competency Model.
+Professional Capability Model.
 
 ## Completed
 - governance layer;
@@ -31,6 +31,9 @@ Professional Competency Model.
   code, security, configuration, delivery automation, infrastructure/runtime,
   interface/API, observability, reliability, data, performance, and secure
   delivery synthesis.
+- Professional Analysis release candidate with structured interpretation,
+  synthesis, recommendation, implication, risk, uncertainty, and
+  decision-ready analytical communication lenses.
 
 ## Current core roles
 - chief_editor
@@ -66,8 +69,11 @@ Use the stable architecture to add professional competencies without creating
 new roles, pipelines, lifecycle stages, governance layers, or mandatory
 artifact sets.
 
-Engineering Review is complete. The next planned roadmap release is
-Professional Analysis.
+Engineering Review is complete. Professional Analysis is implemented as a
+release candidate and is ready for Project Lead architectural review.
+
+The next planned release after Professional Analysis acceptance is
+Professional Communication.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -94,7 +100,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, and `/kb/editorial_learning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, and `/kb/editorial_learning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -105,9 +111,10 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 ## Current next task
 Follow the active roadmap stage:
 
-- Stage: Professional Competency Model.
+- Stage: Professional Capability Model.
 - Last completed release: Engineering Review.
-- Next planned release: Professional Analysis.
+- Current release candidate: Professional Analysis.
+- Next planned release after acceptance: Professional Communication.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -167,6 +174,11 @@ solely because `ROADMAP.md` changed.
   set. It is activated only when engineering surfaces such as code, scripts,
   configuration, automation, interfaces, observability, reliability, data,
   performance, or security-sensitive behavior are material.
+- Professional Analysis is a shared capability for structured interpretation,
+  synthesis, recommendation building, implications, analytical judgment, and
+  decision-ready analytical communication, not a new role, pipeline, lifecycle
+  stage, review gate, consulting framework, or mandatory artifact set. It is
+  activated only when analytical product quality is material.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.
