@@ -5,7 +5,8 @@
 Use for article, post, guide, explainer, editorial page, or long-form content
 that needs drafting and review. This template is a working folder form, not a
 mini-pipeline. Follow `AGENTS.md`, the selected pipeline, and artifact templates
-for canonical rules.
+for canonical rules. The file lists below are scaffolding defaults; they do not
+override pipeline conditionality, compact execution, or canonical ownership.
 
 ## when to use
 

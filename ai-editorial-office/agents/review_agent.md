@@ -255,7 +255,7 @@ short examples needed to clarify a finding.
 - when `client_profile: sber` is active, `/kb/clients/sber/sber-review-checklist.md`
   is applied or its absence is blocking;
 - post-delivery feedback handling, when present, does not make one reaction a
-  system rule, reopen finalized tasks automatically, create a new role, or add a
-  mandatory pipeline;
+  system rule or bypass `AGENTS.md` and `/kb/customer_feedback_loop.md`
+  boundaries;
 - high-governance review preserves traceability and approval evidence;
 - review did not become rewriting or finalization.

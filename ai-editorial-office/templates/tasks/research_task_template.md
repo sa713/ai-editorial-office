@@ -4,7 +4,9 @@
 
 Use for evidence gathering, source review, claim validation, factual sensitivity
 mapping, or research handoff. This template supports traceability without
-turning research into writing or review.
+turning research into writing or review. The file lists below are scaffolding
+defaults; they do not override pipeline conditionality, evidence depth, compact
+execution, or canonical ownership.
 
 ## when to use
 

@@ -50,8 +50,8 @@ remain task-local.
 When a task was governed by a Problem Hypothesis and/or Editorial Decision
 Frame, review also includes an assumptions-based Editorial Challenge Lens inside
 `review.md`. This lens tests whether the assumptions that made the chosen route
-valid still hold. It is part of review, not a new pipeline, role, review gate,
-artifact, or mandatory extra review cycle.
+valid still hold. Its boundaries are governed by `AGENTS.md` and the selected
+review scope.
 
 ## when to use
 
@@ -83,7 +83,8 @@ If review scope is ambiguous, Chief Editor or Review Agent must document the amb
 
 ## required agents
 
-By default, only core roles may be used for this pipeline. Explicitly legalized extension roles may be assigned only under `AGENTS.md` conditions and only for their bounded extension scope.
+Role legality and extension-role bounds are governed by `AGENTS.md`. This table
+only maps Review Pipeline responsibilities to current roles.
 
 | Responsibility | Required role | Agent spec |
 | --- | --- | --- |
@@ -94,39 +95,25 @@ By default, only core roles may be used for this pipeline. Explicitly legalized 
 | Evidence repair, when review finds factual or product evidence gaps | `research_agent` | `/agents/research_agent.md` |
 | Finalization after approved review | `final_editor` | `/agents/final_editor.md` |
 
-This pipeline must not assign review, editing, writing, finalization, or governance work to unauthorized extension roles. Explicitly legalized extension roles may be assigned only under `AGENTS.md` conditions and only for their bounded extension scope.
+This pipeline does not change role authority. It only routes review findings to
+the current owner of the affected work.
 
 ## required inputs
 
-Review execution follows `/kb/shared_lifecycle_kernel.md` review context contract and `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current review scope or required by the selected depth:
+Review execution follows `/kb/shared_lifecycle_kernel.md` review context
+contract and `AGENTS.md` short context loading policy. Load the shared review
+packet from those owners, then add only review-specific context:
 
-- `AGENTS.md`;
-- `/project-state.md`, when continuing after context loss;
-- `/kb/task_statuses.md`;
-- `/tasks/TASK-ID/task-manifest.md`;
-- `/tasks/TASK-ID/status.md`;
-- `/tasks/TASK-ID/brief.md`;
-- `/tasks/TASK-ID/orchestration_plan.md`;
-- the selected production pipeline from `/pipelines/*.md`;
-- `/pipelines/review_pipeline.md`;
-- latest relevant handoff file;
+- this pipeline file;
 - `/agents/review_agent.md`;
-- material under review: `/tasks/TASK-ID/draft.md` or UX artifacts;
-- relevant KB files named in `orchestration_plan.md`;
-- `/kb/editorial_failure_modes.md` when a failure-mode warning sign is visible;
-- `/kb/editorial_planning_framework.md` when option evaluation affects the
-  reviewed decision, recommendation, or implementation plan;
-- `/kb/audience_outcome_alignment.md` when audience/outcome fit affects the
-  reviewed artifact, decision, implementation task, or finalization candidate;
-- `/kb/editorial_quality_attributes.md` when quality priorities, tradeoffs, or
-  quality preservation affect the reviewed artifact;
-- `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
-  learning, canon updates, pattern reuse, or stale-canon findings;
-- active client-profile files and checklist named in `task-manifest.md` or
-  `orchestration_plan.md`, only when `client_profile` is set;
-- research and claim artifacts, if applicable.
-- evidence-confidence notes when material conclusions depend on evidence
-  quality.
+- the selected production pipeline;
+- the material under review;
+- latest handoff and assigned client-profile files when named by task
+  artifacts;
+- research, claim, source, and evidence-confidence artifacts when material
+  claims or evidence-dependent conclusions are present;
+- the six editorial frameworks only when their materiality triggers apply to
+  the reviewed work.
 
 When present, Problem Hypothesis and Editorial Decision Frame in
 `orchestration_plan.md` are required inputs for the Editorial Challenge Lens.
@@ -155,26 +142,17 @@ Review may start from `review` status or from a direct handoff by `writer_agent`
 
 ## required artifacts
 
-Review uses this artifact set. Required/conditional/optional depth is governed by the artifact creation policy below.
+Shared task artifacts and ownership are defined in `AGENTS.md`,
+`/kb/task_object_model.md`, and `/kb/shared_lifecycle_kernel.md`. Review
+Pipeline adds these review-stage views when the selected depth requires them:
 
-| Artifact | Required when | Owner |
-| --- | --- | --- |
-| `/tasks/TASK-ID/task-manifest.md` | always | current owner or `chief_editor` |
-| `/tasks/TASK-ID/status.md` | always | current owner or `chief_editor` |
-| `/tasks/TASK-ID/brief.md` | always | `intake_agent` or `chief_editor` |
-| `/tasks/TASK-ID/orchestration_plan.md` | always | `chief_editor` |
-| `/tasks/TASK-ID/draft.md` | article, social, or editorial draft review | `writer_agent` |
-| UX artifacts | UX writing review | `ux_writer` |
-| `/tasks/TASK-ID/research.md` | research was required or factual/product claims are used | `research_agent` |
-| `/tasks/TASK-ID/sources.md` | applicable factual/product claims need source traceability | `research_agent` |
-| `/tasks/TASK-ID/facts.md` | applicable factual/product claims need fact traceability | `research_agent` |
-| `/tasks/TASK-ID/claims_table.md` | applicable factual/product claims need claim validation | `research_agent` |
-| `/tasks/TASK-ID/claims-used.md` | factual claims are used in draft | `writer_agent` |
-| `/tasks/TASK-ID/review.md` | always | `review_agent` |
-| `/tasks/TASK-ID/qa-checklist.md` | separate checklist required by downstream consumer, high-governance, task requirement, blocker/open-question state, or traceability need | `review_agent` |
-| `/tasks/TASK-ID/review-summary.md` | separate concise transfer is consumed downstream | `review_agent` |
-| `/tasks/TASK-ID/reviewer-notes.md` | extra reviewer reasoning or caveats needed | `review_agent` |
-| `/tasks/TASK-ID/handoff-review-review-agent-to-TO.md` | always when handing off | `review_agent` |
+- the material under review from the selected production pipeline;
+- applicable research, source, fact, claim, and claim-use artifacts;
+- `review.md`;
+- `qa-checklist.md`, when separate checklist depth is required;
+- `review-summary.md`, when separate concise transfer is needed;
+- `reviewer-notes.md`, when extra caveats or borderline reasoning are needed;
+- review handoff when handing off to the next role.
 
 `TO` must be replaced with the receiving core role, or an explicitly legalized extension role whose `AGENTS.md` conditions apply, as a filename slug, for example `chief-editor`, `writer-agent`, `ux-writer`, `research-agent`, or `artist-agent` when visual-extension conditions apply. These slugs are not separate agent names.
 
@@ -226,20 +204,10 @@ compact evidence. Missing evidence for material claims should produce
 
 ## allowed stages
 
-Allowed stages:
-
-- `review`;
-- `changes_requested`;
-- `approved`;
-- `blocked`;
-- `human_approval_required`;
-- `research`, only as a recommended return path for evidence gaps;
-- `writing`, only as a recommended return path for Writer Agent or UX Writer changes;
-- `editing`, only as an optional status bridge or revision checkpoint; it is not required and does not introduce a separate Editor role;
-- `finalization`, only after approved review and assignment to `final_editor`;
-- `finalized`, only after Chief Editor governance decision;
-- `failed`;
-- `archived`.
+Use only statuses from `/kb/task_statuses.md`. Review Pipeline normally operates
+in `review`, `changes_requested`, `approved`, `blocked`, or
+`human_approval_required`, and may recommend valid returns to `research`,
+`writing`, or optional `editing` according to the repair owner.
 
 Review Agent must not create `draft.md`, `ux-copy.md`, `final.md`, `final_decision.md`, or publication/delivery artifacts.
 
@@ -253,41 +221,32 @@ Default review sequence:
 writing or ux-writing -> review -> changes if needed -> review -> finalization -> chief_editor governance decision
 ```
 
-Operational sequence:
+Review-specific route:
 
-| Step | Status before | Role | Action | Required outputs | Status after |
-| --- | --- | --- | --- | --- | --- |
-| 1 | `writing`, `editing`, or `changes_requested` | `writer_agent` or `ux_writer` | Hand off material ready for independent review | writing or UX artifacts, handoff | `review` |
-| 2 | `review` | `review_agent` | Load required artifacts, verify independence, validate scope | review notes or blocker evidence | `review` or `blocked` |
-| 3 | `review` | `review_agent` | Validate quality priorities, audience/outcome fit, factual traceability, option evaluation, evidence confidence, failure modes, learning/canon candidate fit when material, KB compliance, artifact completeness, governance compliance, and Editorial Challenge Lens when applicable | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, `reviewer-notes.md` when extra notes are needed | `approved`, `changes_requested`, or `blocked` |
-| 4 | `changes_requested` | `writer_agent`, `ux_writer`, or `research_agent` | Resolve required changes or evidence gaps | updated artifacts, handoff | `review`, `writing`, `research`, or `blocked` |
-| 5 | `review` | `review_agent` | Re-review changed artifacts | updated review artifacts and handoff | `approved`, `changes_requested`, or `blocked` |
-| 6 | `approved` | `final_editor` | Finalize only after approved review | `final.md`, conditional finalization notes/checklist, finalization handoff unless compact finalization is fully traceable through `review.md`, `final.md`, and current `task-manifest.md` | `approved` |
-| 7 | `approved` | `chief_editor` | Make governance decision after finalization | `final_decision.md`, updated `status.md` | `finalized` or `human_approval_required` |
+1. Production owner hands off material ready for independent review.
+2. Review Agent loads required artifacts, verifies independence, and validates
+   scope.
+3. Review Agent applies the material frameworks and review checks, then records
+   exactly one valid outcome.
+4. `changes_requested` findings return to the repair owner and then to
+   re-review.
+5. `approved` findings allow finalization, followed by Chief Editor governance.
 
 Direct `writing` -> `review` handoff is valid in the current operating model after required writing artifacts exist and the latest handoff from `writer_agent` or `ux_writer` to `review_agent` is recorded. If a local handoff or orchestration note uses `ux-writing` as the stage label, `ux-writing` -> `review` is valid under the same conditions. Review Agent must not treat a missing `editing` stage as a blocker in the current operating model. `editing` may be used only as a ready-for-review or revision bridge owned by the production role. It must not assign work to a separate Editor role.
 
 ## status transitions
 
-Operational statuses must come from `/kb/task_statuses.md`.
+Operational statuses and transitions are owned by `/kb/task_statuses.md`.
+Review-specific transition notes:
 
-Allowed critical transitions:
-
-| From | To | Trigger | Responsible role | Required artifact evidence |
-| --- | --- | --- | --- | --- |
-| `writing` | `review` | Writer Agent or UX Writer completed required artifacts and review is required | `writer_agent`, `ux_writer`, or `chief_editor` | draft or UX artifacts, handoff to `review_agent` |
-| `ux-writing` | `review` | Local UX writing stage label was used and required UX artifacts are complete | `ux_writer` or `chief_editor` | UX artifacts, handoff to `review_agent` |
-| `editing` | `review` | Material is handed off for independent review | production role or `chief_editor` | draft or UX artifacts, handoff |
-| `changes_requested` | `review` | Required changes were made and need re-review | production role or `chief_editor` | updated artifacts, handoff |
-| `review` | `approved` | Review outcome is `approved` | `review_agent` | `review.md`, conditional checklist/summary, handoff |
-| `review` | `changes_requested` | Review outcome is `changes_requested` | `review_agent` | `review.md`, conditional checklist/summary, handoff |
-| `review` | `blocked` | Review outcome is `blocked` | `review_agent` | `review.md`, blocker evidence |
-| `review` | `human_approval_required` | Review identifies required human decision | `review_agent` or `chief_editor` | `review.md`, `status.md` escalation |
-| `changes_requested` | `writing` | Text or UX copy changes are required | `review_agent` recommends, owner records | review artifacts, handoff to `writer_agent` or `ux_writer` |
-| `changes_requested` | `research` | Evidence gaps are required | `review_agent` recommends, owner records | review artifacts, handoff to `research_agent` |
-| `approved` | `human_approval_required` | Human approval is required before finalization, release, publication, delivery, or archival | `chief_editor` | `status.md`, `review.md`, brief requirement |
-| `approved` | `finalized` | Chief Editor validates finalization and no human approval blocks closure | `chief_editor` | `final.md`, conditional finalization notes, `task-manifest.md`, `final_decision.md` |
-| `blocked` | valid recovery status under `/kb/task_statuses.md` | Blocker resolved | current owner or `chief_editor` | updated `status.md`, resolution evidence |
+- route from production or `changes_requested` to `review` only when reviewed
+  material and handoff exist;
+- route from `review` only to `approved`, `changes_requested`, `blocked`, or a
+  valid human-approval escalation;
+- route `changes_requested` findings back to `writing`, `research`, or
+  `review` according to the repair owner and re-review scope;
+- route from `approved` toward finalization/governance only under the shared
+  review-gate and human-approval rules.
 
 No transition to `approved` is valid without a `review.md` outcome `approved` and checked artifacts listed in review outputs.
 
@@ -375,22 +334,19 @@ Failure at any gate prevents `approved`.
 
 ## completion conditions
 
-Review Pipeline is complete only when:
+Review Pipeline is complete only when the shared lifecycle and status owners
+allow the review stage to close, and the review-specific packet is current:
 
-- `task-manifest.md` is current and reflects review outcome and review artifact states;
 - required review inputs were checked or missing inputs were documented;
 - reviewer independence was checked;
-- `review.md` exists and includes reviewed artifacts, findings, blockers, required changes, and outcome;
+- `review.md` exists and includes reviewed artifacts, findings, blockers,
+  required changes, and exactly one valid outcome;
 - when the reviewed work was governed by Problem Hypothesis and/or Editorial
   Decision Frame, `review.md` includes Editorial Challenge Lens or a compact
   statement that route-validity assumptions still hold;
-- `qa-checklist.md` exists with pass, fail, or not_applicable statuses when separate checklist depth is required;
-- `review-summary.md` exists with operational outcome and next action when concise transfer is not already covered by `review.md` and handoff;
-- `reviewer-notes.md` exists when extra caveats or borderline reasoning do not fit in `review.md`;
-- review outcome is exactly `approved`, `changes_requested`, or `blocked`;
-- review outcome maps to a valid operational status under `/kb/task_statuses.md`;
-- handoff exists to the correct next core role or explicitly legalized extension role whose `AGENTS.md` conditions apply;
-- all review-critical decisions cite artifacts;
+- conditional review artifacts exist when their depth triggers apply;
+- handoff exists to the correct next role when a role transition occurs;
+- review-critical decisions cite artifacts;
 - if outcome is `approved`, finalization can proceed without bypassing review-gate;
 - if outcome is not `approved`, the task is not handed off as ready for finalization.
 
@@ -398,33 +354,13 @@ Completion means independent review is artifact-complete. It does not mean final
 
 ## restart protocol
 
-After context loss, continue from artifacts, not chat history.
+Restart behavior is owned by `AGENTS.md` and
+`/kb/shared_lifecycle_kernel.md`. For Review Pipeline restarts, add only these
+checks to the shared restart packet:
 
-Receiving or restarting agents use the short context path from `/kb/shared_lifecycle_kernel.md` and `AGENTS.md`:
-
-1. `AGENTS.md` or a short reference to its active invariants.
-2. `/tasks/TASK-ID/task-manifest.md`.
-3. The latest relevant handoff file.
-4. The material under review or current `review.md`.
-5. Only `/pipelines/review_pipeline.md`, the selected production pipeline, KB, or editorial knowledge directly needed for the next action.
-
-Do not read all pipelines, all agent specs, all old task folders, all retrospectives, all versions, or the full project tree by default.
-
-Expanded reading is allowed for high-governance, conflict, unsupported claims, review uncertainty, or restart uncertainty. In that case read the exact source/evidence files, `status.md`, prior review trail, governance artifacts, or old versions needed to resolve the risk.
-
-Then perform this restart check:
-
-- confirm `TASK-ID`;
-- confirm the current-version pointer names the reviewed/current artifact when multiple versions exist;
-- do not use latest modified time as the current-version source;
-- stop and ask Chief Editor if current version state is unclear;
-- confirm current status is valid under `/kb/task_statuses.md`;
-- confirm review is the active stage or review is required before the next stage;
-- confirm Review Agent is independent from the material creator;
-- compare `task-manifest.md`, `status.md`, `orchestration_plan.md`, and latest handoff for conflicts;
-- identify reviewed material and selected production pipeline;
-- verify required artifacts for review readiness;
-- identify unsupported, contradicted, missing, stale, or untraceable claims;
-- continue review from the next incomplete validation step or set/recommend `blocked`.
-
-Model memory, prior chat, or unsaved notes must not be used as evidence, approval, review outcome, reviewer independence proof, or workflow state.
+- review is the active stage or review is required before the next stage;
+- reviewed material, selected production pipeline, and latest handoff are
+  identified;
+- Review Agent independence from the material creator is clear;
+- unsupported, contradicted, missing, stale, or untraceable claims are visible;
+- the next incomplete validation step is clear.

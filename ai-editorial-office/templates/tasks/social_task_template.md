@@ -4,7 +4,9 @@
 
 Use for social posts, platform-specific variants, campaign captions,
 announcement copy, or short-form distribution copy. This template is a working
-form; platform sequence and governance live in the selected pipeline.
+form; platform sequence and governance live in the selected pipeline. The file
+lists below are scaffolding defaults; they do not override pipeline
+conditionality, compact execution, or canonical ownership.
 
 ## when to use
 

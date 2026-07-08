@@ -44,7 +44,8 @@ If the task is ambiguous, Chief Editor must record the pipeline choice and ratio
 
 ## required agents
 
-By default, only core roles may be used for this pipeline. Explicitly legalized extension roles may be assigned only under `AGENTS.md` conditions and only for their bounded extension scope.
+Role legality and extension-role bounds are governed by `AGENTS.md`. This table
+only maps Article Pipeline responsibilities to current roles.
 
 | Stage | Required role | Agent spec | Responsibility |
 | --- | --- | --- | --- |
@@ -55,53 +56,36 @@ By default, only core roles may be used for this pipeline. Explicitly legalized 
 | Review | `review_agent` | `/agents/review_agent.md` | Independently validate draft and artifacts |
 | Finalization | `final_editor` | `/agents/final_editor.md` | Create final deliverable after approved review |
 
-This pipeline must not assign work to unauthorized extension roles. Explicitly legalized extension roles may be assigned only under `AGENTS.md` conditions; revision in the current operating model is handled by `writer_agent`, not by a separate Editor role.
+Revision in the current operating model is handled by `writer_agent`, not by a
+separate Editor role.
 
 ## required inputs
 
-Pipeline execution follows `/kb/shared_lifecycle_kernel.md` stage context contracts and `AGENTS.md` short context loading policy. Use these inputs only when they are relevant to the current stage or required by the selected depth:
+Pipeline execution follows `/kb/shared_lifecycle_kernel.md` stage context
+contracts and `AGENTS.md` short context loading policy. Load the shared task
+packet from those owners, then add only article-specific context:
 
-- `AGENTS.md`;
-- `/project-state.md`, when continuing pipeline materialization or after context loss;
-- `/kb/task_statuses.md`;
-- `/tasks/TASK-ID/brief.md`;
-- `/tasks/TASK-ID/task-manifest.md`;
-- `/tasks/TASK-ID/status.md`;
-- `/tasks/TASK-ID/orchestration_plan.md`;
-- the selected pipeline: `/pipelines/article_pipeline.md`;
-- `/pipelines/research_pipeline.md`, when research is required or factual claims are used;
-- the latest relevant handoff file for the current stage;
-- relevant agent specs for assigned roles;
-- relevant KB files named in `orchestration_plan.md`;
-- active client-profile files named in `task-manifest.md` or
-  `orchestration_plan.md`, only when `client_profile` is set;
-- user-provided source material, if any.
+- this pipeline file;
+- `/pipelines/research_pipeline.md`, when research is required or factual claims
+  are used;
+- `/agents/writer_agent.md` and other assigned role specs when needed by the
+  active stage;
+- relevant KB, client-profile, handoff, and source files named by the task
+  artifacts.
 
 If `TASK-ID`, `brief.md`, `task-manifest.md`, `status.md`, or `orchestration_plan.md` is missing, production must not continue until Chief Editor creates or repairs the missing artifact, or sets the task to `blocked`.
 
 ## required artifacts
 
-These artifacts define the Article Pipeline artifact set. Required/conditional/optional depth is governed by the artifact creation policy below.
+Shared task artifacts and ownership are defined in `AGENTS.md`,
+`/kb/task_object_model.md`, and `/kb/shared_lifecycle_kernel.md`. Article
+Pipeline adds these task-type views when the selected depth requires them:
 
-| Artifact | Required when | Owner |
-| --- | --- | --- |
-| `/tasks/TASK-ID/brief.md` | always | `intake_agent` or `chief_editor` |
-| `/tasks/TASK-ID/task-manifest.md` | always | current owner or `chief_editor` |
-| `/tasks/TASK-ID/status.md` | always | current owner or `chief_editor` |
-| `/tasks/TASK-ID/orchestration_plan.md` | always | `chief_editor` |
-| `/tasks/TASK-ID/research.md` | research is required | `research_agent` |
-| `/tasks/TASK-ID/sources.md` | factual claims are used | `research_agent` |
-| `/tasks/TASK-ID/facts.md` | factual claims are used | `research_agent` |
-| `/tasks/TASK-ID/claims_table.md` | factual claims are used | `research_agent` |
-| `/tasks/TASK-ID/outline.md` | always before draft completion | `writer_agent` |
-| `/tasks/TASK-ID/draft.md` | always | `writer_agent` |
-| `/tasks/TASK-ID/claims-used.md` | factual claims are used | `writer_agent` |
-| `/tasks/TASK-ID/review.md` | always before finalization | `review_agent` |
-| `/tasks/TASK-ID/qa-checklist.md` | separate checklist required by downstream consumer, high-governance, task requirement, blocker/open-question state, or traceability need | `review_agent` |
-| `/tasks/TASK-ID/review-summary.md` | separate concise transfer is consumed downstream | `review_agent` |
-| `/tasks/TASK-ID/final.md` | after approved review | `final_editor` |
-| `/tasks/TASK-ID/finalization-notes.md` | controlled changes, unresolved risks/blockers, downstream governance, high-governance, task requirement, or traceability need | `final_editor` |
-| `/tasks/TASK-ID/final_decision.md` | after finalization | `chief_editor` |
+- `outline.md`;
+- `draft.md`;
+- `writer-notes.md`, when assumptions, caveats, or decisions affect review;
+- `claims-used.md`, when factual claims require traceability;
+- article research artifacts when research or factual claims require them.
 
 ## artifact creation policy
 
@@ -160,24 +144,12 @@ A stage cannot be considered complete if `task-manifest.md` is stale. If `task-m
 
 ## allowed stages
 
-Allowed production stages:
+Use only statuses from `/kb/task_statuses.md`. For article work, the
+task-specific production status is `writing`; `editing` remains only the
+optional revision/status bridge defined by the status owner.
 
-- `intake`;
-- `planning`;
-- `research`, when required;
-- `writing`;
-- `editing`, only as an optional Writer Agent revision checkpoint or status bridge; it is not required and does not introduce an Editor Agent;
-- `review`;
-- `changes_requested`;
-- `approved`;
-- `human_approval_required`;
-- `finalization`;
-- `finalized`;
-- `blocked`;
-- `failed`;
-- `archived`.
-
-No stage may merge writing and review. No stage may merge finalization and Chief Editor governance decision.
+No stage may merge writing with review or finalization with Chief Editor
+governance.
 
 ## stage sequence
 
@@ -187,49 +159,32 @@ Default production sequence:
 intake -> chief_editor orchestration -> research if needed -> writing -> review -> finalization -> chief_editor final governance decision
 ```
 
-Operational sequence:
+Article-specific route:
 
-| Step | Status before | Role | Action | Required outputs | Status after |
-| --- | --- | --- | --- | --- | --- |
-| 1 | none or `intake` | `intake_agent` | Normalize request and create task package | `brief.md`, `status.md`, intake handoff | `intake` or `blocked` |
-| 2 | `intake` | `chief_editor` | Select Article Pipeline, classify risk, assign next role | `orchestration_plan.md`, `status.md`, orchestration handoff | `research`, `planning`, or `blocked` |
-| 3 | `research` | `research_agent` | Create evidence base when required | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, research handoff | `planning`, `blocked`, or `failed` |
-| 4 | `planning` | `chief_editor` | Confirm research sufficiency or no-research rationale; route to writing | updated `orchestration_plan.md`, `status.md`, handoff | `writing`, `research`, or `blocked` |
-| 5 | `writing` | `writer_agent` | Create outline and draft from approved inputs | `outline.md`, `draft.md`, `writer-notes.md`, `claims-used.md` when needed, writer handoff | `review`, or optional `editing` only for revision checkpoint |
-| 6 | `review` | `review_agent` | Independently validate draft and artifacts | `review.md`, `qa-checklist.md` when separate checklist is required, `review-summary.md` when concise transfer is needed, review handoff | `approved`, `changes_requested`, `blocked`, or `human_approval_required` |
-| 7 | `changes_requested` | `writer_agent` or `research_agent` | Resolve review findings | updated draft or research artifacts, handoff | `review`, `writing`, `research`, or `blocked` |
-| 8 | `approved` | `final_editor` | Produce controlled final deliverable | `final.md`, conditional finalization notes/checklist, finalization handoff | `approved` |
-| 9 | `approved` | `chief_editor` | Validate finalization and make governance decision | `final_decision.md`, updated `status.md` | `finalized` or `human_approval_required` |
+1. Chief Editor selects Article Pipeline and confirms research need.
+2. Research runs only when evidence or factual claims require it.
+3. Chief Editor confirms research sufficiency or no-research rationale.
+4. Writer Agent creates article writing artifacts.
+5. Review Agent independently reviews the current draft package.
+6. Final Editor finalizes only after approved review.
+7. Chief Editor records the final governance decision.
 
 Direct `writing` -> `review` handoff is valid in the current operating model after required writing artifacts exist and the latest handoff from `writer_agent` to `review_agent` is recorded. `editing` may be used only as an optional Writer Agent revision or ready-for-review bridge. It must not assign work to a separate Editor role.
 
 ## status transitions
 
-Operational statuses must come from `/kb/task_statuses.md`.
+Operational statuses and transitions are owned by `/kb/task_statuses.md`.
+Article-specific transition notes:
 
-Allowed critical transitions:
-
-| From | To | Trigger | Responsible role | Required artifact evidence |
-| --- | --- | --- | --- | --- |
-| `intake` | `research` | Article needs evidence before planning or writing | `chief_editor` | `orchestration_plan.md`, `status.md` |
-| `intake` | `planning` | Article does not need separate research before planning | `chief_editor` | `orchestration_plan.md`, `status.md` |
-| `research` | `planning` | Research scope complete or needs Chief Editor routing | `research_agent` recommends, `chief_editor` records | research artifacts, research handoff |
-| `planning` | `writing` | Chief Editor confirms inputs are sufficient for writing | `chief_editor` | `orchestration_plan.md`, status update, handoff |
-| `writing` | `review` | Required writing artifacts are complete and review is required | `writer_agent` | `outline.md`, `draft.md`, `writer-notes.md`, `claims-used.md` when needed, handoff to `review_agent` |
-| `writing` | `editing` | Status model bridge or Writer Agent revision checkpoint | `writer_agent` | `outline.md`, `draft.md`, writer handoff |
-| `editing` | `review` | Draft is ready for independent review | `writer_agent` or `chief_editor` | `draft.md`, `claims-used.md` when needed, handoff |
-| `writing` | `research` | Writer finds missing evidence | `writer_agent` recommends | `writer-notes.md`, handoff or status note |
-| `writing` | `blocked` | Writer cannot continue safely | `writer_agent` | `status.md`, failure note or handoff |
-| `review` | `approved` | Review outcome is `approved` | `review_agent` | `review.md`, conditional checklist/summary, handoff |
-| `review` | `changes_requested` | Review outcome is `changes_requested` | `review_agent` | `review.md`, conditional checklist/summary, handoff |
-| `review` | `blocked` | Review outcome is `blocked` | `review_agent` | `review.md`, blocker evidence |
-| `review` | `human_approval_required` | Review requires human decision | `review_agent` or `chief_editor` | `review.md`, `status.md` escalation |
-| `changes_requested` | `writing` | Text changes are required | `review_agent` recommends, `chief_editor` or owner records | `review.md`, handoff to `writer_agent` |
-| `changes_requested` | `research` | Evidence gaps are required | `review_agent` recommends, `chief_editor` or owner records | `review.md`, handoff to `research_agent` |
-| `changes_requested` | `review` | Required changes are complete and ready for re-review | responsible production role | updated artifacts, handoff |
-| `approved` | `human_approval_required` | Human approval is required before finalization, publication, or delivery | `chief_editor` | `status.md`, `review.md` or brief requirement |
-| `approved` | `finalized` | Chief Editor validates finalization and no human approval blocks closure | `chief_editor` | `final.md`, conditional finalization notes, `task-manifest.md`, `final_decision.md` |
-| `blocked` | any valid recovery status | Blocker resolved | current owner or `chief_editor` | updated `status.md`, resolution evidence |
+- route to `research` when article evidence is required, otherwise to
+  `planning`;
+- route from `planning` to `writing` only after article inputs are sufficient;
+- route from `writing` to `review` after required article writing artifacts and
+  handoff exist;
+- route `changes_requested` findings back to `writing`, `research`, or
+  `review` according to the repair owner and re-review scope;
+- route from `approved` toward finalization/governance only under the shared
+  review-gate and human-approval rules.
 
 If a desired transition is not allowed by `/kb/task_statuses.md`, use the nearest valid transition and document the reason in `status.md`.
 
@@ -404,35 +359,12 @@ Publication or delivery requires human approval when required by `brief.md`, `st
 
 ## handoff requirements
 
-Every role transition normally creates a handoff file following `/templates/artifacts/handoff_template.md`. Compact execution may omit the finalization-to-Chief-Editor handoff only when `task-manifest.md` is current and no blocker, traceability need, governance escalation, contradiction, version conflict, evidence dispute, reviewer uncertainty, or human approval complexity exists.
-
-Expected handoffs:
-
-- `handoff-intake-intake-agent-to-chief-editor.md`;
-- `handoff-planning-chief-editor-to-research-agent.md`, when research is required;
-- `handoff-planning-chief-editor-to-writer-agent.md`, when writing can begin;
-- `handoff-research-research-agent-to-chief-editor.md` or `handoff-research-research-agent-to-writer-agent.md`;
-- `handoff-writing-writer-agent-to-review-agent.md`;
-- `handoff-review-review-agent-to-chief-editor.md`;
-- `handoff-review-review-agent-to-writer-agent.md`, when changes are requested from Writer Agent;
-- `handoff-review-review-agent-to-research-agent.md`, when more research is required;
-- `handoff-finalization-final-editor-to-chief-editor.md`, when compact omission is not justified.
-
-Each handoff must include:
-
-- sending role and receiving role;
-- reference to `/tasks/TASK-ID/task-manifest.md`;
-- what changed since the previous stage;
-- artifacts created or updated;
-- constraints changed, if any;
-- blockers;
-- next role;
-- next action;
-- expected outputs;
-- forbidden outputs;
-- escalation conditions.
-
-Handoffs must not replace the primary artifacts for the completed stage.
+Handoff behavior is owned by `AGENTS.md`,
+`/kb/shared_lifecycle_kernel.md`, and
+`/templates/artifacts/handoff_template.md`. Article handoffs normally connect
+Chief Editor, Research Agent when used, Writer Agent, Review Agent, Final
+Editor, and Chief Editor governance. Handoffs must point to current article
+artifacts and never replace them.
 
 ## quality gates
 
@@ -530,55 +462,27 @@ Retry rules:
 
 ## completion conditions
 
-Article Pipeline is complete only when:
+Article Pipeline is complete only when the shared lifecycle and status owners
+allow closure, and the article-specific packet is current:
 
-- required task artifacts exist in `/tasks/TASK-ID/`;
-- `brief.md`, `task-manifest.md`, `status.md`, and `orchestration_plan.md` are current;
-- research artifacts exist if research was required;
-- source, fact, claim, and claims-used artifacts exist if factual claims were used;
-- `outline.md` and `draft.md` exist;
-- independent `review.md` exists and outcome is `approved`;
-- `qa-checklist.md` exists when separate checklist depth is required, otherwise checks are embedded in `review.md`;
-- `review-summary.md` exists when needed for concise governance transfer;
-- `final.md` exists and was created by `final_editor` after approved review;
-- `finalization-notes.md` exists when controlled changes or unresolved risks need to be recorded;
-- `finalization-checklist.md` exists when high-governance depth, downstream governance, traceability proof, task-specific requirement, or Chief Editor requires it;
-- `final_decision.md` exists and was created by `chief_editor`;
-- `status.md` records a valid final state under `/kb/task_statuses.md`;
-- human approval is documented if required by brief, status, review, finalization notes, or final decision;
-- no unresolved blocker prevents closure.
+- required article writing artifacts exist;
+- required research/claim artifacts exist when research or factual claims were
+  used;
+- independent `review.md` approves the current draft package;
+- finalization and Chief Editor governance artifacts exist when required;
+- human approval and blockers are resolved or explicitly carried by the
+  governing status.
 
 Completion means the article workflow is artifact-complete and governance-closed. It does not imply publication or delivery unless required human approval is explicitly documented.
 
 ## restart protocol
 
-After context loss, continue from artifacts, not chat history.
+Restart behavior is owned by `AGENTS.md` and
+`/kb/shared_lifecycle_kernel.md`. For Article Pipeline restarts, add only these
+checks to the shared restart packet:
 
-Receiving or restarting agents use the short context path from `/kb/shared_lifecycle_kernel.md` and `AGENTS.md`:
-
-1. `AGENTS.md` or a short reference to its active invariants.
-2. `/tasks/TASK-ID/task-manifest.md`.
-3. The latest relevant handoff file.
-4. The current working artifact.
-5. Only `/pipelines/article_pipeline.md`, `/pipelines/research_pipeline.md`, KB, or editorial knowledge directly needed for the next action.
-
-Do not read all pipelines, all agent specs, all old task folders, all retrospectives, all versions, or the full project tree by default.
-
-Expanded reading is allowed for high-governance, conflict, or restart uncertainty. In that case read the exact source/evidence files, `status.md`, review trail, governance artifacts, or old versions needed to resolve the risk.
-
-Then perform this restart check:
-
-- confirm `TASK-ID`;
-- confirm the current-version pointer names the active artifact when multiple versions exist;
-- do not use latest modified time as the current-version source;
-- stop and ask Chief Editor if current version state is unclear;
-- confirm current status is valid under `/kb/task_statuses.md`;
-- confirm the selected pipeline is Article Pipeline;
-- confirm current owner role and next role are valid core roles or explicitly legalized extension roles whose `AGENTS.md` conditions apply;
-- compare `task-manifest.md`, `status.md`, `orchestration_plan.md`, and latest handoff for conflicts;
-- identify the last completed quality gate;
-- verify required artifacts for that gate;
-- identify missing, stale, or contradictory artifacts;
-- continue from the next incomplete stage or set/recommend `blocked`.
-
-Model memory, prior chat, or unsaved notes must not be used as evidence, approval, review outcome, or workflow state.
+- selected pipeline is Article Pipeline;
+- current article draft, outline, and claim-use artifacts are identified when
+  applicable;
+- required article research artifacts are present when research was required;
+- the last completed article quality gate is clear.

@@ -231,9 +231,8 @@ Conditional:
   materially change route, detail, evidence, tone, or deliverable;
 - start production when quality priorities conflict and the tradeoff could
   materially change route, review focus, or implementation value;
-- turn the Editorial Decision Frame into a long strategy memo, standalone
-  mandatory artifact, `final_decision.md`, or canonized legacy
-  `editorial_decision.md`;
+- expand the Editorial Decision Frame beyond the compact routing contract
+  defined in `AGENTS.md` and `/kb/editorial_planning_framework.md`;
 - use the Editorial Decision Frame to duplicate research, outline, review, or
   task-local analytical addenda;
 - turn a normalized brief into a large speculative task brief, roadmap, or

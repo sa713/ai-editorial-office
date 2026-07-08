@@ -11,7 +11,9 @@ task artifacts, review-gate, or source provenance rules.
 Evidence classes, confidence labels, evidence requirements by output type, and
 the reusable evidence section standard are owned by
 `/kb/editorial_evidence_framework.md`. This file owns only evidence depth modes
-for research artifacts.
+for research artifacts. Source type/proximity labels in research artifacts
+describe source origin and distance from the claim; they are not evidence
+classes.
 
 ## Evidence Modes
 
@@ -91,6 +93,10 @@ output claim -> claims-used.md -> facts.md or claims_table.md -> sources.md
 
 Equivalent compact evidence is acceptable for source-light tasks when the same
 relationship is visible.
+
+`claims_table.md` and `claims-used.md` are claim-level evidence and
+traceability views over task state. They do not replace the task object or
+become independent sources of truth.
 
 `claims-used.md` should list only claims that entered the draft or final
 artifact. It should not copy the whole research record.

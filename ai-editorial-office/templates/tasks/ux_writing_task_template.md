@@ -5,7 +5,9 @@
 Use for interface copy, onboarding text, microcopy, labels, helper text,
 validation messages, notifications, empty states, and flow-state language. This
 template supports UX copy production without turning UX Writer into product
-manager, designer, reviewer, or final approver.
+manager, designer, reviewer, or final approver. The file lists below are
+scaffolding defaults; they do not override pipeline conditionality, compact
+execution, or canonical ownership.
 
 ## when to use
 

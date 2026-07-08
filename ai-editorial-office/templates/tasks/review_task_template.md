@@ -4,7 +4,8 @@
 
 Use when the task is primarily independent review of an existing artifact or
 artifact set. Review is never optional; `review.md` is the primary review
-artifact.
+artifact. The file lists below are scaffolding defaults; they do not override
+pipeline conditionality, compact execution, or canonical ownership.
 
 ## when to use
 

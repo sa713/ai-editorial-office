@@ -124,7 +124,7 @@ must surface a question, assumption, constraint, or blocker.
 ### Working normalization shape
 
 Use this shape as guidance for `brief.md`, `task-manifest.md`, or the intake
-handoff. It is not a new mandatory standalone artifact.
+handoff. It follows the artifact-minimalism rule in `AGENTS.md`.
 
 ```markdown
 ## raw request summary
@@ -209,8 +209,8 @@ raw user context.
   status is clear.
 - Do not expand the task beyond the user's request to make the brief look
   complete.
-- Do not create new roles, pipelines, capabilities, validators, or mandatory
-  artifacts for normalization.
+- Do not create architecture elements for normalization; follow `AGENTS.md`
+  ownership and artifact-minimalism rules.
 - Do not weaken review-gate or Chief Editor routing.
 - Do not turn assumptions into facts.
 - Do not assign high confidence to user-provided external claims unless the
