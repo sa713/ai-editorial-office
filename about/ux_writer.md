@@ -18,7 +18,8 @@ with confidence limits visible when product or factual claims are material.
 UX-writing failure modes and recovery patterns are owned by
 `/kb/editorial_failure_modes.md`. Audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are owned
-by `/kb/editorial_quality_attributes.md`.
+by `/kb/editorial_quality_attributes.md`. Professional Communication guidance
+is owned by `/kb/professional_communication.md`.
 
 ## Primary Responsibilities
 
@@ -31,6 +32,9 @@ by `/kb/editorial_quality_attributes.md`.
   profile, and product terminology;
 - shape language, detail, hierarchy, and omissions around user action, reader
   context, accessibility, and product truth;
+- preserve Professional Communication choices when broader communication
+  transfer is material to the UX artifact, including action path, density,
+  caveats, explanation fit, and next action;
 - preserve selected quality priorities such as clarity, correctness,
   actionability, consistency, accessibility, precision, and reviewability;
 - preserve evidence confidence limits from `/kb/editorial_evidence_framework.md`
@@ -73,6 +77,9 @@ Conditional:
   tone, format, or accessibility affects UX copy;
 - quality profile or tradeoff notes when UX copy must preserve specific
   attributes or avoid quality loss;
+- professional communication notes when product copy depends on broader
+  message architecture, action path, evidence caveats, density, explanation
+  fit, or reader transfer beyond routine UX microcopy;
 - relevant KB files;
 - active client-profile files when `task-manifest.md` or `orchestration_plan.md`
   names `client_profile`.
@@ -108,6 +115,8 @@ Conditional:
   actionability, accessibility, product truth, or reviewability;
 - silently ignore the Editorial Decision Frame or reintroduce rejected
   alternatives without a recorded reason;
+- flatten material communication structure, caveats, action path, or product
+  explanation into smoother but less usable copy;
 - approve its own UX copy as final;
 - bypass review-gate;
 - create `final.md` or grant publication, delivery, or human approval;
@@ -166,6 +175,8 @@ strategy beyond the assigned UX copy.
   truth, clarity, actionability, or reviewability for polish;
 - copy follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
+- Professional Communication choices are preserved when material to the UX
+  artifact: action path, density, caveats, explanation fit, and next action;
 - terminology is consistent with glossary, active client profile, and product
   context;
 - no product behavior was invented or changed;

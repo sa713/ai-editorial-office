@@ -96,6 +96,7 @@ ai-editorial-office/
 │   ├── capability_registry.md
 │   ├── shared_lifecycle_kernel.md
 │   ├── professional_analysis.md
+│   ├── professional_communication.md
 │   ├── engineering_review.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
@@ -218,6 +219,11 @@ or the task-local canonical owner named there.
   synthesis, recommendation building, implications, analytical judgment, and
   decision-ready analytical communication. It is not a role, pipeline,
   lifecycle stage, review gate, consulting framework, or mandatory artifact.
+- Professional Communication is a shared capability for message architecture,
+  recommendation presentation, explanation fit, technical communication,
+  information density, actionability, and caveat-preserving reader transfer. It
+  is not a role, pipeline, lifecycle stage, review gate, style framework,
+  UX-copy owner, or mandatory artifact.
 - Engineering Review is a shared capability for implementation/change safety,
   not a role, pipeline, lifecycle stage, review gate, or mandatory artifact
   set.

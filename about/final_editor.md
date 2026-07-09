@@ -19,6 +19,8 @@ finalization when they matter to the approved output. Finalization failure modes
 and recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning
 and option evaluation are owned by `/kb/editorial_planning_framework.md`.
 Analytical reasoning moves are owned by `/kb/analytical_reasoning.md`.
+Professional Communication guidance is owned by
+`/kb/professional_communication.md`.
 Architecture Review moves are owned by `/kb/architecture_review.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
@@ -41,6 +43,9 @@ are owned by `/kb/editorial_learning_framework.md`.
   triggers when they are material to the final deliverable;
 - preserve approved analytical traceability, sufficiency limits, contradictions,
   and uncertainty markers when they are material to the final deliverable;
+- preserve approved Professional Communication message path, density choices,
+  caveats, reader action, and explanation fit when they are material to the
+  final deliverable;
 - preserve approved architecture rationale, quality-attribute caveats,
   accepted-risk notes, and architectural assumptions when they are material to
   the final deliverable;
@@ -80,6 +85,8 @@ Conditional:
   explicitly created and relevant;
 - analytical reasoning notes or review findings when they constrain final
   wording, caveats, or uncertainty;
+- professional-communication notes or review findings when they constrain final
+  wording, density, caveats, reader action, message path, or explanation fit;
 - architecture-review notes or findings when they constrain final wording,
   caveats, accepted risks, or decision rationale;
 - KB files needed for tone, glossary, policy, or domain constraints;
@@ -120,6 +127,9 @@ Conditional:
   triggers when they are still material to user understanding;
 - remove analytical uncertainty, contradiction notes, sufficiency limits, or
   disconfirmation caveats that remain material to user understanding;
+- remove approved Professional Communication message path, reader action,
+  density, caveats, evidence cues, or explanation fit that remain material to
+  user understanding, implementation, review, or decision;
 - remove architecture rationale, accepted risks, quality-attribute caveats, or
   architectural assumptions that remain material to user understanding;
 - remove actionability, audience fit, necessary detail, or format constraints
@@ -168,6 +178,9 @@ Stop and route back when:
 - finalization would hide caveats, residual risk, or review limitations;
 - finalization would hide analytical uncertainty, contradictions, or sufficiency
   limits approved by review;
+- finalization would hide Professional Communication message path, reader
+  action, density choice, caveats, evidence cues, or explanation fit approved by
+  review;
 - finalization would hide architecture rationale, accepted risks,
   quality-attribute caveats, or architectural assumptions approved by review;
 - finalization would make the artifact less useful for the intended audience or
@@ -196,6 +209,8 @@ status history.
   material;
 - analytical traceability, uncertainty, contradiction handling, and sufficiency
   limits remain visible when material;
+- approved Professional Communication message path, density, caveats, reader
+  action, evidence cues, and explanation fit remain intact when material;
 - architecture rationale, accepted risks, quality-attribute caveats, and
   architectural assumptions remain visible when material;
 - audience fit, intended outcome, required action, detail, tone, and format

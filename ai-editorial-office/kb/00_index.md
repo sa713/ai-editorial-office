@@ -31,6 +31,13 @@ Canonical KB ownership:
   decision-ready analytical communication. It does not create a new role,
   framework, pipeline, lifecycle stage, review gate, scoring model, consulting
   methodology, or mandatory artifact set.
+- `professional_communication.md` owns practical Professional Communication
+  moves: message architecture, recommendation presentation, explanation fit,
+  technical communication, information density, actionability, and preservation
+  of evidence and caveats during reader transfer. It does not create a new
+  role, grammar/style checklist, framework, pipeline, lifecycle stage, review
+  gate, scoring model, content-design system, UX-writing system, consulting
+  methodology, or mandatory artifact set.
 - `architecture_review.md` owns practical Architecture Review moves:
   architectural significance, architecture drivers, quality-attribute
   scenarios, tradeoff analysis, architecture-specific risks, architectural

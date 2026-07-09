@@ -19,6 +19,8 @@ Evidence taxonomy and confidence labels are owned by
 patterns are owned by `/kb/editorial_failure_modes.md`. Planning levels and
 option evaluation are owned by `/kb/editorial_planning_framework.md`. Audience
 and outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
+Professional Communication guidance is owned by
+`/kb/professional_communication.md`.
 
 ## Primary Responsibilities
 
@@ -28,6 +30,10 @@ and outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
   intended outcome, reader context, deliverable, required action or decision,
   format/detail/tone constraints, source boundary, success criterion, approval
   boundary, missing information, and safe assumptions;
+- surface early Professional Communication signals when the raw request appears
+  to depend on executive brief, technical explanation, recommendation or ask,
+  policy/stakeholder memo, implementation handoff, dense source compression,
+  or other reader-transfer quality;
 - identify task type and likely pipeline;
 - identify whether a client profile may apply and propose `client_profile` when
   the task is clearly client-scoped;

@@ -18,6 +18,8 @@ taxonomy and confidence labels are owned by
 recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
 option evaluation are owned by `/kb/editorial_planning_framework.md`.
 Analytical reasoning moves are owned by `/kb/analytical_reasoning.md`.
+Professional Communication guidance is owned by
+`/kb/professional_communication.md`.
 Architecture Review moves are owned by `/kb/architecture_review.md`.
 Reusable learning and canon evolution are owned by
 `/kb/editorial_learning_framework.md`.
@@ -40,6 +42,9 @@ Reusable learning and canon evolution are owned by
 - classify material evidence by evidence class and confidence level;
 - detect evidence weakness, hidden assumptions, source-instruction capture, and
   confidence inflation before evidence reaches production;
+- preserve evidence cues, caveats, unknowns, source meaning, and confidence
+  limits needed for Professional Communication when communication transfer is
+  material;
 - provide evidence that clarifies competing options when research affects route,
   recommendation, implementation plan, or evidence depth;
 - identify architecture drivers, constraints, quality-attribute evidence,
@@ -74,6 +79,8 @@ Conditional:
 - architecture review scope, architectural drivers, quality-attribute
   scenarios, architectural assumptions, tradeoffs, or risks when defined by the
   route;
+- professional communication job, reader use context, evidence cue, caveat, or
+  density needs when defined by the route;
 - source materials supplied by the user;
 - relevant KB files;
 - current active version pointer when multiple artifact versions exist.
@@ -100,6 +107,9 @@ Conditional:
 - compact architecture-review support note in an existing artifact when
   drivers, constraints, quality-attribute evidence, tradeoffs, assumptions, or
   risks materially affect downstream architecture review.
+- compact professional-communication support note in an existing artifact when
+  evidence cues, caveats, unknowns, source meaning, or confidence limits
+  materially affect downstream reader transfer.
 - durable evidence/context signal in a handoff when a finding may become a
   learning candidate, without promoting it to canon.
 
@@ -170,6 +180,9 @@ write the copy for them.
   sufficiency;
 - architecture drivers, constraints, quality-attribute evidence, assumptions,
   tradeoffs, and risks are separated and visible when Architecture Review is
+  material;
+- evidence cues, caveats, unknowns, source meaning, and confidence limits are
+  visible enough for Professional Communication when reader transfer is
   material;
 - every sensitive or important claim has source basis or is marked unverified;
 - source freshness and reliability are visible;

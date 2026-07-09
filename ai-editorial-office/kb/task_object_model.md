@@ -16,6 +16,10 @@ contradiction handling, and sufficiency judgment live in
 Professional Analysis moves, analytical product shape, structured
 interpretation, synthesis, recommendation building, implications, and
 decision-ready analytical communication live in `/kb/professional_analysis.md`;
+Professional Communication moves, message architecture, recommendation
+presentation, explanation fit, technical communication, information density,
+actionability, and preservation of evidence and caveats during reader transfer
+live in `/kb/professional_communication.md`;
 Architecture Review moves, architecture drivers, quality-attribute scenarios,
 architectural tradeoffs, architecture risks, and decision-rationale challenge
 live in `/kb/architecture_review.md`;
@@ -141,7 +145,7 @@ requires it.
 | `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review, shaped to the recorded audience, outcome, detail, tone, and format constraints. |
 | `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
 | `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, audience/outcome choices, quality-preservation notes, and review focus that are not already obvious from the draft. |
-| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, analytical reasoning challenge when material, Professional Analysis challenge when material, Architecture Review challenge when material, Engineering Review challenge when material, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, learning/canon candidates when material, and next action. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, analytical reasoning challenge when material, Professional Analysis challenge when material, Professional Communication challenge when material, Architecture Review challenge when material, Engineering Review challenge when material, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, learning/canon candidates when material, and next action. |
 | `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
 | `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
 | `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
@@ -180,7 +184,8 @@ evidence taxonomy and confidence labels are owned by
 `/kb/editorial_evidence_framework.md`; planning levels and option evaluation
 are owned by `/kb/editorial_planning_framework.md`; analytical reasoning moves
 are owned by `/kb/analytical_reasoning.md`; Professional Analysis moves are
-owned by `/kb/professional_analysis.md`; Architecture Review moves are owned
+owned by `/kb/professional_analysis.md`; Professional Communication moves are
+owned by `/kb/professional_communication.md`; Architecture Review moves are owned
 by `/kb/architecture_review.md`; Engineering Review moves are owned by
 `/kb/engineering_review.md`; audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`; quality attributes and tradeoffs are owned

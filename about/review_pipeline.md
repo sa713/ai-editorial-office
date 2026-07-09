@@ -32,6 +32,12 @@ recommendation building, implications, analytical judgment, or decision-ready
 analytical communication, review applies `/kb/professional_analysis.md` to
 challenge the analytical product without creating a new review gate.
 
+When reviewed work depends on message architecture, recommendation
+presentation, explanation fit, technical communication, information density,
+actionability, or caveat-preserving reader transfer, review applies
+`/kb/professional_communication.md` to challenge communication transfer without
+creating a new review gate.
+
 When reviewed work is architecture-sensitive, review applies
 `/kb/architecture_review.md` to challenge architectural drivers,
 quality-attribute scenarios, architectural tradeoffs, assumptions, architecture
@@ -142,6 +148,9 @@ packet from those owners, then add only review-specific context:
 - professional-analysis notes when structured interpretation, synthesis,
   recommendation building, implications, analytical judgment, or
   decision-ready analytical communication is material;
+- professional-communication notes when message architecture, recommendation
+  presentation, explanation fit, technical communication, information density,
+  actionability, or evidence/caveat-preserving reader transfer is material;
 - architecture-review notes when architectural significance, drivers,
   quality-attribute scenarios, tradeoffs, assumptions, risks, or decision
   rationale are material;
@@ -219,7 +228,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Architecture Review challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Professional Communication challenge when applicable, Architecture Review challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -318,6 +327,10 @@ Compact review minimum:
 - compact Professional Analysis check when the reviewed work depends on
   structured interpretation, synthesis, recommendation, implications,
   analytical judgment, or decision-ready communication;
+- compact Professional Communication check when the reviewed work depends on
+  message architecture, recommendation or ask presentation, explanation fit,
+  technical communication, information density, actionability, or
+  caveat-preserving reader transfer;
 - compact Architecture Review check when the reviewed work is
   architecture-sensitive or depends on drivers, quality-attribute scenarios,
   architectural tradeoffs, assumptions, accepted risks, or decision rationale;
@@ -354,6 +367,10 @@ It does not restate detailed review logic. Review Agent owns:
   missing decision context, weak synthesis, hidden options or implications,
   unsupported recommendation, missing risk/uncertainty, and unclear next
   decision/action;
+- Professional Communication challenge, including missing or buried main point,
+  weak message architecture, wrong density, unclear recommendation or ask,
+  hidden caveats, misleading compression, weak explanation fit, technical
+  ambiguity, missing next action, and unreviewable reader transfer;
 - Architecture Review challenge, including missing drivers, vague quality
   attributes, missing scenarios, hidden architectural assumptions,
   architecture/implementation confusion, missing rejected alternatives,
@@ -383,6 +400,7 @@ Quality gates are mandatory and artifact-backed.
 | KB compliance gate | Relevant KB files were checked and findings cite artifacts | missing KB, tone, glossary, or policy check |
 | Instructional architecture gate | Instructional or operational material can be followed through a clear reading path, with distinct section roles and bounded rereading cost | unclear route to action, mixed section roles, useless duplication, missing navigation, forced linear reading where reference use is needed |
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
+| Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
 | Outcome gate | Outcome is exactly `approved`, `changes_requested`, or `blocked` | ambiguous verdict |
 | Finalization gate | Finalization allowed only after review outcome `approved` | missing review, blocked review, changes requested |

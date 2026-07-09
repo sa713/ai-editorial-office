@@ -18,6 +18,8 @@ serves the intended audience and outcome. Writing-related failure modes and
 recovery patterns are owned by `/kb/editorial_failure_modes.md`. Planning and
 option evaluation are owned by `/kb/editorial_planning_framework.md`.
 Analytical reasoning moves are owned by `/kb/analytical_reasoning.md`.
+Professional Communication guidance is owned by
+`/kb/professional_communication.md`.
 Architecture Review moves are owned by `/kb/architecture_review.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
@@ -39,6 +41,9 @@ Quality attributes and tradeoffs are owned by
   and accepted risks;
 - shape structure, detail level, tone, evidence depth, and next action for the
   recorded audience and intended outcome;
+- preserve Professional Communication choices when material, including message
+  architecture, bottom line or primary transfer, recommendation/ask
+  presentation, density, caveats, reader path, explanation fit, and next action;
 - preserve selected quality priorities such as correctness, relevance,
   actionability, clarity, precision, traceability, or structural coherence;
 - create or update `outline.md` before drafting when needed;
@@ -90,6 +95,9 @@ Conditional:
 - architecture drivers, quality-attribute scenarios, architectural tradeoffs,
   architectural assumptions, or architecture risks when the route or draft
   depends on Architecture Review;
+- professional communication notes when message architecture, recommendation
+  presentation, explanation fit, technical communication, information density,
+  actionability, or evidence/caveat preservation affects the draft;
 - current active version pointer when multiple versions exist.
 
 ## Outputs
@@ -131,6 +139,9 @@ Conditional:
   falsely settled analysis;
 - flatten architecture drivers, accepted tradeoffs, architectural assumptions,
   or accepted risks into preference-only prose;
+- flatten message architecture, bottom line, evidence confidence cues,
+  recommendation/ask, caveats, reader path, or next action into pleasant but
+  unusable prose when Professional Communication is material;
 - become UX Writer for interface copy unless specifically assigned that role;
 - approve its own draft;
 - perform independent review or controlled finalization;
@@ -196,6 +207,9 @@ should not repeat full research or status history.
   are preserved when material;
 - architecture drivers, quality-attribute scenarios, architectural tradeoffs,
   assumptions, and risks are preserved when material;
+- Professional Communication choices are preserved when material: message
+  architecture, bottom line or primary transfer, density, explanation fit,
+  caveats, reader path, recommendation/ask, and next action;
 - factual claims are supported, caveated, or omitted;
 - evidence confidence limits, assumptions, and unknowns are preserved rather
   than hidden in confident prose;

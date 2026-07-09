@@ -160,13 +160,14 @@ Completed releases:
 
 Current state:
 
-Engineering Review is complete. It exists as one shared capability with
-optional review lenses. The release preserved the architecture and added no new
-roles or pipelines.
+Engineering Review is complete. Professional Analysis and Professional
+Communication are implemented as release candidates ready for Project Lead
+architectural review. Both preserve the architecture and add no new roles,
+pipelines, lifecycle stages, governance layers, or mandatory artifact sets.
 
 Next planned release:
 
-Professional Analysis
+Knowledge Evolution
 
 Why this stage matters:
 

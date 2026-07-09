@@ -48,6 +48,9 @@ markdown smoke-tests и synthetic examples:
   Preflight checker is not added yet; it is not production governance.
 - `engineering_review_smoke_test.md` - manual synthetic cases for Engineering
   Review activation and non-activation; it is not production governance.
+- `professional_communication_smoke_test.md` - manual synthetic cases for
+  Professional Communication activation and non-activation; it is not
+  production governance.
 - `end_to_end_cases/access_pass_security_task/` - sanitized end-to-end case for
   an internal access-pass security task; it is not task materials and contains
   no real credentials, real cards, real system details, or exploit instructions.
@@ -164,6 +167,17 @@ analysis, and executive decision briefs, and does not activate for ordinary
 summaries, copyediting, Architecture Review, or Engineering Review. It does not
 define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
 Professional Analysis KB.
+
+`professional_communication_smoke_test.md` records synthetic positive and
+negative activation cases for `/kb/professional_communication.md`. It checks
+that Professional Communication activates for executive briefs, recommendation
+presentation, technical explanations, implementation handoffs, policy or
+stakeholder memos, research/evidence communication, dense source compression,
+and actionability failures, and does not activate for grammar, generic style,
+Audience & Outcome Alignment ownership, UX copy ownership, Architecture
+Review, Engineering Review, or Professional Analysis ownership. It does not
+define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
+Professional Communication KB.
 
 `end_to_end_cases/access_pass_security_task/` records a synthetic sanitized
 end-to-end editorial case. It checks Preflight Gate `constrain`, compact

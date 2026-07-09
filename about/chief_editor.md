@@ -18,8 +18,9 @@ keeping the selected pipeline, task status model, role boundaries, review gate,
 and governance evidence intact. Quality attributes and tradeoffs are owned by
 `/kb/editorial_quality_attributes.md`. Analytical reasoning guidance is owned
 by `/kb/analytical_reasoning.md`. Professional Analysis guidance is owned by
-`/kb/professional_analysis.md`. Architecture Review guidance is owned by
-`/kb/architecture_review.md`. Engineering Review guidance is owned by
+`/kb/professional_analysis.md`. Professional Communication guidance is owned
+by `/kb/professional_communication.md`. Architecture Review guidance is owned
+by `/kb/architecture_review.md`. Engineering Review guidance is owned by
 `/kb/engineering_review.md`. Learning extraction and canon evolution are owned
 by `/kb/editorial_learning_framework.md`.
 
@@ -42,6 +43,10 @@ by `/kb/editorial_learning_framework.md`.
 - select Professional Analysis capability when structured interpretation,
   synthesis, recommendation building, implications, analytical judgment, or
   decision-ready analytical communication is material;
+- select Professional Communication capability when message architecture,
+  recommendation presentation, explanation fit, technical communication,
+  information density, actionability, or preservation of evidence and caveats
+  during reader transfer is material;
 - select Architecture Review capability when architectural significance,
   quality-attribute impact, cross-owner effects, hard-to-reverse design
   consequences, or architecture-risk exposure makes design fitness reviewable;
@@ -113,6 +118,10 @@ Conditional:
 - professional analysis product, selected lens, decision or use context,
   synthesis, implications, recommendation, uncertainty, and next action when
   material to route or governance decisions;
+- professional communication job, selected lens, message architecture, bottom
+  line or primary transfer, evidence/confidence cues, detail and density
+  choice, caveats, reader path, and next action when material to route or
+  governance decisions;
 - architecture review scope, architectural drivers, quality-attribute
   scenarios, architectural assumptions, tradeoffs, risks, and accepted-risk
   rationale when material to route or governance decisions;
@@ -236,6 +245,10 @@ Required when applicable:
 - compact Professional Analysis note when structured interpretation, synthesis,
   recommendation, implications, analytical judgment, or decision-ready
   analytical communication materially affects route or governance.
+- compact Professional Communication note when message architecture,
+  recommendation presentation, explanation fit, technical communication,
+  information density, actionability, or evidence/caveat-preserving reader
+  transfer materially affects route or governance.
 - compact Architecture Review note when architectural significance, drivers,
   quality-attribute scenarios, tradeoffs, assumptions, risks, or decision
   rationale materially affect route or governance.
@@ -315,6 +328,10 @@ The Chief Editor may decide:
   analytical judgment, or decision-ready communication requires Professional
   Analysis capability before routing, production, review, or governance
   proceeds;
+- whether message architecture, recommendation presentation, explanation fit,
+  technical communication, information density, actionability, or
+  caveat-preserving reader transfer requires Professional Communication
+  capability before routing, production, review, or governance proceeds;
 - whether implementation change safety requires Engineering Review capability
   and which engineering lenses are relevant before routing, implementation,
   review, or governance proceeds;
@@ -405,6 +422,10 @@ Do not repeat the full Editorial Decision Frame. It should not use
   product, decision context, evidence confidence, synthesis, options or
   interpretations, implications, recommendation, uncertainty, and next action
   at the depth required by `/kb/professional_analysis.md`;
+- Professional Communication route and governance decisions expose the
+  communication job, message architecture, bottom line or primary transfer,
+  evidence/confidence cues, density, caveats, reader path, and next action at
+  the depth required by `/kb/professional_communication.md`;
 - architecture-sensitive route and governance decisions expose architectural
   significance, drivers, material quality-attribute scenarios, tradeoffs,
   assumptions, architecture risks, accepted-risk rationale, and decision

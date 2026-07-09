@@ -156,6 +156,14 @@ pipeline, stage, consulting framework, or mandatory artifact. Activate it only
 when structured interpretation, synthesis, recommendation, implications,
 analytical judgment, or decision-ready analytical communication is material.
 
+Professional Communication may be used inside the same review gate when reader
+transfer quality is material. It is a shared capability with lenses, not a new
+role, pipeline, stage, style framework, UX-copy owner, or mandatory artifact.
+Activate it only when message architecture, recommendation presentation,
+technical explanation, implementation handoff, policy/stakeholder memo,
+research/evidence communication, dense source compression, actionability, or
+caveat-preserving communication is material.
+
 ## Research Rules
 
 Use research when the task needs factual claims, dates, names, numbers, quotes,

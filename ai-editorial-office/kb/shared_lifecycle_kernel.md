@@ -18,6 +18,10 @@ sufficiency judgment, and uncertainty communication.
 analytical product shape, structured interpretation, synthesis,
 recommendation building, implications, risks, uncertainty, and decision-ready
 analytical communication.
+`/kb/professional_communication.md` owns Professional Communication moves such
+as message architecture, recommendation presentation, explanation fit,
+technical communication, information density, actionability, and preservation
+of evidence and caveats during reader transfer.
 `/kb/architecture_review.md` owns Architecture Review moves such as
 architectural significance, drivers, quality-attribute scenarios, tradeoffs,
 architecture risks, architectural assumptions, evidence, and decision-rationale
@@ -49,8 +53,9 @@ Default lifecycle:
 intake -> routing -> research when required -> drafting or UX writing -> review -> repair when required -> finalization -> governance -> memory disposition
 ```
 
-Source conversion, analytical reasoning, Professional Analysis, Architecture
-Review, memory curation, learning extraction, and canon evolution are
+Source conversion, analytical reasoning, Professional Analysis, Professional
+Communication, Architecture Review, memory curation, learning extraction, and
+canon evolution are
 capabilities that can attach to the lifecycle when needed. They are not
 standing default roles and do not create a separate workflow engine.
 
@@ -83,6 +88,11 @@ disconfirmation, sufficiency, and uncertainty visible in an existing artifact.
 When a gate depends on architectural significance, drivers, quality-attribute
 scenarios, architectural tradeoffs, accepted risks, or decision rationale, use
 `/kb/architecture_review.md` to keep the architecture-review note visible in an
+existing artifact.
+When a gate depends on communication transfer quality, message architecture,
+recommendation presentation, explanation fit, information density,
+actionability, or caveat-preserving reader transfer, use
+`/kb/professional_communication.md` to keep the communication note visible in an
 existing artifact.
 
 | Gate | Decision question | Default evidence |
@@ -193,6 +203,13 @@ implications, or decision-ready analytical communication may consume the
 compact Professional Analysis pattern from `/kb/professional_analysis.md`.
 Professional Analysis is recorded in the smallest existing artifact that
 remains reviewable and does not create a separate lifecycle stage.
+
+Any stage that shapes message architecture, recommendation presentation,
+explanation fit, technical communication, information density, actionability,
+or caveat-preserving reader transfer may consume the compact Professional
+Communication pattern from `/kb/professional_communication.md`. Professional
+Communication is recorded in the smallest existing artifact that remains
+reviewable and does not create a separate lifecycle stage.
 
 Any stage that reviews or commits to an architecture-sensitive route,
 recommendation, implementation task, canon structure, or system design decision

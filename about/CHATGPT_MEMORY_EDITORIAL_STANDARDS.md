@@ -10,6 +10,7 @@ Canonical source files:
 - `ai-editorial-office/kb/glossary.md`
 - `ai-editorial-office/kb/ux_writing_guidelines.md`
 - `ai-editorial-office/kb/professional_analysis.md`
+- `ai-editorial-office/kb/professional_communication.md`
 - `ai-editorial-office/kb/engineering_review.md`
 
 This file is a memory aid, not a canonical policy. If it conflicts with
@@ -158,6 +159,28 @@ Analytical Reasoning owns the reasoning moves. Professional Analysis owns the
 decision-ready analytical product shape. Architecture Review and Engineering
 Review remain separate capabilities for design fitness and implementation
 change safety.
+
+## Professional Communication
+
+Professional Communication is a shared capability for professional reader
+transfer: message architecture, executive briefs, technical explanations,
+recommendation or ask presentation, information density, reader path,
+actionability, and caveat-preserving communication.
+
+It does not create a Professional Communicator, Technical Writer, Executive
+Writer, Policy Writer, Documentation Writer, or Recommendation Writer role, and
+it does not create a new pipeline, lifecycle stage, review gate, style system,
+UX-copy owner, or mandatory artifact.
+
+Use it only when communication transfer quality is material, such as an
+executive brief, technical explanation, implementation handoff, policy or
+stakeholder memo, research/evidence communication, dense source compression,
+recommendation presentation, or actionability failure.
+
+Audience & Outcome Alignment owns who the artifact is for and what outcome it
+must enable. Professional Analysis owns analytical judgment and recommendation
+basis. Professional Communication owns how the approved meaning, evidence,
+caveats, uncertainty, recommendation, and next action transfer to the reader.
 
 ## UX Writing Standards
 

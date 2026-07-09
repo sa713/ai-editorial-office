@@ -46,6 +46,7 @@
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
 | Professional Analysis capability, analytical product shape, structured interpretation, synthesis, recommendation building, implications, and decision-ready analytical communication | `/kb/professional_analysis.md` | task-specific professional-analysis notes, selected analysis lens, synthesis, options, recommendations, assumptions, risks, uncertainty, and next decision/action |
+| Professional Communication capability, message architecture, recommendation presentation, explanation fit, technical communication, information density, and actionability | `/kb/professional_communication.md` | task-specific professional-communication notes, selected communication lens, message architecture, bottom line, density choice, caveats, reader path, and next action |
 | Architecture Review capability, architecture drivers, quality-attribute scenarios, architectural tradeoffs, architecture risks, and decision-rationale challenge | `/kb/architecture_review.md` | task-specific architecture-review notes, drivers, scenarios, tradeoffs, assumptions, risks, and rationale |
 | Engineering Review capability, implementation/change safety lenses, engineering validation expectations, and engineering residual-risk handling | `/kb/engineering_review.md` | task-specific engineering-review notes, changed surface, selected lenses, validation evidence, findings, and residual risk |
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
@@ -110,6 +111,10 @@ existing markdown system should be understood and extended.
   for analytical product shape, structured interpretation, synthesis,
   recommendation building, implications, risks, uncertainty, and
   decision-ready analytical communication.
+- `/kb/professional_communication.md` defines practical professional
+  communication moves for message architecture, recommendation presentation,
+  explanation fit, technical communication, information density, actionability,
+  and preservation of evidence and caveats during reader transfer.
 - `/kb/architecture_review.md` defines practical architecture-review moves for
   architectural significance, drivers, quality-attribute scenarios, tradeoffs,
   architecture risks, assumptions, evidence, and decision rationale.
@@ -134,11 +139,11 @@ existing markdown system should be understood and extended.
   challenge, and canon retirement.
 
 Do not create a new role merely because a capability is named. Analytical
-reasoning, Professional Analysis, Architecture Review, source conversion,
-integrity checking, context assembly, Engineering Review, learning extraction,
-canon evolution, stale canon detection, and memory export remain capabilities,
-checks, scripts, or task-local mini-contracts unless a separate reviewed system
-update explicitly changes the role set.
+reasoning, Professional Analysis, Professional Communication, Architecture
+Review, source conversion, integrity checking, context assembly, Engineering
+Review, learning extraction, canon evolution, stale canon detection, and memory
+export remain capabilities, checks, scripts, or task-local mini-contracts
+unless a separate reviewed system update explicitly changes the role set.
 
 ## Главные инварианты
 
@@ -183,6 +188,10 @@ Before production starts, Chief Editor must route the task editorially:
 - determine whether Professional Analysis capability is required when a task
   needs structured interpretation, synthesis, recommendation building,
   implications, analytical judgment, or decision-ready analytical communication;
+- determine whether Professional Communication capability is required when a
+  task needs message architecture, recommendation presentation, explanation
+  fit, technical communication, information density, actionability, or
+  preservation of evidence and caveats during reader transfer;
 - determine whether Architecture Review capability is required when a task has
   architectural significance, quality-attribute impact, cross-owner effects,
   hard-to-reverse design consequences, or architecture-risk exposure;
