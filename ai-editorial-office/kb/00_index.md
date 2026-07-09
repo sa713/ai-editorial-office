@@ -78,6 +78,11 @@ Canonical KB ownership:
   domain pack, role, pipeline, lifecycle stage, review gate, policy owner,
   capability owner, task status model, client profile, mandatory ordinary task
   artifact, or automatic canon-promotion path.
+- `software_architecture_domain_pack.md` is the release-candidate Software
+  Architecture Domain Knowledge Pack. It provides source-backed software
+  architecture context for architecture-sensitive tasks. It does not own
+  Architecture Review, Engineering Review, roles, workflows, policies, review
+  outcomes, task statuses, or mandatory artifacts.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

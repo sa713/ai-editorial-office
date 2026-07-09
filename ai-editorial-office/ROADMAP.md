@@ -162,12 +162,13 @@ Completed releases:
 Current state:
 
 Professional Analysis remains an open release candidate. Knowledge Evolution is
-complete. Domain Expertise has opened with S4.R1 Domain Knowledge Pack Standard
-implemented as a release candidate ready for Project Lead architectural review.
+complete. Domain Expertise has opened, S4.R1 Domain Knowledge Pack Standard is
+complete, and S4.R2 Software Architecture Domain Pack is the current Stage 4
+release candidate.
 
 Current Stage 4 release candidate:
 
-Domain Knowledge Pack Standard
+Software Architecture Domain Pack
 
 Why this stage matters:
 
@@ -200,10 +201,12 @@ stable architecture.
 
 Current release candidate:
 
-S4.R1 Domain Knowledge Pack Standard defines how future domain packs are
-structured, activated, sourced, bounded, reviewed, updated, and retired without
-becoming roles, pipelines, lifecycle stages, governance layers, policy owners,
-capability owners, review gates, or mandatory ordinary task artifacts.
+S4.R2 Software Architecture Domain Pack provides source-backed software
+architecture context for architecture-sensitive tasks. It applies the S4.R1
+Domain Knowledge Pack Standard while staying a bounded context package, not a
+role, capability, framework, pipeline, lifecycle stage, governance layer,
+policy owner, capability owner, review gate, or mandatory ordinary task
+artifact.
 
 ## Stage 5 - Editorial Intelligence
 

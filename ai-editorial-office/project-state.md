@@ -45,6 +45,10 @@ Domain Expertise.
 - Domain Knowledge Pack Standard release candidate with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
+- Software Architecture Domain Pack release candidate with source-backed
+  architecture decision, driver, quality-attribute, style, pattern, boundary,
+  coupling, tradeoff, risk, evidence, activation, update, and retirement
+  guidance.
 
 ## Current core roles
 - chief_editor
@@ -84,8 +88,9 @@ gates, or mandatory ordinary task artifacts.
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
-Domain Knowledge Pack Standard is implemented as release candidate S4.R1 and is
-ready for Project Lead architectural review.
+Domain Knowledge Pack Standard is complete. Software Architecture Domain Pack
+is implemented as release candidate S4.R2 and is ready for Project Lead
+architectural review.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -124,12 +129,11 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 Follow the active roadmap stage:
 
 - Stage: Domain Expertise.
-- Last completed release: Knowledge Evolution.
-- Open release candidates: Professional Analysis and Domain Knowledge Pack
-  Standard.
-- Current release candidate: S4.R1 - Domain Knowledge Pack Standard.
-- Next planned release after S4.R1 acceptance: Software Architecture Domain
-  Pack.
+- Last completed release: Domain Knowledge Pack Standard.
+- Open release candidates: Professional Analysis and Software Architecture
+  Domain Pack.
+- Current release candidate: S4.R2 - Software Architecture Domain Pack.
+- Next planned release after S4.R2 acceptance: DevSecOps Domain Pack.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -207,6 +211,12 @@ solely because `ROADMAP.md` changed.
   automatic canon-promotion paths. They activate only when domain context
   materially affects evidence depth, terminology, risk, review focus, or output
   quality.
+- Software Architecture Domain Pack is a release-candidate Domain Knowledge
+  Pack for architecture-sensitive tasks. It provides source-backed context for
+  architectural decisions, drivers, quality attributes, styles, patterns,
+  boundaries, coupling, tradeoffs, risks, evidence, and review questions. It
+  does not own Architecture Review, Engineering Review, roles, pipelines,
+  policies, review outcomes, task statuses, or mandatory artifacts.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.
