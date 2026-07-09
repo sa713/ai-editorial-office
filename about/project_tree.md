@@ -102,6 +102,7 @@ ai-editorial-office/
 │   ├── domain_knowledge_pack_standard.md
 │   ├── software_architecture_domain_pack.md
 │   ├── devsecops_domain_pack.md
+│   ├── cybersecurity_domain_pack.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
 │   ├── canonical_sketchnote_prompt.md
@@ -252,6 +253,13 @@ or the task-local canonical owner named there.
   supports Engineering Review with source-backed context while staying
   subordinate to Engineering Review, Architecture Review, and the Domain
   Knowledge Pack Standard.
+- Cybersecurity Domain Knowledge Pack is a release-candidate pack for
+  security-sensitive analysis, threat understanding, defensive
+  recommendations, secure design, controls, mitigations, assurance evidence,
+  residual-risk interpretation, and safety-aware review context. It supports
+  Engineering Review, Architecture Review, Professional Analysis, and
+  Professional Communication while staying subordinate to those capabilities,
+  the Domain Knowledge Pack Standard, and existing governance.
 - Shared lifecycle kernel owns common stages, gates, artifact responsibilities,
   expansion triggers, human approval boundary, and stage context contracts;
   pipelines are overlays.

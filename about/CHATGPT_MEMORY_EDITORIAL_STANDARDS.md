@@ -16,6 +16,7 @@ Canonical source files:
 - `ai-editorial-office/kb/domain_knowledge_pack_standard.md`
 - `ai-editorial-office/kb/software_architecture_domain_pack.md`
 - `ai-editorial-office/kb/devsecops_domain_pack.md`
+- `ai-editorial-office/kb/cybersecurity_domain_pack.md`
 
 This file is a memory aid, not a canonical policy. If it conflicts with
 `AGENTS.md`, task instructions, selected pipelines, role specs, or source KB
@@ -218,8 +219,8 @@ pack, activation reason, relevant sources/sections, confidence limits,
 boundary limits, stale-if triggers, and stop conditions in existing task
 artifacts. Review active pack use inside the existing review gate.
 
-Current release-candidate packs: Software Architecture Domain Knowledge Pack
-and DevSecOps Domain Knowledge Pack.
+Current release-candidate packs: Software Architecture Domain Knowledge Pack,
+DevSecOps Domain Knowledge Pack, and Cybersecurity Domain Knowledge Pack.
 
 Use the Software Architecture pack only for architecture-sensitive tasks where
 software architecture context materially changes evidence depth, terminology,
@@ -235,6 +236,15 @@ operational-security tasks where DevSecOps context is material. It supports
 Engineering Review with source-backed context and review questions, but does
 not own Engineering Review, cybersecurity policy, roles, pipelines, task
 statuses, review outcomes, or mandatory artifacts.
+
+Use the Cybersecurity pack only for security-sensitive analysis, threat
+understanding, defensive recommendations, secure design, controls,
+mitigations, assurance evidence, residual-risk interpretation, and safety-aware
+review context where cybersecurity context is material. It supports
+Engineering Review, Architecture Review, Professional Analysis, and
+Professional Communication without owning those capabilities, cybersecurity
+policy, security approval, incident response, roles, pipelines, task statuses,
+review outcomes, or mandatory artifacts.
 
 ## UX Writing Standards
 
