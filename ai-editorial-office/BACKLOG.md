@@ -57,7 +57,7 @@ Current active release: S4.R5 - AI Engineering Domain Pack.
 | S4.R2 | Software Architecture Domain Pack | Add deep software architecture knowledge for architecture-sensitive tasks. | Software Architecture domain pack is ready for Project Lead review. | The pack improves architecture-related work and integrates cleanly with Architecture Review and Engineering Review. | Done |
 | S4.R3 | DevSecOps Domain Pack | Add deep DevSecOps knowledge for delivery, automation, configuration, and secure operations work. | DevSecOps domain pack is ready for Project Lead review. | The pack improves DevSecOps-related work without duplicating Engineering Review ownership. | Done |
 | S4.R4 | Cybersecurity Domain Pack | Add deep cybersecurity knowledge for security-sensitive tasks. | Cybersecurity domain pack is ready for Project Lead review. | The pack improves security-sensitive work with clear safety boundaries and source-aware guidance. | Done |
-| S4.R5 | AI Engineering Domain Pack | Add deep AI engineering knowledge for model, evaluation, data, prompt, and reliability work. | AI Engineering domain pack is ready for Project Lead review. | The pack improves AI-engineering-related work and integrates cleanly with existing professional capabilities. | In Progress |
+| S4.R5 | AI Engineering Domain Pack | Add deep AI engineering knowledge for model, evaluation, data, prompt, and reliability work. | AI Engineering domain pack is ready for Project Lead review. | The pack improves AI-engineering-related work and integrates cleanly with existing professional capabilities. | Review |
 
 # Stage 5 - Editorial Intelligence
 

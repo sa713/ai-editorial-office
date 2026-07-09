@@ -98,6 +98,14 @@ Canonical KB ownership:
   Professional Communication, cybersecurity policy, security approval,
   incident response, roles, workflows, review outcomes, task statuses, or
   mandatory artifacts.
+- `ai_engineering_domain_pack.md` is the release-candidate AI Engineering
+  Domain Knowledge Pack. It provides source-backed context for AI-enabled
+  system boundaries, model/provider fit, prompts and instructions, structured
+  outputs, RAG, data quality, evaluation, reliability and monitoring, human
+  oversight, defensive safety, tool/agentic workflows, and AI-assisted
+  engineering. It does not own Engineering Review, Cybersecurity, DevSecOps,
+  Software Architecture, Professional Analysis, roles, workflows, review
+  outcomes, approval, task statuses, or mandatory artifacts.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

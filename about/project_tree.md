@@ -103,6 +103,7 @@ ai-editorial-office/
 │   ├── software_architecture_domain_pack.md
 │   ├── devsecops_domain_pack.md
 │   ├── cybersecurity_domain_pack.md
+│   ├── ai_engineering_domain_pack.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
 │   ├── canonical_sketchnote_prompt.md
@@ -260,6 +261,14 @@ or the task-local canonical owner named there.
   Engineering Review, Architecture Review, Professional Analysis, and
   Professional Communication while staying subordinate to those capabilities,
   the Domain Knowledge Pack Standard, and existing governance.
+- AI Engineering Domain Knowledge Pack is a release-candidate pack for
+  AI-enabled system boundaries, model/provider fit, prompts and instructions,
+  structured outputs, RAG, data quality, evaluation, reliability and
+  monitoring, human oversight, defensive safety, tool/agentic workflows, and
+  AI-assisted engineering. It supplies bounded context while staying
+  subordinate to Engineering Review, Cybersecurity, DevSecOps, Software
+  Architecture, Professional Analysis, the Domain Knowledge Pack Standard, and
+  existing governance.
 - Shared lifecycle kernel owns common stages, gates, artifact responsibilities,
   expansion triggers, human approval boundary, and stage context contracts;
   pipelines are overlays.

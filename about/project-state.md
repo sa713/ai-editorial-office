@@ -57,6 +57,11 @@ Domain Expertise.
   defensive recommendations, secure design, control and mitigation framing,
   assurance evidence, residual-risk interpretation, and safety-aware review
   context.
+- AI Engineering Domain Pack release candidate with source-backed context for
+  AI-enabled system boundaries, model/provider fit, prompts and instructions,
+  structured outputs, RAG, data quality, evaluation, reliability and
+  monitoring, human oversight, defensive safety, tool/agentic workflows, and
+  AI-assisted engineering.
 
 ## Current core roles
 - chief_editor
@@ -96,9 +101,10 @@ gates, or mandatory ordinary task artifacts.
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
-Domain Knowledge Pack Standard is complete. Software Architecture Domain Pack
-is complete. DevSecOps Domain Pack is complete. Cybersecurity Domain Pack is
-implemented as release candidate S4.R4 and is ready for Project Lead review.
+Domain Knowledge Pack Standard is complete. Software Architecture Domain Pack,
+DevSecOps Domain Pack, and Cybersecurity Domain Pack are complete. AI
+Engineering Domain Pack is implemented as release candidate S4.R5 and is ready
+for Project Lead review.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -125,7 +131,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, `/kb/editorial_learning_framework.md`, and `/kb/domain_knowledge_pack_standard.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, `/kb/editorial_learning_framework.md`, `/kb/domain_knowledge_pack_standard.md`, and the accepted Domain Knowledge Packs for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -137,10 +143,12 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 Follow the active roadmap stage:
 
 - Stage: Domain Expertise.
-- Last completed release: DevSecOps Domain Pack.
-- Open release candidates: Professional Analysis and Cybersecurity Domain Pack.
-- Current release candidate: S4.R4 - Cybersecurity Domain Pack.
-- Next planned release after S4.R4 acceptance: AI Engineering Domain Pack.
+- Last completed release: Cybersecurity Domain Pack.
+- Open release candidates: Professional Analysis and AI Engineering Domain
+  Pack.
+- Current release candidate: S4.R5 - AI Engineering Domain Pack.
+- Next planned release after S4.R5 acceptance: S5.R1 - Feedback and Learning
+  Intelligence.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -239,6 +247,14 @@ solely because `ROADMAP.md` changed.
   Professional Communication without owning those capabilities, cybersecurity
   policy, security approval, incident response, roles, pipelines, review
   outcomes, task statuses, or mandatory artifacts.
+- AI Engineering Domain Pack is a release-candidate Domain Knowledge Pack for
+  AI-enabled system boundaries, model/provider fit, prompts and instructions,
+  structured outputs, RAG, data quality, evaluation, reliability and
+  monitoring, human oversight, defensive safety, tool/agentic workflows, and
+  AI-assisted engineering. It supplies source-backed context and review
+  questions without owning Engineering Review, Cybersecurity, DevSecOps,
+  Software Architecture, Professional Analysis, roles, pipelines, policies,
+  approval, review outcomes, task statuses, or mandatory artifacts.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.

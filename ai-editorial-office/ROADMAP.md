@@ -164,12 +164,12 @@ Current state:
 Professional Analysis remains an open release candidate. Knowledge Evolution is
 complete. Domain Expertise has opened, S4.R1 Domain Knowledge Pack Standard is
 complete, S4.R2 Software Architecture Domain Pack is complete, S4.R3 DevSecOps
-Domain Pack is complete, and S4.R4 Cybersecurity Domain Pack is the current
-Stage 4 release candidate.
+Domain Pack is complete, S4.R4 Cybersecurity Domain Pack is complete, and S4.R5
+AI Engineering Domain Pack is the current Stage 4 release candidate.
 
 Current Stage 4 release candidate:
 
-Cybersecurity Domain Pack
+AI Engineering Domain Pack
 
 Why this stage matters:
 
@@ -202,15 +202,14 @@ stable architecture.
 
 Current release candidate:
 
-S4.R4 Cybersecurity Domain Pack provides source-backed cybersecurity context
-for security-sensitive analysis, threat understanding, defensive
-recommendations, secure design, control and mitigation framing, assurance
-evidence, residual-risk interpretation, and safety-aware review context. It
-applies the S4.R1 Domain Knowledge Pack Standard while staying a bounded
-context package, not a role, capability, framework, pipeline, lifecycle stage,
-governance layer, policy owner, capability owner, review gate, security
-approval workflow, incident-response workflow, or mandatory ordinary task
-artifact.
+S4.R5 AI Engineering Domain Pack provides source-backed context for
+AI-enabled system boundaries, model/provider fit, prompts and instructions,
+structured outputs, RAG, data quality, evaluation, reliability and monitoring,
+human oversight, defensive safety, tool/agentic workflows, and AI-assisted
+engineering. It applies the S4.R1 Domain Knowledge Pack Standard while staying
+a bounded context package, not a role, capability, framework, pipeline,
+lifecycle stage, governance layer, policy owner, capability owner, review gate,
+approval workflow, scoring system, or mandatory ordinary task artifact.
 
 ## Stage 5 - Editorial Intelligence
 
