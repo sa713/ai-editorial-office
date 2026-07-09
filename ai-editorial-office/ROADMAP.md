@@ -165,11 +165,12 @@ Professional Analysis remains an open release candidate. Knowledge Evolution is
 complete. Domain Expertise has opened, S4.R1 Domain Knowledge Pack Standard is
 complete, S4.R2 Software Architecture Domain Pack is complete, S4.R3 DevSecOps
 Domain Pack is complete, S4.R4 Cybersecurity Domain Pack is complete, and S4.R5
-AI Engineering Domain Pack is the current Stage 4 release candidate.
+AI Engineering Domain Pack is accepted. Stage 4 implementation releases are
+complete; Stage 4 Strategic Review is next. Stage 5 has not started.
 
-Current Stage 4 release candidate:
+Next Stage 4 action:
 
-AI Engineering Domain Pack
+Stage 4 Strategic Review
 
 Why this stage matters:
 
@@ -200,7 +201,7 @@ should be absorbed through the same disciplined model used for professional
 capabilities: researched, synthesized, bounded, validated, and kept inside the
 stable architecture.
 
-Current release candidate:
+Implementation release status:
 
 S4.R5 AI Engineering Domain Pack provides source-backed context for
 AI-enabled system boundaries, model/provider fit, prompts and instructions,
@@ -210,6 +211,9 @@ engineering. It applies the S4.R1 Domain Knowledge Pack Standard while staying
 a bounded context package, not a role, capability, framework, pipeline,
 lifecycle stage, governance layer, policy owner, capability owner, review gate,
 approval workflow, scoring system, or mandatory ordinary task artifact.
+
+S4.R5 is accepted. Stage 4 implementation releases are complete, and Stage 4
+Strategic Review is next. Stage 5 remains planned and has not started.
 
 ## Stage 5 - Editorial Intelligence
 

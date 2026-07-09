@@ -57,7 +57,7 @@ Domain Expertise.
   defensive recommendations, secure design, control and mitigation framing,
   assurance evidence, residual-risk interpretation, and safety-aware review
   context.
-- AI Engineering Domain Pack release candidate with source-backed context for
+- AI Engineering Domain Pack with source-backed context for
   AI-enabled system boundaries, model/provider fit, prompts and instructions,
   structured outputs, RAG, data quality, evaluation, reliability and
   monitoring, human oversight, defensive safety, tool/agentic workflows, and
@@ -102,9 +102,9 @@ Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 Domain Knowledge Pack Standard is complete. Software Architecture Domain Pack,
-DevSecOps Domain Pack, and Cybersecurity Domain Pack are complete. AI
-Engineering Domain Pack is implemented as release candidate S4.R5 and is ready
-for Project Lead review.
+DevSecOps Domain Pack, Cybersecurity Domain Pack, and AI Engineering Domain
+Pack are complete. S4.R5 is accepted. Stage 4 implementation releases are
+complete, Stage 4 Strategic Review is next, and Stage 5 has not started.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -143,12 +143,10 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 Follow the active roadmap stage:
 
 - Stage: Domain Expertise.
-- Last completed release: Cybersecurity Domain Pack.
-- Open release candidates: Professional Analysis and AI Engineering Domain
-  Pack.
-- Current release candidate: S4.R5 - AI Engineering Domain Pack.
-- Next planned release after S4.R5 acceptance: S5.R1 - Feedback and Learning
-  Intelligence.
+- Last completed release: S4.R5 - AI Engineering Domain Pack.
+- Open release candidates: Professional Analysis.
+- Current next action: Stage 4 Strategic Review.
+- Stage 5 status: planned, not started.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -247,7 +245,7 @@ solely because `ROADMAP.md` changed.
   Professional Communication without owning those capabilities, cybersecurity
   policy, security approval, incident response, roles, pipelines, review
   outcomes, task statuses, or mandatory artifacts.
-- AI Engineering Domain Pack is a release-candidate Domain Knowledge Pack for
+- AI Engineering Domain Pack is an accepted Domain Knowledge Pack for
   AI-enabled system boundaries, model/provider fit, prompts and instructions,
   structured outputs, RAG, data quality, evaluation, reliability and
   monitoring, human oversight, defensive safety, tool/agentic workflows, and
