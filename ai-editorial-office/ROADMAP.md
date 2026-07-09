@@ -161,12 +161,11 @@ Completed releases:
 
 Current state:
 
-Professional Analysis and Knowledge Evolution are implemented as release
-candidates ready for Project Lead architectural review. They preserve the
-architecture and add no new roles, pipelines, lifecycle stages, governance
-layers, or mandatory artifact sets.
+Professional Analysis remains an open release candidate. Knowledge Evolution is
+complete. Domain Expertise has opened with S4.R1 Domain Knowledge Pack Standard
+implemented as a release candidate ready for Project Lead architectural review.
 
-Next planned release after open Stage 3 release candidates are accepted:
+Current Stage 4 release candidate:
 
 Domain Knowledge Pack Standard
 
@@ -178,7 +177,7 @@ expert judgment without creating capability sprawl or new operational owners.
 
 ## Stage 4 - Domain Expertise
 
-Status: Planned
+Status: Active
 
 Purpose:
 
@@ -198,6 +197,13 @@ Domain expertise should not arrive as loose facts or isolated checklists. It
 should be absorbed through the same disciplined model used for professional
 capabilities: researched, synthesized, bounded, validated, and kept inside the
 stable architecture.
+
+Current release candidate:
+
+S4.R1 Domain Knowledge Pack Standard defines how future domain packs are
+structured, activated, sourced, bounded, reviewed, updated, and retired without
+becoming roles, pipelines, lifecycle stages, governance layers, policy owners,
+capability owners, review gates, or mandatory ordinary task artifacts.
 
 ## Stage 5 - Editorial Intelligence
 

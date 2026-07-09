@@ -80,6 +80,12 @@ correction/retirement, or `/about` sync, review applies
 duplication, privacy, maintenance cost, and whether the item should remain
 task-local.
 
+When reviewed work depends on an active Domain Knowledge Pack, review applies
+`/kb/domain_knowledge_pack_standard.md` to challenge activation reason, source
+register support, boundary and adjacent-domain limits, stale-if triggers,
+canonical-owner boundaries, and misuse as policy, capability ownership, role,
+pipeline, lifecycle stage, second review gate, or mandatory ordinary artifact.
+
 When a task was governed by a Problem Hypothesis and/or Editorial Decision
 Frame, review also includes an assumptions-based Editorial Challenge Lens inside
 `review.md`. This lens tests whether the assumptions that made the chosen route
@@ -143,6 +149,7 @@ packet from those owners, then add only review-specific context:
 - the material under review;
 - latest handoff and assigned client-profile files when named by task
   artifacts;
+- active Domain Knowledge Pack files when named by task artifacts;
 - research, claim, source, and evidence-confidence artifacts when material
   claims or evidence-dependent conclusions are present;
 - analytical-reasoning notes when reasoning complexity, evidence ambiguity,
@@ -178,10 +185,10 @@ For UX writing review, the material under review is usually:
 - `/tasks/TASK-ID/terminology-notes.md`;
 - `/tasks/TASK-ID/ux-writer-notes.md`.
 
-If required inputs are missing, including an active client-profile checklist
-named by the manifest or orchestration plan, Review Agent must stop, record the
-missing input, and recommend `blocked` or `changes_requested` according to
-`/kb/task_statuses.md`.
+If required inputs are missing, including an active client-profile checklist or
+active Domain Knowledge Pack named by the manifest or orchestration plan,
+Review Agent must stop, record the missing input, and recommend `blocked` or
+`changes_requested` according to `/kb/task_statuses.md`.
 
 Review may start from `review` status or from a direct handoff by `writer_agent` or `ux_writer` when the required artifacts exist and review is required. Missing `editing` status is not a blocker in the current operating model.
 
@@ -230,7 +237,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Professional Communication challenge when applicable, Architecture Review challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Professional Communication challenge when applicable, Architecture Review challenge when applicable, active Domain Knowledge Pack challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -347,6 +354,8 @@ Compact review minimum:
 - compact Knowledge Evolution check when reviewed work proposes reusable
   learning, canon updates, pattern reuse, stale/conflicting knowledge,
   correction/retirement, or memory disposition;
+- compact Domain Knowledge Pack check when reviewed work depends on active
+  pack context;
 - usefulness/pass rationale or blocking issues;
 - governance note when relevant;
 - one next action.
@@ -378,6 +387,10 @@ It does not restate detailed review logic. Review Agent owns:
   attributes, missing scenarios, hidden architectural assumptions,
   architecture/implementation confusion, missing rejected alternatives,
   undocumented accepted risks, and decisions without rationale;
+- Domain Knowledge Pack challenge, including weak activation, unsupported
+  source register use, boundary drift, stale-if trigger neglect, canonical
+  owner override, and misuse as policy, capability ownership, role, pipeline,
+  lifecycle stage, review gate, or mandatory ordinary artifact;
 - factual, source, and claim validation;
 - editorial relevance and replaceability pressure;
 - assumptions-based Editorial Challenge Lens;
@@ -406,6 +419,7 @@ Quality gates are mandatory and artifact-backed.
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
 | Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, and memory-disposition claims are evidenced, scoped, owned, non-duplicative, and reviewable when material | task-local note promoted without evidence, no owner, duplicate rule, privacy risk, `/about` treated as canon, or stale guidance handled by silent deletion |
+| Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |
 | Outcome gate | Outcome is exactly `approved`, `changes_requested`, or `blocked` | ambiguous verdict |
 | Finalization gate | Finalization allowed only after review outcome `approved` | missing review, blocked review, changes requested |
 

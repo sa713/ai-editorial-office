@@ -54,6 +54,10 @@ markdown smoke-tests и synthetic examples:
 - `knowledge_evolution_smoke_test.md` - manual synthetic cases for Knowledge
   Evolution disposition, stale-knowledge challenge, canon-update candidates,
   and `/about` memory sync; it is not production governance.
+- `domain_knowledge_pack_standard_smoke_test.md` - manual synthetic cases for
+  Domain Knowledge Pack activation, non-activation, source boundaries, review,
+  update, retirement, and forbidden architecture drift; it is not production
+  governance.
 - `end_to_end_cases/access_pass_security_task/` - sanitized end-to-end case for
   an internal access-pass security task; it is not task materials and contains
   no real credentials, real cards, real system details, or exploit instructions.
@@ -188,6 +192,15 @@ pattern candidates, canon-update candidates, stale/conflicting knowledge,
 correction or retirement candidates, and `/about` sync are scoped through the
 existing owner and review path. It does not define active rules or replace
 Chief Editor, Review Agent, `AGENTS.md`, or the Editorial Learning Framework.
+
+`domain_knowledge_pack_standard_smoke_test.md` records synthetic activation,
+non-activation, boundary, source, update, retirement, and review cases for
+`/kb/domain_knowledge_pack_standard.md`. It checks that Domain Knowledge Packs
+remain source-backed context packages and do not become roles, pipelines,
+lifecycle stages, review gates, policy owners, capability owners, client
+profiles, task status models, or mandatory ordinary task artifacts. It does not
+define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
+Domain Knowledge Pack Standard.
 
 `end_to_end_cases/access_pass_security_task/` records a synthetic sanitized
 end-to-end editorial case. It checks Preflight Gate `constrain`, compact

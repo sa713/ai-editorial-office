@@ -36,6 +36,9 @@ in `/kb/editorial_quality_attributes.md`;
 Knowledge Evolution, learning extraction, canon evolution, pattern reuse,
 stale-knowledge challenge, canon retirement, and memory disposition live in
 `/kb/editorial_learning_framework.md`;
+Domain Knowledge Pack purpose, structure, activation, source/evidence
+requirements, boundaries, review, update, retirement, and relation to existing
+roles and capabilities live in `/kb/domain_knowledge_pack_standard.md`;
 governance invariants and review-gate authority still live in `AGENTS.md`;
 task statuses still live in `/kb/task_statuses.md`.
 
@@ -106,6 +109,11 @@ Quality attribute selection and preservation is a shared capability, not a
 standing role. Knowledge Evolution, learning extraction, canon evolution,
 pattern reuse, stale knowledge detection, canon retirement, and memory
 disposition are shared capabilities, not standing roles.
+
+Domain Knowledge Packs are not capabilities. They are source-backed context
+packages that can inform role work when activated by task artifacts. They do
+not create reusable operations, role accountability, policy ownership, review
+gates, lifecycle stages, pipelines, or mandatory ordinary task artifacts.
 
 ## Capability Records
 
@@ -859,6 +867,9 @@ disposition are shared capabilities, not standing roles.
 
 These capabilities must not be converted into default roles without a separate
 reviewed system update:
+
+Domain Knowledge Packs are deliberately excluded from this list because they
+are context packages, not reusable operations.
 
 - source conversion;
 - integrity checking;

@@ -25,7 +25,9 @@ Failure-mode challenge and recovery patterns are owned by
 `/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are
 owned by `/kb/editorial_quality_attributes.md`. Knowledge Evolution, learning
 extraction, canon evolution, stale-knowledge challenge, and memory disposition
-are owned by `/kb/editorial_learning_framework.md`.
+are owned by `/kb/editorial_learning_framework.md`. Domain Knowledge Pack
+activation, boundaries, source/evidence requirements, review, update, and
+retirement are owned by `/kb/domain_knowledge_pack_standard.md`.
 
 ## Primary Responsibilities
 
@@ -70,6 +72,11 @@ are owned by `/kb/editorial_learning_framework.md`.
 - challenge reusable learning, Knowledge Evolution disposition, canon-update,
   pattern-reuse, stale/conflicting knowledge, correction/retirement, and memory
   sync claims when they appear in reviewed work;
+- challenge active Domain Knowledge Pack use when material: activation reason,
+  domain boundary, source register support, evidence confidence, stale-if
+  triggers, canonical-owner boundaries, and misuse as policy, capability
+  ownership, role, pipeline, lifecycle stage, review gate, or mandatory
+  ordinary artifact;
 - detect unvalidated canonization and stale-knowledge persistence in system
   updates;
 - detect unsupported claims, hallucination risk, contradictions, tone or glossary
@@ -125,6 +132,8 @@ Conditional:
 - `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
   learning, Knowledge Evolution disposition, canon evolution, pattern reuse,
   stale/conflicting knowledge, correction/retirement, or memory sync;
+- `/kb/domain_knowledge_pack_standard.md` and active Domain Knowledge Pack files
+  when reviewed work depends on active domain-pack context;
 - active client-profile files and review checklist when `client_profile` is set;
 - current active version pointer when multiple versions exist.
 
@@ -138,6 +147,7 @@ Required:
   Professional Communication challenge when applicable,
   Architecture Review challenge when applicable,
   Engineering Review challenge when applicable,
+  active Domain Knowledge Pack challenge when applicable,
   evidence-confidence challenge when applicable, learning/canon candidate
   challenge when applicable, outcome, risks, required changes, blockers, and
   next action.
@@ -198,6 +208,9 @@ artifacts must never become silently mandatory.
   missing or materially unsupported;
 - approve canon evolution based on a single unverified task note, raw feedback,
   duplicate owner, missing source-evidence chain, or `/about` mirror;
+- approve active Domain Knowledge Pack use when activation is unjustified,
+  source register support is missing, boundaries are ignored, stale-if triggers
+  are unresolved, or the pack overrides a canonical owner;
 - approve a non-trivial recommendation or implementation plan when credible
   alternatives were ignored or rejected as strawmen;
 - choose a new active editorial route, replace Chief Editor's route, or treat
@@ -238,6 +251,8 @@ The Review Agent may decide:
   task risk and outcome;
 - whether learning or canon-update claims are sufficiently evidenced, scoped,
   owned, non-duplicative, and private-safe for the reviewed update;
+- whether active Domain Knowledge Pack use is justified, source-backed,
+  bounded, current enough, and subordinate to canonical owners;
 - repair owner and bounded re-review scope;
 - whether evidence is sufficient for approval.
 
@@ -290,6 +305,9 @@ Stop and mark blocked or escalate when:
   make approval unsafe or unreviewable.
 - a proposed learning/canon change lacks evidence, owner, scope, duplication
   check, privacy check, or reviewed update path.
+- active Domain Knowledge Pack activation, source support, boundary, stale-if,
+  or canonical-owner constraints are missing enough to make approval unsafe or
+  unreviewable.
 
 ## Handoff Expectations
 
@@ -345,6 +363,10 @@ short examples needed to clarify a finding.
   type, source-evidence chain, disposition, owner, scope, duplication, privacy,
   task-local alternative, stale-knowledge handling, and correction/retirement
   path before approval;
+- active Domain Knowledge Pack use is challenged when material: verify
+  activation reason, source register support, boundary and adjacent-domain
+  limits, confidence limits, stale-if triggers, canonical-owner boundaries, and
+  absence of role/capability/pipeline/gate/artifact creep;
 - Editorial Decision Frame quality is checked when applicable: chosen route
   fits the brief, evidence, risks, and source boundary; rejected alternatives
   have real reasons; Writer Agent or UX Writer followed the route; rejected

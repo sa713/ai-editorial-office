@@ -23,13 +23,17 @@ by `/kb/professional_communication.md`. Architecture Review guidance is owned
 by `/kb/architecture_review.md`. Engineering Review guidance is owned by
 `/kb/engineering_review.md`. Knowledge Evolution, learning extraction, canon
 evolution, stale-knowledge challenge, and memory disposition are owned by
-`/kb/editorial_learning_framework.md`.
+`/kb/editorial_learning_framework.md`. Domain Knowledge Pack activation,
+boundaries, source/evidence requirements, review, update, and retirement are
+owned by `/kb/domain_knowledge_pack_standard.md`.
 
 ## Primary Responsibilities
 
 - select or confirm the appropriate pipeline and process depth;
 - confirm, reject, or resolve active client-profile activation before production
   starts;
+- confirm, reject, or resolve active Domain Knowledge Pack activation before
+  production starts when domain context is material;
 - confirm or resolve risk mode before production starts;
 - make a compact Preflight Gate decision before production starts;
 - confirm audience, intended outcome, required action or decision, and
@@ -55,6 +59,9 @@ evolution, stale-knowledge challenge, and memory disposition are owned by
   security, configuration, delivery automation, infrastructure/runtime,
   interface/API, observability, reliability, data, performance, or secure
   delivery risk is material;
+- ensure Domain Knowledge Packs are treated as source-backed context packages,
+  not policy owners, capability owners, roles, pipelines, lifecycle stages,
+  review gates, or mandatory ordinary task artifacts;
 - select planning level and ensure credible alternatives exist before
   committing to a non-trivial route, recommendation, or implementation plan;
 - detect scope drift, role confusion, canon duplication, under-execution,
@@ -84,7 +91,7 @@ evolution, stale-knowledge challenge, and memory disposition are owned by
 - decide whether feedback is `task_local`, `preference`, `observation`,
   `confirmed_pattern`, or `system_change_candidate`;
 - route feedback only after classification: task-local action, preference note,
-  proposed engineering watchlist signal, or backlog/system-change candidate.
+  proposed engineering watchlist signal, or backlog/system-change candidate;
 - classify reusable learning, Knowledge Evolution disposition,
   canon-update candidates, stale assumptions, correction/retirement needs,
   memory sync needs, and pattern-promotion signals only through
@@ -107,6 +114,8 @@ Conditional:
 - role specs for agents being assigned;
 - relevant KB files required by the chosen pipeline;
 - active client-profile files when `client_profile` is selected or proposed;
+- active or candidate Domain Knowledge Pack files when activation is selected
+  or proposed;
 - normalized preflight inputs when available: audience, channel/context,
   intended outcome, reader context, deliverable, required action or decision,
   detail/tone/format constraints, source boundary, success criterion, approval
@@ -258,6 +267,9 @@ Required when applicable:
 - compact Engineering Review note when implementation change safety, relevant
   engineering lenses, validation evidence, or engineering residual risk
   materially affect route or governance.
+- compact domain-pack activation note when domain context materially affects
+  source boundary, terminology, evidence depth, risk, review focus, or output
+  quality.
 - compact option-evaluation note when a material route, recommendation, or
   implementation plan has meaningful alternatives.
 - compact post-task learning/canon note when a material reusable pattern, stale
@@ -338,6 +350,8 @@ The Chief Editor may decide:
 - whether implementation change safety requires Engineering Review capability
   and which engineering lenses are relevant before routing, implementation,
   review, or governance proceeds;
+- whether a Domain Knowledge Pack should be activated, which pack sections or
+  sources matter, and which stale-if or boundary limits constrain the route;
 - whether a failure-mode warning sign requires return to intake, research,
   production, review, repair, governance, or a smaller stronger output;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,
@@ -381,9 +395,10 @@ Stop and escalate or mark blocked when:
 
 Chief Editor handoff must be compact and role-specific. It should name the next
 owner, current status, changed artifacts, required next action, blockers, risk
-mode, active client profile when any, review/finalization prerequisites, and
-explicit boundaries for what the next role must not do. For planning handoff to
-Writer Agent or UX Writer, include only the compact editorial decision transfer:
+mode, active client profile when any, active Domain Knowledge Pack when any,
+review/finalization prerequisites, and explicit boundaries for what the next
+role must not do. For planning handoff to Writer Agent or UX Writer, include
+only the compact editorial decision transfer:
 chosen route, rejected alternatives, writing contract, and review focus.
 Rejected alternatives should be names or one-line reasons, not a rationale dump.
 Do not repeat the full Editorial Decision Frame. It should not use
@@ -397,6 +412,9 @@ Do not repeat the full Editorial Decision Frame. It should not use
   topical mentions;
 - `client_profile_status` is `active` only when the cleaned source policy is
   available and verified; otherwise it is `pending_source`;
+- active Domain Knowledge Packs are recorded only when domain context is
+  material, with activation reason, relevant sections or sources, confidence
+  limits, stale-if triggers, and boundary limits visible;
 - role assignment keeps core-role and extension-role boundaries intact;
 - `task-manifest.md` points to the current active version when multiple versions
   exist;

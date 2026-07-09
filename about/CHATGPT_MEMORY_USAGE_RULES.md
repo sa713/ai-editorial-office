@@ -173,6 +173,14 @@ gate, automatic canon promotion, or mandatory artifact. Keep task-local notes
 local unless source evidence, scope, owner, disposition, and review path justify
 promotion.
 
+Domain Knowledge Packs may be activated only when domain context materially
+changes evidence depth, terminology, risk handling, review focus, or output
+quality. They are source-backed context packages, not roles, capabilities,
+pipelines, lifecycle stages, review gates, policy owners, client profiles, task
+status models, mandatory ordinary artifacts, or automatic canon-promotion
+paths. Record active packs in existing task artifacts and review their use
+inside the existing review gate.
+
 ## Research Rules
 
 Use research when the task needs factual claims, dates, names, numbers, quotes,

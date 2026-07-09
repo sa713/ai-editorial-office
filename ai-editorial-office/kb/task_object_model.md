@@ -34,6 +34,9 @@ quality preservation guidance live in `/kb/editorial_quality_attributes.md`;
 learning extraction, Knowledge Evolution, canon evolution, stale-knowledge
 challenge, canon retirement, and memory disposition live in
 `/kb/editorial_learning_framework.md`;
+Domain Knowledge Pack purpose, structure, activation, source/evidence
+requirements, boundaries, review, update, retirement, and relation to existing
+roles and capabilities live in `/kb/domain_knowledge_pack_standard.md`;
 runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
 selected pipeline, role specs, and task-local artifacts.
 
@@ -107,6 +110,7 @@ file.
 | `tradeoffs_accepted` | Costs, risks, or constraints accepted by choosing the selected option. | `orchestration_plan.md`, review/final decision |
 | `reconsideration_triggers` | Conditions that would make a rejected option stronger or require reroute. | Editorial Decision Frame, `review.md`, `final_decision.md` |
 | `active_capabilities` | Capabilities selected for the task, from `/kb/capability_registry.md`. | `orchestration_plan.md`, `task-manifest.md` |
+| `active_domain_packs` | Optional Domain Knowledge Packs activated because domain context materially affects evidence depth, terminology, risk, review focus, or output quality. | `orchestration_plan.md`, `task-manifest.md`, `research.md`, `review.md`, `final_decision.md` |
 | `active_roles` | Current core roles or explicitly legalized extension roles assigned to wrap capabilities. | `orchestration_plan.md`, handoffs, `status.md` |
 | `client_profile_status` | Client profile id, status, files, activation reason, and stop condition when applicable. | `task-manifest.md`, `orchestration_plan.md`, review artifacts |
 | `current_owner` | Role currently responsible for the next action. | `task-manifest.md`, `status.md`, handoff |
@@ -135,9 +139,9 @@ requires it.
 | Artifact | Task-object responsibility |
 | --- | --- |
 | `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, quality cues when material, and success criterion. |
-| `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
+| `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, active Domain Knowledge Packs when material, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, analytical question and assumptions when material, architecture review scope and drivers when material, audience/outcome fit when material, quality priorities/tradeoffs when material, options considered when material, active capabilities, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, analytical question and assumptions when material, architecture review scope and drivers when material, audience/outcome fit when material, quality priorities/tradeoffs when material, options considered when material, active capabilities, active Domain Knowledge Packs when material, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
 | `research.md` | Research scope, verified facts, interpretations, assumptions, hypotheses, contradictions, diagnostic evidence, source confidence, evidence class, sufficiency judgment, and evidence limits. |
 | `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |
@@ -146,7 +150,7 @@ requires it.
 | `draft.md`, `ux-copy.md`, or equivalent production artifact | Current material under production or review, shaped to the recorded audience, outcome, detail, tone, and format constraints. |
 | `claims-used.md` | Claims actually used in production artifacts when factual traceability matters. |
 | `writer-notes.md` / `ux-writer-notes.md` | Production assumptions, caveats, audience/outcome choices, quality-preservation notes, and review focus that are not already obvious from the draft. |
-| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, analytical reasoning challenge when material, Professional Analysis challenge when material, Professional Communication challenge when material, Architecture Review challenge when material, Engineering Review challenge when material, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, learning/canon candidates when material, and next action. |
+| `review.md` | Independent confidence gate: reviewed artifacts, independence basis, analytical reasoning challenge when material, Professional Analysis challenge when material, Professional Communication challenge when material, Architecture Review challenge when material, Engineering Review challenge when material, active Domain Knowledge Pack activation/boundary/source challenge when material, audience/outcome fit, quality-attribute fit when material, evidence/confidence challenge, assumptions and unknowns, findings, verdict, required changes, blockers, learning/canon candidates when material, and next action. |
 | `qa-checklist.md` | Separate review evidence only when a downstream consumer, high-governance mode, task requirement, blocker, or traceability need justifies it. |
 | `review-summary.md` | Separate concise review transfer only when `review.md` and handoff are not enough for the next owner. |
 | `final.md` | Final deliverable after approved review or reviewed-final compact closure. |
@@ -191,8 +195,10 @@ by `/kb/architecture_review.md`; Engineering Review moves are owned by
 `/kb/engineering_review.md`; audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`; quality attributes and tradeoffs are owned
 by `/kb/editorial_quality_attributes.md`; Knowledge Evolution, learning, and
-canon evolution are owned by `/kb/editorial_learning_framework.md`; this file
-maps those gates to task-object fields and artifact views.
+canon evolution are owned by `/kb/editorial_learning_framework.md`; Domain
+Knowledge Pack activation, boundaries, source/evidence requirements, review,
+update, and retirement are owned by `/kb/domain_knowledge_pack_standard.md`;
+this file maps those gates to task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |
@@ -218,4 +224,7 @@ This model does not:
 - remove compact execution;
 - promote `/about` to canon;
 - treat old task folders as templates;
+- create mandatory domain pack artifacts for ordinary tasks;
+- treat Domain Knowledge Packs as roles, pipelines, lifecycle stages, policy
+  owners, capability owners, review gates, or task status models;
 - replace role specs or selected pipelines.

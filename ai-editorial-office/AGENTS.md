@@ -54,6 +54,7 @@
 | Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
 | Editorial quality attributes and tradeoffs | `/kb/editorial_quality_attributes.md` | task-specific quality priorities, accepted tradeoffs, and preservation risks |
 | Editorial learning and Knowledge Evolution | `/kb/editorial_learning_framework.md` | task-specific learning candidates, canon update candidates, reusable patterns, stale-knowledge notes, and memory disposition |
+| Domain Knowledge Pack purpose, structure, activation, source/evidence requirements, boundaries, review, update, and retirement | `/kb/domain_knowledge_pack_standard.md` | active domain-pack notes, activation reason, source pointers, caveats, stale-if notes, and task-specific consequences |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -138,6 +139,9 @@ existing markdown system should be understood and extended.
   Knowledge Evolution, canonization criteria, learning extraction, pattern
   confirmation, canon evolution rules, stale-knowledge challenge, canon
   correction/retirement, and memory disposition.
+- `/kb/domain_knowledge_pack_standard.md` defines Domain Knowledge Pack
+  purpose, structure, activation, source/evidence requirements, boundaries,
+  review, update, and retirement.
 
 Do not create a new role merely because a capability is named. Analytical
 reasoning, Professional Analysis, Professional Communication, Architecture
@@ -145,7 +149,10 @@ Review, source conversion, integrity checking, context assembly, Engineering
 Review, learning extraction, Knowledge Evolution, canon evolution, stale
 knowledge detection, and memory export remain capabilities, checks, scripts, or
 task-local mini-contracts unless a separate reviewed system update explicitly
-changes the role set.
+changes the role set. Domain Knowledge Packs remain source-backed context
+packages; they are not roles, pipelines, lifecycle stages, policy owners,
+capability owners, governance layers, review gates, or mandatory ordinary task
+artifacts.
 
 ## Главные инварианты
 
@@ -179,6 +186,8 @@ Before production starts, Chief Editor must route the task editorially:
 - determine the task type;
 - choose the relevant pipeline or editorial mode;
 - determine whether a client profile must be activated;
+- determine whether a Domain Knowledge Pack should be activated when domain
+  context is material;
 - activate the visual branch when the selected task requires it;
 - select the active capabilities required by the task;
 - determine the required roles and bounded extension roles;
@@ -460,6 +469,8 @@ For ordinary restart or stage transition, use the short context path:
 - the current working artifact;
 - active client profile files when `task-manifest.md` or `orchestration_plan.md`
   names `client_profile`;
+- active Domain Knowledge Pack files when `task-manifest.md` or
+  `orchestration_plan.md` names one;
 - only the directly relevant pipeline, KB file, or `editorial_knowledge` file needed for the next action.
 
 Do not read these without a specific reason:

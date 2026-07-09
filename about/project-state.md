@@ -1,7 +1,7 @@
 # Project State
 
 ## Current phase
-Professional Capability Model.
+Domain Expertise.
 
 ## Completed
 - governance layer;
@@ -42,6 +42,9 @@ Professional Capability Model.
   source-evidence chains, pattern confirmation, stale/conflicting knowledge
   challenge, canon correction/retirement, and `/about` memory disposition
   guidance.
+- Domain Knowledge Pack Standard release candidate with pack purpose,
+  structure, activation, source/evidence requirements, boundaries, forbidden
+  content, review, update, retirement, and `/about` boundary guidance.
 
 ## Current core roles
 - chief_editor
@@ -73,16 +76,16 @@ canonical working repository unless the user explicitly gives a different
 repository decision.
 
 ## Current focus
-Use the stable architecture to add professional competencies without creating
-new roles, pipelines, lifecycle stages, governance layers, or mandatory
-artifact sets.
+Use the stable architecture to add domain expertise through source-backed,
+bounded, maintained domain-context packs without creating new roles, pipelines,
+lifecycle stages, governance layers, policy owners, capability owners, review
+gates, or mandatory ordinary task artifacts.
 
 Engineering Review and Professional Communication are complete. Professional
-Analysis and Knowledge Evolution are implemented as release candidates and are
-ready for Project Lead architectural review.
+Analysis remains an open release candidate. Knowledge Evolution is complete.
 
-The next planned release after open Stage 3 release candidates are accepted is
-Domain Knowledge Pack Standard.
+Domain Knowledge Pack Standard is implemented as release candidate S4.R1 and is
+ready for Project Lead architectural review.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -109,7 +112,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, and `/kb/editorial_learning_framework.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, `/kb/editorial_learning_framework.md`, and `/kb/domain_knowledge_pack_standard.md` for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -120,11 +123,13 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 ## Current next task
 Follow the active roadmap stage:
 
-- Stage: Professional Capability Model.
-- Last completed release: Professional Communication.
-- Current release candidates: Professional Analysis and Knowledge Evolution.
-- Next planned release after open Stage 3 release candidates are accepted:
-  Domain Knowledge Pack Standard.
+- Stage: Domain Expertise.
+- Last completed release: Knowledge Evolution.
+- Open release candidates: Professional Analysis and Domain Knowledge Pack
+  Standard.
+- Current release candidate: S4.R1 - Domain Knowledge Pack Standard.
+- Next planned release after S4.R1 acceptance: Software Architecture Domain
+  Pack.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -196,6 +201,12 @@ solely because `ROADMAP.md` changed.
   not a new role, pipeline, lifecycle stage, review gate, writing framework, UX
   copy owner, style layer, or mandatory artifact set. It is activated only when
   communication transfer quality is material.
+- Domain Knowledge Packs are source-backed context packages, not roles,
+  pipelines, lifecycle stages, review gates, policy owners, capability owners,
+  task status models, client profiles, mandatory ordinary task artifacts, or
+  automatic canon-promotion paths. They activate only when domain context
+  materially affects evidence depth, terminology, risk, review focus, or output
+  quality.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.

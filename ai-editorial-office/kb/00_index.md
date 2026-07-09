@@ -71,6 +71,13 @@ Canonical KB ownership:
   memory disposition. It does not create a memory database, Historian role,
   Knowledge Curator role, automatic documentation process, or mandatory
   retrospective.
+- `domain_knowledge_pack_standard.md` owns Domain Knowledge Pack purpose,
+  structure, activation, source/evidence requirements, domain boundaries,
+  forbidden content, review, update, retirement, and relation to existing
+  roles, capabilities, canonical owners, and `/about`. It does not create a
+  domain pack, role, pipeline, lifecycle stage, review gate, policy owner,
+  capability owner, task status model, client profile, mandatory ordinary task
+  artifact, or automatic canon-promotion path.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

@@ -23,7 +23,9 @@ Professional Communication guidance is owned by
 Architecture Review moves are owned by `/kb/architecture_review.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
-`/kb/editorial_quality_attributes.md`.
+`/kb/editorial_quality_attributes.md`. Domain Knowledge Pack activation,
+boundaries, source/evidence requirements, review, update, and retirement are
+owned by `/kb/domain_knowledge_pack_standard.md`.
 
 ## Primary Responsibilities
 
@@ -31,6 +33,8 @@ Quality attributes and tradeoffs are owned by
 - use structure-before-writing notes when present;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the drafting
   contract when present;
+- use active Domain Knowledge Pack context only within the recorded activation,
+  source, confidence, stale-if, and domain-boundary limits;
 - communicate selected-approach tradeoffs accurately when the task asks for a
   recommendation, plan, analysis, or decision support;
 - preserve analytical structure when material, including the question answered,
@@ -47,13 +51,13 @@ Quality attributes and tradeoffs are owned by
 - preserve selected quality priorities such as correctness, relevance,
   actionability, clarity, precision, traceability, or structural coherence;
 - create or update `outline.md` before drafting when needed;
-- draft from the brief, approved research artifacts, active client profile, and
-  relevant KB;
+- draft from the brief, approved research artifacts, active client profile,
+  active Domain Knowledge Pack when named, and relevant KB;
 - use only supported claims, safe assumptions, or clearly caveated uncertainty;
 - preserve evidence confidence limits from `/kb/editorial_evidence_framework.md`
   when material claims, recommendations, or decisions enter the draft;
-- preserve tone of voice, glossary, editorial policy, active client profile, and
-  source traceability;
+- preserve tone of voice, glossary, editorial policy, active client profile,
+  active Domain Knowledge Pack caveats when material, and source traceability;
 - avoid overclaiming, unsupported examples, and inherited boilerplate;
 - detect over-polishing, unsupported claims, constraint loss, scope drift, and
   wrong-task drift before handing work to review;
@@ -77,6 +81,7 @@ Conditional:
 
 - active client-profile files when `task-manifest.md` or `orchestration_plan.md`
   names `client_profile`;
+- active Domain Knowledge Pack files when named by task artifacts;
 - `orchestration_plan.md` when it defines structure, scope, acceptance
   criteria, or the Editorial Decision Frame;
 - `status.md` when blockers or prior state matter;
@@ -133,6 +138,8 @@ Conditional:
   weaken the task's selected quality priorities;
 - silently ignore the Editorial Decision Frame or reintroduce rejected
   alternatives without a recorded reason;
+- use a Domain Knowledge Pack as policy authority, capability ownership,
+  workflow, review verdict, or permission to add unsupported domain claims;
 - flatten selected approach, rejected alternatives, tradeoffs, or remaining
   uncertainty into a one-sided recommendation;
 - flatten competing explanations, contradictions, or sufficiency limits into a
@@ -169,8 +176,8 @@ The Writer must not decide:
 
 Stop and escalate when:
 
-- required brief, scope, evidence, client-profile context, or KB context is
-  missing;
+- required brief, scope, evidence, client-profile context, active Domain
+  Knowledge Pack context, or KB context is missing;
 - the Editorial Decision Frame is missing, stale, or conflicts with the handoff
   for a task handed from Chief Editor planning;
 - claims needed for the draft are unsupported or contradicted;

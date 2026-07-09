@@ -26,14 +26,16 @@ Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
 `/kb/editorial_quality_attributes.md`. Knowledge Evolution, learning
 extraction, and canon evolution are owned by
-`/kb/editorial_learning_framework.md`.
+`/kb/editorial_learning_framework.md`. Domain Knowledge Pack activation,
+boundaries, source/evidence requirements, review, update, and retirement are
+owned by `/kb/domain_knowledge_pack_standard.md`.
 
 ## Primary Responsibilities
 
 - read the reviewed material and the applicable review findings;
 - apply only approved or clearly bounded changes;
 - preserve factual traceability, caveats, glossary, tone, active client profile,
-  and structure;
+  active Domain Knowledge Pack caveats when material, and structure;
 - preserve intended audience, outcome, actionability, detail level, format, and
   tone constraints from the reviewed artifact;
 - preserve approved quality attributes and accepted tradeoffs from the reviewed
@@ -92,7 +94,8 @@ Conditional:
 - architecture-review notes or findings when they constrain final wording,
   caveats, accepted risks, or decision rationale;
 - KB files needed for tone, glossary, policy, or domain constraints;
-- active client-profile files when `client_profile` is set.
+- active client-profile files when `client_profile` is set;
+- active Domain Knowledge Pack files when named by task artifacts.
 
 ## Outputs
 
@@ -134,6 +137,9 @@ Conditional:
   user understanding, implementation, review, or decision;
 - remove architecture rationale, accepted risks, quality-attribute caveats, or
   architectural assumptions that remain material to user understanding;
+- remove active Domain Knowledge Pack caveats, boundary limits, source
+  confidence limits, or stale-if notes that remain material to user
+  understanding;
 - remove actionability, audience fit, necessary detail, or format constraints
   to make the final artifact cleaner;
 - trade away approved correctness, precision, traceability, evidence support,

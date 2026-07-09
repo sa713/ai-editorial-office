@@ -233,6 +233,10 @@ or the task-local canonical owner named there.
   canon-update candidates, stale/conflicting knowledge, correction/retirement,
   and `/about` memory disposition. It is not a role, pipeline, lifecycle stage,
   review gate, automatic canon promotion, or mandatory artifact.
+- Domain Knowledge Packs are source-backed context packages for material
+  domain context. They are not roles, capabilities, pipelines, lifecycle
+  stages, review gates, policy owners, client profiles, task status models, or
+  mandatory ordinary task artifacts.
 - Shared lifecycle kernel owns common stages, gates, artifact responsibilities,
   expansion triggers, human approval boundary, and stage context contracts;
   pipelines are overlays.

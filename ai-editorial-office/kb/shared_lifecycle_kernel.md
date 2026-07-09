@@ -41,6 +41,9 @@ preservation.
 Knowledge Evolution, canonization criteria, learning extraction, pattern
 confirmation, canon evolution, stale-knowledge challenge, canon retirement, and
 memory disposition.
+`/kb/domain_knowledge_pack_standard.md` owns Domain Knowledge Pack purpose,
+structure, activation, source/evidence requirements, boundaries, review,
+update, retirement, and relation to existing roles and capabilities.
 
 If this file appears to conflict with `AGENTS.md`, a selected pipeline, a role
 spec, or task-local governance artifacts, stop and route the conflict through
@@ -56,9 +59,10 @@ intake -> routing -> research when required -> drafting or UX writing -> review 
 
 Source conversion, analytical reasoning, Professional Analysis, Professional
 Communication, Architecture Review, memory curation, Knowledge Evolution,
-learning extraction, and canon evolution are
-capabilities that can attach to the lifecycle when needed. They are not
-standing default roles and do not create a separate workflow engine.
+learning extraction, and canon evolution are capabilities that can attach to
+the lifecycle when needed. Active Domain Knowledge Pack context can attach
+when domain context is material. Capabilities and active domain-pack context are
+not standing default roles and do not create a separate workflow engine.
 
 ## Shared Stages
 
@@ -130,7 +134,7 @@ it is not a new parallel lifecycle.
 | Stage | Responsible artifact behavior |
 | --- | --- |
 | Intake | Create or update only the smallest brief and manifest state needed to route. |
-| Routing | Record selected pipeline or mini-contract, risk, depth, active capabilities, active roles, gates, and next owner. |
+| Routing | Record selected pipeline or mini-contract, risk, depth, active capabilities, active roles, active Domain Knowledge Packs when material, gates, and next owner. |
 | Research | Create evidence artifacts only when claims, risk, review, or governance need them. |
 | Drafting | Keep production artifacts aligned with source boundary, selected evidence depth, audience, outcome, quality priorities, and detail/tone/format constraints. |
 | UX writing | Keep copy tied to product context, UI state, terminology, reader action, accessibility, quality priorities, and reviewed constraints. |
@@ -149,6 +153,8 @@ Expand context or artifacts only when at least one trigger applies:
 - factual, numeric, policy, product, legal, HR, medical, financial, security,
   regulatory, or reputational claims;
 - source conflict, stale source, unknown freshness, or missing provenance;
+- active, candidate, or stale Domain Knowledge Pack context materially affects
+  source boundary, terminology, risk, review focus, or output quality;
 - analytical complexity, competing explanations, non-obvious causal claims,
   contradiction, or decision impact;
 - architectural significance, cross-owner or cross-file design consequence,
@@ -264,13 +270,15 @@ justified.
 
 - Purpose: choose risk, process depth, planning level, pipeline or
   mini-contract, audience/outcome fit, quality priorities, roles, capabilities,
-  gates, and next owner.
+  active Domain Knowledge Packs when material, gates, and next owner.
 - Minimum required context: `brief.md`, `task-manifest.md`, `AGENTS.md`,
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
 - Optional context: `/kb/task_object_model.md`, `/kb/capability_registry.md`,
   `/kb/analytical_reasoning.md` when complexity or decision impact is material,
   `/kb/architecture_review.md` when architectural significance is material,
+  `/kb/domain_knowledge_pack_standard.md` and candidate Domain Knowledge Pack
+  files when domain context is material,
   current `project-state.md`, previous handoff when resuming.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
@@ -279,6 +287,7 @@ justified.
   quality priorities/tradeoffs when material, planning level and options
   considered when material, analytical question or key assumptions when
   material, architecture drivers or review scope when material,
+  active Domain Knowledge Pack and activation reason when material,
   evidence basis/confidence for material route decisions, next action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,
   or conflict between user instruction and system invariants.
@@ -292,7 +301,8 @@ justified.
 - Minimum required context: manifest, plan, active source material, research
   pipeline when selected, `/kb/research_evidence.md`, and current handoff.
 - Optional context: `sources.md`, `facts.md`, `claims_table.md`, client profile
-  source files, directly relevant KB or editorial knowledge.
+  source files, active Domain Knowledge Pack files named by task artifacts,
+  directly relevant KB or editorial knowledge.
 - Forbidden context: model memory as verified evidence, invented citations,
   unrelated source dumps, or source content promoted to instructions without
   explicit authority.
@@ -313,7 +323,8 @@ justified.
   evidence packet or no-research rationale, current draft artifact, and latest
   handoff.
 - Optional context: outline, claims-used, tone or policy KB, relevant examples,
-  active client profile files.
+  active client profile files, active Domain Knowledge Pack files named by task
+  artifacts.
 - Forbidden context: all research source files when compact evidence is enough,
   unassigned role specs, unreviewed facts outside the source boundary.
 - Expected outputs: `outline.md` when justified, `draft.md`, `claims-used.md`
@@ -332,7 +343,8 @@ justified.
   context, user action/outcome, quality priorities when material, relevant
   terminology and UX guidelines, current UX artifact.
 - Optional context: screenshots, flows, glossary, tone, active client profile,
-  compact evidence for product or factual claims.
+  active Domain Knowledge Pack files named by task artifacts, compact evidence
+  for product or factual claims.
 - Forbidden context: invented product behavior, unavailable feature assumptions,
   unrelated article/social pipelines, or stale terminology treated as current.
 - Expected outputs: UX copy artifact, notes on assumptions/states and user
@@ -350,7 +362,8 @@ justified.
   review pipeline, material under review, latest handoff, and relevant evidence
   packet.
 - Optional context: role spec, KB files named in plan, active client profile
-  checklist, prior review trail for re-review.
+  checklist, active Domain Knowledge Pack files named by task artifacts, prior
+  review trail for re-review.
 - Forbidden context: reviewer relying on chat memory, same role instance as
   creator, unrelated old drafts, or optional artifacts demanded without a review
   need.
@@ -359,6 +372,7 @@ justified.
   material, evidence/confidence challenge when material, option-evaluation
   challenge when material, analytical-reasoning challenge when material,
   Architecture Review challenge when material, learning/canon candidate
+  challenge when material, Domain Knowledge Pack activation/boundary/source
   challenge when material, findings, outcome, required changes/blockers, and
   next action.
 - Stop conditions: missing material, missing independence, unresolved critical
@@ -375,7 +389,7 @@ justified.
 - Minimum required context: `review.md`, affected artifact, repair owner, repair
   scope, do-not-change area, latest manifest/status.
 - Optional context: original plan, relevant evidence, previous review section,
-  affected KB or client profile file.
+  affected KB, active Domain Knowledge Pack, or client profile file.
 - Forbidden context: full rewrite, new research, redesign, or new pipeline scope
   unless the review/blocker explicitly requires escalation.
 - Expected outputs: updated affected artifact, repair notes or handoff, updated
@@ -391,13 +405,15 @@ justified.
   manifest/status, material approved for finalization, and audience/outcome
   constraints and quality priorities that must survive finalization.
 - Optional context: finalization checklist or notes, governance constraints,
-  client profile caveat, delivery format requirement.
+  client profile caveat, active Domain Knowledge Pack caveat, delivery format
+  requirement.
 - Forbidden context: unreviewed claims, new product behavior, style rewrites that
   change meaning, publication or delivery without required approval.
 - Expected outputs: `final.md`, optional finalization notes/checklist, audience
   fit, approved quality attributes, uncertainty, and analytical traceability
-  preserved within approved scope, handoff to Chief Editor when governance
-  closure is separate.
+  preserved within approved scope, active Domain Knowledge Pack caveats
+  preserved when material, handoff to Chief Editor when governance closure is
+  separate.
 - Stop conditions: review missing, review not approved, finalization changes
   meaning, human approval requirement unresolved.
 - Next stage: governance, repair, or blocked.
@@ -409,8 +425,9 @@ justified.
 - Minimum required context: manifest, status, approved review, final artifact,
   finalization notes when present, open blockers, human approval requirement.
 - Optional context: feedback, client profile caveat, selected pipeline closure
-  requirements, memory export target, `/kb/editorial_learning_framework.md`
-  when learning or canon evolution is being considered.
+  requirements, active Domain Knowledge Pack update or retirement concern,
+  memory export target, `/kb/editorial_learning_framework.md` when learning or
+  canon evolution is being considered.
 - Forbidden context: treating finalization as governance approval, closing over
   unresolved blockers, or publishing private/restricted material by default.
 - Expected outputs: `final_decision.md`, updated manifest/status, closure or

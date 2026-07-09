@@ -13,6 +13,7 @@ Canonical source files:
 - `ai-editorial-office/kb/professional_communication.md`
 - `ai-editorial-office/kb/engineering_review.md`
 - `ai-editorial-office/kb/editorial_learning_framework.md`
+- `ai-editorial-office/kb/domain_knowledge_pack_standard.md`
 
 This file is a memory aid, not a canonical policy. If it conflicts with
 `AGENTS.md`, task instructions, selected pipelines, role specs, or source KB
@@ -197,6 +198,23 @@ stage, review gate, automatic canon promotion, or mandatory artifact.
 Promotion beyond task-local notes needs a source-evidence chain, scope, owner,
 disposition, and review path. `/about` is only a synchronized memory export,
 not canon.
+
+## Domain Knowledge Packs
+
+Domain Knowledge Packs are source-backed, bounded, maintained context packages
+for a named domain. They help roles use domain terminology, evidence
+expectations, risks, review questions, and stale/update rules without turning
+domain expertise into loose facts or hidden policy.
+
+They do not create roles, capabilities, pipelines, lifecycle stages, review
+gates, policy owners, client profiles, task status models, mandatory ordinary
+task artifacts, or automatic canon-promotion paths.
+
+Activate a pack only when domain context materially changes evidence depth,
+terminology, risk handling, review focus, or output quality. Record the active
+pack, activation reason, relevant sources/sections, confidence limits,
+boundary limits, stale-if triggers, and stop conditions in existing task
+artifacts. Review active pack use inside the existing review gate.
 
 ## UX Writing Standards
 
