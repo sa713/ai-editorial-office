@@ -24,8 +24,9 @@ Professional Communication guidance is owned by
 Architecture Review moves are owned by `/kb/architecture_review.md`.
 Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
-`/kb/editorial_quality_attributes.md`. Learning extraction and canon evolution
-are owned by `/kb/editorial_learning_framework.md`.
+`/kb/editorial_quality_attributes.md`. Knowledge Evolution, learning
+extraction, and canon evolution are owned by
+`/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -49,8 +50,9 @@ are owned by `/kb/editorial_learning_framework.md`.
 - preserve approved architecture rationale, quality-attribute caveats,
   accepted-risk notes, and architectural assumptions when they are material to
   the final deliverable;
-- preserve reviewed reusable-learning cues, canon-update candidates, or stale
-  assumptions for Chief Editor handoff when they are material;
+- preserve reviewed reusable-learning cues, canon-update candidates,
+  stale-knowledge concerns, correction/retirement cues, or memory disposition
+  notes for Chief Editor handoff when they are material;
 - detect premature finalization, caveat loss, confidence inflation, and
   unreviewed meaning changes before creating or updating final output;
 - keep unresolved risks visible when they remain relevant;

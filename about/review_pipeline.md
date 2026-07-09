@@ -73,10 +73,12 @@ When reviewed work depends on selected quality priorities or visible tradeoffs,
 review applies `/kb/editorial_quality_attributes.md` to challenge whether the
 artifact optimized for the right qualities and preserved them through handoff.
 
-When reviewed work proposes reusable learning, canon updates, pattern reuse, or
-stale-canon findings, review applies `/kb/editorial_learning_framework.md` to
-check evidence, owner, scope, duplication, privacy, and whether the item should
-remain task-local.
+When reviewed work proposes reusable learning, Knowledge Evolution disposition,
+canon updates, pattern reuse, stale/conflicting knowledge findings,
+correction/retirement, or `/about` sync, review applies
+`/kb/editorial_learning_framework.md` to check evidence chain, owner, scope,
+duplication, privacy, maintenance cost, and whether the item should remain
+task-local.
 
 When a task was governed by a Problem Hypothesis and/or Editorial Decision
 Frame, review also includes an assumptions-based Editorial Challenge Lens inside
@@ -342,8 +344,9 @@ Compact review minimum:
   alignment;
 - compact quality-attribute check when reviewed work depends on selected
   quality priorities or accepted tradeoffs;
-- compact learning/canon check when reviewed work proposes reusable learning,
-  canon updates, pattern reuse, or stale-canon findings;
+- compact Knowledge Evolution check when reviewed work proposes reusable
+  learning, canon updates, pattern reuse, stale/conflicting knowledge,
+  correction/retirement, or memory disposition;
 - usefulness/pass rationale or blocking issues;
 - governance note when relevant;
 - one next action.
@@ -402,6 +405,7 @@ Quality gates are mandatory and artifact-backed.
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
+| Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, and memory-disposition claims are evidenced, scoped, owned, non-duplicative, and reviewable when material | task-local note promoted without evidence, no owner, duplicate rule, privacy risk, `/about` treated as canon, or stale guidance handled by silent deletion |
 | Outcome gate | Outcome is exactly `approved`, `changes_requested`, or `blocked` | ambiguous verdict |
 | Finalization gate | Finalization allowed only after review outcome `approved` | missing review, blocked review, changes requested |
 

@@ -157,17 +157,18 @@ Completed releases:
 - Analytical Reasoning - Complete
 - Architecture Review - Complete
 - Engineering Review - Complete
+- Professional Communication - Complete
 
 Current state:
 
-Engineering Review is complete. Professional Analysis and Professional
-Communication are implemented as release candidates ready for Project Lead
-architectural review. Both preserve the architecture and add no new roles,
-pipelines, lifecycle stages, governance layers, or mandatory artifact sets.
+Professional Analysis and Knowledge Evolution are implemented as release
+candidates ready for Project Lead architectural review. They preserve the
+architecture and add no new roles, pipelines, lifecycle stages, governance
+layers, or mandatory artifact sets.
 
-Next planned release:
+Next planned release after open Stage 3 release candidates are accepted:
 
-Knowledge Evolution
+Domain Knowledge Pack Standard
 
 Why this stage matters:
 

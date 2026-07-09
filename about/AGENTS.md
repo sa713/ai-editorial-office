@@ -53,7 +53,7 @@
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
 | Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
 | Editorial quality attributes and tradeoffs | `/kb/editorial_quality_attributes.md` | task-specific quality priorities, accepted tradeoffs, and preservation risks |
-| Editorial learning and canon evolution | `/kb/editorial_learning_framework.md` | task-specific learning candidates, canon update candidates, reusable patterns, and stale-canon notes |
+| Editorial learning and Knowledge Evolution | `/kb/editorial_learning_framework.md` | task-specific learning candidates, canon update candidates, reusable patterns, stale-knowledge notes, and memory disposition |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
 | Role behavior and decision boundaries | `/agents/*.md` | role-specific instructions, not lifecycle copies |
 | Artifact fields and fillable shapes | `/templates/artifacts/*.md` | placeholders and concise usage guardrails |
@@ -135,15 +135,17 @@ existing markdown system should be understood and extended.
   quality tradeoffs, task-specific quality priorities, lifecycle preservation,
   and Codex implementation-task quality.
 - `/kb/editorial_learning_framework.md` defines reusable learning types,
-  canonization criteria, learning extraction, canon evolution rules, stale-canon
-  challenge, and canon retirement.
+  Knowledge Evolution, canonization criteria, learning extraction, pattern
+  confirmation, canon evolution rules, stale-knowledge challenge, canon
+  correction/retirement, and memory disposition.
 
 Do not create a new role merely because a capability is named. Analytical
 reasoning, Professional Analysis, Professional Communication, Architecture
 Review, source conversion, integrity checking, context assembly, Engineering
-Review, learning extraction, canon evolution, stale canon detection, and memory
-export remain capabilities, checks, scripts, or task-local mini-contracts
-unless a separate reviewed system update explicitly changes the role set.
+Review, learning extraction, Knowledge Evolution, canon evolution, stale
+knowledge detection, and memory export remain capabilities, checks, scripts, or
+task-local mini-contracts unless a separate reviewed system update explicitly
+changes the role set.
 
 ## Главные инварианты
 
@@ -658,9 +660,10 @@ Feedback does not write automatically to `engineering_watchlist.md`, backlog,
 or production rules. A watchlist or backlog entry requires an explicit Chief
 Editor decision.
 
-Reusable learning, canon updates, pattern promotion, and stale-canon challenges
-follow `/kb/editorial_learning_framework.md`. Feedback or task-local notes may
-produce candidates, but they do not become canon automatically.
+Reusable learning, Knowledge Evolution disposition, canon updates, pattern
+promotion, stale-knowledge challenges, and canon retirement follow
+`/kb/editorial_learning_framework.md`. Feedback or task-local notes may produce
+candidates, but they do not become canon automatically.
 
 ## Risk Modes
 

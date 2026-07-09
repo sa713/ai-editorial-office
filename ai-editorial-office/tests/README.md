@@ -51,6 +51,9 @@ markdown smoke-tests и synthetic examples:
 - `professional_communication_smoke_test.md` - manual synthetic cases for
   Professional Communication activation and non-activation; it is not
   production governance.
+- `knowledge_evolution_smoke_test.md` - manual synthetic cases for Knowledge
+  Evolution disposition, stale-knowledge challenge, canon-update candidates,
+  and `/about` memory sync; it is not production governance.
 - `end_to_end_cases/access_pass_security_task/` - sanitized end-to-end case for
   an internal access-pass security task; it is not task materials and contains
   no real credentials, real cards, real system details, or exploit instructions.
@@ -178,6 +181,13 @@ Audience & Outcome Alignment ownership, UX copy ownership, Architecture
 Review, Engineering Review, or Professional Analysis ownership. It does not
 define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
 Professional Communication KB.
+
+`knowledge_evolution_smoke_test.md` records synthetic disposition cases for
+`/kb/editorial_learning_framework.md`. It checks that reusable learning,
+pattern candidates, canon-update candidates, stale/conflicting knowledge,
+correction or retirement candidates, and `/about` sync are scoped through the
+existing owner and review path. It does not define active rules or replace
+Chief Editor, Review Agent, `AGENTS.md`, or the Editorial Learning Framework.
 
 `end_to_end_cases/access_pass_security_task/` records a synthetic sanitized
 end-to-end editorial case. It checks Preflight Gate `constrain`, compact

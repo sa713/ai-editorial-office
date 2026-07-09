@@ -65,10 +65,12 @@ Canonical KB ownership:
   quality tradeoffs, task-specific quality priorities, evaluation guidance, and
   lifecycle quality preservation. It does not create a scoring framework,
   mandatory checklist, new role, workflow, or review process.
-- `editorial_learning_framework.md` owns reusable learning, canonization
-  criteria, learning extraction, canon evolution, stale-canon challenge, and
-  canon retirement. It does not create a memory database, Historian role,
-  automatic documentation process, or mandatory retrospective.
+- `editorial_learning_framework.md` owns reusable learning, Knowledge
+  Evolution, canonization criteria, learning extraction, pattern confirmation,
+  canon evolution, stale-knowledge challenge, canon correction/retirement, and
+  memory disposition. It does not create a memory database, Historian role,
+  Knowledge Curator role, automatic documentation process, or mandatory
+  retrospective.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

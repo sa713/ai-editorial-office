@@ -164,6 +164,15 @@ technical explanation, implementation handoff, policy/stakeholder memo,
 research/evidence communication, dense source compression, actionability, or
 caveat-preserving communication is material.
 
+Knowledge Evolution may be used inside the same governance and review flow
+when completed work produces reusable learning, pattern candidates,
+canon-update candidates, stale/conflicting knowledge, correction or retirement
+needs, or `/about` memory-sync implications. It is owned by the Editorial
+Learning Framework and does not add a role, pipeline, lifecycle stage, review
+gate, automatic canon promotion, or mandatory artifact. Keep task-local notes
+local unless source evidence, scope, owner, disposition, and review path justify
+promotion.
+
 ## Research Rules
 
 Use research when the task needs factual claims, dates, names, numbers, quotes,

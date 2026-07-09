@@ -12,6 +12,7 @@ Canonical source files:
 - `ai-editorial-office/kb/professional_analysis.md`
 - `ai-editorial-office/kb/professional_communication.md`
 - `ai-editorial-office/kb/engineering_review.md`
+- `ai-editorial-office/kb/editorial_learning_framework.md`
 
 This file is a memory aid, not a canonical policy. If it conflicts with
 `AGENTS.md`, task instructions, selected pipelines, role specs, or source KB
@@ -181,6 +182,21 @@ Audience & Outcome Alignment owns who the artifact is for and what outcome it
 must enable. Professional Analysis owns analytical judgment and recommendation
 basis. Professional Communication owns how the approved meaning, evidence,
 caveats, uncertainty, recommendation, and next action transfer to the reader.
+
+## Knowledge Evolution
+
+Knowledge Evolution is the bounded capability inside the Editorial Learning
+Framework for deciding what happens to reusable learning after work completes.
+
+It covers task-local learning notes, learning candidates, pattern candidates,
+canon-update candidates, stale/conflicting knowledge challenges,
+correction/retirement candidates, and `/about` memory disposition. It does not
+create a Knowledge Curator, Canon Manager, Historian, new pipeline, lifecycle
+stage, review gate, automatic canon promotion, or mandatory artifact.
+
+Promotion beyond task-local notes needs a source-evidence chain, scope, owner,
+disposition, and review path. `/about` is only a synchronized memory export,
+not canon.
 
 ## UX Writing Standards
 

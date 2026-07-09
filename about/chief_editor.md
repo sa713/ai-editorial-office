@@ -21,8 +21,9 @@ by `/kb/analytical_reasoning.md`. Professional Analysis guidance is owned by
 `/kb/professional_analysis.md`. Professional Communication guidance is owned
 by `/kb/professional_communication.md`. Architecture Review guidance is owned
 by `/kb/architecture_review.md`. Engineering Review guidance is owned by
-`/kb/engineering_review.md`. Learning extraction and canon evolution are owned
-by `/kb/editorial_learning_framework.md`.
+`/kb/engineering_review.md`. Knowledge Evolution, learning extraction, canon
+evolution, stale-knowledge challenge, and memory disposition are owned by
+`/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -84,8 +85,10 @@ by `/kb/editorial_learning_framework.md`.
   `confirmed_pattern`, or `system_change_candidate`;
 - route feedback only after classification: task-local action, preference note,
   proposed engineering watchlist signal, or backlog/system-change candidate.
-- classify reusable learning, canon-update candidates, stale assumptions, and
-  pattern-promotion signals only through `/kb/editorial_learning_framework.md`.
+- classify reusable learning, Knowledge Evolution disposition,
+  canon-update candidates, stale assumptions, correction/retirement needs,
+  memory sync needs, and pattern-promotion signals only through
+  `/kb/editorial_learning_framework.md`.
 
 ## Inputs
 
@@ -215,7 +218,7 @@ scripts, tests, validators, dependencies, configuration, automation,
 interfaces, runtime assumptions, observability, reliability, data,
 performance, or security-sensitive behavior. Name only the Engineering Review
 lenses that matter for the slice.
-When Codex implementation reveals reusable learning, stale canon, or a
+When Codex implementation reveals reusable learning, stale knowledge, or a
 canon-update candidate, Chief Editor should keep the note compact and apply
 `/kb/editorial_learning_framework.md` before any promotion beyond task-local
 records.
@@ -352,8 +355,8 @@ The Chief Editor may decide:
   preference note, watchlist proposal, backlog candidate, new task, or allowed
   bounded revision.
 - whether reusable learning stays task-local, becomes a pattern candidate,
-  needs a canon update, or should be rejected as one-off, duplicate, stale, or
-  unverified.
+  needs a canon update, needs correction/retirement, requires memory sync, or
+  should be rejected or deferred as one-off, duplicate, stale, or unverified.
 
 The Chief Editor must not decide:
 
@@ -442,6 +445,7 @@ Do not repeat the full Editorial Decision Frame. It should not use
   review inputs without replacing independent review;
 - customer feedback classification preserves optional `feedback.md`, avoids new
   roles, and never converts one reaction into a system change;
-- reusable learning and canon-update candidates meet evidence, scope, owner,
-  duplication, privacy, and maintenance checks before promotion;
+- reusable learning and canon-update candidates meet evidence-chain, scope,
+  owner, duplication, privacy, maintenance, and disposition checks before
+  promotion;
 - no legacy heavy folder structure is treated as a required template.

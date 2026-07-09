@@ -21,8 +21,8 @@ Analytical reasoning moves are owned by `/kb/analytical_reasoning.md`.
 Professional Communication guidance is owned by
 `/kb/professional_communication.md`.
 Architecture Review moves are owned by `/kb/architecture_review.md`.
-Reusable learning and canon evolution are owned by
-`/kb/editorial_learning_framework.md`.
+Reusable learning, Knowledge Evolution, stale-knowledge challenge, and canon
+evolution are owned by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -51,7 +51,7 @@ Reusable learning and canon evolution are owned by
   architectural assumptions, tradeoffs, and architecture risks when assigned
   research supports Architecture Review;
 - distinguish task-local findings from durable evidence/context patterns that
-  may deserve later learning extraction;
+  may deserve later Knowledge Evolution disposition;
 - flag source freshness, provenance, or evidence-pattern signals when they may
   reduce risk in future similar tasks;
 - assess source reliability, freshness, and confidence level;

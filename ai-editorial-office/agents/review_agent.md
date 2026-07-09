@@ -23,8 +23,9 @@ Failure-mode challenge and recovery patterns are owned by
 `/kb/architecture_review.md`. Engineering Review moves are owned by
 `/kb/engineering_review.md`. Audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are
-owned by `/kb/editorial_quality_attributes.md`. Learning extraction and canon
-evolution are owned by `/kb/editorial_learning_framework.md`.
+owned by `/kb/editorial_quality_attributes.md`. Knowledge Evolution, learning
+extraction, canon evolution, stale-knowledge challenge, and memory disposition
+are owned by `/kb/editorial_learning_framework.md`.
 
 ## Primary Responsibilities
 
@@ -66,9 +67,11 @@ evolution are owned by `/kb/editorial_learning_framework.md`.
   whether accepted tradeoffs are visible and safe;
 - detect weak challenge, review-gate bypass, over-polishing, under-execution,
   implementation-task dilution, and failure to recover after weak stage output;
-- challenge reusable learning, canon-update, pattern-reuse, and stale-canon
-  claims when they appear in reviewed work;
-- detect unvalidated canonization and stale canon persistence in system updates;
+- challenge reusable learning, Knowledge Evolution disposition, canon-update,
+  pattern-reuse, stale/conflicting knowledge, correction/retirement, and memory
+  sync claims when they appear in reviewed work;
+- detect unvalidated canonization and stale-knowledge persistence in system
+  updates;
 - detect unsupported claims, hallucination risk, contradictions, tone or glossary
   violations, structural problems, and reader-outcome failures;
 - when reviewing feedback-loop or system-process updates, verify that feedback
@@ -120,7 +123,8 @@ Conditional:
   observability, reliability, data, performance, or secure delivery risk
   affects review;
 - `/kb/editorial_learning_framework.md` when reviewed work proposes reusable
-  learning, canon evolution, pattern reuse, or stale-canon findings;
+  learning, Knowledge Evolution disposition, canon evolution, pattern reuse,
+  stale/conflicting knowledge, correction/retirement, or memory sync;
 - active client-profile files and review checklist when `client_profile` is set;
 - current active version pointer when multiple versions exist.
 
@@ -193,7 +197,7 @@ artifacts must never become silently mandatory.
   relevant lenses, validation evidence, or residual engineering risk are
   missing or materially unsupported;
 - approve canon evolution based on a single unverified task note, raw feedback,
-  duplicate owner, or `/about` mirror;
+  duplicate owner, missing source-evidence chain, or `/about` mirror;
 - approve a non-trivial recommendation or implementation plan when credible
   alternatives were ignored or rejected as strawmen;
 - choose a new active editorial route, replace Chief Editor's route, or treat
@@ -337,9 +341,10 @@ short examples needed to clarify a finding.
   traceability, evidence support, audience fit, structural coherence,
   maintainability, implementation readiness, and reviewability are sufficient
   for the task;
-- learning/canon claims are challenged when material: verify learning type,
-  evidence, owner, scope, duplication, privacy, task-local alternative, and stale
-  canon handling before approval;
+- Knowledge Evolution claims are challenged when material: verify learning
+  type, source-evidence chain, disposition, owner, scope, duplication, privacy,
+  task-local alternative, stale-knowledge handling, and correction/retirement
+  path before approval;
 - Editorial Decision Frame quality is checked when applicable: chosen route
   fits the brief, evidence, risks, and source boundary; rejected alternatives
   have real reasons; Writer Agent or UX Writer followed the route; rejected

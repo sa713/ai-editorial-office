@@ -38,6 +38,10 @@ Professional Capability Model.
   recommendation presentation, explanation fit, technical communication,
   information density, actionability, reader-path, and caveat-preserving
   communication transfer guidance.
+- Knowledge Evolution release candidate with deliberate learning disposition,
+  source-evidence chains, pattern confirmation, stale/conflicting knowledge
+  challenge, canon correction/retirement, and `/about` memory disposition
+  guidance.
 
 ## Current core roles
 - chief_editor
@@ -73,12 +77,12 @@ Use the stable architecture to add professional competencies without creating
 new roles, pipelines, lifecycle stages, governance layers, or mandatory
 artifact sets.
 
-Engineering Review is complete. Professional Analysis and Professional
-Communication are implemented as release candidates and are ready for Project
-Lead architectural review.
+Engineering Review and Professional Communication are complete. Professional
+Analysis and Knowledge Evolution are implemented as release candidates and are
+ready for Project Lead architectural review.
 
-The next planned release after release-candidate acceptance is Knowledge
-Evolution.
+The next planned release after open Stage 3 release candidates are accepted is
+Domain Knowledge Pack Standard.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -117,10 +121,10 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 Follow the active roadmap stage:
 
 - Stage: Professional Capability Model.
-- Last completed release: Engineering Review.
-- Current release candidates: Professional Analysis and Professional
-  Communication.
-- Next planned release after acceptance: Knowledge Evolution.
+- Last completed release: Professional Communication.
+- Current release candidates: Professional Analysis and Knowledge Evolution.
+- Next planned release after open Stage 3 release candidates are accepted:
+  Domain Knowledge Pack Standard.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -171,8 +175,9 @@ solely because `ROADMAP.md` changed.
   attributes, accepted tradeoffs, and quality-preservation risks according to
   `/kb/editorial_quality_attributes.md` without creating scoring, checklists,
   or a separate review process.
-- Learning and canon evolution are deliberate: reusable learning, canon update
-  candidates, stale assumptions, and pattern promotion follow
+- Learning and Knowledge Evolution are deliberate: reusable learning, pattern
+  candidates, canon-update candidates, stale/conflicting knowledge,
+  correction/retirement, and `/about` memory disposition follow
   `/kb/editorial_learning_framework.md`; task-local notes do not become canon
   automatically.
 - Engineering Review is a shared capability for implementation/change safety,
@@ -227,7 +232,7 @@ solely because `ROADMAP.md` changed.
 - For quality-sensitive tasks, read `/kb/editorial_quality_attributes.md`
   before choosing quality priorities, accepting tradeoffs, or reviewing whether
   the artifact optimized for the right qualities.
-- For post-task learning, repeated findings, canon updates, or stale-canon
+- For post-task learning, repeated findings, canon updates, or stale-knowledge
   concerns, read `/kb/editorial_learning_framework.md` before promoting any
   task-local note into reusable canon.
 

@@ -31,7 +31,8 @@ planning levels, option evaluation, and recommendation formation live in
 reader fit, and usefulness criteria live in
 `/kb/audience_outcome_alignment.md`; quality attributes, quality tradeoffs, and
 quality preservation guidance live in `/kb/editorial_quality_attributes.md`;
-learning extraction and canon evolution live in
+learning extraction, Knowledge Evolution, canon evolution, stale-knowledge
+challenge, canon retirement, and memory disposition live in
 `/kb/editorial_learning_framework.md`;
 runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
 selected pipeline, role specs, and task-local artifacts.
@@ -118,12 +119,12 @@ file.
 | `finalization_mode` | No finalization yet, controlled finalization required, compact finalization, or final artifact already reviewed. | `orchestration_plan.md`, `review.md`, `final_decision.md` |
 | `human_approval_requirement` | Whether a human decision is required before continuation, publication, delivery, or closure. | `orchestration_plan.md`, `status.md`, `final_decision.md` |
 | `next_action` | Smallest safe next action and owner. | `task-manifest.md`, handoff, `status.md` |
-| `learning_candidates` | Potential reusable learning discovered during task execution, review, feedback, or governance. Optional and task-local until validated. | `review.md`, `feedback.md`, `final_decision.md`, implementation report |
+| `learning_candidates` | Potential reusable learning discovered during task execution, review, feedback, release work, repository inspection, or governance. Optional and task-local until validated. | `review.md`, `feedback.md`, `final_decision.md`, implementation report |
 | `canon_updates_needed` | Candidate canonical changes that require a separate reviewed update or direct owner-file patch. Optional. | `final_decision.md`, `feedback.md`, system task notes |
 | `reusable_patterns` | Validated or candidate patterns that may help future similar tasks. Optional. | `feedback.md`, `kb/feedback_patterns.md`, system update artifacts |
-| `deprecated_assumptions` | Assumptions, paths, source statuses, or patterns found stale or unsafe. Optional. | `status.md`, `review.md`, `final_decision.md` |
-| `post_task_learning` | Compact closure note deciding whether learning stays task-local, becomes feedback/pattern, or needs canon update. Optional. | `final_decision.md`, `feedback.md` |
-| `memory_disposition` | Whether task learning stays local, becomes feedback, becomes a pattern, or needs a separate system update. | `feedback.md`, `final_decision.md`, `kb/feedback_patterns.md` |
+| `deprecated_assumptions` | Assumptions, paths, source statuses, patterns, or guidance found stale, superseded, retired, or unsafe. Optional. | `status.md`, `review.md`, `final_decision.md` |
+| `post_task_learning` | Compact Knowledge Evolution closure note deciding whether learning stays task-local, becomes feedback/pattern, needs canon update, is stale/conflicting, or is rejected/deferred. Optional. | `final_decision.md`, `feedback.md` |
+| `memory_disposition` | Whether task learning stays local, becomes feedback, becomes a pattern, needs `/about` sync, or needs a separate system update. | `feedback.md`, `final_decision.md`, `kb/feedback_patterns.md` |
 
 ## Artifact Views Over The Task Object
 
@@ -189,9 +190,9 @@ owned by `/kb/professional_communication.md`; Architecture Review moves are owne
 by `/kb/architecture_review.md`; Engineering Review moves are owned by
 `/kb/engineering_review.md`; audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`; quality attributes and tradeoffs are owned
-by `/kb/editorial_quality_attributes.md`; learning and canon evolution are
-owned by `/kb/editorial_learning_framework.md`; this file maps those gates to
-task-object fields and artifact views.
+by `/kb/editorial_quality_attributes.md`; Knowledge Evolution, learning, and
+canon evolution are owned by `/kb/editorial_learning_framework.md`; this file
+maps those gates to task-object fields and artifact views.
 
 | Gate | Question | Default evidence |
 | --- | --- | --- |

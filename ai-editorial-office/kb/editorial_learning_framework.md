@@ -1,8 +1,8 @@
-# Editorial Learning & Canon Evolution Framework
+# Editorial Learning & Knowledge Evolution Framework
 
 This file is the canonical owner for reusable learning, canonization criteria,
-learning extraction, canon evolution, stale-canon challenge, and canon
-retirement in AI Editorial Office.
+learning extraction, Knowledge Evolution, canon evolution, stale-knowledge
+challenge, and canon retirement in AI Editorial Office.
 
 It makes the system stronger after completed work without creating uncontrolled
 memory sprawl. It is not a memory database, retrospective ritual, new role,
@@ -12,7 +12,8 @@ workflow engine, review gate, or automatic documentation generator.
 
 Editorial work can produce knowledge that should help future tasks. Most task
 details should remain task-local. This framework decides what is worth keeping,
-where it belongs, and how it enters canon safely.
+where it belongs, whether it has become a reusable pattern, how stale guidance
+is challenged, and how canon is updated or retired safely.
 
 Good learning answers:
 
@@ -26,6 +27,80 @@ Good learning answers:
 Learning is extracted after work is grounded in artifacts, review, feedback,
 or repeated evidence. It is not inferred from model memory or one attractive
 example.
+
+## Knowledge Evolution Capability
+
+Knowledge Evolution is the bounded capability for moving saved experience
+through deliberate knowledge states:
+
+```text
+task-local observation
+->
+learning candidate
+->
+pattern candidate
+->
+canon-update candidate
+->
+reviewed owner update, deferral, rejection, correction, or retirement
+```
+
+It strengthens the existing Learning Framework. It does not create a separate
+knowledge base, separate canon owner, new lifecycle stage, new role, mandatory
+artifact, or automatic promotion path.
+
+Use Knowledge Evolution when work produces a material signal such as:
+
+- a completed task or release exposes reusable learning;
+- multiple tasks show the same pattern, failure, exception, or safeguard;
+- review identifies a repeated or high-risk finding;
+- repository state contradicts current guidance;
+- a canonical owner is duplicated, stale, missing, or ambiguous;
+- source freshness, provenance, or client-profile status affects future work;
+- `/about` needs synchronization after canonical changes;
+- outdated guidance should be corrected, deprecated, superseded, or retired.
+
+The default result is no canon change. A useful task-local note remains useful
+even when it never becomes canon.
+
+## Knowledge Disposition States
+
+When learning disposition is material, classify it with the smallest useful
+state:
+
+| State | Meaning | Default location |
+| --- | --- | --- |
+| `task_local` | Useful only for the current task, artifact, or user exchange. | Current task artifact, `feedback.md`, `final_decision.md`, or `status.md` |
+| `learning_candidate` | May be reusable, but evidence or scope is not yet strong enough. | Review, final decision, feedback, implementation report, or release report |
+| `pattern_candidate` | Repeated or high-likelihood signal worth watching across tasks. | `kb/feedback_patterns.md`, release report, or task-local note |
+| `canon_update_candidate` | A clear owner file may need a reviewed change. | System update task, release report, or final decision |
+| `accepted_canon` | Reviewed owner-file change has been made and validated. | Canonical owner file |
+| `superseded` | Old guidance is replaced by newer guidance and should point to it when future readers may encounter the old path. | Canonical owner or task-local version pointer |
+| `retired` | Guidance should no longer be used and no replacement is needed or available. | Canonical owner, final decision, or release report |
+| `rejected` | Candidate failed evidence, owner, scope, privacy, duplication, or maintenance checks. | Existing task/review/release artifact |
+| `deferred` | Candidate may matter later, but current evidence or release scope is insufficient. | Existing task/review/release artifact |
+
+These states are labels for decision clarity, not operational task statuses.
+They do not change `/kb/task_statuses.md`.
+
+## Source-Evidence Chain
+
+Reusable learning should remain traceable to saved evidence. Before promotion,
+identify:
+
+- source signal: task, release, feedback pattern, review finding, repository
+  inspection, source-freshness issue, validation result, or governance decision;
+- evidence pointer: file path, section, review finding, commit, validation
+  output, or source link;
+- learning claim: what future work should know or do differently;
+- scope: where it applies and where it does not;
+- owner: existing canonical owner or reason no owner exists;
+- disposition: keep local, watch, update canon, correct, retire, reject, or
+  defer;
+- review path: where independent review or governance approval happens.
+
+If the source-evidence chain cannot be reconstructed, the learning must remain
+task-local or be rejected until evidence is available.
 
 ## What Counts As Reusable Learning
 
@@ -46,6 +121,22 @@ future agents from rediscovering the same pattern.
 | Review finding | A repeated or high-risk review finding should become a prevention rule or review focus. |
 | Prompt/process improvement | A Codex or role instruction improves execution enough to reuse, without becoming process noise. |
 | Canon correction | Existing canon is wrong, duplicated, stale, ambiguous, or missing an owner. |
+
+## From Observation To Pattern
+
+Temporary observations become reusable patterns only after one of these
+thresholds is met:
+
+- repeated signal across tasks, reviews, feedback, releases, or validations;
+- one high-impact finding that would materially reduce future risk;
+- clear repository-state evidence that makes old guidance unsafe;
+- clear source/provenance evidence that changes future confidence;
+- Project Lead or Chief Editor decision that a pattern should be watched or
+  promoted through reviewed owner update.
+
+Pattern candidates should name applicability boundaries. Do not generalize from
+one task unless the future risk or value is strong enough to justify a reviewed
+exception.
 
 ## What Should Not Be Canonized
 
@@ -119,6 +210,8 @@ Before learning changes canon, check:
 
 - source: which artifact, review, feedback pattern, commit, or repository
   inspection supports it;
+- evidence chain: whether future reviewers can trace the learning back to the
+  saved source signal;
 - scope: where the learning applies and where it does not;
 - owner: which canonical file should own the rule;
 - duplication: whether the rule already exists elsewhere;
@@ -157,6 +250,13 @@ Canon changes should be deliberate, small, and owned.
 - Replace outdated guidance with the current owner or stop condition.
 - Do not delete historical artifacts merely to clean the narrative.
 - Preserve enough context for future agents to understand why the rule changed.
+- Prefer `superseded` when newer guidance replaces old guidance.
+- Prefer `retired` when the guidance should no longer be used and no replacement
+  is needed.
+- Prefer `correction` when the guidance remains valid but factual, path,
+  source, owner, or scope details were wrong.
+- Prefer `deferred` when the concern is plausible but not yet evidenced enough
+  for canon change.
 
 ### Avoiding Duplication
 
@@ -174,9 +274,9 @@ Canon changes should be deliberate, small, and owned.
 - Repeated feedback patterns belong in `/kb/feedback_patterns.md`.
 - Public memory export belongs in `/about`; `/about` is not canon.
 
-## Stale Canon Challenge
+## Stale Or Conflicting Knowledge Challenge
 
-Challenge stale canon when:
+Challenge stale or conflicting knowledge when:
 
 - a rule conflicts with current repository state;
 - a client/project source is stale, missing, or contradicted;
@@ -184,11 +284,45 @@ Challenge stale canon when:
 - a canonical owner duplicates another owner;
 - a path, template, role, or lifecycle assumption no longer matches the active
   system;
-- a task repeatedly needs an exception to succeed.
+- a task repeatedly needs an exception to succeed;
+- `/about` diverges from canonical files or compact summaries;
+- a rule depends on words such as `new`, `latest`, `current`, or `temporary`
+  without a date, version, or current-version pointer;
+- source links, file paths, role names, statuses, or validation commands no
+  longer resolve.
 
 The recovery is not immediate deletion. Record the concern, identify the owner,
 verify evidence, and update, deprecate, or retire through a reviewed change when
 the evidence is sufficient.
+
+### Triage Outcomes
+
+| Outcome | Use when |
+| --- | --- |
+| `no_change` | Concern was checked and current canon still holds. |
+| `task_local_caveat` | Concern affects only the current task. |
+| `watch_pattern` | Concern is plausible and should be tracked but not promoted yet. |
+| `owner_patch` | Existing canonical owner needs a bounded reviewed update. |
+| `supersede` | Old guidance should point to replacement guidance. |
+| `retire` | Guidance should stop being used. |
+| `block` | Safe continuation depends on resolving the stale/conflicting rule. |
+
+Use the smallest outcome that protects future work.
+
+## `/about` Memory Disposition
+
+`/about` is an external memory package, not canon. Knowledge Evolution may
+trigger `/about` sync only after canonical source files or compact summaries
+change in a way that should be visible outside the repository.
+
+Memory sync rules:
+
+- update `/about` only from canonical source or approved compact summaries;
+- do not let `/about` introduce new rules;
+- if `/about` diverges, treat the repository source as authoritative;
+- run the memory package check when `/about` is updated;
+- record memory disposition in `final_decision.md`, release report, or release
+  pack when material.
 
 ## Integration Points
 
@@ -206,9 +340,10 @@ safeguard.
 
 ### Capability Registry
 
-Learning extraction, canon evolution, pattern reuse, and stale canon detection
-are shared capabilities. They do not create a standing Historian, Memory
-Manager, or Canon Manager role.
+Knowledge Evolution includes learning extraction, canon evolution, pattern
+reuse, stale knowledge detection, correction, retirement, and memory
+disposition as shared capabilities. They do not create a standing Historian,
+Memory Manager, Canon Manager, or Knowledge Curator role.
 
 ### Failure Modes
 
@@ -227,16 +362,24 @@ Codex completion notes may surface reusable patterns, canon updates needed, or
 obsolete assumptions when relevant. This should stay compact and should not turn
 every implementation into a retrospective.
 
+### Review Gate
+
+Review Agent challenges Knowledge Evolution claims inside the existing
+`review.md` when reviewed work proposes reusable learning, pattern promotion,
+canon updates, stale/conflicting knowledge, or `/about` synchronization.
+Review checks evidence, scope, owner, duplication, privacy, maintenance cost,
+and whether task-local disposition is safer than canon change.
+
 ## Role Cooperation
 
 Learning and canon evolution are shared work, not a new role.
 
 | Role | Learning responsibility |
 | --- | --- |
-| Chief Editor | Classify reusable decisions, pattern candidates, canon updates, and stale assumptions during governance or memory curation. |
-| Research Agent | Separate durable evidence/context from task-local findings; flag source freshness or provenance patterns. |
-| Review Agent | Identify repeated findings, canon duplication, stale canon, or safeguards that may deserve a system update. |
-| Final Editor | Preserve reusable learning cues without bloating final output or classifying feedback. |
+| Chief Editor | Classify reusable decisions, learning disposition, pattern candidates, canon updates, stale assumptions, correction/retirement needs, and `/about` sync disposition during governance or memory curation. |
+| Research Agent | Separate durable evidence/context from task-local findings; flag source freshness, provenance, or evidence-pattern signals. |
+| Review Agent | Challenge Knowledge Evolution claims; identify repeated findings, canon duplication, stale/conflicting canon, unsupported promotion, or safeguards that may deserve a system update. |
+| Final Editor | Preserve reviewed reusable learning cues without bloating final output or classifying feedback/canon disposition. |
 
 No Historian role exists in the current core role set, and this framework does
 not create one.
@@ -247,10 +390,12 @@ This framework does not:
 
 - add new agents;
 - create a Historian role;
+- create a Knowledge Curator or Canon Manager role;
 - make every task produce a retrospective;
 - turn feedback into automatic canon;
 - make `/about` canonical;
 - replace `customer_feedback_loop.md` or `feedback_patterns.md`;
 - bypass review for system updates;
 - delete historical artifacts;
-- promote private source material into public memory.
+- promote private source material into public memory;
+- require a new learning artifact for every task.

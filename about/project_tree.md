@@ -98,6 +98,7 @@ ai-editorial-office/
 │   ├── professional_analysis.md
 │   ├── professional_communication.md
 │   ├── engineering_review.md
+│   ├── editorial_learning_framework.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
 │   ├── canonical_sketchnote_prompt.md
@@ -227,6 +228,11 @@ or the task-local canonical owner named there.
 - Engineering Review is a shared capability for implementation/change safety,
   not a role, pipeline, lifecycle stage, review gate, or mandatory artifact
   set.
+- Knowledge Evolution is a bounded capability inside the Editorial Learning
+  Framework for reusable learning disposition, pattern candidates,
+  canon-update candidates, stale/conflicting knowledge, correction/retirement,
+  and `/about` memory disposition. It is not a role, pipeline, lifecycle stage,
+  review gate, automatic canon promotion, or mandatory artifact.
 - Shared lifecycle kernel owns common stages, gates, artifact responsibilities,
   expansion triggers, human approval boundary, and stage context contracts;
   pipelines are overlays.

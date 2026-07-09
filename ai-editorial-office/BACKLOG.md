@@ -22,7 +22,7 @@ Done
 
 Allowed release statuses: Not Started, In Progress, Review, Done.
 
-Current active release: S3.R6 - Knowledge Evolution.
+Current active release: S3.R6 - Knowledge Evolution (Review).
 
 # Stage 1 - Architecture Foundation
 
@@ -47,7 +47,7 @@ Current active release: S3.R6 - Knowledge Evolution.
 | S3.R3 | Engineering Review | Add professional engineering review capability for implementation and change safety. | Engineering Review is available as one shared capability with optional review lenses. | Engineering Review covers engineering review needs without new roles, pipelines, lifecycle stages, or duplicate owners. | Done |
 | S3.R4 | Professional Analysis | Add professional analysis capability for structured interpretation, judgment, and recommendation work. | Professional Analysis release candidate is ready for Project Lead review. | The release improves analysis quality, defines bounded use, and preserves existing architecture. | Review |
 | S3.R5 | Professional Communication | Add professional communication capability for audience-fit, clarity, and decision-oriented messaging. | Professional Communication release candidate is ready for Project Lead review. | The release improves communication quality without creating a new writing role, pipeline, or mandatory artifact set. | Done |
-| S3.R6 | Knowledge Evolution | Add capability for deliberate learning, canon evolution, stale knowledge handling, and retirement. | Knowledge Evolution release candidate is ready for Project Lead review. | The release improves learning from work without automatic canon promotion or new governance layers. | In Progress |
+| S3.R6 | Knowledge Evolution | Add capability for deliberate learning, canon evolution, stale knowledge handling, and retirement. | Knowledge Evolution release candidate is ready for Project Lead review. | The release improves learning from work without automatic canon promotion or new governance layers. | Review |
 
 # Stage 4 - Domain Expertise
 
