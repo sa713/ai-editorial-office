@@ -49,6 +49,9 @@ Domain Expertise.
   architecture decision, driver, quality-attribute, style, pattern, boundary,
   coupling, tradeoff, risk, evidence, activation, update, and retirement
   guidance.
+- DevSecOps Domain Pack release candidate with source-backed secure delivery,
+  CI/CD, automation, configuration, supply-chain risk, deployment-boundary,
+  validation-evidence, and operational-security guidance.
 
 ## Current core roles
 - chief_editor
@@ -89,8 +92,8 @@ Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 Domain Knowledge Pack Standard is complete. Software Architecture Domain Pack
-is implemented as release candidate S4.R2 and is ready for Project Lead
-architectural review.
+is complete. DevSecOps Domain Pack is implemented as release candidate S4.R3
+and is ready for Project Lead review.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -129,11 +132,10 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 Follow the active roadmap stage:
 
 - Stage: Domain Expertise.
-- Last completed release: Domain Knowledge Pack Standard.
-- Open release candidates: Professional Analysis and Software Architecture
-  Domain Pack.
-- Current release candidate: S4.R2 - Software Architecture Domain Pack.
-- Next planned release after S4.R2 acceptance: DevSecOps Domain Pack.
+- Last completed release: Software Architecture Domain Pack.
+- Open release candidates: Professional Analysis and DevSecOps Domain Pack.
+- Current release candidate: S4.R3 - DevSecOps Domain Pack.
+- Next planned release after S4.R3 acceptance: Cybersecurity Domain Pack.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -217,6 +219,12 @@ solely because `ROADMAP.md` changed.
   boundaries, coupling, tradeoffs, risks, evidence, and review questions. It
   does not own Architecture Review, Engineering Review, roles, pipelines,
   policies, review outcomes, task statuses, or mandatory artifacts.
+- DevSecOps Domain Pack is a release-candidate Domain Knowledge Pack for
+  secure delivery, CI/CD, automation, configuration, supply-chain risk,
+  deployment boundaries, validation evidence, and operational-security
+  assumptions. It provides source-backed context and review questions while
+  supporting Engineering Review without owning Engineering Review, roles,
+  pipelines, policies, review outcomes, task statuses, or mandatory artifacts.
 - task-manifest.md carries compact freshness and governance visibility, not a second status system or audit log.
 - If task-manifest.md conflicts with status.md, latest handoff, or orchestration_plan.md, stop and escalate to chief_editor.
 - Latest handoff is delta-based and should reference task-manifest.md instead of repeating manifest, status, orchestration, KB, restart notes, or full task state.

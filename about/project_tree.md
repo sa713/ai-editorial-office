@@ -101,6 +101,7 @@ ai-editorial-office/
 │   ├── editorial_learning_framework.md
 │   ├── domain_knowledge_pack_standard.md
 │   ├── software_architecture_domain_pack.md
+│   ├── devsecops_domain_pack.md
 │   ├── tone_of_voice.md
 │   ├── ux_writing_guidelines.md
 │   ├── canonical_sketchnote_prompt.md
@@ -245,6 +246,12 @@ or the task-local canonical owner named there.
   boundaries, coupling, tradeoffs, risks, evidence, and review questions while
   staying subordinate to Architecture Review, Engineering Review, and the
   Domain Knowledge Pack Standard.
+- DevSecOps Domain Knowledge Pack is a release-candidate pack for secure
+  delivery, CI/CD, automation, configuration, supply-chain risk, deployment
+  boundaries, validation evidence, and operational-security assumptions. It
+  supports Engineering Review with source-backed context while staying
+  subordinate to Engineering Review, Architecture Review, and the Domain
+  Knowledge Pack Standard.
 - Shared lifecycle kernel owns common stages, gates, artifact responsibilities,
   expansion triggers, human approval boundary, and stage context contracts;
   pipelines are overlays.

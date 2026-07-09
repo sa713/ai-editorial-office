@@ -15,6 +15,7 @@ Canonical source files:
 - `ai-editorial-office/kb/editorial_learning_framework.md`
 - `ai-editorial-office/kb/domain_knowledge_pack_standard.md`
 - `ai-editorial-office/kb/software_architecture_domain_pack.md`
+- `ai-editorial-office/kb/devsecops_domain_pack.md`
 
 This file is a memory aid, not a canonical policy. If it conflicts with
 `AGENTS.md`, task instructions, selected pipelines, role specs, or source KB
@@ -217,14 +218,23 @@ pack, activation reason, relevant sources/sections, confidence limits,
 boundary limits, stale-if triggers, and stop conditions in existing task
 artifacts. Review active pack use inside the existing review gate.
 
-Current release-candidate pack: Software Architecture Domain Knowledge Pack.
-Use it only for architecture-sensitive tasks where software architecture
-context materially changes evidence depth, terminology, risk handling, review
-focus, or output quality. It supports reasoning about architectural decisions,
-drivers, quality attributes, styles, patterns, boundaries, coupling,
-tradeoffs, risks, evidence, and review questions. It does not own Architecture
-Review, Engineering Review, roles, pipelines, policies, task statuses, review
-outcomes, or mandatory artifacts.
+Current release-candidate packs: Software Architecture Domain Knowledge Pack
+and DevSecOps Domain Knowledge Pack.
+
+Use the Software Architecture pack only for architecture-sensitive tasks where
+software architecture context materially changes evidence depth, terminology,
+risk handling, review focus, or output quality. It supports reasoning about
+architectural decisions, drivers, quality attributes, styles, patterns,
+boundaries, coupling, tradeoffs, risks, evidence, and review questions. It does
+not own Architecture Review, Engineering Review, roles, pipelines, policies,
+task statuses, review outcomes, or mandatory artifacts.
+
+Use the DevSecOps pack only for secure delivery, CI/CD, automation,
+configuration, supply-chain risk, deployment-boundary, validation-evidence, or
+operational-security tasks where DevSecOps context is material. It supports
+Engineering Review with source-backed context and review questions, but does
+not own Engineering Review, cybersecurity policy, roles, pipelines, task
+statuses, review outcomes, or mandatory artifacts.
 
 ## UX Writing Standards
 

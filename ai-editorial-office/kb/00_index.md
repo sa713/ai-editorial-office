@@ -83,6 +83,12 @@ Canonical KB ownership:
   architecture context for architecture-sensitive tasks. It does not own
   Architecture Review, Engineering Review, roles, workflows, policies, review
   outcomes, task statuses, or mandatory artifacts.
+- `devsecops_domain_pack.md` is the release-candidate DevSecOps Domain
+  Knowledge Pack. It provides source-backed secure delivery context for
+  CI/CD, automation, configuration, supply-chain risk, deployment boundaries,
+  validation evidence, and operational-security assumptions. It does not own
+  Engineering Review, Architecture Review, cybersecurity policy, roles,
+  workflows, review outcomes, task statuses, or mandatory artifacts.
 - `feedback_patterns.md` owns recurring or significant feedback pattern tracking; it does not store every task-local feedback item.
 - `customer_feedback_loop.md` owns the active P5.5 customer feedback workflow:
   task-local capture, classification, watchlist signal, backlog candidate, and

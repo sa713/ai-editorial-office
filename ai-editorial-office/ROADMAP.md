@@ -163,12 +163,12 @@ Current state:
 
 Professional Analysis remains an open release candidate. Knowledge Evolution is
 complete. Domain Expertise has opened, S4.R1 Domain Knowledge Pack Standard is
-complete, and S4.R2 Software Architecture Domain Pack is the current Stage 4
-release candidate.
+complete, S4.R2 Software Architecture Domain Pack is complete, and S4.R3
+DevSecOps Domain Pack is the current Stage 4 release candidate.
 
 Current Stage 4 release candidate:
 
-Software Architecture Domain Pack
+DevSecOps Domain Pack
 
 Why this stage matters:
 
@@ -201,8 +201,9 @@ stable architecture.
 
 Current release candidate:
 
-S4.R2 Software Architecture Domain Pack provides source-backed software
-architecture context for architecture-sensitive tasks. It applies the S4.R1
+S4.R3 DevSecOps Domain Pack provides source-backed secure delivery context for
+CI/CD, automation, configuration, supply-chain risk, deployment boundaries,
+validation evidence, and operational-security assumptions. It applies the S4.R1
 Domain Knowledge Pack Standard while staying a bounded context package, not a
 role, capability, framework, pipeline, lifecycle stage, governance layer,
 policy owner, capability owner, review gate, or mandatory ordinary task
