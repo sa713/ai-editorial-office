@@ -1,11 +1,11 @@
 # Project State
 
 ## Current phase
-Stage 4 - Domain Expertise is complete. Stage 5 - Editorial Intelligence is
-active. S5.R1 - Feedback and Learning Intelligence, S5.R2 - Evaluation
-Signals, S5.R3 - Memory Hygiene Intelligence, S5.R4 - Task Need Recognition,
-and S5.R5 - Editorial Intelligence Acceptance are accepted. Stage 5 remains
-active pending a separate closure decision.
+Stage 4 - Domain Expertise and Stage 5 - Editorial Intelligence are complete.
+S5.R1 - Feedback and Learning Intelligence, S5.R2 - Evaluation Signals,
+S5.R3 - Memory Hygiene Intelligence, S5.R4 - Task Need Recognition, and
+S5.R5 - Editorial Intelligence Acceptance are accepted. No future stage is
+active.
 
 ## Completed
 - governance layer;
@@ -73,6 +73,7 @@ active pending a separate closure decision.
   architecture and maintenance cost, reversibility, hidden governance,
   uncertainty, and cross-effects, and supplies human dispositions without
   scores or automatic decisions.
+- Stage 5 - Editorial Intelligence accepted and complete after strategic review.
 - Accepted Domain Knowledge Pack Standard with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
@@ -125,14 +126,15 @@ repository decision.
 
 ## Current focus
 Stage 4 is fully closed after Project Lead acceptance. Preserve its stable,
-source-backed domain knowledge layer while Stage 5 continues with S5.R1
-through S5.R5 accepted and Stage 5 closure pending a separate decision.
+source-backed domain knowledge layer and the accepted Stage 5 Editorial
+Intelligence layer while the Project Lead considers the Project v1.0 baseline.
+No future stage is active.
 
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
-active. S5.R1 through S5.R5 are accepted and `Done`. Stage 5 is not closed.
+accepted and complete. S5.R1 through S5.R5 are accepted and `Done`.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -170,13 +172,14 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 ## Current next task
 Follow the active roadmap stage:
 
-- Stage: Stage 5 - Editorial Intelligence, active.
-- Last completed stage: Stage 4 - Domain Expertise.
+- Stage: no active stage; no future stage is authorized.
+- Last completed stage: Stage 5 - Editorial Intelligence.
 - Last completed release: S5.R5 - Editorial Intelligence Acceptance.
 - Open release candidates: Professional Analysis.
-- Current next action: Project Lead decides whether to close Stage 5; do not
-  start a future stage automatically.
-- Stage 5 status: active; S5.R1 through S5.R5 `Done`; closure decision pending.
+- Current next action: Project Lead decides the Project v1.0 baseline and the
+  open Professional Analysis release candidate; do not start a future stage
+  automatically.
+- Stage 5 status: accepted and complete; S5.R1 through S5.R5 `Done`.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.

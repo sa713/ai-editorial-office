@@ -27,15 +27,16 @@ Current active release candidate: none.
 Current active work:
 
 ```text
-S5.R5 Accepted
+Stage 5 Accepted and Complete
 
 ↓
 
-Stage 5 closure decision pending
+No future stage authorized
 ```
 
-Stage 5 is active. S5.R1 through S5.R5 are accepted and `Done`. Stage 5 closure
-and any future stage require a separate Project Lead decision.
+Stage 5 is complete. S5.R1 through S5.R5 are accepted and `Done`. No future
+stage is authorized. Professional Analysis remains an open release candidate
+in `Review` until a separate Project Lead decision.
 
 # Stage 1 - Architecture Foundation
 

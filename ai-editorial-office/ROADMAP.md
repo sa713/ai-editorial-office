@@ -163,15 +163,15 @@ Current state:
 
 Professional Analysis remains an open release candidate. Knowledge Evolution is
 complete. S4.R1 through S4.R5 are accepted, and Stage 4 - Domain Expertise is
-complete. Stage 5 - Editorial Intelligence is active. S5.R1 Feedback and
-Learning Intelligence, S5.R2 Evaluation Signals, S5.R3 Memory Hygiene
-Intelligence, S5.R4 Task Need Recognition, and S5.R5 Editorial Intelligence
-Acceptance are accepted. Stage 5 remains active pending a separate closure
-decision.
+complete. S5.R1 Feedback and Learning Intelligence, S5.R2 Evaluation Signals,
+S5.R3 Memory Hygiene Intelligence, S5.R4 Task Need Recognition, and S5.R5
+Editorial Intelligence Acceptance are accepted. Stage 5 - Editorial
+Intelligence is complete after Project Lead strategic acceptance.
 
 Next roadmap action:
 
-Decide whether to close Stage 5. Do not start a future stage automatically.
+Decide the Project v1.0 baseline and the open Professional Analysis release
+candidate. Do not start a future stage automatically.
 
 Why this stage matters:
 
@@ -215,15 +215,15 @@ approval workflow, scoring system, or mandatory ordinary task artifact.
 
 S4.R1 Domain Knowledge Pack Standard, S4.R2 Software Architecture Domain Pack,
 S4.R3 DevSecOps Domain Pack, S4.R4 Cybersecurity Domain Pack, and S4.R5 AI
-Engineering Domain Pack are accepted. Stage 4 is complete. Stage 5 is active
-with S5.R1 through S5.R5 accepted. Stage 5 closure remains a separate decision.
+Engineering Domain Pack are accepted. Stage 4 is complete. S5.R1 through S5.R5
+are accepted, and Stage 5 is complete after Project Lead strategic acceptance.
 
 ## Stage 5 - Editorial Intelligence
 
-Status: Active
+Status: Complete
 
-Sequence: Current stage; S5.R1 through S5.R5 are accepted and `Done`; explicit
-Stage 5 closure remains pending.
+Sequence: Completed stage; S5.R1 through S5.R5 are accepted and `Done`; Project
+Lead accepted Stage 5 closure on 2026-07-10.
 
 Purpose:
 
@@ -236,15 +236,14 @@ AI Editorial Office should become better at knowing what kind of work it is
 doing, what quality requires, when evidence is sufficient, when canon is stale,
 and when a proposed change would make the system heavier rather than stronger.
 
-Current release state:
+Final release state:
 
 - S5.R1 Feedback and Learning Intelligence: accepted and `Done`;
 - S5.R2 Evaluation Signals: accepted and `Done`;
 - S5.R3 Memory Hygiene Intelligence: accepted and `Done`;
 - S5.R4 Task Need Recognition: accepted and `Done`;
 - S5.R5 Editorial Intelligence Acceptance: accepted and `Done`;
-- Stage 5 remains active until the Project Lead explicitly authorizes stage
-  closure;
+- Stage 5 is accepted and complete after strategic review;
 - no future stage starts automatically.
 
 # Architectural Rules
