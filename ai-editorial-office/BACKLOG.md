@@ -22,20 +22,20 @@ Done
 
 Allowed release statuses: Not Started, In Progress, Review, Done.
 
-Current active release: S5.R1 - Feedback and Learning Intelligence.
+Current active release: S5.R2 - Evaluation Signals.
 
 Current active work:
 
 ```text
-S5.R1 Release Candidate Complete
+S5.R1 Accepted
 
 ↓
 
-Project Lead Review
+S5.R2 In Progress
 ```
 
-Stage 5 opened by explicit Project Lead instruction. S5.R1 is in `Review`.
-S5.R2 through S5.R5 remain `Not Started` and do not open automatically.
+Stage 5 is active. S5.R1 is `Done`; S5.R2 is `In Progress`. S5.R3 through
+S5.R5 remain `Not Started`.
 
 # Stage 1 - Architecture Foundation
 
@@ -76,8 +76,8 @@ S5.R2 through S5.R5 remain `Not Started` and do not open automatically.
 
 | Release ID | Title | Purpose | Expected Result | Success Criteria | Status |
 | --- | --- | --- | --- | --- | --- |
-| S5.R1 | Feedback and Learning Intelligence | Improve how the office learns from completed work and Project Lead feedback. | Feedback and Learning Intelligence release candidate is ready for Project Lead review. | The release turns feedback into bounded learning without automatic canon changes. | Review |
-| S5.R2 | Evaluation Signals | Improve how the office recognizes quality, risk, and release health. | Evaluation Signals release candidate is ready for Project Lead review. | The release provides useful evaluation signals without replacing human review or Project Lead acceptance. | Not Started |
+| S5.R1 | Feedback and Learning Intelligence | Improve how the office learns from completed work and Project Lead feedback. | Feedback and Learning Intelligence release candidate is ready for Project Lead review. | The release turns feedback into bounded learning without automatic canon changes. | Done |
+| S5.R2 | Evaluation Signals | Improve how the office recognizes quality, risk, and release health. | Evaluation Signals release candidate is ready for Project Lead review. | The release provides useful evaluation signals without replacing human review or Project Lead acceptance. | In Progress |
 | S5.R3 | Memory Hygiene Intelligence | Improve how external memory stays aligned, small, and non-canonical. | Memory Hygiene Intelligence release candidate is ready for Project Lead review. | The release reduces memory drift without making memory a second source of truth. | Not Started |
 | S5.R4 | Task Need Recognition | Improve how the office recognizes task type, risk, evidence needs, and capability triggers. | Task Need Recognition release candidate is ready for Project Lead review. | The release improves routing decisions without bypassing Chief Editor judgment or preflight discipline. | Not Started |
 | S5.R5 | Editorial Intelligence Acceptance | Define how self-improvement releases are judged as accepted and stable. | Editorial Intelligence Acceptance release candidate is ready for Project Lead review. | The release helps larger work packages require less micromanagement while preserving stable architecture. | Not Started |
