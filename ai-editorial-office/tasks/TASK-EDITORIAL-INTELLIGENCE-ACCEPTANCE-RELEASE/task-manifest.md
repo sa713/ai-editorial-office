@@ -24,10 +24,10 @@
 - Domain Pack activation reason: accepted AI Engineering and other Domain Packs
   are consulted only as adjacent evidence; this is a shared release-governance
   task rather than a domain execution task
-- Current working artifact: `final_decision.md`
+- Current working artifact: `../../releases/S5-R5/release-pack.md`
 - Latest relevant handoff: `handoff-finalization-final-editor-to-chief-editor.md`
-- Next required action: complete release-level Review state synchronization,
-  final validation, and local commit
+- Next required action: validate, commit, and publish the accepted release;
+  after publication, no additional task action remains
 
 ## freshness
 
@@ -78,11 +78,13 @@
 - Review outcome: `approved`; Round 2 independently verified the bounded CR-01
   repair with no remaining findings
 - Compact finalization shape allowed: no
-- Human approval required: yes, after Release Candidate delivery
-- Human approval evidence: S5.R4 has an accepted Project Lead Release Verdict
-  and the user explicitly opened S5.R5; S5.R5 acceptance remains pending
-- Final decision artifact: `final_decision.md`; Release Candidate ready for
-  Project Lead review, with Project Lead verdict pending
+- Human approval required: satisfied
+- Human approval evidence: the Project Lead explicitly instructed finalization
+  and GitHub publication on 2026-07-10; the S5.R5 Release Verdict records
+  `Accepted`
+- Final decision artifact: `final_decision.md` records the Chief Editor RC
+  readiness decision; the later Project Lead `Accepted` verdict is recorded in
+  `../../releases/S5-R5/release-pack.md`
 
 ## artifact inventory
 
@@ -96,26 +98,26 @@
 | Acceptance contract integration | yes | required | Existing Release Pack standard |
 | Twelve-scenario validation | yes | required | 12 of 12 passed |
 | `/about` sync | yes | conditional | 1 exact copy and 3 compact summaries |
-| Release Pack | yes | required | Project Lead review packet |
+| Release Pack | yes | required | Accepted Project Lead decision packet |
 | Role handoffs and `review.md` | yes | required | Round 2 approved; finalization handoff current |
 | `final.md` | yes | required | Controlled approved-package pointer |
 | `final_decision.md` | yes | required | Chief Editor RC readiness decision only |
 
 ## stale or conflicting state
 
-- None. S5.R4 accepted state is normalized. The full S5.R5 Release Candidate
-  exists and is authorized to move to release-level `Review`.
+- None. S5.R5 is accepted and `Done`; Stage 5 remains active pending a separate
+  closure decision.
 
 ## active constraints
 
-- User constraints: finish through RC, no push, no Project Lead acceptance,
-  preserve `diff_intake.md`, and do not touch the legacy archive.
+- User constraints: finalize S5.R5, publish to GitHub, preserve `diff_intake.md`,
+  and do not touch the legacy archive.
 - Architecture constraints: reuse the Release Pack/Project Lead boundary; no
   automatic governance, scores, board, gate, role, pipeline, or lifecycle change.
 - Evidence constraints: claims require reconstructable sources; synthetic
   validation must never be described as operational proof.
-- State constraints: S5.R5 may move to `Review`, never `Done`; Stage 5 remains
-  active and no future stage starts.
+- State constraints: S5.R5 moves to `Done`; Stage 5 remains active because
+  closure was not separately authorized, and no future stage starts.
 
 ## open questions
 
@@ -124,11 +126,11 @@
 ## next action packet
 
 - Role: `chief_editor`
-- Action: synchronize release state to `Review`, execute full final validation,
-  and create the local commit
-- Expected output: committed S5.R5 Release Candidate ready for Project Lead review
-- Stop conditions: any blocker reappears, final state would record acceptance/
-  Done/stage closure, protected scope changes, or final validation fails
+- Action: validate the acceptance patch, commit it, and push `main` to `origin`
+- Expected output: accepted S5.R5 closure published to GitHub
+- Stop conditions: any blocker reappears, stage closure/future-stage scope is
+  introduced, protected scope changes, remote divergence appears, or final
+  validation fails
 
 ## lifecycle notes
 

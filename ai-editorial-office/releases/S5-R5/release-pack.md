@@ -7,8 +7,7 @@ until a completed `release-pack.md` exists.
 
 - Release ID: `S5.R5`
 - Release title: Editorial Intelligence Acceptance
-- Status: Release Candidate ready for Project Lead review; Project Lead verdict
-  pending
+- Status: Accepted by Project Lead
 - Date: 2026-07-10
 
 ## Executive Summary
@@ -115,7 +114,7 @@ Updated canonical owners:
 
 - Release Pack standard: conditional Editorial Intelligence Acceptance record,
   evidence boundary, hidden-governance check, and human dispositions.
-- Project State: accepted S5.R4 plus current S5.R5 Release Candidate state and a
+- Project State: accepted S5.R4 and S5.R5 state plus a
   concise normalization decision pointing to the Release Pack owner.
 
 New canonical owners introduced:
@@ -139,7 +138,7 @@ New canonical owners introduced:
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the release close a specific Stage 5 acceptance gap without a second workflow? | Accepted S5 packs, current template, owner map, authoritative research, and architecture synthesis show the missing combined value/restraint record; the complete contract fits one existing section. | Repository owner/evidence review and twelve synthetic cases; no real Project Lead use of the new section. | Supported architecture fit; operational decision benefit remains unproven. A new KB owner was considered and rejected. | Release Pack standard and Project Lead; supporting evidence owners remain unchanged | Decide whether the conditional section is useful and proportionate. | No owner, gate, stage, acceptance, or state/canon action changes automatically. |
 | Does the contract prevent synthetic evidence from masquerading as improvement? | Evidence boundary explicitly limits repository and synthetic proof; all twelve cases preserve claim limits, and case 1 defers the operational claim. | Template and designed cases only; future authors may still overstate evidence. | Verified contract wording and case behavior; future compliance depends on review. | Editorial Evidence Framework and Review Agent | Preserve the evidence-setting and explicit non-claim requirements. | Scenario count does not prove value or trigger acceptance. |
-| Is release state and external memory aligned? | S5.R4 accepted verdict is normalized; the complete S5.R5 Release Candidate is in `Review`; Stage 5 remains active; the memory package stays 20 files and mapped project state is synchronized. | Current Release Candidate state; Project Lead verdict is intentionally absent. | Verified state after independent approval, controlled finalization, and Chief Editor RC decision. | Project State, Roadmap, Backlog, Memory Hygiene, Project Lead | Decide the S5.R5 disposition without treating `Review` as acceptance. | S5.R5 is not `Done`; Stage 5 is not closed; no future stage starts. |
+| Is release state and external memory aligned? | S5.R4 and S5.R5 accepted verdicts are normalized; S5.R5 is `Done`; Stage 5 remains active pending a separate closure decision; the memory package stays 20 files and mapped project state is synchronized. | Accepted release state; stage closure and any future stage remain intentionally absent. | Verified state after independent approval, controlled finalization, Chief Editor RC decision, and Project Lead acceptance. | Project State, Roadmap, Backlog, Memory Hygiene, Project Lead | Decide Stage 5 closure separately; do not infer a future stage. | Release acceptance does not close Stage 5 or start another stage automatically. |
 
 ## Editorial Intelligence Acceptance
 
@@ -238,8 +237,8 @@ Memory package updated: yes; 1 exact copy and 3 compact summaries; still 20 file
 Validation scripts executed: all required final checks passed, including the
 authorized staged-diff check
 
-Commits: 1 local Release Candidate commit planned for this completed packet;
-hash reported in delivery
+Commits: Release Candidate commit `e199134`; acceptance-closure commit and hash
+reported in delivery
 
 ## Validation Results
 
@@ -265,23 +264,23 @@ hash reported in delivery
 
 ## Open Questions
 
-- None blocking Project Lead review. Operational usefulness remains an explicit
-  observation rather than a Release Candidate blocker.
+- None remained blocking Project Lead acceptance. Operational usefulness
+  remains an explicit post-acceptance observation.
 
 ## Recommended Project Lead Decision
 
-Recommended decision: `accept with observations`
+Decision: `accepted with observations`
 
 Rationale: the current claim is bounded to a complete, architecture-compatible
 acceptance contract with verified scenario behavior and preserved authority;
 real-use decision benefit remains a stated non-claim and future observation.
 
-Project Lead verdict: pending
+Project Lead verdict: `Accepted`
 
 ## Suggested Next Release
 
-- None. Do not close Stage 5 or start a future stage automatically. Project Lead
-  reviews S5.R5 and decides the release and stage disposition.
+- None authorized. S5.R5 is accepted, but Stage 5 closure and any future stage
+  require a separate Project Lead decision.
 
 ## Acceptance Checklist
 
@@ -299,4 +298,42 @@ Project Lead verdict: pending
 - Memory synchronized; final checker passed
 - Independent review approved after one bounded repair
 - Final validation passed, including the authorized staged-diff check
-- Project Lead acceptance not recorded
+- Project Lead acceptance recorded
+
+## Final State
+
+Final state: `Accepted by Project Lead`.
+
+The Project Lead accepted the release after independent review recorded
+`approved`, controlled finalization completed, and final validation passed.
+The accepted verdict below is final for S5.R5. Stage 5 remains active pending a
+separate closure decision.
+
+## Release Verdict
+
+Project Lead: Accepted
+
+Review Date: 2026-07-10
+
+Reviewer: Project Lead
+
+Notes:
+
+- Release accepted with the documented non-blocking observations.
+- The existing Release Pack standard is the proportionate canonical owner; no
+  second acceptance workflow or owner was introduced.
+- Value and restraint remain jointly necessary and are not reduced to a score.
+- Synthetic evidence remains explicitly insufficient to prove operational
+  improvement.
+- Project Lead retains final decision authority; the contract performs no
+  automatic acceptance, rejection, rollback, canon, state, backlog, roadmap,
+  memory, capability, Domain Pack, or retirement action.
+- No new role, pipeline, lifecycle stage, review gate, board, maturity level,
+  universal score, mandatory dashboard, or approval mechanism was introduced.
+- Independent review approved the bounded claim-trace repair; all required
+  repository, task-lifecycle, scenario, and memory validations passed.
+- Real-use decision benefit, recurring maintenance burden, and operational
+  false-positive/false-negative behavior remain observations for later
+  evidence-based review, not hidden acceptance claims.
+- S5.R5 is `Done`. Stage 5 remains active; stage closure and any future stage
+  require a separate Project Lead decision.

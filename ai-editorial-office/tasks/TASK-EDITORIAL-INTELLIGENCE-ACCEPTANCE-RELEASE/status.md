@@ -15,12 +15,12 @@
 - Status: `finalized`
 - Previous status: `approved`
 - Since: 2026-07-10
-- Status rationale: Final Editor preserved the approved package in `final.md`;
-  Chief Editor recorded Release Candidate readiness in `final_decision.md`
-  without recording Project Lead acceptance.
+- Status rationale: Final Editor preserved the approved package, Chief Editor
+  recorded Release Candidate readiness, and Project Lead accepted S5.R5 after
+  delivery. The operational task remains `finalized`.
 - Next required role: `chief_editor`
-- Next required action: synchronize release-level Review state, validate the
-  staged candidate, and commit locally without pushing.
+- Publication action: validate, commit, and push the accepted release; after a
+  successful push, no additional S5.R5 task action remains.
 
 ## status history
 
@@ -39,7 +39,8 @@
 ## current owner
 
 - Role: `chief_editor`
-- Responsible artifact/action: release state synchronization, validation, and commit
+- Responsible artifact/action: acceptance state synchronization, validation,
+  commit, and GitHub publication
 - Waiting on: none
 
 ## active blockers
@@ -59,9 +60,11 @@
 
 ## human approval state
 
-- Human approval required: yes
-- Approval evidence: S5.R4 accepted Release Verdict plus explicit S5.R5 mission
-- Missing approval action: Project Lead architectural review after RC delivery
+- Human approval required: satisfied
+- Approval evidence: Project Lead finalization and GitHub publication
+  instruction on 2026-07-10; S5.R5 Release Verdict records `Accepted`
+- Missing approval action: none for S5.R5; Stage 5 closure remains a separate
+  decision
 
 ## latest handoff
 
@@ -75,4 +78,4 @@
 - Required artifacts complete: yes
 - Blockers resolved: yes
 - Review complete: yes
-- Governance fields complete: yes; Project Lead acceptance remains pending
+- Governance fields complete: yes; Project Lead acceptance recorded
