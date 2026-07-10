@@ -2,9 +2,9 @@
 
 ## Current phase
 Stage 4 - Domain Expertise is complete. Stage 5 - Editorial Intelligence is
-active. S5.R1 - Feedback and Learning Intelligence and S5.R2 - Evaluation
-Signals are accepted. S5.R3 - Memory Hygiene Intelligence is a release
-candidate in Project Lead review.
+active. S5.R1 - Feedback and Learning Intelligence, S5.R2 - Evaluation
+Signals, and S5.R3 - Memory Hygiene Intelligence are accepted. S5.R4 - Task
+Need Recognition is a release candidate in Project Lead review.
 
 ## Completed
 - governance layer;
@@ -55,12 +55,17 @@ candidate in Project Lead review.
   it preserves comparison context, contradictions, confidence, current owners,
   and explicit non-decision without scores, KPIs, rankings, dashboards, or
   automatic governance.
-- Memory Hygiene Intelligence release candidate with a source-first manual
+- Accepted Memory Hygiene Intelligence release with a source-first manual
   disposition flow for external memory; exact-copy and compact-summary
   branches; sync/no-sync, correction, compression, omission, deferral, and
   retirement; stale/contradictory memory repair; bounded growth; independent
   review; and advisory-only checks without automatic writes or canonical
   override.
+- Task Need Recognition release candidate with an evidence-first advisory view
+  of likely task type, capabilities, Domain Packs, research/evidence and review
+  needs, architecture/engineering/communication significance, ambiguity,
+  decomposition, uncertainty, and negative evidence; Chief Editor retains all
+  routing, activation, depth, and governance decisions.
 - Accepted Domain Knowledge Pack Standard with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
@@ -114,14 +119,14 @@ repository decision.
 ## Current focus
 Stage 4 is fully closed after Project Lead acceptance. Preserve its stable,
 source-backed domain knowledge layer while Stage 5 continues with S5.R1
-and S5.R2 accepted and S5.R3 in Project Lead review.
+through S5.R3 accepted and S5.R4 in Project Lead review.
 
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
-active. S5.R1 and S5.R2 are accepted and `Done`; S5.R3 is the current release
-candidate in `Review`; S5.R4 and S5.R5 remain `Not Started`.
+active. S5.R1 through S5.R3 are accepted and `Done`; S5.R4 is the current
+release candidate in `Review`; S5.R5 remains `Not Started`.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -148,7 +153,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, `/kb/editorial_learning_framework.md`, `/kb/domain_knowledge_pack_standard.md`, and the accepted Domain Knowledge Packs for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/task_need_recognition.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, `/kb/editorial_learning_framework.md`, `/kb/domain_knowledge_pack_standard.md`, and the accepted Domain Knowledge Packs for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -161,13 +166,13 @@ Follow the active roadmap stage:
 
 - Stage: Stage 5 - Editorial Intelligence, active.
 - Last completed stage: Stage 4 - Domain Expertise.
-- Last completed release: S5.R2 - Evaluation Signals.
-- Open release candidates: Professional Analysis and S5.R3 Memory Hygiene
-  Intelligence.
-- Current next action: Project Lead reviews S5.R3; do not start S5.R4
+- Last completed release: S5.R3 - Memory Hygiene Intelligence.
+- Open release candidates: Professional Analysis and S5.R4 Task Need
+  Recognition.
+- Current next action: Project Lead reviews S5.R4; do not start S5.R5
   automatically.
-- Stage 5 status: active; S5.R1 and S5.R2 `Done`; S5.R3 `Review`; S5.R4 and
-  S5.R5 `Not Started`.
+- Stage 5 status: active; S5.R1 through S5.R3 `Done`; S5.R4 `Review`; S5.R5
+  `Not Started`.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -192,6 +197,10 @@ solely because `ROADMAP.md` changed.
 - Capability registry names reusable operations; roles remain accountability
   wrappers for capabilities when independence, ownership, or decision authority
   matters.
+- Task Need Recognition is an evidence-first advisory capability that may
+  recommend likely task type, capabilities, Domain Packs, evidence/research and
+  review needs, significance, ambiguity, decomposition, and uncertainty. It
+  does not route, activate, select depth, plan, or replace Chief Editor.
 - Shared lifecycle kernel owns shared stages, gates, artifact responsibilities,
   expansion triggers, human approval boundary, and stage context contracts.
 - Pipelines are lightweight overlays over the shared lifecycle kernel and keep

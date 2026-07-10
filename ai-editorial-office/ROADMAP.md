@@ -164,12 +164,13 @@ Current state:
 Professional Analysis remains an open release candidate. Knowledge Evolution is
 complete. S4.R1 through S4.R5 are accepted, and Stage 4 - Domain Expertise is
 complete. Stage 5 - Editorial Intelligence is active. S5.R1 Feedback and
-Learning Intelligence and S5.R2 Evaluation Signals are accepted. S5.R3 Memory
-Hygiene Intelligence is the current release candidate in Project Lead review.
+Learning Intelligence, S5.R2 Evaluation Signals, and S5.R3 Memory Hygiene
+Intelligence are accepted. S5.R4 Task Need Recognition is the current release
+candidate in Project Lead review.
 
 Next roadmap action:
 
-Project Lead reviews S5.R3. Do not start S5.R4 automatically.
+Project Lead reviews S5.R4. Do not start S5.R5 automatically.
 
 Why this stage matters:
 
@@ -214,13 +215,13 @@ approval workflow, scoring system, or mandatory ordinary task artifact.
 S4.R1 Domain Knowledge Pack Standard, S4.R2 Software Architecture Domain Pack,
 S4.R3 DevSecOps Domain Pack, S4.R4 Cybersecurity Domain Pack, and S4.R5 AI
 Engineering Domain Pack are accepted. Stage 4 is complete. Stage 5 is active
-with S5.R1 and S5.R2 accepted and S5.R3 in review.
+with S5.R1 through S5.R3 accepted and S5.R4 in review.
 
 ## Stage 5 - Editorial Intelligence
 
 Status: Active
 
-Sequence: Current stage; S5.R1 and S5.R2 are accepted and the S5.R3 release
+Sequence: Current stage; S5.R1 through S5.R3 are accepted and the S5.R4 release
 candidate is in Project Lead review.
 
 Purpose:
@@ -238,9 +239,10 @@ Current release state:
 
 - S5.R1 Feedback and Learning Intelligence: accepted and `Done`;
 - S5.R2 Evaluation Signals: accepted and `Done`;
-- S5.R3 Memory Hygiene Intelligence: release candidate in `Review`;
-- S5.R4 and S5.R5: `Not Started`;
-- Project Lead acceptance for S5.R3: pending.
+- S5.R3 Memory Hygiene Intelligence: accepted and `Done`;
+- S5.R4 Task Need Recognition: release candidate in `Review`;
+- S5.R5: `Not Started`;
+- Project Lead acceptance for S5.R4: pending.
 
 # Architectural Rules
 

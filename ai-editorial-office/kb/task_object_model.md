@@ -40,6 +40,10 @@ roles and capabilities live in `/kb/domain_knowledge_pack_standard.md`;
 runtime authority still remains with `AGENTS.md`, `/kb/task_statuses.md`, the
 selected pipeline, role specs, and task-local artifacts.
 
+`/kb/task_need_recognition.md` owns the optional advisory request-to-need view.
+It uses existing task-object fields and artifact views; it does not add a
+required field, hidden state, classifier result, route decision, or artifact.
+
 ## Core Principle
 
 The task object is the primary operational primitive of AI Editorial Office.
@@ -138,10 +142,10 @@ requires it.
 
 | Artifact | Task-object responsibility |
 | --- | --- |
-| `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, quality cues when material, and success criterion. |
+| `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, quality cues when material, success criterion, and an optional initial Task Need Recognition view when routing needs it. |
 | `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, active Domain Knowledge Packs when material, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, analytical question and assumptions when material, architecture review scope and drivers when material, audience/outcome fit when material, quality priorities/tradeoffs when material, options considered when material, active capabilities, active Domain Knowledge Packs when material, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, optional Task Need Recognition view and Chief Editor decision when material, analytical question and assumptions when material, architecture review scope and drivers when material, audience/outcome fit when material, quality priorities/tradeoffs when material, options considered when material, active capabilities, active Domain Knowledge Packs when material, active roles, gates, artifact scope, Editorial Decision Frame when required, evidence basis/confidence for material route decisions, and expansion triggers. |
 | `research.md` | Research scope, verified facts, interpretations, assumptions, hypotheses, contradictions, diagnostic evidence, source confidence, evidence class, sufficiency judgment, and evidence limits. |
 | `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |

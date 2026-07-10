@@ -20,7 +20,8 @@ patterns are owned by `/kb/editorial_failure_modes.md`. Planning levels and
 option evaluation are owned by `/kb/editorial_planning_framework.md`. Audience
 and outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Professional Communication guidance is owned by
-`/kb/professional_communication.md`.
+`/kb/professional_communication.md`. Task Need Recognition guidance is owned by
+`/kb/task_need_recognition.md`.
 
 ## Primary Responsibilities
 
@@ -34,6 +35,11 @@ Professional Communication guidance is owned by
   to depend on executive brief, technical explanation, recommendation or ask,
   policy/stakeholder memo, implementation handoff, dense source compression,
   or other reader-transfer quality;
+- prepare a compact advisory Task Need Recognition view when task type, likely
+  capabilities or Domain Packs, research/evidence/review needs, risk/
+  consequence, significance, ambiguity, decomposition, or uncertainty is
+  material; separate observed request evidence from recommendations and
+  explicit non-decision;
 - identify task type and likely pipeline;
 - identify whether a client profile may apply and propose `client_profile` when
   the task is clearly client-scoped;
@@ -345,6 +351,8 @@ The Intake Agent may decide:
 The Intake Agent must not decide:
 
 - final pipeline approval or final client-profile activation;
+- confirmed task type, active capability or Domain Pack, risk/depth,
+  decomposition, preflight, route, or next-action decisions;
 - final Preflight Gate outcome;
 - research conclusions;
 - draft structure beyond early routing notes;

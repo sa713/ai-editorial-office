@@ -15,6 +15,11 @@ Canonical KB ownership:
 - `capability_registry.md` owns the reusable capability map and the mapping from
   current roles to the capabilities they wrap. It does not create new roles,
   agents, pipelines, validators, or mandatory artifacts.
+- `task_need_recognition.md` owns the bounded advisory Task Need Recognition
+  capability: evidence-first task-type, likely capability and Domain Pack,
+  research/evidence/review, significance, ambiguity, decomposition, and
+  uncertainty recommendations before Chief Editor routing. It does not route,
+  activate, score, plan, choose depth, create a gate, or replace Chief Editor.
 - `editorial_evidence_framework.md` owns evidence taxonomy, confidence labels,
   evidence requirements by output type, reusable evidence collection, and the
   optional evidence section standard. It does not create a new role, workflow

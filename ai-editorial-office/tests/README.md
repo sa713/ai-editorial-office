@@ -62,6 +62,11 @@ markdown smoke-tests и synthetic examples:
   Evaluation Signals, bounded counts, qualitative judgments, owner routing,
   noise rejection, contradictory signals, and explicit non-decision; it is not
   production governance or real usage evidence.
+- `task_need_recognition_smoke_test.md` - manual synthetic cases for advisory
+  task type, capability/Domain Pack, research/evidence, risk/consequence,
+  review, significance, ambiguity, decomposition, uncertainty, negative
+  evidence, and Chief Editor decision separation; it is not an automatic
+  router or real usage evidence.
 - `domain_knowledge_pack_standard_smoke_test.md` - manual synthetic cases for
   Domain Knowledge Pack activation, non-activation, source boundaries, review,
   update, retirement, and forbidden architecture drift; it is not production
@@ -226,6 +231,16 @@ explicit no-sync, duplicate consolidation, and obsolete-memory retirement. It
 verifies source, materiality, disposition, owner, branch validation, canonical
 authority, bounded growth, preserved meaningful context, and no automatic
 propagation. It does not define active rules or prove memory completeness.
+
+`task_need_recognition_smoke_test.md` records the ten S5.R4 representative
+cases. It checks simple editing, architecture review, engineering
+implementation, AI Engineering, DevSecOps, Cybersecurity, ambiguous mixed,
+multi-domain, research-heavy, and keyword-rich simple requests. It verifies
+observed signal versus recommendation versus Chief Editor decision separation,
+proportionate evidence/review depth, capability and Domain Pack boundaries,
+negative evidence, uncertainty, decomposition, and explicit non-automation. It
+does not define active rules, create a classifier/score/router, or prove
+real-world routing improvement.
 
 `domain_knowledge_pack_standard_smoke_test.md` records synthetic activation,
 non-activation, boundary, source, update, retirement, and review cases for

@@ -150,6 +150,19 @@ role or stage. Activate it only when code, scripts, configuration, automation,
 interfaces, observability, reliability, data, performance, or
 security-sensitive behavior is material.
 
+Task Need Recognition may be used before Chief Editor routing when request
+nature or likely needs are materially uncertain or complex. Keep observed
+signals, recommendations including risk/consequence when material, negative
+evidence/uncertainty, explicit non-decision, and the separate Chief Editor
+decision inspectable in an existing
+brief, manifest, or orchestration plan. Outcome and work surface outrank
+keywords. Intake Agent may prepare the view; Chief Editor alone decides task
+type, route, preflight, risk, depth, capability/pack activation, roles,
+decomposition, planning, and next action. Review Agent challenges material use
+inside the current gate. Do not create scores, thresholds, automatic routing or
+activation, a new role/pipeline/stage/gate/status, or mandatory recognition
+artifact.
+
 Professional Analysis may be used inside the same review gate for
 decision-support work. It is a shared capability with lenses, not a new role,
 pipeline, stage, consulting framework, or mandatory artifact. Activate it only

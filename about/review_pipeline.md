@@ -53,6 +53,14 @@ creating a new review gate. Engineering Review is distinct from Architecture
 Review: it checks implementation/change safety rather than overall design
 fitness.
 
+When downstream scope materially depends on Task Need Recognition, review
+applies `/kb/task_need_recognition.md` to challenge observed evidence,
+recommendation-versus-Chief Editor decision separation, keyword-only or forced
+classification, negative evidence, risk/consequence, proportionality,
+ambiguity, uncertainty, decomposition basis, owner boundaries, and
+non-automation. This is part of the
+existing review gate, not a new routing or review gate.
+
 When reviewed work shows wrong-task drift, weak evidence, hidden assumptions,
 scope drift, role confusion, over-polishing, under-execution, implementation
 task dilution, premature finalization, or review-gate bypass, review applies
@@ -359,6 +367,9 @@ Compact review minimum:
 - compact Architecture Review check when the reviewed work is
   architecture-sensitive or depends on drivers, quality-attribute scenarios,
   architectural tradeoffs, assumptions, accepted risks, or decision rationale;
+- compact Task Need Recognition check when reviewed scope depends materially on
+  its task-type, capability, Domain Pack, depth, significance, ambiguity, or
+  decomposition recommendations;
 - compact failure-mode check when warning signs are visible;
 - compact option-evaluation check when the reviewed work depends on a
   non-trivial selected approach;
@@ -412,6 +423,10 @@ It does not restate detailed review logic. Review Agent owns:
   attributes, missing scenarios, hidden architectural assumptions,
   architecture/implementation confusion, missing rejected alternatives,
   undocumented accepted risks, and decisions without rationale;
+- Task Need Recognition challenge, including hidden request evidence,
+  keyword-only or forced classification, missing negative evidence,
+  disproportionate depth, hidden ambiguity/uncertainty, unsupported
+  decomposition, owner override, and recommendations treated as decisions;
 - Domain Knowledge Pack challenge, including weak activation, unsupported
   source register use, boundary drift, stale-if trigger neglect, canonical
   owner override, and misuse as policy, capability ownership, role, pipeline,
@@ -442,6 +457,7 @@ Quality gates are mandatory and artifact-backed.
 | Instructional architecture gate | Instructional or operational material can be followed through a clear reading path, with distinct section roles and bounded rereading cost | unclear route to action, mixed section roles, useless duplication, missing navigation, forced linear reading where reference use is needed |
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
+| Task Need Recognition gate | When downstream scope materially depends on recognition, observed evidence, recommendations, negative evidence, uncertainty, decomposition basis, explicit non-decision, and Chief Editor decision are distinct, proportionate, and owner-safe | keyword-only or forced type, hidden ambiguity, missing negative evidence, unsupported split, score/threshold authority, automatic routing/activation/depth, or Chief Editor decision absent |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
 | Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, memory-disposition, Memory Hygiene Intelligence, and advisory Evaluation Signal claims are evidenced, scoped, owned, non-duplicative, proportionate, and reviewable; feedback/outcome claims preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion; memory claims preserve canonical source, represented fact, materiality, purpose/sensitivity/value, exact-copy or compact-summary branch, correction/compression/retirement/omission/deferral/no-sync rationale, branch validation, unique context, bounded growth, and non-automation; signal views preserve decision question, comparison window, denominator/exposure when material, missing cases, alternatives, confidence, qualitative judgment, and explicit non-decision | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, stale guidance handled by silent deletion, exact copy edited independently, misleading summary compression, sensitive/task-local propagation, context-erasing consolidation/retirement, unchecked no-sync, automatic memory write/disposition, activity/activation treated as value, unlike comparisons, hidden contradictions, score/KPI/target/rank/maturity use, individual monitoring, or automatic action |
 | Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners; claimed benefit or burden also traces to actual sections used, task effect evidence, confidence, complexity cost, and non-promotion when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, activation treated as proof of value, unsupported effect claim, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |

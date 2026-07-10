@@ -42,6 +42,7 @@
 | Task status model and transitions | `/kb/task_statuses.md` | status references, not alternate state models |
 | Task object model and artifact view mapping | `/kb/task_object_model.md` | task-specific values, restart pointers, and local consequences |
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
+| Task Need Recognition signals, advisory recommendations, uncertainty, negative evidence, and decomposition cues before routing | `/kb/task_need_recognition.md` | compact task-specific recognition view and Chief Editor decision |
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
@@ -98,6 +99,9 @@ existing markdown system should be understood and extended.
 - `/kb/capability_registry.md` defines reusable capabilities and maps them to
   the current roles that wrap them when accountability, independence, or
   decision authority is needed.
+- `/kb/task_need_recognition.md` defines the evidence-first advisory view of
+  likely task type, capabilities, Domain Packs, depth, significance,
+  ambiguity, decomposition, and uncertainty before Chief Editor routing.
 - `/kb/shared_lifecycle_kernel.md` defines shared stages, gates, artifact
   responsibilities, expansion triggers, human approval boundary, and stage
   context contracts.
@@ -143,13 +147,13 @@ existing markdown system should be understood and extended.
   purpose, structure, activation, source/evidence requirements, boundaries,
   review, update, and retirement.
 
-Do not create a new role merely because a capability is named. Analytical
-reasoning, Professional Analysis, Professional Communication, Architecture
-Review, source conversion, integrity checking, context assembly, Engineering
-Review, learning extraction, Knowledge Evolution, canon evolution, stale
-knowledge detection, and memory export remain capabilities, checks, scripts, or
-task-local mini-contracts unless a separate reviewed system update explicitly
-changes the role set. Domain Knowledge Packs remain source-backed context
+Do not create a new role merely because a capability is named. Task Need
+Recognition, analytical reasoning, Professional Analysis, Professional
+Communication, Architecture Review, source conversion, integrity checking,
+context assembly, Engineering Review, learning extraction, Knowledge
+Evolution, canon evolution, stale knowledge detection, and memory export remain
+capabilities, checks, scripts, or task-local mini-contracts unless a separate
+reviewed system update explicitly changes the role set. Domain Knowledge Packs remain source-backed context
 packages; they are not roles, pipelines, lifecycle stages, policy owners,
 capability owners, governance layers, review gates, or mandatory ordinary task
 artifacts.
@@ -183,6 +187,10 @@ user explicitly asks to bypass the editorial process.
 
 Before production starts, Chief Editor must route the task editorially:
 
+- inspect or request a compact Task Need Recognition view when task nature,
+  likely capabilities or Domain Packs, risk/depth, significance, ambiguity,
+  decomposition, or uncertainty is material; treat it as advisory evidence and
+  record the Chief Editor decision separately;
 - determine the task type;
 - choose the relevant pipeline or editorial mode;
 - determine whether a client profile must be activated;

@@ -98,6 +98,7 @@ ai-editorial-office/
 │   ├── professional_analysis.md
 │   ├── professional_communication.md
 │   ├── engineering_review.md
+│   ├── task_need_recognition.md
 │   ├── editorial_learning_framework.md
 │   ├── domain_knowledge_pack_standard.md
 │   ├── software_architecture_domain_pack.md
@@ -233,6 +234,14 @@ or the task-local canonical owner named there.
 - Engineering Review is a shared capability for implementation/change safety,
   not a role, pipeline, lifecycle stage, review gate, or mandatory artifact
   set.
+- Task Need Recognition is an evidence-first advisory capability for likely
+  task type, capabilities, Domain Packs, evidence/research, risk/consequence
+  and review needs, significance, ambiguity, decomposition, uncertainty, and
+  negative evidence.
+  Intake Agent may prepare the view; Chief Editor remains the sole routing,
+  activation, depth, split, planning, and next-action authority. It is not a
+  classifier, score, role, pipeline, stage, gate, status, mandatory artifact,
+  or automatic action.
 - Knowledge Evolution is a bounded capability inside the Editorial Learning
   Framework for reusable learning disposition, pattern candidates,
   canon-update candidates, stale/conflicting knowledge, correction/retirement,

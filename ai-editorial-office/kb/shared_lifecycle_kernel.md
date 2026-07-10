@@ -14,6 +14,10 @@ labels, and reusable evidence section standard used by lifecycle gates.
 `/kb/analytical_reasoning.md` owns analytical moves such as problem framing,
 decomposition, hypothesis comparison, disconfirmation, contradiction handling,
 sufficiency judgment, and uncertainty communication.
+`/kb/task_need_recognition.md` owns the optional advisory view of likely task
+type, capabilities, Domain Packs, research/evidence/review needs, significance,
+ambiguity, decomposition, uncertainty, and negative evidence before Chief
+Editor routing.
 `/kb/professional_analysis.md` owns Professional Analysis moves such as
 analytical product shape, structured interpretation, synthesis,
 recommendation building, implications, risks, uncertainty, and decision-ready
@@ -57,10 +61,10 @@ Default lifecycle:
 intake -> routing -> research when required -> drafting or UX writing -> review -> repair when required -> finalization -> governance -> memory disposition
 ```
 
-Source conversion, analytical reasoning, Professional Analysis, Professional
-Communication, Architecture Review, memory curation, Knowledge Evolution,
-learning extraction, and canon evolution are capabilities that can attach to
-the lifecycle when needed. Active Domain Knowledge Pack context can attach
+Source conversion, Task Need Recognition, analytical reasoning, Professional
+Analysis, Professional Communication, Architecture Review, memory curation,
+Knowledge Evolution, learning extraction, and canon evolution are capabilities
+that can attach to the lifecycle when needed. Active Domain Knowledge Pack context can attach
 when domain context is material. Capabilities and active domain-pack context are
 not standing default roles and do not create a separate workflow engine.
 
@@ -199,6 +203,13 @@ finding, or closure decision may consume the evidence collection pattern from
 inside an existing artifact unless risk, review, or governance needs a separate
 evidence artifact.
 
+Intake or routing may consume the compact Task Need Recognition view from
+`/kb/task_need_recognition.md` when task nature, likely capability or Domain
+Pack needs, depth, significance, ambiguity, decomposition, or uncertainty is
+material. The view stays inside an existing brief, manifest, or orchestration
+plan; it is advisory evidence for Chief Editor and does not create a gate,
+stage, route, activation, depth decision, or mandatory artifact.
+
 Any stage that depends on complex analysis, competing explanations, key
 assumptions, contradiction, diagnostic evidence, or sufficiency judgment may
 consume the compact analytical pattern from `/kb/analytical_reasoning.md`.
@@ -255,13 +266,14 @@ justified.
 - Purpose: turn the raw request into a bounded task object.
 - Minimum required context: user request, `AGENTS.md` active invariants or a
   known-good short reference, existing `task-manifest.md` when continuing.
-- Optional context: current `project-state.md`, relevant client profile trigger,
-  relevant prior task only when the user explicitly refers to it.
+- Optional context: current `project-state.md`, `/kb/task_need_recognition.md`
+  when task nature or likely needs are material, relevant client profile
+  trigger, relevant prior task only when the user explicitly refers to it.
 - Forbidden context: all old task folders, all pipelines, all role specs, or the
   legacy/private archive by default.
 - Expected outputs: `brief.md`, initial or updated `task-manifest.md`, audience
-  and intended outcome when known or material, missing information or preflight
-  blocker.
+  and intended outcome when known or material, optional advisory Task Need
+  Recognition view when material, missing information or preflight blocker.
 - Stop conditions: unclear objective, unsafe instruction conflict, missing task
   identity, or repository/path ambiguity.
 - Next stage: routing, clarification, or blocked.
@@ -275,6 +287,7 @@ justified.
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
 - Optional context: `/kb/task_object_model.md`, `/kb/capability_registry.md`,
+  `/kb/task_need_recognition.md` and the Intake recommendation when material,
   `/kb/analytical_reasoning.md` when complexity or decision impact is material,
   `/kb/architecture_review.md` when architectural significance is material,
   `/kb/domain_knowledge_pack_standard.md` and candidate Domain Knowledge Pack
@@ -285,8 +298,9 @@ justified.
 - Expected outputs: `orchestration_plan.md`, updated manifest/status, selected
   workflow overlay or mini-contract, audience/outcome fit when material,
   quality priorities/tradeoffs when material, planning level and options
-  considered when material, analytical question or key assumptions when
-  material, architecture drivers or review scope when material,
+  considered when material, Chief Editor acceptance/rejection/narrowing of the
+  Task Need Recognition recommendations when material, analytical question or
+  key assumptions when material, architecture drivers or review scope when material,
   active Domain Knowledge Pack and activation reason when material,
   evidence basis/confidence for material route decisions, next action.
 - Stop conditions: invalid role, unresolved risk mode, missing source boundary,

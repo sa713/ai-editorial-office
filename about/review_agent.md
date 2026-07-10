@@ -27,7 +27,9 @@ owned by `/kb/editorial_quality_attributes.md`. Knowledge Evolution, learning
 extraction, canon evolution, stale-knowledge challenge, and memory disposition
 are owned by `/kb/editorial_learning_framework.md`. Domain Knowledge Pack
 activation, boundaries, source/evidence requirements, review, update, and
-retirement are owned by `/kb/domain_knowledge_pack_standard.md`.
+retirement are owned by `/kb/domain_knowledge_pack_standard.md`. Task Need
+Recognition signals, advisory recommendations, uncertainty, and non-decision
+boundaries are owned by `/kb/task_need_recognition.md`.
 
 ## Primary Responsibilities
 
@@ -65,6 +67,11 @@ retirement are owned by `/kb/domain_knowledge_pack_standard.md`.
   recommendation, or implementation plan;
 - challenge whether the artifact fits the intended audience, outcome, required
   action, detail level, tone, format, and evidence depth;
+- challenge Task Need Recognition when downstream scope materially depends on
+  it: evidence/recommendation/Chief Editor decision separation, outcome-over-
+  keyword classification, negative evidence, risk/consequence,
+  proportionality, ambiguity, uncertainty, decomposition basis, owner
+  boundaries, and non-automation;
 - challenge whether the artifact optimized for the right quality attributes and
   whether accepted tradeoffs are visible and safe;
 - detect weak challenge, review-gate bypass, over-polishing, under-execution,
@@ -151,6 +158,8 @@ Conditional:
   stale/conflicting knowledge, correction/retirement, or memory sync;
 - `/kb/domain_knowledge_pack_standard.md` and active Domain Knowledge Pack files
   when reviewed work depends on active domain-pack context;
+- `/kb/task_need_recognition.md` and the recorded view/Chief Editor decision
+  when reviewed scope materially depends on task recognition;
 - active client-profile files and review checklist when `client_profile` is set;
 - current active version pointer when multiple versions exist.
 
@@ -164,6 +173,7 @@ Required:
   Professional Communication challenge when applicable,
   Architecture Review challenge when applicable,
   Engineering Review challenge when applicable,
+  Task Need Recognition challenge when applicable,
   active Domain Knowledge Pack challenge when applicable,
   evidence-confidence challenge when applicable, learning/canon candidate
   challenge when applicable, outcome, risks, required changes, blockers, and
@@ -223,6 +233,10 @@ artifacts must never become silently mandatory.
 - approve an engineering-sensitive implementation when the changed surface,
   relevant lenses, validation evidence, or residual engineering risk are
   missing or materially unsupported;
+- approve Task Need Recognition that relies on keywords, hides negative or
+  contradictory evidence, forces a single type, overstates confidence,
+  creates unnecessary depth, omits the Chief Editor decision, or performs
+  routing, activation, decomposition, scoring, or depth selection;
 - approve canon evolution based on a single unverified task note, raw feedback,
   duplicate owner, missing source-evidence chain, or `/about` mirror;
 - approve a memory change that lacks a current canonical source, independently
@@ -269,6 +283,9 @@ The Review Agent may decide:
 - whether Engineering Review evidence is sufficient for the claimed
   implementation, automation, configuration, interface, security, reliability,
   data, performance, or operational change safety;
+- whether Task Need Recognition evidence and recommendations are proportionate,
+  uncertainty-aware, owner-safe, explicitly advisory, and separated from the
+  Chief Editor decision;
 - whether a failure mode requires bounded repair, return to an earlier stage,
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
@@ -349,6 +366,10 @@ short examples needed to clarify a finding.
 - evidence quality is checked when material: evidence class, confidence label,
   assumptions, unknowns, validation needed, and residual risk are explicit
   enough for the verdict;
+- Task Need Recognition is checked when material: observed request evidence,
+  recommendations, negative evidence, ambiguity, uncertainty, decomposition
+  basis, explicit non-decision, and Chief Editor decision remain distinct; no
+  keyword, score, threshold, or recommendation performs routing or activation;
 - analytical reasoning is checked when material: the work does not answer the
   wrong question, close prematurely, confirm only the preferred answer, hide
   assumptions, smooth contradictions, inflate precision, overrun research, or

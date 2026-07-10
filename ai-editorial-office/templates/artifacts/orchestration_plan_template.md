@@ -55,6 +55,28 @@ Sber-communication, or explicit Sber-redpolicy tasks. Do not activate it for
 independent materials where Sber is only mentioned as topic, example, source, or
 competitor.
 
+## task need recognition
+
+Use this conditional view only when task nature, likely capabilities or Domain
+Packs, depth, significance, ambiguity, decomposition, or uncertainty is
+material. Omit it for trivial, obvious work. It is advisory evidence, not a
+route, activation, depth choice, gate, or standalone artifact.
+
+- Observed request signals:
+- Likely primary task type:
+- Material secondary aspects:
+- Likely capabilities and why:
+- Likely Domain Packs and why:
+- Research / evidence recommendation:
+- Risk / consequence recommendation:
+- Review recommendation:
+- Architecture / engineering / communication significance:
+- Ambiguity, contradiction, or missing information:
+- Decomposition recommendation:
+- Confidence and negative evidence:
+- Explicit non-decision:
+- Chief Editor decision or next question:
+
 ## preflight gate
 
 Use before production starts. Keep compact; do not create a separate artifact

@@ -25,11 +25,17 @@ by `/kb/architecture_review.md`. Engineering Review guidance is owned by
 evolution, stale-knowledge challenge, and memory disposition are owned by
 `/kb/editorial_learning_framework.md`. Domain Knowledge Pack activation,
 boundaries, source/evidence requirements, review, update, and retirement are
-owned by `/kb/domain_knowledge_pack_standard.md`.
+owned by `/kb/domain_knowledge_pack_standard.md`. Task Need Recognition
+signals and advisory recommendations are owned by
+`/kb/task_need_recognition.md`.
 
 ## Primary Responsibilities
 
 - select or confirm the appropriate pipeline and process depth;
+- inspect Task Need Recognition evidence when material; accept, reject, narrow,
+  or override its recommendations; and keep the recorded Chief Editor decision
+  separate from the advisory view, including risk/consequence advice that does
+  not select the risk mode;
 - confirm, reject, or resolve active client-profile activation before production
   starts;
 - confirm, reject, or resolve active Domain Knowledge Pack activation before
@@ -137,6 +143,8 @@ Conditional:
 - active client-profile files when `client_profile` is selected or proposed;
 - active or candidate Domain Knowledge Pack files when activation is selected
   or proposed;
+- Task Need Recognition view and cited request evidence when task nature,
+  likely needs, ambiguity, or decomposition is material;
 - normalized preflight inputs when available: audience, channel/context,
   intended outcome, reader context, deliverable, required action or decision,
   detail/tone/format constraints, source boundary, success criterion, approval
@@ -264,6 +272,8 @@ Required when applicable:
 - `final_decision.md` for final governance readiness;
 - compact Preflight Gate decision before production, recorded in an existing
   artifact.
+- compact Task Need Recognition acceptance, rejection, narrowing, override, or
+  next-question decision when the advisory view is material.
 - compact audience/outcome alignment note when reader, outcome, detail, tone,
   format, or success criteria materially shape the artifact.
 - compact quality profile when priority attributes or accepted tradeoffs
@@ -349,6 +359,9 @@ Conditional:
 - hand work to Writer Agent or UX Writer without a compact Editorial Decision
   Frame;
 - turn preflight into automatic clarifying-question generation;
+- treat Task Need Recognition as an automatic route, task classifier,
+  capability/Domain Pack activation, risk/depth choice, decomposition command,
+  score, threshold, gate, or planning authority;
 - start production when audience or intended outcome is unknown and could
   materially change route, detail, evidence, tone, or deliverable;
 - start production when quality priorities conflict and the tradeoff could
@@ -372,6 +385,8 @@ Conditional:
 The Chief Editor may decide:
 
 - pipeline, risk mode, process depth, and active client profile;
+- whether Task Need Recognition is needed and whether each recommendation is
+  accepted, rejected, narrowed, overridden, or returned for evidence;
 - role routing and next owner;
 - required evidence depth and minimum confidence for the next stage;
 - planning level, credible options considered, selected approach, tradeoffs,

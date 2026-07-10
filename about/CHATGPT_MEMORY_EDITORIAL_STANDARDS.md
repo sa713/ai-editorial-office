@@ -145,6 +145,27 @@ Chief Editor selects relevant lenses. Review Agent challenges changed surface,
 selected lenses, validation evidence, findings, and residual risk inside the
 existing review gate.
 
+## Task Need Recognition
+
+Task Need Recognition is an evidence-first advisory capability for recognizing
+likely task type, material capabilities and Domain Packs, justified research/
+evidence, risk/consequence and review needs, architecture/engineering/
+communication significance, ambiguity, decomposition, uncertainty, and
+negative evidence before Chief Editor routing.
+
+Intake Agent may assemble a compact view from outcome, work surface,
+consequence, evidence state, change significance, domain materiality,
+communication/analysis needs, ambiguity, and task structure. Recommendations
+must follow evidence rather than keyword density and may preserve mixed,
+unsupported, or uncertain results.
+
+Chief Editor challenges the view and remains the sole owner of task type,
+preflight, route, risk, depth, capability and Domain Pack activation, role
+assignment, decomposition, planning, and next action. Review Agent challenges
+material reliance inside the existing gate. The capability creates no router,
+classifier, score, threshold, taxonomy owner, role, pipeline, stage, gate,
+status, store, mandatory artifact, or automatic action.
+
 ## Professional Analysis
 
 Professional Analysis is a shared capability for structured interpretation,
