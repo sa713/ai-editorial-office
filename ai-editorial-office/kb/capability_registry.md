@@ -736,26 +736,32 @@ gates, lifecycle stages, pipelines, or mandatory ordinary task artifacts.
 
 ### Memory Curation
 
-- Purpose: decide whether task learning stays local or enters Knowledge
-  Evolution disposition as reusable memory, feedback pattern, backlog
-  candidate, `/about` sync note, or separate system update, following
-  `/kb/editorial_learning_framework.md` when canon promotion, stale knowledge,
-  or memory disposition is considered.
-- Typical inputs: final decision, feedback, review findings, repeated patterns,
-  retrospectives.
+- Purpose: decide whether task learning stays local, enters Knowledge
+  Evolution disposition, or requires a bounded `/about` exact-copy,
+  compact-summary, correction, compression, retirement, omission, deferral, or
+  no-sync decision under `/kb/editorial_learning_framework.md`.
+- Typical inputs: canonical change, mapped copy, compact summary, final
+  decision, feedback/outcome evidence, review finding, repeated pattern,
+  Evaluation Signal, checker output, or repository conflict.
 - Typical outputs: `feedback.md`, `kb/feedback_patterns.md` update, backlog
-  candidate, learning candidate, memory disposition note, `/about` sync note,
-  or separate reviewed system update.
-- Accountability wrapper: Chief Editor for task-local classification; future
-  system updates require separate reviewed work.
+  candidate, learning candidate, material memory-disposition/no-sync note,
+  explicit manual `/about` update, or separate reviewed system update.
+- Accountability wrapper: Chief Editor owns materiality/disposition and
+  authorizes bounded manual change; Review Agent independently challenges
+  memory fidelity and safety; future system updates require separate reviewed
+  work.
 - Required artifacts: none unless feedback or reusable pattern exists.
 - Optional artifacts: feedback/pattern entry.
-- Stop conditions: single unverified reaction being treated as policy, stale
-  memory, duplicate rule.
+- Stop conditions: missing/contradictory canonical source, unreviewed or
+  sensitive propagation, memory-driven canon override, silent context loss,
+  autonomous write, single unverified reaction treated as policy, or duplicate
+  rule.
 - Quality criteria: only future-useful validated learning is promoted; task
-  local notes remain local unless canonization criteria are met; stale
-  knowledge is challenged through an owner/evidence path; `/about` remains
-  memory export, not canon.
+  local/private/temporary detail remains local; exact copies match mapped
+  sources; compact summaries preserve source, state, scope, boundaries, and
+  caveats; stale/duplicate/obsolete facts are corrected, consolidated, or
+  retired without losing meaningful repository context; material no-sync is
+  explicit; `/about` remains memory export, not canon.
 - Expansion triggers: repeated signal, systemic failure, governance change,
   memory-package update.
 
@@ -834,19 +840,23 @@ gates, lifecycle stages, pipelines, or mandatory ordinary task artifacts.
 
 ### Integrity Checking
 
-- Purpose: report likely drift, missing evidence, sync failures, or task-package
-  inconsistencies.
+- Purpose: report likely drift, missing evidence, exact-copy/package sync
+  failures, broken paths/references, or task-package inconsistencies.
 - Typical inputs: task folder, `/about` package, templates, scripts, current
   canon.
-- Typical outputs: script/report output, validation note, warning list.
+- Typical outputs: script/report output, validation note, warning list, or
+  material memory-hygiene signal for Chief Editor disposition.
 - Accountability wrapper: check/script capability; no Integrity Checker role
   exists.
 - Required artifacts: none unless a mission/report records validation.
 - Optional artifacts: validation report or check-pack.
-- Stop conditions: check would modify files automatically, become a rule owner,
-  or force legacy task rewrites.
+- Stop conditions: check would modify, summarize, correct, delete, consolidate,
+  or retire files automatically; select memory disposition; become a rule
+  owner; infer sensitive-data handling; or force legacy task rewrites.
 - Quality criteria: checks are read-only unless explicitly implemented as a
-  separate reviewed update; failures route to Chief Editor or system task.
+  separate reviewed update; exact-copy/package claims state what was actually
+  tested; compact-summary semantics remain human-reviewed; failures route to
+  Chief Editor or a system task.
 - Expansion triggers: release/publication, memory package update, task package
   migration, high-governance closure.
 

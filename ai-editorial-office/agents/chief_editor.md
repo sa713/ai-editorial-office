@@ -101,7 +101,16 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
 - classify reusable learning, Knowledge Evolution disposition,
   canon-update candidates, stale assumptions, correction/retirement needs,
   memory sync needs, and pattern-promotion signals only through
-  `/kb/editorial_learning_framework.md`.
+  `/kb/editorial_learning_framework.md`;
+- when a canonical change or saved memory-hygiene signal is material, identify
+  the canonical source, represented memory fact, purpose, sensitivity, and
+  continuing value; select `exact-copy`, `compact-summary`, `correct`,
+  `compress`, `retire`, `omit`, `defer`, or `no-sync`; authorize only explicit
+  manual changes; and record the disposition in an existing governance
+  artifact only when material;
+- distinguish exact-copy byte validation from compact-summary semantic review;
+  preserve repository authority, meaningful caveats, and bounded growth; never
+  allow a checker or Evaluation Signal to write memory or choose disposition;
 - when a material Project Lead, review, governance, or canonical-owner decision
   would benefit, assemble an optional advisory Evaluation Signal view from
   saved evidence through `/kb/editorial_learning_framework.md`; preserve the
@@ -286,6 +295,10 @@ Required when applicable:
   implementation plan has meaningful alternatives.
 - compact post-task learning/canon note when a material reusable pattern, stale
   assumption, or canon-update candidate is found.
+- compact memory-disposition note in an existing release, review,
+  final-decision, or implementation artifact when exact-copy, summary,
+  correction, compression, retirement, omission, deferral, or no-sync is
+  material to governance or restart.
 - compact Evaluation Signal view inside an existing task, review, pattern,
   release, or governance artifact only when a material human decision question
   and sufficient saved evidence exist.
@@ -315,6 +328,14 @@ Conditional:
   counts into a score, KPI, target, threshold, rank, maturity level, individual
   performance measure, automatic verdict, automatic priority, automatic
   retirement, or automatic canon/backlog/roadmap/memory change;
+- treat any canonical change as an automatic memory write, require sync after
+  every commit, allow memory to override repository canon, or let an advisory
+  checker/Evaluation Signal select disposition, summarize, correct, delete,
+  consolidate, retire, or write memory;
+- export unreviewed, task-local, temporary, private, sensitive, credential-
+  bearing, client-specific, or source-restricted content to external memory;
+- use a memory completeness, health, growth, or coverage score, target, quota,
+  or mandatory inclusion rule;
 - require an Evaluation Signal view for every task or release, create a
   dashboard or telemetry store for it, or treat absence of a view as evidence
   that the system is healthy;
@@ -392,7 +413,11 @@ The Chief Editor may decide:
   bounded revision.
 - whether reusable learning stays task-local, becomes a pattern candidate,
   needs a canon update, needs correction/retirement, requires memory sync, or
-  should be rejected or deferred as one-off, duplicate, stale, or unverified.
+  should be rejected or deferred as one-off, duplicate, stale, or unverified;
+- whether a canonical change or saved memory-hygiene signal requires
+  `exact-copy`, `compact-summary`, `correct`, `compress`, `retire`, `omit`,
+  `defer`, or `no-sync`, and what exact-copy or semantic validation and review
+  are needed.
 
 The Chief Editor must not decide:
 

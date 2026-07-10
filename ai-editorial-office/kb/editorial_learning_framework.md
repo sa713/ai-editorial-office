@@ -587,20 +587,236 @@ may become a `pattern_candidate`. Pack content or activation rules change only
 through a reviewed update to the specific pack or Domain Knowledge Pack
 Standard; use does not modify a pack automatically.
 
-## `/about` Memory Disposition
+## Memory Hygiene Intelligence And `/about` Disposition
 
-`/about` is an external memory package, not canon. Knowledge Evolution may
-trigger `/about` sync only after canonical source files or compact summaries
-change in a way that should be visible outside the repository.
+Memory Hygiene Intelligence is the bounded Knowledge Evolution behavior for
+keeping external project memory accurate, compact, useful, synchronized, and
+non-canonical. It refines the existing Memory Curation, stale-knowledge, and
+Integrity Checking capabilities. It is not a new capability, owner, role,
+pipeline, lifecycle stage, review gate, memory store, synchronization engine,
+or automatic documentation process.
 
-Memory sync rules:
+`/about` is the external memory package. Repository canon remains
+authoritative. A memory fact is valid only as an exact copy or reviewed compact
+summary derived from current canonical sources. If memory and canon conflict,
+stop relying on the memory fact and repair memory from canon. Never change
+canon merely to match memory.
 
-- update `/about` only from canonical source or approved compact summaries;
-- do not let `/about` introduce new rules;
-- if `/about` diverges, treat the repository source as authoritative;
-- run the memory package check when `/about` is updated;
-- record memory disposition in `final_decision.md`, release report, or release
-  pack when material.
+### Bounded Flow
+
+```text
+canonical change or saved memory-hygiene signal
+-> identify canonical source and evidence
+-> materiality, purpose, sensitivity, and continuing-value check
+-> exact-copy | compact-summary | correct | compress | retire |
+   omit | defer | no-sync
+-> branch-appropriate validation
+-> independent review
+-> explicit manual memory update or preserved no-change
+```
+
+A canonical change is a reason to check disposition, not permission to write
+memory. Most commits do not require memory synchronization.
+
+### Sync Triggers
+
+Apply the disposition check when material evidence shows one of these:
+
+- a canonical file mapped as an exact copy changes;
+- accepted or current release state, active phase, next action, or approval
+  state changes and external memory represents it;
+- canonical roles, authority, lifecycle, supported features, memory-package
+  usage, or critical constraints change in a way external memory users need;
+- the package mapping, file-count contract, or validation contract changes
+  through a reviewed update;
+- the memory-package checker reports a mismatch or missing package file;
+- repository inspection, review, saved feedback/outcome evidence, or a material
+  Evaluation Signal reports stale, contradictory, duplicated, bloated,
+  sensitive, or misleading memory;
+- temporary Release Candidate or transition state becomes accepted, rejected,
+  superseded, or obsolete;
+- a source path, role, status, validator, current-version statement, or summary
+  boundary no longer resolves or remains accurate.
+
+Time alone is a review signal, not proof that a fact is stale. Repository
+contradiction, changed source meaning, or expired purpose establishes the need
+for repair.
+
+### No-Sync And Omission Triggers
+
+Choose `no-sync` or `omit` when:
+
+- the change is internal research, task evidence, test detail, draft history,
+  implementation narration, or another repository-only artifact;
+- no fact represented in external memory changed;
+- an existing summary remains accurate and sufficient for external use;
+- temporary detail would create churn without durable external-memory value;
+- content is private, sensitive, client-specific, credential-bearing,
+  source-restricted, security-sensitive, or task-local;
+- the proposed fact duplicates existing memory or canon without adding useful
+  orientation;
+- maintenance, bloat, privacy, or misuse risk exceeds continuing external
+  value;
+- evidence, canonical state, authorization, or safe summary wording is not yet
+  sufficient, in which case `defer` may be safer than a final omission.
+
+`no-sync` is an explicit disposition after a materiality check, not a skipped
+check. Record it in an existing `final_decision.md`, release report, Release
+Pack, review, or implementation report only when the decision matters for
+governance, auditability, or restart. Do not create a per-commit memory log.
+
+### Memory Dispositions
+
+Use the smallest supported disposition:
+
+| Disposition | Use when | Evidence and result |
+| --- | --- | --- |
+| `exact-copy` | The active package intentionally exposes an operational file whose wording must match canon. | Name the canonical path and copy mapping; replace the package copy from the source and verify byte identity. |
+| `compact-summary` | External memory needs durable orientation, state, or boundaries but not the full owner file. | Name the canonical source set; preserve material meaning in an existing summary and verify it semantically. |
+| `correct` | Memory is factually wrong, stale, contradictory, or misstates scope, authority, certainty, or status. | Cite current canon; remove the wrong claim and replace it only with source-supported meaning. |
+| `compress` | Useful memory is verbose, repeated, fragmented, or crowded by lower-value detail. | Consolidate at the strongest existing location; preserve unique scope, caveats, and source pointers while reducing repetition. |
+| `retire` | Content is obsolete, superseded, misleading, or has no continuing external-memory value. | Remove or replace it from active memory; keep meaningful history and rationale in repository artifacts. |
+| `omit` | Content is repository-only, raw, temporary, task-local, sensitive, private, or externally unnecessary. | Keep it out of memory; verify that no required external context is lost. |
+| `defer` | Source, evidence, approval, accepted state, safe wording, or contradiction resolution is incomplete. | Make no speculative change; record the unresolved issue and next verification when material. |
+| `no-sync` | Canon changed but external facts and the package contract remain accurate and sufficient. | Leave memory unchanged after checking the affected representation; record rationale only when material. |
+
+These labels improve decision clarity. They are not task statuses, lifecycle
+states, scoring categories, mandatory fields, or a second knowledge taxonomy.
+A release may use different dispositions for different facts.
+
+### Exact Copies
+
+Use exact copies only for files deliberately included in the package mapping
+because external operation needs their current wording. The repository file is
+the only content owner. Do not independently edit the copy.
+
+Exact-copy validation requires:
+
+- current canonical path and mapped package name;
+- byte-for-byte identity after the authorized copy;
+- package file-count validation;
+- independent review of the changed scope when the release/task requires it.
+
+The package checker may report mismatch, but it must not write or select a
+disposition automatically.
+
+### Compact Summaries
+
+Use compact summaries for durable orientation rather than full operational
+instruction. A summary must remain reconstructable from its canonical sources
+and preserve, when material:
+
+- current decision or state and the next action;
+- source and authority, including `/about` non-canonical status;
+- scope, applicability, and non-applicability;
+- role, review, approval, and automation boundaries;
+- meaningful caveats, exceptions, risk, uncertainty, and stop conditions;
+- replacement or supersession state when old memory would mislead.
+
+Omit raw evidence, task-local history, draft debate, implementation narration,
+repeated prose, and details whose only durable home should be the repository.
+Compression fails when the summary becomes broader, more certain, more
+permanent, or more authoritative than canon.
+
+Summary validation is semantic and human-reviewed. The exact-copy checker
+cannot establish that omissions, phrasing, or compression preserve meaning.
+
+### Stale Or Contradictory Memory Repair
+
+Treat these as material indicators:
+
+- exact-copy mismatch;
+- current state, status, approval, or next-action conflict;
+- missing or renamed source, role, path, status, or validator;
+- words such as `current`, `latest`, `temporary`, `next`, or `pending` without
+  a surviving current-state basis;
+- summary language broader, narrower, or more certain than canon;
+- duplicate memory facts that disagree or obscure scope;
+- deprecated or retired behavior still described as active;
+- sensitive detail retained after its external purpose ends;
+- package growth without new durable external value.
+
+Repair in this order:
+
+1. Stop using the disputed memory fact as evidence.
+2. Identify the canonical owner and current reviewed state.
+3. If canon is clear, `correct`, `compress`, replace, or `retire` memory from
+   that source.
+4. If canonical sources conflict, route the owner conflict through Chief
+   Editor, repair canon first, and `defer` or block the memory change.
+5. Run exact-copy or semantic validation as applicable.
+6. Independently review authority, meaning, privacy, growth, and potential
+   context loss.
+7. Record material correction, consolidation, retirement, deferral, or
+   no-sync evidence in the smallest existing governance artifact.
+
+Do not average contradictions into vague wording, choose a convenient source,
+silently delete meaningful context, or let memory override repository files.
+
+### Consolidation, Compression, And Retirement
+
+Before adding a fact, search current memory summaries and mapped copies. When
+duplicates exist, consolidate them into the strongest existing summary
+location, merge only unique useful meaning, retain necessary source pointers
+and caveats, and remove redundant statements.
+
+Retirement removes obsolete content from active external memory; it does not
+delete repository history. Use replacement wording when new guidance
+supersedes the old fact. Use removal when no replacement is needed. Preserve a
+repository pointer or disposition rationale when future readers may need to
+understand why context changed.
+
+No memory size score, completeness metric, growth target, or fact quota is
+used. Growth is bounded by continuing external value, the package contract,
+deduplication, omission, compression, and independent review.
+
+### Evidence And Auditability
+
+When disposition is material, make these reconstructable in the smallest
+existing release, review, final-decision, or implementation artifact:
+
+- source signal and canonical source path(s);
+- memory fact/location currently affected;
+- materiality, purpose, sensitivity, and continuing-value judgment;
+- chosen disposition and non-obvious rejected alternatives;
+- exact-copy or summary validation performed;
+- context preserved during correction, consolidation, or retirement;
+- reviewer outcome;
+- explicit canonical-authority and non-automation boundary.
+
+These are conditional evidence fields. They do not create a mandatory memory
+artifact, task-object field, audit log, or review gate.
+
+### Evaluation Signals And Advisory Automation
+
+An Evaluation Signal may report likely drift, duplication, contradiction,
+maintenance burden, repeated validation failure, or memory bloat. It remains
+an input to Chief Editor judgment. It cannot choose a disposition, write or
+delete memory, change canon, prove completeness, or trigger synchronization
+automatically.
+
+Advisory automation may count package files, compare mapped exact copies,
+check paths/references, and report likely drift for review. It must not write,
+summarize, correct, consolidate, omit, or retire content; change canon to fit
+memory; infer sensitive-data disposition; propagate raw feedback or task-local
+content; or record release acceptance.
+
+### Ownership And Review
+
+| Role or check | Memory-hygiene responsibility |
+| --- | --- |
+| Chief Editor | Identify canonical source, decide materiality and disposition, record material no-sync/deferral, authorize bounded manual change, and preserve Project Lead authority. |
+| Research Agent | Verify source freshness, provenance, conflict, privacy, or summary evidence when assigned; do not decide disposition. |
+| Writer Agent | Apply the authorized exact-copy or compact-summary change from named sources; do not add memory-only rules. |
+| Review Agent | Challenge source fidelity, summary semantics, authority, privacy, omission, duplication, growth, context preservation, validation, and non-automation inside the existing review gate. |
+| Final Editor | Preserve reviewed memory-disposition meaning during controlled finalization; do not reclassify it. |
+| Integrity check/script | Report file-count, exact-copy, path, reference, or likely-drift failures; never write or become an owner. |
+| Project Lead | Accept or request changes to a release; no memory state supplies acceptance automatically. |
+
+Run `ai-editorial-office/scripts/check_about_memory_package.sh` whenever
+`/about` is updated. Passing the checker proves only the fixed package count and
+mapped exact-copy identity; review must still validate compact-summary meaning,
+omissions, contradictions, and growth.
 
 ## Integration Points
 
@@ -620,8 +836,9 @@ safeguard.
 
 Knowledge Evolution includes learning extraction, canon evolution, pattern
 reuse, stale knowledge detection, correction, retirement, and memory
-disposition as shared capabilities. They do not create a standing Historian,
-Memory Manager, Canon Manager, or Knowledge Curator role.
+disposition, including the bounded Memory Hygiene Intelligence contract, as
+shared capabilities. They do not create a standing Historian, Memory Manager,
+Canon Manager, or Knowledge Curator role.
 
 ### Failure Modes
 
@@ -654,7 +871,7 @@ Learning and canon evolution are shared work, not a new role.
 
 | Role | Learning responsibility |
 | --- | --- |
-| Chief Editor | Classify reusable decisions, learning disposition, pattern candidates, canon updates, stale assumptions, correction/retirement needs, and `/about` sync disposition during governance or memory curation. |
+| Chief Editor | Classify reusable decisions, learning disposition, pattern candidates, canon updates, stale assumptions, correction/retirement needs, and `/about` materiality/disposition during governance or memory curation. |
 | Research Agent | Separate durable evidence/context from task-local findings; flag source freshness, provenance, or evidence-pattern signals. |
 | Review Agent | Challenge Knowledge Evolution claims; identify repeated findings, canon duplication, stale/conflicting canon, unsupported promotion, or safeguards that may deserve a system update. |
 | Final Editor | Preserve reviewed reusable learning cues without bloating final output or classifying feedback/canon disposition. |
@@ -672,6 +889,10 @@ This framework does not:
 - make every task produce a retrospective;
 - turn feedback into automatic canon;
 - make `/about` canonical;
+- create a second memory system, autonomous synchronization mechanism, or
+  mandatory per-commit sync;
+- use memory completeness, health, growth, or scoring metrics;
+- propagate unreviewed, task-local, temporary, private, or sensitive content;
 - replace `customer_feedback_loop.md` or `feedback_patterns.md`;
 - bypass review for system updates;
 - delete historical artifacts;

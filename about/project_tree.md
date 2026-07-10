@@ -243,6 +243,14 @@ or the task-local canonical owner named there.
   not a capability, dashboard, telemetry layer, role, pipeline, gate, status,
   score, KPI, ranking, target, maturity level, mandatory artifact, or automatic
   governance path.
+- Memory Hygiene Intelligence is the source-first `/about` disposition
+  behavior inside existing Knowledge Evolution, Memory Curation,
+  stale-knowledge, and Integrity Checking capabilities. It distinguishes
+  exact copies from compact summaries and supports correction, compression,
+  retirement, omission, deferral, and no-sync through Chief Editor judgment,
+  independent review, and read-only validation. It is not a new capability,
+  owner, role, pipeline, lifecycle stage, review gate, store, score, automatic
+  synchronization mechanism, or authority over repository canon.
 - Domain Knowledge Packs are source-backed context packages for material
   domain context. They are not roles, capabilities, pipelines, lifecycle
   stages, review gates, policy owners, client profiles, task status models, or

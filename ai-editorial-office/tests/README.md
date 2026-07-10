@@ -218,6 +218,15 @@ material, alternatives, confidence, existing owner, and explicit non-decision.
 It does not define active rules, create scores or automatic actions, or prove
 that the synthetic signals exist in real tasks.
 
+`memory_hygiene_intelligence_smoke_test.md` records the ten S5.R3
+representative cases. It checks exact-copy synchronization, research no-sync,
+temporary-state replacement, stale status correction, canon/memory
+contradiction, large-release compression, sensitive/task-local omission,
+explicit no-sync, duplicate consolidation, and obsolete-memory retirement. It
+verifies source, materiality, disposition, owner, branch validation, canonical
+authority, bounded growth, preserved meaningful context, and no automatic
+propagation. It does not define active rules or prove memory completeness.
+
 `domain_knowledge_pack_standard_smoke_test.md` records synthetic activation,
 non-activation, boundary, source, update, retirement, and review cases for
 `/kb/domain_knowledge_pack_standard.md`. It checks that Domain Knowledge Packs

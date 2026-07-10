@@ -2,8 +2,9 @@
 
 ## Current phase
 Stage 4 - Domain Expertise is complete. Stage 5 - Editorial Intelligence is
-active. S5.R1 - Feedback and Learning Intelligence is accepted. S5.R2 -
-Evaluation Signals is a release candidate in Project Lead review.
+active. S5.R1 - Feedback and Learning Intelligence and S5.R2 - Evaluation
+Signals are accepted. S5.R3 - Memory Hygiene Intelligence is a release
+candidate in Project Lead review.
 
 ## Completed
 - governance layer;
@@ -48,12 +49,18 @@ Evaluation Signals is a release candidate in Project Lead review.
   from existing customer-feedback classification to existing Knowledge
   Evolution disposition, evidence/applicability checks, owner-scoped action,
   rejection/deferral, and actual Domain Pack use-effect capture.
-- Evaluation Signals release candidate with an optional advisory view over
+- Accepted Evaluation Signals release with an optional advisory view over
   saved capability activation, Domain Pack effect, review, architecture,
   evidence, learning, stale-knowledge, release, and maintenance observations;
   it preserves comparison context, contradictions, confidence, current owners,
   and explicit non-decision without scores, KPIs, rankings, dashboards, or
   automatic governance.
+- Memory Hygiene Intelligence release candidate with a source-first manual
+  disposition flow for external memory; exact-copy and compact-summary
+  branches; sync/no-sync, correction, compression, omission, deferral, and
+  retirement; stale/contradictory memory repair; bounded growth; independent
+  review; and advisory-only checks without automatic writes or canonical
+  override.
 - Accepted Domain Knowledge Pack Standard with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
@@ -107,14 +114,14 @@ repository decision.
 ## Current focus
 Stage 4 is fully closed after Project Lead acceptance. Preserve its stable,
 source-backed domain knowledge layer while Stage 5 continues with S5.R1
-accepted and S5.R2 in Project Lead review.
+and S5.R2 accepted and S5.R3 in Project Lead review.
 
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
-active. S5.R1 is accepted and `Done`; S5.R2 is the current release candidate in
-`Review`; S5.R3 through S5.R5 remain `Not Started`.
+active. S5.R1 and S5.R2 are accepted and `Done`; S5.R3 is the current release
+candidate in `Review`; S5.R4 and S5.R5 remain `Not Started`.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -154,12 +161,13 @@ Follow the active roadmap stage:
 
 - Stage: Stage 5 - Editorial Intelligence, active.
 - Last completed stage: Stage 4 - Domain Expertise.
-- Last completed release: S5.R1 - Feedback and Learning Intelligence.
-- Open release candidates: Professional Analysis and S5.R2 Evaluation Signals.
-- Current next action: Project Lead reviews S5.R2; do not start S5.R3
+- Last completed release: S5.R2 - Evaluation Signals.
+- Open release candidates: Professional Analysis and S5.R3 Memory Hygiene
+  Intelligence.
+- Current next action: Project Lead reviews S5.R3; do not start S5.R4
   automatically.
-- Stage 5 status: active; S5.R1 `Done`; S5.R2 `Review`; S5.R3 through S5.R5
-  `Not Started`.
+- Stage 5 status: active; S5.R1 and S5.R2 `Done`; S5.R3 `Review`; S5.R4 and
+  S5.R5 `Not Started`.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -235,6 +243,15 @@ solely because `ROADMAP.md` changed.
   confidence, proportionality, and non-decision; Project Lead or the existing
   canonical owner remains the decision authority. Counts never prove value,
   acceptance, priority, retirement, or system improvement.
+- Memory Hygiene Intelligence is a bounded refinement of existing Knowledge
+  Evolution, Memory Curation, stale-knowledge, and Integrity Checking behavior.
+  A canonical change or saved drift signal receives a source/materiality/
+  purpose/sensitivity/value check and one of `exact-copy`, `compact-summary`,
+  `correct`, `compress`, `retire`, `omit`, `defer`, or `no-sync`. Exact copies
+  use byte validation; summaries use independent semantic review. Repository
+  canon remains authoritative, `/about` remains a derived 20-file package, and
+  no checker, Evaluation Signal, or other automation writes memory, changes
+  canon, selects disposition, or records acceptance.
 - Engineering Review is a shared capability for implementation/change safety,
   not a new role, pipeline, lifecycle stage, review gate, or mandatory artifact
   set. It is activated only when engineering surfaces such as code, scripts,

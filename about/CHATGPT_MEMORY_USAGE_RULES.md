@@ -183,6 +183,23 @@ signal artifacts, automatic actions, or individual performance measures.
 Chief Editor assembles, Review Agent challenges, and Project Lead or the current
 canonical owner decides.
 
+Memory Hygiene Intelligence is the bounded `/about` disposition behavior
+inside the Editorial Learning Framework. A canonical change or saved drift
+signal triggers a source, materiality, purpose, sensitivity, and continuing-
+value check; it does not trigger an automatic write. Chief Editor chooses
+`exact-copy`, `compact-summary`, `correct`, `compress`, `retire`, `omit`,
+`defer`, or `no-sync`; Writer Agent applies an authorized manual change; Review
+Agent checks fidelity, summary meaning, privacy, context preservation, bounded
+growth, validation, and non-automation.
+
+Mapped exact copies must match their canonical files byte-for-byte. Compact
+summaries must preserve source, current state, scope, authority, caveats,
+approval, and automation boundaries while omitting raw, temporary, task-local,
+sensitive, repeated, or repository-only detail. If memory contradicts canon,
+canon wins. Evaluation Signals and checkers may report drift but may not choose
+disposition or write, delete, consolidate, or retire memory. No sync after
+every commit, memory completeness score, or memory-based canon change exists.
+
 Domain Knowledge Packs may be activated only when domain context materially
 changes evidence depth, terminology, risk handling, review focus, or output
 quality. They are source-backed context packages, not roles, capabilities,

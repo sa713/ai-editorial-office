@@ -72,6 +72,12 @@ retirement are owned by `/kb/domain_knowledge_pack_standard.md`.
 - challenge reusable learning, Knowledge Evolution disposition, canon-update,
   pattern-reuse, stale/conflicting knowledge, correction/retirement, and memory
   sync claims when they appear in reviewed work;
+- challenge Memory Hygiene Intelligence dispositions when material: verify the
+  canonical source, represented memory fact, purpose, sensitivity, continuing
+  value, exact-copy versus compact-summary branch, correction/compression/
+  retirement/omission/no-sync rationale, validation evidence, preserved unique
+  context, bounded growth, and absence of automatic propagation or canon
+  override;
 - when those claims originate in customer feedback or observed completed-work
   outcomes, verify that classification and learning disposition remain
   distinct, the signal and outcome are evidenced, affected area and
@@ -219,6 +225,11 @@ artifacts must never become silently mandatory.
   missing or materially unsupported;
 - approve canon evolution based on a single unverified task note, raw feedback,
   duplicate owner, missing source-evidence chain, or `/about` mirror;
+- approve a memory change that lacks a current canonical source, independently
+  edits a mapped exact copy, broadens or overstates a compact summary, silently
+  deletes meaningful context, propagates sensitive/task-local content, leaves
+  duplicate or obsolete facts active, treats no-sync as a skipped check, or was
+  selected/written automatically;
 - approve an Evaluation Signal view that compares unlike scopes, hides missing
   cases or contradictions, treats activation/activity as value, substitutes a
   score or target for evidence, or implies automatic release, canon, backlog,
@@ -380,6 +391,12 @@ short examples needed to clarify a finding.
   and, when the source is feedback or an observed outcome, classification,
   affected area, applicability, contradictions, bounded action, and explicit
   non-promotion before approval;
+- Memory Hygiene Intelligence claims are challenged inside the same Knowledge
+  Evolution check when material: verify canonical source and memory location,
+  sync trigger/materiality, selected exact-copy/compact-summary/correct/
+  compress/retire/omit/defer/no-sync disposition, source fidelity, semantic
+  preservation, privacy, continuing value, consolidation/retirement context,
+  branch-appropriate validation, bounded growth, and explicit non-automation;
 - Evaluation Signal views are challenged when material: verify the human
   decision question, observation-versus-interpretation separation, evidence
   pointers, comparison window, denominator or exposure opportunity, missing

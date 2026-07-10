@@ -235,6 +235,30 @@ proportionality, and non-decision. Project Lead or the current canonical owner
 remains the decision authority. No release, canon, backlog, roadmap, memory,
 Domain Pack, capability, or owner changes automatically.
 
+## Memory Hygiene Intelligence
+
+Memory Hygiene Intelligence is a bounded refinement of Knowledge Evolution,
+Memory Curation, stale-knowledge handling, and Integrity Checking. It keeps
+`/about` useful as derived memory without making it canon, a second memory
+store, a new capability, role, pipeline, lifecycle stage, review gate, score,
+or autonomous synchronization system.
+
+When a canonical change or saved drift signal is material, Chief Editor names
+the canonical source, represented memory fact, purpose, sensitivity, and
+continuing value, then selects `exact-copy`, `compact-summary`, `correct`,
+`compress`, `retire`, `omit`, `defer`, or `no-sync`. A source change is a
+disposition check, not an automatic write, and no-sync is valid when external
+facts remain accurate and sufficient.
+
+Exact copies use byte identity and the 20-file package check. Compact summaries
+use independent semantic review and must preserve source, current state, scope,
+authority, caveats, approval, and non-automation while omitting raw,
+temporary, task-local, sensitive, duplicate, or repository-only detail. Stale
+or contradictory memory is repaired from canon; duplicate facts are
+consolidated without losing unique meaning; obsolete active content is retired
+while repository history remains. Checkers and Evaluation Signals may report
+likely drift but cannot choose disposition or write memory.
+
 ## Domain Knowledge Packs
 
 Domain Knowledge Packs are source-backed, bounded, maintained context packages

@@ -80,6 +80,16 @@ correction/retirement, or `/about` sync, review applies
 duplication, privacy, maintenance cost, and whether the item should remain
 task-local.
 
+When a canonical change or saved memory-hygiene signal produces an `/about`
+disposition, the same Knowledge Evolution check verifies canonical source,
+represented memory fact, materiality, purpose, sensitivity, continuing value,
+the exact-copy or compact-summary branch, correction/compression/retirement/
+omission/deferral/no-sync rationale, branch-appropriate validation, preserved
+unique context, bounded growth, and explicit manual review. Exact-copy checks
+do not prove summary semantics. Advisory checks and Evaluation Signals may
+report drift but may not write memory or select disposition. This is not a new
+gate.
+
 When the source is customer feedback or an observed completed-work outcome,
 the same check also preserves the distinction between feedback classification
 and learning disposition, verifies the saved signal and outcome, affected area,
@@ -360,6 +370,11 @@ Compact review minimum:
 - compact Knowledge Evolution check when reviewed work proposes reusable
   learning, canon updates, pattern reuse, stale/conflicting knowledge,
   correction/retirement, or memory disposition;
+- within that check, compact Memory Hygiene Intelligence validation when
+  external memory may change or deliberately remain unchanged: source,
+  materiality, exact-copy/summary branch, correction, compression, retirement,
+  omission, deferral/no-sync, privacy, context preservation, bounded growth,
+  validation, and non-automation;
 - compact Evaluation Signal check when reviewed work presents a material
   advisory signal for Project Lead, governance, review, or canonical-owner
   judgment; keep it inside the existing Knowledge Evolution/release review
@@ -428,7 +443,7 @@ Quality gates are mandatory and artifact-backed.
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
-| Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, memory-disposition, and advisory Evaluation Signal claims are evidenced, scoped, owned, non-duplicative, proportionate, and reviewable; feedback/outcome claims also preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion; signal views preserve decision question, comparison window, denominator/exposure when material, missing cases, alternatives, confidence, qualitative judgment, and explicit non-decision | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, stale guidance handled by silent deletion, activity/activation treated as value, unlike comparisons, hidden contradictions, score/KPI/target/rank/maturity use, individual monitoring, or automatic action |
+| Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, memory-disposition, Memory Hygiene Intelligence, and advisory Evaluation Signal claims are evidenced, scoped, owned, non-duplicative, proportionate, and reviewable; feedback/outcome claims preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion; memory claims preserve canonical source, represented fact, materiality, purpose/sensitivity/value, exact-copy or compact-summary branch, correction/compression/retirement/omission/deferral/no-sync rationale, branch validation, unique context, bounded growth, and non-automation; signal views preserve decision question, comparison window, denominator/exposure when material, missing cases, alternatives, confidence, qualitative judgment, and explicit non-decision | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, stale guidance handled by silent deletion, exact copy edited independently, misleading summary compression, sensitive/task-local propagation, context-erasing consolidation/retirement, unchecked no-sync, automatic memory write/disposition, activity/activation treated as value, unlike comparisons, hidden contradictions, score/KPI/target/rank/maturity use, individual monitoring, or automatic action |
 | Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners; claimed benefit or burden also traces to actual sections used, task effect evidence, confidence, complexity cost, and non-promotion when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, activation treated as proof of value, unsupported effect claim, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |
 | Outcome gate | Outcome is exactly `approved`, `changes_requested`, or `blocked` | ambiguous verdict |
 | Finalization gate | Finalization allowed only after review outcome `approved` | missing review, blocked review, changes requested |
