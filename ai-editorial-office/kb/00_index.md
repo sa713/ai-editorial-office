@@ -78,18 +78,18 @@ Canonical KB ownership:
   domain pack, role, pipeline, lifecycle stage, review gate, policy owner,
   capability owner, task status model, client profile, mandatory ordinary task
   artifact, or automatic canon-promotion path.
-- `software_architecture_domain_pack.md` is the release-candidate Software
+- `software_architecture_domain_pack.md` is the accepted, active Software
   Architecture Domain Knowledge Pack. It provides source-backed software
   architecture context for architecture-sensitive tasks. It does not own
   Architecture Review, Engineering Review, roles, workflows, policies, review
   outcomes, task statuses, or mandatory artifacts.
-- `devsecops_domain_pack.md` is the release-candidate DevSecOps Domain
+- `devsecops_domain_pack.md` is the accepted, active DevSecOps Domain
   Knowledge Pack. It provides source-backed secure delivery context for
   CI/CD, automation, configuration, supply-chain risk, deployment boundaries,
   validation evidence, and operational-security assumptions. It does not own
   Engineering Review, Architecture Review, cybersecurity policy, roles,
   workflows, review outcomes, task statuses, or mandatory artifacts.
-- `cybersecurity_domain_pack.md` is the release-candidate Cybersecurity Domain
+- `cybersecurity_domain_pack.md` is the accepted, active Cybersecurity Domain
   Knowledge Pack. It provides source-backed cybersecurity context for
   security-sensitive analysis, threat understanding, defensive
   recommendations, secure design, control and mitigation framing, assurance
@@ -98,7 +98,7 @@ Canonical KB ownership:
   Professional Communication, cybersecurity policy, security approval,
   incident response, roles, workflows, review outcomes, task statuses, or
   mandatory artifacts.
-- `ai_engineering_domain_pack.md` is the release-candidate AI Engineering
+- `ai_engineering_domain_pack.md` is the accepted, active AI Engineering
   Domain Knowledge Pack. It provides source-backed context for AI-enabled
   system boundaries, model/provider fit, prompts and instructions, structured
   outputs, RAG, data quality, evaluation, reliability and monitoring, human

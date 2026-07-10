@@ -22,10 +22,20 @@ Done
 
 Allowed release statuses: Not Started, In Progress, Review, Done.
 
-Current active release: Stage 4 Strategic Review.
+Current active release: none.
 
-Non-release note: Stage 4 awaits strategic review before Stage 5 begins. All
-Stage 5 releases remain `Not Started`.
+Current active work:
+
+```text
+Stage 4 Closure Complete
+
+↓
+
+Waiting for Stage 5 start
+```
+
+Stage 5 will open only after explicit Project Lead instruction. All Stage 5
+releases remain `Not Started`.
 
 # Stage 1 - Architecture Foundation
 
@@ -56,11 +66,11 @@ Stage 5 releases remain `Not Started`.
 
 | Release ID | Title | Purpose | Expected Result | Success Criteria | Status |
 | --- | --- | --- | --- | --- | --- |
-| S4.R1 | Domain Knowledge Pack Standard | Define the management standard for future domain expertise packs. | Domain packs can be created consistently and safely. | The standard defines what a domain pack must provide without becoming architecture, governance, or a new pipeline. | Done |
-| S4.R2 | Software Architecture Domain Pack | Add deep software architecture knowledge for architecture-sensitive tasks. | Software Architecture domain pack is ready for Project Lead review. | The pack improves architecture-related work and integrates cleanly with Architecture Review and Engineering Review. | Done |
-| S4.R3 | DevSecOps Domain Pack | Add deep DevSecOps knowledge for delivery, automation, configuration, and secure operations work. | DevSecOps domain pack is ready for Project Lead review. | The pack improves DevSecOps-related work without duplicating Engineering Review ownership. | Done |
-| S4.R4 | Cybersecurity Domain Pack | Add deep cybersecurity knowledge for security-sensitive tasks. | Cybersecurity domain pack is ready for Project Lead review. | The pack improves security-sensitive work with clear safety boundaries and source-aware guidance. | Done |
-| S4.R5 | AI Engineering Domain Pack | Add deep AI engineering knowledge for model, evaluation, data, prompt, and reliability work. | AI Engineering domain pack is ready for Project Lead review. | The pack improves AI-engineering-related work and integrates cleanly with existing professional capabilities. | Done |
+| S4.R1 | Domain Knowledge Pack Standard | Define the management standard for future domain expertise packs. | Domain Knowledge Pack Standard is accepted and available. | The standard defines what a domain pack must provide without becoming architecture, governance, or a new pipeline. | Done |
+| S4.R2 | Software Architecture Domain Pack | Add deep software architecture knowledge for architecture-sensitive tasks. | Software Architecture Domain Pack is accepted and active. | The pack improves architecture-related work and integrates cleanly with Architecture Review and Engineering Review. | Done |
+| S4.R3 | DevSecOps Domain Pack | Add deep DevSecOps knowledge for delivery, automation, configuration, and secure operations work. | DevSecOps Domain Pack is accepted and active. | The pack improves DevSecOps-related work without duplicating Engineering Review ownership. | Done |
+| S4.R4 | Cybersecurity Domain Pack | Add deep cybersecurity knowledge for security-sensitive tasks. | Cybersecurity Domain Pack is accepted and active. | The pack improves security-sensitive work with clear safety boundaries and source-aware guidance. | Done |
+| S4.R5 | AI Engineering Domain Pack | Add deep AI engineering knowledge for model, evaluation, data, prompt, and reliability work. | AI Engineering Domain Pack is accepted and active. | The pack improves AI-engineering-related work and integrates cleanly with existing professional capabilities. | Done |
 
 # Stage 5 - Editorial Intelligence
 

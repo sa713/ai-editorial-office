@@ -162,15 +162,13 @@ Completed releases:
 Current state:
 
 Professional Analysis remains an open release candidate. Knowledge Evolution is
-complete. Domain Expertise has opened, S4.R1 Domain Knowledge Pack Standard is
-complete, S4.R2 Software Architecture Domain Pack is complete, S4.R3 DevSecOps
-Domain Pack is complete, S4.R4 Cybersecurity Domain Pack is complete, and S4.R5
-AI Engineering Domain Pack is accepted. Stage 4 implementation releases are
-complete; Stage 4 Strategic Review is next. Stage 5 has not started.
+complete. S4.R1 through S4.R5 are accepted, and Stage 4 - Domain Expertise is
+complete. Stage 5 - Editorial Intelligence is next and planned, but it has not
+started.
 
-Next Stage 4 action:
+Next roadmap action:
 
-Stage 4 Strategic Review
+Wait for explicit Project Lead instruction to start Stage 5.
 
 Why this stage matters:
 
@@ -180,7 +178,7 @@ expert judgment without creating capability sprawl or new operational owners.
 
 ## Stage 4 - Domain Expertise
 
-Status: Active
+Status: Complete
 
 Purpose:
 
@@ -201,7 +199,7 @@ should be absorbed through the same disciplined model used for professional
 capabilities: researched, synthesized, bounded, validated, and kept inside the
 stable architecture.
 
-Implementation release status:
+Final release state:
 
 S4.R5 AI Engineering Domain Pack provides source-backed context for
 AI-enabled system boundaries, model/provider fit, prompts and instructions,
@@ -212,12 +210,16 @@ a bounded context package, not a role, capability, framework, pipeline,
 lifecycle stage, governance layer, policy owner, capability owner, review gate,
 approval workflow, scoring system, or mandatory ordinary task artifact.
 
-S4.R5 is accepted. Stage 4 implementation releases are complete, and Stage 4
-Strategic Review is next. Stage 5 remains planned and has not started.
+S4.R1 Domain Knowledge Pack Standard, S4.R2 Software Architecture Domain Pack,
+S4.R3 DevSecOps Domain Pack, S4.R4 Cybersecurity Domain Pack, and S4.R5 AI
+Engineering Domain Pack are accepted. Stage 4 is complete. Stage 5 is next and
+planned, but it has not started.
 
 ## Stage 5 - Editorial Intelligence
 
 Status: Planned
+
+Sequence: Next stage; not started.
 
 Purpose:
 

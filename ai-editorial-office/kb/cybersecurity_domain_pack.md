@@ -1,6 +1,6 @@
 # Cybersecurity Domain Knowledge Pack
 
-Status: release candidate
+Status: active
 
 Pack name: Cybersecurity Domain Knowledge Pack
 

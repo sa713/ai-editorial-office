@@ -7,7 +7,7 @@ until a completed `release-pack.md` exists.
 
 - Release ID: `S4.R1`
 - Release title: Domain Knowledge Pack Standard
-- Status: release candidate ready for Project Lead architectural review
+- Status: accepted by Project Lead; final
 - Date: 2026-07-09
 
 ## Executive Summary
@@ -17,8 +17,8 @@ future domain expertise packs. It lets AI Editorial Office add source-backed
 domain context while preserving the existing architecture: no new roles,
 pipelines, lifecycle stages, review gates, policy owners, capability owners,
 task statuses, client profiles, mandatory ordinary task artifacts, or automatic
-canon-promotion paths. The release is ready for Project Lead architectural
-review.
+canon-promotion paths. The release was accepted by the Project Lead after
+architectural review.
 
 ## Architectural Impact
 
@@ -221,23 +221,19 @@ Commits: none; user did not request a commit.
   and Review Pipeline challenge.
 - Source registers may become stale; mitigated by created/last-reviewed dates,
   stale-if triggers, confidence limits, and update/retirement rules.
-- Project Lead may request wording, scope, or integration changes before
-  acceptance.
+- At release-candidate review, the Project Lead could request wording, scope,
+  or integration changes.
 
 ## Open Questions
 
-- None blocking for release-candidate review.
+- None remained blocking at Project Lead acceptance.
 
-## Recommended Project Lead Decision
+## Final State
 
-Recommended decision:
+Final state: `Accepted by Project Lead`.
 
-Changes Requested or Accepted after Project Lead architectural review.
-
-Rationale:
-
-The release is internally complete and review-ready. Acceptance remains a
-Project Lead decision.
+The Project Lead accepted the release after architectural review. The accepted
+verdict below is final.
 
 ## Release Verdict
 
@@ -270,4 +266,4 @@ Notes:
 - No lifecycle changes
 - Validation passed
 - Memory synchronized
-- Ready for Project Lead review
+- Accepted by Project Lead

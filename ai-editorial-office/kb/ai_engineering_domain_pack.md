@@ -4,7 +4,7 @@
 
 - Pack name: AI Engineering Domain Knowledge Pack
 - Domain: AI engineering for AI-enabled systems
-- Current status: release candidate
+- Current status: active
 - Owner / maintainer context: AI Editorial Office canonical KB; maintained
   through the Domain Knowledge Pack Standard, current authoritative sources,
   independent review, and Chief Editor governance. The pack creates no Domain
@@ -21,9 +21,8 @@
     owner-boundary conflict;
   - the current source register can no longer support a material claim.
 
-This pack is a source-backed context package under
-`kb/domain_knowledge_pack_standard.md`. It is not active canon until Project
-Lead acceptance.
+This pack is an accepted, active source-backed context package under
+`kb/domain_knowledge_pack_standard.md` following Project Lead acceptance.
 
 It does not create an AI Engineer role, AI Reviewer role, capability, framework,
 pipeline, lifecycle stage, governance layer, policy owner, model owner, data

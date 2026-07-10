@@ -7,13 +7,13 @@ until a completed `release-pack.md` exists.
 
 - Release ID: `S4.R5`
 - Release title: AI Engineering Domain Pack
-- Status: release candidate ready for Project Lead review
+- Status: accepted by Project Lead; final
 - Date: 2026-07-10
 
 ## Executive Summary
 
 S4.R5 adds the AI Engineering Domain Knowledge Pack:
-`kb/ai_engineering_domain_pack.md`. The candidate gives AI Editorial Office
+`kb/ai_engineering_domain_pack.md`. The accepted pack gives AI Editorial Office
 source-backed context for AI-enabled system boundaries, model/provider fit,
 prompts and instructions, structured outputs, RAG, data quality, evaluation,
 reliability/monitoring, human oversight, defensive safety, tool/agentic
@@ -23,8 +23,8 @@ capabilities, packs, review, and approval governance.
 The packet includes full claim traceability and passes the seven required
 Writer Agent scenario checks. Round 1 requested five bounded repairs; those
 repairs are complete, round 2 independent re-review is approved, final
-validation passed, and Chief Editor has closed local RC governance. Project
-Lead acceptance remains pending.
+validation passed, and Chief Editor closed local RC governance. The Project
+Lead accepted the release on 2026-07-10.
 
 ## Architectural Impact
 
@@ -50,7 +50,7 @@ and safe owner boundaries.
 
 ## Architecture Decisions
 
-- Create `kb/ai_engineering_domain_pack.md` as one release-candidate pack.
+- Create `kb/ai_engineering_domain_pack.md` as one Domain Knowledge Pack.
 - Cover connected AI system surfaces in one layered reference rather than
   fragmenting Prompt, RAG, Evaluation, Agent, Data, and AI Coding packs.
 - Use vendor-neutral durable principles; require current task-time verification
@@ -58,7 +58,8 @@ and safe owner boundaries.
 - Keep safety defensive, category-level, and evidence-oriented.
 - Preserve primary ownership in Engineering Review, Cybersecurity, DevSecOps,
   Software Architecture, Professional Analysis, and repository governance.
-- Mark the pack `release candidate`, not `active`, until Project Lead review.
+- Final status decision: the accepted pack is `active` following Project Lead
+  review.
 
 ## Capability Decisions
 
@@ -151,7 +152,7 @@ and safe owner boundaries.
 Updated canonical owners:
 
 - `kb/00_index.md`: discoverability.
-- `project-state.md`: current state and release-candidate visibility.
+- `project-state.md`: current state and accepted-state visibility.
 
 New governance owners introduced:
 
@@ -233,20 +234,19 @@ Command validation at Writer Agent handoff:
   residual-risk language.
 - RAG, tools, data, and AI coding overlap with adjacent owners; mitigated by
   boundary routing throughout the pack.
-- Project Lead may request source, scope, or integration changes before
-  acceptance.
+- At release-candidate review, the Project Lead could request source, scope, or
+  integration changes.
 
 ## Open Questions
 
-- None blocking independent review.
+- None remained blocking at Project Lead acceptance.
 
-## Recommended Project Lead Decision
+## Final State
 
-Recommended decision: `Accepted`, after the independent review outcome is
-`approved`, final validation passes, and the Project Lead confirms the release.
+Final state: `Accepted by Project Lead`.
 
-This is a release-team recommendation, not a recorded Project Lead decision.
-The current Project Lead decision remains pending.
+The Project Lead accepted the release after the independent review outcome was
+`approved` and final validation passed. The accepted verdict below is final.
 
 ## Suggested Next Release
 
@@ -267,7 +267,7 @@ The current Project Lead decision remains pending.
 - [x] Memory synchronized where required
 - [x] Independent review outcome is `approved`
 - [x] Final validation passed after approval
-- [x] Ready for Project Lead review
+- [x] Accepted by Project Lead
 
 ## Release Verdict
 

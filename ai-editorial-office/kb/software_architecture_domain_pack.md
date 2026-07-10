@@ -1,6 +1,6 @@
 # Software Architecture Domain Knowledge Pack
 
-Status: release candidate
+Status: active
 
 Pack name: Software Architecture Domain Knowledge Pack
 

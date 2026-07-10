@@ -7,7 +7,7 @@ until a completed `release-pack.md` exists.
 
 - Release ID: `S4.R2`
 - Release title: Software Architecture Domain Pack
-- Status: release candidate ready for Project Lead architectural review
+- Status: accepted by Project Lead; final
 - Date: 2026-07-10
 
 ## Executive Summary
@@ -17,9 +17,8 @@ S4.R2 adds the first concrete Domain Knowledge Pack:
 software architecture context for architecture-sensitive work: decisions,
 drivers, quality attributes, styles, patterns, boundaries, coupling, tradeoffs,
 risks, evidence, activation, update, and retirement. It improves Architecture
-Review and Engineering Review context without replacing them and is ready for
-Project Lead architectural review after independent review and final
-validation.
+Review and Engineering Review context without replacing them. The Project Lead
+accepted the release after independent review and final validation.
 
 ## Architectural Impact
 
@@ -51,8 +50,8 @@ workflow, policy, role, or capability ownership.
 - Architecture preserved: the pack is subordinate to `AGENTS.md`,
   `kb/domain_knowledge_pack_standard.md`, `kb/architecture_review.md`, and
   `kb/engineering_review.md`.
-- Status decision: mark the pack `release candidate`, not `active`, until
-  Project Lead review.
+- Final status decision: the accepted pack is `active` following Project Lead
+  review.
 
 ## Capability Decisions
 
@@ -131,7 +130,7 @@ workflow, policy, role, or capability ownership.
 Updated canonical owners:
 
 - `kb/00_index.md`: discoverability.
-- `project-state.md`: current state and release-candidate visibility.
+- `project-state.md`: current state and accepted-state visibility.
 
 New canonical owners introduced:
 
@@ -193,23 +192,19 @@ in handback to avoid self-referential commit-hash churn in this file.
   limits and cloud-specific caveats.
 - Exact ATAM detail is intentionally limited; future update can deepen this if
   direct source inspection is required.
-- Project Lead may request different scope, source depth, or integration before
-  acceptance.
+- At release-candidate review, the Project Lead could request different scope,
+  source depth, or integration.
 
 ## Open Questions
 
-- None blocking for release-candidate review.
+- None remained blocking at Project Lead acceptance.
 
-## Recommended Project Lead Decision
+## Final State
 
-Recommended decision:
+Final state: `Accepted by Project Lead`.
 
-Changes Requested or Accepted after Project Lead architectural review.
-
-Rationale:
-
-The release is internally complete and review-ready. Acceptance remains a
-Project Lead decision.
+The Project Lead accepted the release after architectural review. The accepted
+verdict below is final.
 
 ## Suggested Next Release
 
@@ -224,7 +219,7 @@ Project Lead decision.
 - No lifecycle changes
 - Validation passed
 - Memory synchronized
-- Ready for Project Lead review
+- Accepted by Project Lead
 
 ## Release Verdict
 

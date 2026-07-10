@@ -1,7 +1,8 @@
 # Project State
 
 ## Current phase
-Domain Expertise.
+Stage 4 - Domain Expertise is complete. Stage 5 - Editorial Intelligence is
+next, planned, and not started.
 
 ## Completed
 - governance layer;
@@ -42,22 +43,22 @@ Domain Expertise.
   source-evidence chains, pattern confirmation, stale/conflicting knowledge
   challenge, canon correction/retirement, and `/about` memory disposition
   guidance.
-- Domain Knowledge Pack Standard release candidate with pack purpose,
+- Accepted Domain Knowledge Pack Standard with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
-- Software Architecture Domain Pack release candidate with source-backed
+- Accepted Software Architecture Domain Pack with source-backed
   architecture decision, driver, quality-attribute, style, pattern, boundary,
   coupling, tradeoff, risk, evidence, activation, update, and retirement
   guidance.
-- DevSecOps Domain Pack release candidate with source-backed secure delivery,
+- Accepted DevSecOps Domain Pack with source-backed secure delivery,
   CI/CD, automation, configuration, supply-chain risk, deployment-boundary,
   validation-evidence, and operational-security guidance.
-- Cybersecurity Domain Pack release candidate with source-backed
+- Accepted Cybersecurity Domain Pack with source-backed
   cybersecurity context for security-sensitive analysis, threat understanding,
   defensive recommendations, secure design, control and mitigation framing,
   assurance evidence, residual-risk interpretation, and safety-aware review
   context.
-- AI Engineering Domain Pack with source-backed context for
+- Accepted AI Engineering Domain Pack with source-backed context for
   AI-enabled system boundaries, model/provider fit, prompts and instructions,
   structured outputs, RAG, data quality, evaluation, reliability and
   monitoring, human oversight, defensive safety, tool/agentic workflows, and
@@ -93,18 +94,15 @@ canonical working repository unless the user explicitly gives a different
 repository decision.
 
 ## Current focus
-Use the stable architecture to add domain expertise through source-backed,
-bounded, maintained domain-context packs without creating new roles, pipelines,
-lifecycle stages, governance layers, policy owners, capability owners, review
-gates, or mandatory ordinary task artifacts.
+Stage 4 is fully closed after Project Lead acceptance. Preserve its stable,
+source-backed domain knowledge layer while waiting for explicit Project Lead
+instruction to start Stage 5.
 
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
-Domain Knowledge Pack Standard is complete. Software Architecture Domain Pack,
-DevSecOps Domain Pack, Cybersecurity Domain Pack, and AI Engineering Domain
-Pack are complete. S4.R5 is accepted. Stage 4 implementation releases are
-complete, Stage 4 Strategic Review is next, and Stage 5 has not started.
+S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
+next and planned, but it has not started and no Stage 5 release is open.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -142,11 +140,13 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 ## Current next task
 Follow the active roadmap stage:
 
-- Stage: Domain Expertise.
+- Stage: waiting for Stage 5 start.
+- Last completed stage: Stage 4 - Domain Expertise.
 - Last completed release: S4.R5 - AI Engineering Domain Pack.
 - Open release candidates: Professional Analysis.
-- Current next action: Stage 4 Strategic Review.
-- Stage 5 status: planned, not started.
+- Current next action: wait for explicit Project Lead instruction to start
+  Stage 5.
+- Stage 5 status: next and planned, not started; no release is open.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -224,19 +224,19 @@ solely because `ROADMAP.md` changed.
   automatic canon-promotion paths. They activate only when domain context
   materially affects evidence depth, terminology, risk, review focus, or output
   quality.
-- Software Architecture Domain Pack is a release-candidate Domain Knowledge
+- Software Architecture Domain Pack is an accepted, active Domain Knowledge
   Pack for architecture-sensitive tasks. It provides source-backed context for
   architectural decisions, drivers, quality attributes, styles, patterns,
   boundaries, coupling, tradeoffs, risks, evidence, and review questions. It
   does not own Architecture Review, Engineering Review, roles, pipelines,
   policies, review outcomes, task statuses, or mandatory artifacts.
-- DevSecOps Domain Pack is a release-candidate Domain Knowledge Pack for
+- DevSecOps Domain Pack is an accepted, active Domain Knowledge Pack for
   secure delivery, CI/CD, automation, configuration, supply-chain risk,
   deployment boundaries, validation evidence, and operational-security
   assumptions. It provides source-backed context and review questions while
   supporting Engineering Review without owning Engineering Review, roles,
   pipelines, policies, review outcomes, task statuses, or mandatory artifacts.
-- Cybersecurity Domain Pack is a release-candidate Domain Knowledge Pack for
+- Cybersecurity Domain Pack is an accepted, active Domain Knowledge Pack for
   security-sensitive analysis, threat understanding, defensive
   recommendations, secure design, control and mitigation framing, assurance
   evidence, residual-risk interpretation, and safety-aware review context. It
@@ -245,7 +245,7 @@ solely because `ROADMAP.md` changed.
   Professional Communication without owning those capabilities, cybersecurity
   policy, security approval, incident response, roles, pipelines, review
   outcomes, task statuses, or mandatory artifacts.
-- AI Engineering Domain Pack is an accepted Domain Knowledge Pack for
+- AI Engineering Domain Pack is an accepted, active Domain Knowledge Pack for
   AI-enabled system boundaries, model/provider fit, prompts and instructions,
   structured outputs, RAG, data quality, evaluation, reliability and
   monitoring, human oversight, defensive safety, tool/agentic workflows, and

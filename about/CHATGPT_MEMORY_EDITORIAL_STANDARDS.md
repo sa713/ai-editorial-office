@@ -220,7 +220,7 @@ pack, activation reason, relevant sources/sections, confidence limits,
 boundary limits, stale-if triggers, and stop conditions in existing task
 artifacts. Review active pack use inside the existing review gate.
 
-Current release-candidate packs: Software Architecture Domain Knowledge Pack,
+Current accepted, active packs: Software Architecture Domain Knowledge Pack,
 DevSecOps Domain Knowledge Pack, Cybersecurity Domain Knowledge Pack, and AI
 Engineering Domain Knowledge Pack.
 

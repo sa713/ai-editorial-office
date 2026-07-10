@@ -7,7 +7,7 @@ until a completed `release-pack.md` exists.
 
 - Release ID: `S4.R4`
 - Release title: Cybersecurity Domain Pack
-- Status: release candidate ready for Project Lead review
+- Status: accepted by Project Lead; final
 - Date: 2026-07-10
 
 ## Executive Summary
@@ -45,8 +45,8 @@ capability, approval, incident response, or review ownership.
 
 ## Architecture Decisions
 
-- Decision: create `kb/cybersecurity_domain_pack.md` as a release-candidate
-  Domain Knowledge Pack.
+- Decision: create `kb/cybersecurity_domain_pack.md` as a Domain Knowledge
+  Pack.
 - Rationale: a single canonical pack file provides practical source-backed
   context without adding a framework, registry, role, pipeline, gate, approval
   workflow, incident-response workflow, or mandatory artifacts.
@@ -55,8 +55,8 @@ capability, approval, incident response, or review ownership.
   `kb/architecture_review.md`, `kb/devsecops_domain_pack.md`,
   `kb/software_architecture_domain_pack.md`, evidence guidance, and existing
   task governance.
-- Status decision: mark the pack `release candidate`, not `active`, until
-  Project Lead review.
+- Final status decision: the accepted pack is `active` following Project Lead
+  review.
 
 ## Capability Decisions
 
@@ -162,7 +162,7 @@ capability, approval, incident response, or review ownership.
 Updated canonical owners:
 
 - `kb/00_index.md`: discoverability.
-- `project-state.md`: current state and release-candidate visibility.
+- `project-state.md`: current state and accepted-state visibility.
 
 New canonical owners introduced:
 
@@ -236,12 +236,12 @@ Command validation:
   mitigated by confidence notes and stale-if triggers.
 - Cybersecurity and DevSecOps overlap around dependency and supply-chain risk;
   mitigated by explicit primary-context routing.
-- Project Lead may request different scope, source depth, or integration before
-  acceptance.
+- At release-candidate review, the Project Lead could request different scope,
+  source depth, or integration.
 
 ## Open Questions
 
-- None blocking for release-candidate review.
+- None remained blocking at Project Lead acceptance.
 
 ## Release Verdict
 
@@ -264,16 +264,12 @@ Notes:
 - Memory synchronized.
 - Future observation recorded: evaluate Domain Pack Catalog after additional packs are implemented.
 
-## Recommended Project Lead Decision
+## Final State
 
-Recommended decision:
+Final state: `Accepted by Project Lead`.
 
-Changes Requested or Accepted after Project Lead architectural review.
-
-Rationale:
-
-The release is internally complete and review-ready. Acceptance remains a
-Project Lead decision.
+The Project Lead accepted the release after architectural review. The accepted
+verdict above is final.
 
 ## Suggested Next Release
 
@@ -291,4 +287,4 @@ Project Lead decision.
 - Offensive cybersecurity guidance excluded
 - Validation passed
 - Memory synchronized
-- Ready for Project Lead review
+- Accepted by Project Lead

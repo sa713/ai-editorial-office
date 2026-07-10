@@ -242,26 +242,26 @@ or the task-local canonical owner named there.
   domain context. They are not roles, capabilities, pipelines, lifecycle
   stages, review gates, policy owners, client profiles, task status models, or
   mandatory ordinary task artifacts.
-- Software Architecture Domain Knowledge Pack is a release-candidate pack for
+- Software Architecture Domain Knowledge Pack is an accepted, active pack for
   architecture-sensitive tasks. It provides source-backed context for
   architectural decisions, drivers, quality attributes, styles, patterns,
   boundaries, coupling, tradeoffs, risks, evidence, and review questions while
   staying subordinate to Architecture Review, Engineering Review, and the
   Domain Knowledge Pack Standard.
-- DevSecOps Domain Knowledge Pack is a release-candidate pack for secure
+- DevSecOps Domain Knowledge Pack is an accepted, active pack for secure
   delivery, CI/CD, automation, configuration, supply-chain risk, deployment
   boundaries, validation evidence, and operational-security assumptions. It
   supports Engineering Review with source-backed context while staying
   subordinate to Engineering Review, Architecture Review, and the Domain
   Knowledge Pack Standard.
-- Cybersecurity Domain Knowledge Pack is a release-candidate pack for
+- Cybersecurity Domain Knowledge Pack is an accepted, active pack for
   security-sensitive analysis, threat understanding, defensive
   recommendations, secure design, controls, mitigations, assurance evidence,
   residual-risk interpretation, and safety-aware review context. It supports
   Engineering Review, Architecture Review, Professional Analysis, and
   Professional Communication while staying subordinate to those capabilities,
   the Domain Knowledge Pack Standard, and existing governance.
-- AI Engineering Domain Knowledge Pack is a release-candidate pack for
+- AI Engineering Domain Knowledge Pack is an accepted, active pack for
   AI-enabled system boundaries, model/provider fit, prompts and instructions,
   structured outputs, RAG, data quality, evaluation, reliability and
   monitoring, human oversight, defensive safety, tool/agentic workflows, and

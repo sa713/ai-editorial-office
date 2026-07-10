@@ -1,6 +1,6 @@
 # DevSecOps Domain Knowledge Pack
 
-Status: release candidate
+Status: active
 
 Pack name: DevSecOps Domain Knowledge Pack
 
