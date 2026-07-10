@@ -164,13 +164,14 @@ Current state:
 Professional Analysis remains an open release candidate. Knowledge Evolution is
 complete. S4.R1 through S4.R5 are accepted, and Stage 4 - Domain Expertise is
 complete. Stage 5 - Editorial Intelligence is active. S5.R1 Feedback and
-Learning Intelligence, S5.R2 Evaluation Signals, and S5.R3 Memory Hygiene
-Intelligence are accepted. S5.R4 Task Need Recognition is the current release
-candidate in Project Lead review.
+Learning Intelligence, S5.R2 Evaluation Signals, S5.R3 Memory Hygiene
+Intelligence, and S5.R4 Task Need Recognition are accepted. S5.R5 Editorial
+Intelligence Acceptance is a Release Candidate in Project Lead review.
 
 Next roadmap action:
 
-Project Lead reviews S5.R4. Do not start S5.R5 automatically.
+Complete Project Lead review of the S5.R5 Release Candidate. Keep Stage 5
+active; do not record acceptance or close the stage before that decision.
 
 Why this stage matters:
 
@@ -215,14 +216,14 @@ approval workflow, scoring system, or mandatory ordinary task artifact.
 S4.R1 Domain Knowledge Pack Standard, S4.R2 Software Architecture Domain Pack,
 S4.R3 DevSecOps Domain Pack, S4.R4 Cybersecurity Domain Pack, and S4.R5 AI
 Engineering Domain Pack are accepted. Stage 4 is complete. Stage 5 is active
-with S5.R1 through S5.R3 accepted and S5.R4 in review.
+with S5.R1 through S5.R4 accepted and the S5.R5 Release Candidate in review.
 
 ## Stage 5 - Editorial Intelligence
 
 Status: Active
 
-Sequence: Current stage; S5.R1 through S5.R3 are accepted and the S5.R4 release
-candidate is in Project Lead review.
+Sequence: Current stage; S5.R1 through S5.R4 are accepted and S5.R5 is a
+Release Candidate in Project Lead review.
 
 Purpose:
 
@@ -240,9 +241,11 @@ Current release state:
 - S5.R1 Feedback and Learning Intelligence: accepted and `Done`;
 - S5.R2 Evaluation Signals: accepted and `Done`;
 - S5.R3 Memory Hygiene Intelligence: accepted and `Done`;
-- S5.R4 Task Need Recognition: release candidate in `Review`;
-- S5.R5: `Not Started`;
-- Project Lead acceptance for S5.R4: pending.
+- S5.R4 Task Need Recognition: accepted and `Done`;
+- S5.R5 Editorial Intelligence Acceptance: `Review`;
+- S5.R5 Project Lead verdict: pending;
+- Stage 5 remains active until the Project Lead decides S5.R5 and explicitly
+  authorizes stage closure.
 
 # Architectural Rules
 

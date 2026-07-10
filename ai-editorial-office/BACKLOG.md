@@ -22,7 +22,7 @@ Done
 
 Allowed release statuses: Not Started, In Progress, Review, Done.
 
-Current active release candidate: none.
+Current active release candidate: S5.R5 Editorial Intelligence Acceptance.
 
 Current active work:
 
@@ -31,11 +31,12 @@ S5.R4 Accepted
 
 ↓
 
-S5.R5 Not Started
+S5.R5 Review
 ```
 
-Stage 5 is active. S5.R4 is `Done`; S5.R5 remains `Not Started`.
-Do not start S5.R5 automatically.
+Stage 5 is active. S5.R4 is `Done`; the full S5.R5 Release Candidate is in
+`Review` with Project Lead acceptance pending. Do not mark S5.R5 `Done`, close
+Stage 5, or start a future stage before the Project Lead decision.
 
 # Stage 1 - Architecture Foundation
 
@@ -80,4 +81,4 @@ Do not start S5.R5 automatically.
 | S5.R2 | Evaluation Signals | Improve how the office recognizes quality, risk, and release health. | Evaluation Signals release candidate is ready for Project Lead review. | The release provides useful evaluation signals without replacing human review or Project Lead acceptance. | Done |
 | S5.R3 | Memory Hygiene Intelligence | Improve how external memory stays aligned, small, and non-canonical. | Memory Hygiene Intelligence release candidate is ready for Project Lead review. | The release reduces memory drift without making memory a second source of truth. | Done |
 | S5.R4 | Task Need Recognition | Improve how the office recognizes task type, risk, evidence needs, and capability triggers. | Task Need Recognition release candidate is ready for Project Lead review. | The release improves routing decisions without bypassing Chief Editor judgment or preflight discipline. | Done |
-| S5.R5 | Editorial Intelligence Acceptance | Define how self-improvement releases are judged as accepted and stable. | Editorial Intelligence Acceptance release candidate is ready for Project Lead review. | The release helps larger work packages require less micromanagement while preserving stable architecture. | Not Started |
+| S5.R5 | Editorial Intelligence Acceptance | Define how self-improvement releases are judged as accepted and stable. | Editorial Intelligence Acceptance release candidate is ready for Project Lead review. | The release helps larger work packages require less micromanagement while preserving stable architecture. | Review |

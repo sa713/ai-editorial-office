@@ -3,8 +3,9 @@
 ## Current phase
 Stage 4 - Domain Expertise is complete. Stage 5 - Editorial Intelligence is
 active. S5.R1 - Feedback and Learning Intelligence, S5.R2 - Evaluation
-Signals, and S5.R3 - Memory Hygiene Intelligence are accepted. S5.R4 - Task
-Need Recognition is a release candidate in Project Lead review.
+Signals, S5.R3 - Memory Hygiene Intelligence, and S5.R4 - Task Need
+Recognition are accepted. S5.R5 - Editorial Intelligence Acceptance is a
+Release Candidate in Project Lead review.
 
 ## Completed
 - governance layer;
@@ -61,11 +62,17 @@ Need Recognition is a release candidate in Project Lead review.
   retirement; stale/contradictory memory repair; bounded growth; independent
   review; and advisory-only checks without automatic writes or canonical
   override.
-- Task Need Recognition release candidate with an evidence-first advisory view
+- Accepted Task Need Recognition release with an evidence-first advisory view
   of likely task type, capabilities, Domain Packs, research/evidence and review
   needs, architecture/engineering/communication significance, ambiguity,
   decomposition, uncertainty, and negative evidence; Chief Editor retains all
   routing, activation, depth, and governance decisions.
+- Editorial Intelligence Acceptance implementation in progress with a conditional
+  Release Pack contract that requires both value and restraint, distinguishes
+  synthetic from real-use evidence, tests human authority, automation,
+  architecture and maintenance cost, reversibility, hidden governance,
+  uncertainty, and cross-effects, and supplies human dispositions without
+  scores or automatic decisions.
 - Accepted Domain Knowledge Pack Standard with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
@@ -119,14 +126,14 @@ repository decision.
 ## Current focus
 Stage 4 is fully closed after Project Lead acceptance. Preserve its stable,
 source-backed domain knowledge layer while Stage 5 continues with S5.R1
-through S5.R3 accepted and S5.R4 in Project Lead review.
+through S5.R4 accepted and the S5.R5 Release Candidate in review.
 
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
-active. S5.R1 through S5.R3 are accepted and `Done`; S5.R4 is the current
-release candidate in `Review`; S5.R5 remains `Not Started`.
+active. S5.R1 through S5.R4 are accepted and `Done`; S5.R5 is the current
+release in `Review`. Stage 5 is not closed.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -166,13 +173,12 @@ Follow the active roadmap stage:
 
 - Stage: Stage 5 - Editorial Intelligence, active.
 - Last completed stage: Stage 4 - Domain Expertise.
-- Last completed release: S5.R3 - Memory Hygiene Intelligence.
-- Open release candidates: Professional Analysis and S5.R4 Task Need
-  Recognition.
-- Current next action: Project Lead reviews S5.R4; do not start S5.R5
-  automatically.
-- Stage 5 status: active; S5.R1 through S5.R3 `Done`; S5.R4 `Review`; S5.R5
-  `Not Started`.
+- Last completed release: S5.R4 - Task Need Recognition.
+- Open release candidates: Professional Analysis and S5.R5 Editorial
+  Intelligence Acceptance.
+- Current next action: Project Lead reviews the S5.R5 Release Candidate; do not
+  record acceptance, close Stage 5, or start a future stage automatically.
+- Stage 5 status: active; S5.R1 through S5.R4 `Done`; S5.R5 `Review`.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -252,6 +258,13 @@ solely because `ROADMAP.md` changed.
   confidence, proportionality, and non-decision; Project Lead or the existing
   canonical owner remains the decision authority. Counts never prove value,
   acceptance, priority, retirement, or system improvement.
+- Editorial Intelligence Acceptance is a conditional section of the existing
+  Release Pack standard for Stage 5 intelligence and explicitly scoped future
+  self-improvement releases. An accept recommendation requires evidence for
+  both value and restraint; synthetic evidence cannot prove operational
+  improvement; Project Lead remains the only acceptance authority. The
+  contract adds no new owner, workflow, role, pipeline, lifecycle stage, review
+  gate, status, board, dashboard, score, threshold, or automatic disposition.
 - Memory Hygiene Intelligence is a bounded refinement of existing Knowledge
   Evolution, Memory Curation, stale-knowledge, and Integrity Checking behavior.
   A canonical change or saved drift signal receives a source/materiality/

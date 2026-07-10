@@ -54,6 +54,9 @@ markdown smoke-tests и synthetic examples:
 - `knowledge_evolution_smoke_test.md` - manual synthetic cases for Knowledge
   Evolution disposition, stale-knowledge challenge, canon-update candidates,
   and `/about` memory sync; it is not production governance.
+- `editorial_intelligence_acceptance_smoke_test.md` - twelve manual synthetic
+  cases for the conditional Stage 5 value-and-restraint acceptance contract;
+  it is not a score, automatic verdict, or operational improvement evidence.
 - `feedback_learning_intelligence_smoke_test.md` - manual synthetic cases for
   feedback classification, outcome evidence, learning disposition, owner
   routing, Domain Pack effect evidence, rejection/deferral, stale learning, and
@@ -241,6 +244,16 @@ proportionate evidence/review depth, capability and Domain Pack boundaries,
 negative evidence, uncertainty, decomposition, and explicit non-automation. It
 does not define active rules, create a classifier/score/router, or prove
 real-world routing improvement.
+
+`editorial_intelligence_acceptance_smoke_test.md` records the twelve S5.R5
+representative cases. It checks improvement claims, evidence setting,
+real-use/synthetic limits, meaningful comparison, false-positive and
+false-negative consequences, architecture/governance impact, human authority,
+automation, reversibility, maintenance, uncertainty, cross-effects, and human
+recommendations to accept, accept with observations, request changes, defer,
+narrow, reject, or retire/supersede. It does not define active rules, create a
+score or automatic disposition, or prove that the contract improves real
+Project Lead decisions.
 
 `domain_knowledge_pack_standard_smoke_test.md` records synthetic activation,
 non-activation, boundary, source, update, retirement, and review cases for

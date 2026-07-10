@@ -256,6 +256,29 @@ proportionality, and non-decision. Project Lead or the current canonical owner
 remains the decision authority. No release, canon, backlog, roadmap, memory,
 Domain Pack, capability, or owner changes automatically.
 
+## Editorial Intelligence Acceptance
+
+The existing Release Pack standard conditionally owns the acceptance record for
+Stage 5 intelligence and explicitly scoped future self-improvement releases.
+Ordinary releases omit it. No second workflow, owner, role, pipeline, lifecycle
+stage, review gate, board, score, dashboard, threshold, or automatic disposition
+is introduced.
+
+An accept recommendation requires both evidenced value and restraint. Value is
+material improvement to human judgment, system quality, safety, or operational
+clarity. Restraint preserves human authority, avoids hidden governance, keeps
+architecture and maintenance cost proportionate, and provides a practical path
+to contain, reverse, narrow, supersede, or retire the mechanism. Synthetic
+cases can prove designed behavior but cannot prove operational improvement.
+
+The record exposes the improvement claim and non-claims, intended and observed
+benefit, meaningful comparison, evidence setting, false-positive/false-negative
+effects, architecture/governance impact, human authority, automation,
+reversibility, maintenance, cross-effects, gaps, uncertainty, and a human
+recommendation to accept, accept with observations, request changes, defer,
+narrow, reject, or retire/supersede. Project Lead alone records the verdict;
+the recommendation changes no canon or state automatically.
+
 ## Memory Hygiene Intelligence
 
 Memory Hygiene Intelligence is a bounded refinement of Knowledge Evolution,

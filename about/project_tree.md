@@ -252,6 +252,12 @@ or the task-local canonical owner named there.
   not a capability, dashboard, telemetry layer, role, pipeline, gate, status,
   score, KPI, ranking, target, maturity level, mandatory artifact, or automatic
   governance path.
+- Editorial Intelligence Acceptance is the conditional Stage 5 contract inside
+  the existing Release Pack standard. It requires both evidenced value and
+  restraint, distinguishes synthetic from real-use proof, and exposes human
+  authority, automation, architecture/maintenance cost, reversibility, hidden
+  governance, uncertainty, and human disposition without a score or automatic
+  action. Project Lead remains the acceptance authority.
 - Memory Hygiene Intelligence is the source-first `/about` disposition
   behavior inside existing Knowledge Evolution, Memory Curation,
   stale-knowledge, and Integrity Checking capabilities. It distinguishes

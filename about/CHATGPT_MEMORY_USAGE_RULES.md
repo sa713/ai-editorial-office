@@ -196,6 +196,17 @@ signal artifacts, automatic actions, or individual performance measures.
 Chief Editor assembles, Review Agent challenges, and Project Lead or the current
 canonical owner decides.
 
+For a Stage 5 intelligence release, complete the conditional Editorial
+Intelligence Acceptance section in the existing Release Pack. Show both value
+and restraint; label synthetic versus real-use evidence; inspect architecture,
+maintenance, hidden governance, human authority, automation, reversibility,
+cross-effects, gaps, and uncertainty. Do not recommend acceptance if either
+value or restraint is unsupported, and never combine them into a score.
+Ordinary releases omit this section unless explicitly scoped as
+self-improvement work. Dispositions remain Project Lead recommendations and do
+not change canon, state, memory, backlog, roadmap, capabilities, or Domain Packs
+automatically.
+
 Memory Hygiene Intelligence is the bounded `/about` disposition behavior
 inside the Editorial Learning Framework. A canonical change or saved drift
 signal triggers a source, materiality, purpose, sensitivity, and continuing-
