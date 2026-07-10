@@ -26,8 +26,8 @@
   task rather than a domain execution task
 - Current working artifact: `../../releases/S5-R5/release-pack.md`
 - Latest relevant handoff: `handoff-finalization-final-editor-to-chief-editor.md`
-- Next required action: validate, commit, and publish the accepted release;
-  after publication, no additional task action remains
+- Next required action: none for S5.R5; acceptance and GitHub publication are
+  complete. Stage 5 closure remains a separate Project Lead decision.
 
 ## freshness
 
@@ -125,12 +125,12 @@
 
 ## next action packet
 
-- Role: `chief_editor`
-- Action: validate the acceptance patch, commit it, and push `main` to `origin`
-- Expected output: accepted S5.R5 closure published to GitHub
-- Stop conditions: any blocker reappears, stage closure/future-stage scope is
-  introduced, protected scope changes, remote divergence appears, or final
-  validation fails
+- Role: `project_lead`
+- Action: none inside S5.R5; decide Stage 5 closure only in a separate explicit
+  mission
+- Expected output: no additional S5.R5 artifact or repository action
+- Stop conditions: do not infer Stage 5 closure or a future stage from the
+  accepted release
 
 ## lifecycle notes
 

@@ -19,8 +19,8 @@
   recorded Release Candidate readiness, and Project Lead accepted S5.R5 after
   delivery. The operational task remains `finalized`.
 - Next required role: `chief_editor`
-- Publication action: validate, commit, and push the accepted release; after a
-  successful push, no additional S5.R5 task action remains.
+- Publication result: accepted release committed and pushed to `origin/main`;
+  no additional S5.R5 task action remains.
 
 ## status history
 
@@ -39,8 +39,8 @@
 ## current owner
 
 - Role: `chief_editor`
-- Responsible artifact/action: acceptance state synchronization, validation,
-  commit, and GitHub publication
+- Responsible artifact/action: accepted release published; no current S5.R5
+  task action
 - Waiting on: none
 
 ## active blockers
