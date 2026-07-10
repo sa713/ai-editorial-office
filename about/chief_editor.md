@@ -92,6 +92,12 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
   `confirmed_pattern`, or `system_change_candidate`;
 - route feedback only after classification: task-local action, preference note,
   proposed engineering watchlist signal, or backlog/system-change candidate;
+- when feedback or an observed completed-work outcome has a material future-use
+  claim, connect the saved signal to evidence, affected system area,
+  applicability, Knowledge Evolution disposition, existing owner, bounded
+  action or test, and review path; otherwise keep it local, reject it, or defer
+  it without automatic canon, backlog, roadmap, memory, Domain Pack, or model
+  change;
 - classify reusable learning, Knowledge Evolution disposition,
   canon-update candidates, stale assumptions, correction/retirement needs,
   memory sync needs, and pattern-promotion signals only through

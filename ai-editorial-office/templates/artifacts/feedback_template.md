@@ -23,12 +23,49 @@ file only when the user actually responds to a delivered result.
 - Reaction type: `accepted` / `praised` / `needs revision` / `rejected` / `unclear` / `mixed`
 - Current task impact:
 
+## evidence and scope
+
+- Evidence pointer(s):
+- Observed outcome: improved / worsened / mixed / unchanged / unknown
+- Affected system area: current artifact / user or client preference / role /
+  pipeline / template / KB or canonical owner / Domain Pack / validation /
+  memory / other
+- Applicability:
+- Non-applicability:
+- Corroborating signals:
+- Contradicting or alternative signals:
+- Confidence and unknowns:
+
 ## classification
 
 - Primary classification: `task_local` / `preference` / `observation` / `confirmed_pattern` / `system_change_candidate`
 - Secondary classification, if any:
 - Why:
 - Similar known signals:
+
+## learning disposition
+
+- Future-use claim material: yes/no
+- Knowledge Evolution disposition: `task_local` / `learning_candidate` /
+  `pattern_candidate` / `canon_update_candidate` / `rejected` / `deferred` /
+  not applicable
+- Learning claim:
+- Existing owner:
+- Proposed bounded action or test:
+- Expected effect and validation:
+- Stop, correction, or revert condition:
+- Review path:
+- Why this does not promote automatically:
+
+## Domain Pack use, if material
+
+- Pack actually activated: yes/no/not applicable
+- Pack and sections/sources used:
+- Effect: beneficial / burdensome / mixed / unknown / not applicable
+- Effect evidence and confidence:
+- Unnecessary complexity or maintenance cost:
+- Pack or activation-rule change proposed: yes/no
+- Automatic pack change: no
 
 ## task-local action
 
@@ -68,3 +105,5 @@ file only when the user actually responds to a delivered result.
 - Does this change the final decision retroactively: no
 - System rules changed by this feedback: no
 - Watchlist/backlog changed automatically: no
+- Canon, roadmap, `/about`, Domain Pack, or model behavior changed
+  automatically: no

@@ -163,12 +163,12 @@ Current state:
 
 Professional Analysis remains an open release candidate. Knowledge Evolution is
 complete. S4.R1 through S4.R5 are accepted, and Stage 4 - Domain Expertise is
-complete. Stage 5 - Editorial Intelligence is next and planned, but it has not
-started.
+complete. Stage 5 - Editorial Intelligence is active, and S5.R1 Feedback and
+Learning Intelligence is a release candidate in Project Lead review.
 
 Next roadmap action:
 
-Wait for explicit Project Lead instruction to start Stage 5.
+Project Lead reviews S5.R1. Do not start S5.R2 automatically.
 
 Why this stage matters:
 
@@ -212,14 +212,14 @@ approval workflow, scoring system, or mandatory ordinary task artifact.
 
 S4.R1 Domain Knowledge Pack Standard, S4.R2 Software Architecture Domain Pack,
 S4.R3 DevSecOps Domain Pack, S4.R4 Cybersecurity Domain Pack, and S4.R5 AI
-Engineering Domain Pack are accepted. Stage 4 is complete. Stage 5 is next and
-planned, but it has not started.
+Engineering Domain Pack are accepted. Stage 4 is complete. Stage 5 is active
+with S5.R1 in review.
 
 ## Stage 5 - Editorial Intelligence
 
-Status: Planned
+Status: Active
 
-Sequence: Next stage; not started.
+Sequence: Current stage; S5.R1 release candidate is in Project Lead review.
 
 Purpose:
 
@@ -231,6 +231,12 @@ Why this stage matters:
 AI Editorial Office should become better at knowing what kind of work it is
 doing, what quality requires, when evidence is sufficient, when canon is stale,
 and when a proposed change would make the system heavier rather than stronger.
+
+Current release state:
+
+- S5.R1 Feedback and Learning Intelligence: release candidate in `Review`;
+- S5.R2 through S5.R5: `Not Started`;
+- Project Lead acceptance for S5.R1: pending.
 
 # Architectural Rules
 

@@ -2,7 +2,8 @@
 
 ## Current phase
 Stage 4 - Domain Expertise is complete. Stage 5 - Editorial Intelligence is
-next, planned, and not started.
+active. S5.R1 - Feedback and Learning Intelligence is a release candidate in
+Project Lead review.
 
 ## Completed
 - governance layer;
@@ -43,6 +44,10 @@ next, planned, and not started.
   source-evidence chains, pattern confirmation, stale/conflicting knowledge
   challenge, canon correction/retirement, and `/about` memory disposition
   guidance.
+- Feedback and Learning Intelligence release candidate with a bounded bridge
+  from existing customer-feedback classification to existing Knowledge
+  Evolution disposition, evidence/applicability checks, owner-scoped action,
+  rejection/deferral, and actual Domain Pack use-effect capture.
 - Accepted Domain Knowledge Pack Standard with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
@@ -95,14 +100,15 @@ repository decision.
 
 ## Current focus
 Stage 4 is fully closed after Project Lead acceptance. Preserve its stable,
-source-backed domain knowledge layer while waiting for explicit Project Lead
-instruction to start Stage 5.
+source-backed domain knowledge layer while Stage 5 begins with S5.R1 in Project
+Lead review.
 
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
-next and planned, but it has not started and no Stage 5 release is open.
+active. S5.R1 is the current release candidate in `Review`; S5.R2 through S5.R5
+remain `Not Started`.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -140,13 +146,14 @@ Owned by `AGENTS.md`. This file should not restate risk-mode definitions unless 
 ## Current next task
 Follow the active roadmap stage:
 
-- Stage: waiting for Stage 5 start.
+- Stage: Stage 5 - Editorial Intelligence, active.
 - Last completed stage: Stage 4 - Domain Expertise.
 - Last completed release: S4.R5 - AI Engineering Domain Pack.
-- Open release candidates: Professional Analysis.
-- Current next action: wait for explicit Project Lead instruction to start
-  Stage 5.
-- Stage 5 status: next and planned, not started; no release is open.
+- Open release candidates: Professional Analysis and S5.R1 Feedback and
+  Learning Intelligence.
+- Current next action: Project Lead reviews S5.R1; do not start S5.R2
+  automatically.
+- Stage 5 status: active; S5.R1 `Review`; S5.R2 through S5.R5 `Not Started`.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -201,6 +208,18 @@ solely because `ROADMAP.md` changed.
   candidates, canon-update candidates, stale/conflicting knowledge,
   correction/retirement, and `/about` memory disposition follow
   `/kb/editorial_learning_framework.md`; task-local notes do not become canon
+  automatically.
+- Feedback and Learning Intelligence reuses two existing owners: actual post-
+  delivery feedback classification stays in `/kb/customer_feedback_loop.md`,
+  while reusable learning disposition stays in
+  `/kb/editorial_learning_framework.md`. Feedback classification and learning
+  disposition are linked but distinct; future-use claims need saved evidence,
+  affected area, applicability, contradictions, an existing owner, bounded
+  action, review, and explicit non-promotion.
+- Domain Pack activation is not proof of value. When actual use materially
+  affects a result, existing task artifacts may record sections/sources used,
+  observed benefit or burden, evidence/confidence, unnecessary complexity, and
+  learning disposition. Effect capture is conditional and never changes a pack
   automatically.
 - Engineering Review is a shared capability for implementation/change safety,
   not a new role, pipeline, lifecycle stage, review gate, or mandatory artifact

@@ -22,20 +22,20 @@ Done
 
 Allowed release statuses: Not Started, In Progress, Review, Done.
 
-Current active release: none.
+Current active release: S5.R1 - Feedback and Learning Intelligence.
 
 Current active work:
 
 ```text
-Stage 4 Closure Complete
+S5.R1 Release Candidate Complete
 
 ↓
 
-Waiting for Stage 5 start
+Project Lead Review
 ```
 
-Stage 5 will open only after explicit Project Lead instruction. All Stage 5
-releases remain `Not Started`.
+Stage 5 opened by explicit Project Lead instruction. S5.R1 is in `Review`.
+S5.R2 through S5.R5 remain `Not Started` and do not open automatically.
 
 # Stage 1 - Architecture Foundation
 
@@ -76,7 +76,7 @@ releases remain `Not Started`.
 
 | Release ID | Title | Purpose | Expected Result | Success Criteria | Status |
 | --- | --- | --- | --- | --- | --- |
-| S5.R1 | Feedback and Learning Intelligence | Improve how the office learns from completed work and Project Lead feedback. | Feedback and Learning Intelligence release candidate is ready for Project Lead review. | The release turns feedback into bounded learning without automatic canon changes. | Not Started |
+| S5.R1 | Feedback and Learning Intelligence | Improve how the office learns from completed work and Project Lead feedback. | Feedback and Learning Intelligence release candidate is ready for Project Lead review. | The release turns feedback into bounded learning without automatic canon changes. | Review |
 | S5.R2 | Evaluation Signals | Improve how the office recognizes quality, risk, and release health. | Evaluation Signals release candidate is ready for Project Lead review. | The release provides useful evaluation signals without replacing human review or Project Lead acceptance. | Not Started |
 | S5.R3 | Memory Hygiene Intelligence | Improve how external memory stays aligned, small, and non-canonical. | Memory Hygiene Intelligence release candidate is ready for Project Lead review. | The release reduces memory drift without making memory a second source of truth. | Not Started |
 | S5.R4 | Task Need Recognition | Improve how the office recognizes task type, risk, evidence needs, and capability triggers. | Task Need Recognition release candidate is ready for Project Lead review. | The release improves routing decisions without bypassing Chief Editor judgment or preflight discipline. | Not Started |

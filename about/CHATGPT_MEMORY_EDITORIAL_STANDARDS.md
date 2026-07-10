@@ -203,6 +203,15 @@ Promotion beyond task-local notes needs a source-evidence chain, scope, owner,
 disposition, and review path. `/about` is only a synchronized memory export,
 not canon.
 
+Actual post-delivery feedback remains classified through the Customer Feedback
+Loop; observed completed-work outcomes without a customer reaction enter the
+Learning Framework directly. When future use is material, preserve the saved
+signal, evidence pointer, observed outcome, affected area, applicability,
+contradictions, learning disposition, existing owner, bounded action, and
+explicit non-promotion. Feedback classification and learning disposition are
+linked but distinct decisions. One anecdote normally stays task-local, is
+rejected, or is deferred; no score or count promotes it automatically.
+
 ## Domain Knowledge Packs
 
 Domain Knowledge Packs are source-backed, bounded, maintained context packages
@@ -219,6 +228,13 @@ terminology, risk handling, review focus, or output quality. Record the active
 pack, activation reason, relevant sources/sections, confidence limits,
 boundary limits, stale-if triggers, and stop conditions in existing task
 artifacts. Review active pack use inside the existing review gate.
+
+When actual pack use materially affects a result, an existing task artifact may
+also record sections or sources actually used, the affected decision/artifact/
+review finding, observed benefit or burden, evidence and confidence,
+unnecessary complexity, and Knowledge Evolution disposition. This effect note
+is conditional; activation is not proof of value and never changes a pack
+automatically.
 
 Current accepted, active packs: Software Architecture Domain Knowledge Pack,
 DevSecOps Domain Knowledge Pack, Cybersecurity Domain Knowledge Pack, and AI

@@ -83,6 +83,84 @@ state:
 These states are labels for decision clarity, not operational task statuses.
 They do not change `/kb/task_statuses.md`.
 
+## Feedback And Outcome Intake
+
+Feedback and observed outcomes enter this framework through existing owners;
+they do not create a second feedback workflow.
+
+- Actual user or customer reaction after delivery is first classified through
+  `/kb/customer_feedback_loop.md`.
+- A completed-task or release outcome without customer reaction enters this
+  framework directly as an observed outcome. Do not relabel it as customer
+  feedback.
+- Review findings, validation results, repository conflicts, and real Domain
+  Knowledge Pack use may also be source signals when future use is material.
+
+Use two linked decisions when actual feedback may matter beyond the current
+exchange:
+
+1. Feedback classification: what kind of reaction is this and what immediate
+   route is safe?
+2. Learning disposition: what, if anything, should future work preserve,
+   test, reject, defer, correct, retire, or route to an existing owner?
+
+Feedback classification remains owned by the Customer Feedback Loop. Knowledge
+disposition remains owned here. Do not merge the two label sets.
+
+Default bridge guidance:
+
+| Feedback classification | Default learning disposition | Boundary |
+| --- | --- | --- |
+| `task_local` | `task_local` | Correct the current artifact, clarify, open a new task when scope changed, or take no action. |
+| `preference` | `task_local` or `learning_candidate` | Keep user, customer, and context scope explicit; repetition does not make it global policy. |
+| `observation` | `learning_candidate`, `deferred`, or `rejected` | Preserve only when evidence and future value justify maintenance. |
+| `confirmed_pattern` | `pattern_candidate` | Confirmation supports recurrence and applicability, not automatic canon. |
+| `system_change_candidate` | `canon_update_candidate` or `deferred` | Name the existing owner, bounded hypothesis, validation, and review path. |
+
+This table is routing guidance, not automatic conversion. Chief Editor should
+choose the smallest safe disposition supported by the evidence.
+
+### Compact Signal Record
+
+When a future-use or system-change claim is material, make these facts
+reconstructable in the smallest existing task, review, feedback, implementation,
+or release artifact:
+
+- source signal: feedback, observed outcome, review finding, validation,
+  repository conflict, or Domain Pack use;
+- evidence pointer: task, artifact, section, commit, validation output, or
+  source link;
+- observed outcome: what improved, failed, changed, or remained unknown;
+- affected system area: current artifact, user/client preference, role,
+  pipeline, template, KB/canonical owner, Domain Pack, validation, or memory;
+- learning claim and applicability scope, including where it does not apply;
+- corroborating, contradicting, or alternative explanations;
+- confidence, unknowns, and validation still needed;
+- feedback classification when the source is actual customer feedback;
+- learning disposition, existing owner, proposed bounded action, and review
+  path;
+- explicit non-promotion state: what does not change automatically.
+
+These are conditional information fields, not new required task-object fields,
+a mandatory learning artifact, or a retrospective form.
+
+### Evidence And Scope Check
+
+Before any disposition beyond `task_local`, ask:
+
+- Can the source signal and observed outcome be reconstructed?
+- Does the evidence support the learning claim rather than only the reaction?
+- Is the affected area and applicability boundary explicit?
+- Are similar signals genuinely comparable?
+- Were contradictions, local causes, preference-only explanations, and
+  alternative explanations considered?
+- Is the future value or risk high enough to justify maintenance?
+- Is an existing owner and review path clear?
+
+Do not compute a general signal score. Counts, ratings, and sentiment may
+support judgment but cannot replace evidence, context, applicability, owner, or
+review. If the check is weak, keep the signal local, reject it, or defer it.
+
 ## Source-Evidence Chain
 
 Reusable learning should remain traceable to saved evidence. Before promotion,
@@ -134,9 +212,19 @@ thresholds is met:
 - Project Lead or Chief Editor decision that a pattern should be watched or
   promoted through reviewed owner update.
 
+Pattern confirmation also requires that saved signals describe the same
+underlying condition rather than only similar wording, that applicability and
+non-applicability are visible, and that contradictions or plausible local
+causes were considered.
+
+No numeric minimum confirms a pattern. Repeated comparable evidence is the
+normal path. One high-impact event may justify a reviewed exception only when
+causal evidence, material future risk, bounded applicability, owner, and review
+are explicit. The exception still produces a candidate, not automatic canon.
+
 Pattern candidates should name applicability boundaries. Do not generalize from
-one task unless the future risk or value is strong enough to justify a reviewed
-exception.
+one task merely because the reaction is strong or the proposed improvement is
+attractive.
 
 ## What Should Not Be Canonized
 
@@ -223,6 +311,27 @@ Before learning changes canon, check:
 If validation is weak, keep the item task-local, mark it as a candidate, or
 request a separate reviewed system-update mission.
 
+## Owner-Scoped Improvement Candidates
+
+When learning suggests a system change, use the existing
+`system_change_proposal_template.md` or a compact equivalent in an existing
+task/release artifact. Name:
+
+- problem signal and learning disposition;
+- evidence, counterevidence, and applicability;
+- affected canonical owner;
+- change hypothesis and expected effect;
+- smallest change surface and explicit non-goals;
+- responsible owner;
+- validation or comparable future-use check;
+- side effects, stop condition, and correction or revert path;
+- review path and Project Lead boundary when applicable.
+
+The proposal is not implementation authority. Canon is `accepted_canon` only
+after the correct owner file is reviewed, changed, and validated. A backlog,
+roadmap, `/about`, Domain Pack, role, pipeline, template, or model behavior does
+not change merely because a candidate exists.
+
 ## Canon Evolution Rules
 
 Canon changes should be deliberate, small, and owned.
@@ -308,6 +417,38 @@ the evidence is sufficient.
 | `block` | Safe continuation depends on resolving the stale/conflicting rule. |
 
 Use the smallest outcome that protects future work.
+
+## Learning From Actual Domain Pack Use
+
+Domain Knowledge Pack activation remains owned by
+`/kb/domain_knowledge_pack_standard.md`. This framework owns any reusable
+learning disposition produced by actual pack use.
+
+Capture a compact effect note only when a pack was actually activated and its
+use materially affected evidence depth, terminology, risk handling, review,
+output quality, task cost, or complexity, or when a reviewer needs to record
+that no value was demonstrated. Use an existing task artifact.
+
+When material, record:
+
+- active pack, activation reason, and sections or sources actually used;
+- affected decision, artifact, evidence, terminology, risk treatment, or
+  review finding;
+- observed effect: beneficial, burdensome, mixed, or unknown;
+- evidence pointer, confidence, and alternative explanation;
+- unnecessary context, complexity, or maintenance cost;
+- learning disposition and existing owner if action is proposed.
+
+These are plain-language observations, not a score or a new taxonomy. No note
+is mandatory for every activation. Absence of effect evidence means `unknown`,
+not success.
+
+A useful one-off activation normally becomes a `learning_candidate` for a
+comparable future task. Unnecessary complexity normally stays task-local or
+becomes a routing/activation learning candidate. Repeated comparable evidence
+may become a `pattern_candidate`. Pack content or activation rules change only
+through a reviewed update to the specific pack or Domain Knowledge Pack
+Standard; use does not modify a pack automatically.
 
 ## `/about` Memory Disposition
 
@@ -399,3 +540,6 @@ This framework does not:
 - delete historical artifacts;
 - promote private source material into public memory;
 - require a new learning artifact for every task.
+- make Domain Pack telemetry or effect notes mandatory for every activation;
+- treat Domain Pack activation as proof of usefulness;
+- invent feedback, learning, or evaluation scores without evidence.

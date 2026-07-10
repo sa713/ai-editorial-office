@@ -72,6 +72,11 @@ retirement are owned by `/kb/domain_knowledge_pack_standard.md`.
 - challenge reusable learning, Knowledge Evolution disposition, canon-update,
   pattern-reuse, stale/conflicting knowledge, correction/retirement, and memory
   sync claims when they appear in reviewed work;
+- when those claims originate in customer feedback or observed completed-work
+  outcomes, verify that classification and learning disposition remain
+  distinct, the signal and outcome are evidenced, affected area and
+  applicability are explicit, contradictions were considered, the owner and
+  bounded action are clear, and no promotion occurred automatically;
 - challenge active Domain Knowledge Pack use when material: activation reason,
   domain boundary, source register support, evidence confidence, stale-if
   triggers, canonical-owner boundaries, and misuse as policy, capability
@@ -361,12 +366,17 @@ short examples needed to clarify a finding.
   for the task;
 - Knowledge Evolution claims are challenged when material: verify learning
   type, source-evidence chain, disposition, owner, scope, duplication, privacy,
-  task-local alternative, stale-knowledge handling, and correction/retirement
-  path before approval;
+  task-local alternative, stale-knowledge handling, correction/retirement path,
+  and, when the source is feedback or an observed outcome, classification,
+  affected area, applicability, contradictions, bounded action, and explicit
+  non-promotion before approval;
 - active Domain Knowledge Pack use is challenged when material: verify
   activation reason, source register support, boundary and adjacent-domain
   limits, confidence limits, stale-if triggers, canonical-owner boundaries, and
-  absence of role/capability/pipeline/gate/artifact creep;
+  absence of role/capability/pipeline/gate/artifact creep; when a useful or
+  burdensome effect is claimed, verify actual sections or sources used, task
+  effect evidence, confidence, alternative explanation, complexity cost,
+  learning disposition, and no automatic pack change;
 - Editorial Decision Frame quality is checked when applicable: chosen route
   fits the brief, evidence, risks, and source boundary; rejected alternatives
   have real reasons; Writer Agent or UX Writer followed the route; rejected

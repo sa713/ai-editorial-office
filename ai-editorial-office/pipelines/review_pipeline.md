@@ -80,6 +80,12 @@ correction/retirement, or `/about` sync, review applies
 duplication, privacy, maintenance cost, and whether the item should remain
 task-local.
 
+When the source is customer feedback or an observed completed-work outcome,
+the same check also preserves the distinction between feedback classification
+and learning disposition, verifies the saved signal and outcome, affected area,
+applicability, contradictions, bounded action, and explicit non-promotion. This
+is part of the existing Knowledge Evolution check, not another gate.
+
 When reviewed work depends on an active Domain Knowledge Pack, review applies
 `/kb/domain_knowledge_pack_standard.md` to challenge activation reason, source
 register support, boundary and adjacent-domain limits, stale-if triggers,
@@ -418,8 +424,8 @@ Quality gates are mandatory and artifact-backed.
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
-| Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, and memory-disposition claims are evidenced, scoped, owned, non-duplicative, and reviewable when material | task-local note promoted without evidence, no owner, duplicate rule, privacy risk, `/about` treated as canon, or stale guidance handled by silent deletion |
-| Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |
+| Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, and memory-disposition claims are evidenced, scoped, owned, non-duplicative, and reviewable; feedback/outcome claims also preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion when material | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, or stale guidance handled by silent deletion |
+| Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners; claimed benefit or burden also traces to actual sections used, task effect evidence, confidence, complexity cost, and non-promotion when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, activation treated as proof of value, unsupported effect claim, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |
 | Outcome gate | Outcome is exactly `approved`, `changes_requested`, or `blocked` | ambiguous verdict |
 | Finalization gate | Finalization allowed only after review outcome `approved` | missing review, blocked review, changes requested |
 

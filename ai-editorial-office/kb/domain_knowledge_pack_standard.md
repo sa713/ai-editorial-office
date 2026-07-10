@@ -239,10 +239,32 @@ When a reviewed artifact depends on an active domain pack, Review Agent checks:
 - unsupported or volatile facts were caveated, omitted, or returned to
   research;
 - maintenance or retirement concerns were recorded when material.
+- any claimed benefit, burden, or complexity effect traces to actual use
+  evidence and does not treat activation as proof of usefulness.
 
 When reviewing a proposed pack or pack update, Review Agent also checks that
 all required pack sections exist and that maintenance cost is justified by
 future value.
+
+### Learning From Actual Use
+
+Activation evidence explains why and how a pack was used. When actual use has a
+material effect, an existing task artifact may also record:
+
+- pack sections or sources actually used;
+- affected decision, artifact, evidence depth, terminology, risk handling, or
+  review finding;
+- observed benefit, burden, mixed effect, or unknown effect;
+- evidence pointer, confidence, and alternative explanation;
+- unnecessary context, complexity, or maintenance cost;
+- Knowledge Evolution disposition and existing owner if action is proposed.
+
+This effect note is conditional, not mandatory telemetry. No score, new
+artifact, or second review gate is created. Absence of evidence means the
+effect is unknown. One activation does not update a pack or its activation
+rules automatically; route reusable learning through
+`/kb/editorial_learning_framework.md` and a reviewed pack or standard owner
+update when evidence becomes sufficient.
 
 ## Update Rules
 
