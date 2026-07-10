@@ -161,6 +161,143 @@ Do not compute a general signal score. Counts, ratings, and sentiment may
 support judgment but cannot replace evidence, context, applicability, owner, or
 review. If the check is weak, keep the signal local, reject it, or defer it.
 
+## Advisory Evaluation Signal View
+
+Evaluation Signals make selected evidence visible for a material Project Lead,
+review, governance, or canonical-owner decision. They are an optional view over
+saved evidence, not a new evaluation framework, capability, taxonomy, store,
+dashboard, telemetry layer, task status, artifact, review gate, or promotion
+path.
+
+The view preserves three separate layers:
+
+```text
+saved observation or measurement
+-> contextual interpretation
+-> accountable human decision
+```
+
+It may raise a question, support an investigation, or expose a pattern. It
+never accepts or rejects a release, changes canon, reprioritizes backlog or
+roadmap, modifies memory, retires a capability or Domain Pack, or changes any
+owner automatically.
+
+### When A View Is Useful
+
+Create the view inside the smallest existing task, review, pattern, release, or
+governance artifact only when:
+
+- a real decision question exists;
+- material saved evidence exists;
+- the view adds decision value beyond the source artifacts;
+- the interpretation can be bounded and reviewed;
+- expected value exceeds capture and maintenance cost.
+
+No view is required for every task or release. Absence means no material signal
+was recorded for that decision, not that the system is healthy, improving, or
+free of risk.
+
+### Compact Evaluation Signal Record
+
+When material, make these facts reconstructable:
+
+- decision question: which human judgment this may inform;
+- observation: what was seen, without decision language;
+- evidence pointers: exact tasks, findings, validations, verdicts, use records,
+  sections, or commits;
+- scope and comparison window: which tasks, releases, or contexts are included;
+- denominator or exposure opportunity when a count or frequency is used;
+- missing, excluded, or ambiguous cases;
+- interpretation: what the evidence may indicate;
+- contradicting evidence and plausible alternative explanations;
+- confidence, unknowns, and evidence still needed;
+- existing affected owner;
+- optional human consideration: investigate, compare, verify, request evidence,
+  consider an owner-scoped reviewed change, or take no action;
+- explicit non-decision: what does not happen automatically.
+
+These are conditional information fields, not required task-object fields or a
+mandatory `evaluation-signals.md` artifact.
+
+### Existing Signal Owners
+
+The view does not redefine the underlying evidence:
+
+| Signal question | Existing owner or evidence surface |
+| --- | --- |
+| Capability activation frequency | Task manifests and orchestration plans for activation evidence; `capability_registry.md` for capability meaning |
+| Domain Pack usefulness | `domain_knowledge_pack_standard.md`, the active pack, and actual-use effect evidence |
+| Recurring review findings | Review Agent and Review Pipeline for findings; this framework and `feedback_patterns.md` for reusable recurrence |
+| Recurring architecture issues | `architecture_review.md` for drivers, quality scenarios, tradeoffs, and risks |
+| Evidence quality trends | `editorial_evidence_framework.md` for evidence classes, confidence, assumptions, and unknowns |
+| Learning promotion trends and stale knowledge | this framework for disposition, pattern confirmation, correction, supersession, retirement, and owner routing |
+| Release quality observations | review, validation, final decision, release report, Release Pack, and Project Lead verdict |
+| Maintenance-cost observations | saved task/release evidence and the affected canonical owner; this framework when reuse or change is proposed |
+
+### Count And Frequency Safety
+
+Counts and frequencies may be descriptive evidence only. Use a bounded window,
+comparable population, and denominator or exposure opportunity when those
+affect interpretation. Preserve missing cases and task mix.
+
+Do not convert counts into:
+
+- targets, thresholds, KPIs, or OKRs;
+- composite or weighted scores;
+- ranks, league tables, or individual performance measures;
+- maturity bands or capability levels;
+- automatic acceptance, rejection, prioritization, retirement, promotion, or
+  owner changes.
+
+Capability or Domain Pack activation frequency does not prove usefulness.
+Frequent activation may be beneficial, burdensome, mixed, or unnecessary. Rare
+activation may reflect low value, limited opportunity, correct non-activation,
+or a rare high-risk need. Actual effect and task context remain necessary.
+
+### Qualitative Judgments
+
+Keep these judgments qualitative even when supporting counts exist:
+
+- Domain Pack usefulness or maintenance justification;
+- evidence sufficiency for a material decision;
+- architecture drift and tradeoff significance;
+- release value and realized improvement;
+- whether repeated rejection indicates weak production or a strong gate;
+- whether maintenance burden lacks enduring value;
+- whether a learning candidate deserves canon;
+- how contradictory signals affect a decision;
+- release acceptance or changes requested.
+
+### Noise And Contradiction
+
+Keep the proposed signal local, reject it, or defer it when it is only an
+activity count, lacks comparable scope, cannot be reconstructed, hides missing
+cases or selection bias, duplicates an owner record without adding decision
+value, ignores a plausible alternative explanation, costs more to maintain than
+it can inform, or seeks a forbidden score or automatic action.
+
+When signals conflict, preserve each supported observation separately. Compare
+scope, time window, exposure opportunity, source strength, task mix, and
+outcome. Record what additional evidence could distinguish the explanations.
+Do not average contradictions, vote between them, or choose the convenient
+signal. Unresolved contradiction reduces confidence and usually supports
+further evidence, deferral, rejection, or no action.
+
+### Project Lead And Review Boundary
+
+Chief Editor may assemble a material view from saved evidence and route it to
+the existing owner. Review Agent challenges evidence, comparability,
+denominator, missing cases, alternatives, contradictions, confidence,
+proportionality, and non-decision language inside the existing review gate.
+
+Project Lead or the existing canonical owner decides whether to investigate,
+request evidence, make a separate reviewed change, or take no action. An
+Evaluation Signal never supplies or performs that decision.
+
+If a signal is proposed for reuse, apply the existing Knowledge Evolution
+disposition and pattern-confirmation rules. Appearance in a Release Pack does
+not promote it to a pattern or canon.
+
 ## Source-Evidence Chain
 
 Reusable learning should remain traceable to saved evidence. Before promotion,

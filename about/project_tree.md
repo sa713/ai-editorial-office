@@ -238,6 +238,11 @@ or the task-local canonical owner named there.
   canon-update candidates, stale/conflicting knowledge, correction/retirement,
   and `/about` memory disposition. It is not a role, pipeline, lifecycle stage,
   review gate, automatic canon promotion, or mandatory artifact.
+- Evaluation Signals are optional advisory views over saved evidence for a
+  material human decision. They reuse current owners and artifacts; they are
+  not a capability, dashboard, telemetry layer, role, pipeline, gate, status,
+  score, KPI, ranking, target, maturity level, mandatory artifact, or automatic
+  governance path.
 - Domain Knowledge Packs are source-backed context packages for material
   domain context. They are not roles, capabilities, pipelines, lifecycle
   stages, review gates, policy owners, client profiles, task status models, or

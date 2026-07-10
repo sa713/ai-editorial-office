@@ -102,6 +102,12 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
   canon-update candidates, stale assumptions, correction/retirement needs,
   memory sync needs, and pattern-promotion signals only through
   `/kb/editorial_learning_framework.md`.
+- when a material Project Lead, review, governance, or canonical-owner decision
+  would benefit, assemble an optional advisory Evaluation Signal view from
+  saved evidence through `/kb/editorial_learning_framework.md`; preserve the
+  decision question, bounded comparison, denominator or exposure opportunity
+  when material, missing cases, alternatives, contradictions, confidence,
+  existing owner, and explicit non-decision boundary;
 
 ## Inputs
 
@@ -280,6 +286,9 @@ Required when applicable:
   implementation plan has meaningful alternatives.
 - compact post-task learning/canon note when a material reusable pattern, stale
   assumption, or canon-update candidate is found.
+- compact Evaluation Signal view inside an existing task, review, pattern,
+  release, or governance artifact only when a material human decision question
+  and sufficient saved evidence exist.
 
 Conditional:
 
@@ -302,6 +311,13 @@ Conditional:
 - change system rules from a single feedback item;
 - promote task-local learning, one user reaction, or an implementation note into
   canon without validation, owner selection, and reviewed update scope;
+- turn activity, activation, review, evidence, learning, release, or maintenance
+  counts into a score, KPI, target, threshold, rank, maturity level, individual
+  performance measure, automatic verdict, automatic priority, automatic
+  retirement, or automatic canon/backlog/roadmap/memory change;
+- require an Evaluation Signal view for every task or release, create a
+  dashboard or telemetry store for it, or treat absence of a view as evidence
+  that the system is healthy;
 - write automatically to `engineering_watchlist.md` or backlog from raw
   feedback without a Chief Editor decision;
 - treat a customer preference as a global rule;

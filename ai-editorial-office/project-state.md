@@ -2,8 +2,8 @@
 
 ## Current phase
 Stage 4 - Domain Expertise is complete. Stage 5 - Editorial Intelligence is
-active. S5.R1 - Feedback and Learning Intelligence is a release candidate in
-Project Lead review.
+active. S5.R1 - Feedback and Learning Intelligence is accepted. S5.R2 -
+Evaluation Signals is a release candidate in Project Lead review.
 
 ## Completed
 - governance layer;
@@ -44,10 +44,16 @@ Project Lead review.
   source-evidence chains, pattern confirmation, stale/conflicting knowledge
   challenge, canon correction/retirement, and `/about` memory disposition
   guidance.
-- Feedback and Learning Intelligence release candidate with a bounded bridge
+- Accepted Feedback and Learning Intelligence release with a bounded bridge
   from existing customer-feedback classification to existing Knowledge
   Evolution disposition, evidence/applicability checks, owner-scoped action,
   rejection/deferral, and actual Domain Pack use-effect capture.
+- Evaluation Signals release candidate with an optional advisory view over
+  saved capability activation, Domain Pack effect, review, architecture,
+  evidence, learning, stale-knowledge, release, and maintenance observations;
+  it preserves comparison context, contradictions, confidence, current owners,
+  and explicit non-decision without scores, KPIs, rankings, dashboards, or
+  automatic governance.
 - Accepted Domain Knowledge Pack Standard with pack purpose,
   structure, activation, source/evidence requirements, boundaries, forbidden
   content, review, update, retirement, and `/about` boundary guidance.
@@ -100,15 +106,15 @@ repository decision.
 
 ## Current focus
 Stage 4 is fully closed after Project Lead acceptance. Preserve its stable,
-source-backed domain knowledge layer while Stage 5 begins with S5.R1 in Project
-Lead review.
+source-backed domain knowledge layer while Stage 5 continues with S5.R1
+accepted and S5.R2 in Project Lead review.
 
 Engineering Review and Professional Communication are complete. Professional
 Analysis remains an open release candidate. Knowledge Evolution is complete.
 
 S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
-active. S5.R1 is the current release candidate in `Review`; S5.R2 through S5.R5
-remain `Not Started`.
+active. S5.R1 is accepted and `Done`; S5.R2 is the current release candidate in
+`Review`; S5.R3 through S5.R5 remain `Not Started`.
 
 ## Strategic roadmap
 `ROADMAP.md` is the single long-term strategy document for AI Editorial Office.
@@ -148,12 +154,12 @@ Follow the active roadmap stage:
 
 - Stage: Stage 5 - Editorial Intelligence, active.
 - Last completed stage: Stage 4 - Domain Expertise.
-- Last completed release: S4.R5 - AI Engineering Domain Pack.
-- Open release candidates: Professional Analysis and S5.R1 Feedback and
-  Learning Intelligence.
-- Current next action: Project Lead reviews S5.R1; do not start S5.R2
+- Last completed release: S5.R1 - Feedback and Learning Intelligence.
+- Open release candidates: Professional Analysis and S5.R2 Evaluation Signals.
+- Current next action: Project Lead reviews S5.R2; do not start S5.R3
   automatically.
-- Stage 5 status: active; S5.R1 `Review`; S5.R2 through S5.R5 `Not Started`.
+- Stage 5 status: active; S5.R1 `Done`; S5.R2 `Review`; S5.R3 through S5.R5
+  `Not Started`.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.
@@ -221,6 +227,14 @@ solely because `ROADMAP.md` changed.
   observed benefit or burden, evidence/confidence, unnecessary complexity, and
   learning disposition. Effect capture is conditional and never changes a pack
   automatically.
+- Evaluation Signals are optional advisory views over saved evidence, not a new
+  capability, framework, store, dashboard, telemetry layer, role, pipeline,
+  lifecycle stage, review gate, status, score, KPI, ranking, target, maturity
+  level, or mandatory artifact. Chief Editor may assemble a material view;
+  Review Agent challenges evidence, comparison, missing cases, contradictions,
+  confidence, proportionality, and non-decision; Project Lead or the existing
+  canonical owner remains the decision authority. Counts never prove value,
+  acceptance, priority, retirement, or system improvement.
 - Engineering Review is a shared capability for implementation/change safety,
   not a new role, pipeline, lifecycle stage, review gate, or mandatory artifact
   set. It is activated only when engineering surfaces such as code, scripts,

@@ -81,6 +81,17 @@ New canonical owners introduced:
 
 - TBD
 
+## Evaluation Signals
+
+Include only material, evidence-backed signals that may help Project Lead
+review. `None observed` is valid. Counts are descriptive evidence only; do not
+add scores, KPIs, targets, thresholds, ranks, maturity levels, or automatic
+actions.
+
+| Decision question | Observation and evidence | Scope / comparison / missing cases | Interpretation, alternatives, and confidence | Existing owner | Project Lead consideration | Explicit non-decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| None observed / TBD |  |  |  |  |  |  |
+
 ## Release Metrics
 
 Canonical files changed:

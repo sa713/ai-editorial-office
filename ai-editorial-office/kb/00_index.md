@@ -68,9 +68,12 @@ Canonical KB ownership:
 - `editorial_learning_framework.md` owns reusable learning, Knowledge
   Evolution, canonization criteria, learning extraction, pattern confirmation,
   canon evolution, stale-knowledge challenge, canon correction/retirement, and
-  memory disposition. It does not create a memory database, Historian role,
-  Knowledge Curator role, automatic documentation process, or mandatory
-  retrospective.
+  memory disposition. It also defines the optional advisory Evaluation Signal
+  view used to assemble saved evidence for a material human decision while each
+  signal's meaning remains with its existing evidence/canonical owner. It does
+  not create a memory or signal database, dashboard, scoring system, Historian
+  or Evaluation role, automatic decision process, mandatory signal artifact,
+  or mandatory retrospective.
 - `domain_knowledge_pack_standard.md` owns Domain Knowledge Pack purpose,
   structure, activation, source/evidence requirements, domain boundaries,
   forbidden content, review, update, retirement, and relation to existing

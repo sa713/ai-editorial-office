@@ -173,6 +173,16 @@ gate, automatic canon promotion, or mandatory artifact. Keep task-local notes
 local unless source evidence, scope, owner, disposition, and review path justify
 promotion.
 
+Evaluation Signals may be assembled only when saved evidence can inform a
+material human decision. Use an existing task, review, pattern, release, or
+governance artifact and preserve the decision question, bounded comparison,
+denominator or exposure opportunity when material, missing cases,
+contradictions, confidence, existing owner, and explicit non-decision. Do not
+create dashboards, scores, KPIs, targets, rankings, maturity levels, mandatory
+signal artifacts, automatic actions, or individual performance measures.
+Chief Editor assembles, Review Agent challenges, and Project Lead or the current
+canonical owner decides.
+
 Domain Knowledge Packs may be activated only when domain context materially
 changes evidence depth, terminology, risk handling, review focus, or output
 quality. They are source-backed context packages, not roles, capabilities,

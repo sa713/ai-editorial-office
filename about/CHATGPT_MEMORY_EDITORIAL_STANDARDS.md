@@ -212,6 +212,29 @@ explicit non-promotion. Feedback classification and learning disposition are
 linked but distinct decisions. One anecdote normally stays task-local, is
 rejected, or is deferred; no score or count promotes it automatically.
 
+## Evaluation Signals
+
+Evaluation Signals are optional advisory views over saved evidence for a
+material Project Lead, review, governance, or canonical-owner question. They do
+not create a new capability, framework, store, dashboard, telemetry layer,
+role, pipeline, lifecycle stage, review gate, task status, score, KPI, target,
+ranking, maturity level, or mandatory artifact.
+
+When material, preserve the decision question, observation, evidence pointers,
+bounded comparison window, denominator or exposure opportunity for counts,
+missing cases, interpretation, alternatives and contradictions, confidence,
+existing owner, optional human consideration, and explicit non-decision.
+Activity and activation frequency never prove quality or usefulness. Keep
+Domain Pack value, architecture drift, evidence sufficiency, release value,
+maintenance burden, learning promotion, contradictory signals, and release
+acceptance qualitative and human-reviewed.
+
+Chief Editor may assemble the view inside an existing artifact. Review Agent
+challenges evidence, comparability, missing cases, noise, contradictions,
+proportionality, and non-decision. Project Lead or the current canonical owner
+remains the decision authority. No release, canon, backlog, roadmap, memory,
+Domain Pack, capability, or owner changes automatically.
+
 ## Domain Knowledge Packs
 
 Domain Knowledge Packs are source-backed, bounded, maintained context packages

@@ -77,6 +77,12 @@ retirement are owned by `/kb/domain_knowledge_pack_standard.md`.
   distinct, the signal and outcome are evidenced, affected area and
   applicability are explicit, contradictions were considered, the owner and
   bounded action are clear, and no promotion occurred automatically;
+- challenge advisory Evaluation Signal views when material: verify that the
+  decision question, observation, evidence pointers, bounded comparison,
+  denominator or exposure opportunity, missing cases, alternatives,
+  contradictions, confidence, existing owner, proportionality, and explicit
+  non-decision are sufficient, and that no count became a score, KPI, target,
+  rank, maturity level, individual measure, or automatic action;
 - challenge active Domain Knowledge Pack use when material: activation reason,
   domain boundary, source register support, evidence confidence, stale-if
   triggers, canonical-owner boundaries, and misuse as policy, capability
@@ -213,6 +219,10 @@ artifacts must never become silently mandatory.
   missing or materially unsupported;
 - approve canon evolution based on a single unverified task note, raw feedback,
   duplicate owner, missing source-evidence chain, or `/about` mirror;
+- approve an Evaluation Signal view that compares unlike scopes, hides missing
+  cases or contradictions, treats activation/activity as value, substitutes a
+  score or target for evidence, or implies automatic release, canon, backlog,
+  roadmap, memory, Domain Pack, capability, or owner action;
 - approve active Domain Knowledge Pack use when activation is unjustified,
   source register support is missing, boundaries are ignored, stale-if triggers
   are unresolved, or the pack overrides a canonical owner;
@@ -370,6 +380,13 @@ short examples needed to clarify a finding.
   and, when the source is feedback or an observed outcome, classification,
   affected area, applicability, contradictions, bounded action, and explicit
   non-promotion before approval;
+- Evaluation Signal views are challenged when material: verify the human
+  decision question, observation-versus-interpretation separation, evidence
+  pointers, comparison window, denominator or exposure opportunity, missing
+  cases, alternatives, contradictions, confidence, existing owner,
+  proportionality, qualitative-only judgments, and explicit non-decision; no
+  score, KPI, target, threshold, rank, maturity level, individual monitoring,
+  or automatic action may pass;
 - active Domain Knowledge Pack use is challenged when material: verify
   activation reason, source register support, boundary and adjacent-domain
   limits, confidence limits, stale-if triggers, canonical-owner boundaries, and

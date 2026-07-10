@@ -58,6 +58,10 @@ markdown smoke-tests и synthetic examples:
   feedback classification, outcome evidence, learning disposition, owner
   routing, Domain Pack effect evidence, rejection/deferral, stale learning, and
   non-promotion; it is not production governance or real usage evidence.
+- `evaluation_signals_smoke_test.md` - manual synthetic cases for advisory
+  Evaluation Signals, bounded counts, qualitative judgments, owner routing,
+  noise rejection, contradictory signals, and explicit non-decision; it is not
+  production governance or real usage evidence.
 - `domain_knowledge_pack_standard_smoke_test.md` - manual synthetic cases for
   Domain Knowledge Pack activation, non-activation, source boundaries, review,
   update, retirement, and forbidden architecture drift; it is not production
@@ -204,6 +208,15 @@ classification and learning disposition, qualitative evidence sufficiency,
 affected owner, bounded action, actual Domain Pack activation versus effect,
 rejection/deferral, and explicit non-promotion. It does not define active rules
 or prove that a synthetic pattern or Domain Pack effect exists in real tasks.
+
+`evaluation_signals_smoke_test.md` records the eight S5.R2 representative
+cases. It checks repeated successful and rejected releases, rare and frequent
+Domain Pack activation, repeated architecture warnings, repeated stale
+knowledge, a noisy activity metric, and contradictory signals. It verifies
+decision question, evidence, comparison scope, denominator/exposure when
+material, alternatives, confidence, existing owner, and explicit non-decision.
+It does not define active rules, create scores or automatic actions, or prove
+that the synthetic signals exist in real tasks.
 
 `domain_knowledge_pack_standard_smoke_test.md` records synthetic activation,
 non-activation, boundary, source, update, retirement, and review cases for

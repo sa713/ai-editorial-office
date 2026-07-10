@@ -30,6 +30,10 @@ task_local / preference -> observation -> confirmed_pattern -> system_change_can
 - Last updated:
 - Sources / TASK-:
 - Source signal and evidence pointers:
+- Decision question this pattern may inform:
+- Comparison window and comparable population:
+- Count / denominator / exposure opportunity, if used:
+- Missing, excluded, or ambiguous cases:
 - Short description:
 - Observed outcome:
 - Evidence that signals describe the same underlying condition:
@@ -42,6 +46,7 @@ task_local / preference -> observation -> confirmed_pattern -> system_change_can
 - Proposed bounded test or owner-scoped action:
 - Expected effect and validation:
 - Non-promotion statement:
+- Automatic decision or action: none
 - Required next review:
 ```
 

@@ -360,6 +360,10 @@ Compact review minimum:
 - compact Knowledge Evolution check when reviewed work proposes reusable
   learning, canon updates, pattern reuse, stale/conflicting knowledge,
   correction/retirement, or memory disposition;
+- compact Evaluation Signal check when reviewed work presents a material
+  advisory signal for Project Lead, governance, review, or canonical-owner
+  judgment; keep it inside the existing Knowledge Evolution/release review
+  scope rather than adding a gate;
 - compact Domain Knowledge Pack check when reviewed work depends on active
   pack context;
 - usefulness/pass rationale or blocking issues;
@@ -424,7 +428,7 @@ Quality gates are mandatory and artifact-backed.
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
-| Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, and memory-disposition claims are evidenced, scoped, owned, non-duplicative, and reviewable; feedback/outcome claims also preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion when material | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, or stale guidance handled by silent deletion |
+| Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, memory-disposition, and advisory Evaluation Signal claims are evidenced, scoped, owned, non-duplicative, proportionate, and reviewable; feedback/outcome claims also preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion; signal views preserve decision question, comparison window, denominator/exposure when material, missing cases, alternatives, confidence, qualitative judgment, and explicit non-decision | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, stale guidance handled by silent deletion, activity/activation treated as value, unlike comparisons, hidden contradictions, score/KPI/target/rank/maturity use, individual monitoring, or automatic action |
 | Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners; claimed benefit or burden also traces to actual sections used, task effect evidence, confidence, complexity cost, and non-promotion when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, activation treated as proof of value, unsupported effect claim, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |
 | Outcome gate | Outcome is exactly `approved`, `changes_requested`, or `blocked` | ambiguous verdict |
 | Finalization gate | Finalization allowed only after review outcome `approved` | missing review, blocked review, changes requested |
