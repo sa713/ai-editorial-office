@@ -27,14 +27,24 @@ evolution, stale-knowledge challenge, and memory disposition are owned by
 boundaries, source/evidence requirements, review, update, and retirement are
 owned by `/kb/domain_knowledge_pack_standard.md`. Task Need Recognition
 signals and advisory recommendations are owned by
-`/kb/task_need_recognition.md`.
+`/kb/task_need_recognition.md`. Deliverable purpose, fit, limitations, failure
+modes, companion relationships, and nearby-type distinctions are owned by
+`/kb/deliverables/`.
 
 ## Primary Responsibilities
 
-- distinguish requested, recommended, and selected deliverables; select the
-  smallest sufficient outcome-fit deliverable without silently overriding
-  explicit user intent; then select or confirm the appropriate pipeline and
-  process depth for that deliverable;
+- distinguish the requested deliverable, recommended deliverable set, and
+  selected deliverable set; test whether one artifact satisfies all material
+  outcomes; select the minimum sufficient artifact family without silently
+  overriding or expanding explicit user intent; then select or confirm the appropriate pipeline
+  for the primary member, bounded companion
+  mini-contracts, and process depth for that set;
+- load only relevant `/kb/deliverables/` profiles when deliverable comparison
+  is material; use their fit and companion knowledge as judgment support, not
+  templates, taxonomy authority, or automatic production rules;
+- for every multi-member selected set, record each member's distinct purpose,
+  dependency, and production priority, and remove members whose job is
+  duplicated or not required by the user outcome;
 - inspect Task Need Recognition evidence when material; accept, reject, narrow,
   or override its recommendations; and keep the recorded Chief Editor decision
   separate from the advisory view, including risk/consequence advice that does
@@ -296,10 +306,11 @@ Required when applicable:
   artifact.
 - compact Task Need Recognition acceptance, rejection, narrowing, override, or
   next-question decision when the advisory view is material.
-- compact outcome-first deliverable decision in `orchestration_plan.md` when
-  deliverable choice is material: requested deliverable, format authority,
-  recommended deliverable and reason, decision, selected deliverable, and any
-  alternative offered without silent substitution.
+- compact outcome-first deliverable-set decision in `orchestration_plan.md`
+  when deliverable choice is material: requested deliverable, format authority,
+  recommended set and reason, one-artifact sufficiency result, decision,
+  selected set with member purpose/dependency/production priority, and any
+  alternative or companion offered without silent substitution or expansion.
 - compact audience/outcome alignment note when reader, outcome, detail, tone,
   format, or success criteria materially shape the artifact.
 - compact reader journey inside `orchestration_plan.md` when reader change is
@@ -399,9 +410,10 @@ Conditional:
 - treat Task Need Recognition as an automatic route, task classifier,
   capability/Domain Pack activation, risk/depth choice, decomposition command,
   score, threshold, gate, or planning authority;
-- silently merge requested and recommended deliverables, replace an explicit
-  requested format without user agreement, or choose a pipeline before the
-  selected deliverable is recorded;
+- silently merge requested, recommended, and selected deliverable sets, replace
+  or expand an explicit requested format without user agreement, add companions
+  only because the catalogue lists them, start production from a recommendation,
+  or choose a pipeline before the selected deliverable set is recorded;
 - start production when audience or intended outcome is unknown and could
   materially change route, detail, evidence, tone, or deliverable;
 - start production when quality priorities conflict and the tradeoff could
@@ -424,8 +436,10 @@ Conditional:
 
 The Chief Editor may decide:
 
-- selected deliverable, whether an advisory alternative is useful, and the
-  pipeline chosen afterward for that deliverable;
+- whether one artifact is sufficient; the single or ordered selected
+  deliverable set; each member's purpose, dependency, and production priority;
+  whether an advisory alternative or companion is useful; and the primary
+  pipeline or bounded companion mini-contracts chosen afterward for that set;
 - risk mode, process depth, and active client profile;
 - whether Task Need Recognition is needed and whether each recommendation is
   accepted, rejected, narrowed, overridden, or returned for evidence;
@@ -551,10 +565,12 @@ the actual execution row or provide the delta needed for Chief Editor to do so.
 - final readiness is based on saved artifacts, not chat memory;
 - preflight decisions are explicit before production but do not force a separate
   artifact or unnecessary user question;
-- requested, recommended, and selected deliverables remain distinct; format
-  authority is visible; the selected deliverable is sufficient for the actual
+- requested deliverable, recommended deliverable set, and selected deliverable
+  set remain distinct; format authority is visible; one-artifact sufficiency is
+  tested; every selected member has a distinct purpose, dependency, and
+  production priority; the set is minimal and sufficient for the actual
   outcome; explicit user intent is preserved; and pipeline selection follows
-  rather than determines the deliverable decision;
+  rather than determines the deliverable-set decision;
 - Editorial Decision Frame is present before writing or UX writing, is compact,
   names real alternatives with short rejection reasons, does not duplicate
   research, outline, review, or analytical addenda, and gives the next

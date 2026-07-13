@@ -57,10 +57,13 @@ When downstream scope materially depends on Task Need Recognition, review
 applies `/kb/task_need_recognition.md` to challenge observed evidence,
 recommendation-versus-Chief Editor decision separation, keyword-only or forced
 classification, negative evidence, risk/consequence, proportionality,
-ambiguity, uncertainty, decomposition basis, requested/recommended/selected
-deliverable separation, format authority, explicit-intent preservation,
-outcome-fit sufficiency, pipeline-after-deliverable ordering, owner boundaries,
-and non-automation. This is part of the
+ambiguity, uncertainty, decomposition basis, requested deliverable versus
+recommended/selected set separation, format authority, one-artifact
+sufficiency, set minimality, member purpose/dependency/production priority,
+removable or missing companions, explicit-intent preservation,
+pipeline-after-set ordering, owner boundaries, and non-automation. Relevant
+profiles from `/kb/deliverables/` provide comparison evidence without acting as
+templates or production rules. This is part of the
 existing review gate, not a new routing or review gate.
 
 When reviewed work shows wrong-task drift, weak evidence, hidden assumptions,
@@ -273,8 +276,8 @@ compact evidence. Missing evidence for material claims should produce
 | `task-manifest.md` | Compact current state and review outcome fields | all roles | never for active tasks |
 | `status.md` | Detailed status/history and blockers | all roles | never for active tasks |
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
-| `orchestration_plan.md` | Requested/recommended/selected deliverable decision, selected production pipeline, and review gates | review_agent, chief_editor | never after orchestration starts |
-| reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
+| `orchestration_plan.md` | Requested deliverable, recommended/selected deliverable-set decision, member purpose/dependency/priority, selected primary production pipeline, and review gates | review_agent, chief_editor | never after orchestration starts |
+| reviewed material | Every selected-set artifact being independently reviewed | review_agent, final_editor | never for review |
 | `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Professional Communication challenge when applicable, Reader Review Lens when applicable, Architecture Review challenge when applicable, active Domain Knowledge Pack challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
@@ -452,10 +455,11 @@ It does not restate detailed review logic. Review Agent owns:
 - Task Need Recognition challenge, including hidden request evidence,
   keyword-only or forced classification, missing negative evidence,
   disproportionate depth, hidden ambiguity/uncertainty, unsupported
-  decomposition, requested/recommended/selected deliverable conflation, silent
-  explicit-format override, insufficient artifact recommendation, pipeline
-  selection before the deliverable decision, owner override, and
-  recommendations treated as decisions;
+  decomposition, requested/recommended/selected deliverable-set conflation,
+  skipped one-artifact sufficiency or minimality checks, missing member
+  purpose/dependency/production priority, silent explicit-scope override,
+  insufficient companion recommendation, pipeline selection before the set
+  decision, owner override, and recommendations treated as decisions;
 - Domain Knowledge Pack challenge, including weak activation, unsupported
   source register use, boundary drift, stale-if trigger neglect, canonical
   owner override, and misuse as policy, capability ownership, role, pipeline,
@@ -488,7 +492,7 @@ Quality gates are mandatory and artifact-backed.
 | Reader Review gate | When material, understanding, retention, application, Cognitive Bridge, Learning Design sequence, and reader burden have deterministic statuses tied to the Reader Outcome Contract and exact artifact evidence | missing bridge, headings substituted for memorable ideas, vague Practical Transformation, academic or jargon overload that blocks the outcome, or a taste preference presented as a finding |
 | Companion Pass gate | Reader-facing work is natural and concrete enough for the intended reader while preserving precision, evidence, caveats, boundaries, and traceability | taxonomy dump, synthetic expert performance, avoidable academic distance, unsupported friendliness, precision loss, or substantive repair deferred to Final Editor |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
-| Task Need Recognition gate | When downstream scope materially depends on recognition, observed evidence, recommendations, negative evidence, uncertainty, decomposition basis, explicit non-decision, and Chief Editor decision are distinct, proportionate, and owner-safe; when deliverable choice is material, requested, recommended, and selected deliverables are distinct, format authority is visible, the selected artifact is sufficient for the actual outcome, explicit user intent is respected, any alternative or unresolved mismatch is explained, and the pipeline was chosen afterward for the selected deliverable | keyword-only or forced type, hidden ambiguity, missing negative evidence, unsupported split, score/threshold authority, automatic routing/activation/depth, Chief Editor decision absent, silent format substitution, requested/recommended conflation, unjustified alternative, smallest-but-insufficient artifact, missing selected deliverable, or pipeline-first routing |
+| Task Need Recognition gate | When downstream scope materially depends on recognition, observed evidence, recommendations, negative evidence, uncertainty, decomposition basis, explicit non-decision, and Chief Editor decision are distinct, proportionate, and owner-safe; when deliverable choice is material, requested deliverable, recommended set, and selected set are distinct, format authority is visible, one-artifact sufficiency was tested, the selected set is minimal and sufficient, every member has a distinct purpose/dependency/production priority, removable and missing companions were challenged, explicit user intent is respected, any alternative or unresolved mismatch is explained, and the primary pipeline was chosen afterward for the selected set | keyword-only or forced type, hidden ambiguity, missing negative evidence, unsupported split, score/threshold authority, automatic routing/activation/depth/production, Chief Editor decision absent, silent format substitution or expansion, requested/recommended/selected conflation, unjustified companion, smallest-but-insufficient artifact, non-minimal set, purposeless or duplicate member, missing necessary companion, missing dependency/priority, missing selected set, or pipeline-first routing |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
 | Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, memory-disposition, Memory Hygiene Intelligence, and advisory Evaluation Signal claims are evidenced, scoped, owned, non-duplicative, proportionate, and reviewable; feedback/outcome claims preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion; memory claims preserve canonical source, represented fact, materiality, purpose/sensitivity/value, exact-copy or compact-summary branch, correction/compression/retirement/omission/deferral/no-sync rationale, branch validation, unique context, bounded growth, and non-automation; signal views preserve decision question, comparison window, denominator/exposure when material, missing cases, alternatives, confidence, qualitative judgment, and explicit non-decision | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, stale guidance handled by silent deletion, exact copy edited independently, misleading summary compression, sensitive/task-local propagation, context-erasing consolidation/retirement, unchecked no-sync, automatic memory write/disposition, activity/activation treated as value, unlike comparisons, hidden contradictions, score/KPI/target/rank/maturity use, individual monitoring, or automatic action |
 | Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners; claimed benefit or burden also traces to actual sections used, task effect evidence, confidence, complexity cost, and non-promotion when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, activation treated as proof of value, unsupported effect claim, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |
@@ -511,10 +515,12 @@ allow the review stage to close, and the review-specific packet is current:
   statement that route-validity assumptions still hold;
 - when Reader Review is material, `review.md` records all applicable Reader
   Review criteria, evidence, reader consequences, and bounded repair routing;
-- when deliverable choice is material, `review.md` records the applicable
-  requested/recommended/selected, format-authority, sufficiency,
-  explicit-intent, alternative/mismatch, and pipeline-ordering checks inside
-  the existing review gate and cites the orchestration decision;
+- when deliverable choice is material, `review.md` records requested versus
+  recommended/selected set, format-authority, one-artifact sufficiency,
+  minimality, member purpose/dependency/priority, removable or missing
+  companions, explicit-intent, alternative/mismatch, non-automatic production,
+  and pipeline-ordering checks inside the existing review gate and cites the
+  orchestration decision;
 - when material is reader-facing, `review.md` records Companion Pass and routes
   substantive repair to Writer Agent before approval;
 - conditional review artifacts exist when their depth triggers apply;
@@ -534,8 +540,14 @@ checks to the shared restart packet:
 - review is the active stage or review is required before the next stage;
 - reviewed material, selected production pipeline, and latest handoff are
   identified;
-- requested and selected deliverables, plus the advisory recommendation when
-  material, are identifiable in the orchestration record;
+- requested deliverable, advisory recommended deliverable set, one-artifact
+  sufficiency decision, and authoritative selected deliverable set are
+  identifiable in the orchestration record;
+- every selected member has a distinct purpose, explicit dependency, and
+  integer production priority; the set is minimal and preserves explicit user
+  scope;
+- selected pipeline and companion mini-contracts, when any, were chosen only
+  after the set decision;
 - Review Agent independence from the material creator is clear;
 - unsupported, contradicted, missing, stale, or untraceable claims are visible;
 - the next incomplete validation step is clear.

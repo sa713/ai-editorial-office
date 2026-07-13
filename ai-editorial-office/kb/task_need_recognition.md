@@ -4,7 +4,7 @@ This file owns the shared Task Need Recognition capability for AI Editorial
 Office. It defines how available request evidence becomes an advisory view of
 likely task needs before Chief Editor routing.
 
-It does not own or perform selected-deliverable choice, task classification,
+It does not own or perform selected-deliverable-set choice, task classification,
 routing, preflight, risk mode, process depth, research depth, review scope,
 capability activation, Domain Pack activation, role assignment, decomposition,
 planning, lifecycle transition, or governance. Those decisions remain with
@@ -16,8 +16,9 @@ Task Need Recognition helps the office inspect a request before work begins and
 answer, provisionally:
 
 - what kind of work appears to be present;
-- which deliverable would solve the user's real objective with the least
-  unnecessary burden while preserving required depth, evidence, and use value;
+- which single deliverable or minimal coordinated deliverable set would solve
+  the user's real objective with the least unnecessary burden while preserving
+  required depth, evidence, and use value;
 - which capabilities are likely to matter;
 - which Domain Packs may provide material context;
 - how much research, evidence, and review may be justified;
@@ -56,6 +57,9 @@ replaces Chief Editor judgment.
   criteria, boundaries, sources, stale-if triggers, and review questions.
 - Evaluation Signals own optional views over saved system/release evidence for
   later human decisions; they do not classify a current request.
+- `/kb/deliverables/` owns reusable knowledge about deliverable purpose, fit,
+  limits, failure modes, companions, and nearby-type distinctions; recognition
+  retrieves relevant profiles but does not turn them into templates or routes.
 
 Task Need Recognition may point to these owners. It must not reproduce their
 methods or make their decisions.
@@ -101,8 +105,9 @@ Start from available evidence, not a keyword list:
 Before Chief Editor selects a pipeline, recognition should answer the advisory
 question:
 
-> What is the smallest sufficient artifact that best solves the user's actual
-> problem?
+> What is the minimum sufficient artifact family that best solves the user's
+> actual problem: one deliverable when one is enough, or a minimal coordinated
+> set when distinct user outcomes cannot be satisfied by one artifact?
 
 This is not permission to substitute a preferred format for the user's request.
 Keep four values distinct whenever deliverable choice is material:
@@ -111,8 +116,13 @@ Keep four values distinct whenever deliverable choice is material:
 | --- | --- |
 | Requested deliverable | The format or artifact named by the user, or `not specified`. |
 | Format authority | `explicit`, `delegated`, `inferred`, or `unknown`; this describes who chose the format, not whether the format is good. |
-| Recommended deliverable | The advisory artifact shape that best fits the outcome and use context. |
-| Selected deliverable | The Chief Editor decision used for pipeline selection and production. |
+| Recommended deliverable set | The advisory single deliverable or ordered minimal set that best fits the outcome and use context. |
+| Selected deliverable set | The Chief Editor decision used for production planning and later pipeline or mini-contract selection. |
+
+For compatibility, `recommended deliverable` and `selected deliverable` remain
+valid one-member shorthand. In new material decisions, the set view is
+authoritative: a single deliverable is a set with one member, and
+`selected_deliverable` may act as the primary/only compatibility pointer.
 
 Evaluate the recommendation from the outcome and use situation rather than a
 format keyword alone:
@@ -125,7 +135,11 @@ format keyword alone:
 - the minimum structure and evidence needed to make the result sufficient;
 - reader/user effort, maintenance burden, and avoidable production bulk;
 - whether the requested format is essential, explicit, only an example, safely
-  inferred, or delegated to the office.
+  inferred, or delegated to the office;
+- whether a distinct secondary outcome remains unsatisfied after the strongest
+  primary artifact is selected;
+- whether a plausible companion has a unique job or merely duplicates,
+  summarizes, reformats, or inflates the primary artifact.
 
 Possible recommendations include article, report, memo, executive brief,
 checklist, roadmap, FAQ, decision matrix, comparison, presentation,
@@ -135,24 +149,62 @@ not a closed taxonomy and not a pipeline list.
 
 Use these decision rules:
 
-1. When the user explicitly requests a deliverable, recommend alternatives only
-   when they add material value, and select the requested deliverable by default.
-2. When the user delegates format choice, recommend and select the strongest
-   outcome-fit deliverable, with a compact reason.
+1. When the user explicitly requests a deliverable, recommend alternatives or
+   companions only when they add material value, and advise Chief Editor to
+   keep the requested deliverable as the primary item by default.
+2. When the user delegates format choice, recommend the strongest outcome-fit
+   deliverable or minimal set, with a compact reason.
 3. When format is inferred from the goal or use context, keep the inference
    visible and ask only if plausible formats would produce materially different
    outcomes or commitments.
 4. When an explicit format appears unable to satisfy the stated outcome, do not
-   replace it silently. Explain the mismatch and use Chief Editor preflight to
-   `ask`, `constrain`, or preserve the requested deliverable with a clearly
-   bounded alternative recommendation.
+   replace or expand it silently. Explain the mismatch and use Chief Editor
+   preflight to `ask`, `constrain`, or preserve the requested deliverable with
+   a clearly bounded alternative or companion recommendation.
 5. A vague verb such as `explain`, `help`, or `summarize` does not by itself
    justify a checklist, matrix, roadmap, or other compressed format. The
    recommendation must preserve the actual communication job.
 
-The selected deliverable must be recorded before the selected pipeline. The
-pipeline, mode, or mini-contract then follows the selected deliverable; it does
-not retroactively decide what the deliverable should be.
+These rules are advisory. Chief Editor alone selects the primary item or
+ordered deliverable set and records the authoritative production decision.
+
+## Selected Deliverable Set
+
+Recommend a single deliverable when it satisfies all material user outcomes.
+Recommend an ordered set only when every additional member covers a distinct
+outcome that the earlier members cannot satisfy adequately. The target is the
+minimum sufficient artifact family, not maximum output.
+
+Each recommended and selected member records:
+
+- deliverable name;
+- purpose in this task;
+- dependency: `independent`, `depends on <member>`, or another explicit relation;
+- production priority: ordered integer, with the primary artifact first unless
+  a prerequisite must be produced earlier.
+
+Apply these rules:
+
+1. Run a one-artifact sufficiency check before proposing companions.
+2. Retrieve only relevant profiles from `/kb/deliverables/` and compare their
+   purpose, strengths, weaknesses, failure modes, nearby distinctions, and
+   companion relationships against the actual outcome.
+3. Add a companion only when it has a distinct user job, not because the
+   catalogue lists it as typical or production is easy.
+4. Remove any member whose purpose is duplicated, unsupported, optional without
+   user value, or better handled inside another selected artifact.
+5. Preserve explicit user scope. A recommendation may name a useful companion,
+   but production does not start until Chief Editor selects it within user
+   intent or resolves expansion through existing preflight.
+6. Keep one task only when the set has coherent evidence, owners, review, and
+   governance. Recommend decomposition when members require materially
+   different audiences, source boundaries, risks, approvals, or validation.
+
+The selected deliverable set must be recorded before the selected pipeline.
+Chief Editor selects one primary existing pipeline or mode for the primary
+member and uses bounded task-local mini-contracts for companions when needed.
+The pipeline never retroactively decides the set, and a companion relationship
+never creates a new pipeline.
 
 Name negative evidence when it prevents unnecessary depth. For example, a
 simple copyedit that happens to mention security terms has no security-sensitive
@@ -318,7 +370,8 @@ Record the smallest useful view in `brief.md`, `orchestration_plan.md`, or
 - observed request signals:
 - requested deliverable:
 - format authority: explicit / delegated / inferred / unknown
-- recommended deliverable and outcome-fit reason:
+- recommended deliverable set and outcome-fit reason:
+- one-artifact sufficiency result:
 - likely primary task type:
 - material secondary aspects:
 - likely capabilities and why:
@@ -333,7 +386,7 @@ Record the smallest useful view in `brief.md`, `orchestration_plan.md`, or
 - explicit non-decision:
 - Chief Editor deliverable decision: respect_requested / select_recommended /
   ask_before_change / constrain_with_explanation
-- selected deliverable:
+- selected deliverable set, with purpose / dependency / production priority:
 - Chief Editor routing decision or next question:
 ```
 
@@ -359,15 +412,16 @@ material. For compact work, combine or omit fields that add no decision value.
 
 | Role | Responsibility |
 | --- | --- |
-| Intake Agent | Capture observed request evidence, requested deliverable, format authority, and the initial advisory view when material; do not select the deliverable, route, or activate. |
-| Chief Editor | Challenge evidence, accept/reject/narrow recommendations, select the deliverable before the pipeline, make every routing/preflight/activation/depth/decomposition decision, and record the result. |
+| Intake Agent | Capture observed request evidence, requested deliverable, format authority, and the initial advisory single/set view when material; do not select the deliverable set, route, or activate. |
+| Chief Editor | Challenge evidence, accept/reject/narrow recommendations, decide whether one artifact is sufficient, select the minimal deliverable set before the pipeline, make every routing/preflight/activation/depth/decomposition decision, and record the result. |
 | Research Agent | Verify missing domain/current-state evidence when assigned; do not retroactively present research as an intake decision. |
-| Writer Agent / UX Writer | Follow the approved route; flag new evidence that invalidates the recognition assumptions. |
-| Review Agent | When downstream scope materially depends on recognition, challenge evidence, negative cases, proportionality, uncertainty, owner boundaries, and non-decision. |
-| Final Editor | Preserve approved boundaries and caveats; do not reclassify the task. |
+| Writer Agent / UX Writer | Produce only assigned selected-set members in recorded order and dependency boundaries; flag new evidence that invalidates the recognition assumptions. |
+| Review Agent | When downstream scope materially depends on recognition, challenge evidence, negative cases, set minimality and sufficiency, member purpose/dependency/priority, proportionality, uncertainty, owner boundaries, and non-decision. |
+| Final Editor | Preserve the reviewed selected set, member boundaries, and caveats; do not reclassify or expand the task. |
 
-No Task Router, Classifier, Triage Agent, Analyst, Domain Selector, or Review
-Level Selector role is created.
+No Task Router, Classifier, Triage Agent, Analyst, Domain Selector, Review Level
+Selector, Deliverable Agent, Catalogue Agent, Package Agent, or Bundle Agent
+role is created.
 
 ## Review Questions
 
@@ -375,14 +429,20 @@ When recognition materially affected the route, Review Agent may ask:
 
 - Are observed signals separated from inference, recommendation, and Chief
   Editor decision?
-- Are requested, recommended, and selected deliverables distinct, and is format
-  authority recorded?
-- Does the recommended deliverable minimize avoidable burden while remaining
-  sufficient for the intended outcome, use context, and evidence need?
+- Are requested deliverable, recommended deliverable set, and selected
+  deliverable set distinct, and is format authority recorded?
+- Did the recommendation test whether one artifact is sufficient before adding
+  companions?
+- Is the selected set minimal: does every member have a distinct purpose,
+  dependency, and production priority; can any member be removed; and is any
+  necessary companion missing?
+- Does the recommended deliverable set minimize avoidable burden while
+  remaining sufficient for the intended outcome, use context, and evidence need?
 - Was an explicit requested deliverable preserved unless the user agreed to a
   change, or was any unresolved mismatch routed through preflight rather than
   silently overridden?
-- Was the pipeline chosen after and because of the selected deliverable?
+- Was the primary pipeline chosen after and because of the selected deliverable
+  set, with companions handled by bounded existing-role mini-contracts?
 - Does the primary task type follow outcome/work surface rather than keywords?
 - Are material secondary aspects preserved without forcing one class?
 - Are capability and pack recommendations tied to their actual owner criteria?
@@ -404,10 +464,13 @@ Stop, narrow, or return to Chief Editor when:
 - the request cannot be distinguished from a different plausible task without
   material clarification;
 - a recommendation depends only on keywords or topic names;
-- requested and recommended deliverables have been silently merged;
-- an explicit requested format would be replaced without user agreement or a
-  visible preflight decision;
+- requested, recommended, and selected deliverable sets have been silently
+  merged;
+- an explicit requested format would be replaced or expanded with companions
+  without user agreement or a visible preflight decision;
 - the proposed artifact is smaller but no longer sufficient for the outcome;
+- a companion has no distinct purpose, duplicates another member, lacks a
+  dependency/priority, or was added only because the catalogue lists it;
 - a Domain Pack/capability owner would be overridden;
 - the view hides contradictory or negative evidence;
 - a score, threshold, or classifier output is being treated as authority;
@@ -422,12 +485,12 @@ Task Need Recognition does not:
 
 - create automatic routing, classification, capability activation, Domain Pack
   activation, review level, research level, or planning;
-- silently override an explicit requested deliverable or treat a recommendation
-  as user consent;
+- silently override or expand an explicit requested deliverable, treat a
+  companion recommendation as user consent, or start production automatically;
 - create a role, pipeline, lifecycle stage, status, gate, task taxonomy,
   framework, store, model, classifier, score, threshold, or dashboard;
-- make selected-deliverable, task type, risk, depth, pack, capability, split, or
-  next-action decisions;
+- make selected-deliverable-set, task type, risk, depth, pack, capability,
+  split, production, or next-action decisions;
 - replace Preflight, Intake Normalization, Professional Analysis, Professional
   Communication, Architecture Review, Engineering Review, Evaluation Signals,
   Evidence Confidence, Domain Pack activation, Review Agent, or Chief Editor;

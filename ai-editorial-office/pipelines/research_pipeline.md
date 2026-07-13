@@ -15,8 +15,10 @@ conditional and claim-driven, not automatic.
 ## when to use
 
 Chief Editor selects this evidence pipeline only after the intended outcome and
-selected deliverable are known enough to define what evidence that deliverable
-needs. Research need does not decide the final artifact format retroactively.
+selected deliverable set are known enough to define what evidence each member
+needs. Research need does not decide the final artifact family retroactively. A
+research report plus executive brief, for example, shares one evidence base but
+keeps distinct reader purposes and must be selected before production.
 
 Use this pipeline when any of these are true:
 
@@ -53,7 +55,7 @@ only maps Research Pipeline responsibilities to current roles.
 | Stage responsibility | Required role | Agent spec |
 | --- | --- | --- |
 | Intake package, if not already complete | `intake_agent` | `/agents/intake_agent.md` |
-| Deliverable-first pipeline selection and status governance | `chief_editor` | `/agents/chief_editor.md` |
+| Deliverable-set-first pipeline selection and status governance | `chief_editor` | `/agents/chief_editor.md` |
 | Research execution | `research_agent` | `/agents/research_agent.md` |
 | Downstream drafting, if research is sufficient for article or editorial copy | `writer_agent` | `/agents/writer_agent.md` |
 | Downstream UX copy, if research is sufficient for product-language work | `ux_writer` | `/agents/ux_writer.md` |

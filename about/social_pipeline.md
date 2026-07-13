@@ -17,9 +17,12 @@ The pipeline is markdown-first, artifact-backed, deterministic, and restartable 
 
 ## when to use
 
-Use this pipeline when the selected deliverable, recorded after the
-outcome-first deliverable decision, is short-form editorial or promotional copy
-adapted to one or more platforms. A short-form example does not select this
+Use this pipeline when the primary or explicitly planned companion member of
+the selected deliverable set, recorded after the outcome-first decision, is
+short-form editorial or promotional copy adapted to one or more platforms. A
+social announcement may support a reviewed article, interview, report, or
+release only when Chief Editor records its distinct distribution purpose;
+typical companion knowledge does not authorize production. A short-form example does not select this
 pipeline when format choice was delegated or only illustrative.
 
 Use it when:
@@ -51,7 +54,7 @@ only maps Social Pipeline responsibilities to current roles.
 | Stage | Required role | Agent spec | Responsibility |
 | --- | --- | --- | --- |
 | Intake | `intake_agent` | `/agents/intake_agent.md` | Normalize request, platform target, audience, constraints, and missing information |
-| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select deliverable, then pipeline; assign roles, maintain status, make final decision |
+| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select minimal deliverable set, then primary route and any bounded social companion mini-contract; assign roles, maintain status, make final decision |
 | Research, when required | `research_agent` | `/agents/research_agent.md` | Create evidence base and claim traceability |
 | Writing | `writer_agent` | `/agents/writer_agent.md` | Create platform-adapted short-form draft and claim usage notes |
 | Review | `review_agent` | `/agents/review_agent.md` | Independently validate copy, artifacts, tone, traceability, and governance compliance |

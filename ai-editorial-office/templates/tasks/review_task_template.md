@@ -114,16 +114,22 @@ Conditional files:
 - Structure/usefulness validation:
 - Governance validation:
 
-## outcome-first deliverable review, when material
+## outcome-first deliverable-set review, when material
 
 - Requested deliverable:
 - Format authority: explicit/delegated/inferred/unknown
-- Recommended deliverable:
-- Selected deliverable:
+- Recommended deliverable set:
+- One artifact sufficient: pass/fail/needs clarification and evidence
+- Selected deliverable set:
+- Every member has distinct purpose: pass/fail/needs clarification
+- Dependencies and production priorities are explicit: pass/fail/needs clarification
+- Any member removable without outcome loss: yes/no/needs clarification
+- Necessary companion missing: yes/no/needs clarification
 - Explicit intent respected: pass/fail/needs clarification
-- Selected artifact sufficient for actual outcome: pass/fail/needs clarification
+- Selected set minimal and sufficient for actual outcome: pass/fail/needs clarification
 - Alternative or override justified: pass/fail/not applicable/needs clarification
-- Pipeline selected after and for the selected deliverable: pass/fail/needs clarification
+- Production authorized rather than inferred from recommendation: pass/fail/needs clarification
+- Primary pipeline selected after and for the selected set: pass/fail/needs clarification
 
 ## compact reader review, when selected
 

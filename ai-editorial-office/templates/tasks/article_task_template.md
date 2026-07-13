@@ -104,8 +104,10 @@ governance, or non-trivial coordination must be recorded.
 
 - requested deliverable:
 - format authority: explicit/delegated/inferred/unknown
-- advisory recommended deliverable, when material:
-- selected deliverable: Chief Editor records in `orchestration_plan.md`
+- advisory recommended deliverable set, when material:
+- one-artifact sufficiency signal:
+- selected deliverable set: Chief Editor records purpose, dependency, and
+  production priority in `orchestration_plan.md`
 
 ## channel or publication context
 

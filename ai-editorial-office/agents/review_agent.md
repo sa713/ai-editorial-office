@@ -29,7 +29,9 @@ are owned by `/kb/editorial_learning_framework.md`. Domain Knowledge Pack
 activation, boundaries, source/evidence requirements, review, update, and
 retirement are owned by `/kb/domain_knowledge_pack_standard.md`. Task Need
 Recognition signals, advisory recommendations, uncertainty, and non-decision
-boundaries are owned by `/kb/task_need_recognition.md`.
+boundaries are owned by `/kb/task_need_recognition.md`. Deliverable-type
+purpose, fit, limitations, failure modes, companions, and nearby distinctions
+are owned by `/kb/deliverables/`.
 
 ## Primary Responsibilities
 
@@ -78,11 +80,14 @@ boundaries are owned by `/kb/task_need_recognition.md`.
   keyword classification, negative evidence, risk/consequence,
   proportionality, ambiguity, uncertainty, decomposition basis, owner
   boundaries, and non-automation;
-- verify the outcome-first deliverable decision when material: requested,
-  recommended, and selected deliverables remain distinct; format authority is
-  visible; the selected artifact is sufficient for the user's real objective;
-  explicit format intent was respected; any alternative or override was
-  explained; and pipeline selection followed the selected deliverable;
+- verify the outcome-first deliverable-set decision when material: requested
+  deliverable, recommended set, and selected set remain distinct; format
+  authority is visible; one-artifact sufficiency was tested; every selected
+  member has a distinct purpose, dependency, and production priority; no member
+  is removable without outcome loss; no necessary companion is missing;
+  explicit format intent was respected; any alternative, companion, or override
+  was explained; and pipeline selection followed the selected set;
+- for a one-member set, confirm that pipeline selection followed the selected deliverable;
 - challenge whether the artifact optimized for the right quality attributes and
   whether accepted tradeoffs are visible and safe;
 - challenge each Bounded Utility Tradeoff against its concrete reader need,
@@ -232,6 +237,8 @@ Conditional:
   when reviewed work depends on active domain-pack context;
 - `/kb/task_need_recognition.md` and the recorded view/Chief Editor decision
   when reviewed scope materially depends on task recognition;
+- relevant `/kb/deliverables/` profiles when deliverable or companion fit is
+  material; do not require loading unrelated catalogue entries;
 - active client-profile files and review checklist when `client_profile` is set;
 - current active version pointer when multiple versions exist.
 
@@ -317,9 +324,11 @@ artifacts must never become silently mandatory.
   contradictory evidence, forces a single type, overstates confidence,
   creates unnecessary depth, omits the Chief Editor decision, or performs
   routing, activation, decomposition, scoring, or depth selection;
-- approve a hidden deliverable substitution, an unexplained divergence from an
-  explicit requested format, a smallest artifact that is insufficient for the
-  outcome, or a pipeline selected before the deliverable decision;
+- approve a hidden deliverable substitution or expansion, an unexplained
+  divergence from explicit requested scope, an insufficient single artifact, a
+  non-minimal set, a purposeless/redundant member, a missing necessary
+  companion, an unordered dependency, automatic companion production, or a
+  pipeline selected before the deliverable-set decision;
 - approve canon evolution based on a single unverified task note, raw feedback,
   duplicate owner, missing source-evidence chain, or `/about` mirror;
 - approve a memory change that lacks a current canonical source, independently
@@ -369,9 +378,11 @@ The Review Agent may decide:
 - whether Task Need Recognition evidence and recommendations are proportionate,
   uncertainty-aware, owner-safe, explicitly advisory, and separated from the
   Chief Editor decision;
-- whether requested, recommended, and selected deliverables are correctly
-  separated; explicit intent is respected; any alternative is justified; and
-  the selected deliverable and downstream pipeline fit the real outcome;
+- whether requested deliverable, recommended set, and selected set are
+  correctly separated; one-artifact sufficiency, set minimality, member
+  purpose/dependency/priority, removable members, and missing companions are
+  checked; explicit intent is respected; any alternative is justified; and the
+  selected set and downstream route fit the real outcome;
 - whether a failure mode requires bounded repair, return to an earlier stage,
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
@@ -411,8 +422,9 @@ Stop and mark blocked or escalate when:
   formal, bloated, or duplicative to validate the chosen route as a usable
   production contract;
 - the orchestration record does not permit the reviewer to determine the
-  requested deliverable, format authority, selected deliverable, or whether the
-  pipeline was chosen after that decision when the distinction is material;
+  requested deliverable, format authority, selected deliverable set, member
+  purposes/dependencies/priorities, or whether the pipeline was chosen after
+  that decision when the distinction is material;
 - reviewer independence cannot be established;
 - required evidence, claim traceability, or source files are missing;
 - evidence confidence is below the minimum needed for the material conclusion
@@ -470,11 +482,13 @@ short examples needed to clarify a finding.
   recommendations, negative evidence, ambiguity, uncertainty, decomposition
   basis, explicit non-decision, and Chief Editor decision remain distinct; no
   keyword, score, threshold, or recommendation performs routing or activation;
-- outcome-first deliverable selection is checked when material: requested,
-  recommended, and selected deliverables remain distinct; the recommendation
-  is outcome-fit and sufficient rather than merely shorter; explicit user
-  format intent is preserved; alternatives or unresolved mismatches are
-  explained; and the pipeline follows the selected deliverable;
+- outcome-first deliverable selection is checked when material: requested
+  deliverable, recommended set, and selected set remain distinct; one-artifact
+  sufficiency is tested; the recommendation is outcome-fit, minimal, and
+  sufficient rather than merely larger or shorter; every member has a distinct
+  purpose, dependency, and production priority; removable or missing companions
+  are challenged; explicit user format intent is preserved; alternatives or
+  unresolved mismatches are explained; and the pipeline follows the selected set;
 - analytical reasoning is checked when material: the work does not answer the
   wrong question, close prematurely, confirm only the preferred answer, hide
   assumptions, smooth contradictions, inflate precision, overrun research, or

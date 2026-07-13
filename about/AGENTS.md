@@ -42,7 +42,8 @@
 | Task status model and transitions | `/kb/task_statuses.md` | status references, not alternate state models |
 | Task object model and artifact view mapping | `/kb/task_object_model.md` | task-specific values, restart pointers, and local consequences |
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
-| Task Need Recognition signals, outcome-first deliverable recommendation, uncertainty, negative evidence, and decomposition cues before routing | `/kb/task_need_recognition.md` | compact task-specific recognition view, requested/recommended/selected deliverable decision, and Chief Editor routing decision |
+| Task Need Recognition signals, outcome-first deliverable-set recommendation, uncertainty, negative evidence, and decomposition cues before routing | `/kb/task_need_recognition.md` | compact task-specific recognition view, requested/recommended/selected deliverable-set decision, and Chief Editor routing decision |
+| Deliverable-type purpose, fit, limitations, failure modes, companion relationships, and nearby-type distinctions | `/kb/deliverables/` | task-specific catalogue references and outcome-fit comparison; never templates, pipelines, or automatic production rules |
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
@@ -102,6 +103,10 @@ existing markdown system should be understood and extended.
 - `/kb/task_need_recognition.md` defines the evidence-first advisory view of
   likely task type, capabilities, Domain Packs, depth, significance,
   ambiguity, decomposition, and uncertainty before Chief Editor routing.
+- `/kb/deliverables/` defines reusable knowledge profiles for comparing
+  deliverable purpose, fit, limitations, failure modes, companion relations,
+  and nearby types. It is not a template library, pipeline registry, closed
+  taxonomy, classifier, or generator.
 - `/kb/shared_lifecycle_kernel.md` defines shared stages, gates, artifact
   responsibilities, expansion triggers, human approval boundary, and stage
   context contracts.
@@ -193,10 +198,12 @@ Before production starts, Chief Editor must route the task editorially:
   record the Chief Editor decision separately;
 - determine the task type;
 - before selecting a pipeline, distinguish the requested deliverable from the
-  outcome-first recommended deliverable, identify whether format choice is
-  explicit or delegated, and record the selected deliverable and reason;
+  outcome-first recommended deliverable set, identify whether format choice is
+  explicit or delegated, decide whether one artifact is sufficient, and record
+  the single or ordered selected deliverable set and reason;
 - respect an explicit requested deliverable by default; an alternative format
-  may be recommended, but it must not replace explicit user intent silently;
+  or companion may be recommended, but it must not replace or expand explicit
+  user intent silently;
 - choose the relevant pipeline or editorial mode;
 - determine whether a client profile must be activated;
 - determine whether a Domain Knowledge Pack should be activated when domain
@@ -282,11 +289,13 @@ Exception: direct-production execution is allowed when the user explicitly asks
 to do the work directly, skip the editorial process, bypass the process, not use
 the editorial system, or handle the request as an ordinary non-editorial task.
 
-After routing, the result must stay within the selected deliverable and the
-pipeline or mode chosen for it. For example, when
+After routing, the result must stay within the selected deliverable set and the
+pipeline, mode, or bounded companion mini-contract chosen for it. Every set
+member must have a distinct purpose, dependency state, and production priority;
+recommendation alone does not authorize production. For example, when
 `visual_article_sketchnote` is selected, execution must not silently drift into
 an infographic, web page, SVG summary, corporate one-pager, or other output
-genre that contradicts the selected deliverable and mode.
+genre that contradicts the selected deliverable set and mode.
 
 ## Core roles and extension roles
 
@@ -832,8 +841,10 @@ final governance still happens and must be artifact-backed.
 
 2. Orchestration
 
-   `chief_editor` сначала фиксирует requested, recommended и selected
-   deliverable, затем выбирает подходящий для selected deliverable pipeline,
+   `chief_editor` сначала фиксирует requested deliverable, recommended
+   deliverable set и selected deliverable set, затем выбирает подходящий для
+   primary selected deliverable pipeline и bounded mini-contracts для
+   companions, если они действительно нужны,
    назначает core roles или явно легализованные extension roles только когда
    их условия выполнены, фиксирует план в `orchestration_plan.md` и
    поддерживает `task-manifest.md` и `status.md`. Это одна orchestration-stage,
@@ -842,7 +853,7 @@ final governance still happens and must be artifact-backed.
    Before production starts, `chief_editor` records or confirms a compact
    Preflight Gate decision in an existing task artifact. The required fields are:
    Audience (`confirmed` / `inferred` / `unknown`), Channel or context
-   (`confirmed` / `inferred` / `unknown`), Selected deliverable
+   (`confirmed` / `inferred` / `unknown`), Selected deliverable set
    (`defined` / `unclear`),
    Source boundary (`defined` / `unclear`), Success criterion (`defined` /
    `unclear`), Approval boundary (`defined` / `unclear`), and Missing data
@@ -1142,7 +1153,9 @@ Legacy task folders are history, not templates. Do not copy the heavier artifact
 - `outline.md` должен показывать структуру материала и ключевые тезисы;
 - `draft.md` должен быть пригоден для редакторской работы;
 - `review.md` должен содержать проверяемые замечания и итоговый статус;
-- `final.md` должен содержать только утверждённую финальную версию.
+- `final.md` должен содержать утверждённую финальную версию или компактный
+  индекс утверждённого final artifact set; каждый вынесенный отдельный
+  deliverable должен быть указан в manifest и покрыт review.
 
 Для повторяемых секций следует использовать стабильные заголовки. Например:
 
@@ -1291,6 +1304,10 @@ Review должен быть максимально воспроизводимы
   `pass`/`fail`/`not applicable`/`needs clarification` статусами и ссылками на
   Reader Outcome Contract или точные места артефакта; вкус сам по себе не
   является finding;
+- когда deliverable choice материален: достаточность одного артефакта,
+  минимальность selected deliverable set, отдельная цель каждого элемента,
+  зависимости и production priority, возможность удалить лишний элемент,
+  отсутствие пропущенного необходимого companion и связь набора с user outcome;
 - соответствие аудитории и формату;
 - наличие unresolved blockers;
 - готовность `final.md`, если материал претендует на финализацию.

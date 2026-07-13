@@ -65,6 +65,14 @@ markdown smoke-tests и synthetic examples:
 - `test_outcome_first_deliverable_selection.sh` - executable static regression
   check for the canonical owner text, orchestration ordering, ten-case synthetic
   suite, and absence of forbidden Deliverable/Format Agent or pipeline files.
+- `deliverable-knowledge-multi-deliverable-planning-smoke-test.md` - eight
+  synthetic cases for catalogue-guided single/set selection, one-artifact
+  sufficiency, member purpose/dependency/priority, companion minimality,
+  explicit-scope preservation, and non-automatic production.
+- `test_deliverable_knowledge_multi_deliverable_planning.sh` - executable static
+  regression for the 20-profile catalogue schema, selected deliverable set
+  contract, orchestration ordering, eight-case suite, and absence of forbidden
+  Deliverable/Catalogue/Package/Bundle roles, pipelines, or template library.
 - `knowledge_evolution_smoke_test.md` - manual synthetic cases for Knowledge
   Evolution disposition, stale-knowledge challenge, canon-update candidates,
   and `/about` memory sync; it is not production governance.

@@ -11,8 +11,9 @@ Then start the editorial entry flow there:
 - activate `chief_editor`;
 - determine task type;
 - distinguish the requested deliverable from the outcome-first recommended
-  deliverable, then record the selected deliverable without silently
-  overriding explicit user intent;
+  deliverable set, then record a single or ordered selected deliverable set
+  without silently overriding explicit user intent or generating companions
+  automatically;
 - choose the pipeline or mode;
 - create or update `task-manifest.md`;
 - create or update `orchestration_plan.md`;

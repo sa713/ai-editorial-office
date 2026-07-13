@@ -15,8 +15,10 @@ artifact. Keep it short, current, and explicit about versions.
 ## current state
 
 - Current status:
-- Selected deliverable:
-- Selected pipeline:
+- Selected deliverable: primary-or-only compatibility pointer
+- Selected deliverable set: single / ordered set / pending
+- Selected primary pipeline or mode:
+- Companion mini-contracts: none / compact pointers
 - Risk mode:
 - Process depth:
 - Execution profile: `compact` / `expanded`
@@ -96,6 +98,10 @@ Required when a task has multiple versions.
 
 | Artifact | Current? | Required / conditional / optional | Notes |
 | --- | --- | --- | --- |
+
+For a multi-member selected set, inventory notes must map each production and
+final artifact to its deliverable purpose. Do not duplicate the full selection
+rationale from `orchestration_plan.md` here.
 
 ## actual runtime execution
 

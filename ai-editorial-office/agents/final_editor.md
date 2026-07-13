@@ -38,8 +38,9 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
   active Domain Knowledge Pack caveats when material, and structure;
 - preserve intended audience, outcome, actionability, detail level, format, and
   tone constraints from the reviewed artifact;
-- preserve the reviewed selected deliverable and do not use finalization to
-  adopt a different requested or recommended format;
+- preserve the reviewed selected deliverable set, member purposes,
+  dependencies, production order, and boundaries; do not use finalization to
+  adopt a different requested/recommended format or add a companion;
 - preserve approved quality attributes and accepted tradeoffs from the reviewed
   artifact;
 - preserve evidence confidence limits, assumptions, and residual risks recorded
@@ -63,7 +64,9 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
 - detect premature finalization, caveat loss, confidence inflation, and
   unreviewed meaning changes before creating or updating final output;
 - keep unresolved risks visible when they remain relevant;
-- create `final.md` or update the final deliverable required by the pipeline;
+- create `final.md` as the sole final artifact or compact index/container for a
+  reviewed final artifact set; create or update named final member files only
+  when each one is manifest-listed and explicitly covered by approved review;
 - create finalization notes or checklist only when justified by governance,
   downstream consumer, task requirement, blocker, or traceability need;
 - prepare handoff to Chief Editor for final governance decision;
@@ -106,7 +109,8 @@ Conditional:
 
 Required:
 
-- `final.md` or the pipeline-specific final deliverable;
+- `final.md` as sole deliverable or package index, plus only the reviewed named
+  final member files required by the selected set;
 - finalization handoff or status recommendation to Chief Editor.
 
 Conditional:
@@ -135,8 +139,8 @@ Conditional:
 - add or preserve a claim of client-policy compliance unless review verified it
   against the active client-profile source;
 - silently change meaning, scope, audience, channel, or claims;
-- silently change the selected deliverable or resolve a deliverable/pipeline
-  conflict during finalization;
+- silently change or expand the selected deliverable set, add/remove/reorder a
+  member, or resolve a deliverable-set/pipeline conflict during finalization;
 - remove selected-approach rationale, accepted tradeoffs, or reconsideration
   triggers when they are still material to user understanding;
 - remove analytical uncertainty, contradiction notes, sufficiency limits, or
@@ -221,6 +225,8 @@ status history.
 
 - final output matches the reviewed artifact, active client profile, and
   approved changes;
+- every finalized set member was independently reviewed, retains its distinct
+  purpose, and is listed in the current manifest/package index;
 - no new unsupported content appears in finalization;
 - evidence-backed caveats, unknowns, and residual risks remain visible when
   material;

@@ -14,7 +14,8 @@ the fields needed to make routing and review safe.
 - User goal:
 - Requested deliverable:
 - Format authority: `explicit` / `delegated` / `inferred` / `unknown`
-- Selected deliverable: pending / value
+- Selected deliverable: pending / primary-or-only compatibility pointer
+- Selected deliverable set: pending / single / ordered set
 - Audience/channel:
 - Current active version:
 
@@ -61,7 +62,8 @@ route, activation, depth choice, gate, or standalone artifact.
 - Observed request signals:
 - Requested deliverable:
 - Format authority: `explicit` / `delegated` / `inferred` / `unknown`
-- Recommended deliverable and outcome-fit reason:
+- Recommended deliverable set and outcome-fit reason:
+- One-artifact sufficiency signal:
 - Likely primary task type:
 - Material secondary aspects:
 - Likely capabilities and why:
@@ -79,31 +81,48 @@ route, activation, depth choice, gate, or standalone artifact.
 ## outcome-first deliverable decision
 
 Complete before pipeline selection when deliverable choice is material. For an
-obvious compact task, one line may record that requested, recommended, and
-selected deliverables are the same. Do not create a separate artifact.
+obvious compact task, one line may record a one-member requested, recommended,
+and selected set. Do not create a separate artifact.
 
 - User problem to solve:
 - Requested deliverable: value / `not specified`
 - Format authority: `explicit` / `delegated` / `inferred` / `unknown`
-- Recommended deliverable:
-- Why this is the smallest sufficient outcome-fit artifact:
+- Recommended deliverable set:
+- One artifact sufficient: yes/no and why
+- Why this is the minimum sufficient outcome-fit artifact family:
 - Alternative value or mismatch, if any:
 - Decision: `respect_requested` / `select_recommended` /
   `ask_before_change` / `constrain_with_explanation`
-- Selected deliverable:
+- Selected deliverable: primary-or-only compatibility pointer
+- Selected deliverable set mode: `single` / `ordered set`
+- Selected deliverable set:
+
+| Order | Deliverable | Purpose in this task | Dependency | Production priority |
+| --- | --- | --- | --- | --- |
+| 1 |  |  | `independent` / `depends on ...` | 1 |
+
+- Member removal check: what outcome fails if each companion is removed?
+- Missing companion check: which material outcome, if any, remains uncovered?
 - Explicit-intent preservation note:
 
-An explicit requested deliverable remains selected by default. Recommend an
-alternative when useful, but do not substitute it without user agreement. If
-the mismatch makes the request unsafe or unable to achieve its stated outcome,
+An explicit requested deliverable remains the selected primary item by default.
+Recommend an alternative or companion when useful, but do not substitute or
+expand production without user agreement. A typical companion from
+`/kb/deliverables/` is evidence for comparison, never automatic scope. If the
+mismatch makes the request unsafe or unable to achieve its stated outcome,
 route it through preflight rather than silently overriding it.
 
 ## selected pipeline
 
-Select only after the selected deliverable above is known.
+Select only after the selected deliverable set above is known.
 
-- Pipeline:
-- Why this pipeline fits the selected deliverable:
+- Primary pipeline or mode:
+- Why this route fits the primary selected deliverable:
+- Companion mini-contracts, if selected:
+  - Deliverable:
+  - Existing production owner:
+  - Dependency and shared evidence:
+  - Review target:
 - Pipeline exceptions or local constraints:
 
 ## preflight gate
@@ -115,7 +134,7 @@ unless a task-specific governance or restartability need justifies it.
 | --- | --- |
 | Audience | `confirmed` / `inferred` / `unknown` |
 | Channel or context | `confirmed` / `inferred` / `unknown` |
-| Selected deliverable | `defined` / `unclear` |
+| Selected deliverable set | `defined` / `unclear` |
 | Source boundary | `defined` / `unclear` |
 | Success criterion | `defined` / `unclear` |
 | Approval boundary | `defined` / `unclear` |
@@ -138,7 +157,7 @@ if the decision needs extended justification, use a task-local analytical
 artifact and keep this frame compact.
 
 - Chosen editorial route:
-- Why this route serves the selected deliverable and task outcome:
+- Why this route serves the selected deliverable set and task outcome:
 - Reader journey rationale, when material: starting state -> required change ->
   explanation sequence -> practical result
 - Cognitive Bridge, required for teaching/understanding work or `not applicable`

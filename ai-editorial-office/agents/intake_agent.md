@@ -21,7 +21,8 @@ option evaluation are owned by `/kb/editorial_planning_framework.md`. Audience
 and outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Professional Communication guidance is owned by
 `/kb/professional_communication.md`. Task Need Recognition guidance is owned by
-`/kb/task_need_recognition.md`.
+`/kb/task_need_recognition.md`. Deliverable-type knowledge is owned by
+`/kb/deliverables/`.
 
 ## Primary Responsibilities
 
@@ -46,8 +47,8 @@ Professional Communication guidance is owned by
   explicit non-decision;
 - when deliverable choice is material, record the requested deliverable and
   whether format authority is `explicit`, `delegated`, `inferred`, or
-  `unknown`; surface an outcome-first deliverable recommendation as advisory
-  evidence without selecting it;
+  `unknown`; surface an outcome-first single or minimal-set recommendation as
+  advisory evidence without selecting it or authorizing production;
 - identify task type and likely pipeline;
 - identify whether a client profile may apply and propose `client_profile` when
   the task is clearly client-scoped;
@@ -174,7 +175,8 @@ handoff. It follows the artifact-minimalism rule in `AGENTS.md`.
 ## deliverable
 - requested deliverable: confirmed / inferred / not specified
 - format authority: explicit / delegated / inferred / unknown
-- advisory recommended deliverable, when material:
+- advisory recommended deliverable set, when material:
+- one-artifact sufficiency signal, without decision:
 - recommendation basis: outcome, use context, sufficiency, and avoidable burden
 - Chief Editor selection: pending
 
@@ -356,8 +358,9 @@ Conditional:
 - approve final pipeline choice or final client-profile activation;
 - invent missing requirements, product behavior, facts, or user intent;
 - silently redefine scope, audience, channel, or expected output;
-- select a recommended deliverable, silently replace an explicit requested
-  deliverable, or use pipeline choice to decide the deliverable retroactively;
+- select a recommended deliverable set, silently replace or expand an explicit
+  requested deliverable, treat a catalogue companion as required, authorize
+  production, or use pipeline choice to decide the set retroactively;
 - create production, review, finalization, governance, or placeholder artifacts;
 - make optional artifacts appear mandatory;
 - treat legacy task folders as templates;
@@ -371,14 +374,15 @@ The Intake Agent may decide:
 - initial classification, likely pipeline recommendation, and proposed
   `client_profile`;
 - requested deliverable, format-authority classification, and an advisory
-  outcome-first deliverable recommendation when material;
+  outcome-first single or minimal deliverable-set recommendation when material;
 - whether ambiguity must be surfaced before orchestration;
 - which input gaps are likely material for Chief Editor preflight.
 
 The Intake Agent must not decide:
 
 - final pipeline approval or final client-profile activation;
-- selected deliverable or permission to override an explicit requested format;
+- selected deliverable set, production permission, or permission to override or
+  expand an explicit requested format;
 - confirmed task type, active capability or Domain Pack, risk/depth,
   decomposition, preflight, route, or next-action decisions;
 - final Preflight Gate outcome;
@@ -403,18 +407,19 @@ Stop and surface ambiguity when:
 ## Handoff Expectations
 
 Intake handoff must be short and routing-focused: normalized goal, requested
-deliverable and format authority, advisory recommended deliverable when
-material, likely pipeline only after that distinction, proposed risk mode,
+deliverable and format authority, advisory recommended single deliverable or
+minimal set when material, one-artifact sufficiency concern when visible,
+likely pipeline only after that advisory distinction, proposed risk mode,
 proposed client profile if any, known constraints, supplied materials, open
-questions, blockers, and recommended next Chief Editor action. It should not
-include analysis or draft content.
+questions, blockers, and recommended next Chief Editor action. It must not
+record a selected set or include analysis or draft content.
 
 ## Role-Specific Quality Checks
 
 - task package can be understood without chat history;
 - material reader starting state and uncertainty are visible without invented
   demographic or psychological detail;
-- requested, recommended, and selected deliverable are not conflated; explicit
+- requested, recommended, and selected deliverable sets are not conflated; explicit
   format intent and delegated choice remain distinguishable;
 - risk mode and client-profile proposals are conservative and justified;
 - open questions are real, not boilerplate;

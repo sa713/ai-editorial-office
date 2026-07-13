@@ -73,13 +73,13 @@ not standing default roles and do not create a separate workflow engine.
 | Stage | Purpose | Accountability wrapper | Primary artifact view | Gate or result |
 | --- | --- | --- | --- | --- |
 | Intake | Normalize the user request into task-local operating state, including audience and intended outcome when material. | Intake Agent or Chief Editor | `brief.md`, `task-manifest.md` | Entry/preflight gate |
-| Routing | Select risk, depth, audience/outcome fit, quality priorities, planning level, pipeline or mini-contract, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
+| Routing | Select a single or minimal ordered deliverable set, then risk, depth, audience/outcome fit, quality priorities, planning level, primary pipeline or bounded companion mini-contracts, roles, and next action. | Chief Editor | `orchestration_plan.md`, `task-manifest.md`, `status.md` | Valid route and owner |
 | Research | Separate evidence, assumptions, contradictions, gaps, and usable claims. | Research Agent | `research.md`, `sources.md`, `facts.md`, `claims_table.md`, `open-questions.md` when needed | Source boundary and research sufficiency gates |
 | Drafting | Produce article, social, or editorial copy within approved scope and evidence. | Writer Agent | `outline.md`, `draft.md`, `claims-used.md`, writer notes, handoff when needed | Drafting readiness gate |
 | UX writing | Produce product-facing copy within product, terminology, accessibility, and evidence constraints. | UX Writer | `ux-copy.md` or equivalent UX artifacts, UX notes, handoff when needed | Drafting readiness gate for UX copy |
 | Review | Independently validate the material, artifact package, evidence, and governance constraints. | Review Agent | `review.md`, optional checklist or summary when justified | Review gate |
 | Repair | Resolve bounded changes requested by review or blockers without broadening scope silently. | Writer Agent, UX Writer, Research Agent, or Chief Editor by issue type | Updated affected artifacts, repair handoff, updated review scope | Return to review or block |
-| Finalization | Produce final output only inside the approved review scope. | Final Editor | `final.md`, optional finalization notes or checklist when justified | Controlled finalization gate |
+| Finalization | Produce the sole final artifact or reviewed final artifact set only inside the approved review scope. | Final Editor | `final.md` as artifact or package index, named final member files when reviewed, optional finalization notes or checklist when justified | Controlled finalization gate |
 | Governance | Decide whether the task can close, needs human approval, or remains blocked. | Chief Editor | `final_decision.md`, `status.md`, `task-manifest.md` | Governance gate |
 | Source conversion | Convert source material into usable task-local form while preserving provenance and instruction boundaries. | Capability or mini-contract selected by Chief Editor | converted source artifact, provenance note, source boundary update | Return to calling stage |
 | Memory curation | Decide whether learning stays task-local, becomes feedback/pattern, receives Knowledge Evolution disposition, or enters a separate reviewed canon/system-update path. | Chief Editor or selected process owner | `feedback.md`, feedback pattern entry, learning/canon/stale-knowledge candidate, memory export note when justified | Memory disposition gate |
@@ -314,23 +314,26 @@ justified.
 - Expected outputs: `brief.md`, initial or updated `task-manifest.md`, audience
   and intended outcome when known or material, requested deliverable and format
   authority, optional advisory Task Need Recognition view with recommended
-  deliverable when material, missing information or preflight blocker.
+  deliverable set when material, missing information or preflight blocker.
 - Stop conditions: unclear objective, unsafe instruction conflict, missing task
   identity, or repository/path ambiguity.
 - Next stage: routing, clarification, or blocked.
 
 ### Routing
 
-- Purpose: select the deliverable from requested and advisory recommended
-  options, then choose risk, process depth, planning level, pipeline or
-  mini-contract, audience/outcome fit, quality priorities, roles, capabilities,
-  active Domain Knowledge Packs when material, gates, and next owner. This
-  ordering stays inside Routing; it is not a new lifecycle stage or gate.
+- Purpose: test whether one artifact is sufficient, select a single or minimal
+  ordered deliverable set from requested and advisory recommended options, then
+  choose risk, process depth, planning level, primary pipeline or bounded
+  companion mini-contracts, audience/outcome fit, quality priorities, roles,
+  capabilities, active Domain Knowledge Packs when material, gates, and next
+  owner. This ordering stays inside Routing; it is not a new lifecycle stage or
+  gate.
 - Minimum required context: `brief.md`, `task-manifest.md`, `AGENTS.md`,
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
 - Optional context: `/kb/task_object_model.md`, `/kb/capability_registry.md`,
-  `/kb/task_need_recognition.md` and the Intake recommendation when material,
+  `/kb/task_need_recognition.md`, relevant `/kb/deliverables/` profiles, and the
+  Intake recommendation when material,
   `/kb/analytical_reasoning.md` when complexity or decision impact is material,
   `/kb/architecture_review.md` when architectural significance is material,
   `/kb/domain_knowledge_pack_standard.md` and candidate Domain Knowledge Pack
@@ -339,8 +342,10 @@ justified.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
 - Expected outputs: `orchestration_plan.md`, updated manifest/status, explicit
-  requested/recommended/selected deliverable decision when material, selected
-  workflow overlay or mini-contract chosen for that deliverable,
+  requested deliverable, recommended deliverable set, one-artifact sufficiency,
+  and selected deliverable set decision when material; purpose, dependency,
+  and production priority per member; selected primary workflow overlay or
+  bounded companion mini-contracts chosen after that set,
   audience/outcome fit when material,
   quality priorities/tradeoffs when material, planning level and options
   considered when material, Chief Editor acceptance/rejection/narrowing of the
@@ -427,8 +432,11 @@ justified.
   creator, unrelated old drafts, or optional artifacts demanded without a review
   need.
 - Expected outputs: `review.md` with checked scope, independence basis,
-  requested/recommended/selected deliverable challenge when material,
-  audience/outcome fit when material, quality-attribute challenge when
+  requested deliverable / advisory recommended set / authoritative selected
+  set challenge when material, including one-artifact sufficiency, minimality,
+  member purpose/dependency/production priority, explicit-scope preservation,
+  and pipeline-after-set ordering; audience/outcome fit when material,
+  quality-attribute challenge when
   material, evidence/confidence challenge when material, option-evaluation
   challenge when material, analytical-reasoning challenge when material,
   Architecture Review challenge when material, learning/canon candidate
@@ -460,7 +468,8 @@ justified.
 
 ### Finalization
 
-- Purpose: produce final deliverable inside the approved review scope.
+- Purpose: produce the sole final deliverable or reviewed final deliverable set
+  inside the approved review scope.
 - Minimum required context: approved `review.md`, finalization target, current
   manifest/status, material approved for finalization, and audience/outcome
   constraints and quality priorities that must survive finalization.
@@ -469,7 +478,9 @@ justified.
   requirement.
 - Forbidden context: unreviewed claims, new product behavior, style rewrites that
   change meaning, publication or delivery without required approval.
-- Expected outputs: `final.md`, optional finalization notes/checklist, audience
+- Expected outputs: `final.md` as the sole artifact or compact package index,
+  named final member files only when individually reviewed and manifest-listed,
+  optional finalization notes/checklist, audience
   fit, approved quality attributes, uncertainty, and analytical traceability
   preserved within approved scope, active Domain Knowledge Pack caveats
   preserved when material, handoff to Chief Editor when governance closure is

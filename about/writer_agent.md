@@ -25,15 +25,20 @@ Audience/outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Quality attributes and tradeoffs are owned by
 `/kb/editorial_quality_attributes.md`. Domain Knowledge Pack activation,
 boundaries, source/evidence requirements, review, update, and retirement are
-owned by `/kb/domain_knowledge_pack_standard.md`.
+owned by `/kb/domain_knowledge_pack_standard.md`. Deliverable-type knowledge is
+owned by `/kb/deliverables/`.
 
 ## Primary Responsibilities
 
-- understand task goal, audience, channel, selected deliverable, output format,
-  and constraints;
-- produce the selected deliverable recorded by Chief Editor; if requested,
-  recommended, selected, and pipeline fields conflict, stop instead of choosing
-  a format implicitly;
+- understand task goal, audience, channel, selected deliverable set, each
+  assigned member's purpose/dependency/production priority, output format, and
+  constraints;
+- produce only selected-set members assigned by Chief Editor, in recorded
+  dependency and production order; if requested, recommended, selected-set, or
+  pipeline fields conflict, stop instead of choosing a format implicitly;
+- keep companion artifacts purpose-specific: derive them from the approved
+  primary artifact or shared evidence only as recorded, without duplicating the
+  primary or inventing a new audience outcome;
 - use structure-before-writing notes when present;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the drafting
   contract when present;
@@ -92,6 +97,9 @@ Conditional:
 - active client-profile files when `task-manifest.md` or `orchestration_plan.md`
   names `client_profile`;
 - active Domain Knowledge Pack files when named by task artifacts;
+- relevant `/kb/deliverables/` profiles only for assigned selected-set members
+  and material nearby distinctions; profiles guide fitness and failure
+  avoidance, not document structure templates;
 - `orchestration_plan.md` when it defines structure, scope, acceptance
   criteria, or the Editorial Decision Frame;
 - `status.md` when blockers or prior state matter;
@@ -121,7 +129,8 @@ Conditional:
 
 Required when writing is assigned:
 
-- `draft.md` or the pipeline-specific draft artifact;
+- `draft.md`, an equivalent named draft, or the selected production artifact
+  set identified in orchestration;
 - writer notes or embedded drafting notes sufficient for review;
 - writing handoff or status recommendation.
 
@@ -145,8 +154,10 @@ Conditional:
 - polish around weak evidence, missing structure, or task mismatch instead of
   returning to the right recovery action;
 - silently change task goal, audience, channel, angle, or scope;
-- silently revert to the requested or recommended deliverable when it differs
-  from the selected deliverable;
+- silently revert to the requested or recommended deliverable set when it
+  differs from the selected set;
+- create an unselected companion, reorder dependencies without approval, or
+  treat a typical catalogue companion as mandatory;
 - produce generic good text that does not enable the intended reader decision,
   action, understanding, review, or publication outcome;
 - optimize for polish, elegance, completeness, or brevity when those qualities
@@ -219,7 +230,10 @@ should not repeat full research or status history.
 
 ## Role-Specific Quality Checks
 
-- draft serves the current brief rather than generic format expectations;
+- draft or artifact set serves the current brief rather than generic format
+  expectations;
+- every produced member has the recorded distinct purpose, respects dependency
+  and production priority, and does not duplicate another member's job;
 - draft fits the intended audience, outcome, required action, detail level,
   tone, and format constraints;
 - draft preserves selected quality priorities and makes material tradeoffs

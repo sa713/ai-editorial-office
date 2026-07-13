@@ -20,6 +20,11 @@ Canonical KB ownership:
   research/evidence/review, significance, ambiguity, decomposition, and
   uncertainty recommendations before Chief Editor routing. It does not route,
   activate, score, plan, choose depth, create a gate, or replace Chief Editor.
+- `deliverables/` owns reusable deliverable-type knowledge: purpose, best and
+  weak use cases, reader goal, high-level structure, strengths, weaknesses,
+  failure modes, companion relationships, and nearby-type distinctions. It is
+  not a template library, pipeline registry, closed taxonomy, classifier,
+  generator, production authority, or automatic bundle rule.
 - `editorial_evidence_framework.md` owns evidence taxonomy, confidence labels,
   evidence requirements by output type, reusable evidence collection, and the
   optional evidence section standard. It does not create a new role, workflow

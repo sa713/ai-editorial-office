@@ -19,15 +19,17 @@ UX-writing failure modes and recovery patterns are owned by
 `/kb/editorial_failure_modes.md`. Audience/outcome alignment is owned by
 `/kb/audience_outcome_alignment.md`. Quality attributes and tradeoffs are owned
 by `/kb/editorial_quality_attributes.md`. Professional Communication guidance
-is owned by `/kb/professional_communication.md`.
+is owned by `/kb/professional_communication.md`. Deliverable-type knowledge is
+owned by `/kb/deliverables/`.
 
 ## Primary Responsibilities
 
 - understand user intent, product context, flow state, intended user action,
-  channel, selected deliverable, and constraints;
-- produce the selected deliverable recorded by Chief Editor; if requested,
-  recommended, selected, and pipeline fields conflict, stop instead of choosing
-  a format implicitly;
+  channel, selected deliverable set, assigned member purposes/dependencies/
+  production priorities, and constraints;
+- produce only selected-set UX members assigned by Chief Editor; if requested,
+  recommended, selected-set, and pipeline fields conflict, stop instead of
+  choosing a format implicitly;
 - use structure-before-writing notes when provided;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the UX writing
   contract when present;
@@ -84,6 +86,8 @@ Conditional:
   message architecture, action path, evidence caveats, density, explanation
   fit, or reader transfer beyond routine UX microcopy;
 - relevant KB files;
+- relevant `/kb/deliverables/` profiles only when selected-set distinctions are
+  material; do not treat profiles as UX copy templates;
 - active client-profile files when `task-manifest.md` or `orchestration_plan.md`
   names `client_profile`.
 
@@ -108,6 +112,8 @@ Conditional:
   approvals;
 - change business logic, product requirements, flow order, or policy;
 - silently redefine product concepts or terminology;
+- create an unselected companion, duplicate the purpose of another selected
+  member, or treat a catalogue companion as mandatory;
 - raise confidence, remove caveats, or convert assumptions into product facts
   without supporting evidence;
 - use smoother wording to hide missing product behavior, unresolved state, or
@@ -151,8 +157,8 @@ Stop and escalate when:
   preserve within the approved product context;
 - the Editorial Decision Frame is missing, stale, or conflicts with the handoff
   for a task handed from Chief Editor planning;
-- requested, recommended, selected deliverable, or selected pipeline records
-  conflict in a way that could change the output;
+- requested, recommended, selected deliverable-set, or selected pipeline
+  records conflict in a way that could change the output;
 - copy would require inventing a product rule or feature;
 - terminology conflicts with glossary, active client profile, or product
   constraints;
@@ -174,6 +180,8 @@ strategy beyond the assigned UX copy.
 ## Role-Specific Quality Checks
 
 - copy maps to real states and user actions;
+- every produced selected-set member has a distinct recorded purpose and
+  respects its dependency and production priority;
 - copy serves the intended user outcome, required action, reader context,
   detail level, tone, format, and accessibility constraints;
 - copy preserves selected quality priorities and does not trade away product
