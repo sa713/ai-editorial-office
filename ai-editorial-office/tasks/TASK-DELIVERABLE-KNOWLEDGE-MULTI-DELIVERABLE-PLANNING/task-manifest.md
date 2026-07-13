@@ -23,7 +23,7 @@
 - Client profile status: not_applicable
 - Current working artifact: `final.md`
 - Latest relevant handoff: `handoff-finalization-final-editor-to-chief-editor.md`
-- Next required action: deliver the finalized package to the user
+- Next required action: none; release published and remote parity verified
 
 ## governance state
 
@@ -60,11 +60,18 @@
 
 ## next action packet
 
-- Role: Chief Editor / release owner
-- Action: publish the finalized scoped snapshot to `origin/main` and verify
-  local/remote parity
-- Expected output: remote `main` at the release commit plus a user-facing report
-- Stop conditions: remote divergence, validation failure, or scope expansion
+- Role: Chief Editor / delivery owner
+- Action: report the completed release to the user
+- Expected output: user-facing release summary with commit and validation
+- Stop conditions: any future scope change requires a new governed task
+
+## publication record
+
+- Implementation release commit: `0a7b542f8341b52143b5706a7ec99e5bd9b0772f`
+- Published target: `origin/main`
+- Published date: 2026-07-13
+- Post-push parity: local `main` and `origin/main` matched at the implementation
+  release commit (`0 0` divergence)
 
 ## runtime execution
 
