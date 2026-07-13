@@ -14,6 +14,10 @@ conditional and claim-driven, not automatic.
 
 ## when to use
 
+Chief Editor selects this evidence pipeline only after the intended outcome and
+selected deliverable are known enough to define what evidence that deliverable
+needs. Research need does not decide the final artifact format retroactively.
+
 Use this pipeline when any of these are true:
 
 - the task needs factual claims, dates, names, numbers, quotes, product behavior, policy details, market context, or source-backed reasoning;
@@ -49,7 +53,7 @@ only maps Research Pipeline responsibilities to current roles.
 | Stage responsibility | Required role | Agent spec |
 | --- | --- | --- |
 | Intake package, if not already complete | `intake_agent` | `/agents/intake_agent.md` |
-| Pipeline selection and status governance | `chief_editor` | `/agents/chief_editor.md` |
+| Deliverable-first pipeline selection and status governance | `chief_editor` | `/agents/chief_editor.md` |
 | Research execution | `research_agent` | `/agents/research_agent.md` |
 | Downstream drafting, if research is sufficient for article or editorial copy | `writer_agent` | `/agents/writer_agent.md` |
 | Downstream UX copy, if research is sufficient for product-language work | `ux_writer` | `/agents/ux_writer.md` |

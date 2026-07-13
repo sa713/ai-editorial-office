@@ -15,6 +15,7 @@ artifact. Keep it short, current, and explicit about versions.
 ## current state
 
 - Current status:
+- Selected deliverable:
 - Selected pipeline:
 - Risk mode:
 - Process depth:

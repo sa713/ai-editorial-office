@@ -114,6 +114,17 @@ Conditional files:
 - Structure/usefulness validation:
 - Governance validation:
 
+## outcome-first deliverable review, when material
+
+- Requested deliverable:
+- Format authority: explicit/delegated/inferred/unknown
+- Recommended deliverable:
+- Selected deliverable:
+- Explicit intent respected: pass/fail/needs clarification
+- Selected artifact sufficient for actual outcome: pass/fail/needs clarification
+- Alternative or override justified: pass/fail/not applicable/needs clarification
+- Pipeline selected after and for the selected deliverable: pass/fail/needs clarification
+
 ## compact reader review, when selected
 
 | Question | Status | Evidence | Required action |

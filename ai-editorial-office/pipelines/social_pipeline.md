@@ -17,7 +17,10 @@ The pipeline is markdown-first, artifact-backed, deterministic, and restartable 
 
 ## when to use
 
-Use this pipeline when the requested output is short-form editorial or promotional copy adapted to one or more platforms.
+Use this pipeline when the selected deliverable, recorded after the
+outcome-first deliverable decision, is short-form editorial or promotional copy
+adapted to one or more platforms. A short-form example does not select this
+pipeline when format choice was delegated or only illustrative.
 
 Use it when:
 
@@ -48,7 +51,7 @@ only maps Social Pipeline responsibilities to current roles.
 | Stage | Required role | Agent spec | Responsibility |
 | --- | --- | --- | --- |
 | Intake | `intake_agent` | `/agents/intake_agent.md` | Normalize request, platform target, audience, constraints, and missing information |
-| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select pipeline, assign roles, maintain status, make final decision |
+| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select deliverable, then pipeline; assign roles, maintain status, make final decision |
 | Research, when required | `research_agent` | `/agents/research_agent.md` | Create evidence base and claim traceability |
 | Writing | `writer_agent` | `/agents/writer_agent.md` | Create platform-adapted short-form draft and claim usage notes |
 | Review | `review_agent` | `/agents/review_agent.md` | Independently validate copy, artifacts, tone, traceability, and governance compliance |

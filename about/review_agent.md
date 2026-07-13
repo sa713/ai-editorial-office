@@ -78,6 +78,11 @@ boundaries are owned by `/kb/task_need_recognition.md`.
   keyword classification, negative evidence, risk/consequence,
   proportionality, ambiguity, uncertainty, decomposition basis, owner
   boundaries, and non-automation;
+- verify the outcome-first deliverable decision when material: requested,
+  recommended, and selected deliverables remain distinct; format authority is
+  visible; the selected artifact is sufficient for the user's real objective;
+  explicit format intent was respected; any alternative or override was
+  explained; and pipeline selection followed the selected deliverable;
 - challenge whether the artifact optimized for the right quality attributes and
   whether accepted tradeoffs are visible and safe;
 - challenge each Bounded Utility Tradeoff against its concrete reader need,
@@ -312,6 +317,9 @@ artifacts must never become silently mandatory.
   contradictory evidence, forces a single type, overstates confidence,
   creates unnecessary depth, omits the Chief Editor decision, or performs
   routing, activation, decomposition, scoring, or depth selection;
+- approve a hidden deliverable substitution, an unexplained divergence from an
+  explicit requested format, a smallest artifact that is insufficient for the
+  outcome, or a pipeline selected before the deliverable decision;
 - approve canon evolution based on a single unverified task note, raw feedback,
   duplicate owner, missing source-evidence chain, or `/about` mirror;
 - approve a memory change that lacks a current canonical source, independently
@@ -361,6 +369,9 @@ The Review Agent may decide:
 - whether Task Need Recognition evidence and recommendations are proportionate,
   uncertainty-aware, owner-safe, explicitly advisory, and separated from the
   Chief Editor decision;
+- whether requested, recommended, and selected deliverables are correctly
+  separated; explicit intent is respected; any alternative is justified; and
+  the selected deliverable and downstream pipeline fit the real outcome;
 - whether a failure mode requires bounded repair, return to an earlier stage,
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
@@ -399,6 +410,9 @@ Stop and mark blocked or escalate when:
 - the Editorial Decision Frame is missing for post-planning writing, or is too
   formal, bloated, or duplicative to validate the chosen route as a usable
   production contract;
+- the orchestration record does not permit the reviewer to determine the
+  requested deliverable, format authority, selected deliverable, or whether the
+  pipeline was chosen after that decision when the distinction is material;
 - reviewer independence cannot be established;
 - required evidence, claim traceability, or source files are missing;
 - evidence confidence is below the minimum needed for the material conclusion
@@ -456,6 +470,11 @@ short examples needed to clarify a finding.
   recommendations, negative evidence, ambiguity, uncertainty, decomposition
   basis, explicit non-decision, and Chief Editor decision remain distinct; no
   keyword, score, threshold, or recommendation performs routing or activation;
+- outcome-first deliverable selection is checked when material: requested,
+  recommended, and selected deliverables remain distinct; the recommendation
+  is outcome-fit and sufficient rather than merely shorter; explicit user
+  format intent is preserved; alternatives or unresolved mismatches are
+  explained; and the pipeline follows the selected deliverable;
 - analytical reasoning is checked when material: the work does not answer the
   wrong question, close prematurely, confirm only the preferred answer, hide
   assumptions, smooth contradictions, inflate precision, overrun research, or

@@ -22,7 +22,11 @@ The pipeline is markdown-first, artifact-backed, and restartable from `/tasks/TA
 
 ## when to use
 
-Use this pipeline when the requested output is an article-like text that needs editorial structure, source-aware writing, and review before finalization.
+Use this pipeline when the selected deliverable, recorded after the
+outcome-first deliverable decision, is an article-like text that needs editorial
+structure, source-aware writing, and review before finalization. An article
+mention alone does not select this pipeline when format choice was delegated or
+only illustrative.
 
 Use it when:
 
@@ -55,7 +59,7 @@ only maps Article Pipeline responsibilities to current roles.
 | Stage | Required role | Agent spec | Responsibility |
 | --- | --- | --- | --- |
 | Intake | `intake_agent` | `/agents/intake_agent.md` | Normalize raw request into task artifacts |
-| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select pipeline, assign roles, maintain status, make final decision |
+| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select deliverable, then pipeline; assign roles, maintain status, make final decision |
 | Research, when required | `research_agent` | `/agents/research_agent.md` | Create evidence base and claim traceability |
 | Writing | `writer_agent` | `/agents/writer_agent.md` | Create outline, draft, writer notes, and claims-used |
 | Review | `review_agent` | `/agents/review_agent.md` | Independently validate draft and artifacts |

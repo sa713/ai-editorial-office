@@ -86,7 +86,10 @@ file.
 | `detail_level` | Compact, standard, deep, or task-specific depth needed by the audience and outcome. | `orchestration_plan.md`, production notes, review artifacts |
 | `tone_requirements` | Tone, formality, sensitivity, and vocabulary constraints required by reader context and evidence quality. | `brief.md`, relevant KB, production notes |
 | `channel_context` | Publication channel, product context, internal/external use, or task environment. | `brief.md`, `orchestration_plan.md` |
-| `deliverable` | Expected output or artifact set. | `brief.md`, `task-manifest.md` |
+| `requested_deliverable` | Output or artifact explicitly requested by the user, safely inferred from the request, or `not specified`. | `brief.md`, intake handoff, `orchestration_plan.md` |
+| `deliverable_format_authority` | Whether format choice is `explicit`, `delegated`, `inferred`, or `unknown`. | `brief.md`, `orchestration_plan.md` |
+| `recommended_deliverable` | Advisory smallest sufficient artifact that best fits the actual outcome and use context. | Task Need Recognition view in `brief.md` or `orchestration_plan.md` |
+| `selected_deliverable` | Chief Editor decision used for production and chosen before `selected_workflow`; an explicit requested format is preserved unless the user agrees otherwise. | `orchestration_plan.md`, `task-manifest.md` when a current-state pointer is useful |
 | `quality_priorities` | Selected quality attributes that matter most for this task, such as correctness, actionability, traceability, audience fit, implementation readiness, or reviewability. | `brief.md`, `orchestration_plan.md`, production/review notes |
 | `quality_tradeoffs` | Accepted quality tradeoffs, such as completeness vs brevity or elegance vs implementation value. | `orchestration_plan.md`, Editorial Decision Frame, `review.md` |
 | `source_boundary` | What is source data, instruction, assumption, contradiction, or unknown. | `brief.md`, `orchestration_plan.md`, `research.md`, `sources.md` |
@@ -111,7 +114,7 @@ file.
 | `success_criterion` | How readiness and audience usefulness will be judged for this task. | `brief.md`, `orchestration_plan.md`, `review.md` |
 | `risk_mode` | `low-risk`, `standard`, `high-governance`, or unresolved/blocked until determined. | `task-manifest.md`, `orchestration_plan.md`, `status.md` |
 | `process_depth` | `compact`, `normal`, or `full`. | `task-manifest.md`, `orchestration_plan.md` |
-| `selected_workflow` | Selected pipeline overlay, editorial mode, or task-local mini-contract. | `orchestration_plan.md`, `task-manifest.md` |
+| `selected_workflow` | Selected pipeline overlay, editorial mode, or task-local mini-contract chosen after and for `selected_deliverable`. | `orchestration_plan.md`, `task-manifest.md` |
 | `planning_level` | `trivial`, `standard`, or `strategic` planning depth selected for meaningful decisions. | `orchestration_plan.md`, `task-manifest.md` |
 | `options_considered` | Credible alternatives considered before selecting route, recommendation, or implementation plan. | `orchestration_plan.md`, Editorial Decision Frame, review artifacts |
 | `selected_option` | Chosen approach and why it best serves the task now. | `orchestration_plan.md`, Editorial Decision Frame, final decision |
@@ -140,6 +143,12 @@ file.
 | `post_task_learning` | Compact Knowledge Evolution closure note deciding whether learning stays task-local, becomes feedback/pattern, needs canon update, is stale/conflicting, or is rejected/deferred. Optional. | `final_decision.md`, `feedback.md` |
 | `memory_disposition` | Whether task learning stays local, becomes feedback, becomes a pattern, needs `/about` sync, or needs a separate system update. | `feedback.md`, `final_decision.md`, `kb/feedback_patterns.md` |
 
+Historical tasks that use one generic `deliverable` field remain valid. For a
+clear explicit-format task with no material alternative, that field may be read
+as both requested and selected. New or materially ambiguous routing must use the
+split fields so a recommendation cannot be mistaken for user intent or Chief
+Editor selection.
+
 ## Artifact Views Over The Task Object
 
 Artifacts are views over task state. They should not duplicate each other unless
@@ -148,10 +157,10 @@ requires it.
 
 | Artifact | Task-object responsibility |
 | --- | --- |
-| `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, deliverable, source boundary, constraints, quality cues when material, success criterion, and an optional initial Task Need Recognition view when routing needs it. |
+| `brief.md` | Defines objective, user request summary, audience, intended outcome, reader context when known, channel/context, requested deliverable and format authority, source boundary, constraints, quality cues when material, success criterion, and an optional initial Task Need Recognition view with advisory recommended deliverable when routing needs it. |
 | `task-manifest.md` | Compact current-state view: task id, selected workflow, active capabilities/roles, active Domain Knowledge Packs when material, actual runtime execution when material and known, current owner/status, artifact inventory, current pointer, constraints, gates, review/finalization state, and next action. |
 | `status.md` | Transition history, blocker history, rationale for state changes, approvals, and recovery path. It must not become a duplicate manifest. |
-| `orchestration_plan.md` | Execution contract: selected pipeline or mini-contract, risk mode, process depth, planning level, optional Task Need Recognition view and Chief Editor decision when material, analytical question and assumptions when material, architecture review scope and drivers when material, audience/outcome fit and Reader Outcome Contract when material, quality priorities/guardrails/tradeoffs when material, options considered when material, active capabilities, active Domain Knowledge Packs when material, active roles, planned runtime topology when material, gates, artifact scope, Editorial Decision Frame with Cognitive Bridge, Moments of Insight, and Practical Transformation when material, evidence basis/confidence for material route decisions, and expansion triggers. |
+| `orchestration_plan.md` | Execution contract: requested, recommended, and selected deliverable decision before the selected pipeline or mini-contract; risk mode; process depth; planning level; optional Task Need Recognition view and Chief Editor decision when material; analytical question and assumptions when material; architecture review scope and drivers when material; audience/outcome fit and Reader Outcome Contract when material; quality priorities/guardrails/tradeoffs when material; options considered when material; active capabilities; active Domain Knowledge Packs when material; active roles; planned runtime topology when material; gates; artifact scope; Editorial Decision Frame with Cognitive Bridge, Moments of Insight, and Practical Transformation when material; evidence basis/confidence for material route decisions; and expansion triggers. |
 | `research.md` | Research scope, verified facts, interpretations, assumptions, hypotheses, contradictions, diagnostic evidence, source confidence, evidence class, sufficiency judgment, and evidence limits. |
 | `sources.md` | Source inventory, provenance, freshness, reliability, relevance, and evidence class. |
 | `facts.md` | Fact-level evidence when needed by factual sensitivity, downstream review, or high-governance scope. |

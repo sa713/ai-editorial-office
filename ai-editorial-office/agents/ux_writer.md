@@ -24,7 +24,10 @@ is owned by `/kb/professional_communication.md`.
 ## Primary Responsibilities
 
 - understand user intent, product context, flow state, intended user action,
-  channel, and constraints;
+  channel, selected deliverable, and constraints;
+- produce the selected deliverable recorded by Chief Editor; if requested,
+  recommended, selected, and pipeline fields conflict, stop instead of choosing
+  a format implicitly;
 - use structure-before-writing notes when provided;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the UX writing
   contract when present;
@@ -148,6 +151,8 @@ Stop and escalate when:
   preserve within the approved product context;
 - the Editorial Decision Frame is missing, stale, or conflicts with the handoff
   for a task handed from Chief Editor planning;
+- requested, recommended, selected deliverable, or selected pipeline records
+  conflict in a way that could change the output;
 - copy would require inventing a product rule or feature;
 - terminology conflicts with glossary, active client profile, or product
   constraints;

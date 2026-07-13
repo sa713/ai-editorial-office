@@ -29,7 +29,11 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
 
 ## Primary Responsibilities
 
-- understand task goal, audience, channel, output format, and constraints;
+- understand task goal, audience, channel, selected deliverable, output format,
+  and constraints;
+- produce the selected deliverable recorded by Chief Editor; if requested,
+  recommended, selected, and pipeline fields conflict, stop instead of choosing
+  a format implicitly;
 - use structure-before-writing notes when present;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the drafting
   contract when present;
@@ -141,6 +145,8 @@ Conditional:
 - polish around weak evidence, missing structure, or task mismatch instead of
   returning to the right recovery action;
 - silently change task goal, audience, channel, angle, or scope;
+- silently revert to the requested or recommended deliverable when it differs
+  from the selected deliverable;
 - produce generic good text that does not enable the intended reader decision,
   action, understanding, review, or publication outcome;
 - optimize for polish, elegance, completeness, or brevity when those qualities

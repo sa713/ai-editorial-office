@@ -153,27 +153,31 @@ gates, lifecycle stages, pipelines, or mandatory ordinary task artifacts.
 ### Task Need Recognition
 
 - Purpose: turn available request evidence into an advisory view of likely task
-  type, capabilities, Domain Packs, research/evidence/review needs, risk and
-  consequence,
+  type, outcome-first deliverable, capabilities, Domain Packs,
+  research/evidence/review needs, risk and consequence,
   architectural/engineering/communication significance, ambiguity,
   decomposition need, uncertainty, and negative evidence before Chief Editor
   routing.
-- Typical inputs: normalized or raw request, intended outcome, deliverable,
-  audience/context, source state, work surface, consequence, constraints,
-  affected boundaries, domain materiality, and known unknowns.
+- Typical inputs: normalized or raw request, intended outcome, requested
+  deliverable, format authority, audience/context, source state, work surface,
+  consequence, constraints, affected boundaries, domain materiality, and known
+  unknowns.
 - Typical outputs: compact recognition view in `brief.md`,
   `orchestration_plan.md`, or `task-manifest.md`, with observed signals,
-  recommendations, confidence/negative evidence, explicit non-decision, and
-  Chief Editor next question or decision.
+  recommendations including the smallest sufficient outcome-fit deliverable,
+  confidence/negative evidence, explicit non-decision, and Chief Editor next
+  question or decision.
 - Accountability wrapper: Intake Agent normally assembles the initial view;
-  Chief Editor challenges it and owns every routing/preflight/activation/depth/
-  decomposition decision; Review Agent challenges material downstream reliance.
+  Chief Editor challenges it and owns every selected-deliverable/routing/
+  preflight/activation/depth/decomposition decision; Review Agent challenges
+  material downstream reliance.
 - Required artifacts: none beyond existing task artifacts; omit or compress the
   view when the task is trivial and obvious.
 - Optional artifacts: conditional section in an existing brief, plan, or
   manifest; never a mandatory standalone recognition file.
 - Stop conditions: keyword-only recommendation, forced single type despite
-  mixed evidence, hidden ambiguity/negative evidence, duplicate owner,
+  mixed evidence, hidden ambiguity/negative evidence, requested/recommended
+  deliverable conflation, silent explicit-format override, duplicate owner,
   automatic action, score/threshold authority, or unjustified process weight.
 - Quality criteria: observed evidence is separate from recommendation and Chief
   Editor decision; recommendations are multi-signal, proportionate,
@@ -184,9 +188,10 @@ gates, lifecycle stages, pipelines, or mandatory ordinary task artifacts.
 
 ### Routing And Preflight
 
-- Purpose: choose task type, pipeline/mode/mini-contract, risk mode, process
-  depth, active capabilities, active roles, client profile status, and next
-  action.
+- Purpose: choose the selected deliverable from requested and advisory
+  recommended deliverables, then choose task type, pipeline/mode/mini-contract,
+  risk mode, process depth, active capabilities, active roles, client profile
+  status, and next action.
 - Typical inputs: `brief.md`, `task-manifest.md`, current user instruction,
   relevant pipeline/mode candidates, client-profile indicators.
 - Typical outputs: `orchestration_plan.md`, task-manifest updates, status
@@ -198,8 +203,11 @@ gates, lifecycle stages, pipelines, or mandatory ordinary task artifacts.
 - Stop conditions: risk mode unknown before production, missing critical input,
   unauthorized extension role, review-bypass request, source/instruction
   conflict.
-- Quality criteria: route is deliberate, compact when safe, expanded when
-  needed, review gate preserved.
+- Quality criteria: requested/recommended/selected deliverables are distinct;
+  explicit user intent is preserved; selected deliverable is sufficient for the
+  actual outcome; pipeline follows the deliverable decision; route is
+  deliberate, compact when safe, expanded when needed, and review gate is
+  preserved.
 - Expansion triggers: high-governance risk, source-heavy task, client-profile
   uncertainty, human approval complexity, version conflict, reviewer uncertainty.
 
@@ -914,12 +922,12 @@ gates, lifecycle stages, pipelines, or mandatory ordinary task artifacts.
 
 | Role | Wrapped capabilities |
 | --- | --- |
-| Chief Editor | Task Need Recognition challenge and decision separation; routing and preflight; reader-journey design for material reader-facing work; analytical reasoning depth for complex or decision-heavy work; Professional Analysis selection for structured interpretation, synthesis, recommendation, and decision-support work; Professional Communication selection for message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, and caveat-preserving reader transfer when material; Architecture Review selection for architecture-sensitive work; Engineering Review selection for implementation-sensitive work; quality attribute selection for route/depth decisions; audience/outcome alignment for route/depth decisions; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; Knowledge Evolution disposition; learning extraction and canon-evolution routing; mini-contract authorization. |
-| Intake Agent | Intake normalization; initial Task Need Recognition signal and advisory view when material; initial audience/outcome and Reader Model starting-state capture or inference; initial Professional Communication materiality signal when the request depends on executive brief, recommendation or ask, technical explanation, teaching, policy/stakeholder memo, implementation handoff, or dense source compression; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; planning-depth signal; risk/client-profile suggestion. |
+| Chief Editor | Task Need Recognition challenge and decision separation; outcome-first selected deliverable decision before pipeline selection; routing and preflight; reader-journey design for material reader-facing work; analytical reasoning depth for complex or decision-heavy work; Professional Analysis selection for structured interpretation, synthesis, recommendation, and decision-support work; Professional Communication selection for message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, and caveat-preserving reader transfer when material; Architecture Review selection for architecture-sensitive work; Engineering Review selection for implementation-sensitive work; quality attribute selection for route/depth decisions; audience/outcome alignment for route/depth decisions; planning and option evaluation for route/commitment decisions; source boundary decision when routing; evidence-confidence decision for material routes and governance; failure-mode reroute/escalation; editorial structure contract; client-profile activation; governance closure; memory curation; Knowledge Evolution disposition; learning extraction and canon-evolution routing; mini-contract authorization. |
+| Intake Agent | Intake normalization; requested deliverable and format-authority capture; initial outcome-first deliverable recommendation inside Task Need Recognition when material; initial audience/outcome and Reader Model starting-state capture or inference; initial Professional Communication materiality signal when the request depends on executive brief, recommendation or ask, technical explanation, teaching, policy/stakeholder memo, implementation handoff, or dense source compression; initial source boundary detection; initial separation of user-provided facts, assumptions, and unknowns; early task-misunderstanding and missing-constraint detection; planning-depth signal; risk/client-profile suggestion. |
 | Research Agent | Research/evidence classification; analytical decomposition, hypothesis testing, contradiction preservation, and diagnostic evidence support when material; Professional Analysis evidence support, source synthesis, implications, and decision-context support when assigned; Professional Communication support through evidence, confidence, caveat, unknown, and source-meaning preservation when communication transfer is material; architecture driver, constraint, quality-attribute evidence, tradeoff, assumption, and risk support when material; engineering-review evidence support when implementation change safety needs professional, repository, validation, dependency, security, or operational evidence; evidence confidence assessment when research is assigned; evidence for competing options; durable evidence/context signal when material; evidence-weakness and confidence-inflation detection; source boundary detection; evidence repair. |
 | Writer Agent | Editorial structure and Learning Design within the approved route; drafting from approved evidence; realization of Cognitive Bridge, Moments of Insight, Practical Transformation, and supported examples when material; preservation of analytical structure, Professional Analysis product shape, Professional Communication message architecture, synthesis, recommendation, architecture rationale, assumptions, alternatives, uncertainty, caveats, density choices, action path, and sufficiency cues when material; quality-preservation during drafting; audience/outcome shaping; tradeoff communication; over-polishing/unsupported-claim detection; assumption/caveat preservation; repair for draft findings; bounded source-conversion production only when a mini-contract assigns it. |
 | UX Writer | UX writing from product evidence; quality-preservation for product copy; audience/outcome shaping for user action and UI state; Professional Communication support when broader product communication transfer, action path, evidence caveat, or density is material; over-polishing/product-assumption detection; UX assumption/caveat preservation; UX repair; client-profile application for product copy. |
-| Review Agent | Independent review; Task Need Recognition challenge for evidence/recommendation/decision separation, proportionality, negative evidence, uncertainty, owner boundaries, and non-automation when material; Professional Analysis challenge for unclear analytical product, missing decision context, weak synthesis, hidden options or criteria, unsupported recommendation, missing implications or risks, and unreviewable uncertainty when material; Professional Communication and deterministic Reader Review challenge for missing or buried main point, weak message architecture, wrong density, unclear recommendation or ask, missing next action, hidden caveats, misleading compression, weak explanation fit, broken Cognitive Bridge, missing application path, reader burden, technical ambiguity, and unreviewable reader transfer when material; architecture-review challenge for missing drivers, vague quality attributes, missing scenarios, hidden assumptions, architecture/implementation confusion, missing rejected alternatives, undocumented accepted risks, and decisions without rationale; Engineering Review challenge for changed surface, selected lenses, validation, security/config/interface/data/reliability/performance risks, and engineering residual risk when material; analytical-reasoning challenge for wrong question, premature closure, confirmation bias, hidden assumptions, contradiction smoothing, false precision, unsupported recommendation, weak sufficiency, and unbounded research; quality-attribute challenge; audience/outcome mismatch challenge; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; learning/canon candidate, stale-knowledge, correction/retirement, and memory-sync challenge when material; review-side source/client/profile checks; re-review after repair. |
+| Review Agent | Independent review; Task Need Recognition challenge for evidence/recommendation/decision separation, requested/recommended/selected deliverable separation, explicit-intent preservation, outcome-fit sufficiency, pipeline-after-deliverable ordering, proportionality, negative evidence, uncertainty, owner boundaries, and non-automation when material; Professional Analysis challenge for unclear analytical product, missing decision context, weak synthesis, hidden options or criteria, unsupported recommendation, missing implications or risks, and unreviewable uncertainty when material; Professional Communication and deterministic Reader Review challenge for missing or buried main point, weak message architecture, wrong density, unclear recommendation or ask, missing next action, hidden caveats, misleading compression, weak explanation fit, broken Cognitive Bridge, missing application path, reader burden, technical ambiguity, and unreviewable reader transfer when material; architecture-review challenge for missing drivers, vague quality attributes, missing scenarios, hidden assumptions, architecture/implementation confusion, missing rejected alternatives, undocumented accepted risks, and decisions without rationale; Engineering Review challenge for changed surface, selected lenses, validation, security/config/interface/data/reliability/performance risks, and engineering residual risk when material; analytical-reasoning challenge for wrong question, premature closure, confirmation bias, hidden assumptions, contradiction smoothing, false precision, unsupported recommendation, weak sufficiency, and unbounded research; quality-attribute challenge; audience/outcome mismatch challenge; option-evaluation challenge; evidence-confidence challenge; failure-mode challenge; learning/canon candidate, stale-knowledge, correction/retirement, and memory-sync challenge when material; review-side source/client/profile checks; re-review after repair. |
 | Final Editor | Controlled finalization when transformation after approved review is needed; preservation of approved quality attributes; preservation of audience fit and actionability; preservation of selected-approach rationale, Professional Analysis judgment and recommendation, Professional Communication message path, density, caveats, reader action, architecture rationale, accepted risks, and analytical traceability when material; preservation of reusable learning cues without classification; premature-finalization and caveat-loss detection; preservation of evidence-backed caveats and residual risks. |
 | Artist Agent | Frozen visual-output extension for explicitly activated visual branch after visual meaning brief prerequisites; preservation of evidence-backed visual meaning. |
 

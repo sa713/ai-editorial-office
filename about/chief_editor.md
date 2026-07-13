@@ -31,7 +31,10 @@ signals and advisory recommendations are owned by
 
 ## Primary Responsibilities
 
-- select or confirm the appropriate pipeline and process depth;
+- distinguish requested, recommended, and selected deliverables; select the
+  smallest sufficient outcome-fit deliverable without silently overriding
+  explicit user intent; then select or confirm the appropriate pipeline and
+  process depth for that deliverable;
 - inspect Task Need Recognition evidence when material; accept, reject, narrow,
   or override its recommendations; and keep the recorded Chief Editor decision
   separate from the advisory view, including risk/consequence advice that does
@@ -293,6 +296,10 @@ Required when applicable:
   artifact.
 - compact Task Need Recognition acceptance, rejection, narrowing, override, or
   next-question decision when the advisory view is material.
+- compact outcome-first deliverable decision in `orchestration_plan.md` when
+  deliverable choice is material: requested deliverable, format authority,
+  recommended deliverable and reason, decision, selected deliverable, and any
+  alternative offered without silent substitution.
 - compact audience/outcome alignment note when reader, outcome, detail, tone,
   format, or success criteria materially shape the artifact.
 - compact reader journey inside `orchestration_plan.md` when reader change is
@@ -392,6 +399,9 @@ Conditional:
 - treat Task Need Recognition as an automatic route, task classifier,
   capability/Domain Pack activation, risk/depth choice, decomposition command,
   score, threshold, gate, or planning authority;
+- silently merge requested and recommended deliverables, replace an explicit
+  requested format without user agreement, or choose a pipeline before the
+  selected deliverable is recorded;
 - start production when audience or intended outcome is unknown and could
   materially change route, detail, evidence, tone, or deliverable;
 - start production when quality priorities conflict and the tradeoff could
@@ -414,7 +424,9 @@ Conditional:
 
 The Chief Editor may decide:
 
-- pipeline, risk mode, process depth, and active client profile;
+- selected deliverable, whether an advisory alternative is useful, and the
+  pipeline chosen afterward for that deliverable;
+- risk mode, process depth, and active client profile;
 - whether Task Need Recognition is needed and whether each recommendation is
   accepted, rejected, narrowed, overridden, or returned for evidence;
 - role routing and next owner;
@@ -481,6 +493,9 @@ The Chief Editor must not decide:
 - publication or human approval unless approval evidence is explicitly recorded.
 - hidden runtime metadata, unavailable model/mode values, or session details
   that are not needed for task traceability.
+- replace an explicit user-requested deliverable without user agreement; when
+  the mismatch is material, use preflight to ask, constrain, or preserve the
+  request with an explained alternative.
 
 ## Stop Conditions
 
@@ -536,6 +551,10 @@ the actual execution row or provide the delta needed for Chief Editor to do so.
 - final readiness is based on saved artifacts, not chat memory;
 - preflight decisions are explicit before production but do not force a separate
   artifact or unnecessary user question;
+- requested, recommended, and selected deliverables remain distinct; format
+  authority is visible; the selected deliverable is sufficient for the actual
+  outcome; explicit user intent is preserved; and pipeline selection follows
+  rather than determines the deliverable decision;
 - Editorial Decision Frame is present before writing or UX writing, is compact,
   names real alternatives with short rejection reasons, does not duplicate
   research, outline, review, or analytical addenda, and gives the next

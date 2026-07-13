@@ -42,7 +42,7 @@
 | Task status model and transitions | `/kb/task_statuses.md` | status references, not alternate state models |
 | Task object model and artifact view mapping | `/kb/task_object_model.md` | task-specific values, restart pointers, and local consequences |
 | Capability registry and role-capability mapping | `/kb/capability_registry.md` | selected capabilities and task-specific consequences |
-| Task Need Recognition signals, advisory recommendations, uncertainty, negative evidence, and decomposition cues before routing | `/kb/task_need_recognition.md` | compact task-specific recognition view and Chief Editor decision |
+| Task Need Recognition signals, outcome-first deliverable recommendation, uncertainty, negative evidence, and decomposition cues before routing | `/kb/task_need_recognition.md` | compact task-specific recognition view, requested/recommended/selected deliverable decision, and Chief Editor routing decision |
 | Shared lifecycle kernel and stage context contracts | `/kb/shared_lifecycle_kernel.md` | selected stage, task-specific gate evidence, and local pipeline consequences |
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
@@ -192,6 +192,11 @@ Before production starts, Chief Editor must route the task editorially:
   decomposition, or uncertainty is material; treat it as advisory evidence and
   record the Chief Editor decision separately;
 - determine the task type;
+- before selecting a pipeline, distinguish the requested deliverable from the
+  outcome-first recommended deliverable, identify whether format choice is
+  explicit or delegated, and record the selected deliverable and reason;
+- respect an explicit requested deliverable by default; an alternative format
+  may be recommended, but it must not replace explicit user intent silently;
 - choose the relevant pipeline or editorial mode;
 - determine whether a client profile must be activated;
 - determine whether a Domain Knowledge Pack should be activated when domain
@@ -277,10 +282,11 @@ Exception: direct-production execution is allowed when the user explicitly asks
 to do the work directly, skip the editorial process, bypass the process, not use
 the editorial system, or handle the request as an ordinary non-editorial task.
 
-After routing, the result must stay within the selected pipeline or mode. For
-example, when `visual_article_sketchnote` is selected, execution must not
-silently drift into an infographic, web page, SVG summary, corporate one-pager,
-or other output genre that contradicts the selected mode.
+After routing, the result must stay within the selected deliverable and the
+pipeline or mode chosen for it. For example, when
+`visual_article_sketchnote` is selected, execution must not silently drift into
+an infographic, web page, SVG summary, corporate one-pager, or other output
+genre that contradicts the selected deliverable and mode.
 
 ## Core roles and extension roles
 
@@ -826,12 +832,18 @@ final governance still happens and must be artifact-backed.
 
 2. Orchestration
 
-   `chief_editor` выбирает pipeline, назначает core roles или явно легализованные extension roles только когда их условия выполнены, фиксирует план в `orchestration_plan.md` и поддерживает `task-manifest.md` и `status.md`.
+   `chief_editor` сначала фиксирует requested, recommended и selected
+   deliverable, затем выбирает подходящий для selected deliverable pipeline,
+   назначает core roles или явно легализованные extension roles только когда
+   их условия выполнены, фиксирует план в `orchestration_plan.md` и
+   поддерживает `task-manifest.md` и `status.md`. Это одна orchestration-stage,
+   а не новая lifecycle stage или gate.
 
    Before production starts, `chief_editor` records or confirms a compact
    Preflight Gate decision in an existing task artifact. The required fields are:
    Audience (`confirmed` / `inferred` / `unknown`), Channel or context
-   (`confirmed` / `inferred` / `unknown`), Deliverable (`defined` / `unclear`),
+   (`confirmed` / `inferred` / `unknown`), Selected deliverable
+   (`defined` / `unclear`),
    Source boundary (`defined` / `unclear`), Success criterion (`defined` /
    `unclear`), Approval boundary (`defined` / `unclear`), and Missing data
    strategy (`ask` / `constrain` / `proceed` / `block`).

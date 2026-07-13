@@ -28,9 +28,10 @@ Professional Communication guidance is owned by
 - normalize the raw request into task title, goal, audience, output, channel,
   and constraints;
 - surface preflight inputs for Chief Editor: audience, channel/context,
-  intended outcome, reader context, deliverable, required action or decision,
-  format/detail/tone constraints, source boundary, success criterion, approval
-  boundary, missing information, and safe assumptions;
+  intended outcome, reader context, requested deliverable, format authority,
+  required action or decision, format/detail/tone constraints, source boundary,
+  success criterion, approval boundary, missing information, and safe
+  assumptions;
 - capture or conservatively infer the reader starting state, old/incomplete
   model, and desired practical change when teaching, understanding, or complex
   explanation is material; mark uncertainty instead of inventing a persona;
@@ -43,6 +44,10 @@ Professional Communication guidance is owned by
   consequence, significance, ambiguity, decomposition, or uncertainty is
   material; separate observed request evidence from recommendations and
   explicit non-decision;
+- when deliverable choice is material, record the requested deliverable and
+  whether format authority is `explicit`, `delegated`, `inferred`, or
+  `unknown`; surface an outcome-first deliverable recommendation as advisory
+  evidence without selecting it;
 - identify task type and likely pipeline;
 - identify whether a client profile may apply and propose `client_profile` when
   the task is clearly client-scoped;
@@ -166,10 +171,12 @@ handoff. It follows the artifact-minimalism rule in `AGENTS.md`.
 - desired model or practice after use:
 - status: confirmed / inferred / unknown / assumption
 
-## expected artifact
-- confirmed:
-- inferred:
-- unknown:
+## deliverable
+- requested deliverable: confirmed / inferred / not specified
+- format authority: explicit / delegated / inferred / unknown
+- advisory recommended deliverable, when material:
+- recommendation basis: outcome, use context, sufficiency, and avoidable burden
+- Chief Editor selection: pending
 
 ## source status
 - supplied sources:
@@ -195,6 +202,12 @@ handoff. It follows the artifact-minimalism rule in `AGENTS.md`.
 Expected artifacts and acceptance criteria may come from explicit user wording
 or from labeled, bounded assumptions. If they are not known, mark them
 `unknown` or ask a question; do not fill them with generic defaults.
+
+Do not turn a request such as `explain this` into a checklist, roadmap, matrix,
+or other compressed artifact solely because it is shorter. Do not turn a
+delegated format choice into an explicit user requirement. Deliverable
+recommendation belongs to Task Need Recognition; selection belongs to Chief
+Editor and must precede pipeline selection.
 
 ### Ask vs proceed
 
@@ -343,6 +356,8 @@ Conditional:
 - approve final pipeline choice or final client-profile activation;
 - invent missing requirements, product behavior, facts, or user intent;
 - silently redefine scope, audience, channel, or expected output;
+- select a recommended deliverable, silently replace an explicit requested
+  deliverable, or use pipeline choice to decide the deliverable retroactively;
 - create production, review, finalization, governance, or placeholder artifacts;
 - make optional artifacts appear mandatory;
 - treat legacy task folders as templates;
@@ -355,12 +370,15 @@ The Intake Agent may decide:
 - how to normalize the request into a task package;
 - initial classification, likely pipeline recommendation, and proposed
   `client_profile`;
+- requested deliverable, format-authority classification, and an advisory
+  outcome-first deliverable recommendation when material;
 - whether ambiguity must be surfaced before orchestration;
 - which input gaps are likely material for Chief Editor preflight.
 
 The Intake Agent must not decide:
 
 - final pipeline approval or final client-profile activation;
+- selected deliverable or permission to override an explicit requested format;
 - confirmed task type, active capability or Domain Pack, risk/depth,
   decomposition, preflight, route, or next-action decisions;
 - final Preflight Gate outcome;
@@ -384,16 +402,20 @@ Stop and surface ambiguity when:
 
 ## Handoff Expectations
 
-Intake handoff must be short and routing-focused: normalized goal, likely
-pipeline, proposed risk mode, proposed client profile if any, known constraints,
-supplied materials, open questions, blockers, and recommended next Chief Editor
-action. It should not include analysis or draft content.
+Intake handoff must be short and routing-focused: normalized goal, requested
+deliverable and format authority, advisory recommended deliverable when
+material, likely pipeline only after that distinction, proposed risk mode,
+proposed client profile if any, known constraints, supplied materials, open
+questions, blockers, and recommended next Chief Editor action. It should not
+include analysis or draft content.
 
 ## Role-Specific Quality Checks
 
 - task package can be understood without chat history;
 - material reader starting state and uncertainty are visible without invented
   demographic or psychological detail;
+- requested, recommended, and selected deliverable are not conflated; explicit
+  format intent and delegated choice remain distinguishable;
 - risk mode and client-profile proposals are conservative and justified;
 - open questions are real, not boilerplate;
 - only bootstrap artifacts were created;

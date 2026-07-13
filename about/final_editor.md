@@ -38,6 +38,8 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
   active Domain Knowledge Pack caveats when material, and structure;
 - preserve intended audience, outcome, actionability, detail level, format, and
   tone constraints from the reviewed artifact;
+- preserve the reviewed selected deliverable and do not use finalization to
+  adopt a different requested or recommended format;
 - preserve approved quality attributes and accepted tradeoffs from the reviewed
   artifact;
 - preserve evidence confidence limits, assumptions, and residual risks recorded
@@ -133,6 +135,8 @@ Conditional:
 - add or preserve a claim of client-policy compliance unless review verified it
   against the active client-profile source;
 - silently change meaning, scope, audience, channel, or claims;
+- silently change the selected deliverable or resolve a deliverable/pipeline
+  conflict during finalization;
 - remove selected-approach rationale, accepted tradeoffs, or reconsideration
   triggers when they are still material to user understanding;
 - remove analytical uncertainty, contradiction notes, sufficiency limits, or

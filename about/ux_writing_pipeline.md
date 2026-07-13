@@ -21,7 +21,11 @@ The pipeline is markdown-first, artifact-backed, deterministic, and restartable 
 
 ## when to use
 
-Use this pipeline when the requested output is product-facing copy that appears in or around an interface, product flow, onboarding path, notification, validation state, or user guidance surface.
+Use this pipeline when the selected deliverable, recorded after the
+outcome-first deliverable decision, is product-facing copy that appears in or
+around an interface, product flow, onboarding path, notification, validation
+state, or user guidance surface. A UX example alone does not select this
+pipeline when format choice was delegated or only illustrative.
 
 Use it when:
 
@@ -54,7 +58,7 @@ only maps UX Writing Pipeline responsibilities to current roles.
 | Stage | Required role | Agent spec | Responsibility |
 | --- | --- | --- | --- |
 | Intake | `intake_agent` | `/agents/intake_agent.md` | Normalize request, supplied UI context, and missing information |
-| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select pipeline, assign roles, maintain status, make final decision |
+| Orchestration and governance | `chief_editor` | `/agents/chief_editor.md` | Select deliverable, then pipeline; assign roles, maintain status, make final decision |
 | Research, when facts or product context need verification | `research_agent` | `/agents/research_agent.md` | Create evidence base for factual or product claims |
 | UX writing | `ux_writer` | `/agents/ux_writer.md` | Create product-facing copy and UX writing artifacts |
 | Review | `review_agent` | `/agents/review_agent.md` | Independently validate UX copy and artifacts |

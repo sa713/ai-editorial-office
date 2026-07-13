@@ -12,7 +12,9 @@ the fields needed to make routing and review safe.
 
 - Task ID:
 - User goal:
-- Deliverable:
+- Requested deliverable:
+- Format authority: `explicit` / `delegated` / `inferred` / `unknown`
+- Selected deliverable: pending / value
 - Audience/channel:
 - Current active version:
 
@@ -31,12 +33,6 @@ the fields needed to make routing and review safe.
 - Rationale:
 - Forbidden depth shortcuts:
 - Expanded profile trigger, if any:
-
-## selected pipeline
-
-- Pipeline:
-- Why this pipeline:
-- Pipeline exceptions or local constraints:
 
 ## client profile
 
@@ -63,6 +59,9 @@ material. Omit it for trivial, obvious work. It is advisory evidence, not a
 route, activation, depth choice, gate, or standalone artifact.
 
 - Observed request signals:
+- Requested deliverable:
+- Format authority: `explicit` / `delegated` / `inferred` / `unknown`
+- Recommended deliverable and outcome-fit reason:
 - Likely primary task type:
 - Material secondary aspects:
 - Likely capabilities and why:
@@ -77,6 +76,36 @@ route, activation, depth choice, gate, or standalone artifact.
 - Explicit non-decision:
 - Chief Editor decision or next question:
 
+## outcome-first deliverable decision
+
+Complete before pipeline selection when deliverable choice is material. For an
+obvious compact task, one line may record that requested, recommended, and
+selected deliverables are the same. Do not create a separate artifact.
+
+- User problem to solve:
+- Requested deliverable: value / `not specified`
+- Format authority: `explicit` / `delegated` / `inferred` / `unknown`
+- Recommended deliverable:
+- Why this is the smallest sufficient outcome-fit artifact:
+- Alternative value or mismatch, if any:
+- Decision: `respect_requested` / `select_recommended` /
+  `ask_before_change` / `constrain_with_explanation`
+- Selected deliverable:
+- Explicit-intent preservation note:
+
+An explicit requested deliverable remains selected by default. Recommend an
+alternative when useful, but do not substitute it without user agreement. If
+the mismatch makes the request unsafe or unable to achieve its stated outcome,
+route it through preflight rather than silently overriding it.
+
+## selected pipeline
+
+Select only after the selected deliverable above is known.
+
+- Pipeline:
+- Why this pipeline fits the selected deliverable:
+- Pipeline exceptions or local constraints:
+
 ## preflight gate
 
 Use before production starts. Keep compact; do not create a separate artifact
@@ -86,7 +115,7 @@ unless a task-specific governance or restartability need justifies it.
 | --- | --- |
 | Audience | `confirmed` / `inferred` / `unknown` |
 | Channel or context | `confirmed` / `inferred` / `unknown` |
-| Deliverable | `defined` / `unclear` |
+| Selected deliverable | `defined` / `unclear` |
 | Source boundary | `defined` / `unclear` |
 | Success criterion | `defined` / `unclear` |
 | Approval boundary | `defined` / `unclear` |
@@ -109,7 +138,7 @@ if the decision needs extended justification, use a task-local analytical
 artifact and keep this frame compact.
 
 - Chosen editorial route:
-- Why this route serves the task:
+- Why this route serves the selected deliverable and task outcome:
 - Reader journey rationale, when material: starting state -> required change ->
   explanation sequence -> practical result
 - Cognitive Bridge, required for teaching/understanding work or `not applicable`

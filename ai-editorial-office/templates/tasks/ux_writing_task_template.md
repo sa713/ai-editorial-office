@@ -93,6 +93,11 @@ Conditional files:
 
 ## deliverable
 
+- requested deliverable:
+- format authority: explicit/delegated/inferred/unknown
+- advisory recommended deliverable, when material:
+- selected deliverable: Chief Editor records in `orchestration_plan.md`
+
 ## constraints
 
 ## client profile

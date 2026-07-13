@@ -57,6 +57,14 @@ markdown smoke-tests и synthetic examples:
 - `reader-centered-quality-smoke-test.md` - manual synthetic regression cases
   for Reader Outcome Contract, Learning Design, Reader Review, Companion Pass,
   bounded utility tradeoffs, and compact non-activation.
+- `outcome_first_deliverable_selection_smoke_test.md` - manual synthetic
+  regression cases for requested/recommended/selected deliverable separation,
+  explicit-intent preservation, delegated format choice, outcome-fit
+  sufficiency, pipeline-after-deliverable ordering, mismatch escalation, and
+  compact non-activation.
+- `test_outcome_first_deliverable_selection.sh` - executable static regression
+  check for the canonical owner text, orchestration ordering, ten-case synthetic
+  suite, and absence of forbidden Deliverable/Format Agent or pipeline files.
 - `knowledge_evolution_smoke_test.md` - manual synthetic cases for Knowledge
   Evolution disposition, stale-knowledge challenge, canon-update candidates,
   and `/about` memory sync; it is not production governance.
@@ -218,6 +226,24 @@ separate reader outcome from readability, preserve evidence guardrails, test
 good and bad cognitive bridges and bounded tradeoffs, reject taste-only review,
 and keep short low-risk text compact. It does not define active rules or replace
 the canonical owners listed in the file.
+
+`outcome_first_deliverable_selection_smoke_test.md` records ten synthetic cases
+for explicit article and presentation requests, delegated learning format,
+invalid checklist substitution for an explanation, presentation use context,
+comparison matrix, decision memo, BRD/specification ambiguity, material format
+mismatch, and trivial copy repair. It checks that the selected deliverable is
+outcome-fit and recorded before pipeline selection without creating a role,
+pipeline, lifecycle stage, gate, score, or mandatory standalone artifact. It
+does not define active rules or prove real-world improvement.
+
+Run the bounded static contract check with:
+
+```bash
+sh ai-editorial-office/tests/test_outcome_first_deliverable_selection.sh
+```
+
+The script verifies canonical integration and test coverage only. It does not
+classify requests, select deliverables, route tasks, or replace Review Agent.
 
 `knowledge_evolution_smoke_test.md` records synthetic disposition cases for
 `/kb/editorial_learning_framework.md`. It checks that reusable learning,

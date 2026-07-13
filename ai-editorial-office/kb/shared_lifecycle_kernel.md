@@ -312,17 +312,20 @@ justified.
 - Forbidden context: all old task folders, all pipelines, all role specs, or the
   legacy/private archive by default.
 - Expected outputs: `brief.md`, initial or updated `task-manifest.md`, audience
-  and intended outcome when known or material, optional advisory Task Need
-  Recognition view when material, missing information or preflight blocker.
+  and intended outcome when known or material, requested deliverable and format
+  authority, optional advisory Task Need Recognition view with recommended
+  deliverable when material, missing information or preflight blocker.
 - Stop conditions: unclear objective, unsafe instruction conflict, missing task
   identity, or repository/path ambiguity.
 - Next stage: routing, clarification, or blocked.
 
 ### Routing
 
-- Purpose: choose risk, process depth, planning level, pipeline or
+- Purpose: select the deliverable from requested and advisory recommended
+  options, then choose risk, process depth, planning level, pipeline or
   mini-contract, audience/outcome fit, quality priorities, roles, capabilities,
-  active Domain Knowledge Packs when material, gates, and next owner.
+  active Domain Knowledge Packs when material, gates, and next owner. This
+  ordering stays inside Routing; it is not a new lifecycle stage or gate.
 - Minimum required context: `brief.md`, `task-manifest.md`, `AGENTS.md`,
   `/kb/task_statuses.md`, relevant pipeline candidate, and active client profile
   files only when selected.
@@ -335,8 +338,10 @@ justified.
   current `project-state.md`, previous handoff when resuming.
 - Forbidden context: unrelated pipelines, inactive client profiles, role specs
   for unassigned roles, and historical retrospectives as active policy.
-- Expected outputs: `orchestration_plan.md`, updated manifest/status, selected
-  workflow overlay or mini-contract, audience/outcome fit when material,
+- Expected outputs: `orchestration_plan.md`, updated manifest/status, explicit
+  requested/recommended/selected deliverable decision when material, selected
+  workflow overlay or mini-contract chosen for that deliverable,
+  audience/outcome fit when material,
   quality priorities/tradeoffs when material, planning level and options
   considered when material, Chief Editor acceptance/rejection/narrowing of the
   Task Need Recognition recommendations when material, analytical question or
@@ -422,6 +427,7 @@ justified.
   creator, unrelated old drafts, or optional artifacts demanded without a review
   need.
 - Expected outputs: `review.md` with checked scope, independence basis,
+  requested/recommended/selected deliverable challenge when material,
   audience/outcome fit when material, quality-attribute challenge when
   material, evidence/confidence challenge when material, option-evaluation
   challenge when material, analytical-reasoning challenge when material,

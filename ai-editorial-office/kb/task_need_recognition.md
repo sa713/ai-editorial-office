@@ -4,11 +4,11 @@ This file owns the shared Task Need Recognition capability for AI Editorial
 Office. It defines how available request evidence becomes an advisory view of
 likely task needs before Chief Editor routing.
 
-It does not own or perform task classification, routing, preflight, risk mode,
-process depth, research depth, review scope, capability activation, Domain Pack
-activation, role assignment, decomposition, planning, lifecycle transition, or
-governance. Those decisions remain with `AGENTS.md`, Chief Editor, and their
-existing canonical owners.
+It does not own or perform selected-deliverable choice, task classification,
+routing, preflight, risk mode, process depth, research depth, review scope,
+capability activation, Domain Pack activation, role assignment, decomposition,
+planning, lifecycle transition, or governance. Those decisions remain with
+`AGENTS.md`, Chief Editor, and their existing canonical owners.
 
 ## Purpose
 
@@ -16,6 +16,8 @@ Task Need Recognition helps the office inspect a request before work begins and
 answer, provisionally:
 
 - what kind of work appears to be present;
+- which deliverable would solve the user's real objective with the least
+  unnecessary burden while preserving required depth, evidence, and use value;
 - which capabilities are likely to matter;
 - which Domain Packs may provide material context;
 - how much research, evidence, and review may be justified;
@@ -93,6 +95,64 @@ Start from available evidence, not a keyword list:
 | Analytical product | assessment, synthesis, options, implications, judgment, recommendation | likely Professional Analysis |
 | Ambiguity and conflict | missing audience/output, mixed intents, incompatible constraints, contradictory evidence | clarification, constrain, uncertainty, or decomposition recommendation |
 | Task structure | divergent deliverables, owners, evidence, risks, domains, validation paths, or sequencing dependencies | split, sequence, or keep-coherent recommendation |
+
+## Outcome-First Deliverable Recommendation
+
+Before Chief Editor selects a pipeline, recognition should answer the advisory
+question:
+
+> What is the smallest sufficient artifact that best solves the user's actual
+> problem?
+
+This is not permission to substitute a preferred format for the user's request.
+Keep four values distinct whenever deliverable choice is material:
+
+| Field | Meaning |
+| --- | --- |
+| Requested deliverable | The format or artifact named by the user, or `not specified`. |
+| Format authority | `explicit`, `delegated`, `inferred`, or `unknown`; this describes who chose the format, not whether the format is good. |
+| Recommended deliverable | The advisory artifact shape that best fits the outcome and use context. |
+| Selected deliverable | The Chief Editor decision used for pipeline selection and production. |
+
+Evaluate the recommendation from the outcome and use situation rather than a
+format keyword alone:
+
+- the problem the user is actually trying to solve;
+- the decision, action, understanding, comparison, approval, implementation, or
+  reuse the artifact must enable;
+- the audience, channel, presentation context, time available, and expected
+  depth;
+- the minimum structure and evidence needed to make the result sufficient;
+- reader/user effort, maintenance burden, and avoidable production bulk;
+- whether the requested format is essential, explicit, only an example, safely
+  inferred, or delegated to the office.
+
+Possible recommendations include article, report, memo, executive brief,
+checklist, roadmap, FAQ, decision matrix, comparison, presentation,
+spreadsheet, specification, BRD, implementation plan, research report,
+tutorial, reference, interview, dialogue, or mind map. This list is illustrative,
+not a closed taxonomy and not a pipeline list.
+
+Use these decision rules:
+
+1. When the user explicitly requests a deliverable, recommend alternatives only
+   when they add material value, and select the requested deliverable by default.
+2. When the user delegates format choice, recommend and select the strongest
+   outcome-fit deliverable, with a compact reason.
+3. When format is inferred from the goal or use context, keep the inference
+   visible and ask only if plausible formats would produce materially different
+   outcomes or commitments.
+4. When an explicit format appears unable to satisfy the stated outcome, do not
+   replace it silently. Explain the mismatch and use Chief Editor preflight to
+   `ask`, `constrain`, or preserve the requested deliverable with a clearly
+   bounded alternative recommendation.
+5. A vague verb such as `explain`, `help`, or `summarize` does not by itself
+   justify a checklist, matrix, roadmap, or other compressed format. The
+   recommendation must preserve the actual communication job.
+
+The selected deliverable must be recorded before the selected pipeline. The
+pipeline, mode, or mini-contract then follows the selected deliverable; it does
+not retroactively decide what the deliverable should be.
 
 Name negative evidence when it prevents unnecessary depth. For example, a
 simple copyedit that happens to mention security terms has no security-sensitive
@@ -256,6 +316,9 @@ Record the smallest useful view in `brief.md`, `orchestration_plan.md`, or
 ```markdown
 ## task need recognition
 - observed request signals:
+- requested deliverable:
+- format authority: explicit / delegated / inferred / unknown
+- recommended deliverable and outcome-fit reason:
 - likely primary task type:
 - material secondary aspects:
 - likely capabilities and why:
@@ -268,7 +331,10 @@ Record the smallest useful view in `brief.md`, `orchestration_plan.md`, or
 - decomposition recommendation:
 - confidence and negative evidence:
 - explicit non-decision:
-- Chief Editor decision or next question:
+- Chief Editor deliverable decision: respect_requested / select_recommended /
+  ask_before_change / constrain_with_explanation
+- selected deliverable:
+- Chief Editor routing decision or next question:
 ```
 
 Separate observed signals from recommendations. Record the Chief Editor
@@ -293,8 +359,8 @@ material. For compact work, combine or omit fields that add no decision value.
 
 | Role | Responsibility |
 | --- | --- |
-| Intake Agent | Capture observed request evidence and prepare the initial advisory view when material; do not route or activate. |
-| Chief Editor | Challenge evidence, accept/reject/narrow recommendations, make every routing/preflight/activation/depth/decomposition decision, and record the result. |
+| Intake Agent | Capture observed request evidence, requested deliverable, format authority, and the initial advisory view when material; do not select the deliverable, route, or activate. |
+| Chief Editor | Challenge evidence, accept/reject/narrow recommendations, select the deliverable before the pipeline, make every routing/preflight/activation/depth/decomposition decision, and record the result. |
 | Research Agent | Verify missing domain/current-state evidence when assigned; do not retroactively present research as an intake decision. |
 | Writer Agent / UX Writer | Follow the approved route; flag new evidence that invalidates the recognition assumptions. |
 | Review Agent | When downstream scope materially depends on recognition, challenge evidence, negative cases, proportionality, uncertainty, owner boundaries, and non-decision. |
@@ -309,6 +375,14 @@ When recognition materially affected the route, Review Agent may ask:
 
 - Are observed signals separated from inference, recommendation, and Chief
   Editor decision?
+- Are requested, recommended, and selected deliverables distinct, and is format
+  authority recorded?
+- Does the recommended deliverable minimize avoidable burden while remaining
+  sufficient for the intended outcome, use context, and evidence need?
+- Was an explicit requested deliverable preserved unless the user agreed to a
+  change, or was any unresolved mismatch routed through preflight rather than
+  silently overridden?
+- Was the pipeline chosen after and because of the selected deliverable?
 - Does the primary task type follow outcome/work surface rather than keywords?
 - Are material secondary aspects preserved without forcing one class?
 - Are capability and pack recommendations tied to their actual owner criteria?
@@ -330,6 +404,10 @@ Stop, narrow, or return to Chief Editor when:
 - the request cannot be distinguished from a different plausible task without
   material clarification;
 - a recommendation depends only on keywords or topic names;
+- requested and recommended deliverables have been silently merged;
+- an explicit requested format would be replaced without user agreement or a
+  visible preflight decision;
+- the proposed artifact is smaller but no longer sufficient for the outcome;
 - a Domain Pack/capability owner would be overridden;
 - the view hides contradictory or negative evidence;
 - a score, threshold, or classifier output is being treated as authority;
@@ -344,9 +422,12 @@ Task Need Recognition does not:
 
 - create automatic routing, classification, capability activation, Domain Pack
   activation, review level, research level, or planning;
+- silently override an explicit requested deliverable or treat a recommendation
+  as user consent;
 - create a role, pipeline, lifecycle stage, status, gate, task taxonomy,
   framework, store, model, classifier, score, threshold, or dashboard;
-- make task type, risk, depth, pack, capability, split, or next-action decisions;
+- make selected-deliverable, task type, risk, depth, pack, capability, split, or
+  next-action decisions;
 - replace Preflight, Intake Normalization, Professional Analysis, Professional
   Communication, Architecture Review, Engineering Review, Evaluation Signals,
   Evidence Confidence, Domain Pack activation, Review Agent, or Chief Editor;
