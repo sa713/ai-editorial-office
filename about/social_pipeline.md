@@ -195,6 +195,8 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 - research may be skipped with a no-research rationale;
 - evidence artifacts may be combined or omitted when no factual claims are used;
 - review is still required, but checklist may be compact inside `review.md`;
+- Reader Review is normally `compact` or `not applicable`; do not force the
+  full learning block onto short copy;
 - compact execution may be used when `AGENTS.md` safety conditions hold;
 - finalization may use compact shape: `review.md`, `final.md`, current `task-manifest.md`, and optional short handoff only if needed.
 
@@ -204,6 +206,8 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 - research is required when factual claims are present;
 - claims traceability is required when claims are material;
 - simple source-light standard tasks may keep checklist and summary content inside `review.md` when no downstream consumer, high-governance need, task-specific requirement, blocker/open-question state, or traceability need requires separate files.
+- Reader Review remains `compact` unless explanation complexity or reader risk
+  makes `normal` necessary.
 
 `high-governance`:
 
@@ -211,6 +215,8 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 - `sources.md`, `facts.md`, and `claims_table.md` are required;
 - `claims-used.md` is required;
 - review must be full;
+- Reader Review depth still follows reader outcome; high governance does not
+  make an irrelevant teaching block material.
 - `finalization-checklist.md` is required;
 - human approval must be assessed explicitly;
 - Chief Editor must not finalize governance without an explicit decision on approval.

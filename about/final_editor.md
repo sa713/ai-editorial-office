@@ -49,6 +49,9 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
 - preserve approved Professional Communication message path, density choices,
   caveats, reader action, and explanation fit when they are material to the
   final deliverable;
+- preserve the approved Companion Pass balance of naturalness, concreteness,
+  distance, and precision; do not perform substantive companion rewriting
+  during finalization;
 - preserve approved architecture rationale, quality-attribute caveats,
   accepted-risk notes, and architectural assumptions when they are material to
   the final deliverable;
@@ -125,6 +128,8 @@ Conditional:
   approved review basis;
 - treat cleanup, tone, or formatting as permission to change meaning or remove
   residual risk;
+- repair a failed, missing, or `needs clarification` Companion Pass through
+  substantive finalization edits;
 - add or preserve a claim of client-policy compliance unless review verified it
   against the active client-profile source;
 - silently change meaning, scope, audience, channel, or claims;
@@ -189,6 +194,8 @@ Stop and route back when:
 - finalization would hide Professional Communication message path, reader
   action, density choice, caveats, evidence cues, or explanation fit approved by
   review;
+- Companion Pass is failed, missing when reader-facing, or requires changes to
+  structure, claims, examples, argument, or meaning;
 - finalization would hide architecture rationale, accepted risks,
   quality-attribute caveats, or architectural assumptions approved by review;
 - finalization would make the artifact less useful for the intended audience or
@@ -219,6 +226,8 @@ status history.
   limits remain visible when material;
 - approved Professional Communication message path, density, caveats, reader
   action, evidence cues, and explanation fit remain intact when material;
+- approved Companion Pass balance remains intact and no substantive companion
+  rewrite occurred during finalization;
 - architecture rationale, accepted risks, quality-attribute caveats, and
   architectural assumptions remain visible when material;
 - audience fit, intended outcome, required action, detail, tone, and format

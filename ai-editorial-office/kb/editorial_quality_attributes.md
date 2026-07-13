@@ -44,6 +44,7 @@ is required for every task.
 | Evidence support | Material conclusions have evidence and confidence appropriate to the output type. | Evidence class, confidence label, assumptions, unknowns, validation needed. |
 | Analytical rigor | Reasoning from question to conclusion is inspectable when complexity, ambiguity, or decision impact is material. | Analytical question, hypotheses, key assumptions, contradiction handling, disconfirmation checks, sufficiency judgment. |
 | Audience fit | Detail, tone, format, and evidence depth match the intended reader and outcome. | Alignment note, reader context, useful omissions, action path. |
+| Reader outcome | The artifact produces the required change in understanding, decision, memory, or practice for the intended reader. | Reader Outcome Contract, visible cognitive or action transition, retained key ideas, practical result, reader-review evidence. |
 | Structural coherence | Sections have distinct jobs and create a usable reading path. | Logical order, no duplicate sections, navigable layers for mixed audiences. |
 | Maintainability | The artifact or system change remains easy to update, review, and extend. | One canonical owner, low duplication, stable terms, bounded scope. |
 | Implementation readiness | Codex or an implementer can perform the work without guessing. | Repo path, files to inspect, allowed/forbidden changes, validation commands. |
@@ -53,6 +54,27 @@ Local tasks may add a temporary quality attribute when the domain requires it,
 but local additions must not create permanent canon unless a separate reviewed
 system update promotes them.
 
+## Quality Priority And Non-Relaxable Guardrails
+
+For material reader-facing work, quality is not complete when the artifact is
+only correct, complete, and well structured. The selected profile must consider
+reader value, the required change in the reader's model or decision, and
+practical applicability alongside correctness and evidence.
+
+This is not a license to trade truth for usefulness. The following guardrails
+are non-relaxable whenever they are material:
+
+- correctness against sources, repository state, product behavior, and canon;
+- evidence support and honest confidence;
+- neutrality when the task requires objective treatment;
+- traceability required by review or governance;
+- visible uncertainty, caveats, source boundaries, and residual risk;
+- independent review and the existing review gate.
+
+A task may prioritize reader outcome above completeness, durability, breadth,
+formality, or exhaustive chronology. It may not call an unsupported,
+misleading, biased, or unreviewable result useful.
+
 ## Quality Profile Pattern
 
 Use this compact pattern when quality priorities are material:
@@ -60,6 +82,8 @@ Use this compact pattern when quality priorities are material:
 ```markdown
 ## quality profile
 - priority attributes:
+- reader outcome priority:
+- non-relaxable guardrails:
 - accepted tradeoffs:
 - must preserve:
 - may relax:
@@ -85,9 +109,39 @@ Quality tradeoffs should be handled deliberately, not hidden.
 | Traceability vs readability | Keep reader-facing text clean while preserving evidence pointers where review/governance needs them. |
 | Maintainability vs local optimization | Avoid local shortcuts that create duplicated rules, hidden dependencies, or future confusion. |
 | Audience fit vs technical depth | Layer the artifact so decision-makers can act and implementers can still inspect detail. |
+| Reader value vs evidence discipline | Change route, examples, layering, or detail; never remove evidence boundaries, caveats, neutrality, or required traceability to make the result easier or more persuasive. |
 
 When a tradeoff matters, record the accepted tradeoff in the smallest existing
 artifact that the next owner or reviewer will read.
+
+## Bounded Utility Tradeoff
+
+Chief Editor may authorize a local, explicit tradeoff when a concrete reader
+need is better served by a less durable, less exhaustive, more product-specific,
+or more chronological bridge. Examples include a short chronology from the
+reader's named stopping point or a current product bridge that makes an
+otherwise abstract change usable.
+
+Record the decision in the existing Editorial Decision Frame or quality
+profile:
+
+```markdown
+## bounded utility tradeoff
+- concrete reader need:
+- bounded scope:
+- evidence and freshness basis:
+- stale-if or review trigger:
+- attribute intentionally relaxed:
+- non-relaxable guardrails preserved:
+- expected reader benefit:
+```
+
+The decision may relax completeness, durability, breadth, formality, or
+exhaustive chronology. It may not relax correctness, evidence support,
+neutrality, traceability required by governance, visible uncertainty and
+caveats, source boundaries, or independent review. Product-specific material
+must state availability or date boundaries when they matter. Review Agent
+challenges both the claimed reader benefit and the preserved guardrails.
 
 ## Task-Specific Priorities
 
@@ -101,7 +155,7 @@ rigid matrix.
 | Code review | Correctness, evidence support, precision, traceability, reviewability. | Completeness outside changed scope, stylistic preference. |
 | Research summary | Evidence support, traceability, completeness of material findings, uncertainty visibility. | Persuasion, decorative structure. |
 | Executive brief | Relevance, actionability, clarity, audience fit, tradeoff visibility. | Low-level technical detail unless it changes the decision. |
-| Editorial article | Audience fit, clarity, structural coherence, evidence support, tone, relevance. | Exhaustive traceability in reader-facing copy when review artifacts preserve it. |
+| Editorial article | Reader outcome, audience fit, clarity, structural coherence, evidence support, tone, relevance. | Exhaustive traceability in reader-facing copy when review artifacts preserve it. |
 | Canonical documentation | Correctness, maintainability, consistency, precision, reviewability. | Narrative polish, task-local examples that duplicate canon. |
 
 If priorities conflict, Chief Editor or the active owner should name the tradeoff
@@ -118,6 +172,8 @@ Evaluate quality by asking:
 4. What evidence proves or weakens the priority attributes?
 5. What quality loss could happen during the next handoff?
 6. Can Review Agent validate the selected attributes from saved artifacts?
+7. Would the intended reader change understanding, decision, or practice in the
+   way the Reader Outcome Contract requires?
 
 Do not assign numeric scores. Use findings such as `sufficient`, `weak`,
 `missing`, `over-optimized`, or `blocked` when a label helps review or repair.
@@ -133,7 +189,9 @@ Do not assign numeric scores. Use findings such as `sufficient`, `weak`,
 - Writing and UX writing: preserve the selected quality profile while shaping
   structure, language, detail, and actionability.
 - Review: challenge whether the artifact optimized for the right attributes and
-  whether any quality loss blocks approval.
+  whether any quality loss blocks approval; challenge bounded utility
+  tradeoffs against their reader need, evidence/freshness basis, scope, stale-if
+  trigger, and non-relaxable guardrails.
 - Finalization: preserve approved quality attributes; do not improve polish by
   removing precision, caveats, traceability, or actionability.
 
@@ -219,5 +277,9 @@ This framework does not:
 - add a mandatory quality checklist;
 - replace audience, evidence, planning, failure recovery, lifecycle, or review
   canon;
+- treat reader value as permission to weaken correctness, evidence, neutrality,
+  traceability, uncertainty, or review independence;
 - justify polishing when the task needs evidence, implementation, repair, or
   review.
+- use a bounded utility tradeoff to hide unsupported, stale, misleading,
+  promotional, biased, untraceable, or unreviewed content.

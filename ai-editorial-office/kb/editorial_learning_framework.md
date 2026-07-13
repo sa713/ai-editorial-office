@@ -161,6 +161,55 @@ Do not compute a general signal score. Counts, ratings, and sentiment may
 support judgment but cannot replace evidence, context, applicability, owner, or
 review. If the check is weak, keep the signal local, reject it, or defer it.
 
+## Reader-Centered Outcome Evolution
+
+Reader-centered changes are evaluated through the same feedback, Evaluation
+Signal, pattern, and Knowledge Evolution mechanisms. When material, preserve:
+
+- task type and Reader Outcome Contract;
+- actual final-output evidence, not only completed template fields;
+- correctness, evidence support, neutrality, traceability, reader fit, clarity,
+  concreteness, model change, retention, practical action, naturalness, and
+  governance cost;
+- baseline or comparator conditions when a comparison is claimed;
+- positive, negative, mixed, missing, and contradictory results;
+- which existing role, decision frame, review lens, or template change was
+  actually used;
+- alternative explanations such as stronger sources, more time, longer output,
+  different model/mode, or extra agents;
+- explicit non-promotion and the next human decision.
+
+Outcome feedback is distinct from taste. “I liked the tone” is a preference
+unless evidence shows a material effect on understanding, decision, action, or
+the recorded failure signal. Activity counts, filled fields, number of agents,
+longer outputs, and review volume do not prove reader value.
+
+### Threshold For A New Permanent Role
+
+Reader Model, Learning Design, Reader Review, and Companion Pass remain shared
+functions of existing roles. A new permanent role may be considered only when
+all of these conditions are evidenced:
+
+1. comparable failures recur across materially different task types or
+   contexts, with positive, negative, and contradictory cases preserved;
+2. existing owners have been given bounded, reviewed changes and still cannot
+   resolve the failure reliably;
+3. the remaining problem is an accountability or independence conflict, not
+   missing instructions, weak evidence, poor routing, or a template gap;
+4. a separate role has a testable benefit above its context, coordination,
+   handoff, latency, maintenance, and governance cost;
+5. scope, non-applicability, authority, inputs, outputs, stop conditions, and
+   interaction with current roles can be defined without duplicating an owner;
+6. an existing Evaluation Signal and Knowledge Evolution disposition support a
+   separate reviewed system update and Project Lead decision.
+
+No numeric count or threshold creates the role automatically. Failure to meet
+the threshold means `no role change`, which is a normal successful outcome when
+existing roles perform the functions adequately. The same evidence may still
+justify a smaller owner patch, calibration, deferral, rejection, or no action.
+`ideas/master_backlog.md`, role specifications, pipelines, and canon do not
+change merely because a reader-centered candidate exists.
+
 ## Advisory Evaluation Signal View
 
 Evaluation Signals make selected evidence visible for a material Project Lead,

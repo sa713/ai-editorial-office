@@ -61,6 +61,12 @@ Conditional files:
 
 ## process depth
 
+## reader review depth
+
+- Selected: compact/normal/full/not applicable
+- Trigger: intended outcome / reader risk / explanation complexity
+- Expanded during review: no/yes and why
+
 ## constraints
 
 ## client profile
@@ -107,6 +113,41 @@ Conditional files:
 - Tone/glossary/policy validation:
 - Structure/usefulness validation:
 - Governance validation:
+
+## compact reader review, when selected
+
+| Question | Status | Evidence | Required action |
+| --- | --- | --- | --- |
+| Reader understands the main transfer | pass/fail/needs clarification | | |
+| Reader can take the intended action | pass/fail/not applicable/needs clarification | | |
+| Avoidable burden or artificial tone blocks the outcome | pass/fail/needs clarification | | |
+
+## normal or full reader review, when selected
+
+| Criterion | Status | Evidence | Reader consequence | Required action |
+| --- | --- | --- | --- | --- |
+| Understanding | pass/fail/not applicable/needs clarification | | | |
+| Retention | pass/fail/not applicable/needs clarification | | | |
+| Application | pass/fail/not applicable/needs clarification | | | |
+| Cognitive Bridge | pass/fail/not applicable/needs clarification | | | |
+| Learning sequence | pass/fail/not applicable/needs clarification | | | |
+| Reader burden | pass/fail/not applicable/needs clarification | | | |
+
+- Bounded repair owner:
+- Repair scope:
+- Do-not-change:
+- Re-review scope:
+
+## companion pass, when reader-facing
+
+| Criterion | Status | Evidence | Reader consequence | Required action |
+| --- | --- | --- | --- | --- |
+| Naturalness | pass/fail/not applicable/needs clarification | | | |
+| Concreteness | pass/fail/not applicable/needs clarification | | | |
+| Avoidable academic or jargon distance | pass/fail/not applicable/needs clarification | | | |
+| Precision preservation | pass/fail/not applicable/needs clarification | | | |
+
+- Substantive Writer repair required: yes/no
 
 ## editorial challenge
 
@@ -197,4 +238,6 @@ blockers, and next action.
 - Reviewed artifact/version is current.
 - Independence is recorded.
 - Outcome is deterministic.
+- Reader Review is complete or explicitly not applicable.
+- Companion Pass is complete or explicitly not applicable.
 - Optional review artifacts are justified.

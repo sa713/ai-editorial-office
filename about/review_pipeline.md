@@ -77,6 +77,15 @@ clarity, publication fit, or stakeholder alignment, review applies
 `/kb/audience_outcome_alignment.md` to challenge audience, intended outcome,
 detail level, tone, format, evidence depth, omissions, and success criteria.
 
+When reviewed work has a material Reader Outcome Contract, teaches or explains,
+updates a mental model, or must change reader practice, review applies the
+Reader Review Lens defined in `/agents/review_agent.md`. The result stays inside
+`review.md`; it does not create a new role, gate, cycle, score, or artifact.
+
+Reader-facing work also receives Companion Pass inside the same review. A
+failure that requires substantive rewriting routes to Writer Agent and
+bounded re-review; Final Editor is not a substitute repair owner.
+
 When reviewed work depends on selected quality priorities or visible tradeoffs,
 review applies `/kb/editorial_quality_attributes.md` to challenge whether the
 artifact optimized for the right qualities and preserved them through handoff.
@@ -184,6 +193,9 @@ packet from those owners, then add only review-specific context:
 - professional-communication notes when message architecture, recommendation
   presentation, explanation fit, technical communication, information density,
   actionability, or evidence/caveat-preserving reader transfer is material;
+- Reader Outcome Contract, Cognitive Bridge, Moments of Insight, Practical
+  Transformation, and Learning Design notes when the reader outcome is
+  material;
 - architecture-review notes when architectural significance, drivers,
   quality-attribute scenarios, tradeoffs, assumptions, risks, or decision
   rationale are material;
@@ -261,7 +273,7 @@ compact evidence. Missing evidence for material claims should produce
 | `brief.md` | Review scope and acceptance criteria | review_agent, chief_editor | never for review |
 | `orchestration_plan.md` | Selected production pipeline and review gates | review_agent, chief_editor | never after orchestration starts |
 | reviewed material | The artifact being independently reviewed | review_agent, final_editor | never for review |
-| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Professional Communication challenge when applicable, Architecture Review challenge when applicable, active Domain Knowledge Pack challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
+| `review.md` | Deterministic verdict, analytical-reasoning challenge when applicable, Professional Analysis challenge when applicable, Professional Communication challenge when applicable, Reader Review Lens when applicable, Architecture Review challenge when applicable, active Domain Knowledge Pack challenge when applicable, quality-attribute challenge when applicable, audience/outcome challenge when applicable, option-evaluation challenge when applicable, evidence-confidence challenge, failure-mode findings when applicable, learning/canon candidate challenge when applicable, Editorial Challenge Lens when applicable, required changes | final_editor, chief_editor | never before finalization |
 | review handoff | Delta-transfer to next valid role | receiving role | only when no role transition occurs |
 
 ### conditional artifacts
@@ -345,6 +357,12 @@ only when no material claims need evidence; `compact-evidence` is acceptable
 when material claims are source-light and traceable; `full-evidence` is
 required for high-governance material claims.
 
+Reader Review depth follows `/kb/shared_lifecycle_kernel.md`: `compact` for a
+simple low-risk transfer, `normal` for a material standard reader outcome, and
+`full` for complex or source-heavy model change and high-governance teaching.
+The trigger is intended outcome, reader risk, and explanation complexity, not
+length alone.
+
 Compact review minimum:
 
 - verdict;
@@ -376,6 +394,12 @@ Compact review minimum:
 - compact audience/outcome check when reviewed work depends on reader fit,
   actionability, implementation clarity, publication fit, or stakeholder
   alignment;
+- selected-depth Reader Review when a material Reader Outcome Contract governs
+  the work; compact review asks only about main transfer, intended action, and
+  avoidable burden/artificial tone, while normal and full use the applicable
+  detailed criteria;
+- selected-depth Companion Pass for reader-facing work, with full criteria when
+  depth is normal or full;
 - compact quality-attribute check when reviewed work depends on selected
   quality priorities or accepted tradeoffs;
 - compact Knowledge Evolution check when reviewed work proposes reusable
@@ -398,7 +422,7 @@ Compact review minimum:
 
 Normal review uses separate checklist or summary only when downstream review, routing, or risk needs them. Full review is required for high-governance and source-heavy work.
 
-For `changes_requested`, bounded revision is the default. `review.md` must define issue, why it blocks, repair owner, repair scope, do-not-change area, and re-review scope.
+For `changes_requested`, bounded revision is the default. `review.md` must define issue, why it blocks, repair owner, repair scope, do-not-change area, and re-review scope. Re-review stays limited to changed scope when unaffected independence, evidence, and review checks remain current; otherwise it expands only to invalidated checks.
 
 ## review rule ownership
 
@@ -456,6 +480,8 @@ Quality gates are mandatory and artifact-backed.
 | KB compliance gate | Relevant KB files were checked and findings cite artifacts | missing KB, tone, glossary, or policy check |
 | Instructional architecture gate | Instructional or operational material can be followed through a clear reading path, with distinct section roles and bounded rereading cost | unclear route to action, mixed section roles, useless duplication, missing navigation, forced linear reading where reference use is needed |
 | Audience/outcome gate | Artifact fits the intended reader, outcome, action, detail, tone, format, and evidence depth | wrong reader, no actionability, wrong depth, generic output, or unusable implementation prompt |
+| Reader Review gate | When material, understanding, retention, application, Cognitive Bridge, Learning Design sequence, and reader burden have deterministic statuses tied to the Reader Outcome Contract and exact artifact evidence | missing bridge, headings substituted for memorable ideas, vague Practical Transformation, academic or jargon overload that blocks the outcome, or a taste preference presented as a finding |
+| Companion Pass gate | Reader-facing work is natural and concrete enough for the intended reader while preserving precision, evidence, caveats, boundaries, and traceability | taxonomy dump, synthetic expert performance, avoidable academic distance, unsupported friendliness, precision loss, or substantive repair deferred to Final Editor |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Task Need Recognition gate | When downstream scope materially depends on recognition, observed evidence, recommendations, negative evidence, uncertainty, decomposition basis, explicit non-decision, and Chief Editor decision are distinct, proportionate, and owner-safe | keyword-only or forced type, hidden ambiguity, missing negative evidence, unsupported split, score/threshold authority, automatic routing/activation/depth, or Chief Editor decision absent |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
@@ -478,6 +504,10 @@ allow the review stage to close, and the review-specific packet is current:
 - when the reviewed work was governed by Problem Hypothesis and/or Editorial
   Decision Frame, `review.md` includes Editorial Challenge Lens or a compact
   statement that route-validity assumptions still hold;
+- when Reader Review is material, `review.md` records all applicable Reader
+  Review criteria, evidence, reader consequences, and bounded repair routing;
+- when material is reader-facing, `review.md` records Companion Pass and routes
+  substantive repair to Writer Agent before approval;
 - conditional review artifacts exist when their depth triggers apply;
 - handoff exists to the correct next role when a role transition occurs;
 - review-critical decisions cite artifacts;

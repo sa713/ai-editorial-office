@@ -3,7 +3,8 @@
 This file owns practical Professional Communication guidance for AI Editorial
 Office. It translates professional communication practice into lightweight
 lenses for message architecture, recommendation presentation, explanation
-quality, technical communication, information density, and actionability.
+quality, learning design, technical communication, information density, and
+actionability.
 
 It is not a new role, grammar/style checklist, framework, pipeline, lifecycle
 stage, review gate, workflow engine, scoring model, consulting methodology,
@@ -23,6 +24,8 @@ It helps agents:
 - decide what goes first, what can be layered, and what can be omitted;
 - present recommendations, asks, approvals, decisions, and next steps clearly;
 - adapt explanations to reader expertise without flattening meaning;
+- sequence teaching and explanation from the reader's current model to a usable
+  new model or practice;
 - communicate technical, policy, research, implementation, or governance work
   with appropriate precision;
 - preserve evidence, confidence, caveats, assumptions, uncertainty, and
@@ -91,6 +94,7 @@ Select only the lenses that fit the task.
 | Policy or stakeholder memo | A policy, governance, or stakeholder reader needs decision context. | What issue, decision, evidence, tradeoff, implication, and implementation path matter? |
 | Layered communication | Multiple readers need different depth. | What does every reader need first, and where does specialist detail belong? |
 | Explanation fit | A concept, mechanism, or rationale must be learned or trusted. | What does the reader already know, what must be defined, and what sequence stabilizes understanding? |
+| Learning design | The artifact must update a mental model or teach a repeatable practice. | What was true or believed before, what is true now, why did it change, which example makes it concrete, and what should the reader do? |
 
 ## Professional Communication Pattern
 
@@ -114,6 +118,60 @@ Professional Communication is material:
 For compact tasks, this may be one paragraph or a few bullets. Do not create a
 standalone Professional Communication artifact unless the selected task depth,
 review need, or governance need justifies it.
+
+## Reader Model And Learning Design
+
+Audience & Outcome Alignment owns the Reader Model and Reader Outcome Contract.
+Professional Communication owns the explanation sequence used to realize them.
+
+For teaching, understanding, and complex explanation, consider this conditional
+pattern:
+
+```text
+раньше -> сейчас -> почему -> пример -> что делать
+```
+
+- `раньше`: name the reader's prior model or practice without caricaturing it;
+- `сейчас`: state the updated model or current practice;
+- `почему`: explain the change, mechanism, evidence, or tradeoff;
+- `пример`: make the difference concrete with a supported example;
+- `что делать`: translate the new model into an action, decision, or habit.
+
+The pattern is not a mandatory five-part outline. Combine, reorder, or omit
+parts when another sequence better serves the reader. Do not force chronology
+into a task that needs an action-first, problem-first, reference, decision, or
+implementation structure. Examples must stay inside the source boundary; an
+illustrative example must be labeled and must not invent product behavior.
+
+Learning Design is complete only when the Cognitive Bridge is usable, the
+Moments of Insight are actually expressed, and Practical Transformation is
+specific enough to review. It does not create a Learning Designer role,
+pipeline, score, stage, or standalone artifact.
+
+## Companion Pass
+
+Companion Pass is the last communication check inside the existing review
+before reader-facing material can receive `approved`. It asks:
+
+> Could a knowledgeable colleague explain this to the intended reader in this
+> way, naturally and directly, without losing precision?
+
+Use `pass`, `fail`, `not applicable`, or `needs clarification` for:
+
+- naturalness: sentences sound like purposeful explanation rather than a
+  template, taxonomy dump, or performance of expertise;
+- concreteness: abstractions are connected to supported examples, decisions,
+  actions, or consequences when needed;
+- distance: jargon, nominalization, formalism, and academic framing do not
+  create avoidable distance from the intended reader;
+- precision preservation: simplification retains evidence, boundaries,
+  caveats, uncertainty, technical meaning, and traceability.
+
+This is not an invitation to add fake empathy, invented familiarity, jokes,
+sales language, or an ungrounded conversational persona. It cannot authorize
+new facts or meaning changes. If passing it requires substantive rewriting,
+Review Agent returns bounded repair to Writer Agent; Final Editor must not use
+finalization to perform that rewrite.
 
 ## Good Professional Communication Criteria
 
@@ -143,10 +201,16 @@ Use `/kb/editorial_failure_modes.md` when these warning signs appear:
   without defining it;
 - documentation that mixes tutorial, how-to, reference, and explanation in a
   way that interrupts the reader's task;
+- explanation that presents only the new model and makes the reader infer why
+  the old model no longer works;
+- abstract teaching with no supported example or usable next practice;
 - compressed summary that removes uncertainty or overstates confidence;
 - multi-audience artifact that satisfies no reader because all detail is
   flattened into one layer;
 - polished prose that hides weak evidence, missing action, or scope limits;
+- reader-facing prose that is correct but sounds like an academic checklist,
+  taxonomy dump, or synthetic expert performance instead of a direct
+  explanation;
 - handoff that is pleasant to read but does not let the next owner proceed.
 
 ## Stop Conditions
@@ -185,6 +249,11 @@ state:
   analysis;
 - whether technical or specialist detail is precise enough for its reader;
 - whether uncertainty, assumptions, and residual risk survived compression;
+- whether material teaching connects the old/current model to the updated
+  model, makes the transition concrete, and enables the approved practical
+  transformation;
+- whether Companion Pass is complete for reader-facing material without
+  trading precision for warmth or ease;
 - whether the correct outcome is `approved`, `changes_requested`, `blocked`, or
   escalation through the existing lifecycle.
 
@@ -194,13 +263,13 @@ Professional Communication is shared work, not a new role.
 
 | Role | Communication responsibility |
 | --- | --- |
-| Chief Editor | Select the capability when communication transfer quality materially affects route, depth, review, or governance. |
-| Intake Agent | Capture or infer early signs that reader action, decision, channel, or density will shape communication. |
+| Chief Editor | Select the capability and Learning Design lens when communication transfer or reader change materially affects route, depth, review, or governance. |
+| Intake Agent | Capture or infer early signs that reader starting state, action, decision, channel, or density will shape communication. |
 | Research Agent | Preserve evidence, confidence, unknowns, and source meaning for later communication. |
-| Writer Agent | Shape draft message architecture, density, explanation, recommendations, and action path inside approved scope. |
+| Writer Agent | Shape draft message architecture, density, explanation, supported examples, reader transition, recommendations, and action path inside approved scope. |
 | UX Writer | Preserve product-state action path and product truth; use this capability only when broader communication transfer is material. |
-| Review Agent | Challenge communication failures inside existing `review.md` when material. |
-| Final Editor | Preserve approved message path, actionability, caveats, density, and reader fit during finalization. |
+| Review Agent | Challenge communication failures, apply Reader Review when material, and run Companion Pass for reader-facing material inside existing `review.md`; taste alone is not a finding. |
+| Final Editor | Preserve approved message path, Companion Pass balance, actionability, caveats, density, and reader fit during finalization; do not perform substantive companion rewriting. |
 
 ## Non-Goals
 
@@ -212,6 +281,9 @@ Professional Communication does not:
 - create a new pipeline, lifecycle stage, review gate, checklist system,
   communication score, consulting framework, documentation framework, or
   mandatory artifact;
+- create a Learning Designer role or force the learning pattern onto every
+  artifact;
+- create a Companion Agent, stage, gate, score, or standalone artifact;
 - replace Writer Agent, UX Writer, Review Agent, Audience Alignment, Quality
   Attributes, Evidence Framework, Analytical Reasoning, Professional Analysis,
   Planning, Architecture Review, Engineering Review, or Failure Modes;

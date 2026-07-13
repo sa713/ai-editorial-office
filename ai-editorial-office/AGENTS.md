@@ -52,8 +52,8 @@
 | Engineering Review capability, implementation/change safety lenses, engineering validation expectations, and engineering residual-risk handling | `/kb/engineering_review.md` | task-specific engineering-review notes, changed surface, selected lenses, validation evidence, findings, and residual risk |
 | Editorial failure modes and recovery patterns | `/kb/editorial_failure_modes.md` | task-specific warning signs, selected recovery action, and escalation note |
 | Editorial planning depth, option generation, and option evaluation | `/kb/editorial_planning_framework.md` | task-specific options, selected approach, tradeoffs, and reconsideration triggers |
-| Audience and outcome alignment | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, detail/tone/format fit, and usefulness criteria |
-| Editorial quality attributes and tradeoffs | `/kb/editorial_quality_attributes.md` | task-specific quality priorities, accepted tradeoffs, and preservation risks |
+| Audience, outcome, and Reader Outcome Contract | `/kb/audience_outcome_alignment.md` | task-specific audience, intended outcome, reader context, reader starting state, required change, practical result, detail/tone/format fit, and usefulness criteria |
+| Editorial quality attributes, priority, guardrails, and tradeoffs | `/kb/editorial_quality_attributes.md` | task-specific quality priorities, non-relaxable guardrails, accepted tradeoffs, and preservation risks |
 | Editorial learning and Knowledge Evolution | `/kb/editorial_learning_framework.md` | task-specific learning candidates, canon update candidates, reusable patterns, stale-knowledge notes, and memory disposition |
 | Domain Knowledge Pack purpose, structure, activation, source/evidence requirements, boundaries, review, update, and retirement | `/kb/domain_knowledge_pack_standard.md` | active domain-pack notes, activation reason, source pointers, caveats, stale-if notes, and task-specific consequences |
 | Pipeline sequence and task-type artifact depth | `/pipelines/*.md` | task-type rules, not global invariants repeated in full |
@@ -218,6 +218,9 @@ Before production starts, Chief Editor must route the task editorially:
   a non-trivial route, recommendation, or implementation plan;
 - identify the audience, intended outcome, required action or decision, and
   detail/tone/format fit before handing work to production when material;
+- define a compact Reader Outcome Contract for material reader-facing work:
+  starting state, required change in understanding or practice, practical
+  result, and failure signal;
 - identify the quality attributes and accepted tradeoffs that matter for the
   task before production when material;
 - record a compact Editorial Decision Frame in `orchestration_plan.md` before
@@ -236,8 +239,11 @@ recovery action before continuing.
 
 The Editorial Decision Frame records the chosen editorial route, considered
 alternatives, rejection reasons, Writer/UX Writer contract, review focus, and
-reroute triggers. It lives inside `orchestration_plan.md`; it is not a new
-pipeline, role, status, `final_decision.md`, or mandatory standalone
+reroute triggers. For teaching, understanding, or other material reader-change
+work, it also records a compact `Cognitive Bridge`, 3-5 `Moments of Insight`,
+and `Practical Transformation`. These fields may be `not applicable` with a
+reason for other tasks. The frame lives inside `orchestration_plan.md`; it is
+not a new pipeline, role, status, `final_decision.md`, or mandatory standalone
 `editorial_decision.md`.
 
 `/kb/editorial_planning_framework.md` defines how to generate and evaluate
@@ -247,7 +253,8 @@ route.
 `/kb/audience_outcome_alignment.md` defines how to shape route, depth,
 structure, tone, evidence, and final artifact fit around the reader and the
 decision, action, understanding, or publication outcome the artifact must
-enable.
+enable. It also owns the compact Reader Outcome Contract used when the task
+must change what a reader understands, remembers, decides, or does.
 
 `/kb/editorial_quality_attributes.md` defines the shared vocabulary for what
 quality means in a task, how quality attributes trade off, and how intended
@@ -841,7 +848,9 @@ final governance still happens and must be artifact-backed.
    review focus, reroute triggers, and usually 2-3 rejected alternatives. Each
    alternative gets one line for the route and one line for the rejection
    reason. Do not duplicate research, outline, review, or addendum content
-   inside the frame.
+   inside the frame. When reader change is material, the frame also includes
+   the Cognitive Bridge, 3-5 formulated Moments of Insight, and Practical
+   Transformation; these are production fields, not new artifacts.
 
 3. Research if needed
 
@@ -1207,6 +1216,9 @@ Needs verification: yes/no
 
 - точным;
 - понятным для целевой аудитории;
+- ценным для конкретного читателя и заявленного outcome;
+- способным дать требуемое изменение понимания, решения или практики, когда
+  такое изменение является целью задачи;
 - логически связным;
 - структурно аккуратным;
 - свободным от неподтверждённых заявлений;
@@ -1214,6 +1226,8 @@ Needs verification: yes/no
 - согласованным с брифом и редакционными стандартами.
 
 Хороший материал не просто звучит уверенно. Он показывает, откуда взялась уверенность.
+Reader value не разрешает ослаблять correctness, evidence support,
+neutrality, traceability, честную неопределённость или независимый review.
 
 ## Review-gate
 
@@ -1260,6 +1274,11 @@ Review должен быть максимально воспроизводимы
 - отсутствие неподтверждённых утверждений;
 - структура и логика текста;
 - для instructional и operational текстов: путь чтения, роли разделов, стоимость повторного чтения, структурное дублирование, навигация и возможность выборочного чтения;
+- когда Reader Review материален: понимание, запоминаемость, применимость,
+  Cognitive Bridge, Learning Design sequence и reader burden с явными
+  `pass`/`fail`/`not applicable`/`needs clarification` статусами и ссылками на
+  Reader Outcome Contract или точные места артефакта; вкус сам по себе не
+  является finding;
 - соответствие аудитории и формату;
 - наличие unresolved blockers;
 - готовность `final.md`, если материал претендует на финализацию.

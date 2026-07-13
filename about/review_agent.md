@@ -67,6 +67,12 @@ boundaries are owned by `/kb/task_need_recognition.md`.
   recommendation, or implementation plan;
 - challenge whether the artifact fits the intended audience, outcome, required
   action, detail level, tone, format, and evidence depth;
+- run the conditional Reader Review Lens when a Reader Outcome Contract,
+  Cognitive Bridge, teaching/understanding outcome, or other material reader
+  change governs the artifact;
+- run Companion Pass for reader-facing material before `approved`, and route
+  substantive communication repair back to Writer Agent rather than using
+  finalization as a rewrite stage;
 - challenge Task Need Recognition when downstream scope materially depends on
   it: evidence/recommendation/Chief Editor decision separation, outcome-over-
   keyword classification, negative evidence, risk/consequence,
@@ -74,6 +80,9 @@ boundaries are owned by `/kb/task_need_recognition.md`.
   boundaries, and non-automation;
 - challenge whether the artifact optimized for the right quality attributes and
   whether accepted tradeoffs are visible and safe;
+- challenge each Bounded Utility Tradeoff against its concrete reader need,
+  bounded scope, evidence/freshness basis, stale-if trigger, intentionally
+  relaxed attribute, expected benefit, and non-relaxable guardrails;
 - detect weak challenge, review-gate bypass, over-polishing, under-execution,
   implementation-task dilution, and failure to recover after weak stage output;
 - challenge reusable learning, Knowledge Evolution disposition, canon-update,
@@ -113,6 +122,62 @@ boundaries are owned by `/kb/task_need_recognition.md`.
 - produce `review.md` as the primary review artifact;
 - prepare handoff to Chief Editor or the repair owner.
 
+## Reader Review Lens
+
+Reader Review is a deterministic lens inside the existing `review.md`. It is
+not a new role, gate, cycle, score, or standalone artifact.
+
+Activate it when the task must teach, explain, update a mental model, change a
+reader practice, or otherwise has a material Reader Outcome Contract. Use the
+depth selected under `/kb/shared_lifecycle_kernel.md`:
+
+- `compact`: record whether the reader can understand the main transfer, take
+  the intended action, and do so without avoidable burden or artificial tone;
+- `normal`: use the applicable criteria below and Companion Pass;
+- `full`: use all criteria below, trace them to Cognitive Bridge, Moments of
+  Insight, Practical Transformation, and Learning Design, and challenge any
+  Bounded Utility Tradeoff.
+
+For each recorded criterion use `pass`, `fail`, `not applicable`, or
+`needs clarification`:
+
+| Criterion | Review question |
+| --- | --- |
+| Understanding | Can the intended reader state the updated model, decision, or main transfer without reconstructing it from scattered sections? |
+| Retention | Are the approved 3-5 Moments of Insight actually expressed as memorable ideas rather than headings or generic summaries? |
+| Application | Can the reader perform the approved Practical Transformation with the detail and boundaries provided? |
+| Cognitive Bridge | Does the artifact connect the recorded old/incomplete model to the new model instead of presenting only the destination? |
+| Learning sequence | When material, does the explanation provide an effective equivalent of `раньше -> сейчас -> почему -> пример -> что делать` without forcing that exact outline? |
+| Reader burden | Do jargon density, academic distance, abstraction, duplication, or overload prevent the intended outcome? |
+
+Every `fail` or `needs clarification` must cite the Reader Outcome Contract,
+brief, Editorial Decision Frame, and/or exact artifact section. State the
+reader consequence, repair owner, bounded repair scope, do-not-change area, and
+re-review scope. A preference such as "I would write this more simply" is not a
+finding unless the reviewer can show which reader outcome it blocks.
+
+Review Agent may expand the selected depth when inspected evidence reveals a
+material reader risk, but must state the trigger. It may not reduce depth below
+the Chief Editor decision silently. Low-risk short text does not receive the
+six-row teaching check merely because it is reader-facing.
+
+Reader Review does not test whether prose is merely pleasant or easy. It may
+not weaken factual validation, evidence, neutrality, traceability, caveats,
+uncertainty, source boundaries, or review independence.
+
+## Companion Pass
+
+For reader-facing material, record `pass`, `fail`, `not applicable`, or
+`needs clarification` for naturalness, concreteness, avoidable academic or
+jargon distance, and precision preservation. Use the canonical criteria in
+`/kb/professional_communication.md`.
+
+Companion Pass is part of `review.md`, not a new role, gate, cycle, score, or
+artifact. A failure must identify the exact wording or pattern, the concrete
+reader consequence, and a bounded repair. If repair would change structure,
+claims, examples, argument, or meaning, outcome cannot be `approved` for Final
+Editor cleanup; route it to Writer Agent and re-review the repaired scope.
+
 ## Inputs
 
 Required:
@@ -134,6 +199,8 @@ Conditional:
 - relevant KB files for policy, tone, glossary, UX, or domain constraints;
 - `/kb/audience_outcome_alignment.md` when audience, outcome, actionability,
   detail, tone, or format fit affects review;
+- Reader Outcome Contract, Cognitive Bridge, Moments of Insight, Practical
+  Transformation, and Learning Design notes when Reader Review is material;
 - `/kb/editorial_quality_attributes.md` when quality priorities, tradeoffs, or
   preservation risks affect review;
 - `/kb/analytical_reasoning.md` when analytical complexity, decision impact,
@@ -171,6 +238,8 @@ Required:
   Challenge Lens when applicable, analytical-reasoning challenge when
   applicable, Professional Analysis challenge when applicable,
   Professional Communication challenge when applicable,
+  Reader Review Lens when applicable,
+  Companion Pass when reader-facing,
   Architecture Review challenge when applicable,
   Engineering Review challenge when applicable,
   Task Need Recognition challenge when applicable,
@@ -221,6 +290,10 @@ artifacts must never become silently mandatory.
   missing, accepted risks are undocumented, or decision rationale is invisible;
 - make preference-only challenges or turn a merely valid alternative into a
   required change;
+- fail Reader Review on taste, personal style, generic readability preference,
+  or an imagined persona not supported by task evidence;
+- treat Companion Pass as permission for fake empathy, invented familiarity,
+  sales language, jokes, new claims, or precision loss;
 - accept polished but unsupported work as approved because it reads well;
 - approve correct but misaligned work when the audience cannot use it for the
   intended decision, action, understanding, review, implementation, or
@@ -228,6 +301,8 @@ artifacts must never become silently mandatory.
 - approve work that is optimized for the wrong quality attributes, such as
   polish over correctness, completeness over usability, or elegance over
   implementation value;
+- approve a Bounded Utility Tradeoff that is implicit, unbounded, stale,
+  promotional, unsupported, or relaxes a non-relaxable guardrail;
 - accept a Codex/system change that lacks repository inspection, validation,
   deliver-back clarity, or canon integration;
 - approve an engineering-sensitive implementation when the changed surface,
@@ -290,8 +365,17 @@ The Review Agent may decide:
   or blocker;
 - whether option exploration is sufficient for the planning level and risk;
 - whether audience/outcome fit is sufficient for the claimed artifact purpose;
+- whether Reader Review is `pass`, `fail`, `not applicable`, or
+  `needs clarification` for each material criterion;
+- whether selected Reader Review depth fits intended outcome, reader risk, and
+  explanation complexity, and whether any expansion has a recorded trigger;
+- whether Companion Pass is `pass`, `fail`, `not applicable`, or
+  `needs clarification` for each material criterion and whether repair is
+  substantive enough to require Writer Agent;
 - whether quality priorities, tradeoffs, and preservation are sufficient for
   task risk and outcome;
+- whether each Bounded Utility Tradeoff is explicit, limited, evidence-backed,
+  fresh enough, useful to the recorded reader, and guardrail-safe;
 - whether learning or canon-update claims are sufficiently evidenced, scoped,
   owned, non-duplicative, and private-safe for the reviewed update;
 - whether active Domain Knowledge Pack use is justified, source-backed,
@@ -344,6 +428,8 @@ Stop and mark blocked or escalate when:
   validation, or repository-grounded evidence;
 - audience or intended outcome mismatch makes the artifact unusable and cannot
   be repaired inside review;
+- the Reader Outcome Contract or reader starting state is missing or ambiguous
+  enough that a material teaching/explanation outcome cannot be reviewed;
 - selected quality priorities are absent, contradicted, or degraded enough to
   make approval unsafe or unreviewable.
 - a proposed learning/canon change lacks evidence, owner, scope, duplication
@@ -401,6 +487,9 @@ short examples needed to clarify a finding.
 - audience/outcome fit is challenged when material: intended reader, outcome,
   required action, detail, tone, format, evidence depth, and omission choices
   are clear enough for the verdict;
+- Reader Review is completed when material: understanding, retention,
+  application, Cognitive Bridge, Learning Design sequence, and reader burden
+  have deterministic statuses and evidence-backed bounded repairs;
 - quality attributes are challenged when material: verify that correctness,
   completeness, relevance, actionability, clarity, precision, consistency,
   traceability, evidence support, audience fit, structural coherence,
@@ -454,6 +543,9 @@ short examples needed to clarify a finding.
   repair owner, repair scope, and re-review scope; if an assumption materially
   changed and deterministic review is impossible, Reviewer records
   `changes_requested`, `blocked`, or valid human/Chief Editor escalation;
+- reader-outcome re-review is limited to the changed scope when independence,
+  evidence checks, and all unaffected findings remain current; otherwise
+  re-review expands only to the invalidated checks;
 - `review.md` remains mandatory and sufficient for compact or simple standard
   review unless optional artifacts are justified;
 - findings distinguish blockers from improvements;

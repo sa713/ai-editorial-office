@@ -81,10 +81,32 @@ Select only the dimensions that matter for the current task.
 | Reviewability | Can Review Agent validate the option and resulting artifacts without excessive context? |
 | Time/value fit | Is this the right-sized next step for the current mission? |
 | Audience/outcome fit | Does this option help the intended reader decide, act, review, implement, understand, or publish? |
+| Reader journey fit | Does this option connect the reader's starting state to the required change in a learnable and usable sequence? |
 | Quality-attribute fit | Which quality attributes does this option strengthen or weaken? |
 
 The framework does not require numeric scores. A compact comparison table,
 short bullets, or a paragraph is enough when it makes the tradeoff visible.
+
+## Reader Journey Fit
+
+For material reader-facing work, evaluate routes as learning or action paths,
+not only as subject structures. A route should answer:
+
+1. What does the reader know, believe, use, or misunderstand now?
+2. What must change before the reader can understand, decide, or act?
+3. Which sequence makes that change easiest without hiding evidence or
+   complexity?
+4. What can the reader do, explain, or decide after the artifact?
+
+`Concept-first`, `chronology-first`, `product-first`, `problem-first`, and
+`action-first` are possible routes, not defaults. Choose the one that best
+serves the recorded reader journey and source boundary. If the request names a
+stopping point such as "I last understood X", treat it as evidence for a bridge
+from X rather than as incidental background.
+
+Keep this judgment inside the existing option evaluation and Editorial
+Decision Frame. Do not create a reader-journey framework, role, score, or
+standalone artifact.
 
 ## Decision Selection
 
@@ -100,6 +122,14 @@ Record, at the planning depth required:
 - remaining uncertainty;
 - evidence basis and confidence;
 - future reconsideration triggers.
+
+When a concrete reader starting point makes a short chronology, current
+product bridge, or other less durable route materially more useful, Chief
+Editor may record a Bounded Utility Tradeoff from
+`/kb/editorial_quality_attributes.md`. It must name the bounded scope,
+evidence/freshness basis, stale-if trigger, intentionally relaxed attribute,
+expected reader benefit, and preserved non-relaxable guardrails. Convenience
+or liveliness alone is not sufficient.
 
 For tasks using an Editorial Decision Frame, keep the final planning result
 inside that frame or in the smallest existing planning artifact. Do not create a
@@ -131,6 +161,10 @@ Planning is complete when:
 - rejected alternatives are not strawmen;
 - tradeoffs, uncertainty, and reconsideration triggers are visible when
   material;
+- reader-facing route order is justified by the reader journey when reader
+  change is material;
+- any bounded utility tradeoff is explicit, evidence-backed, limited, and
+  reviewable rather than an implicit exception;
 - the next action is implementation, research, drafting, UX writing, review,
   repair, or governance rather than more abstract planning.
 

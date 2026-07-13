@@ -25,6 +25,17 @@ artifact. Keep it short, current, and explicit about versions.
 - Latest relevant handoff:
 - Next required action:
 
+## reader outcome state
+
+Use only when reader change is material; otherwise omit or mark the first field
+`not applicable`. Keep the full contract and rationale in `brief.md` and
+`orchestration_plan.md` rather than duplicating them here.
+
+- Reader outcome material: yes/no/not applicable
+- Reader Outcome Contract pointer:
+- Reader Review required: compact/normal/full/not applicable
+- Companion Pass required: yes/no/not applicable
+
 ## client profile
 
 Use this section only when `Client profile` is not `none`.
@@ -84,6 +95,17 @@ Required when a task has multiple versions.
 
 | Artifact | Current? | Required / conditional / optional | Notes |
 | --- | --- | --- | --- |
+
+## actual runtime execution
+
+Use only when multiple material runtime streams were actually used. Keep it
+best-effort and current. Include inter-agent packages even when a stream did not
+write a file. Use `unknown` or `not recorded` instead of guessing. Do not store
+session IDs, hidden prompts, credentials, personal data, or unrelated runtime
+metadata. A random runtime nickname may appear only as an optional note.
+
+| Task-local ID | Canonical role/function | Purpose and scope | Parent/relation | Model/mode | Input boundary | Artifacts or packages | Responsibility/status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
 ## stale or conflicting state
 

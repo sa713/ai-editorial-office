@@ -31,6 +31,9 @@ Professional Communication guidance is owned by
   intended outcome, reader context, deliverable, required action or decision,
   format/detail/tone constraints, source boundary, success criterion, approval
   boundary, missing information, and safe assumptions;
+- capture or conservatively infer the reader starting state, old/incomplete
+  model, and desired practical change when teaching, understanding, or complex
+  explanation is material; mark uncertainty instead of inventing a persona;
 - surface early Professional Communication signals when the raw request appears
   to depend on executive brief, technical explanation, recommendation or ask,
   policy/stakeholder memo, implementation handoff, dense source compression,
@@ -155,6 +158,13 @@ handoff. It follows the artifact-minimalism rule in `AGENTS.md`.
 - decide / approve / implement / review / understand / align / challenge / brief / publish / teach / persuade / document canon:
 - required action or decision:
 - reader context:
+
+## reader model, when material
+- starting knowledge or practice:
+- old or incomplete model to update:
+- likely confusion or overload point:
+- desired model or practice after use:
+- status: confirmed / inferred / unknown / assumption
 
 ## expected artifact
 - confirmed:
@@ -365,6 +375,8 @@ Stop and surface ambiguity when:
 
 - user goal, audience, output, or constraints are unclear enough to affect
   routing;
+- reader starting state is unknown and different plausible states would require
+  materially different teaching or explanation;
 - risk mode or client-profile applicability cannot be classified safely;
 - supplied materials conflict with user instructions;
 - task requires production work before Chief Editor orchestration;
@@ -380,6 +392,8 @@ action. It should not include analysis or draft content.
 ## Role-Specific Quality Checks
 
 - task package can be understood without chat history;
+- material reader starting state and uncertainty are visible without invented
+  demographic or psychological detail;
 - risk mode and client-profile proposals are conservative and justified;
 - open questions are real, not boilerplate;
 - only bootstrap artifacts were created;

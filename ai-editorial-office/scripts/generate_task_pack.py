@@ -43,6 +43,13 @@ SOURCE_EVIDENCE_MODE_RE = re.compile(
     r"(?i)\b(compact-evidence|source-based|source-bound|task-local supplied source|"
     r"task-local evidence|source summary reference)\b"
 )
+READER_OUTCOME_RE = re.compile(
+    r"(?i)\b(reader outcome(?: contract)?|cognitive bridge|moments of insight|"
+    r"practical transformation|learning design|reader review|companion pass|"
+    r"bounded utility tradeoff)\b"
+)
+PLANNED_RUNTIME_RE = re.compile(r"(?im)^\s*##\s+planned runtime topology\s*$")
+ACTUAL_RUNTIME_RE = re.compile(r"(?im)^\s*##\s+actual runtime execution\s*$")
 
 ROLE_FILES: dict[str, tuple[str, ...]] = {
     "writer": (
@@ -293,6 +300,25 @@ def generate_pack(task_dir: Path, role: str) -> tuple[dict[str, list[ReadItem]],
     manifest_text = known_texts[0] if manifest_path.is_file() else ""
     orchestration_text = read_text(orchestration_path) if orchestration_path.is_file() else ""
 
+    if ACTUAL_RUNTIME_RE.search(manifest_text):
+        add_item(
+            sections,
+            seen,
+            "Required",
+            manifest_path,
+            task_dir,
+            "actual runtime execution record and material stream contributions",
+        )
+    if PLANNED_RUNTIME_RE.search(orchestration_text):
+        add_item(
+            sections,
+            seen,
+            "Required",
+            orchestration_path,
+            task_dir,
+            "planned runtime topology and stream responsibility boundaries",
+        )
+
     selected_pipeline = extract_labeled_value(manifest_text, SELECTED_PIPELINE_RE)
     if selected_pipeline is None:
         selected_pipeline = extract_labeled_value(orchestration_text, SELECTED_PIPELINE_RE)
@@ -429,6 +455,23 @@ def generate_pack(task_dir: Path, role: str) -> tuple[dict[str, list[ReadItem]],
             task_dir,
             "compact execution mentioned in task context",
         )
+
+    if role in {"writer", "review_agent"} and READER_OUTCOME_RE.search(combined_context):
+        for file_name, reason in (
+            (
+                "audience_outcome_alignment.md",
+                "Reader Outcome Contract or Reader Model is material in task context",
+            ),
+            (
+                "professional_communication.md",
+                "Learning Design, Reader Review, or Companion Pass is material in task context",
+            ),
+            (
+                "editorial_quality_attributes.md",
+                "reader outcome priority or bounded utility tradeoff is material in task context",
+            ),
+        ):
+            add_item(sections, seen, "Conditional", KB_DIR / file_name, task_dir, reason)
 
     if role == "chief_editor" or (task_dir / "feedback.md").is_file():
         add_item(

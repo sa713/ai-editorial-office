@@ -87,6 +87,19 @@ governance, or non-trivial coordination must be recorded.
 
 ## audience
 
+## reader outcome contract, when material
+
+- reader starting state:
+- required change:
+- practical result:
+- failure signal:
+
+## Cognitive Bridge / Moments of Insight / Practical Transformation
+
+- Cognitive Bridge:
+- Moments of Insight, 3-5 formulated ideas:
+- Practical Transformation:
+
 ## deliverable
 
 ## channel or publication context

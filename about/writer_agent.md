@@ -33,6 +33,9 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
 - use structure-before-writing notes when present;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the drafting
   contract when present;
+- realize the approved Cognitive Bridge, Moments of Insight, and Practical
+  Transformation when those fields are material, without inventing a reader
+  model or changing the approved route;
 - use active Domain Knowledge Pack context only within the recorded activation,
   source, confidence, stale-if, and domain-boundary limits;
 - communicate selected-approach tradeoffs accurately when the task asks for a
@@ -48,6 +51,9 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
 - preserve Professional Communication choices when material, including message
   architecture, bottom line or primary transfer, recommendation/ask
   presentation, density, caveats, reader path, explanation fit, and next action;
+- apply the conditional Learning Design sequence `раньше -> сейчас -> почему ->
+  пример -> что делать` when approved and useful, adapting it rather than
+  forcing a five-part outline;
 - preserve selected quality priorities such as correctness, relevance,
   actionability, clarity, precision, traceability, or structural coherence;
 - create or update `outline.md` before drafting when needed;
@@ -92,6 +98,8 @@ Conditional:
   material conclusions;
 - audience/outcome alignment notes when reader context, required action,
   format, detail, or tone affects the draft;
+- Cognitive Bridge, Moments of Insight, and Practical Transformation from the
+  Editorial Decision Frame when reader change is material;
 - quality profile or tradeoff notes when the draft must preserve specific
   attributes or avoid quality loss;
 - analytical question, hypotheses, key assumptions, contradictions,
@@ -124,6 +132,7 @@ Conditional:
 - perform original research instead of using approved research artifacts;
 - invent facts, sources, quotes, examples, dates, links, statistics, product
   behavior, or approvals;
+- use an unsupported example to make a learning transition feel concrete;
 - claim compliance with a client editorial policy when `client_profile_status`
   is `pending_source` or the source rule has not been checked;
 - use unsupported or contradicted claims as facts;
@@ -138,6 +147,8 @@ Conditional:
   weaken the task's selected quality priorities;
 - silently ignore the Editorial Decision Frame or reintroduce rejected
   alternatives without a recorded reason;
+- turn Moments of Insight into generic section labels, omit a material
+  Cognitive Bridge, or replace Practical Transformation with a vague promise;
 - use a Domain Knowledge Pack as policy authority, capability ownership,
   workflow, review verdict, or permission to add unsupported domain claims;
 - flatten selected approach, rejected alternatives, tradeoffs, or remaining
@@ -209,6 +220,8 @@ should not repeat full research or status history.
   visible when they affect review;
 - draft follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
+- material Cognitive Bridge is visible in the reading path, the 3-5 Moments of
+  Insight are actually expressed, and Practical Transformation is actionable;
 - tradeoffs and uncertainty from option evaluation are preserved when material;
 - analytical question, key assumptions, contradictions, and sufficiency limits
   are preserved when material;
@@ -224,6 +237,9 @@ should not repeat full research or status history.
   implementation value;
 - tone, glossary, editorial policy, and active client profile are applied;
 - structure supports the reader path and avoids unnecessary duplication;
+- teaching/explanation uses the approved reader transition and supported
+  examples without becoming formulaic or overexplaining what the reader already
+  knows;
 - optional writing artifacts are justified by review or traceability need;
 - Writer did not become researcher, reviewer, finalizer, UX Writer, or
   governance owner.

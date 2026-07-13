@@ -100,6 +100,14 @@ Conditional files:
 
 ## success criteria
 
+## reader outcome, only when material
+
+- Starting state or immediate context:
+- Required understanding or action:
+- Failure signal:
+- Reader Review depth: compact/normal/not applicable
+- Companion Pass: required/not applicable
+
 ## open questions
 ```
 
@@ -187,6 +195,13 @@ Create only when claims need evidence.
 
 ## tone and CTA validation
 
+## compact reader review, when material
+
+- Reader understands the main transfer: pass/fail/not applicable
+- Reader can take the intended action: pass/fail/not applicable
+- Avoidable burden or artificial tone blocks the outcome: yes/no/not applicable
+- Companion Pass: pass/fail/not applicable
+
 ## findings
 
 ## blockers
@@ -222,6 +237,7 @@ claim caveats, blockers, and next action.
 - Platform constraints are current.
 - Current active variant/version is clear.
 - Claims are supported or omitted.
+- Reader outcome checks are compact or explicitly not applicable.
 - `review.md` exists and matches reviewed variants.
 - Conditional artifacts are justified.
 

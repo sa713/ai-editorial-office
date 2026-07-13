@@ -110,6 +110,24 @@ artifact and keep this frame compact.
 
 - Chosen editorial route:
 - Why this route serves the task:
+- Reader journey rationale, when material: starting state -> required change ->
+  explanation sequence -> practical result
+- Cognitive Bridge, required for teaching/understanding work or `not applicable`
+  with reason:
+  - What the reader already knows:
+  - Old or incomplete model to update:
+  - Required transition:
+- Moments of Insight, 3-5 formulated ideas rather than section titles:
+- Practical Transformation, observable action/decision/habit after use:
+- Bounded Utility Tradeoff, only when a local chronology, product bridge, or
+  less durable detail directly serves the recorded reader need:
+  - Concrete reader need:
+  - Bounded scope:
+  - Evidence and freshness basis:
+  - Stale-if or review trigger:
+  - Attribute intentionally relaxed:
+  - Expected reader benefit:
+  - Non-relaxable guardrails preserved:
 - Alternatives considered, usually 2-3 compact options:
   - Alternative route, one line:
     - Why rejected, one line:
@@ -125,6 +143,7 @@ artifact and keep this frame compact.
   - Must not include:
   - Source boundary and confidence:
 - Review focus:
+- Bounded utility tradeoff challenge, if applicable:
 - Reroute triggers:
 
 ## custom workflow mini-contract
@@ -148,6 +167,15 @@ weaken review, governance, role boundaries, or required fields.
 | Review | Review Agent | yes | `review.md` required |
 | Finalization |  |  |  |
 | Final governance | Chief Editor | if applicable |  |
+
+## planned runtime topology
+
+Use only when multiple material runtime streams are planned. Use stable
+task-local IDs; do not use random nicknames as process identifiers. Model/mode
+may be `unknown` or `not recorded`.
+
+| Stream ID | Canonical role/function | Purpose and scope | Parent/coordination | Model/mode if known | Input boundary | Expected artifact/package | Responsibility boundary |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
 ## required knowledge and evidence
 

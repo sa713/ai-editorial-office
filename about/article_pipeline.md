@@ -11,7 +11,12 @@ This pipeline governs creation of article-style editorial materials:
 - editorial content;
 - knowledge content.
 
-The pipeline turns a task brief into a reviewed and finalized article deliverable through controlled intake, orchestration, optional research, writing, review, finalization, and Chief Editor governance.
+The pipeline turns a task brief into a reviewed and finalized article
+deliverable through controlled intake, orchestration, optional research,
+writing, review, finalization, and Chief Editor governance. When teaching,
+understanding, or complex explanation is material, it also preserves the
+approved Reader Model transition and Learning Design without adding a role or
+artifact.
 
 The pipeline is markdown-first, artifact-backed, and restartable from `/tasks/TASK-ID/` without chat history.
 
@@ -72,6 +77,8 @@ packet from those owners, then add only article-specific context:
   active stage;
 - relevant KB, client-profile, handoff, and source files named by the task
   artifacts.
+- Reader Outcome Contract, Cognitive Bridge, Moments of Insight, Practical
+  Transformation, and approved Learning Design sequence when material.
 
 If `TASK-ID`, `brief.md`, `task-manifest.md`, `status.md`, or `orchestration_plan.md` is missing, production must not continue until Chief Editor creates or repairs the missing artifact, or sets the task to `blocked`.
 
@@ -198,6 +205,8 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 - evidence artifacts may be combined or omitted when no factual claims are used;
 - compact execution may be used when Chief Editor records the profile, rationale, review target, and intentionally omitted artifacts;
 - review is still required, but checklist may be compact inside `review.md`;
+- Reader Review is `compact` for a simple reader transfer; a complex teaching
+  outcome may require `normal` despite low factual risk;
 - finalization may use compact shape: `review.md`, `final.md`, current `task-manifest.md`, and optional short handoff only if needed.
 
 `standard`:
@@ -206,6 +215,8 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 - research is required when factual claims are present;
 - claims traceability is required when claims are material;
 - simple source-light standard tasks may keep checklist and summary content inside `review.md` when no downstream consumer, high-governance need, task-specific requirement, blocker/open-question state, or traceability need requires separate files.
+- Reader Review is normally `normal` when reader change is material and
+  `not applicable` when it is not.
 
 `high-governance`:
 
@@ -213,6 +224,8 @@ Risk mode classification follows `AGENTS.md` and `/project-state.md`.
 - `sources.md`, `facts.md`, and `claims_table.md` are required;
 - `claims-used.md` is required;
 - review must be full;
+- Reader Review is `full` when the article teaches, updates a mental model, or
+  justifies a Bounded Utility Tradeoff; otherwise record the applicable depth.
 - `finalization-checklist.md` is required;
 - human approval must be assessed explicitly;
 - Chief Editor must not finalize governance without an explicit decision on approval.
@@ -274,6 +287,8 @@ Writing rules:
 - uncertain claims may be used only with explicit caveat;
 - the draft must not claim to be approved, final, published, or ready for delivery;
 - factual claims used in the draft must be traceable through `claims-used.md`, `claims_table.md`, `facts.md`, or `sources.md`;
+- teaching/explanation must realize the approved reader transition and use only
+  supported or clearly labeled illustrative examples;
 - if a needed claim is unsafe, Writer Agent must stop and recommend `research`, `blocked`, or escalation.
 
 ## review requirements
@@ -293,6 +308,7 @@ Review Agent must validate:
 - correct use of `claims_table.md` and `claims-used.md`, when factual claims are used;
 - absence of unsupported or contradicted claims presented as facts;
 - caveats for uncertain claims;
+- approved Reader Model transition and Learning Design when material;
 - tone, structure, glossary, and editorial policy compliance;
 - status consistency under `/kb/task_statuses.md`.
 
@@ -373,9 +389,9 @@ Quality gates are mandatory and artifact-backed.
 | Gate | Passed only when | Blocking evidence |
 | --- | --- | --- |
 | Intake gate | `brief.md` and `status.md` exist with task goal, audience, output, constraints, and `TASK-ID` | missing or ambiguous brief |
-| Orchestration gate | `orchestration_plan.md` selects Article Pipeline, assigns roles, and records research need | missing plan or invalid role |
+| Orchestration gate | `orchestration_plan.md` selects Article Pipeline, assigns roles, records research need, and includes the reader transition when material | missing plan, invalid role, or missing material Reader Model contract |
 | Research gate | required research artifacts exist and claims are safe, unsafe, or caveated | unsupported, contradicted, stale, or missing evidence |
-| Writing gate | `outline.md`, `draft.md`, and `claims-used.md` when needed exist and avoid unsafe claims | invented facts or missing claim traceability |
+| Writing gate | `outline.md`, `draft.md`, and `claims-used.md` when needed exist, avoid unsafe claims, and realize the approved reader transition when material | invented facts, missing claim traceability, or broken material Cognitive Bridge |
 | Review gate | `review.md` outcome is `approved` with checked artifacts listed | missing review, non-independent review, unresolved critical issues |
 | Finalization gate | `final.md` and required finalization evidence exist after approved review | finalization before review, missing current manifest state, or new unsupported claims |
 | Governance gate | `final_decision.md` validates finalization and human approval requirements | missing approval, unresolved blocker, missing final decision |

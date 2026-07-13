@@ -1,9 +1,9 @@
 # Audience & Outcome Alignment Framework
 
 This file is the canonical owner for audience identification, intended
-outcome, reader context, required action or decision, required depth, tone and
-language fit, artifact success criteria, mismatch warning signs, and correction
-patterns in AI Editorial Office.
+outcome, reader context, Reader Outcome Contract, required action or decision,
+required depth, tone and language fit, artifact success criteria, mismatch
+warning signs, and correction patterns in AI Editorial Office.
 
 It prevents generic good text by forcing each artifact to serve a specific
 reader and outcome. It is not a persona system, marketing framework, new role,
@@ -29,10 +29,80 @@ missing or uncertain audience/outcome can materially change the artifact, record
 it as a question, assumption, constraint, or blocker instead of filling it with
 a generic reader.
 
+## Reader Outcome Contract
+
+For material reader-facing work, audience identification is not enough. Record
+the smallest contract that makes the intended reader change reviewable:
+
+```markdown
+## reader outcome contract
+- reader starting state:
+- required change in understanding, decision, or practice:
+- practical result after use:
+- failure signal:
+- evidence and precision guardrails:
+```
+
+The contract answers four different questions:
+
+1. What does this reader already know, believe, use, or misunderstand?
+2. What must be different after the artifact is used?
+3. What observable decision, action, explanation, or working habit should the
+   artifact enable?
+4. What result would be correct in content but still useless for this reader?
+
+Use the contract for teaching, explanation, change communication, decision
+support, implementation guidance, or other work where a generic audience label
+does not make success reviewable. Keep it compact for short or low-risk work.
+Use `not applicable` with a reason when the task has no material reader change.
+
+Reader value is bounded by evidence. The contract may change structure,
+examples, detail, product bridge, chronology, or action path, but it may not
+weaken correctness, source boundaries, neutrality, traceability, uncertainty,
+review independence, or required caveats.
+
+The Reader Outcome Contract normally lives in `brief.md`,
+`orchestration_plan.md`, production notes, or `review.md`. It is not a new role,
+pipeline, review gate, score, persona document, or mandatory standalone file.
+
+## Reader Model Function
+
+Reader Model is a shared process function for `Teach`, `Understand`, complex
+explanation, change communication, and other tasks where prior knowledge or an
+old mental model materially affects success. It is not a standing role.
+
+Use the smallest useful model:
+
+- known starting knowledge or practice;
+- old, incomplete, or misleading model to update;
+- terms, examples, or assumptions the reader already has;
+- likely point of confusion or overload;
+- target model or action after the artifact.
+
+The model must be grounded in the request, supplied context, prior task
+evidence, or an explicit bounded assumption. Do not invent demographic,
+psychological, motivational, emotional, or proficiency details. If uncertainty
+could materially change the artifact, ask, constrain, or mark the assumption.
+
+Responsibility stays distributed:
+
+- Intake Agent captures or conservatively infers the starting state;
+- Chief Editor confirms the transition and route;
+- Writer Agent realizes the transition in structure, examples, and action;
+- Review Agent challenges whether the intended reader can make the transition;
+- Final Editor preserves the approved transition during controlled
+  finalization.
+
+Record Reader Model only in existing task artifacts. A separate reader-model
+file requires a distinct downstream or governance need and is never the
+default.
+
 ## Alignment Pattern
 
 Use this pattern at intake, routing, production, review, and finalization when
 audience fit affects the result. Record it only as deeply as the task requires.
+When reader change is material, use it together with the Reader Outcome
+Contract.
 
 1. Who is this for?
 2. What do they already know?
@@ -201,6 +271,9 @@ implementation-task dilution should recover through
 Intake captures or infers audience/outcome, Chief Editor routes by it, Writer
 and UX Writer shape artifacts around it, Review Agent challenges mismatch, and
 Final Editor preserves actionability and fit inside the approved scope.
+When a Reader Outcome Contract is material, Review Agent records the
+deterministic Reader Review Lens inside `review.md`; this does not create a new
+role or artifact.
 
 ## Codex Audience Guidance
 
@@ -230,18 +303,20 @@ Audience and outcome alignment is shared work, not a new role.
 
 | Role | Alignment responsibility |
 | --- | --- |
-| Intake Agent | Capture or conservatively infer audience, intended outcome, reader context, constraints, and success criteria. |
-| Chief Editor | Route by intended outcome, choose depth, and require audience/outcome fit before production. |
-| Writer Agent | Shape structure, detail, tone, evidence, and next action for the reader. |
+| Intake Agent | Capture or conservatively infer audience, intended outcome, reader starting state, reader context, constraints, and success criteria. |
+| Chief Editor | Confirm the Reader Model transition, route by intended outcome, choose depth, and require audience/outcome fit before production. |
+| Writer Agent | Shape structure, examples, detail, tone, evidence, and next action so the approved reader transition is usable. |
 | UX Writer | Shape product copy around user action, UI state, accessibility, and product truth. |
-| Review Agent | Flag audience mismatch, wrong depth, missing actionability, and generic useful-looking text. |
-| Final Editor | Preserve audience fit, actionability, caveats, and format constraints during finalization. |
+| Review Agent | Flag audience mismatch, broken reader transition, wrong depth, missing actionability, and generic useful-looking text. |
+| Final Editor | Preserve the approved reader transition, audience fit, actionability, caveats, and format constraints during finalization. |
 
 ## Non-Goals
 
 This framework does not:
 
 - create personas for every task;
+- create a Reader Model Agent or require a standalone reader-model file;
+- require a Reader Outcome Contract when no material reader change is expected;
 - require a separate audience brief artifact;
 - replace the Task Object Model, Decision Frame, Evidence Framework, Planning
   Framework, Failure Modes Playbook, or Review Pipeline;

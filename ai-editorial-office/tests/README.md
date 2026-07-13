@@ -51,6 +51,12 @@ markdown smoke-tests и synthetic examples:
 - `professional_communication_smoke_test.md` - manual synthetic cases for
   Professional Communication activation and non-activation; it is not
   production governance.
+- `reader-centered-quality-pilot.md` - three-type manual calibration pilot for
+  longread, working document, and short text; external comparator promotion
+  remains pending.
+- `reader-centered-quality-smoke-test.md` - manual synthetic regression cases
+  for Reader Outcome Contract, Learning Design, Reader Review, Companion Pass,
+  bounded utility tradeoffs, and compact non-activation.
 - `knowledge_evolution_smoke_test.md` - manual synthetic cases for Knowledge
   Evolution disposition, stale-knowledge challenge, canon-update candidates,
   and `/about` memory sync; it is not production governance.
@@ -201,6 +207,17 @@ Audience & Outcome Alignment ownership, UX copy ownership, Architecture
 Review, Engineering Review, or Professional Analysis ownership. It does not
 define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
 Professional Communication KB.
+
+`reader-centered-quality-pilot.md` records the longread baseline evidence and
+two synthetic calibration cases used to select full, normal, and compact Reader
+Review depth. It explicitly does not claim comparator parity or production
+improvement without actual paired outputs and Project Lead judgment.
+
+`reader-centered-quality-smoke-test.md` records eight synthetic cases that
+separate reader outcome from readability, preserve evidence guardrails, test
+good and bad cognitive bridges and bounded tradeoffs, reject taste-only review,
+and keep short low-risk text compact. It does not define active rules or replace
+the canonical owners listed in the file.
 
 `knowledge_evolution_smoke_test.md` records synthetic disposition cases for
 `/kb/editorial_learning_framework.md`. It checks that reusable learning,

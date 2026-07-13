@@ -44,8 +44,14 @@ signals and advisory recommendations are owned by
 - make a compact Preflight Gate decision before production starts;
 - confirm audience, intended outcome, required action or decision, and
   appropriate detail/tone/format depth before production when material;
+- design the reader journey for material reader-facing work: starting state,
+  required change, explanation sequence, and practical result after use;
 - select quality priorities and accepted tradeoffs when they materially affect
   route, depth, implementation value, or review focus;
+- authorize a Bounded Utility Tradeoff only for a concrete recorded reader need
+  and only with bounded scope, evidence/freshness basis, stale-if trigger,
+  intentionally relaxed attribute, expected benefit, and preserved
+  non-relaxable guardrails;
 - select evidence depth and required confidence for material decisions,
   recommendations, review findings, and governance closure;
 - select analytical reasoning depth when problem complexity, decision impact,
@@ -58,6 +64,8 @@ signals and advisory recommendations are owned by
   recommendation presentation, explanation fit, technical communication,
   information density, actionability, or preservation of evidence and caveats
   during reader transfer is material;
+- select the Learning Design lens within Professional Communication when the
+  task must teach, update a mental model, or explain a changed practice;
 - select Architecture Review capability when architectural significance,
   quality-attribute impact, cross-owner effects, hard-to-reverse design
   consequences, or architecture-risk exposure makes design fitness reviewable;
@@ -76,9 +84,15 @@ signals and advisory recommendations are owned by
 - record a compact Editorial Decision Frame in `orchestration_plan.md` after
   intake, or after research when research is required, and before handing work
   to Writer Agent or UX Writer;
+- require the Editorial Decision Frame to include a Cognitive Bridge, 3-5
+  formulated Moments of Insight, and Practical Transformation when teaching,
+  understanding, or another material reader change is the intended outcome;
 - assign work only to current core roles or explicitly legalized extension roles;
 - maintain the execution contract in `orchestration_plan.md` when required;
 - keep `task-manifest.md`, `status.md`, and handoffs aligned with current state;
+- keep planned and actual runtime topology distinct when multiple material
+  subagent streams are used; use task-local IDs, record file-less package
+  contributions, and leave unavailable model/mode metadata unknown;
 - route missing information, evidence gaps, blockers, and change requests;
 - when a normalized brief must become a Codex execution request, create or
   validate a compact Codex task and check-pack contract using
@@ -149,8 +163,13 @@ Conditional:
   intended outcome, reader context, deliverable, required action or decision,
   detail/tone/format constraints, source boundary, success criterion, approval
   boundary, and missing data strategy;
+- reader starting state, required change in understanding or practice,
+  explanation sequence, practical result, and reader-outcome failure signal
+  when the artifact must teach, explain, reorient, or change action;
 - candidate editorial routes, source boundaries, research sufficiency, caveats,
   and task constraints needed for the Editorial Decision Frame;
+- old or incomplete reader model, required transition, 3-5 retained ideas, and
+  observable post-use action when reader change is material;
 - evidence basis, confidence level, assumptions, unknowns, validation needed,
   and residual risk for material route or governance decisions;
 - analytical question, competing explanations, key assumptions,
@@ -276,10 +295,18 @@ Required when applicable:
   next-question decision when the advisory view is material.
 - compact audience/outcome alignment note when reader, outcome, detail, tone,
   format, or success criteria materially shape the artifact.
+- compact reader journey inside `orchestration_plan.md` when reader change is
+  material; it must be a production contract, not a second audience framework.
 - compact quality profile when priority attributes or accepted tradeoffs
   materially shape route, production, review, or finalization.
+- compact Bounded Utility Tradeoff inside the existing Editorial Decision Frame
+  or quality profile when a less durable, product-specific, chronological, or
+  otherwise local bridge materially improves the recorded reader journey.
 - compact Editorial Decision Frame in `orchestration_plan.md` before Writer
   Agent or UX Writer starts production.
+- Cognitive Bridge, 3-5 Moments of Insight, and Practical Transformation inside
+  that frame when teaching, understanding, or another reader change is
+  material; otherwise a compact `not applicable` rationale is allowed.
 - compact evidence-confidence note when a material route or governance decision
   depends on evidence quality.
 - compact analytical reasoning note when problem framing, hypotheses,
@@ -303,6 +330,9 @@ Required when applicable:
   quality.
 - compact option-evaluation note when a material route, recommendation, or
   implementation plan has meaningful alternatives.
+- planned runtime topology in `orchestration_plan.md` and actual execution in
+  `task-manifest.md` when multiple material runtime streams are used; never as
+  a new standalone artifact.
 - compact post-task learning/canon note when a material reusable pattern, stale
   assumption, or canon-update candidate is found.
 - compact memory-disposition note in an existing release, review,
@@ -388,13 +418,18 @@ The Chief Editor may decide:
 - whether Task Need Recognition is needed and whether each recommendation is
   accepted, rejected, narrowed, overridden, or returned for evidence;
 - role routing and next owner;
+- material runtime stream boundaries, stable task-local IDs, and coordination
+  relations when actual execution uses multiple streams;
 - required evidence depth and minimum confidence for the next stage;
 - planning level, credible options considered, selected approach, tradeoffs,
   and reconsideration triggers;
 - audience, intended outcome, required action or decision, detail level, tone,
   format, and success criteria needed for routing and production;
+- reader starting state, target understanding or practice, explanation order,
+  and practical result needed to make a reader-facing route useful;
 - quality priorities, accepted tradeoffs, and quality-preservation risks needed
   for routing, production, review, or finalization;
+- whether a Bounded Utility Tradeoff is justified and sufficiently bounded;
 - whether architectural significance requires Architecture Review capability
   before routing, implementation, review, or governance proceeds;
 - whether structured interpretation, synthesis, recommendation, implications,
@@ -405,6 +440,9 @@ The Chief Editor may decide:
   technical communication, information density, actionability, or
   caveat-preserving reader transfer requires Professional Communication
   capability before routing, production, review, or governance proceeds;
+- whether a material teaching/explanation task needs the conditional
+  `раньше -> сейчас -> почему -> пример -> что делать` pattern or a different
+  reader-journey sequence;
 - whether implementation change safety requires Engineering Review capability
   and which engineering lenses are relevant before routing, implementation,
   review, or governance proceeds;
@@ -414,7 +452,8 @@ The Chief Editor may decide:
   production, review, repair, governance, or a smaller stronger output;
 - chosen editorial route, rejected alternatives, Writer/UX Writer contract,
   review focus, and reroute triggers inside the Editorial Decision Frame, with
-  rejected alternatives kept to short route/reason pairs;
+  rejected alternatives kept to short route/reason pairs and the selected
+  route justified by the reader journey rather than subject order alone;
 - whether current evidence is sufficient to continue orchestration;
 - whether weak evidence should lead to `ask`, `constrain`, `proceed`, or
   `block`;
@@ -440,6 +479,8 @@ The Chief Editor must not decide:
 - draft wording or final wording;
 - independent review outcome;
 - publication or human approval unless approval evidence is explicitly recorded.
+- hidden runtime metadata, unavailable model/mode values, or session details
+  that are not needed for task traceability.
 
 ## Stop Conditions
 
@@ -465,6 +506,8 @@ chosen route, rejected alternatives, writing contract, and review focus.
 Rejected alternatives should be names or one-line reasons, not a rationale dump.
 Do not repeat the full Editorial Decision Frame. It should not use
 `compact-handoff.md` for ordinary internal routing.
+When a material runtime stream starts or completes, the handoff should update
+the actual execution row or provide the delta needed for Chief Editor to do so.
 
 ## Role-Specific Quality Checks
 
@@ -477,6 +520,9 @@ Do not repeat the full Editorial Decision Frame. It should not use
 - active Domain Knowledge Packs are recorded only when domain context is
   material, with activation reason, relevant sections or sources, confidence
   limits, stale-if triggers, and boundary limits visible;
+- planned and actual runtime records, when material, use task-local IDs, show
+  artifacts or inter-agent packages and responsibility boundaries, contain no
+  guessed metadata, and avoid secrets or unrelated session data;
 - role assignment keeps core-role and extension-role boundaries intact;
 - `task-manifest.md` points to the current active version when multiple versions
   exist;
@@ -494,6 +540,12 @@ Do not repeat the full Editorial Decision Frame. It should not use
   names real alternatives with short rejection reasons, does not duplicate
   research, outline, review, or analytical addenda, and gives the next
   production role a usable contract;
+- material reader-facing work has a compact journey from reader starting state
+  to required understanding, decision, or action, and the selected structure
+  can be explained through that journey;
+- Cognitive Bridge names the old/incomplete model and transition, Moments of
+  Insight are formulated ideas rather than headings, and Practical
+  Transformation is observable when those fields are material;
 - material route and governance decisions expose evidence basis, confidence,
   assumptions, unknowns, validation needed, and residual risk at the depth
   required by `/kb/editorial_evidence_framework.md`;

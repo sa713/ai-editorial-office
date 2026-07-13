@@ -80,6 +80,10 @@ run_case "source_summary_compact_evidence" "review_agent" 0 "source_summary.md" 
 run_case_absent "writer_minimal" "writer" 0 "source_summary.md" "source_notes.md"
 run_case "client_profile_pending" "writer" 0 "client-profile files were not included"
 run_case_absent "client_profile_pending" "writer" 0 "explicit active client-profile file"
+run_case "reader_outcome_material" "writer" 0 "audience_outcome_alignment.md" "professional_communication.md" "editorial_quality_attributes.md"
+run_case "reader_outcome_material" "review_agent" 0 "audience_outcome_alignment.md" "professional_communication.md" "editorial_quality_attributes.md"
+run_case_absent "writer_minimal" "writer" 0 "audience_outcome_alignment.md" "professional_communication.md" "editorial_quality_attributes.md"
+run_case "runtime_execution_record" "writer" 0 "planned runtime topology" "actual runtime execution record"
 
 if [ "$failures" -ne 0 ]; then
   echo "Task pack generator smoke test failed."

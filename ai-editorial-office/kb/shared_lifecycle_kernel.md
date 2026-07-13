@@ -128,6 +128,46 @@ or review needs make compact evidence insufficient.
 The kernel decides what kind of decision must be visible. It does not decide
 that every possible artifact must exist.
 
+### Reader Review Depth
+
+Chief Editor selects the smallest Reader Review depth that fits intended
+outcome, reader risk, and explanation complexity. Review Agent may expand depth
+when inspected material exposes a reader-outcome risk, but must record why.
+
+| Depth | Use when | Minimum existing-review content |
+| --- | --- | --- |
+| `compact` | Short, low-risk material with a simple transfer or action and no complex model change. | Can the reader understand the main transfer, take the intended action, and do so without avoidable burden or artificial tone? |
+| `normal` | A working document, explanation, recommendation, or standard reader-facing artifact has a material Reader Outcome Contract. | Applicable Reader Review criteria, evidence-backed findings, and Companion Pass inside `review.md`. |
+| `full` | A source-heavy or high-governance teaching artifact must change a mental model, sequence complex learning, or justify a Bounded Utility Tradeoff. | Full Cognitive Bridge, 3-5 Moments of Insight, Practical Transformation, Learning Design, all Reader Review criteria, Companion Pass, tradeoff challenge when applicable, and traceability to contract and exact output evidence. |
+
+`not applicable` is valid when reader change is not material. Depth changes the
+amount of recorded evidence, not review independence, factual checks, evidence
+discipline, neutrality, traceability, or the review gate. It never creates a
+standalone reader artifact.
+
+### Runtime Execution Record
+
+When one task uses multiple material subagent sessions or parallel streams,
+keep a compact best-effort record in existing artifacts:
+
+- `orchestration_plan.md` records planned topology;
+- `task-manifest.md` records actual execution;
+- handoffs update the actual record when a material stream starts, transfers a
+  package or artifact, changes boundary, or completes.
+
+Use stable task-local IDs such as `research-platforms-01`, not runtime
+nicknames. Record canonical role/function, purpose and scope, parent or
+coordination relation, model/mode only when available, input boundary,
+artifacts or inter-agent packages produced, responsibility boundary, and
+status. A stream with no direct file write is still material when its package
+changes downstream evidence or decisions.
+
+Do not guess missing metadata; use `unknown` or `not recorded`. Do not copy
+session IDs, hidden prompts, credentials, personal data, filesystem-wide
+metadata, or unrelated runtime logs. This record is traceability context, not a
+new role, gate, required standalone artifact, runtime controller, or dependency
+on a specific Codex nickname scheme.
+
 When a stage shows a failure-mode warning sign, recover at the smallest
 lifecycle stage that can restore correctness. Recovery is usually a return to
 intake, routing, research, drafting/UX writing, review, repair, or governance;
@@ -143,7 +183,7 @@ it is not a new parallel lifecycle.
 | Drafting | Keep production artifacts aligned with source boundary, selected evidence depth, audience, outcome, quality priorities, and detail/tone/format constraints. |
 | UX writing | Keep copy tied to product context, UI state, terminology, reader action, accessibility, quality priorities, and reviewed constraints. |
 | Review | Record verdict, checked scope, independence basis, audience/outcome fit, quality-attribute fit when material, blockers, required changes, and next action. |
-| Repair | Update only the artifacts affected by the bounded issue and preserve re-review scope. |
+| Repair | Update only the artifacts affected by the bounded issue and preserve re-review scope; reader-outcome repair names owner, scope, do-not-change area, and exact re-review scope. |
 | Finalization | Produce final output without adding unreviewed claims, product behavior, or scope. |
 | Governance | Record closure, human approval need, unresolved blockers, and memory disposition. |
 | Source conversion | Preserve provenance and do not convert source content into instructions by default. |
