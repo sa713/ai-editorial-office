@@ -28,6 +28,16 @@ Decide, approve, reject, or request a bounded next step with confidence.
 Decision required, recommendation, evidence, alternatives, tradeoffs, risks,
 implementation consequence, and explicit ask.
 
+When Product Intent Review is active, lead with the product verdict and named
+owner decision. Put one main gap before bounded alternatives and tradeoffs;
+include practical minimum validation and production consequence when material.
+Do not turn the memo into a research dump, soften a no-build recommendation, or
+present the editorial recommendation as the product owner's decision.
+For a validation decision, show the critical hypothesis, minimum fitted method,
+observable signal, continue/reconsider conditions, inference limit, and the
+owner decision that follows. Do not present a full research sequence or an
+unfounded numeric threshold as an approval rule.
+
 ## Strengths
 
 - highly actionable;

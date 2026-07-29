@@ -213,6 +213,15 @@ summaries, copyediting, Architecture Review, or Engineering Review. It does not
 define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
 Professional Analysis KB.
 
+`product_intent_review_routing_smoke_test.md` records synthetic Product Intent
+Review `not_needed`, `limited`, and `full` recommendation cases, negative
+evidence, keyword traps, ambiguity, and Chief Editor override. Executable
+state-to-read-set, compact-path, conditional-owner-loading, restart, and
+no-new-status/pipeline checks run through
+`test_product_intent_review_routing.sh`. The test does not perform the full
+Product Intent Review analysis or create a classifier, role, pipeline, stage,
+gate, status, or review outcome.
+
 `professional_communication_smoke_test.md` records synthetic positive and
 negative activation cases for `/kb/professional_communication.md`. It checks
 that Professional Communication activates for executive briefs, recommendation
@@ -314,6 +323,82 @@ lifecycle stages, review gates, policy owners, capability owners, client
 profiles, task status models, or mandatory ordinary task artifacts. It does not
 define active rules or replace Chief Editor, Review Agent, `AGENTS.md`, or the
 Domain Knowledge Pack Standard.
+
+`product_intent_review_decision_review_smoke_test.md` and
+`test_product_intent_review_decision_review.sh` cover the ten authorized Step 3
+cases: sound no-build analysis, polish hiding a gap, `limited` overreach,
+incomplete `full` analysis, owner substitution, weak/correct minimum
+validation, no-build versus bad analysis, `not_needed`, and production reroute.
+They verify the existing `approved` / `changes_requested` / `blocked` outcomes
+without defining product-finding enums, a second gate, pipeline, role, stage,
+status, or mandatory artifact.
+The same checker also runs the fifteen authorized Step 5 Minimum Product
+Validation cases plus three bounded class-coverage cases:
+problem, mechanism, habitual-solution, communication, process, AI, weak-signal,
+invented-threshold, oversized-pilot, method-mismatch, qualitative-condition,
+`not_needed`, `insufficient`, sequential-overreach, and `limited`-focus
+behavior, with event demand, feasibility, and internal-product viability
+coverage. Method fit is derived from the hypothesis class; fixtures cannot
+self-approve it.
+`test_product_intent_review_integration.sh` additionally verifies the
+cross-owner role/pipeline/template chain and forbidden role/pipeline surfaces.
+
+`product_intent_review_output_smoke_test.md` and
+`test_product_intent_review_output.sh` cover the twelve authorized Step 4
+reader-output cases. They verify verdict-first ordering, one main gap, next
+decision, evidence boundary, production consequence, editorial-notes-last,
+existing deliverable fit, direct negative language, compact uncertainty,
+source-size independence, silent `not_needed`, and absence of internal
+architecture leakage without creating a profile, template, pipeline, role,
+status, outcome, or finding enum.
+`test_product_intent_review_output_integration.sh` additionally verifies the
+canonical/profile/role/template chain, unchanged profile count, and forbidden
+profile/template/pipeline surfaces.
+
+`run_product_intent_evaluation.py`,
+`fixtures/product_intent_evaluation/cases.json`, and
+`test_product_intent_evaluation.sh` form the Step 6 hybrid end-to-end
+evaluation suite. Thirty-two cases connect input, routing, hidden evaluator
+structure, main gap, product finding, production consequence, validation,
+reader output, and governance. The runner validates metadata, unique IDs,
+coverage, paired/adversarial distributions, deterministic contract behavior,
+critical failures, and manual-judgment records; it does not generate answers
+or replace rubric-based product judgment with string matching.
+
+Run the complete suite from the repository root:
+
+```bash
+sh ai-editorial-office/tests/test_product_intent_evaluation.sh
+```
+
+Automatic checks cover suite metadata, unique IDs, source/task/mode and pair
+coverage, expected-versus-observed structured properties, critical governance
+errors, manual-record completeness, and negative runner self-tests.
+Independent expert review remains required for the quality and proportionality
+of the main gap, product finding, production consequence, authority boundary,
+minimum validation, and reader communication.
+
+Add a case when a new material task class appears, a reproducible failure mode
+is found, the canonical contract changes, or regression protection is needed.
+Do not add or change a case merely for stylistic preference or one favored
+wording. Expected results must specify semantic properties, acceptable finding
+ranges, allowed variability, and forbidden critical errors rather than a gold
+answer.
+
+For a confirmed production defect:
+
+1. preserve or add the failing case;
+2. record the defect and evidence;
+3. patch the canonical owner minimally;
+4. rerun neighboring cases and this full suite;
+5. record every production repair loop;
+6. run the broader Product Intent regressions;
+7. obtain independent review.
+
+Do not weaken expected behavior to make current output pass. Protect against
+overfit with contrast pairs, negative and adversarial cases, multiple task
+classes, answer variability, and regressions outside the changed fixture. See
+`/kb/product_intent_review.md` for the canonical maintenance boundary.
 
 `end_to_end_cases/access_pass_security_task/` records a synthetic sanitized
 end-to-end editorial case. It checks Preflight Gate `constrain`, compact

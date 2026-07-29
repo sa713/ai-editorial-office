@@ -32,6 +32,9 @@ Recognition signals, advisory recommendations, uncertainty, and non-decision
 boundaries are owned by `/kb/task_need_recognition.md`. Deliverable-type
 purpose, fit, limitations, failure modes, companions, and nearby distinctions
 are owned by `/kb/deliverables/`.
+Product Intent Review semantics, modes, model, checks, main-gap logic,
+alternatives, minimum validation, findings, and authority boundaries are owned
+by `/kb/product_intent_review.md`.
 
 ## Primary Responsibilities
 
@@ -80,6 +83,11 @@ are owned by `/kb/deliverables/`.
   keyword classification, negative evidence, risk/consequence,
   proportionality, ambiguity, uncertainty, decomposition basis, owner
   boundaries, and non-automation;
+- when Product Intent Review mode is `limited` or `full`, independently
+  challenge activation, proportional depth, analysis quality, product finding,
+  main-gap priority, production consequence, production-boundary compliance,
+  minimum validation when used, explicit existing analytical-owner assignment,
+  and product-owner authority inside the existing review gate;
 - verify the outcome-first deliverable-set decision when material: requested
   deliverable, recommended set, and selected set remain distinct; format
   authority is visible; one-artifact sufficiency was tested; every selected
@@ -131,6 +139,74 @@ are owned by `/kb/deliverables/`.
 - keep review focused on findings rather than rewriting the work;
 - produce `review.md` as the primary review artifact;
 - prepare handoff to Chief Editor or the repair owner.
+
+## Product Intent Review Dimension
+
+Apply this conditional dimension only when the task-local mode is `limited` or
+`full`. Do not add it to `not_needed` or absent-mode tasks, and do not repeat the
+full analysis in `review.md`.
+
+Activation challenge:
+
+- verify that multi-signal evidence and negative evidence support the mode;
+- reject keyword-only activation and challenge a materially missed activation;
+- check that `limited` or `full` depth is proportionate to actual risk.
+
+Analysis challenge:
+
+- for `limited`, verify the assigned focus, bounded scope, evidence support, and
+  visible unknowns; expansion into a full audit or redesign requires
+  `changes_requested`;
+- for `full`, verify the available seven-element model, all four product checks,
+  evidence/assumption/hypothesis/unknown separation, one main gap, bounded
+  alternatives, minimum validation when material, and preservation of the
+  product-owner boundary;
+- challenge whether minimum validation follows from the main gap, selects one
+  critical hypothesis, fits method to hypothesis and context, is smaller than
+  full implementation, stoppable and reversible, uses an observable signal,
+  defines continue/reconsider conditions and the next owner decision, avoids
+  weak-signal proof, automatic surveys/pilots/A/B tests, invented thresholds,
+  false rigor, and full-program overreach, and states honest inference limits;
+- accept observable qualitative decision conditions when no numeric basis
+  exists; require a basis for any threshold; and verify explicit `not_needed`
+  or `insufficient` reasoning rather than forcing a minimum test.
+
+Result challenge:
+
+- verify that the product finding follows from evidence, the Chief Editor
+  production consequence follows from the finding, and the compact Editorial
+  Decision Frame does not distort the analysis;
+- verify that an existing analytical owner was explicitly assigned and did not
+  become a new role or take the Chief Editor/product-owner decision;
+- detect production that hides the main gap, substitutes polished text for
+  product evidence, adds unsupported effects, changes product behavior, or
+  removes uncertainty;
+- verify that the next owner decision is explicit and remains with the product
+  owner.
+
+Output challenge:
+
+- verify that the selected deliverable or embedded block fits the reader job
+  and no separate Product Intent Review report/profile was created by default;
+- verify that verdict, one main gap, and next owner decision are visible before
+  evidence detail and editorial/local remarks;
+- verify that `limited` stays compact, `full` is decision-ready rather than a
+  mechanical model dump, and source length did not determine output length;
+- verify that evidence boundary is visible without repetitive disclaimers,
+  minimum validation is practical when used, production consequence is clear,
+  and negative/no-build language is not softened;
+- verify that internal role names, pipelines, task-state/mode implementation,
+  canonical KB owners, and method inventory do not leak into the user-facing
+  result unless explicitly requested.
+
+A product finding may be negative, provisional, or a no-build recommendation
+and still receive `approved` when the analysis and boundaries are sound.
+`changes_requested` covers repairable evidence, gap-priority, consequence,
+validation, or uncertainty defects. `blocked` is reserved for conditions such
+as fabricated need/effect, product-owner substitution, a hidden critical gap,
+missing high-risk evidence that prevents deterministic review, or failed
+reviewer independence. These are applications of the existing operational
+outcomes, not Product Intent Review verdicts.
 
 ## Reader Review Lens
 
@@ -255,6 +331,7 @@ Required:
   Architecture Review challenge when applicable,
   Engineering Review challenge when applicable,
   Task Need Recognition challenge when applicable,
+  Product Intent Review dimension when mode is `limited` or `full`,
   active Domain Knowledge Pack challenge when applicable,
   evidence-confidence challenge when applicable, learning/canon candidate
   challenge when applicable, outcome, risks, required changes, blockers, and
@@ -324,6 +401,16 @@ artifacts must never become silently mandatory.
   contradictory evidence, forces a single type, overstates confidence,
   creates unnecessary depth, omits the Chief Editor decision, or performs
   routing, activation, decomposition, scoring, or depth selection;
+- treat a product finding as an operational verdict or task status; fail a
+  sound analysis merely because its finding is negative or recommends
+  no-build; approve weak analysis because its finding is positive; or allow
+  polished production, an unsupported promise, product redesign, hidden
+  uncertainty, weak minimum validation, or product-owner substitution to pass;
+- approve active Product Intent Review output when the verdict/main gap/next
+  decision is buried, editorial polish comes first, negative language is
+  softened, uncertainty becomes repetitive disclaimer, a large source causes a
+  mechanical long output, internal architecture leaks, or an unnecessary
+  standalone report/profile is produced;
 - approve a hidden deliverable substitution or expansion, an unexplained
   divergence from explicit requested scope, an insufficient single artifact, a
   non-minimal set, a purposeless/redundant member, a missing necessary
@@ -378,6 +465,10 @@ The Review Agent may decide:
 - whether Task Need Recognition evidence and recommendations are proportionate,
   uncertainty-aware, owner-safe, explicitly advisory, and separated from the
   Chief Editor decision;
+- whether active Product Intent Review activation, depth, evidence separation,
+  main gap, alternatives, validation, product finding, consequence, production
+  boundary, and owner boundary are sufficient for the existing operational
+  outcome;
 - whether requested deliverable, recommended set, and selected set are
   correctly separated; one-artifact sufficiency, set minimality, member
   purpose/dependency/priority, removable members, and missing companions are
@@ -421,6 +512,9 @@ Stop and mark blocked or escalate when:
 - the Editorial Decision Frame is missing for post-planning writing, or is too
   formal, bloated, or duplicative to validate the chosen route as a usable
   production contract;
+- active Product Intent Review lacks a reviewable mode/scope, analytical
+  evidence pointer, product finding, evidence boundary, main gap, production
+  consequence, or owner boundary;
 - the orchestration record does not permit the reviewer to determine the
   requested deliverable, format authority, selected deliverable set, member
   purposes/dependencies/priorities, or whether the pipeline was chosen after
@@ -482,6 +576,18 @@ short examples needed to clarify a finding.
   recommendations, negative evidence, ambiguity, uncertainty, decomposition
   basis, explicit non-decision, and Chief Editor decision remain distinct; no
   keyword, score, threshold, or recommendation performs routing or activation;
+- Product Intent Review is checked only when active: activation and negative
+  evidence are challenged; `limited` stays focused; `full` covers the available
+  model and four checks; evidence, assumptions, hypotheses, and unknowns remain
+  distinct; one main gap, bounded alternatives, validation limits, product
+  finding, consequence, production boundary, and product-owner authority are
+  traceable; and product finding remains distinct from the operational verdict;
+- Product Intent Review output is checked only when active: selected
+  deliverable matches the reader job; verdict, one main gap, and next owner
+  decision precede detail; evidence boundary and consequence remain visible;
+  editorial remarks follow; `limited` stays compact; `full` stays
+  decision-ready; negative findings remain direct; uncertainty is not
+  repetitive; and internal architecture remains hidden;
 - outcome-first deliverable selection is checked when material: requested
   deliverable, recommended set, and selected set remain distinct; one-artifact
   sufficiency is tested; the recommendation is outcome-fit, minimal, and

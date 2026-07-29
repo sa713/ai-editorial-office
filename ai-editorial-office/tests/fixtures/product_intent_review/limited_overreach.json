@@ -1,0 +1,25 @@
+{
+  "mode": "limited",
+  "analytical_owner": "research_agent",
+  "focus": "mechanism",
+  "analysis": {
+    "product_finding": "Mechanism needs validation before effect claims.",
+    "evidence_boundary": "Only mechanism evidence was assigned.",
+    "main_gap": "Mechanism is a hypothesis.",
+    "unknowns_hidden": false,
+    "focus_checked": true,
+    "scope_overreach": true,
+    "validation_disposition": "not_needed",
+    "validation_not_needed_reason": "This failing record does not propose a separate validation."
+  },
+  "production": {
+    "consequence": "Validate before production",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": false
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "changes_requested"
+  }
+}

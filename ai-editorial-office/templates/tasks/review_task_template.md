@@ -180,6 +180,32 @@ Conditional files:
 - Evidence:
 - Required action:
 
+## Product Intent Review dimension, only when mode is limited or full
+
+- Mode and scope:
+- Activation and proportionality challenge:
+- Product finding:
+- Evidence boundary:
+- One main product gap:
+- Analysis challenge:
+- Minimum validation challenge, when used:
+- Production consequence:
+- Production-boundary challenge:
+- Owner decision boundary:
+- Finding/verdict separation: pass/fail
+- Selected deliverable fits reader job: pass/fail
+- Verdict, main gap, and next decision are visible first: pass/fail
+- Evidence boundary is visible without disclaimer overload: pass/fail
+- Production consequence is actionable: pass/fail
+- Editorial remarks follow the product decision: pass/fail
+- Negative/no-build language remains direct: pass/fail/not applicable
+- Internal architecture is absent from user-facing output: pass/fail
+- Standalone report/profile default avoided: pass/fail
+
+Do not repeat the full analysis. A negative or no-build product finding can be
+approved when the analysis and boundaries are sound. The operational outcome
+below remains exactly one of the existing three values.
+
 ## findings
 
 | Severity | Finding | Evidence | Required action | Owner |

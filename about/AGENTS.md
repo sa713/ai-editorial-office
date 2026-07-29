@@ -48,6 +48,7 @@
 | Editorial evidence taxonomy, confidence labels, and evidence section standard | `/kb/editorial_evidence_framework.md` | task-specific evidence notes, confidence labels, assumptions, and risks |
 | Analytical reasoning moves, hypothesis comparison, disconfirmation, contradiction handling, and sufficiency judgment | `/kb/analytical_reasoning.md` | task-specific analytical notes, assumptions, hypotheses, contradictions, and sufficiency judgments |
 | Professional Analysis capability, analytical product shape, structured interpretation, synthesis, recommendation building, implications, and decision-ready analytical communication | `/kb/professional_analysis.md` | task-specific professional-analysis notes, selected analysis lens, synthesis, options, recommendations, assumptions, risks, uncertainty, and next decision/action |
+| Product Intent Review purpose, activation and non-activation, depth modes, seven-element intent model, value/fit/mechanism/viability checks, incomplete-data behavior, main-gap logic, alternatives, minimum validation, product finding, adaptive reader-facing output contract, and capability boundaries | `/kb/product_intent_review.md` | task-specific activation basis, selected depth, evidence-bounded findings, main gap, alternatives, validation limits, selected reader job/output form, next owner decision, and editorial-production consequences |
 | Professional Communication capability, message architecture, recommendation presentation, explanation fit, technical communication, information density, and actionability | `/kb/professional_communication.md` | task-specific professional-communication notes, selected communication lens, message architecture, bottom line, density choice, caveats, reader path, and next action |
 | Architecture Review capability, architecture drivers, quality-attribute scenarios, architectural tradeoffs, architecture risks, and decision-rationale challenge | `/kb/architecture_review.md` | task-specific architecture-review notes, drivers, scenarios, tradeoffs, assumptions, risks, and rationale |
 | Engineering Review capability, implementation/change safety lenses, engineering validation expectations, and engineering residual-risk handling | `/kb/engineering_review.md` | task-specific engineering-review notes, changed surface, selected lenses, validation evidence, findings, and residual risk |
@@ -875,6 +876,17 @@ final governance still happens and must be artifact-backed.
    the Cognitive Bridge, 3-5 formulated Moments of Insight, and Practical
    Transformation; these are production fields, not new artifacts.
 
+   When Product Intent Review mode is `limited` or `full`, a sufficient
+   evidence-bounded product finding must exist before deep editorial production.
+   The same Editorial Decision Frame carries only a compact product-intent
+   transfer: mode and bounded focus when applicable, product finding, one main
+   product gap, evidence boundary, Chief Editor production consequence and
+   permission, required product-owner decision, and reconsideration or reroute
+   trigger. The detailed model, checks, alternatives, and minimum validation
+   remain in the smallest suitable existing analytical artifact. Product
+   finding is not an operational verdict, task status, lifecycle stage, or
+   product-owner decision.
+
 3. Research if needed
 
    Если research требуется, `research_agent` собирает и структурирует информацию. Результаты сохраняются в `/tasks/TASK-ID/`.
@@ -891,6 +903,13 @@ final governance still happens and must be artifact-backed.
    Reviewer tests whether the assumptions that made the chosen route valid
    still hold. This is evidence-backed review, not rewriting, rerouting, or a
    new review gate. Без положительного review материал не считается готовым.
+   When Product Intent Review mode is `limited` or `full`, the same existing
+   gate also challenges activation, proportional depth, evidence separation,
+   product finding, main-gap priority, production consequence, production
+   boundary, minimum validation when used, and product-owner authority. A
+   well-supported negative or no-build product finding may receive operational
+   outcome `approved`; only analysis quality and boundary compliance determine
+   the existing outcome `approved`, `changes_requested`, or `blocked`.
 
 6. Finalization
 

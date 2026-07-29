@@ -29,7 +29,8 @@ owned by `/kb/domain_knowledge_pack_standard.md`. Task Need Recognition
 signals and advisory recommendations are owned by
 `/kb/task_need_recognition.md`. Deliverable purpose, fit, limitations, failure
 modes, companion relationships, and nearby-type distinctions are owned by
-`/kb/deliverables/`.
+`/kb/deliverables/`. Product Intent Review semantics and depth modes are owned
+by `/kb/product_intent_review.md`.
 
 ## Primary Responsibilities
 
@@ -49,6 +50,36 @@ modes, companion relationships, and nearby-type distinctions are owned by
   or override its recommendations; and keep the recorded Chief Editor decision
   separate from the advisory view, including risk/consequence advice that does
   not select the risk mode;
+- when Product Intent Review is material, accept, reject, narrow, or override
+  its advisory recommendation; decide the task-local `not_needed`, `limited`,
+  or `full` mode; record a short basis, one bounded focus for `limited`,
+  required evidence depth, production consequence, and reroute trigger; keep
+  this activation decision separate from the later capability finding,
+  production permission, and product-owner decision;
+- preserve product-first ordering without creating a stage: for `limited`,
+  resolve the named material question before deep editorial work; for `full`,
+  do not authorize a detailed production contract until a bounded Product
+  Intent Review finding exists;
+- assign an existing role as the Product Intent Review analytical owner when
+  mode is `limited` or `full`; Research Agent may hold that task-local
+  responsibility when explicitly assigned, and the capability label
+  `analytical owner` must not become a new role;
+- when minimum product validation is material, require the analytical owner to
+  link one critical hypothesis to the main gap, select the nearest
+  evidence-appropriate check, and state the observable decision conditions and
+  limits; accept an explicit `not_needed` or `insufficient` rationale instead
+  of making validation a ritual, and do not authorize a full research program;
+- after a sufficient `limited` or `full` analysis, translate the product
+  finding into one editorial production consequence: `Proceed`, `Proceed with
+  constraints`, `Validate before production`, `Reroute`, or `Stop / no-build
+  recommendation`; state the permitted work, constraints, required owner
+  decision, and reconsideration trigger without treating the consequence as a
+  status, review outcome, lifecycle stage, pipeline, or product decision;
+- for active `limited` or `full`, define the result's reader job and choose the
+  smallest sufficient existing deliverable or embedded block; record whether
+  the result is compact or traceability-heavy and require verdict, one main
+  gap, next owner decision, evidence boundary, production consequence, and
+  editorial remarks last without making a literal template mandatory;
 - confirm, reject, or resolve active client-profile activation before production
   starts;
 - confirm, reject, or resolve active Domain Knowledge Pack activation before
@@ -306,6 +337,10 @@ Required when applicable:
   artifact.
 - compact Task Need Recognition acceptance, rejection, narrowing, override, or
   next-question decision when the advisory view is material.
+- compact Product Intent Review mode decision in `orchestration_plan.md` when
+  material, with restart-critical mode/pointer/consequence in
+  `task-manifest.md` for `limited` or `full`; omit the block for obvious
+  `not_needed` compact work.
 - compact outcome-first deliverable-set decision in `orchestration_plan.md`
   when deliverable choice is material: requested deliverable, format authority,
   recommended set and reason, one-artifact sufficiency result, decision,
@@ -443,6 +478,9 @@ The Chief Editor may decide:
 - risk mode, process depth, and active client profile;
 - whether Task Need Recognition is needed and whether each recommendation is
   accepted, rejected, narrowed, overridden, or returned for evidence;
+- the task-local Product Intent Review mode, bounded `limited` focus, evidence
+  depth, product-first production consequence, reroute trigger, and whether a
+  material gap overrides an earlier `not_needed` recommendation;
 - role routing and next owner;
 - material runtime stream boundaries, stable task-local IDs, and coordination
   relations when actual execution uses multiple streams;
@@ -480,6 +518,15 @@ The Chief Editor may decide:
   review focus, and reroute triggers inside the Editorial Decision Frame, with
   rejected alternatives kept to short route/reason pairs and the selected
   route justified by the reader journey rather than subject order alone;
+- for active `limited` or `full` Product Intent Review, the compact Editorial
+  Decision Frame product-intent block: mode and focus, product finding, one main
+  gap, evidence boundary, production consequence and permission, owner decision
+  required, and reconsideration trigger; detailed model, checks, alternatives,
+  validation design, and research narrative stay in the analytical artifact;
+- the active Product Intent Review reader job, selected output form, required
+  density/traceability, whether the result is embedded or standalone, and the
+  user-facing order/priority contract; source length and capability name do not
+  justify a longer output or a new deliverable profile;
 - whether current evidence is sufficient to continue orchestration;
 - whether weak evidence should lead to `ask`, `constrain`, `proceed`, or
   `block`;
@@ -502,6 +549,13 @@ The Chief Editor may decide:
 The Chief Editor must not decide:
 
 - specialist research conclusions;
+- the Product Intent Review analytical finding or the product owner's business,
+  launch, investment, intervention-class, or stop decision; Chief Editor also
+  must not perform the full Product Intent Review analysis in place of its
+  assigned analytical owner;
+- treat `Proceed`, `Proceed with constraints`, `Validate before production`,
+  `Reroute`, or `Stop / no-build recommendation` as an operational review
+  verdict, task status, lifecycle stage, or final product-owner decision;
 - draft wording or final wording;
 - independent review outcome;
 - publication or human approval unless approval evidence is explicitly recorded.
@@ -517,6 +571,8 @@ Stop and escalate or mark blocked when:
 
 - risk mode is `unknown` before production;
 - Preflight Gate outcome is `ask` or `block` and production would start anyway;
+- Product Intent Review mode is `limited` or `full` and deep production would
+  start before the recorded material question or bounded finding is resolved;
 - required input, pipeline, client-profile source, or KB context is missing;
 - review is absent, non-independent, or not tied to the reviewed artifact;
 - high-governance evidence or approval requirements are incomplete;

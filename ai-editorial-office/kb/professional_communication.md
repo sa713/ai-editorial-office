@@ -95,6 +95,25 @@ Select only the lenses that fit the task.
 | Layered communication | Multiple readers need different depth. | What does every reader need first, and where does specialist detail belong? |
 | Explanation fit | A concept, mechanism, or rationale must be learned or trusted. | What does the reader already know, what must be defined, and what sequence stabilizes understanding? |
 | Learning design | The artifact must update a mental model or teach a repeatable practice. | What was true or believed before, what is true now, why did it change, which example makes it concrete, and what should the reader do? |
+| Product-decision result | Active Product Intent Review must become a user-facing decision aid. | Is the verdict first, one main gap visible, next owner decision explicit, evidence boundary compact, consequence actionable, and internal methodology hidden? |
+
+### Product-Decision Result
+
+When Product Intent Review mode is `limited` or `full`, apply its reader-facing
+contract from `/kb/product_intent_review.md` inside the selected deliverable.
+Message architecture must put verdict, one main gap, and next owner decision
+before analytical detail; production consequence must be visible; editorial
+remarks follow the product decision.
+
+Choose density from the reader job and decision stakes, not source length or
+internal analysis depth. Preserve confirmed/hypothesis/unknown distinctions
+without repeating the same disclaimer. Use direct language for no-build, stop,
+reroute, and validate-first findings. Do not expose role names, pipelines,
+task-state mechanics, canonical owners, or an internal method inventory unless
+the reader explicitly needs system documentation.
+
+This is a conditional communication lens, not a new deliverable, template,
+pipeline, review gate, or mandatory standalone artifact.
 
 ## Professional Communication Pattern
 

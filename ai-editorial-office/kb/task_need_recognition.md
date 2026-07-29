@@ -47,6 +47,10 @@ replaces Chief Editor judgment.
   hypotheses, contradiction, disconfirmation, and sufficiency moves.
 - Professional Analysis owns analytical product shape, synthesis, options,
   implications, judgment, and recommendation quality.
+- Product Intent Review owns the product-intent signal meanings, depth modes,
+  incomplete-data boundaries, and product-first consequences defined in
+  `/kb/product_intent_review.md`. Recognition may recommend a mode but does not
+  activate or perform that lens.
 - Professional Communication owns message architecture, explanation fit,
   density, actionability, and caveat-preserving reader transfer.
 - Architecture Review owns architectural drivers, scenarios, tradeoffs,
@@ -97,8 +101,91 @@ Start from available evidence, not a keyword list:
 | Domain materiality | domain-specific assets, terms, risks, controls, models, delivery surfaces | likely primary/adjacent Domain Packs or task-specific research |
 | Communication transfer | executive decision, recommendation/ask, technical explanation, stakeholder memo, dense evidence | likely Professional Communication |
 | Analytical product | assessment, synthesis, options, implications, judgment, recommendation | likely Professional Analysis |
+| Product intent | new or materially changed intervention, intended audience change, unapproved solution class, causal hypothesis, or material deliverable/intervention inseparability | advisory Product Intent Review mode and focus for Chief Editor decision |
 | Ambiguity and conflict | missing audience/output, mixed intents, incompatible constraints, contradictory evidence | clarification, constrain, uncertainty, or decomposition recommendation |
 | Task structure | divergent deliverables, owners, evidence, risks, domains, validation paths, or sequencing dependencies | split, sequence, or keep-coherent recommendation |
+
+## Product Intent Review Recommendation
+
+Use the Product Intent Review owner at `/kb/product_intent_review.md` for the
+meaning of the lens and its three depth modes. Task Need Recognition owns only
+the advisory signal-to-recommendation view described here.
+
+### Observable signal families
+
+Inspect the request and supplied material for several mutually reinforcing
+signals:
+
+- a new or materially changed product, service, educational activity, program,
+  process, event, communication mechanism, user scenario, tool, or other
+  intervention;
+- an intended change in audience behavior, decision, experience, capability,
+  state, habit, or work result;
+- an unapproved solution class, concept, format, or product/no-build decision;
+- a material causal hypothesis that the proposed interaction will produce the
+  intended change;
+- a deliverable whose usefulness cannot be assessed without assessing the
+  underlying intervention intent.
+
+The presence of an object is not activation. A single keyword, document type,
+deliverable name, `is_product` boolean, or file size is not sufficient.
+
+### Negative evidence
+
+Give real weight to evidence that narrows or removes the need:
+
+- the user explicitly requests only proofreading, translation, shortening,
+  formatting, or tone change;
+- the concept and product behavior are already approved;
+- product/intervention analysis is outside scope or product-behavior change is
+  forbidden;
+- the task concerns local text and product logic will not affect usefulness;
+- the user requires preservation of the current solution;
+- the object appears only as context.
+
+Negative evidence can outweigh topic/product signals. Do not let words such as
+`course`, `product`, `service`, `campaign`, or `event` override an explicit
+scope boundary.
+
+### Advisory modes
+
+Recommend exactly one existing Product Intent Review depth mode:
+
+| Recommendation | Evidence pattern | Advisory consequence |
+| --- | --- | --- |
+| `not_needed` | Local editorial work, approved concept, out-of-scope product logic, immaterial product/deliverable distinction, or negative evidence stronger than intent signals. | Preserve the ordinary compact route; no owner loading is recommended. |
+| `limited` | One material product-intent question could change the editorial decision, while the remaining logic is mostly set or a full review would be disproportionate. | Name one bounded focus such as mechanism, basis, or fit before deep production. |
+| `full` | A new/unapproved concept, create/no-build question, several missing intent elements, material causal hypothesis, potentially wrong solution class, or need to compare intervention classes. | Recommend product-first resolution before a detailed production contract. |
+
+Uncertainty does not create a fourth mode. Select the best-supported available
+mode and express uncertainty in rationale and confidence. Preserve unknowns,
+do not force the seven-element model, and recommend bounded research only when
+it could resolve the named material question.
+
+### Multi-signal decision discipline
+
+Base the recommendation on the combined evidence from:
+
+- intended outcome;
+- work surface;
+- decision state;
+- scope and explicit exclusions;
+- consequence of getting the intervention intent wrong;
+- ambiguity and evidence state;
+- negative evidence.
+
+For `limited`, propose one focus. For `full`, state the product-first
+consequence. Always state that Chief Editor may accept, narrow, reject, or
+override the recommendation.
+
+Task Need Recognition must not:
+
+- activate Product Intent Review;
+- choose the final task-local mode;
+- execute the seven-element model or four checks;
+- ask a universal seven-question brief;
+- propose product alternatives or act as product owner;
+- block production automatically only because product data is incomplete.
 
 ## Outcome-First Deliverable Recommendation
 
@@ -383,6 +470,9 @@ Record the smallest useful view in `brief.md`, `orchestration_plan.md`, or
 - ambiguity, contradiction, or missing information:
 - decomposition recommendation:
 - confidence and negative evidence:
+- Product Intent Review signals and negative evidence, when material:
+- Product Intent Review advisory recommendation: not_needed / limited / full
+- Product Intent Review rationale, confidence, and proposed focus:
 - explicit non-decision:
 - Chief Editor deliverable decision: respect_requested / select_recommended /
   ask_before_change / constrain_with_explanation
@@ -412,8 +502,8 @@ material. For compact work, combine or omit fields that add no decision value.
 
 | Role | Responsibility |
 | --- | --- |
-| Intake Agent | Capture observed request evidence, requested deliverable, format authority, and the initial advisory single/set view when material; do not select the deliverable set, route, or activate. |
-| Chief Editor | Challenge evidence, accept/reject/narrow recommendations, decide whether one artifact is sufficient, select the minimal deliverable set before the pipeline, make every routing/preflight/activation/depth/decomposition decision, and record the result. |
+| Intake Agent | Capture observed request evidence, requested deliverable, format authority, initial advisory single/set view, Product Intent Review signals, and negative evidence when material; do not select the deliverable set, route, Product Intent Review mode, or activation. |
+| Chief Editor | Challenge evidence, accept/reject/narrow/override recommendations, decide whether one artifact is sufficient, select the minimal deliverable set before the pipeline, make every routing/preflight/activation/depth/decomposition decision including the task-local Product Intent Review mode, and record the result. |
 | Research Agent | Verify missing domain/current-state evidence when assigned; do not retroactively present research as an intake decision. |
 | Writer Agent / UX Writer | Produce only assigned selected-set members in recorded order and dependency boundaries; flag new evidence that invalidates the recognition assumptions. |
 | Review Agent | When downstream scope materially depends on recognition, challenge evidence, negative cases, set minimality and sufficiency, member purpose/dependency/priority, proportionality, uncertainty, owner boundaries, and non-decision. |
@@ -447,6 +537,13 @@ When recognition materially affected the route, Review Agent may ask:
 - Are material secondary aspects preserved without forcing one class?
 - Are capability and pack recommendations tied to their actual owner criteria?
 - Is negative evidence visible where it prevents unnecessary activation?
+- Does a Product Intent Review recommendation use several material signals
+  rather than a keyword, deliverable type, boolean, or document size?
+- Is `not_needed`, `limited`, or `full` only an advisory depth recommendation,
+  separate from Chief Editor decision and task status?
+- Does `limited` name one bounded focus and does `full` state only a
+  product-first planning consequence rather than performing the analysis?
+- Can the task remain compact when negative evidence makes the lens immaterial?
 - Are research, evidence, and review recommendations proportionate?
 - Is risk/consequence advice tied to actual exposure, sensitivity,
   reversibility, uncertainty, or wrong-result cost rather than topic words?
@@ -464,6 +561,10 @@ Stop, narrow, or return to Chief Editor when:
 - the request cannot be distinguished from a different plausible task without
   material clarification;
 - a recommendation depends only on keywords or topic names;
+- Product Intent Review is being activated from one keyword, object type,
+  deliverable name, boolean, or document size;
+- negative evidence is ignored or a `limited` focus is expanded into a
+  mandatory full product brief;
 - requested, recommended, and selected deliverable sets have been silently
   merged;
 - an explicit requested format would be replaced or expanded with companions
@@ -485,6 +586,8 @@ Task Need Recognition does not:
 
 - create automatic routing, classification, capability activation, Domain Pack
   activation, review level, research level, or planning;
+- perform Product Intent Review analysis, activate the capability, choose its
+  final mode, require its seven elements at intake, or make a product decision;
 - silently override or expand an explicit requested deliverable, treat a
   companion recommendation as user consent, or start production automatically;
 - create a role, pipeline, lifecycle stage, status, gate, task taxonomy,

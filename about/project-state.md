@@ -38,6 +38,14 @@ active.
 - Professional Analysis release candidate with structured interpretation,
   synthesis, recommendation, implication, risk, uncertainty, and
   decision-ready analytical communication lenses.
+- Product Intent Review initiative completed through Steps 0–7: the
+  conditionally activated specialized Professional Analysis lens is
+  implemented, documented, and end-to-end evaluated across 32 cases. Step 6
+  found no confirmed production defects. Its known evidence, expert-judgment,
+  minimum-validation, domain-coverage, scalability, and product-owner
+  limitations remain explicit in `/kb/product_intent_review.md`. This does not
+  accept the broader Professional Analysis release candidate; further Product
+  Intent development requires a separately authorized initiative.
 - Professional Communication release candidate with message architecture,
   recommendation presentation, explanation fit, technical communication,
   information density, actionability, reader-path, and caveat-preserving
@@ -131,7 +139,9 @@ Intelligence layer while the Project Lead considers the Project v1.0 baseline.
 No future stage is active.
 
 Engineering Review and Professional Communication are complete. Professional
-Analysis remains an open release candidate. Knowledge Evolution is complete.
+Analysis remains an open release candidate. Product Intent Review is
+implemented, evaluated, documented, and available for conditional activation;
+Steps 0–7 are complete. Knowledge Evolution is complete.
 
 S4.R1 through S4.R5 are accepted and complete. Stage 4 is complete. Stage 5 is
 accepted and complete. S5.R1 through S5.R5 are accepted and `Done`.
@@ -161,7 +171,7 @@ Canonical production files remain under `ai-editorial-office/` unless a file
 explicitly says otherwise.
 
 ## Architecture principles
-Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/task_need_recognition.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, `/kb/editorial_learning_framework.md`, `/kb/domain_knowledge_pack_standard.md`, and the accepted Domain Knowledge Packs for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
+Current architecture principles are owned by the canonical files named in `AGENTS.md`: `AGENTS.md`, `/kb/task_object_model.md`, `/kb/capability_registry.md`, `/kb/shared_lifecycle_kernel.md`, `/kb/editorial_evidence_framework.md`, `/kb/analytical_reasoning.md`, `/kb/professional_analysis.md`, `/kb/product_intent_review.md`, `/kb/professional_communication.md`, `/kb/architecture_review.md`, `/kb/engineering_review.md`, `/kb/task_need_recognition.md`, `/kb/editorial_failure_modes.md`, `/kb/editorial_planning_framework.md`, `/kb/audience_outcome_alignment.md`, `/kb/editorial_quality_attributes.md`, `/kb/editorial_learning_framework.md`, `/kb/domain_knowledge_pack_standard.md`, and the accepted Domain Knowledge Packs for their respective areas. Project state may record active constraints, but permanent invariants should be changed in the canonical owner first.
 
 ## Default operating workflow
 Shared lifecycle stages, gates, artifact responsibilities, expansion triggers, human approval boundary, and stage context contracts are owned by `/kb/shared_lifecycle_kernel.md`. `AGENTS.md` still owns governance invariants and review-gate authority. Current default remains intake -> chief_editor orchestration -> research if needed -> writing or ux-writing -> review -> finalization -> chief_editor final governance decision.
@@ -180,6 +190,8 @@ Follow the active roadmap stage:
   open Professional Analysis release candidate; do not start a future stage
   automatically.
 - Stage 5 status: accepted and complete; S5.R1 through S5.R5 `Done`.
+- Product Intent Review initiative: Steps 0–7 complete; any further capability
+  development requires a separate explicit initiative.
 
 Keep `/about` aligned only when a release requires memory sync. Do not sync it
 solely because `ROADMAP.md` changed.

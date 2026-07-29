@@ -1,0 +1,25 @@
+{
+  "mode": "limited",
+  "analytical_owner": "research_agent",
+  "focus": "mechanism",
+  "analysis": {
+    "product_finding": "The mechanism is unconfirmed and effect claims are not permitted.",
+    "evidence_boundary": "Problem evidence exists; no causal or behavioral mechanism evidence exists.",
+    "main_gap": "Unsupported mechanism.",
+    "unknowns_hidden": false,
+    "focus_checked": true,
+    "scope_overreach": false,
+    "validation_disposition": "not_needed",
+    "validation_not_needed_reason": "The current review target is production-boundary compliance, not a new validation design."
+  },
+  "production": {
+    "consequence": "Proceed with constraints",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": true
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "changes_requested"
+  }
+}

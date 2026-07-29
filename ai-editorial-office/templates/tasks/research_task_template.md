@@ -118,6 +118,17 @@ Conditional files:
 ## implications for downstream work
 
 ## do-not-say list
+
+## Product Intent Review, only when mode is limited or full
+
+- Mode and bounded focus:
+- Supported product-intent elements:
+- Product checks in scope:
+- Confirmed evidence:
+- Assumptions and hypotheses:
+- Unknowns and contradictions:
+- Disconfirming evidence:
+- Evidence sufficient for analytical owner: yes/no and why
 ```
 
 ## sources.md scaffold

@@ -66,6 +66,17 @@ profiles from `/kb/deliverables/` provide comparison evidence without acting as
 templates or production rules. This is part of the
 existing review gate, not a new routing or review gate.
 
+When Product Intent Review mode is `limited` or `full`, review applies
+`/kb/product_intent_review.md` as a conditional dimension inside this same gate.
+It challenges activation and negative evidence, proportional depth, analysis
+quality, one main product gap, product finding, evidence boundary, Chief Editor
+production consequence, production-boundary compliance, minimum validation
+when used, explicit existing analytical-owner assignment, and product-owner
+authority. The product finding may recommend
+no-build and still receive `approved`; the operational outcome remains exactly
+`approved`, `changes_requested`, or `blocked`. No Product Intent Review verdict,
+second gate, or separate pipeline is created.
+
 When reviewed work shows wrong-task drift, weak evidence, hidden assumptions,
 scope drift, role confusion, over-polishing, under-execution, implementation
 task dilution, premature finalization, or review-gate bypass, review applies
@@ -393,6 +404,8 @@ Compact review minimum:
 - compact Task Need Recognition check when reviewed scope depends materially on
   its task-type, capability, Domain Pack, depth, significance, ambiguity, or
   decomposition recommendations;
+- compact Product Intent Review check when mode is `limited` or `full`; omit it
+  for `not_needed` or absent mode;
 - compact failure-mode check when warning signs are visible;
 - compact option-evaluation check when the reviewed work depends on a
   non-trivial selected approach;
@@ -460,6 +473,12 @@ It does not restate detailed review logic. Review Agent owns:
   purpose/dependency/production priority, silent explicit-scope override,
   insufficient companion recommendation, pipeline selection before the set
   decision, owner override, and recommendations treated as decisions;
+- Product Intent Review challenge, including keyword-only or missed activation,
+  missing negative evidence, disproportionate depth, `limited` overreach,
+  incomplete or falsely certain `full` analysis, weak gap priority,
+  unsupported finding, finding/consequence mismatch, weak minimum validation,
+  polished boundary violations, finding/verdict conflation, and product-owner
+  substitution;
 - Domain Knowledge Pack challenge, including weak activation, unsupported
   source register use, boundary drift, stale-if trigger neglect, canonical
   owner override, and misuse as policy, capability ownership, role, pipeline,
@@ -493,6 +512,7 @@ Quality gates are mandatory and artifact-backed.
 | Companion Pass gate | Reader-facing work is natural and concrete enough for the intended reader while preserving precision, evidence, caveats, boundaries, and traceability | taxonomy dump, synthetic expert performance, avoidable academic distance, unsupported friendliness, precision loss, or substantive repair deferred to Final Editor |
 | Professional-communication gate | Communication transfer is sufficient when message architecture, recommendation presentation, explanation fit, technical communication, information density, actionability, or caveat-preserving reader transfer is material | buried main point, wrong density, unclear ask or next action, hidden caveat, misleading compression, weak explanation, technical ambiguity, or unreviewable reader path |
 | Task Need Recognition gate | When downstream scope materially depends on recognition, observed evidence, recommendations, negative evidence, uncertainty, decomposition basis, explicit non-decision, and Chief Editor decision are distinct, proportionate, and owner-safe; when deliverable choice is material, requested deliverable, recommended set, and selected set are distinct, format authority is visible, one-artifact sufficiency was tested, the selected set is minimal and sufficient, every member has a distinct purpose/dependency/production priority, removable and missing companions were challenged, explicit user intent is respected, any alternative or unresolved mismatch is explained, and the primary pipeline was chosen afterward for the selected set | keyword-only or forced type, hidden ambiguity, missing negative evidence, unsupported split, score/threshold authority, automatic routing/activation/depth/production, Chief Editor decision absent, silent format substitution or expansion, requested/recommended/selected conflation, unjustified companion, smallest-but-insufficient artifact, non-minimal set, purposeless or duplicate member, missing necessary companion, missing dependency/priority, missing selected set, or pipeline-first routing |
+| Product Intent Review dimension | When mode is `limited` or `full`, activation/depth, mode scope, evidence boundary, one main gap, product finding, production consequence, production-boundary compliance, validation when used, owner decision boundary, and finding/verdict separation are independently reviewable inside the existing review gate; `limited` stays bounded and `full` covers the available model and four checks | keyword-only/missed activation, scope overreach, hidden unknowns, unsupported finding, no main gap, consequence mismatch, weak validation, product gap hidden by polish, product-owner substitution, or a product finding used as an operational verdict |
 | Quality-attribute gate | Priority quality attributes are sufficient for task risk and outcome | optimized for wrong quality, unresolved tradeoff, lost precision/actionability/traceability, or unreviewable artifact |
 | Knowledge Evolution gate | Learning, pattern, canon, stale-knowledge, correction/retirement, memory-disposition, Memory Hygiene Intelligence, and advisory Evaluation Signal claims are evidenced, scoped, owned, non-duplicative, proportionate, and reviewable; feedback/outcome claims preserve classification vs disposition, affected area, applicability, contradictions, bounded action, and non-promotion; memory claims preserve canonical source, represented fact, materiality, purpose/sensitivity/value, exact-copy or compact-summary branch, correction/compression/retirement/omission/deferral/no-sync rationale, branch validation, unique context, bounded growth, and non-automation; signal views preserve decision question, comparison window, denominator/exposure when material, missing cases, alternatives, confidence, qualitative judgment, and explicit non-decision | task-local note promoted without evidence, feedback classification treated as automatic learning, no owner, duplicate rule, privacy risk, `/about` treated as canon, stale guidance handled by silent deletion, exact copy edited independently, misleading summary compression, sensitive/task-local propagation, context-erasing consolidation/retirement, unchecked no-sync, automatic memory write/disposition, activity/activation treated as value, unlike comparisons, hidden contradictions, score/KPI/target/rank/maturity use, individual monitoring, or automatic action |
 | Domain Knowledge Pack gate | Active pack use is justified, sourced, bounded, current enough, and subordinate to canonical owners; claimed benefit or burden also traces to actual sections used, task effect evidence, confidence, complexity cost, and non-promotion when material | weak activation, missing source register support, boundary drift, stale-if trigger ignored, activation treated as proof of value, unsupported effect claim, pack treated as policy/capability/role/pipeline/gate, or mandatory artifact creep |
@@ -513,6 +533,10 @@ allow the review stage to close, and the review-specific packet is current:
 - when the reviewed work was governed by Problem Hypothesis and/or Editorial
   Decision Frame, `review.md` includes Editorial Challenge Lens or a compact
   statement that route-validity assumptions still hold;
+- when Product Intent Review mode is `limited` or `full`, `review.md` traces
+  mode/scope, product finding, evidence boundary, one main gap, production
+  consequence, independent challenge, operational verdict, and owner decision
+  boundary without repeating the full analysis;
 - when Reader Review is material, `review.md` records all applicable Reader
   Review criteria, evidence, reader consequences, and bounded repair routing;
 - when deliverable choice is material, `review.md` records requested versus

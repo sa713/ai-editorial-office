@@ -50,6 +50,12 @@ READER_OUTCOME_RE = re.compile(
 )
 PLANNED_RUNTIME_RE = re.compile(r"(?im)^\s*##\s+planned runtime topology\s*$")
 ACTUAL_RUNTIME_RE = re.compile(r"(?im)^\s*##\s+actual runtime execution\s*$")
+PRODUCT_INTENT_MODE_RE = re.compile(
+    r"(?im)^\s*(?:[-*]\s*)?(?:product\s+intent\s+review\s+mode|"
+    r"chief\s+editor\s+product\s+intent\s+review\s+mode\s+decision)"
+    r"\s*:\s*(.+?)\s*$"
+)
+PRODUCT_INTENT_MODES = {"not_needed", "limited", "full"}
 
 ROLE_FILES: dict[str, tuple[str, ...]] = {
     "writer": (
@@ -159,6 +165,13 @@ def extract_labeled_value(text: str, pattern: re.Pattern[str]) -> str | None:
         if value:
             return value
     return None
+
+
+def extract_product_intent_mode(text: str) -> str | None:
+    value = extract_labeled_value(text, PRODUCT_INTENT_MODE_RE)
+    if value is None:
+        return None
+    return normalize_value(value)
 
 
 def display_path(path: Path, task_dir: Path) -> str:
@@ -435,6 +448,50 @@ def generate_pack(task_dir: Path, role: str) -> tuple[dict[str, list[ReadItem]],
             )
             known_texts.append(read_text(path))
             known_files.append(path)
+
+    manifest_product_intent_mode = extract_product_intent_mode(manifest_text)
+    orchestration_product_intent_mode = extract_product_intent_mode(orchestration_text)
+    if (
+        manifest_product_intent_mode is not None
+        and orchestration_product_intent_mode is not None
+        and manifest_product_intent_mode != orchestration_product_intent_mode
+    ):
+        warnings.append(
+            "Product Intent Review mode differs between task-manifest.md and "
+            "orchestration_plan.md; task-manifest.md is the restart anchor."
+        )
+
+    product_intent_mode = (
+        manifest_product_intent_mode or orchestration_product_intent_mode
+    )
+    if product_intent_mode in {"limited", "full"}:
+        product_intent_owner = KB_DIR / "product_intent_review.md"
+        if product_intent_owner.is_file():
+            add_item(
+                sections,
+                seen,
+                "Conditional",
+                product_intent_owner,
+                task_dir,
+                "explicit Chief Editor Product Intent Review mode "
+                f"`{product_intent_mode}`; conditional capability owner",
+            )
+        else:
+            warnings.append(
+                "Product Intent Review mode is active but "
+                "kb/product_intent_review.md was not found."
+            )
+    elif product_intent_mode in {"not_needed", None}:
+        pass
+    elif product_intent_mode not in PRODUCT_INTENT_MODES:
+        warnings.append(
+            f"Unsupported Product Intent Review mode `{product_intent_mode}`; "
+            "expected not_needed, limited, or full."
+        )
+        not_included.append(
+            "`kb/product_intent_review.md` — unsupported Product Intent Review "
+            "mode does not activate conditional loading."
+        )
 
     add_item(
         sections,

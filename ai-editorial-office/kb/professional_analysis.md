@@ -54,9 +54,16 @@ judgment.
 - Quality attributes own task-specific quality priorities and tradeoffs.
 - Architecture Review owns design-fitness assessment.
 - Engineering Review owns implementation/change-safety assessment.
+- Product Intent Review owns the conditional, evidence-bounded product-intent
+  lens defined in `/kb/product_intent_review.md`. It is a narrow specialized
+  lens inside the Professional Analysis family, not an expansion of this
+  general contract.
 
 Professional Analysis may consume these capabilities, but it does not replace
 or become their owner.
+
+This relationship note does not accept, release, broaden, or finalize the
+current Professional Analysis release candidate.
 
 ## When To Use
 

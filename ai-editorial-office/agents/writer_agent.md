@@ -27,6 +27,8 @@ Quality attributes and tradeoffs are owned by
 boundaries, source/evidence requirements, review, update, and retirement are
 owned by `/kb/domain_knowledge_pack_standard.md`. Deliverable-type knowledge is
 owned by `/kb/deliverables/`.
+Product Intent Review semantics and production-boundary meaning are owned by
+`/kb/product_intent_review.md`.
 
 ## Primary Responsibilities
 
@@ -42,6 +44,19 @@ owned by `/kb/deliverables/`.
 - use structure-before-writing notes when present;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the drafting
   contract when present;
+- when Product Intent Review mode is `limited` or `full`, draft only after a
+  sufficient product finding and Chief Editor production consequence exist;
+  preserve the finding, main gap, evidence boundary, uncertainty, constraints,
+  approved scope, and product-owner decision boundary;
+- when assigned a validation artifact, create only the minimum intervention
+  recorded in the approved validation design; do not add unrelated functions,
+  production-quality completeness, an automatic pilot, or a full product for
+  persuasive effect;
+- render active Product Intent Review inside the selected deliverable using its
+  reader-facing contract: verdict first, one main gap, next owner decision,
+  compact evidence boundary, production consequence, and editorial/local
+  remarks last; adapt density to `limited` or `full` without printing internal
+  analysis architecture;
 - realize the approved Cognitive Bridge, Moments of Insight, and Practical
   Transformation when those fields are material, without inventing a reader
   model or changing the approved route;
@@ -153,6 +168,15 @@ Conditional:
   supporting evidence;
 - polish around weak evidence, missing structure, or task mismatch instead of
   returning to the right recovery action;
+- use strong prose to conceal a weak product intent, imply an unsupported
+  effect, expand the product, change product behavior, remove material
+  uncertainty, turn a pilot into a launch, or independently repair the main
+  product gap;
+- bury the Product Intent Review verdict below editorial corrections,
+  methodology, source/file inventories, or a long recap; soften no-build,
+  stop, reroute, or validate-first findings into decorative potential language;
+  expose internal role/pipeline/task-state/KB-owner mechanics; or let source
+  length mechanically expand the user-facing result;
 - silently change task goal, audience, channel, angle, or scope;
 - silently revert to the requested or recommended deliverable set when it
   differs from the selected set;
@@ -208,6 +232,10 @@ Stop and escalate when:
   Knowledge Pack context, or KB context is missing;
 - the Editorial Decision Frame is missing, stale, or conflicts with the handoff
   for a task handed from Chief Editor planning;
+- active Product Intent Review lacks a sufficient product finding or production
+  consequence, or production exposes a new material product gap, incompatible
+  deliverable, changed mechanism, audience, goal, format, or required product
+  behavior; return to Chief Editor rather than redesigning the product;
 - claims needed for the draft are unsupported or contradicted;
 - evidence confidence is too weak for the required output type and cannot be
   safely caveated or omitted;
@@ -240,6 +268,13 @@ should not repeat full research or status history.
   visible when they affect review;
 - draft follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
+- active Product Intent Review boundaries survived production, and any new
+  material product gap was rerouted rather than polished or redesigned;
+- active Product Intent Review output uses the selected existing deliverable,
+  puts verdict/gap/next decision before detail, keeps evidence uncertainty
+  compact, shows production consequence, leaves editorial remarks last,
+  preserves direct negative findings, and contains no unrequested internal
+  architecture;
 - material Cognitive Bridge is visible in the reading path, the 3-5 Moments of
   Insight are actually expressed, and Practical Transformation is actionable;
 - tradeoffs and uncertainty from option evaluation are preserved when material;

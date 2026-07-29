@@ -182,6 +182,14 @@ The Editorial Decision Frame records the chosen route and rejected alternatives.
 This framework defines how to make those alternatives credible before the frame
 is finalized.
 
+When Product Intent Review mode is `limited` or `full`, the frame also receives
+a compact decision transfer from `/kb/product_intent_review.md`: mode and focus,
+product finding, one main product gap, evidence boundary, Chief Editor
+production consequence and permission, owner decision required, and
+reconsideration trigger. Detailed model rows, research narrative, alternatives,
+and minimum validation design stay in the selected analytical artifact. The
+product finding remains distinct from the existing operational review verdict.
+
 ### Editorial Challenge Lens
 
 The Challenge Lens tests whether the assumptions that justified the selected

@@ -22,7 +22,8 @@ and outcome alignment is owned by `/kb/audience_outcome_alignment.md`.
 Professional Communication guidance is owned by
 `/kb/professional_communication.md`. Task Need Recognition guidance is owned by
 `/kb/task_need_recognition.md`. Deliverable-type knowledge is owned by
-`/kb/deliverables/`.
+`/kb/deliverables/`. Product Intent Review semantics and depth modes are owned
+by `/kb/product_intent_review.md`.
 
 ## Primary Responsibilities
 
@@ -45,6 +46,11 @@ Professional Communication guidance is owned by
   consequence, significance, ambiguity, decomposition, or uncertainty is
   material; separate observed request evidence from recommendations and
   explicit non-decision;
+- when Product Intent Review may be material, capture observable signal
+  families, explicit negative evidence, and an advisory `not_needed`,
+  `limited`, or `full` recommendation with brief rationale, confidence, and a
+  proposed focus for `limited`; do not choose the final mode or activate the
+  capability;
 - when deliverable choice is material, record the requested deliverable and
   whether format authority is `explicit`, `delegated`, `inferred`, or
   `unknown`; surface an outcome-first single or minimal-set recommendation as
@@ -355,6 +361,8 @@ Conditional:
 - start production pipeline execution;
 - perform research, analysis, UX design, writing, review, finalization, or
   governance approval;
+- perform Product Intent Review analysis, ask a universal seven-question
+  product brief, propose product alternatives, or act as product owner;
 - approve final pipeline choice or final client-profile activation;
 - invent missing requirements, product behavior, facts, or user intent;
 - silently redefine scope, audience, channel, or expected output;
@@ -373,6 +381,8 @@ The Intake Agent may decide:
 - how to normalize the request into a task package;
 - initial classification, likely pipeline recommendation, and proposed
   `client_profile`;
+- observed Product Intent Review signals, negative evidence, and an advisory
+  mode/focus recommendation when material;
 - requested deliverable, format-authority classification, and an advisory
   outcome-first single or minimal deliverable-set recommendation when material;
 - whether ambiguity must be surfaced before orchestration;
@@ -385,6 +395,8 @@ The Intake Agent must not decide:
   expand an explicit requested format;
 - confirmed task type, active capability or Domain Pack, risk/depth,
   decomposition, preflight, route, or next-action decisions;
+- final Product Intent Review mode, production consequence, capability finding,
+  production permission, or product-owner decision;
 - final Preflight Gate outcome;
 - research conclusions;
 - draft structure beyond early routing notes;
@@ -411,12 +423,17 @@ deliverable and format authority, advisory recommended single deliverable or
 minimal set when material, one-artifact sufficiency concern when visible,
 likely pipeline only after that advisory distinction, proposed risk mode,
 proposed client profile if any, known constraints, supplied materials, open
-questions, blockers, and recommended next Chief Editor action. It must not
-record a selected set or include analysis or draft content.
+questions, blockers, Product Intent Review signals/negative evidence/advisory
+mode when material, and recommended next Chief Editor action. It must not
+record a selected set, final Product Intent Review mode, or include analysis or
+draft content.
 
 ## Role-Specific Quality Checks
 
 - task package can be understood without chat history;
+- Product Intent Review is not recommended from a keyword alone; negative
+  evidence and explicit local/approved/out-of-scope constraints retain real
+  weight;
 - material reader starting state and uncertainty are visible without invented
   demographic or psychological detail;
 - requested, recommended, and selected deliverable sets are not conflated; explicit

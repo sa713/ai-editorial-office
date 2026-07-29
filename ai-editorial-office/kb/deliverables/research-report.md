@@ -29,6 +29,16 @@ the research.
 Research question and scope, method/source boundary, findings, contradictions,
 analysis, confidence and limitations, implications, and open questions.
 
+When Product Intent Review is active because evidence quality is the reader's
+central question, retain source/method traceability but provide a concise
+product verdict, one main gap, next owner decision, and evidence boundary before
+the detailed evidence path. Keep the conclusion calibrated to the sources and
+do not let method detail or repeated uncertainty bury the decision.
+When minimum validation is material, show why the critical hypothesis and
+method fit the next decision, distinguish the observed signal from inference,
+and preserve threshold basis, continue/reconsider conditions, and limits.
+Report `not_needed` or `insufficient` directly rather than manufacturing a test.
+
 ## Strengths
 
 - strong evidence traceability;

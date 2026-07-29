@@ -9,6 +9,11 @@ document generator, role, classifier, or automatic packaging rule. A catalogue
 entry describes editorial fitness; it does not authorize production. Missing
 catalogue coverage does not forbid a task-specific deliverable.
 
+Capability names do not create deliverable profiles. Product Intent Review, for
+example, should normally use `Report`, `Research Report`, `Decision Memo`, or an
+embedded block according to the reader's job. A separately named task-local
+report may be selected when needed without adding a catalogue profile.
+
 ## Ownership And Use
 
 - This directory owns deliverable-type knowledge: purpose, fit, limitations,

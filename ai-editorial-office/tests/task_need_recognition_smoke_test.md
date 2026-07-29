@@ -6,6 +6,12 @@ Release: `S5.R4 - Task Need Recognition`
 
 Status: passed
 
+Product Intent Review recommendation is additionally covered by
+`product_intent_review_routing_smoke_test.md`. Its negative, limited, full,
+ambiguous, keyword-trap, override, and compact-path cases apply the same
+evidence-first model: Task Need Recognition recommends, Chief Editor decides,
+and the capability never activates itself.
+
 ## Purpose
 
 Validate the bounded advisory recognition contract against ten representative
@@ -477,6 +483,22 @@ independent review.
 ### Result
 
 Pass. Outcome and work surface override keyword density.
+
+## Product Intent Review extension
+
+The ten detailed cases in `product_intent_review_routing_smoke_test.md` extend
+this contract with the following required classifications:
+
+| Evidence pattern | Expected advisory recommendation | Chief Editor consequence |
+| --- | --- | --- |
+| Proofreading, translation, shortening, tone, approved concept, or keyword-only context | `not_needed` | compact route; no owner loading |
+| One material causal/fit/basis question inside otherwise approved logic | `limited` | one named focus before deep production |
+| New/unapproved intervention, create/no-build decision, several material unknowns, or solution-class comparison | `full` | bounded finding before detailed production contract |
+| Ambiguous new activity with incomplete evidence | best-supported `limited` or `full`; uncertainty in rationale/confidence | no universal brief; Chief Editor may ask, constrain, or override |
+
+Pass requires negative evidence to outweigh topic words, Intake to remain
+advisory, and Chief Editor mode to remain distinct from task status, capability
+finding, production permission, and product-owner decision.
 
 ## Overall result
 

@@ -21,6 +21,8 @@ UX-writing failure modes and recovery patterns are owned by
 by `/kb/editorial_quality_attributes.md`. Professional Communication guidance
 is owned by `/kb/professional_communication.md`. Deliverable-type knowledge is
 owned by `/kb/deliverables/`.
+Product Intent Review semantics and production-boundary meaning are owned by
+`/kb/product_intent_review.md`.
 
 ## Primary Responsibilities
 
@@ -33,6 +35,13 @@ owned by `/kb/deliverables/`.
 - use structure-before-writing notes when provided;
 - use the Editorial Decision Frame in `orchestration_plan.md` as the UX writing
   contract when present;
+- when Product Intent Review mode is `limited` or `full`, work only after a
+  sufficient product finding and Chief Editor production consequence exist;
+  preserve the finding, main gap, evidence boundary, uncertainty, constraints,
+  approved scope, and product-owner decision boundary;
+- when assigned a validation interaction, create only the minimum scenario or
+  prototype recorded in the approved validation design; do not expand it into
+  a production-ready flow, automatic pilot, or full product experience;
 - create UX copy consistent with glossary, tone, UX guidance, active client
   profile, and product terminology;
 - shape language, detail, hierarchy, and omissions around user action, reader
@@ -118,6 +127,9 @@ Conditional:
   without supporting evidence;
 - use smoother wording to hide missing product behavior, unresolved state, or
   weak evidence;
+- repair weak product intent through copy, add an unsupported effect, expand
+  the product, change product behavior or flow, hide uncertainty, turn a pilot
+  into a launch, or independently close the main product gap;
 - produce polished microcopy that does not help the user understand state,
   choose an action, recover, or proceed;
 - optimize for brevity, elegance, or tone when it weakens correctness,
@@ -157,6 +169,10 @@ Stop and escalate when:
   preserve within the approved product context;
 - the Editorial Decision Frame is missing, stale, or conflicts with the handoff
   for a task handed from Chief Editor planning;
+- active Product Intent Review lacks a sufficient product finding or production
+  consequence, or UX production reveals a new material gap, incompatible
+  deliverable, changed audience/goal/format/mechanism, or a need to alter
+  product behavior; return to Chief Editor rather than redesigning the flow;
 - requested, recommended, selected deliverable-set, or selected pipeline
   records conflict in a way that could change the output;
 - copy would require inventing a product rule or feature;
@@ -188,6 +204,8 @@ strategy beyond the assigned UX copy.
   truth, clarity, actionability, or reviewability for polish;
 - copy follows the chosen editorial route and does not revive rejected
   alternatives without explanation;
+- active Product Intent Review boundaries survived UX production, and any new
+  material product gap was rerouted instead of hidden or redesigned;
 - Professional Communication choices are preserved when material to the UX
   artifact: action path, density, caveats, explanation fit, and next action;
 - terminology is consistent with glossary, active client profile, and product

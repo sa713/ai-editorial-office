@@ -47,6 +47,22 @@ For low-risk tasks with no factual, product, policy, numeric, legal, HR,
 security, regulatory, medical, financial, or reputational claims, Chief Editor
 may record a `no-research` rationale instead of creating research artifacts.
 
+When Product Intent Review mode is `limited` or `full` and research is
+assigned, this existing pipeline supplies evidence to the current analytical
+owner:
+
+- `limited` research stays within the named focus and only the material model
+  elements/checks;
+- `full` research reconstructs the available seven-element-model evidence and
+  supports all four product checks at depth proportionate to stakes, evidence
+  state, and reversibility;
+- both modes separate facts, assumptions, hypotheses, contradictions, and
+  unknowns; seek relevant disconfirming and causal/mechanism evidence; and do
+  not let Research Agent design the product or decide the product finding,
+  production consequence, or owner decision.
+
+This is not a Product Intent Review pipeline or separate research lifecycle.
+
 ## required agents
 
 Role legality and extension-role bounds are governed by `AGENTS.md`. This table
@@ -143,6 +159,10 @@ material claims require the full evidence set.
 | `claims_table.md` | claim-level validation is needed, claims will be reused downstream, or high-governance | writer_agent, review_agent | no material claims need downstream validation |
 | `open-questions.md` | real blocking or deferred questions, source gaps, unresolved decisions, or traceability needs exist | chief_editor, downstream owner | no questions, blockers, deferred decisions, or traceability gaps exist |
 | `research-notes.md` | methodology, caveats, or source limitations do not fit compactly in `research.md` | chief_editor, review_agent | `research.md` already captures the needed operational detail |
+
+When Product Intent Review is active, its evidence may live in `research.md`,
+another selected analytical artifact, or a compact evidence section. A
+standalone `product_intent_review.md` is never required by this pipeline.
 
 ### optional artifacts
 

@@ -1,0 +1,61 @@
+{
+  "mode": "full",
+  "analytical_owner": "research_agent",
+  "analysis": {
+    "product_finding": "A bounded pilot can test the critical mechanism before full production.",
+    "evidence_boundary": "Problem is confirmed; mechanism and adoption remain hypotheses.",
+    "main_gap": "Whether a guided practice prompt changes one target decision.",
+    "unknowns_hidden": false,
+    "model": {
+      "audience": "Confirmed bounded operator group",
+      "problem": "Confirmed recurring error",
+      "required_change": "Use one safer decision step",
+      "proposed_intervention": "Short guided practice pilot",
+      "mechanism": "Hypothesis: rehearsal supports use of the safer step",
+      "ux": "Unknown trust and completion barriers are explicit",
+      "observable_result": "Use or non-use of the safer step in a bounded scenario"
+    },
+    "product_checks": ["value", "fit", "mechanism", "viability"],
+    "alternatives_bounded": true,
+    "validation_disposition": "minimum_test",
+    "minimum_validation": {
+      "hypothesis": "A guided practice prompt helps operators use one safer decision step.",
+      "why_critical": "Full production depends on whether the key practice mechanism changes the target decision.",
+      "hypothesis_type": "mechanism",
+      "audience_context": "Bounded operator group in a representative scenario.",
+      "method": "short_exercise",
+      "minimum_intervention": "One short guided practice prompt.",
+      "observable_signal": "Use of the target decision step in the scenario.",
+      "signal_kind": "decision_quality",
+      "continue_condition": "The signal is observed consistently enough for the owner to justify a larger pilot.",
+      "reconsider_condition": "The signal is absent, ambiguous, or depends on unsupported facilitation.",
+      "inference_limits": "Does not prove general effectiveness, adoption, persistence, or business impact.",
+      "next_decision": "Decide whether a larger bounded pilot is justified.",
+      "main_gap_linked": true,
+      "single_critical_assumption": true,
+      "cost_below_full_implementation": true,
+      "stoppable": true,
+      "reversible": true,
+      "non_hypothesis_features": false,
+      "full_product_build": false,
+      "nearest_test_only": true,
+      "sequential_program_overreach": false,
+      "automatic_survey": false,
+      "automatic_pilot": false,
+      "automatic_ab_test": false,
+      "weak_signal_used_as_proof": false,
+      "claims_general_proof": false,
+      "fabricated_metrics": false
+    }
+  },
+  "production": {
+    "consequence": "Validate before production",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": false
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "approved"
+  }
+}

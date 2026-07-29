@@ -1,0 +1,53 @@
+{
+  "mode": "limited",
+  "analytical_owner": "research_agent",
+  "focus": "mechanism",
+  "analysis": {
+    "product_finding": "One positive conversation proves the course is effective.",
+    "evidence_boundary": "One employee conversation.",
+    "main_gap": "Mechanism is untested.",
+    "unknowns_hidden": false,
+    "focus_checked": true,
+    "scope_overreach": false,
+    "validation_disposition": "minimum_test",
+    "minimum_validation": {
+      "hypothesis": "Practice changes a specific decision.",
+      "why_critical": "Full production depends on whether the exercise changes the decision.",
+      "hypothesis_type": "mechanism",
+      "audience_context": "One employee",
+      "method": "interview",
+      "minimum_intervention": "Conversation",
+      "observable_signal": "Positive reaction",
+      "signal_kind": "stated_reaction",
+      "continue_condition": "Positive reaction",
+      "reconsider_condition": "Negative reaction",
+      "inference_limits": "None claimed",
+      "next_decision": "Build the full course.",
+      "main_gap_linked": true,
+      "single_critical_assumption": true,
+      "cost_below_full_implementation": true,
+      "stoppable": true,
+      "reversible": true,
+      "non_hypothesis_features": false,
+      "full_product_build": false,
+      "nearest_test_only": true,
+      "sequential_program_overreach": false,
+      "automatic_survey": false,
+      "automatic_pilot": false,
+      "automatic_ab_test": false,
+      "weak_signal_used_as_proof": true,
+      "claims_general_proof": true,
+      "fabricated_metrics": false
+    }
+  },
+  "production": {
+    "consequence": "Validate before production",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": false
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "changes_requested"
+  }
+}

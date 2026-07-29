@@ -84,6 +84,11 @@ run_case "reader_outcome_material" "writer" 0 "audience_outcome_alignment.md" "p
 run_case "reader_outcome_material" "review_agent" 0 "audience_outcome_alignment.md" "professional_communication.md" "editorial_quality_attributes.md"
 run_case_absent "writer_minimal" "writer" 0 "audience_outcome_alignment.md" "professional_communication.md" "editorial_quality_attributes.md"
 run_case "runtime_execution_record" "writer" 0 "planned runtime topology" "actual runtime execution record"
+run_case_absent "product_intent_not_needed" "writer" 0 "conditional capability owner"
+run_case "product_intent_limited" "writer" 0 "product_intent_review.md" "conditional capability owner" "\`limited\`"
+run_case "product_intent_full" "writer" 0 "product_intent_review.md" "conditional capability owner" "\`full\`"
+run_case "product_intent_override" "writer" 0 "product_intent_review.md" "conditional capability owner" "\`full\`"
+run_case_absent "writer_minimal" "writer" 0 "conditional capability owner"
 
 if [ "$failures" -ne 0 ]; then
   echo "Task pack generator smoke test failed."

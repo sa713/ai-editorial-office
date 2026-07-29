@@ -28,6 +28,23 @@ artifact. Keep it short, current, and explicit about versions.
 - Latest relevant handoff:
 - Next required action:
 
+## product intent review state
+
+Use only when the Chief Editor decision is `limited` or `full`, or when an
+ambiguous `not_needed` decision is genuinely restart-critical. Keep the full
+recommendation, negative evidence, basis, focus, and reroute reasoning in
+`orchestration_plan.md`.
+
+- Product Intent Review mode: `limited` / `full` / restart-critical
+  `not_needed`
+- State pointer: `orchestration_plan.md#product-intent-review-routing`
+- Canonical owner: `/kb/product_intent_review.md` for `limited` or `full`
+- Production consequence:
+
+Do not store the seven-element model, four checks, alternatives, minimum
+validation, full analysis, or product finding here. The mode is analytical
+depth, not task status, lifecycle stage, review outcome, or product decision.
+
 ## reader outcome state
 
 Use only when reader change is material; otherwise omit or mark the first field

@@ -75,8 +75,70 @@ route, activation, depth choice, gate, or standalone artifact.
 - Ambiguity, contradiction, or missing information:
 - Decomposition recommendation:
 - Confidence and negative evidence:
+- Product Intent Review signals and negative evidence, when material:
+- Product Intent Review advisory recommendation: `not_needed` / `limited` /
+  `full`
+- Product Intent Review rationale, confidence, and proposed focus:
 - Explicit non-decision:
 - Chief Editor decision or next question:
+
+## product intent review routing
+
+Use only when Product Intent Review is materially considered. This is a compact
+routing/state view, not the seven-element analysis, four checks, a product
+brief, a report, a lifecycle stage, or a review verdict. For obvious
+`not_needed` tasks, omit this section. When potential ambiguity makes the
+negative decision restart-relevant, one compact rationale is enough.
+
+- Advisory recommendation: `not_needed` / `limited` / `full`
+- Advisory basis: observed multi-signal evidence
+- Material negative evidence:
+- Advisory confidence:
+- Chief Editor Product Intent Review mode decision: `not_needed` / `limited` /
+  `full`
+- Decision basis:
+- Focus: one bounded question for `limited`; `not applicable` otherwise
+- Assigned existing analytical owner for `limited` / `full`:
+- Required evidence depth: none/source-light / compact / full, with reason
+- Product finding: evidence-bounded free text; not a status or review outcome
+- One main product gap:
+- Evidence boundary:
+- Production consequence: `Proceed` / `Proceed with constraints` /
+  `Validate before production` / `Reroute` / `Stop / no-build recommendation`
+- Production permission and constraints:
+  - `not_needed`: ordinary route
+  - `limited`: resolve the named question before deep editorial work
+  - `full`: no detailed production contract before a bounded Product Intent
+    Review finding
+- Product-owner decision required:
+- Reconsideration / reroute trigger:
+- Reader job for the Product Intent Review result:
+- Selected existing output form: `report` / `decision-memo` /
+  `research-report` / embedded block / explicitly selected task-local report
+- Output depth and traceability: compact / decision-ready / evidence-heavy
+- Embedded or standalone, with reason:
+- Reader-facing order: verdict -> one main gap -> next owner decision ->
+  evidence boundary/detail -> production consequence -> editorial remarks
+- Internal architecture must remain hidden: yes
+- Canonical owner: `/kb/product_intent_review.md` for `limited` or `full`
+- Explicit distinctions:
+  - activation decision:
+  - capability finding:
+  - production permission:
+  - product-owner decision:
+
+Uncertainty belongs in basis/confidence and does not create a fourth mode.
+Incomplete data does not automatically block the task or require all seven
+Product Intent Review elements.
+
+For `limited` or `full`, complete the finding/consequence fields after the
+selected analytical artifact is sufficient and before deep Writer/UX Writer
+production. Keep detailed model rows, check evidence, alternatives, and minimum
+validation outside this compact routing/decision block.
+
+The output fields are conditional on `limited` or `full`. They guide the
+selected deliverable and do not create a universal template, new profile, or
+standalone report. Omit them for `not_needed`.
 
 ## outcome-first deliverable decision
 

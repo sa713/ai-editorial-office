@@ -1,0 +1,26 @@
+{
+  "mode": "limited",
+  "analytical_owner": "research_agent",
+  "focus": "problem evidence",
+  "analysis": {
+    "product_finding": "The need is proven because the requested product sounds useful.",
+    "evidence_boundary": "No checked sources.",
+    "main_gap": "No evidence of need.",
+    "unknowns_hidden": false,
+    "focus_checked": true,
+    "scope_overreach": false,
+    "fabricated_need_or_effect": true,
+    "validation_disposition": "not_needed",
+    "validation_not_needed_reason": "The fabricated need claim must be removed before a validation recommendation can be trusted."
+  },
+  "production": {
+    "consequence": "Proceed",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": false
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "blocked"
+  }
+}

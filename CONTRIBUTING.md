@@ -70,6 +70,38 @@ Before pushing a branch:
   private source exports were added;
 - run the relevant tests or document why no tests apply.
 
+## Maintaining Product Intent Review
+
+The semantic owner is
+`ai-editorial-office/kb/product_intent_review.md`. The Capability Registry,
+roles, pipelines, templates, deliverable profiles, tests, and task artifacts
+must reference that owner rather than copy its full contract.
+
+Add or select an evaluation case when:
+
+- a new material product-task class appears;
+- a reproducible Product Intent failure mode is found;
+- the canonical contract changes;
+- regression protection is required.
+
+Do not change the capability when only response style differs, one expert
+prefers another valid formulation, the case is already inside allowed
+variability, no reproducible defect exists, or the proposal expands scope
+without a separate decision.
+
+Change workflow:
+
+1. preserve or add a failing case;
+2. record the defect;
+3. identify the canonical owner;
+4. make the minimum owner-local patch;
+5. run neighboring cases;
+6. run the full Product Intent and shared regression suite;
+7. obtain independent review.
+
+Execution details, expected-result rules, repair-loop evidence, and overfit
+protection live in `ai-editorial-office/tests/README.md`.
+
 ## Pull Request Checklist
 
 Every pull request should confirm:

@@ -1,0 +1,297 @@
+[
+  {
+    "matrix_case": true,
+    "name": "course_without_confirmed_problem",
+    "main_gap": "The course is specified before the learner problem is supported.",
+    "validation": {
+      "hypothesis": "The target audience repeatedly encounters the stated problem and current workarounds have material consequences.",
+      "why_critical": "A full course is not justified if the problem is absent, rare, or already solved.",
+      "hypothesis_type": "problem",
+      "method": "work_case_analysis",
+      "minimum_intervention": "Inspect a bounded set of real work cases and existing workarounds; do not build course lessons.",
+      "observable_signal": "Recurring documented obstacles, consequences, and workarounds in the target context.",
+      "signal_kind": "observed_barrier",
+      "continue_condition": "The same material obstacle recurs in relevant cases and current workarounds leave the decision need unresolved.",
+      "reconsider_condition": "The obstacle is absent, immaterial, or already addressed by the current process.",
+      "inference_limits": "Problem evidence does not prove demand for or effectiveness of a course.",
+      "next_decision": "Decide whether any intervention is justified before choosing its format."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "confirmed_problem_unknown_mechanism",
+    "main_gap": "The problem is confirmed but the exercise mechanism is untested.",
+    "validation": {
+      "hypothesis": "One practical case causes participants to reconsider a fixed initial hypothesis after contradictory evidence.",
+      "why_critical": "Full learning production depends on whether the key exercise changes the target decision.",
+      "hypothesis_type": "mechanism",
+      "method": "short_exercise",
+      "minimum_intervention": "One short case, initial decision, contradictory evidence, and repeated decision.",
+      "observable_signal": "The participant names disconfirming evidence and revises the decision.",
+      "signal_kind": "decision_quality",
+      "continue_condition": "Participants revise reasoning in the scenario without the facilitator supplying the answer.",
+      "reconsider_condition": "Participants recall terminology but do not change the decision or require leading prompts.",
+      "inference_limits": "A successful exercise does not prove long-term transfer or independent work use.",
+      "next_decision": "Decide whether a larger learning prototype is warranted."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "portal_as_habitual_solution",
+    "main_gap": "The real obstacle in knowledge exchange is unknown.",
+    "validation": {
+      "hypothesis": "Knowledge exchange fails because relevant information cannot be found at the moment of work.",
+      "why_critical": "A new portal is unnecessary if the obstacle is ownership, incentives, access, or process rather than findability.",
+      "hypothesis_type": "problem",
+      "method": "observation",
+      "minimum_intervention": "Observe a bounded set of real knowledge-retrieval episodes without building a portal.",
+      "observable_signal": "The point of failure and current workaround are observed in the work context.",
+      "signal_kind": "observed_barrier",
+      "continue_condition": "Findability repeatedly blocks the task despite available and current knowledge.",
+      "reconsider_condition": "The blockage comes from ownership, permission, incentives, or stale content instead.",
+      "inference_limits": "The observation does not prove that a portal is the best solution.",
+      "next_decision": "Decide whether to address findability or change intervention class."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "banner_campaign_constraint",
+    "main_gap": "It is unknown whether message comprehension is the real barrier.",
+    "validation": {
+      "hypothesis": "The target action fails because the existing message does not make the next step understandable.",
+      "why_critical": "Copy testing is wasteful if process friction, trust, eligibility, or access is the actual constraint.",
+      "hypothesis_type": "problem",
+      "method": "work_case_analysis",
+      "minimum_intervention": "Inspect bounded failed-action cases and their surrounding process before writing variants.",
+      "observable_signal": "The message is the observed decision obstacle rather than a downstream process constraint.",
+      "signal_kind": "observed_barrier",
+      "continue_condition": "Cases show that people reach the message but cannot identify or trust the required action.",
+      "reconsider_condition": "The action fails for access, eligibility, process, or trust reasons not resolvable by copy.",
+      "inference_limits": "The result does not prove that a specific banner will change behavior.",
+      "next_decision": "Decide whether copy work or a different intervention is justified."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "internal_process_behavior",
+    "main_gap": "The process change has not been observed in real work.",
+    "validation": {
+      "hypothesis": "Removing one handoff step causes participants to complete the target work without the current delay.",
+      "why_critical": "A broad process rollout depends on whether the bounded change alters real behavior.",
+      "hypothesis_type": "behavior",
+      "method": "task_observation",
+      "minimum_intervention": "Apply one reversible handoff change in a bounded work case.",
+      "observable_signal": "Participants complete the real task with the intended handoff behavior and no displaced failure.",
+      "signal_kind": "process_change",
+      "continue_condition": "The intended behavior occurs in the bounded case without hidden manual rescue.",
+      "reconsider_condition": "The delay persists, moves elsewhere, or requires unsustainable coordination.",
+      "inference_limits": "One bounded case does not prove organization-wide sustainability or scale.",
+      "next_decision": "Decide whether another bounded rollout is justified."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "ai_assistant_work_effect",
+    "main_gap": "A persuasive AI response has not shown a reliable improvement in work decisions.",
+    "validation": {
+      "hypothesis": "Using the AI assistant improves the quality of one bounded work decision without unacceptable review burden.",
+      "why_critical": "Deployment depends on work effect and control, not demonstration fluency.",
+      "hypothesis_type": "mechanism",
+      "method": "pre_post_decision_comparison",
+      "minimum_intervention": "Compare one bounded decision with and without the assistant using permitted data and human review.",
+      "observable_signal": "Decision quality improves against the reviewed case while material errors and review burden remain visible.",
+      "signal_kind": "decision_quality",
+      "continue_condition": "The assisted decision is materially better for the case and human review can detect or contain errors.",
+      "reconsider_condition": "Persuasive output hides errors, results vary materially, or control and data conditions are unacceptable.",
+      "inference_limits": "The check does not prove stable performance, organization-wide benefit, or safe autonomous use.",
+      "next_decision": "Decide whether a controlled bounded rollout is justified.",
+      "ai_related": true,
+      "ai_controls": {
+        "data_quality": true,
+        "model_limits": true,
+        "variability": true,
+        "human_control": true,
+        "confidentiality": true,
+        "permitted_data_use": true,
+        "evaluates_work_effect": true
+      }
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "weak_signal_as_behavior_proof",
+    "validation": {
+      "hypothesis_type": "behavior",
+      "method": "task_observation",
+      "observable_signal": "Participants say they liked the experience and intend to use it.",
+      "signal_kind": "stated_intent",
+      "weak_signal_used_as_proof": true
+    },
+    "expected_outcome": "changes_requested"
+  },
+  {
+    "matrix_case": true,
+    "name": "invented_eighty_percent_threshold",
+    "validation": {
+      "hypothesis_type": "mechanism",
+      "method": "scenario_test",
+      "signal_kind": "decision_quality",
+      "numeric_threshold": "80% of participants",
+      "threshold_basis": ""
+    },
+    "expected_outcome": "changes_requested"
+  },
+  {
+    "matrix_case": true,
+    "name": "full_product_pilot_for_one_mechanism",
+    "validation": {
+      "hypothesis_type": "mechanism",
+      "method": "short_exercise",
+      "full_product_build": true,
+      "cost_below_full_implementation": false,
+      "non_hypothesis_features": true,
+      "minimum_intervention": "Build the complete course, platform, certification, and visual system."
+    },
+    "expected_outcome": "changes_requested"
+  },
+  {
+    "matrix_case": true,
+    "name": "survey_used_for_real_behavior",
+    "validation": {
+      "hypothesis_type": "behavior",
+      "method": "interview",
+      "observable_signal": "Respondents report intended future use.",
+      "signal_kind": "stated_intent",
+      "automatic_survey": true,
+      "weak_signal_used_as_proof": true
+    },
+    "expected_outcome": "changes_requested"
+  },
+  {
+    "matrix_case": true,
+    "name": "observable_qualitative_condition",
+    "validation": {
+      "hypothesis_type": "mechanism",
+      "method": "scenario_test",
+      "observable_signal": "The participant names contradictory evidence and revises the decision without a supplied answer.",
+      "signal_kind": "decision_quality",
+      "continue_condition": "The target reasoning move occurs independently in the bounded scenario.",
+      "reconsider_condition": "Only terminology is recalled or the facilitator must lead the revision."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "validation_not_needed",
+    "validation_disposition": "not_needed",
+    "product_finding": "The approved format can receive a local factual correction without a new product decision.",
+    "validation_not_needed_reason": "The correction is low-cost, reversible, and the remaining uncertainty cannot change the next step.",
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "minimum_validation_insufficient",
+    "validation_disposition": "insufficient",
+    "product_finding": "A bounded pilot cannot observe the safety effect or resolve the conflicting evidence.",
+    "validation_insufficient_reason": "The high-consequence effect appears over time and cannot be observed safely in one minimum check.",
+    "deeper_evidence_route": "Route to domain and safety expertise, reconcile conflicting evidence, and require an owner decision on controlled rollout.",
+    "validation_next_owner_decision": "Decide whether the deeper evidence route is authorized before any rollout.",
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "sequential_testing_overreach",
+    "validation": {
+      "hypothesis_type": "problem",
+      "method": "observation",
+      "nearest_test_only": false,
+      "sequential_program_overreach": true,
+      "minimum_intervention": "Run problem, mechanism, behavior, usability, feasibility, and rollout studies now."
+    },
+    "expected_outcome": "changes_requested"
+  },
+  {
+    "matrix_case": true,
+    "name": "limited_mode_stays_on_focus",
+    "focus": "usability of the one required action",
+    "main_gap": "The user may not understand the next action.",
+    "validation": {
+      "hypothesis": "The bounded audience can identify and complete the one required action in the approved flow.",
+      "why_critical": "Copy production depends only on whether the assigned action is understandable.",
+      "hypothesis_type": "usability",
+      "method": "task_based_usability_test",
+      "minimum_intervention": "Test the one action with a low-fidelity scenario.",
+      "observable_signal": "The user identifies and completes the action or exposes the exact obstacle.",
+      "signal_kind": "task_completion",
+      "continue_condition": "The action is completed without unplanned explanation.",
+      "reconsider_condition": "The action is misunderstood, abandoned, or requires a product-flow change.",
+      "inference_limits": "The check does not audit the rest of the product or prove demand.",
+      "next_decision": "Decide whether bounded copy production may proceed.",
+      "limited_focus_fit": true
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "event_demand_observable_commitment",
+    "main_gap": "Declared interest does not show that the audience will commit time to the event.",
+    "validation": {
+      "hypothesis": "The bounded audience will voluntarily reserve time for the proposed event promise.",
+      "why_critical": "Event production depends on real commitment rather than positive reaction.",
+      "hypothesis_type": "demand",
+      "method": "participation_invitation",
+      "minimum_intervention": "Offer one bounded participation slot with the real time commitment; do not produce the event.",
+      "observable_signal": "The person accepts the real time commitment or declines it.",
+      "signal_kind": "choice",
+      "continue_condition": "Relevant participants make the real commitment without incentives that distort the decision.",
+      "reconsider_condition": "Interest remains verbal or commitment disappears when the real cost is visible.",
+      "inference_limits": "Commitment does not prove attendance, event quality, or lasting effect.",
+      "next_decision": "Decide whether minimum event production is justified."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "bounded_feasibility_dependency_check",
+    "main_gap": "Access to the required data dependency is unknown.",
+    "validation": {
+      "hypothesis": "The approved process can access the required data under current permissions.",
+      "why_critical": "Implementation cannot proceed if the dependency is unavailable or prohibited.",
+      "hypothesis_type": "feasibility",
+      "method": "dependency_audit",
+      "minimum_intervention": "Inspect the one required data dependency and permission path without building the integration.",
+      "observable_signal": "The dependency and permission path are confirmed or a concrete blocker is found.",
+      "signal_kind": "implementation_result",
+      "continue_condition": "Required data and authority are available within the recorded constraints.",
+      "reconsider_condition": "The dependency is absent, prohibited, unreliable, or requires an unapproved change.",
+      "inference_limits": "The audit does not prove end-to-end usability, behavior change, or operating viability.",
+      "next_decision": "Decide whether a technical spike is justified."
+    },
+    "expected_outcome": "approved"
+  },
+  {
+    "matrix_case": true,
+    "name": "internal_product_viability",
+    "main_gap": "No owner or support model exists for the internal service.",
+    "validation": {
+      "hypothesis": "A named owner can support the bounded service inside current operating constraints.",
+      "why_critical": "Further investment is not justified if the organization cannot sustain the service.",
+      "hypothesis_type": "viability",
+      "method": "owner_operating_model_check",
+      "minimum_intervention": "Confirm one owner, support responsibility, and material operating dependencies without launching the service.",
+      "observable_signal": "A responsible owner accepts the bounded operating commitment and unresolved dependencies are visible.",
+      "signal_kind": "operating_commitment",
+      "continue_condition": "Ownership and the bounded support obligation are explicit and feasible within current constraints.",
+      "reconsider_condition": "No owner accepts responsibility or support depends on unavailable capacity.",
+      "inference_limits": "An operating commitment does not prove demand, usability, or long-term product effect.",
+      "next_decision": "Decide whether a limited rollout is justified."
+    },
+    "expected_outcome": "approved"
+  }
+]

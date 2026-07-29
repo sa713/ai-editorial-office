@@ -27,6 +27,17 @@ Understand what was examined, what was found, what it means, and what follows.
 Scope and question, method or basis, findings, analysis, implications,
 limitations, recommendations, and next action when appropriate.
 
+When Product Intent Review is active, adapt rather than prepend a fixed
+template: lead with the product verdict, one main gap, and next owner decision;
+then give the evidence boundary, necessary findings/implications, and production
+consequence. Put editorial or local material remarks after the product decision.
+Use a compact embedded block when Product Intent Review is only one dimension
+of a broader report; do not create a companion report automatically.
+When minimum validation is decision-relevant, compress it to the critical
+hypothesis, fitted method and context, observable signal, continue/reconsider
+conditions, inference limit, and next owner decision. State a reason instead
+when another check is not needed or one minimum check is insufficient.
+
 ## Strengths
 
 - durable and reviewable;

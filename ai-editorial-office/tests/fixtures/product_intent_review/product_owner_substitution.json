@@ -1,0 +1,26 @@
+{
+  "mode": "limited",
+  "analytical_owner": "chief_editor",
+  "focus": "format fit",
+  "analysis": {
+    "product_finding": "The course format is approved and launch is mandatory.",
+    "evidence_boundary": "Format preference only.",
+    "main_gap": "Format fit is not evidenced.",
+    "unknowns_hidden": false,
+    "focus_checked": true,
+    "scope_overreach": false,
+    "owner_substitution": true,
+    "validation_disposition": "not_needed",
+    "validation_not_needed_reason": "The record improperly substitutes for the owner before proposing validation."
+  },
+  "production": {
+    "consequence": "Proceed",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": false
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "blocked"
+  }
+}

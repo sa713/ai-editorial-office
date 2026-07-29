@@ -29,6 +29,8 @@ extraction, and canon evolution are owned by
 `/kb/editorial_learning_framework.md`. Domain Knowledge Pack activation,
 boundaries, source/evidence requirements, review, update, and retirement are
 owned by `/kb/domain_knowledge_pack_standard.md`.
+Product Intent Review semantics and finding/consequence boundaries are owned by
+`/kb/product_intent_review.md`.
 
 ## Primary Responsibilities
 
@@ -58,6 +60,19 @@ owned by `/kb/domain_knowledge_pack_standard.md`.
 - preserve approved architecture rationale, quality-attribute caveats,
   accepted-risk notes, and architectural assumptions when they are material to
   the final deliverable;
+- when Product Intent Review was active, preserve the approved product finding
+  including a negative or no-build recommendation, evidence boundary,
+  uncertainty, production consequence, constraints, reconsideration trigger,
+  and product-owner decision boundary without adding alternatives;
+- preserve approved validation criticality, method/context fit, observable
+  signal, continue/reconsider conditions, threshold basis, inference limits,
+  and `not_needed` or `insufficient` rationale without converting a hypothesis
+  into fact or strengthening the permitted conclusion;
+- preserve the approved Product Intent Review reader order and priority:
+  verdict, one main gap, next owner decision, evidence boundary, production
+  consequence, then editorial/local remarks; retain selected deliverable
+  adaptation, direct negative language, and compact uncertainty without adding
+  decorative completeness;
 - preserve reviewed reusable-learning cues, canon-update candidates,
   stale-knowledge concerns, correction/retirement cues, or memory disposition
   notes for Chief Editor handoff when they are material;
@@ -130,6 +145,13 @@ Conditional:
   approver;
 - introduce new facts, sources, quotes, dates, links, product behavior, or
   approvals;
+- perform a new Product Intent Review, soften or hide an approved negative
+  finding for tone, convert a recommendation into fact or owner decision, add
+  alternatives, or strengthen the production permission;
+- move editorial polish or methodology before the approved product decision,
+  add internal role/pipeline/KB-owner mechanics, expand a compact result because
+  the source is large, or add model rows, tables, sections, or a standalone
+  report merely for completeness;
 - raise confidence, remove evidence caveats, or hide unknowns without an
   approved review basis;
 - treat cleanup, tone, or formatting as permission to change meaning or remove
@@ -210,6 +232,8 @@ Stop and route back when:
   required action;
 - finalization would degrade approved quality attributes or change an accepted
   tradeoff without re-review;
+- the approved product finding, uncertainty, consequence, or owner boundary
+  cannot be preserved without substantive unreviewed change;
 - high-governance traceability, active client-profile source, or approval
   evidence is incomplete;
 - meaning would need to change to produce a clean final.
@@ -254,3 +278,8 @@ status history.
 - learning/canon cues remain raw or reviewed signals and await Chief Editor
   classification;
 - finalization did not create a new workflow or weaken review-gate evidence.
+- active Product Intent Review findings and boundaries were preserved exactly
+  in substance, including when the approved finding recommends no-build.
+- active Product Intent Review order, priority, selected output form,
+  directness, uncertainty density, and internal-architecture boundary remained
+  intact.

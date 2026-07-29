@@ -1,0 +1,32 @@
+{
+  "mode": "full",
+  "analytical_owner": "research_agent",
+  "analysis": {
+    "product_finding": "The proposed course is ready for production.",
+    "evidence_boundary": "Only the brief was checked.",
+    "main_gap": "No gap claimed.",
+    "unknowns_hidden": true,
+    "model": {
+      "audience": "Employees",
+      "problem": "Assumed skill gap",
+      "required_change": "Better performance",
+      "proposed_intervention": "Course",
+      "mechanism": "Exposure to content",
+      "observable_result": "Completion"
+    },
+    "product_checks": ["value", "fit", "mechanism", "viability"],
+    "alternatives_bounded": true,
+    "validation_disposition": "not_needed",
+    "validation_not_needed_reason": "The draft incorrectly treats the evidence as sufficient."
+  },
+  "production": {
+    "consequence": "Proceed",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": false
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "changes_requested"
+  }
+}

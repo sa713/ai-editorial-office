@@ -1,0 +1,28 @@
+{
+  "mode": "limited",
+  "analytical_owner": "research_agent",
+  "focus": "mechanism",
+  "analysis": {
+    "product_finding": "Copy may describe the pilot without promising effect.",
+    "evidence_boundary": "Mechanism remains a bounded hypothesis.",
+    "main_gap": "Mechanism is not yet demonstrated.",
+    "unknowns_hidden": false,
+    "focus_checked": true,
+    "scope_overreach": false,
+    "validation_disposition": "not_needed",
+    "validation_not_needed_reason": "The immediate requirement is rerouting the newly discovered material gap."
+  },
+  "production": {
+    "consequence": "Proceed with constraints",
+    "permission_recorded": true,
+    "owner_decision_boundary": true,
+    "boundary_violation": false,
+    "new_material_gap": true,
+    "reroute_to_chief_editor": true,
+    "writer_redesigned_product": false
+  },
+  "review": {
+    "dimension_present": true,
+    "outcome": "changes_requested"
+  }
+}
