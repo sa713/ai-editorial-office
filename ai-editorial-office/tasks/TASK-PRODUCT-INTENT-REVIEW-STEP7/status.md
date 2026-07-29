@@ -48,3 +48,13 @@ Previous status: approved
 - Required artifacts complete: yes
 - Initiative closed: yes
 - Further unplanned step started: no
+
+## publication state
+
+- Publication authorized after closure: yes
+- Primary initiative commit:
+  `c6c918da9f9c766b468acc8a0b3de240b04ad086`
+- Primary push: successful to `origin/main`
+- Primary parity: `0/0`
+- Publication closeout: bounded metadata follow-up
+- Unrelated worktree changes: preserved and excluded

@@ -48,5 +48,16 @@ do not prevent conditional use.
 
 ## publication
 
-No commit, staging, push, publication, worktree cleanup, or release-status
-change was requested or performed.
+Publication was separately authorized after initiative closure.
+
+- Primary initiative commit:
+  `c6c918da9f9c766b468acc8a0b3de240b04ad086`.
+- Primary push target: `origin/main`.
+- Primary push result: success.
+- Primary post-push parity: `main...origin/main = 0/0`.
+- Publication metadata: recorded in a bounded follow-up closeout commit.
+- Pull request: not created; the user selected the established direct-main
+  publication route.
+- Worktree cleanup: not performed.
+- Unrelated worktree files: preserved and excluded.
+- Release/Professional Analysis status: unchanged.

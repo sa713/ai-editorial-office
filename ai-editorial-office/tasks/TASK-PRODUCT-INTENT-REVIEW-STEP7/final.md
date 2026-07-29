@@ -85,8 +85,16 @@ Evaluation suite репрезентативна, но не исчерпывае�
 
 ## Publication boundary
 
-Изменения оставлены локально. Commit и push не выполнялись. Несвязанные
-изменения worktree не очищались и не включались в scope.
+После отдельной пользовательской авторизации Steps 0–7 опубликованы в
+`origin/main`.
+
+- Primary initiative commit:
+  `c6c918da9f9c766b468acc8a0b3de240b04ad086`.
+- Push: успешен.
+- Parity после primary push: `main...origin/main = 0/0`.
+- Publication metadata фиксируется отдельным closeout commit.
+
+Несвязанные изменения worktree не очищались и не включались в публикацию.
 
 Любое дальнейшее развитие Product Intent Review требует отдельной явной
 инициативы.

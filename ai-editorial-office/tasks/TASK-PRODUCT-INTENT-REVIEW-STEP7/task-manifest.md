@@ -53,6 +53,10 @@ Selected pipeline: research
 - Human approval required: no
 - Human approval evidence: Step 7 brief status is `Authorized`
 - Final decision artifact: `final_decision.md`
+- Publication authorized: yes, by explicit user request after closure
+- Primary publication commit: `c6c918da9f9c766b468acc8a0b3de240b04ad086`
+- Publication target/result: `origin/main`, success; primary parity `0/0`
+- Publication closeout: bounded metadata follow-up
 
 ## artifact inventory
 
@@ -83,7 +87,8 @@ Selected pipeline: research
 - Preserve Professional Analysis status and all existing governance entities.
 - Keep evaluation cases out of the canonical owner.
 - Keep Step 8 or any further initiative unstarted.
-- No commit or push.
+- Publication may include only the authorized Steps 0–7 scope; unrelated
+  worktree files remain excluded.
 
 ## next action packet
 

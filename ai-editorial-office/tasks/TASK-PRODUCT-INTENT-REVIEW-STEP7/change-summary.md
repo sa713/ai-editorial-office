@@ -16,16 +16,19 @@
 
 ## recommended commit scope
 
-If publication is separately authorized, stage only the six documentation
-files above, the complete Step 7 task folder, and the previously completed
-Product Intent Review Step 0–6 initiative files that the user explicitly wants
-published. Inspect the exact staged list before commit.
+The separately authorized publication staged the six documentation files above,
+the complete Step 7 task folder, and the full Product Intent Review Step 0–6
+initiative scope. The staged list was inspected before commit.
 
 Do not stage unrelated `TASKS/`, unrelated task folders, legacy materials, or
 other pre-existing worktree changes.
 
 ## publication state
 
-- Commit: not performed.
-- Push: not performed.
+- Primary commit:
+  `c6c918da9f9c766b468acc8a0b3de240b04ad086`.
+- Push: successful to `origin/main`.
+- Primary parity: `0/0`.
+- Publication closeout: this bounded metadata follow-up.
 - Worktree cleanup: not performed.
+- Unrelated files: preserved and excluded.

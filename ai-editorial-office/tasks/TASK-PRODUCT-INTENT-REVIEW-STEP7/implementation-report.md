@@ -42,3 +42,15 @@
 
 No functional defect, documentation repair loop, or production repair loop was
 required after the bounded patch.
+
+## publication
+
+After separate user authorization:
+
+- the inspected 231-file Steps 0–7 scope was committed as
+  `c6c918da9f9c766b468acc8a0b3de240b04ad086`;
+- the commit was pushed successfully to `origin/main`;
+- primary post-push parity was `0/0`;
+- unrelated untracked task folders remained excluded;
+- this report and the other current publication fields are synchronized in a
+  bounded closeout commit.
